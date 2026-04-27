@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 21º CP — Erro de Proibição | Magistratura ENAM</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0d1b2a;--navy-mid:#1a2f45;--navy-light:#243b55;--gold:#c8960c;--gold-light:#e8b84b;--gold-pale:#fdf3d8;--cream:#faf7f2;--cream-mid:#f0ebe2;--text-dark:#1a1208;--text-mid:#3d3020;--text-soft:#6b5c40;--border:#d4c49a;--border-light:#e8dcbf;--red-accent:#8b1a1a;--green-accent:#1a4a2e;--blue-accent:#1a3a5c;--purple-accent:#4a1a5c;--shadow:0 4px 24px rgba(13,27,42,0.10);}
+  *{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+  body{font-family:'Source Serif 4',Georgia,serif;background:var(--cream);color:var(--text-dark);font-size:15px;line-height:1.75;}
+  #top-nav{position:sticky;top:0;z-index:999;background:var(--navy);border-bottom:3px solid var(--gold);padding:0 1.5rem;display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;}
+  #top-nav::-webkit-scrollbar{display:none;}
+  #top-nav .nav-brand{font-family:'Playfair Display',serif;color:var(--gold-light);font-size:0.9rem;font-weight:700;white-space:nowrap;padding:0.85rem 1.2rem 0.85rem 0;border-right:1px solid rgba(200,150,12,0.3);margin-right:0.5rem;letter-spacing:0.5px;}
+  #top-nav a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.72rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;padding:0.85rem 0.8rem;white-space:nowrap;transition:color .2s;border-bottom:3px solid transparent;margin-bottom:-3px;}
+  #top-nav a:hover{color:var(--gold-light);border-bottom-color:var(--gold);}
+  #hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 60%,#1e3d5c 100%);color:white;padding:3.5rem 2rem 3rem;text-align:center;position:relative;overflow:hidden;}
+  #hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(200,150,12,0.03) 0px,rgba(200,150,12,0.03) 1px,transparent 1px,transparent 40px);}
+  #hero .badge{display:inline-block;background:rgba(200,150,12,0.15);border:1px solid rgba(200,150,12,0.5);color:var(--gold-light);font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;padding:0.35rem 1rem;border-radius:2px;margin-bottom:1.2rem;font-family:'Source Serif 4',serif;font-weight:600;}
+  #hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.15;margin-bottom:0.6rem;letter-spacing:-0.5px;}
+  #hero h1 span{color:var(--gold-light);}
+  #hero .subtitle{font-size:1rem;color:rgba(255,255,255,0.65);font-style:italic;margin-bottom:1.5rem;}
+  #hero .law-box{display:inline-block;background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.4);border-left:4px solid var(--gold);color:rgba(255,255,255,0.9);font-family:'Source Serif 4',serif;font-size:0.93rem;font-style:italic;padding:1rem 1.5rem;max-width:860px;text-align:left;line-height:1.9;border-radius:0 4px 4px 0;}
+  #hero .law-box strong{color:var(--gold-light);font-style:normal;display:block;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem;}
+  .page-wrap{max-width:1100px;margin:0 auto;padding:0 1.5rem 4rem;}
+  .section{margin-top:3.5rem;scroll-margin-top:56px;}
+  .section-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:0.75rem;border-bottom:2px solid var(--border);}
+  .section-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--border);line-height:1;min-width:2.5rem;}
+  .section-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--navy);line-height:1.2;}
+  .section-title span{display:block;font-size:0.75rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-style:normal;}
+  .card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1.4rem 1.6rem;box-shadow:var(--shadow);}
+  .card-grid{display:grid;gap:1rem;}
+  .card-grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
+  .card-grid-2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr));}
+  .card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:0.6rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border-light);}
+  .card p,.card li{font-size:0.88rem;line-height:1.7;color:var(--text-mid);}
+  .card ul{padding-left:1.1rem;}.card li{margin-bottom:0.3rem;}
+  .type-card{border-top:4px solid;}
+  .tc-red{border-top-color:var(--red-accent);}.tc-red h3{color:var(--red-accent);}
+  .tc-green{border-top-color:var(--green-accent);}.tc-green h3{color:var(--green-accent);}
+  .tc-blue{border-top-color:var(--blue-accent);}.tc-blue h3{color:var(--blue-accent);}
+  .tc-gold{border-top-color:var(--gold);}.tc-gold h3{color:#7a5a00;}
+  .tc-purple{border-top-color:var(--purple-accent);}.tc-purple h3{color:var(--purple-accent);}
+  .flow-wrap{background:white;border:1px solid var(--border-light);border-radius:6px;padding:2rem 1.5rem;box-shadow:var(--shadow);overflow-x:auto;}
+  .flow-center{display:flex;flex-direction:column;align-items:center;}
+  .flow-node{border-radius:4px;padding:0.65rem 1.4rem;font-family:'Source Serif 4',serif;font-size:0.82rem;font-weight:600;text-align:center;min-width:220px;max-width:580px;}
+  .flow-start{background:var(--navy);color:white;border-radius:50px;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;}
+  .flow-end-green{background:var(--green-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+  .flow-end-red{background:var(--red-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+  .flow-end-gold{background:var(--gold);color:var(--navy);border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+  .flow-end-blue{background:var(--blue-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+  .flow-end-purple{background:var(--purple-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+  .flow-box-navy{background:var(--navy-mid);color:white;border-left:4px solid var(--gold);font-size:0.8rem;}
+  .flow-box-green{background:#edf7f0;border:1px solid #7ec89a;border-left:4px solid var(--green-accent);color:var(--text-dark);}
+  .flow-box-blue{background:#edf2f8;border:1px solid #8eb4d8;border-left:4px solid var(--blue-accent);color:var(--text-dark);}
+  .flow-box-red{background:#fdf0f0;border:1px solid #e09090;border-left:4px solid var(--red-accent);color:var(--text-dark);}
+  .flow-box-gold{background:var(--gold-pale);border:2px solid var(--gold);color:var(--text-dark);}
+  .flow-box-purple{background:#f3eef8;border:1px solid #b89dd8;border-left:4px solid var(--purple-accent);color:var(--text-dark);}
+  .flow-arrow{font-size:1.3rem;color:var(--border);line-height:1;margin:0.15rem 0;}
+  .flow-row{display:flex;align-items:flex-start;gap:1.5rem;width:100%;justify-content:center;flex-wrap:wrap;}
+  .flow-branch{display:flex;flex-direction:column;align-items:center;flex:1;min-width:175px;}
+  .flow-label{font-size:0.68rem;color:var(--text-soft);font-weight:600;letter-spacing:0.5px;text-transform:uppercase;background:var(--cream-mid);padding:0.15rem 0.5rem;border-radius:2px;margin:0.15rem 0;}
+  .flow-connector-line{width:1px;height:28px;background:var(--border);}
+  .comp-table{width:100%;border-collapse:collapse;font-size:0.84rem;background:white;box-shadow:var(--shadow);border-radius:6px;overflow:hidden;}
+  .comp-table thead{background:var(--navy);color:white;}
+  .comp-table thead th{padding:0.85rem 1rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:0.5px;font-size:0.8rem;text-align:left;}
+  .comp-table thead th:first-child{color:var(--gold-light);}
+  .comp-table tbody tr{border-bottom:1px solid var(--border-light);}
+  .comp-table tbody tr:last-child{border-bottom:none;}
+  .comp-table tbody tr:nth-child(even){background:var(--cream);}
+  .comp-table td{padding:0.75rem 1rem;color:var(--text-mid);vertical-align:top;}
+  .comp-table td:first-child{font-weight:600;color:var(--navy);font-size:0.8rem;}
+  .comp-table .hl td{background:var(--gold-pale)!important;}
+  .comp-table .hl2 td{background:#edf7f0!important;}
+  .comp-table .hl3 td{background:#edf2f8!important;}
+  .comp-table .hl4 td{background:#fdf0f0!important;}
+  .comp-table .hl5 td{background:#f3eef8!important;}
+  .juris-card{background:white;border:1px solid var(--border-light);border-left:5px solid;border-radius:0 6px 6px 0;padding:1.2rem 1.4rem;box-shadow:var(--shadow);}
+  .juris-card.stf{border-left-color:var(--red-accent);}
+  .juris-card.stj{border-left-color:var(--navy);}
+  .juris-card.doutrina{border-left-color:var(--gold);}
+  .juris-header{display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem;flex-wrap:wrap;}
+  .juris-badge{font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:0.2rem 0.55rem;border-radius:2px;font-family:'Source Serif 4',serif;}
+  .juris-badge.stf{background:var(--red-accent);color:white;}
+  .juris-badge.stj{background:var(--navy);color:white;}
+  .juris-badge.doutrina{background:var(--gold);color:var(--navy);}
+  .juris-badge.sumula{background:var(--green-accent);color:white;}
+  .juris-badge.tese{background:var(--blue-accent);color:white;}
+  .juris-badge.purple{background:var(--purple-accent);color:white;}
+  .juris-title{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--navy);}
+  .juris-body{font-size:0.84rem;color:var(--text-mid);line-height:1.7;}
+  .juris-body em{font-style:italic;color:var(--navy);}
+  .juris-grid{display:grid;gap:1rem;}
+  .alert{padding:0.9rem 1.2rem;border-radius:4px;font-size:0.84rem;line-height:1.7;display:flex;gap:0.7rem;align-items:flex-start;}
+  .alert-gold{background:var(--gold-pale);border:1px solid #d4aa3a;color:#5a4000;}
+  .alert-red{background:#fdf0f0;border:1px solid #e09090;color:#5a0000;}
+  .alert-navy{background:#f0f4f8;border:1px solid #abc;color:var(--navy);}
+  .alert-green{background:#edf7f0;border:1px solid #7ec89a;color:#1a4a2e;}
+  .alert-purple{background:#f3eef8;border:1px solid #b89dd8;color:var(--purple-accent);}
+  .alert-icon{font-size:1.1rem;flex-shrink:0;margin-top:0.05rem;}
+  .alert strong{font-weight:700;}
+  .prova-section{background:var(--navy);border-radius:8px;padding:2rem;color:white;margin-top:3.5rem;scroll-margin-top:56px;}
+  .prova-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold-light);margin-bottom:0.5rem;}
+  .prova-section .intro{font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;font-style:italic;}
+  .prova-items{display:grid;gap:0.75rem;}
+  .prova-item{background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.25);border-left:4px solid var(--gold);border-radius:0 4px 4px 0;padding:1rem 1.2rem;}
+  .prova-item-q{font-size:0.82rem;font-weight:600;color:var(--gold-light);margin-bottom:0.4rem;display:flex;align-items:flex-start;gap:0.6rem;}
+  .prova-item-q .qnum{background:var(--gold);color:var(--navy);font-size:0.65rem;font-weight:700;padding:0.1rem 0.45rem;border-radius:2px;flex-shrink:0;margin-top:0.1rem;}
+  .prova-item-a{font-size:0.82rem;color:rgba(255,255,255,0.8);line-height:1.65;}
+  .prova-item-a strong{color:white;}
+  .tag{display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;padding:0.15rem 0.5rem;border-radius:2px;margin:0.1rem;font-family:'Source Serif 4',serif;}
+  .tag-blue{background:#dce8f5;color:var(--blue-accent);}
+  .tag-green{background:#dceee3;color:var(--green-accent);}
+  .tag-gold{background:var(--gold-pale);color:#7a5a00;border:1px solid #d4aa3a;}
+  .tag-red{background:#fde8e8;color:var(--red-accent);}
+  .tag-purple{background:#ece5f5;color:var(--purple-accent);}
+  .example-box{background:var(--navy-mid);color:white;border-radius:6px;padding:1.2rem 1.4rem;font-size:0.84rem;line-height:1.75;}
+  .example-box .ex-title{color:var(--gold-light);font-weight:700;font-family:'Playfair Display',serif;font-size:0.95rem;margin-bottom:0.5rem;}
+  .example-box .ex-calc{background:rgba(200,150,12,0.12);border:1px solid rgba(200,150,12,0.3);border-radius:4px;padding:0.7rem 1rem;margin-top:0.7rem;font-family:'JetBrains Mono',monospace;font-size:0.79rem;color:var(--gold-light);white-space:pre-wrap;}
+  .law-quote{background:var(--cream-mid);border-left:4px solid var(--navy);padding:0.9rem 1.2rem;font-size:0.88rem;font-style:italic;color:var(--text-mid);line-height:1.7;border-radius:0 4px 4px 0;}
+  .law-quote strong{font-style:normal;color:var(--navy);font-size:0.75rem;letter-spacing:0.5px;display:block;margin-bottom:0.25rem;}
+  .divider{height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);margin:1.2rem 0;}
+  .especie-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0.85rem;}
+  .especie-card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1rem 1.2rem;border-left:4px solid;box-shadow:var(--shadow);}
+  .especie-card h4{font-family:'Playfair Display',serif;font-size:0.92rem;font-weight:700;margin-bottom:0.35rem;}
+  .especie-card p,.especie-card li{font-size:0.82rem;color:var(--text-mid);line-height:1.6;}
+  .especie-card ul{padding-left:1rem;margin-top:0.3rem;}
+  .especie-card li{margin-bottom:0.25rem;}
+  .ec-red{border-left-color:var(--red-accent);}.ec-red h4{color:var(--red-accent);}
+  .ec-blue{border-left-color:var(--blue-accent);}.ec-blue h4{color:var(--blue-accent);}
+  .ec-green{border-left-color:var(--green-accent);}.ec-green h4{color:var(--green-accent);}
+  .ec-gold{border-left-color:var(--gold);}.ec-gold h4{color:#7a5a00;}
+  .ec-purple{border-left-color:var(--purple-accent);}.ec-purple h4{color:var(--purple-accent);}
+  /* VISUAL CULPABILIDADE */
+  .culp-visual{display:flex;align-items:stretch;gap:0;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:1rem;}
+  .cv-col{flex:1;padding:1.2rem 1.4rem;}
+  .cv-ok{background:var(--navy-mid);color:white;}
+  .cv-sep{background:var(--navy);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:900;flex:0 0 2.5rem;}
+  .cv-err{background:var(--red-accent);color:white;}
+  .cv-col h4{font-family:'Playfair Display',serif;font-size:0.98rem;font-weight:700;margin-bottom:0.5rem;border-bottom:1px solid rgba(255,255,255,0.2);padding-bottom:0.35rem;}
+  .cv-col p,.cv-col li{font-size:0.82rem;line-height:1.65;}
+  .cv-col ul{padding-left:1rem;margin-top:0.3rem;}
+  footer{background:var(--navy);color:rgba(255,255,255,0.45);text-align:center;padding:1.5rem;font-size:0.75rem;border-top:2px solid var(--gold);}
+  footer strong{color:var(--gold-light);}
+  @media print{#top-nav{display:none;}#hero{padding:2rem 1rem;}#hero::before{display:none;}.page-wrap{max-width:100%;padding:0 0.5rem 2rem;}.section{margin-top:2rem;page-break-inside:avoid;}.card,.juris-card,.flow-wrap,.example-box{box-shadow:none;border:1px solid #ccc;}.prova-section{background:#f0f4f8!important;color:#000!important;}.prova-section h2{color:#0d1b2a!important;}.prova-item{background:white!important;border:1px solid #ccc!important;}.prova-item-q{color:#7a5a00!important;}.prova-item-a{color:#333!important;}.example-box{background:#f0f4f8!important;color:#000!important;}.culp-visual{flex-direction:column;}footer{display:none;}body{font-size:11pt;}}
+  @media(max-width:640px){#hero{padding:2rem 1rem;}#hero h1{font-size:1.6rem;}.card-grid-3,.card-grid-2{grid-template-columns:1fr;}.section-title{font-size:1.1rem;}.comp-table{font-size:0.76rem;}.comp-table td,.comp-table th{padding:0.55rem 0.65rem;}.flow-node{min-width:150px;font-size:0.74rem;}.culp-visual{flex-direction:column;}.cv-sep{padding:0.5rem;flex:0 0 2rem;}}
+  .mt1{margin-top:0.75rem;}.mt2{margin-top:1rem;}.mt3{margin-top:1.5rem;}
+  .flex-gap{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:flex-start;}
+  strong{font-weight:700;}
+  .page-wrap {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding-left: clamp(1rem, 3vw, 4rem) !important;
+    padding-right: clamp(1rem, 3vw, 4rem) !important;
+}
+
+.section,
+.prova-section,
+.card,
+.flow-wrap,
+.comp-table,
+.juris-grid {
+    max-width: none !important;
+}
+</style>
+</head>
+<body>
+
+<nav id="top-nav" aria-label="Atalhos do artigo">
+  <div class="nav-brand">Art. 21º CP</div>
+
+  <div class="nav-main-links">
+    <a href="#visao-geral">Visão Geral</a>
+    <a href="#conceito">Conceito</a>
+    <a href="#presuncao">Presunção Legal</a>
+    <a href="#especies">Espécies</a>
+    <a href="#evitavel-inevitavel">Evitável × Inevitável</a>
+    <a href="#par-unico">§único — Atenuação</a>
+    <a href="#tipo-x-proibicao">Tipo × Proibição</a>
+    <a href="#culpabilidade">Culpabilidade</a>
+    <a href="#fluxograma">Fluxograma</a>
+    <a href="#comparativo">Comparativo</a>
+    <a href="#exemplos">Exemplos</a>
+    <a href="#jurisprudencia">Juris. STF/STJ</a>
+    <a href="#doutrina">Doutrina</a>
+    <a href="#sistematica">Sistemática</a>
+    <a href="#prova" class="nav-prova">Prova</a>
+  </div>
+</nav>
+
+<header id="hero">
+  <div class="badge">Código Penal · Título II · Da Culpabilidade</div>
+  <h1>Art. 21º — <span>Erro de Proibição</span></h1>
+  <p class="subtitle">Erro sobre a Ilicitude · Potencial Consciência da Ilicitude · Inevitável × Evitável · Atenuação da Pena · Magistratura · ENAM</p>
+  <div class="law-box">
+    <strong>Art. 21.º do Decreto-Lei n.º 2.848/1940 (Código Penal)</strong>
+    "O desconhecimento da lei é inescusável. O erro sobre a ilicitude do fato, se inevitável, isenta de pena; se evitável, poderá diminuí-la de um sexto a um terço.<br>
+    <span style="color:rgba(255,255,255,0.55);font-style:normal;font-size:0.82rem;">Parágrafo único.</span> Considera-se evitável o erro se o agente atua ou se omite sem a consciência da ilicitude do fato, quando lhe era possível, nas circunstâncias, ter ou atingir essa consciência."
+  </div>
+</header>
+
+<div class="page-wrap">
+
+<!-- 1. VISÃO GERAL -->
+<section class="section" id="visao-geral">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div class="section-title"><span>Introdução &amp; Estrutura</span>Visão Geral do Artigo</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📍 Finalidade e Posição Sistemática</h3>
+      <p>O art. 21 CP disciplina o <strong>erro de proibição</strong> — situação em que o agente conhece os fatos (não há erro de tipo), mas desconhece a <strong>ilicitude</strong> de sua conduta. Integra a teoria da culpabilidade: o elemento atingido é a <em>potencial consciência da ilicitude</em> — um dos três elementos da culpabilidade no sistema finalista (imputabilidade + potencial consciência da ilicitude + exigibilidade de conduta diversa).</p>
+      <p class="mt2">O art. 21 CP traz duas regras distintas: (a) o <em>caput</em> — "o desconhecimento da lei é inescusável" (<em>ignorantia legis neminem excusat</em>); e (b) imediatamente após: o erro sobre a <em>ilicitude do fato</em> (não sobre a lei em abstrato) pode isentar de pena (se inevitável) ou diminuí-la (se evitável). A distinção entre desconhecimento da lei e erro sobre a ilicitude é o núcleo do art. 21 CP.</p>
+    </div>
+    <div class="card">
+      <h3>🏛️ Estrutura do Art. 21 CP</h3>
+      <ul>
+        <li><strong>1.ª parte — "O desconhecimento da lei é inescusável":</strong> Regra geral do ordenamento — ninguém pode invocar desconhecimento da norma abstrata para eximir-se do cumprimento da lei. Princípio <em>ignorantia legis neminem excusat</em>. Diferente do erro sobre a ilicitude.</li>
+        <li><strong>2.ª parte — Erro sobre a ilicitude inevitável:</strong> "se inevitável, isenta de pena" → exclui a culpabilidade (pelo afastamento da potencial consciência da ilicitude). Absolvição.</li>
+        <li><strong>3.ª parte — Erro sobre a ilicitude evitável:</strong> "se evitável, poderá diminuí-la de um sexto a um terço" → atenua a pena (3.ª fase da dosimetria). Condenação com pena reduzida.</li>
+        <li><strong>Parágrafo único — Critério do erro evitável:</strong> Erro evitável é aquele em que o agente podia, nas circunstâncias, ter ou atingir a consciência da ilicitude. Critério objetivo-subjetivo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert alert-gold mt2">
+    <div class="alert-icon">⭐</div>
+    <div><strong>Fundamento Constitucional — Princípio da Culpabilidade:</strong> O art. 21 CP concretiza o <strong>princípio da culpabilidade</strong> (<em>nulla poena sine culpa</em>) na sua dimensão da <em>potencial consciência da ilicitude</em>: se o agente não podia, nas circunstâncias, perceber que sua conduta era ilícita (erro inevitável), não há censurabilidade → sem culpabilidade → sem pena. Derivado da dignidade da pessoa humana (art. 1.º, III, CF/88) e do devido processo legal (art. 5.º, LIV, CF/88). O STF e o STJ reconhecem que punir quem genuinamente não podia saber da ilicitude violaria a CF/88.</div>
+  </div>
+
+  <div class="card-grid card-grid-3 mt2">
+    <div class="card type-card tc-red">
+      <h3>🔴 Desconhecimento da Lei — Inescusável</h3>
+      <p>Ninguém pode invocar desconhecimento da lei (norma abstrata) para eximir-se de responsabilidade. O desconhecimento da lei não exclui dolo nem culpabilidade. Princípio universal do ordenamento jurídico — <em>ignorantia legis neminem excusat</em>.</p>
+    </div>
+    <div class="card type-card tc-green">
+      <h3>🟢 Erro sobre Ilicitude Inevitável</h3>
+      <p>O agente conhece os fatos, mas não tinha como perceber que eram ilícitos. Exclui a <em>potencial consciência da ilicitude</em> → afasta a culpabilidade → <strong>isenta de pena</strong>. Absolvição por inexigibilidade de conduta diversa.</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>🟡 Erro sobre Ilicitude Evitável</h3>
+      <p>O agente não sabia da ilicitude, mas podia ter descoberto se fosse mais diligente. Culpabilidade diminuída (não excluída) → <strong>pena reduzida de 1/6 a 1/3</strong> na 3.ª fase da dosimetria. Crime doloso, pena menor.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2. CONCEITO PROFUNDO -->
+<section class="section" id="conceito">
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div class="section-title"><span>Análise Dogmática</span>Conceito de Erro de Proibição e Potencial Consciência da Ilicitude</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📋 Conceito de Erro de Proibição</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.6rem;">O <strong>erro de proibição</strong> ocorre quando o agente conhece os fatos que pratica (não há erro de tipo), mas desconhece — ou tem falsa compreensão — sobre a <strong>ilicitude</strong> de sua conduta. O agente sabe o que faz; não sabe que o que faz é proibido.</p>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.83rem;line-height:1.9;">
+        <strong style="color:var(--gold-light);">Estrutura do Erro de Proibição:</strong>
+        <p style="margin-top:0.4rem;">O agente tem consciência dos <strong>fatos</strong> (elementos do tipo) → mas não tem (ou tem falsa) consciência da <strong>ilicitude</strong></p>
+        <p style="color:var(--gold-light);font-style:italic;margin-top:0.3rem;">"Sabia o que fazia — não sabia que era proibido"</p>
+        <p style="margin-top:0.4rem;">Atingido: elemento da CULPABILIDADE (<em>potencial consciência da ilicitude</em>)</p>
+        <p>NÃO atingido: dolo (o agente age dolosamente — sabia o que fazia)</p>
+      </div>
+      <div class="alert alert-gold mt2" style="font-size:0.8rem;">
+        <div>⭐ <strong>Distinção Fundamental:</strong> No erro de TIPO (art. 20 CP): "não sabia O QUE fazia" → exclui DOLO. No erro de PROIBIÇÃO (art. 21 CP): "sabia o que fazia, mas não sabia que ERA ILÍCITO" → não exclui dolo → atinge CULPABILIDADE. Esta distinção é a mais cobrada em provas de magistratura sobre os arts. 20 e 21 CP.</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📐 Potencial Consciência da Ilicitude — Elemento da Culpabilidade</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.6rem;">No sistema finalista adotado pelo CP de 1940 (Reforma de 1984), a culpabilidade é composta de três elementos:</p>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;">
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--blue-accent);">1. Imputabilidade:</strong> Capacidade mental de compreender e querer (arts. 26–28 CP). Sem imputabilidade → sem culpabilidade.
+        </div>
+        <div style="background:var(--gold-pale);border-left:3px solid var(--gold);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:#7a5a00;">2. Potencial Consciência da Ilicitude (ART. 21 CP):</strong> Possibilidade de o agente, nas circunstâncias, ter conhecimento de que sua conduta é ilícita. Não se exige consciência atual — basta a <em>potencial</em> (possibilidade de ter). O erro de proibição inevitável exclui esse elemento.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--green-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--green-accent);">3. Exigibilidade de Conduta Diversa:</strong> Possibilidade de o agente se comportar conforme o direito (arts. 22, 24 CP). Coação irresistível, obediência hierárquica e inexigibilidade supralegal excluem esse elemento.
+        </div>
+      </div>
+      <div class="alert alert-navy mt2" style="font-size:0.8rem;">
+        <div>📌 <strong>Posição do Dolo no Sistema Finalista:</strong> O dolo (e a culpa) estão no TIPO (fato típico), não na culpabilidade. Logo, o erro de proibição não exclui o dolo — exclui ou atenua apenas a culpabilidade. Esta é a consequência central da adoção do finalismo pelo CP: o crime pode ser típico e antijurídico (dolo presente), mas sem culpabilidade (erro de proibição inevitável).</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. PRESUNÇÃO LEGAL -->
+<section class="section" id="presuncao">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div class="section-title"><span>1.ª Parte do Art. 21 CP</span>Desconhecimento da Lei × Erro sobre a Ilicitude — Distinção Crucial</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-red">
+      <h3>🔴 Desconhecimento da Lei — Inescusável (Caput, 1.ª Parte)</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Regra:</strong> "O desconhecimento da lei é inescusável." Ninguém pode alegar que não conhecia a lei para eximir-se de responsabilidade penal. Esta é a regra do art. 3.º do Decreto-Lei nº 4.657/1942 (LINDB): "Ninguém se escusa de cumprir a lei, alegando que não a conhece."</p>
+      <div class="divider"></div>
+      <ul style="font-size:0.83rem;">
+        <li><strong>Objeto:</strong> Desconhecimento da lei abstrata — o agente não sabe que existe a norma jurídica que proíbe a conduta</li>
+        <li><strong>Consequência:</strong> NÃO isenta de pena, NÃO diminui a pena → a lei se aplica normalmente</li>
+        <li><strong>Fundamento:</strong> Princípio da obrigatoriedade da lei — vigente a lei, presume-se seu conhecimento universal. Necessidade de segurança jurídica e da eficácia do ordenamento</li>
+        <li><strong>Atenção:</strong> O desconhecimento da lei pode ser atenuante genérica (art. 65, II, CP — "desconhecia a lei"), mas não isenta nem reduz a pena de 1/6 a 1/3 como o erro de proibição</li>
+        <li><strong>Exemplo:</strong> Agente que pratica crime ignorando que a lei penal existe → a lei se aplica normalmente; não há escusa válida</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-green">
+      <h3>🟢 Erro sobre a Ilicitude do Fato — Escusável (Caput, 2.ª Parte)</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Regra:</strong> "O erro sobre a ilicitude do fato, se inevitável, isenta de pena." O erro não é sobre a lei abstrata, mas sobre a <em>ilicitude concreta</em> da conduta praticada — o agente conhece a lei, mas não percebe que sua conduta específica é ilícita.</p>
+      <div class="divider"></div>
+      <ul style="font-size:0.83rem;">
+        <li><strong>Objeto:</strong> A ilicitude concreta do fato — o agente não percebe que aquela conduta específica é ilícita naquelas circunstâncias</li>
+        <li><strong>Consequência:</strong> Inevitável → isenta de pena; Evitável → diminui de 1/6 a 1/3</li>
+        <li><strong>Fundamento:</strong> Princípio da culpabilidade — sem potencial consciência da ilicitude, não há censurabilidade; punir quem não podia saber que errava violaria a dignidade humana</li>
+        <li><strong>Exemplo:</strong> Indígena recém-integrado à comunhão nacional que pratica conduta que em sua cultura era permitida e não tem como saber que é ilícita no direito nacional</li>
+        <li><strong>Exemplo 2:</strong> Médico que pratica eutanásia em país onde era legalizada, após mudança legislativa que desconhecia → erro de proibição</li>
+      </ul>
+      <div class="alert alert-gold mt2" style="font-size:0.8rem;">
+        <div>⭐ <strong>Distinção Prática:</strong> Desconhecimento da LEI = "não sei que existe a norma" → inescusável. Erro sobre a ILICITUDE = "sei que existe a lei, mas não sei que minha conduta concreta é ilícita" → pode isentar ou atenuar.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt2">
+    <h3>⚡ Tabela Comparativa: Desconhecimento da Lei × Erro de Proibição × Atenuante do Art. 65, II, CP</h3>
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:0.82rem;">
+        <thead style="background:var(--navy);color:white;">
+          <tr>
+            <th style="padding:0.55rem 0.8rem;">Critério</th>
+            <th style="padding:0.55rem 0.8rem;">Desconhecimento da Lei</th>
+            <th style="padding:0.55rem 0.8rem;">Erro de Proibição Inevitável</th>
+            <th style="padding:0.55rem 0.8rem;">Erro de Proibição Evitável</th>
+            <th style="padding:0.55rem 0.8rem;">Atenuante Art. 65, II, CP</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:var(--gold-pale);">
+            <td style="padding:0.5rem 0.8rem;font-weight:700;">O agente desconhecia</td>
+            <td style="padding:0.5rem 0.8rem;">A norma abstrata</td>
+            <td style="padding:0.5rem 0.8rem;">A ilicitude do fato concreto (inevitável)</td>
+            <td style="padding:0.5rem 0.8rem;">A ilicitude do fato concreto (evitável)</td>
+            <td style="padding:0.5rem 0.8rem;">A lei (em geral)</td>
+          </tr>
+          <tr>
+            <td style="padding:0.5rem 0.8rem;font-weight:700;">Artigo</td>
+            <td style="padding:0.5rem 0.8rem;">Art. 21, caput, 1.ª parte</td>
+            <td style="padding:0.5rem 0.8rem;">Art. 21, caput, 2.ª parte</td>
+            <td style="padding:0.5rem 0.8rem;">Art. 21, caput, 3.ª parte + §único</td>
+            <td style="padding:0.5rem 0.8rem;">Art. 65, II, CP</td>
+          </tr>
+          <tr style="background:#edf7f0;">
+            <td style="padding:0.5rem 0.8rem;font-weight:700;">Efeito penal</td>
+            <td style="padding:0.5rem 0.8rem;color:var(--red-accent);font-weight:700;">Nenhum — inescusável</td>
+            <td style="padding:0.5rem 0.8rem;color:var(--green-accent);font-weight:700;">Isenta de pena</td>
+            <td style="padding:0.5rem 0.8rem;color:#7a5a00;font-weight:700;">Diminui 1/6 a 1/3</td>
+            <td style="padding:0.5rem 0.8rem;color:var(--blue-accent);">Atenuante (sem quantum fixo)</td>
+          </tr>
+          <tr style="background:#fde8e8;">
+            <td style="padding:0.5rem 0.8rem;font-weight:700;">Fase dosimétrica</td>
+            <td style="padding:0.5rem 0.8rem;">—</td>
+            <td style="padding:0.5rem 0.8rem;">Afasta culpabilidade → absolvição</td>
+            <td style="padding:0.5rem 0.8rem;">3.ª fase (causa de diminuição)</td>
+            <td style="padding:0.5rem 0.8rem;">2.ª fase (circunstância atenuante)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 4. ESPÉCIES -->
+<section class="section" id="espécies">
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <div class="section-title"><span>Tipologia — Alta Cobrança</span>Espécies de Erro de Proibição</div>
+  </div>
+
+  <div class="especie-grid">
+    <div class="especie-card ec-red">
+      <h4>🔴 Erro de Proibição Direto</h4>
+      <p style="font-style:italic;font-size:0.81rem;color:var(--text-soft);margin-bottom:0.3rem;">"O agente ignora a norma proibitiva"</p>
+      <p><strong>Conceito:</strong> O agente desconhece que a conduta é proibida por lei penal. Não é o simples desconhecimento da lei abstrata (que é inescusável), mas a ausência de percepção concreta de que aquela conduta específica é ilícita naquelas circunstâncias.</p>
+      <ul>
+        <li><strong>Objeto:</strong> A proibição normativa em si — o agente não sabe que a norma torna ilícita aquela conduta</li>
+        <li><strong>Exemplo 1:</strong> Estrangeiro recém-chegado ao Brasil que pratica conduta permitida em seu país, desconhecendo que é crime aqui → erro de proibição direto</li>
+        <li><strong>Exemplo 2:</strong> Pessoa que em área rural pratica ato que desconhecia ser crime ambiental, sem ter acesso a informações sobre a legislação</li>
+        <li><strong>Distinção:</strong> Não confundir com desconhecimento abstrato da lei (inescusável) — o erro de proibição direto exige falsa percepção concreta sobre a ilicitude de conduta específica</li>
+      </ul>
+    </div>
+    <div class="especie-card ec-blue">
+      <h4>🔵 Erro de Proibição Indireto (Erro de Permissão)</h4>
+      <p style="font-style:italic;font-size:0.81rem;color:var(--text-soft);margin-bottom:0.3rem;">"O agente imagina que está autorizado"</p>
+      <p><strong>Conceito:</strong> O agente sabe que a conduta em geral é ilícita, mas acredita — erroneamente — estar amparado por uma causa de justificação (excludente de ilicitude) que não existe ou que não tem os limites que o agente imagina. Também chamado "descriminante putativa por erro de proibição" ou "erro de permissão".</p>
+      <ul>
+        <li><strong>Objeto:</strong> Os limites normativos de uma excludente de ilicitude — o agente erra sobre a existência ou o alcance da justificante</li>
+        <li><strong>Exemplo 1:</strong> Agente que acredita ter direito de vias de fato como "legítima defesa da honra" — imagina que a lei permite agredir quem o desonrou → erro sobre os limites da legítima defesa</li>
+        <li><strong>Exemplo 2:</strong> Policial que acredita ter poder de "dar uma surra" em suspeito por entender que está amparado pelo "estrito cumprimento do dever legal" → erro sobre o alcance da excludente</li>
+        <li><strong>Distinção do §1.º do art. 20:</strong> Se o erro é sobre os FATOS (o agente imagina a existência de uma situação justificante factual) → art. 20, §1.º (descriminante putativa factual). Se o erro é sobre os LIMITES NORMATIVOS da excludente → art. 21 CP (erro de proibição indireto)</li>
+      </ul>
+    </div>
+    <div class="especie-card ec-green">
+      <h4>🟢 Erro de Proibição Mandamental</h4>
+      <p style="font-style:italic;font-size:0.81rem;color:var(--text-soft);margin-bottom:0.3rem;">"O agente não sabe que devia agir"</p>
+      <p><strong>Conceito:</strong> Erro sobre a existência ou extensão de um dever de agir nos crimes omissivos impróprios (comissivos por omissão). O agente desconhece que tinha o dever de agir em determinada situação (desconhece sua posição de garantidor).</p>
+      <ul>
+        <li><strong>Relevância:</strong> Nos crimes omissivos impróprios, o agente deve conhecer sua condição de garantidor (art. 13, §2.º CP) para ter dolo de omissão; o desconhecimento dessa posição pode configurar erro de proibição mandamental</li>
+        <li><strong>Exemplo:</strong> Salva-vidas recém-contratado que desconhecia ser garantidor oficial → não sabe que tem dever legal de salvar banhistas → erro de proibição mandamental</li>
+        <li><strong>Distinção:</strong> Se o agente desconhece que era garantidor (desconhece os FATOS que criam a posição de garantia) → pode ser erro de tipo. Se sabe que era garantidor mas desconhece o dever jurídico de agir → erro de proibição mandamental.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 5. EVITÁVEL × INEVITÁVEL -->
+<section class="section" id="evitavel-inevitavel">
+  <div class="section-header">
+    <div class="section-num">05</div>
+    <div class="section-title"><span>Núcleo Central — Alta Cobrança</span>Erro Inevitável × Evitável: Critérios e Consequências</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-green">
+      <h3>🟢 Erro de Proibição Inevitável (Escusável)</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Conceito:</strong> O erro era impossível de ser evitado pelo agente, mesmo que tivesse adotado todo o cuidado esperado. Naquelas circunstâncias, não era possível ao agente ter ou atingir a consciência da ilicitude.</p>
+      <div class="divider"></div>
+      <ul style="font-size:0.83rem;">
+        <li><strong>Consequência jurídica:</strong> <strong>Isenta de pena</strong> → exclui a culpabilidade (especificamente o elemento "potencial consciência da ilicitude") → absolvição</li>
+        <li><strong>Fundamento:</strong> Sem possibilidade de ter consciência da ilicitude → sem censurabilidade → sem culpabilidade</li>
+        <li><strong>Critério legal (§único):</strong> O erro é inevitável quando, mesmo nas circunstâncias, o agente não podia ter ou atingir a consciência da ilicitude</li>
+        <li><strong>Exemplos práticos:</strong> Indígena recém-saído de aldeia isolada; estrangeiro praticando conduta permitida em seu país; pessoa em área extremamente remota sem acesso a informações jurídicas</li>
+        <li><strong>Avaliação:</strong> Análise das condições pessoais do agente (formação, acesso à informação, cultura) e das circunstâncias do caso concreto</li>
+        <li><strong>Base processual:</strong> Absolvição — art. 386, V, CPP (não existir prova de ter o réu concorrido para a infração penal) ou VI (existirem circunstâncias que excluam o crime)</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>🟡 Erro de Proibição Evitável (Inescusável)</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Conceito:</strong> O erro poderia ter sido evitado se o agente tivesse agido com mais diligência para informar-se sobre a ilicitude. Nas circunstâncias, era possível — com maior cuidado — ter ou atingir a consciência da ilicitude.</p>
+      <div class="divider"></div>
+      <ul style="font-size:0.83rem;">
+        <li><strong>Consequência jurídica:</strong> <strong>Pena diminuída de 1/6 a 1/3</strong> → culpabilidade diminuída, não excluída → crime doloso com pena atenuada</li>
+        <li><strong>Fundamento:</strong> O agente tinha condições de saber, mas não se informou adequadamente → censurabilidade reduzida, não ausente</li>
+        <li><strong>Critério legal (§único):</strong> Evitável quando "era possível, nas circunstâncias, ter ou atingir essa consciência"</li>
+        <li><strong>Fase dosimétrica:</strong> Causa de diminuição na <strong>3.ª fase</strong> (art. 68, CP) → de 1/6 a 1/3</li>
+        <li><strong>Quanto menor o quantum:</strong> 1/6 → erro mais facilmente evitável. 1/3 → erro que exigiu mais esforço para evitar</li>
+        <li><strong>Crime praticado:</strong> Doloso — o dolo não é excluído pelo erro de proibição</li>
+      </ul>
+      <div class="alert alert-red mt2" style="font-size:0.8rem;">
+        <div>🔴 <strong>Atenção — Dolo não é Excluído:</strong> No erro de proibição evitável, o crime continua sendo doloso — o dolo não é afetado pelo erro de proibição (diferente do erro de tipo, que exclui o dolo). O que diminui é a culpabilidade (potencial consciência da ilicitude reduzida), não o tipo subjetivo.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. §ÚNICO -->
+<section class="section" id="par-unico">
+  <div class="section-header">
+    <div class="section-num">06</div>
+    <div class="section-title"><span>Art. 21, §único — Critério Legal</span>Parâmetro de Avaliação do Erro Evitável</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📋 Critério do Parágrafo Único — Análise Literal</h3>
+      <div class="law-quote">
+        <strong>Art. 21, §único CP:</strong>
+        "Considera-se evitável o erro se o agente atua ou se omite sem a consciência da ilicitude do fato, quando lhe era possível, nas circunstâncias, ter ou atingir essa consciência."
+      </div>
+      <p style="font-size:0.84rem;color:var(--text-mid);margin-top:0.75rem;margin-bottom:0.5rem;">O §único fornece o critério positivo para o erro <em>evitável</em> — o que sobra (o que não se enquadra como evitável) é o inevitável. Análise dos elementos:</p>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;">
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--blue-accent);">"atua ou se omite sem a consciência da ilicitude":</strong> Confirma que o agente agia sem consciência atual da ilicitude — o erro existe. A pergunta é se essa ausência era justificável ou não.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">"quando lhe era possível":</strong> Critério individual/subjetivo — não se exige que qualquer pessoa pudesse saber, mas que AQUELE agente específico, com suas condições pessoais e as circunstâncias do caso, pudesse ter sabido.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--green-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--green-accent);">"nas circunstâncias":</strong> Contexto objetivo do caso — local, tempo, cultura, acesso à informação, complexidade da norma.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--gold);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:#7a5a00;">"ter ou atingir essa consciência":</strong> "Ter" = já possuir o conhecimento; "atingir" = poder chegar ao conhecimento por esforço razoável (informação, consulta, investigação).
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>⚡ Fatores para Avaliar a Evitabilidade do Erro</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">A doutrina e a jurisprudência identificam os seguintes fatores para determinar se o erro era evitável ou inevitável:</p>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;">
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">Indicadores de EVITABILIDADE (erro culposo):</strong> Agente letrado e informado; conduta de elevada reprovação social; fácil acesso à informação jurídica; consulta a profissional era possível e acessível; a conduta era evidentemente suspeita de ilicitude; outros no mesmo grupo social conheciam a proibição.
+        </div>
+        <div style="background:#dceee3;border-left:3px solid var(--green-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--green-accent);">Indicadores de INEVITABILIDADE (erro desculpável):</strong> Norma extremamente técnica, recém-criada ou mal divulgada; cultura isolada (povos indígenas, comunidades remotas); conduta socialmente aceita no ambiente do agente; ausência de acesso a informações jurídicas; consulta a profissional foi realizada e ele orientou erroneamente; legislação contraditória ou confusa no tema.
+        </div>
+        <div style="background:var(--gold-pale);border:1px solid var(--gold);border-radius:6px;padding:0.65rem 0.9rem;font-size:0.82rem;">
+          <strong style="color:#7a5a00;">Consulta a Profissional (Advogado/Autoridade):</strong> Se o agente consultou advogado ou autoridade competente e obteve orientação de que a conduta era lícita, e agiu com base nessa orientação → erro inevitável (em geral). A boa-fé na consulta profissional é reconhecida como fator que torna o erro inevitável pelo STJ.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. TIPO × PROIBIÇÃO -->
+<section class="section" id="tipo-x-proibicao">
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <div class="section-title"><span>Distinção Fundamental — A Mais Cobrada</span>Erro de Tipo (Art. 20) × Erro de Proibição (Art. 21) — Quadro Definitivo</div>
+  </div>
+
+  <div class="culp-visual">
+    <div class="cv-col cv-ok">
+      <h4>🔴 ERRO DE TIPO — Art. 20 CP</h4>
+      <p><strong>"Não sabia O QUE estava fazendo"</strong></p>
+      <ul>
+        <li>Erro sobre elemento <strong>objetivo</strong> do tipo penal</li>
+        <li>Ausência do elemento cognitivo do DOLO</li>
+        <li>Recai sobre os FATOS (elementos constitutivos)</li>
+        <li>Exclui: o DOLO (e a culpa, se inevitável)</li>
+        <li>Afeta: TIPICIDADE (fato típico)</li>
+        <li>Se inevitável: fato ATÍPICO</li>
+        <li>Se evitável: crime CULPOSO (se previsto em lei)</li>
+        <li>Ex.: "Não sabia que a coisa era alheia" (furto)</li>
+        <li>Ex.: "Não sabia que aquele vulto era pessoa" (homicídio)</li>
+      </ul>
+    </div>
+    <div class="cv-sep">≠</div>
+    <div class="cv-col cv-err">
+      <h4>🔵 ERRO DE PROIBIÇÃO — Art. 21 CP</h4>
+      <p><strong>"Sabia o que fazia, mas não sabia que ERA ILÍCITO"</strong></p>
+      <ul>
+        <li>Erro sobre a ILICITUDE da conduta</li>
+        <li>Ausência da potencial consciência da ilicitude</li>
+        <li>Recai sobre a NORMA (proibição/permissão)</li>
+        <li>NÃO exclui: o DOLO (o agente age dolosamente)</li>
+        <li>Afeta: CULPABILIDADE (potencial consciência da ilicitude)</li>
+        <li>Se inevitável: isenta de PENA (culpabilidade excluída)</li>
+        <li>Se evitável: pena reduzida de 1/6 a 1/3 (culpabilidade diminuída)</li>
+        <li>Ex.: "Sabia que pegava coisa alheia, mas achava que podia"</li>
+        <li>Ex.: "Sabia que matava, mas achava que era legítima defesa da honra"</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="overflow-x:auto;">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Critério</th>
+          <th>Erro de Tipo (Art. 20)</th>
+          <th>Erro de Proibição (Art. 21)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hl">
+          <td>O agente desconhece</td>
+          <td>Elemento objetivo do TIPO PENAL — um fato</td>
+          <td>A ILICITUDE da conduta — uma proibição/permissão</td>
+        </tr>
+        <tr>
+          <td>Frase síntese</td>
+          <td>"Não sei o que faço"</td>
+          <td>"Sei o que faço — não sei que é ilícito"</td>
+        </tr>
+        <tr class="hl2">
+          <td>Elemento excluído</td>
+          <td>DOLO (elemento do tipo subjetivo)</td>
+          <td>Potencial consciência da ilicitude (elemento da culpabilidade)</td>
+        </tr>
+        <tr>
+          <td>Teoria penal afetada</td>
+          <td>TIPICIDADE (fato típico)</td>
+          <td>CULPABILIDADE</td>
+        </tr>
+        <tr class="hl3">
+          <td>Se inevitável</td>
+          <td>Fato ATÍPICO — sem dolo e sem culpa</td>
+          <td>ISENTO DE PENA — sem culpabilidade</td>
+        </tr>
+        <tr>
+          <td>Se evitável</td>
+          <td>Crime CULPOSO (se previsto em lei); se não previsto: atípico</td>
+          <td>Crime DOLOSO com pena diminuída de 1/6 a 1/3</td>
+        </tr>
+        <tr class="hl4">
+          <td>O crime é doloso após o erro?</td>
+          <td>NÃO — o erro exclui o dolo</td>
+          <td>SIM — o dolo não é afetado</td>
+        </tr>
+        <tr>
+          <td>Fase dosimétrica afetada</td>
+          <td>Tipicidade (antes da dosimetria)</td>
+          <td>3.ª fase (causa de diminuição 1/6 a 1/3)</td>
+        </tr>
+        <tr class="hl5">
+          <td>Exemplo clássico</td>
+          <td>Caçador que atira em vulto pensando ser animal</td>
+          <td>Índio que pratica conduta aceita em sua cultura</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 8. CULPABILIDADE E TEORIAS -->
+<section class="section" id="culpabilidade">
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <div class="section-title"><span>Dogmática Penal — Alta Cobrança</span>Culpabilidade, Consciência da Ilicitude e Teorias do Dolo vs. Culpabilidade</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📋 Teorias sobre a Consciência da Ilicitude e o Dolo</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.6rem;">A posição da consciência da ilicitude na estrutura do crime é objeto de debate entre as teorias:</p>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;">
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);border-radius:0 4px 4px 0;padding:0.6rem 0.9rem;font-size:0.82rem;">
+          <strong style="color:var(--red-accent);">Teoria Psicológica da Culpabilidade (Causalismo):</strong> Consciência da ilicitude integra o dolo ("dolo normativo"). O dolo = consciência + vontade + consciência da ilicitude. Erro de proibição → exclui o dolo → atípico. Posição histórica, abandonada no Brasil.
+        </div>
+        <div style="background:#edf2f8;border-left:3px solid var(--blue-accent);border-radius:0 4px 4px 0;padding:0.6rem 0.9rem;font-size:0.82rem;">
+          <strong style="color:var(--blue-accent);">Teoria Psicológico-Normativa da Culpabilidade:</strong> Culpabilidade = imputabilidade + dolo (com consciência da ilicitude) ou culpa + exigibilidade de conduta diversa. Dolo normativo ainda inclui consciência da ilicitude. Intermediária.
+        </div>
+        <div style="background:var(--gold-pale);border:1px solid var(--gold);border-radius:6px;padding:0.65rem 0.9rem;font-size:0.82rem;">
+          <strong style="color:#7a5a00;">⭐ Teoria Normativa Pura da Culpabilidade (Finalismo — Welzel) — ADOTADA:</strong> Dolo = consciência + vontade (sem consciência da ilicitude = "dolo natural"). Consciência da ilicitude sai do dolo e vai para a culpabilidade (como "potencial consciência"). Culpabilidade = imputabilidade + potencial consciência da ilicitude + exigibilidade. O CP de 1940 (Reforma de 1984) adotou esta posição — o art. 21 CP trata da consciência da ilicitude na culpabilidade, não no dolo.
+        </div>
+      </div>
+      <div class="alert alert-navy mt2" style="font-size:0.8rem;">
+        <div>📌 <strong>Consequência Prática da Adoção do Finalismo:</strong> No sistema brasileiro, o erro de proibição NÃO exclui o dolo — o crime continua sendo doloso. O que é excluído ou atenuado é a culpabilidade. Por isso, o evitável resulta em crime doloso com pena reduzida, não em crime culposo.</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>⚖️ Potencial vs. Atual Consciência da Ilicitude</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">O art. 21 CP trabalha com a <strong>potencial</strong> (não atual) consciência da ilicitude:</p>
+      <div style="display:flex;flex-direction:column;gap:0.45rem;">
+        <div style="background:var(--cream-mid);border-left:3px solid var(--green-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--green-accent);">Consciência Atual:</strong> O agente TEM, no momento do crime, a consciência de que a conduta é ilícita. A maioria dos criminosos tem consciência atual → plena culpabilidade. Não é requisito pelo CP — basta a potencial.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--gold);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:#7a5a00;">Consciência Potencial:</strong> O agente PODERIA TER, nas circunstâncias, a consciência da ilicitude — mesmo que não a tivesse no momento. Se tinha a potencial → culpável. Se não tinha (nem atual nem potencial) → sem culpabilidade → isento de pena.
+        </div>
+        <div style="background:#edf2f8;border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--blue-accent);">Consciência Profana da Ilicitude:</strong> O CP não exige que o agente conheça a norma técnica (lei penal abstrata) — basta a consciência "profana": noção de que a conduta vai contra os valores sociais fundamentais, que é "errada" em termos gerais. Esta é a doutrina majoritária (Zaffaroni, Roxin): a consciência da ilicitude não exige conhecimento jurídico preciso.
+        </div>
+      </div>
+      <div class="alert alert-gold mt2" style="font-size:0.8rem;">
+        <div>⭐ <strong>Consciência Profana vs. Técnica:</strong> O agente que sabe que "matar é errado" tem consciência profana da ilicitude do homicídio — ainda que não conheça o art. 121 CP. Esta consciência profana é suficiente para a culpabilidade. Não se exige que o agente conheça a lei em termos técnico-jurídicos.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. FLUXOGRAMA -->
+<section class="section" id="fluxograma">
+  <div class="section-header">
+    <div class="section-num">09</div>
+    <div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma: Análise do Erro de Proibição (Art. 21 CP)</div>
+  </div>
+
+  <div class="flow-wrap">
+    <div class="flow-center">
+
+      <div class="flow-node flow-start">AGENTE PRATICOU FATO TÍPICO E ANTIJURÍDICO — ANALISAR CULPABILIDADE</div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 1 — O agente era IMPUTÁVEL? (Arts. 26–28 CP)</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Capacidade de entender e querer — sem imputabilidade, sem culpabilidade</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — inimputável (doença mental, menor)</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;min-width:185px;">
+            Sem culpabilidade por inimputabilidade<br>Medida de segurança ou absolvição<br><small>Arts. 26–28 CP</small>
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-gold" style="font-size:0.72rem;">Inimputabilidade — Arts. 26-28 CP</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">SIM — imputável</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Imputável → prosseguir<br>Verificar consciência da ilicitude
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 2 — O agente tinha (atual ou potencial) consciência da ILICITUDE da conduta?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Sabia ou poderia saber que sua conduta era ilícita? (não exige conhecimento técnico — basta consciência profana)</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">SIM — tinha consciência (atual ou potencial)</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:185px;">
+            Plena culpabilidade<br>Sem erro de proibição relevante<br>Pena integral
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-red" style="font-size:0.72rem;">Culpabilidade Plena — Pena Integral</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — agiu sem consciência da ilicitude</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;min-width:185px;">
+            ERRO DE PROIBIÇÃO (art. 21 CP)<br>Sem consciência da ilicitude<br>Prosseguir para Passo 3
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 3 — O erro era INEVITÁVEL? (§único: "era possível, nas circunstâncias, ter ou atingir essa consciência?")</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Critério: poderia aquele agente, com suas condições pessoais e nas circunstâncias concretas, ter atingido a consciência da ilicitude?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">NÃO era possível — erro INEVITÁVEL</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;min-width:185px;">
+            <strong>ERRO INEVITÁVEL</strong><br>
+            Art. 21, caput, 2.ª parte<br>ISENTA DE PENA<br>Exclui culpabilidade
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-green" style="font-size:0.72rem;">Isento de Pena — Sem Culpabilidade</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:115px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">SIM era possível — erro EVITÁVEL</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;min-width:185px;">
+            <strong>ERRO EVITÁVEL</strong><br>
+            Art. 21, caput, 3.ª parte<br>PENA DIMINUÍDA 1/6 a 1/3<br>Culpabilidade reduzida
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-gold" style="font-size:0.72rem;">Pena Reduzida 1/6 a 1/3 — 3.ª Fase</div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 4 [ERRO EVITÁVEL] — Quantum da Redução (1/6 a 1/3)</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Quanto menor o esforço necessário para ter atingido a consciência → menor a redução (1/6). Quanto maior o esforço → maior a redução (1/3)</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">Facilmente evitável (pouco esforço bastava)</div>
+          <div class="flow-node flow-box-red" style="font-size:0.74rem;text-align:center;min-width:175px;">
+            Redução MENOR → próxima de 1/6<br>Menor culpabilidade residual, mas mais próxima da plena
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-gold" style="font-size:0.72rem;">Redução de 1/6</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">Dificilmente evitável (exigia grande esforço)</div>
+          <div class="flow-node flow-box-blue" style="font-size:0.74rem;text-align:center;min-width:175px;">
+            Redução MAIOR → próxima de 1/3<br>Culpabilidade muito reduzida; quase inevitável
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-gold" style="font-size:0.72rem;">Redução de 1/3</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 10. COMPARATIVO -->
+<section class="section" id="comparativo">
+  <div class="section-header">
+    <div class="section-num">10</div>
+    <div class="section-title"><span>Quadro Sinóptico Completo</span>Art. 21 CP × Arts. 20, 22, 26, 65 — Sistema de Culpabilidade</div>
+  </div>
+
+  <div style="overflow-x:auto;">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Instituto</th>
+          <th>Artigo</th>
+          <th>Elemento afetado</th>
+          <th>Inevitável</th>
+          <th>Evitável</th>
+          <th>Crime doloso?</th>
+          <th>Fase dosimétrica</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hl2">
+          <td>Erro de Tipo</td>
+          <td>Art. 20, caput</td>
+          <td>DOLO (tipicidade)</td>
+          <td style="color:var(--green-accent);font-weight:700;">Atípico</td>
+          <td style="color:var(--red-accent);">Crime culposo (se previsto)</td>
+          <td style="color:var(--red-accent);font-weight:700;">NÃO — exclui dolo</td>
+          <td>Pré-tipicidade</td>
+        </tr>
+        <tr class="hl4">
+          <td>Erro de Proibição</td>
+          <td>Art. 21</td>
+          <td>Potencial consciência da ilicitude (culpabilidade)</td>
+          <td style="color:var(--green-accent);font-weight:700;">Isento de pena</td>
+          <td style="color:var(--red-accent);">Crime doloso c/ pena ↓ 1/6–1/3</td>
+          <td style="color:var(--green-accent);font-weight:700;">SIM — dolo mantido</td>
+          <td>3.ª fase (diminuição)</td>
+        </tr>
+        <tr>
+          <td>Desconhecimento da lei</td>
+          <td>Art. 21, caput, 1.ª parte</td>
+          <td>Nenhum</td>
+          <td style="color:var(--red-accent);">Inescusável</td>
+          <td style="color:var(--red-accent);">Inescusável</td>
+          <td style="color:var(--green-accent);">SIM</td>
+          <td>Nenhuma (atenuante art. 65, II)</td>
+        </tr>
+        <tr class="hl5">
+          <td>Descriminante Putativa Factual</td>
+          <td>Art. 20, §1.º</td>
+          <td>Dolo (tipicidade) — teoria limitada</td>
+          <td style="color:var(--green-accent);font-weight:700;">Isento de pena</td>
+          <td style="color:var(--red-accent);">Crime culposo (se previsto)</td>
+          <td style="color:var(--red-accent);font-weight:700;">NÃO — exclui dolo</td>
+          <td>Pré-tipicidade</td>
+        </tr>
+        <tr class="hl3">
+          <td>Descriminante Putativa Normativa</td>
+          <td>Art. 21</td>
+          <td>Culpabilidade (erro de proibição indireto)</td>
+          <td style="color:var(--green-accent);font-weight:700;">Isento de pena</td>
+          <td style="color:var(--red-accent);">Crime doloso c/ pena ↓ 1/6–1/3</td>
+          <td style="color:var(--green-accent);font-weight:700;">SIM</td>
+          <td>3.ª fase (diminuição)</td>
+        </tr>
+        <tr>
+          <td>Coação irresistível / Obediência hierárquica</td>
+          <td>Art. 22</td>
+          <td>Exigibilidade de conduta diversa (culpabilidade)</td>
+          <td colspan="2" style="color:var(--green-accent);font-weight:700;">Isento de pena (se irresistível)</td>
+          <td style="color:var(--green-accent);">SIM</td>
+          <td>Culpabilidade afastada</td>
+        </tr>
+        <tr class="hl">
+          <td>Inimputabilidade</td>
+          <td>Arts. 26–28</td>
+          <td>Imputabilidade (culpabilidade)</td>
+          <td colspan="2" style="color:var(--green-accent);">Absolvição/medida de segurança</td>
+          <td style="color:var(--green-accent);">SIM</td>
+          <td>Culpabilidade afastada</td>
+        </tr>
+        <tr>
+          <td>Atenuante — desconhecimento da lei</td>
+          <td>Art. 65, II</td>
+          <td>Culpabilidade (atenuada)</td>
+          <td colspan="2" style="color:#7a5a00;">Atenua a pena-base (2.ª fase)</td>
+          <td style="color:var(--green-accent);">SIM</td>
+          <td>2.ª fase (circunstâncias atenuantes)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="alert alert-red mt2">
+    <div class="alert-icon">🔴</div>
+    <div><strong>Resumo Crítico para Prova:</strong><br>
+    <strong>Art. 21 CP (erro de proibição):</strong> Inevitável → Isenta de pena | Evitável → Reduz pena 1/6 a 1/3 | Dolo SEMPRE mantido<br>
+    <strong>Art. 20 CP (erro de tipo):</strong> Inevitável → Atípico (sem dolo e culpa) | Evitável → Crime culposo (se previsto) | Dolo EXCLUÍDO<br>
+    <strong>Distinção chave:</strong> Tipo = recai sobre FATO (exclui dolo). Proibição = recai sobre ILICITUDE (mantém dolo, afeta culpabilidade)<br>
+    <strong>Dose redução:</strong> Erro de proibição evitável: 1/6 a 1/3 na 3.ª fase (causa de diminuição — não confundir com atenuante do art. 65, II, que é 2.ª fase)</div>
+  </div>
+</section>
+
+<!-- 11. EXEMPLOS -->
+<section class="section" id="exemplos">
+  <div class="section-header">
+    <div class="section-num">11</div>
+    <div class="section-title"><span>Casos Concretos Resolvidos</span>Exemplos Práticos do Art. 21 CP</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 1 — Indígena e Erro de Proibição Inevitável</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">Membros de comunidade indígena isolada, recém-saídos de suas terras ancestrais, praticam conduta que, em sua cultura, é um ritual aceito, mas que configura crime no direito nacional (ex.: prática de lesão corporal em ritual de passagem).</p>
+      <div class="ex-calc">ANÁLISE — ART. 21 CP:
+
+Fato típico? SIM — lesão corporal dolosa (art. 129 CP)
+Antijurídico? SIM — sem excludente de ilicitude formal
+Culpabilidade — potencial consciência da ilicitude:
+
+Os indígenas sabiam que sua conduta era ILÍCITA no direito nacional?
+→ NÃO — viviam em isolamento, com cultura distinta
+→ Em sua visão de mundo, a conduta era legítima e ritualística
+→ Não tinham como ter consciência da ilicitude segundo o
+   direito nacional
+
+O erro era INEVITÁVEL?
+→ Contexto: recém-integrados, sem acesso ao sistema jurídico
+→ Não havia como, naquelas circunstâncias, atingir a consciência
+   da ilicitude do direito nacional
+→ §único: "não lhes era possível, nas circunstâncias, ter ou
+   atingir essa consciência"
+
+→ ERRO DE PROIBIÇÃO INEVITÁVEL
+→ ART. 21, caput, 2.ª parte: ISENTO DE PENA
+→ Sem culpabilidade (potencial consciência excluída)
+→ Absolvição
+
+OBS: Se já integrados há anos e com acesso à informação:
+→ Erro EVITÁVEL → Crime doloso + pena ↓ 1/6 a 1/3 ✅</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 2 — Erro de Proibição Evitável (Dosimetria)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A, comerciante de pequeno município do interior, acredita de boa-fé que pode vender medicamentos controlados em sua farmácia sem registro especial, pois nunca ouviu falar da exigência legal. Não consultou advogado nem verificou a legislação. É preso em flagrante.</p>
+      <div class="ex-calc">ANÁLISE — ART. 21 CP:
+
+Fato típico? SIM — crime contra a saúde pública doloso
+Antijurídico? SIM — sem excludente
+Culpabilidade — consciência da ilicitude:
+
+A sabia que vender medicamentos controlados sem registro era crime?
+→ NÃO — acreditava ser lícito
+
+O erro era INEVITÁVEL?
+→ A era comerciante com experiência no ramo
+→ O registro sanitário é de conhecimento público no setor
+→ Uma consulta ao CREMESP/CRF ou à Anvisa teria esclarecido
+→ Outros farmacêuticos no setor conheciam a exigência
+
+Critério §único: "era possível, nas circunstâncias, ter ou atingir
+essa consciência"? SIM → erro EVITÁVEL
+
+→ ERRO DE PROIBIÇÃO EVITÁVEL
+→ ART. 21, caput, 3.ª parte: PENA DIMINUÍDA 1/6 a 1/3
+
+DOSIMETRIA (3.ª fase):
+Pena-base fixada: 2 anos de reclusão (após 1.ª e 2.ª fases)
+Redução por erro de proibição evitável (art. 21):
+→ Erro era relativamente evitável (consulta ao CRF bastaria)
+→ Redução intermediária: 1/4 (entre 1/6 e 1/3)
+→ 2 anos − 6 meses = 1 ano e 6 meses de reclusão ✅
+
+OBS: Dolo NÃO é excluído → crime doloso com pena reduzida</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 3 — Erro de Proibição Indireto (Erro de Permissão)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A acredita genuinamente que pode agredir fisicamente B, que o desonrou publicamente, por entender que a "legítima defesa da honra" é causa de justificação válida no direito brasileiro. A agride B causando lesões graves.</p>
+      <div class="ex-calc">ANÁLISE — ERRO DE PROIBIÇÃO INDIRETO (ART. 21):
+
+A sabia que estava agredindo B? SIM → sem erro de tipo
+A sabia que agressão física é proibida? SIM
+A acreditava estar amparado por excludente? SIM — "legítima
+defesa da honra"
+
+Tipo de erro:
+→ Não é erro de tipo — A conhecia os fatos
+→ Não é descriminante putativa factual (§1.º art. 20)
+   porque não há erro sobre os FATOS (a "agressão") —
+   há erro sobre os LIMITES NORMATIVOS da excludente
+→ É ERRO DE PROIBIÇÃO INDIRETO (art. 21 CP)
+   A erra sobre a existência da justificante (ela não existe no
+   direito brasileiro — a "legítima defesa da honra" foi
+   expressamente rejeitada pelo STF)
+
+O erro era INEVITÁVEL?
+→ A "legítima defesa da honra" sempre foi controversa no Brasil
+→ Há amplo debate público e jurídico sobre sua inadmissibilidade
+→ Um cidadão minimamente informado poderia saber que essa
+   justificante não é válida → ERRO EVITÁVEL
+
+→ Crime de lesão corporal grave DOLOSO (art. 129, §1.º ou §2.º)
+→ Com diminuição de pena de 1/6 a 1/3 (art. 21 CP) ✅
+
+OBS: O STF proibiu expressamente a tese da "legítima defesa da
+honra" como excludente no feminicídio (ADPF 779, 2021).</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 4 — Desconhecimento da Lei × Erro de Proibição × Atenuante</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">Três casos distintos — identificar o instituto correto.</p>
+      <div class="ex-calc">CASO A — Desconhecimento da lei abstrata:
+A afirma: "não sabia que havia uma lei proibindo roubo"
+→ Desconhecimento da lei abstrata
+→ Art. 21, 1.ª parte: INESCUSÁVEL
+→ Sem efeito → crime doloso → pena integral
+
+CASO B — Erro de proibição evitável:
+B afirma: "sabia que havia leis sobre patrimônio, mas achei
+que minha conduta específica era lícita porque a mercadoria
+estava exposta na calçada do estabelecimento"
+→ Erro sobre a ILICITUDE do fato concreto
+→ Poderia ter evitado com simples verificação → EVITÁVEL
+→ Art. 21: crime doloso + PENA ↓ 1/6 a 1/3 (3.ª fase)
+
+CASO C — Atenuante genérica do desconhecimento (art. 65, II):
+C é analfabeto funcional, nunca teve acesso a informação
+jurídica, praticou crime que por suas condições pessoais
+era difícil de conhecer, mas não impossível
+→ Não configura erro de proibição inevitável (havia
+   possibilidade, ainda que remota, de conhecer)
+→ Configura ATENUANTE GENÉRICA (art. 65, II CP)
+→ 2.ª fase da dosimetria → redução sem quantum fixo ✅
+
+DISTINÇÃO PRÁTICA:
+→ Erro de proibição inevitável → ISENÇÃO (art. 21)
+→ Erro de proibição evitável → 3.ª fase: ↓ 1/6 a 1/3 (art. 21)
+→ Desconhecimento da lei → inescusável (art. 21, 1.ª parte)
+→ Desconhecimento como atenuante → 2.ª fase (art. 65, II)</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 12. JURISPRUDÊNCIA -->
+<section class="section" id="jurisprudencia">
+  <div class="section-header">
+    <div class="section-num">12</div>
+    <div class="section-title"><span>STF · STJ · Teses Consolidadas</span>Jurisprudência sobre o Art. 21 CP</div>
+  </div>
+
+  <div class="juris-grid">
+
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <span class="juris-badge tese">ADPF 779 — 2021</span>
+        <div class="juris-title">Vedação da "Legítima Defesa da Honra" — Erro de Proibição Indireto Evitável</div>
+      </div>
+      <div class="juris-body">
+        <p>O STF, no julgamento da ADPF 779 (Rel. Min. Dias Toffoli, 2021), declarou a inconstitucionalidade da tese da <strong>"legítima defesa da honra"</strong> como causa excludente de ilicitude ou de culpabilidade nos casos de feminicídio. A Corte determinou que essa tese não pode ser utilizada perante o Tribunal do Júri, proibindo que o defensor a invoque e que o juiz permita sua utilização.</p>
+        <p class="mt1">Implicação direta para o art. 21 CP: quem alega erro de proibição indireto baseado na crença de que a "legítima defesa da honra" é excludente válida comete erro de proibição <strong>evitável</strong> — e não inevitável. A rejeição histórica e jurídica dessa tese torna o erro facilmente perceptível por qualquer pessoa que tivesse buscado informação. Logo: crime doloso com, no máximo, redução de 1/6 a 1/3 (art. 21 evitável).</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">ADPF 779/STF — Legítima Defesa da Honra Inconstitucional</span>
+          <span class="tag tag-gold">Erro de Proibição Evitável</span>
+          <span class="tag tag-blue">Art. 21 CP — Pena ↓ 1/6 a 1/3</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Consulta a Advogado de Boa-fé — Erro de Proibição Inevitável</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ consolidou que o agente que age de boa-fé, baseado em <strong>consulta prévia a advogado ou autoridade competente</strong>, obtendo orientação de que a conduta era lícita, pode invocar o erro de proibição <strong>inevitável</strong>. Se o agente buscou orientação profissional qualificada e foi informado de que sua conduta era permitida, o erro sobre a ilicitude era inevitável — qualquer pessoa razoável teria feito o mesmo e chegado à mesma conclusão.</p>
+        <p class="mt1">Esta posição é especialmente relevante em crimes tributários, crimes ambientais e crimes contra o mercado de capitais: se a empresa consultou seus advogados e obteve parecer de licitude para determinada operação, os diretores que atuaram com base nessa orientação podem alegar erro de proibição inevitável. O STJ exige que a consulta seja genuína e que o parecer seja de profissional habilitado — não aceita pareceres meramente formais para criar aparência de boa-fé.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Consulta a Advogado → Erro Inevitável</span>
+          <span class="tag tag-gold">Boa-fé — Parecer Genuíno</span>
+          <span class="tag tag-blue">Crimes Tributários e Empresariais</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Critério de Verificação do Erro de Proibição — Análise Concreta das Condições do Agente</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ exige que a avaliação do erro de proibição seja feita de forma <strong>concreta e individualizada</strong>, considerando as condições pessoais do agente: nível de escolaridade, acesso à informação jurídica, contexto cultural, experiência profissional no ramo, e complexidade da norma violada. A análise abstrata ("qualquer pessoa saberia") é insuficiente — é necessário verificar se <em>aquele agente específico</em>, nas <em>suas circunstâncias específicas</em>, podia ou não atingir a consciência da ilicitude.</p>
+        <p class="mt1">Para réus com elevado grau de instrução e experiência profissional no ramo regulado, o STJ tende a reconhecer o erro como evitável — ou mesmo a negar a existência de erro de proibição. Para réus em situação de vulnerabilidade informacional (analfabetos funcionais, moradores de áreas remotas, estrangeiros recém-chegados), o STJ é mais liberal no reconhecimento do erro como inevitável.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Análise Concreta e Individualizada</span>
+          <span class="tag tag-gold">Condições Pessoais do Agente</span>
+          <span class="tag tag-blue">§único — "Nas Circunstâncias"</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Inimputabilidade dos Índios e Erro de Proibição — Distinção</div>
+      </div>
+      <div class="juris-body">
+        <p>O STF distingue entre inimputabilidade (art. 26 CP) e erro de proibição (art. 21 CP) nos casos envolvendo indígenas. A inimputabilidade é aplicável quando o indígena não tem a capacidade de entender o caráter ilícito de sua conduta em razão de sua condição mental ou cultural (art. 26 CP). Já o erro de proibição é aplicável quando o indígena tem capacidade mental normal, mas genuinamente desconhecia a ilicitude da conduta específica segundo o direito nacional.</p>
+        <p class="mt1">O STF exige perícia antropológica para avaliar o grau de integração do indígena à comunhão nacional — elemento determinante para definir se há inimputabilidade, erro de proibição inevitável, erro de proibição evitável, ou culpabilidade plena. Indígenas com alto grau de integração (que vivem em área urbana, têm acesso a informações) tendem a ter culpabilidade plena ou erro de proibição evitável; os de pouca integração, erro inevitável ou inimputabilidade.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Indígenas — Perícia Antropológica</span>
+          <span class="tag tag-gold">Grau de Integração</span>
+          <span class="tag tag-blue">Art. 26 × Art. 21 CP — Distinção</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Desconhecimento da Lei × Erro de Proibição — Distinção Prática</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ aplica com rigor a distinção entre o desconhecimento da lei abstrata (inescusável — art. 21, 1.ª parte) e o erro sobre a ilicitude concreta do fato (art. 21, 2.ª parte e seguintes). A mera alegação de que o réu "não conhecia a lei" é insuficiente para invocar erro de proibição — o réu deve demonstrar que não tinha como, em concreto, saber que <em>aquela conduta específica</em> era ilícita naquelas circunstâncias.</p>
+        <p class="mt1">O STJ tem rejeitado sistematicamente alegações de erro de proibição em crimes de: tráfico de drogas (a ilicitude das drogas é de amplo conhecimento social); crimes contra crianças e adolescentes (a proteção da criança é valor fundamental amplamente difundido); crimes de violência doméstica (a Lei Maria da Penha é amplamente conhecida). Nestes casos, o STJ entende que o agente tinha consciência profana da ilicitude — o erro seria inaceitável.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Desconhecimento da Lei ≠ Erro de Proibição</span>
+          <span class="tag tag-gold">Consciência Profana da Ilicitude</span>
+          <span class="tag tag-blue">Tráfico / Violência Doméstica — Sem Erro</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Atenuante do Art. 65, II, CP — Distinção da Causa de Diminuição do Art. 21 CP</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ aplica com precisão a distinção entre a <strong>causa de diminuição de pena do art. 21</strong> (erro de proibição evitável — 3.ª fase, 1/6 a 1/3) e a <strong>atenuante genérica do art. 65, II, CP</strong> (desconhecimento da lei — 2.ª fase, sem quantum fixo). São institutos distintos com requisitos e efeitos diferentes: (a) o erro de proibição evitável exige genuíno desconhecimento da ilicitude do fato concreto, com possibilidade de ter atingido essa consciência; (b) a atenuante do art. 65, II é mais ampla — aplica-se ao "desconhecimento da lei" de forma geral, sem exigir os requisitos do erro de proibição.</p>
+        <p class="mt1">Quando o caso não configura erro de proibição (por ser o erro evitável e a conduta de alta reprovação social), mas há elementos que indicam menor acesso do agente à informação jurídica, o STJ aplica a atenuante do art. 65, II como alternativa. A distinção processual é relevante: o art. 21 gera redução da pena final na 3.ª fase; o art. 65, II gera atenuação na 2.ª fase — com quantum deixado à discrição do juiz.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Art. 21 → 3.ª fase (1/6 a 1/3)</span>
+          <span class="tag tag-gold">Art. 65, II → 2.ª fase (sem quantum fixo)</span>
+          <span class="tag tag-blue">Institutos Distintos — Requisitos Próprios</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 13. DOUTRINA -->
+<section class="section" id="doutrina">
+  <div class="section-header">
+    <div class="section-num">13</div>
+    <div class="section-title"><span>Doutrina Nacional</span>Principais Posições sobre o Art. 21 CP</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cleber Masson — Direito Penal Esquematizado</div>
+      </div>
+      <div class="juris-body">
+        <p>Masson apresenta o art. 21 CP com organização voltada para concursos. Distingue com clareza: desconhecimento da lei (inescusável) × erro sobre a ilicitude (pode isentar ou atenuar). Categoriza as espécies de erro de proibição: direto (agente ignora a norma proibitiva), indireto/de permissão (agente supõe estar amparado por excludente inexistente ou com limites diferentes), e mandamental (agente desconhece o dever de agir). Adota a teoria normativa pura da culpabilidade: dolo é natural (sem consciência da ilicitude); a consciência da ilicitude é elemento da culpabilidade. Logo, o erro de proibição não exclui o dolo — consequência fundamental para a dosimetria. Destaca como ponto de prova: crime com erro de proibição evitável = crime DOLOSO com pena reduzida (não crime culposo).</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cezar Roberto Bitencourt — Tratado de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Bitencourt aprofunda a análise histórica e dogmática do erro de proibição. Destaca a evolução das teorias: da teoria psicológica (que colocava a consciência da ilicitude no dolo) para a teoria normativa pura (que a coloca na culpabilidade), refletida na Reforma Penal de 1984. Analisa a consciência da ilicitude em seu sentido "profano" — o agente não precisa conhecer a lei técnica, basta a consciência de que sua conduta é "errada" segundo os valores sociais fundamentais. Na avaliação da inevitabilidade, Bitencourt defende critério misto: objetivo (padrão de homem médio) complementado por subjetivo (condições pessoais do agente). Critica a tendência de reduzir o erro de proibição a casos exóticos (índios, estrangeiros) — afirma que qualquer cidadão pode ter legítimo erro sobre a ilicitude de condutas em áreas técnicas como direito ambiental, tributário e regulatório.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Rogério Greco — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Greco analisa o art. 21 CP sob perspectiva constitucional: o erro de proibição inevitável é expressão do princípio da culpabilidade — punir quem não podia saber da ilicitude viola a dignidade humana. Defende que a consciência da ilicitude exigida não é técnico-jurídica — basta a consciência "profana" de que a conduta é socialmente reprovável. Analisa com detalhe o erro de proibição mandamental nos crimes omissivos impróprios. Distingue a posição de garantidor (que pode ser objeto de erro de tipo) do dever de agir (que pode ser objeto de erro de proibição). Critica a excessiva restrição do instituto pelos tribunais — defende que o erro de proibição deve ser analisado com mais generosidade em crimes regulatórios e de conduta neutra, onde a ilicitude não é evidente.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Guilherme de Souza Nucci — Código Penal Comentado</div>
+      </div>
+      <div class="juris-body">
+        <p>Nucci comenta o art. 21 CP com foco na aplicação forense. Destaca a dificuldade prática de provar o erro de proibição — o réu deve demonstrar concretamente que não tinha condições de perceber a ilicitude; alegação genérica é insuficiente. Analisa a gradação da redução (1/6 a 1/3) como discricionária do juiz: quanto mais próximo do inevitável (mas ainda evitável), maior a redução (próximo de 1/3); quanto mais facilmente evitável, menor a redução (próximo de 1/6). Destaca a importância da prova pericial em casos envolvendo indígenas e pessoas de culturas distintas — a perícia antropológica é essencial para definir o grau de integração e o potencial de consciência da ilicitude. Critica a tendência dos tribunais de negar o erro de proibição em crimes de "repercussão social" sem análise concreta das condições do réu.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Controvérsia: Consciência Técnica vs. Profana da Ilicitude</div>
+      </div>
+      <div class="juris-body">
+        <p>O principal debate doutrinário sobre o art. 21 CP é o grau de precisão exigido da consciência da ilicitude:</p>
+        <ul class="mt1">
+          <li><strong>Consciência Profana (Majoritária — Zaffaroni, Bitencourt, Greco, Masson):</strong> Basta que o agente perceba que sua conduta vai contra os valores sociais fundamentais — a "maldade" ou "injustiça" da conduta. Não se exige conhecimento jurídico-penal. Quem sabe que "matar é errado" tem consciência profana da ilicitude do homicídio.</li>
+          <li><strong>Consciência Técnica (Minoritária):</strong> Exige que o agente tenha noção de que a conduta é formalmente contrária ao direito (ilícita). Mais exigente — aproxima-se do desconhecimento da lei abstrata.</li>
+          <li><strong>Para o concurso:</strong> Adote a consciência profana (majoritária). A consciência técnica da lei não é exigida — o que importa é a percepção de que a conduta é socialmente reprovável, contrária aos valores fundamentais.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Fernando Capez — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Capez apresenta o art. 21 CP de forma didática com ênfase em concursos. Sistematiza: (1) desconhecimento da lei — inescusável; (2) erro sobre a ilicitude inevitável — isenção de pena; (3) erro sobre a ilicitude evitável — redução 1/6 a 1/3. Categoriza as espécies de erro de proibição (direto, indireto/de permissão, mandamental) com exemplos práticos para cada. Para a dosimetria do evitável: quanto maior a distância entre a conduta do agente e o que seria esperado de pessoa diligente, menor a redução; quanto mais próximo do inevitável, maior a redução. Destaca que no erro de proibição evitável o crime continua doloso — esta é a "pegadinha" mais comum em provas: estudantes erroneamente classificam como crime culposo quando na verdade é doloso com pena reduzida.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 14. SISTEMÁTICA -->
+<section class="section" id="sistematica">
+  <div class="section-header">
+    <div class="section-num">14</div>
+    <div class="section-title"><span>Conexões Sistemáticas</span>Art. 21 CP na Sistemática do Código Penal</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔗 Artigos Diretamente Conectados ao Art. 21 CP</h3>
+      <ul>
+        <li><strong>Art. 18, I CP (Dolo):</strong> O erro de proibição NÃO exclui o dolo — confirma que no sistema finalista adotado pelo CP, dolo é elemento do tipo, e a consciência da ilicitude é da culpabilidade. O dolo permanece intacto no erro de proibição.</li>
+        <li><strong>Art. 20 CP (Erro de Tipo):</strong> Complementar — o que não é erro de tipo pode ser erro de proibição, e vice-versa. A distinção é a mais cobrada sobre esses dois artigos.</li>
+        <li><strong>Art. 20, §1.º CP (Descriminante Putativa Factual):</strong> Erro factual sobre excludente → art. 20, §1.º (erro de tipo). Erro normativo sobre excludente → art. 21 (erro de proibição indireto). Teoria limitada da culpabilidade adotada.</li>
+        <li><strong>Art. 22 CP (Coação e Obediência Hierárquica):</strong> Complementa o art. 21 CP na proteção da culpabilidade — enquanto o art. 21 trata da potencial consciência da ilicitude, o art. 22 trata da exigibilidade de conduta diversa (outro elemento da culpabilidade).</li>
+        <li><strong>Arts. 26–28 CP (Imputabilidade):</strong> A inimputabilidade (doença mental, menoridade) exclui o primeiro elemento da culpabilidade. O art. 21 exclui o segundo. Ambos afastam a culpabilidade, mas por elementos distintos.</li>
+        <li><strong>Art. 65, II CP (Atenuante):</strong> O desconhecimento da lei (inescusável pelo art. 21, 1.ª parte) pode funcionar como atenuante na 2.ª fase da dosimetria (menor quantum que o erro de proibição evitável do art. 21).</li>
+        <li><strong>Art. 68 CP (Dosimetria):</strong> O erro de proibição evitável gera causa de diminuição na 3.ª fase da dosimetria (1/6 a 1/3), conforme o art. 68 CP. Aplica-se após circunstâncias atenuantes e agravantes.</li>
+        <li><strong>Art. 386, VI, CPP (Absolvição):</strong> O erro de proibição inevitável leva à absolvição por exclusão da culpabilidade — art. 386, VI, CPP ("existirem circunstâncias que excluam o crime ou isentem o réu de pena").</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📋 Resumo: Dosimetria do Erro de Proibição</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">Como o art. 21 CP afeta as 3 fases da dosimetria:</p>
+      <div style="display:flex;flex-direction:column;gap:0.45rem;">
+        <div style="background:#dceee3;border-left:3px solid var(--green-accent);padding:0.6rem 0.9rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--green-accent);">Erro INEVITÁVEL → Absolvição (sem dosimetria):</strong> Exclui culpabilidade → absolvição. O juiz não fixa pena. Art. 386, VI, CPP. Não há 1.ª, 2.ª ou 3.ª fase — não há condenação.
+        </div>
+        <div style="background:#edf2f8;border-left:3px solid var(--blue-accent);padding:0.6rem 0.9rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--blue-accent);">Desconhecimento da lei → 2.ª fase (art. 65, II CP):</strong> Se não configura erro de proibição mas há desconhecimento geral da lei → atenuante genérica na 2.ª fase → redução sem quantum mínimo/máximo fixo.
+        </div>
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);padding:0.6rem 0.9rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">Erro EVITÁVEL → 3.ª fase (causa de diminuição — art. 21):</strong> Crime doloso mantido. Pena-base fixada (1.ª fase), atenuantes/agravantes (2.ª fase), depois aplica-se a redução de 1/6 a 1/3 do art. 21 (3.ª fase). Quanto mais próximo do inevitável: redução maior (até 1/3). Quanto mais facilmente evitável: redução menor (1/6).
+        </div>
+      </div>
+      <div class="alert alert-navy mt2" style="font-size:0.8rem;">
+        <div>📌 <strong>Cumulação de Atenuantes e Causas de Diminuição:</strong> Se há tanto a atenuante do art. 65, II (2.ª fase) quanto a causa de diminuição do art. 21 (3.ª fase), ambas se aplicam cumulativamente — mas o STJ entende que, se o caso configura erro de proibição evitável, a causa de diminuição do art. 21 é o instrumento correto (específico), podendo absorver o art. 65, II para evitar dupla valoração do mesmo fato.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-3 mt2">
+    <div class="card">
+      <h3>⚡ Art. 21 CP em Crimes Ambientais e Tributários</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">O art. 21 CP tem crescente relevância em crimes regulatórios:</p>
+      <ul class="mt1" style="font-size:0.84rem;">
+        <li><strong>Crimes ambientais (Lei 9.605/98):</strong> Agente que pratica conduta em área rural sem saber que a área é de preservação permanente (APP) → pode configurar erro de proibição (não sabia da ilicitude). Se consultou órgão ambiental e recebeu autorização → erro inevitável.</li>
+        <li><strong>Crimes tributários:</strong> Contribuinte que interpreta equivocadamente norma tributária complexa e deixa de recolher tributo → pode configurar erro de proibição sobre a ilicitude do não-pagamento. Consulta prévia à Receita Federal → erro inevitável.</li>
+        <li><strong>Crimes contra o sistema financeiro:</strong> Empresas que realizam operações que desconheciam ser vedadas → consulta ao BCB ou CVM e parecer de licitude → potencial erro inevitável.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🔄 Resumo Mnemônico para Prova</h3>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.82rem;line-height:1.9;">
+        <p><strong style="color:var(--gold-light);">Art. 21 CP — Erro de Proibição:</strong><br>
+        Inevitável → ISENTA DE PENA (culpabilidade excluída)<br>
+        Evitável → PENA ↓ 1/6 a 1/3 (3.ª fase)<br>
+        Dolo NUNCA excluído (≠ erro de tipo)</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.5rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Desconhecimento da lei ≠ Erro de proibição:</strong><br>
+        Desconhecimento lei → inescusável<br>
+        Erro ilicitude concreto → pode isentar/atenuar</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.5rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Espécies:</strong><br>
+        Direto: ignora a proibição normativa<br>
+        Indireto: imagina estar autorizado (excludente)<br>
+        Mandamental: ignora dever de agir</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.5rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Fase dosimétrica:</strong><br>
+        Art. 21 evitável → 3.ª fase (1/6 a 1/3)<br>
+        Art. 65, II → 2.ª fase (sem quantum fixo)</p>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📅 Art. 21 e o Processo Penal</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">Reflexos processuais do art. 21 CP:</p>
+      <ul class="mt1" style="font-size:0.84rem;">
+        <li><strong>Denúncia:</strong> MP não precisa narrar a consciência da ilicitude — ela é presumida. É o réu quem deve alegar e provar o erro.</li>
+        <li><strong>Ônus da prova:</strong> O réu que alega erro de proibição tem o ônus de demonstrar — ao menos tornando verossímil — o genuíno desconhecimento da ilicitude.</li>
+        <li><strong>Sentença absolutória:</strong> Art. 386, VI, CPP — absolvição quando o erro inevitável exclui a culpabilidade.</li>
+        <li><strong>Sentença condenatória:</strong> Se evitável: condenação com causa de diminuição na 3.ª fase — deve estar fundamentada na sentença.</li>
+        <li><strong>Peritos:</strong> Em casos de indígenas, laudos antropológicos são essenciais para aferir o grau de integração e a capacidade de ter consciência da ilicitude.</li>
+        <li><strong>Recurso especial:</strong> Questão de direito — admite REsp para revisão da qualificação como evitável/inevitável pelo STJ.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROVA / ENAM -->
+<section id="prova" class="prova-section">
+  <h2>⚖️ Pontos Cobrados em Magistratura e ENAM</h2>
+  <p class="intro">Questões, teses e pegadinhas recorrentes nos concursos de Juiz de Direito, ENAM e equivalentes relacionadas ao Art. 21 CP.</p>
+
+  <div class="prova-items">
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">01</span>O que é erro de proibição? Qual o elemento da culpabilidade afetado? O dolo é excluído?</div>
+      <div class="prova-item-a">O <strong>erro de proibição</strong> (art. 21 CP) ocorre quando o agente conhece os fatos que pratica — sabe o que faz — mas desconhece a <em>ilicitude</em> de sua conduta. É o erro sobre a proibição normativa: o agente não sabe que o que faz é ilícito. O elemento afetado é a <strong>potencial consciência da ilicitude</strong> — elemento da culpabilidade no sistema finalista adotado pelo CP. <strong>O dolo NÃO é excluído</strong> pelo erro de proibição — diferentemente do erro de tipo. No sistema finalista (teoria normativa pura da culpabilidade), o dolo é elemento do tipo subjetivo e não contém a consciência da ilicitude. Consequências: inevitável → isenta de pena (exclui culpabilidade); evitável → reduz a pena de 1/6 a 1/3 (diminui culpabilidade). Em ambos os casos, o crime continua sendo doloso. Esta é a pegadinha mais cobrada: erro de proibição evitável = crime doloso com pena reduzida (não culposo).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">02</span>Qual a diferença entre "desconhecimento da lei" e "erro sobre a ilicitude" no art. 21 CP?</div>
+      <div class="prova-item-a">O art. 21 CP traz ambos na mesma disposição, mas com efeitos radicalmente distintos. <strong>Desconhecimento da lei:</strong> "O desconhecimento da lei é inescusável." Refere-se à ignorância da norma abstrata — o agente não sabe que existe a lei proibitiva. Esta regra é corolário do princípio da obrigatoriedade da lei (art. 3.º da LINDB) e não isenta nem reduz a pena — a lei se aplica normalmente. Pode, no máximo, configurar atenuante genérica do art. 65, II, CP (2.ª fase da dosimetria). <strong>Erro sobre a ilicitude:</strong> O agente pode conhecer a lei abstrata, mas ter falsa percepção sobre a ilicitude concreta da sua conduta naquelas circunstâncias específicas. Este erro pode isentar de pena (inevitável) ou reduzir de 1/6 a 1/3 (evitável). Exemplo: Desconhecimento da lei = "não sabia que havia uma lei proibindo isso". Erro de proibição = "sabia que havia leis, mas genuinamente não sabia que minha conduta específica naquelas circunstâncias era ilícita".</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">03</span>Quais são as espécies de erro de proibição? Explique cada uma com exemplos.</div>
+      <div class="prova-item-a"><strong>1. Erro de Proibição Direto:</strong> O agente desconhece que a norma proíbe aquela conduta. Ignora a existência ou abrangência da norma proibitiva em relação ao caso concreto. Ex.: Estrangeiro recém-chegado que pratica conduta lícita em seu país, ignorando que é crime no Brasil. <strong>2. Erro de Proibição Indireto (Erro de Permissão):</strong> O agente sabe que a conduta é em geral proibida, mas acredita estar amparado por excludente de ilicitude — que não existe ou que não tem os limites que o agente imagina (erro sobre os limites normativos da excludente). Ex.: Agente que acredita poder matar em "legítima defesa da honra" (excludente inexistente no direito brasileiro). Atenção: quando o erro é sobre os FATOS que configurariam a excludente → descriminante putativa factual (art. 20, §1.º, teoria limitada). Quando é sobre os LIMITES NORMATIVOS → erro de proibição indireto (art. 21). <strong>3. Erro de Proibição Mandamental:</strong> Ocorre nos crimes omissivos impróprios — o agente desconhece que possui dever jurídico de agir (posição de garantidor). Ex.: Pessoa que ignora que, por sua função específica, tinha obrigação legal de agir para evitar o resultado.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">04</span>O erro de proibição inevitável isenta de pena. Qual o fundamento? E o evitável, qual a consequência?</div>
+      <div class="prova-item-a"><strong>Erro inevitável — isenção de pena:</strong> Fundamento: o princípio da culpabilidade (<em>nulla poena sine culpa</em>) exige que o agente seja censurável pela conduta. A censurabilidade pressupõe que o agente podia ter atuado de forma diferente — o que requer que pudesse ter conhecimento da ilicitude. Se o erro era inevitável (não havia como, naquelas circunstâncias, ter ou atingir a consciência da ilicitude), não há censurabilidade → sem culpabilidade → sem pena. Fundamentação constitucional: dignidade da pessoa humana (art. 1.º, III, CF/88) e devido processo legal (art. 5.º, LIV, CF/88). O resultado é absolvição (art. 386, VI, CPP). <strong>Erro evitável — pena reduzida:</strong> O agente podia ter atingido a consciência da ilicitude com mais diligência → havia censurabilidade, mas reduzida → culpabilidade diminuída → pena mantida mas reduzida de 1/6 a 1/3 na 3.ª fase da dosimetria (art. 21 c/c art. 68 CP). O crime continua doloso — apenas a pena é reduzida. Quanto mais próximo do inevitável, maior a redução (até 1/3); quanto mais facilmente evitável, menor (a partir de 1/6).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">05</span>Qual a diferença entre o erro de proibição (art. 21) e o erro de tipo (art. 20)? Qual o mais grave para o agente?</div>
+      <div class="prova-item-a">A distinção é a mais cobrada sobre esses artigos. <strong>Erro de TIPO (art. 20):</strong> Recai sobre elemento objetivo do tipo penal — o agente não sabe o que está fazendo (ignora circunstância fática que torna a conduta típica). Exclui o dolo. Se inevitável: fato atípico (sem crime). Se evitável: crime culposo (se previsto em lei; se não previsto: atípico). <strong>Erro de PROIBIÇÃO (art. 21):</strong> Recai sobre a ilicitude da conduta — o agente sabe o que faz, mas não sabe que é proibido. NÃO exclui o dolo. Se inevitável: isento de pena (crime doloso sem pena). Se evitável: crime doloso com pena reduzida 1/6 a 1/3. <strong>Qual é mais grave?</strong> Depende do caso: o erro de tipo inevitável leva à atipicidade total; o erro de proibição inevitável leva à isenção de pena — em ambos, o agente não é punido. No evitável: erro de tipo evitável pode resultar em pena menor (crime culposo tem pena menor que o doloso); erro de proibição evitável resulta em crime doloso (pena maior) com redução de 1/6 a 1/3. Portanto, o erro de tipo evitável é geralmente mais favorável ao agente que o erro de proibição evitável.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">06</span>Em que fase da dosimetria é aplicada a redução do art. 21 CP (erro evitável)? Pode cumular com a atenuante do art. 65, II, CP?</div>
+      <div class="prova-item-a">A redução por erro de proibição evitável (art. 21 CP) é causa de diminuição da pena, aplicada na <strong>3.ª fase da dosimetria</strong> (art. 68 CP), após as causas de aumento e diminuição previstas em lei. O quantum é de 1/6 a 1/3. Já a atenuante do art. 65, II, CP ("desconhecimento da lei") é aplicada na <strong>2.ª fase</strong> (circunstâncias atenuantes e agravantes). <strong>Cumulação:</strong> Tecnicamente, os dois institutos têm requisitos distintos: o art. 21 exige erro de proibição genuíno (com os requisitos do §único); o art. 65, II é mais amplo. Se o caso configura erro de proibição evitável, o art. 21 é o instrumento correto para a redução na 3.ª fase. O STJ entende que aplicar também a atenuante do art. 65, II para o mesmo fato pode configurar bis in idem (dupla valoração da mesma circunstância) — logo, em geral, apenas o art. 21 (3.ª fase) se aplica quando o caso configura erro de proibição. Se não configura erro de proibição evitável, mas há desconhecimento da lei, aplica-se apenas o art. 65, II (2.ª fase).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">07</span>A consulta prévia a advogado que orientou a conduta como lícita pode configurar erro de proibição inevitável?</div>
+      <div class="prova-item-a"><strong>Sim, pode — segundo o STJ.</strong> O agente que consulta advogado ou autoridade competente e obtém orientação de que sua conduta é lícita, agindo com base nessa orientação de boa-fé, pode invocar o erro de proibição inevitável. O fundamento: se o agente diligentemente buscou orientação profissional qualificada, ele fez tudo o que era razoável para "atingir a consciência da ilicitude" (§único do art. 21). Se mesmo assim recebeu informação equivocada, o erro era inevitável — não havia como, com razoável diligência, chegar à conclusão de ilicitude. <strong>Requisitos para que a consulta configure erro inevitável (STJ):</strong> (1) Consulta genuína (não meramente formal para criar aparência de boa-fé); (2) Profissional qualificado para a área (não qualquer conselho informal); (3) Informações completas e corretas fornecidas ao profissional; (4) Boa-fé do agente na adoção do parecer. Se o agente forneceu informações incompletas ao advogado, ou se o parecer era manifestamente equivocado e qualquer leigo perceberia → erro evitável ou ausência de erro de proibição.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">08</span>Como distinguir erro de proibição indireto (art. 21) da descriminante putativa factual (art. 20, §1.º)?</div>
+      <div class="prova-item-a">Distinção fundamental da teoria limitada da culpabilidade adotada pelo CP de 1940: <strong>Descriminante putativa factual (art. 20, §1.º):</strong> O agente erra sobre os FATOS — ele imagina equivocadamente que os pressupostos fáticos de uma excludente de ilicitude existem. Ex.: A imagina estar sendo agredido (agressão inexistente) → erro factual sobre a situação de legítima defesa. Tratamento: erro de tipo (teoria limitada) → exclui dolo → inevitável: isento; evitável: culposo. <strong>Erro de proibição indireto/de permissão (art. 21):</strong> O agente SABE os fatos, mas erra sobre os LIMITES NORMATIVOS da excludente — acredita que a excludente permite mais do que realmente permite. Ex.: A sabe que B não o agrediu, mas acredita ter direito de atacá-lo por "legítima defesa da honra" (excludente que não existe) → erro normativo sobre a existência/alcance da excludente. Tratamento: erro de proibição → não exclui dolo → inevitável: isento; evitável: pena reduzida 1/6 a 1/3. <strong>Teste prático:</strong> O agente acreditava que HAVIA uma situação justificante nos fatos? → art. 20, §1.º. O agente conhecia os fatos mas acreditava que a LEI PERMITIA sua conduta? → art. 21.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">09</span>[ENAM — alta recorrência] A, 65 anos, analfabeto, morador de área rural remota, realiza queimada em sua propriedade para preparar o solo (prática cultural centenária na região), ignorando que a Lei de Crimes Ambientais a proíbe. Qual o instituto e a consequência penal?</div>
+      <div class="prova-item-a"><strong>Análise — Art. 21 CP (Erro de Proibição):</strong> Fato típico? SIM — crime ambiental (queimada ilegal — art. 41 ou art. 54 da Lei 9.605/98). Antijurídico? SIM (a menos que haja autorização específica). Culpabilidade — consciência da ilicitude: A tinha consciência de que sua conduta era ilícita? NÃO — prática cultural centenária, sem acesso a informações jurídicas, analfabeto. O erro era inevitável ou evitável? Fatores: analfabeto, 65 anos, área rural remota, prática culturalmente arraigada, sem acesso a órgãos ambientais, sem acesso a informação. Critério §único: "era possível, nas circunstâncias, ter ou atingir essa consciência"? Para aquele agente específico, naquelas condições: provavelmente NÃO → erro INEVITÁVEL. Consequência: <strong>ISENTO DE PENA</strong> (art. 21, caput, 2.ª parte). Absolvição por exclusão de culpabilidade (art. 386, VI, CPP). <strong>Se houvesse algum acesso à informação:</strong> Erro evitável → crime doloso de dano ambiental + pena reduzida 1/6 a 1/3. <strong>Distinção de caso paralelo:</strong> Empresário rural que contrata equipe técnica e realiza queimada sem licença → ele TEM acesso à informação, TEM estrutura → sem erro de proibição (ou erro evitável com pequena redução).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">10</span>O erro de proibição evitável transforma o crime doloso em culposo?</div>
+      <div class="prova-item-a"><strong>Não. O crime continua doloso.</strong> Esta é uma das pegadinhas mais cobradas sobre o art. 21 CP. No sistema finalista adotado pelo CP de 1940 (Reforma de 1984), o dolo é elemento do tipo subjetivo — composto de consciência dos fatos e vontade de realizá-los. A consciência da ilicitude é elemento da culpabilidade, não do dolo. O erro de proibição (inevitável ou evitável) não afeta o tipo subjetivo — o dolo permanece intacto. Portanto: <strong>Erro de tipo evitável</strong> → exclui o dolo → crime culposo (se previsto). <strong>Erro de proibição evitável</strong> → mantém o dolo → crime doloso com pena reduzida 1/6 a 1/3. O erro de proibição evitável afeta a culpabilidade (diminuindo-a), não o tipo. A pena é reduzida porque o agente tinha culpabilidade menor, não porque seu crime era culposo. Consequência prática: o agente é condenado por crime doloso, com regime e pena de crime doloso, porém com a redução de 1/6 a 1/3 na 3.ª fase da dosimetria.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">11</span>Qual o critério para determinar se o erro de proibição era inevitável ou evitável? Explique o §único do art. 21 CP.</div>
+      <div class="prova-item-a">O <strong>§único do art. 21 CP</strong> define o critério positivo para o erro <em>evitável</em>: "Considera-se evitável o erro se o agente atua ou se omite sem a consciência da ilicitude do fato, quando lhe era possível, nas circunstâncias, ter ou atingir essa consciência." Análise dos elementos: (1) "Quando lhe era possível" → critério individual/subjetivo — não se trata do homem médio abstrato, mas daquele agente específico, com suas condições pessoais (grau de instrução, experiência, acesso à informação); (2) "Nas circunstâncias" → contexto objetivo concreto do caso (local, tempo, cultura, acesso a meios de informação); (3) "Ter ou atingir essa consciência" → "ter" = já possuir o conhecimento; "atingir" = poder chegar ao conhecimento por esforço razoável (consultar advogado, buscar informações oficiais). <strong>Critério negativo (inevitável):</strong> O que sobra do evitável é inevitável — quando, mesmo considerando suas condições pessoais e o contexto concreto, não era possível ao agente ter ou atingir a consciência da ilicitude. Fatores que tornam o erro inevitável: norma extremamente técnica e recém-criada; isolamento cultural; consulta a profissional que orientou erroneamente; legislação contraditória; conduta aceita socialmente no ambiente do agente.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">12</span>A "legítima defesa da honra" pode ser invocada como erro de proibição? Qual a posição do STF?</div>
+      <div class="prova-item-a"><strong>Não pode ser invocada como excludente válida, e sua alegação constitui, no máximo, erro de proibição evitável.</strong> O STF, no julgamento da ADPF 779 (2021), declarou a inconstitucionalidade da tese da "legítima defesa da honra" e proibiu sua utilização perante o Tribunal do Júri em casos de feminicídio. A Corte determinou que o uso desta tese contraria princípios constitucionais (isonomia, dignidade da pessoa humana, vedação à discriminação de gênero — art. 5.º, I, CF/88) e viola o direito à vida. <strong>Implicação para o art. 21 CP:</strong> Quem invoca "legítima defesa da honra" como erro de proibição indireto (achava que era excludente válida) comete erro de proibição <strong>evitável</strong> — não inevitável. O debate histórico sobre essa tese e sua rejeição jurídica eram do conhecimento público, tornando o erro claramente evitável. Consequência: crime doloso (homicídio ou feminicídio) com possível redução de 1/6 a 1/3 por erro de proibição evitável — mas nunca absolvição. O STF expressamente veda até mesmo que a tese seja apresentada ao Júri como justificativa.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">13</span>[ENAM — questão integrada] Compare: (a) A mata B acreditando que a janela que via era B entrando como ladrão (era o marido); (b) A mata B acreditando que "matar traidor é legítima defesa da honra". Qual o instituto e a consequência de cada um?</div>
+      <div class="prova-item-a"><strong>Caso (a) — Descriminante Putativa Factual (Art. 20, §1.º CP):</strong> A SUPÔS erroneamente que havia agressão injusta e iminente (os FATOS justificantes — a pessoa que entrava pela janela era ladrão). O erro é sobre os PRESSUPOSTOS FÁTICOS da legítima defesa (havia agressão injusta?). Tratamento: teoria limitada da culpabilidade → erro de tipo sobre fatos da excludente → art. 20, §1.º CP. Se inevitável (justificado pelas circunstâncias): ISENTO DE PENA. Se evitável: homicídio culposo (art. 121, §3.º CP). <strong>Caso (b) — Erro de Proibição Indireto (Art. 21 CP):</strong> A SABIA os fatos (sabia que B era seu cônjuge, não havia agressão), mas acreditou que a lei PERMITE matar por questão de honra ("legítima defesa da honra"). O erro é sobre os LIMITES NORMATIVOS de uma excludente (que na verdade não existe no direito brasileiro). Tratamento: erro de proibição indireto → art. 21 CP. Por força da ADPF 779/STF: erro EVITÁVEL (debate jurídico público sobre sua inadmissibilidade). Consequência: crime doloso de homicídio/feminicídio + redução de 1/6 a 1/3 (art. 21 evitável). Nunca absolvição. <strong>Distinção síntese:</strong> (a) = erro sobre os FATOS = art. 20, §1.º = pode excluir dolo. (b) = erro sobre a NORMA = art. 21 = não exclui dolo.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">14</span>Qual é a teoria da culpabilidade adotada pelo CP brasileiro e qual sua relevância para o art. 21 CP?</div>
+      <div class="prova-item-a">O CP brasileiro de 1940, com a Reforma Penal de 1984, adotou a <strong>teoria normativa pura da culpabilidade</strong> do finalismo de Welzel. Esta teoria deslocou a consciência da ilicitude do dolo para a culpabilidade, com consequências diretas para o art. 21 CP. <strong>Estrutura da culpabilidade no sistema adotado:</strong> (1) Imputabilidade (arts. 26–28 CP); (2) Potencial consciência da ilicitude (art. 21 CP); (3) Exigibilidade de conduta diversa (art. 22 CP). O dolo, neste sistema, é "natural" — consciência dos fatos + vontade — sem consciência da ilicitude. <strong>Consequência para o art. 21:</strong> O erro de proibição (sobre a ilicitude) NÃO exclui o dolo — o crime continua doloso. Afeta apenas a culpabilidade. Se o CP houvesse adotado a teoria psicológica da culpabilidade (na qual a consciência da ilicitude integra o dolo), o erro de proibição excluiria o dolo — e o resultado seria crime culposo ou atipicidade. A opção pelo finalismo é, portanto, determinante para o efeito do erro de proibição: manutenção do crime doloso com redução da culpabilidade, não transformação em crime culposo.</div>
+    </div>
+
+  </div>
+</section>
+
+</div><!-- /page-wrap -->
+
+<footer>
+  <strong>Art. 21.º do Código Penal Brasileiro</strong> — Decreto-Lei n.º 2.848/1940<br>
+  Material elaborado para preparação à Magistratura / ENAM · Doutrina e jurisprudência consolidadas · Atualizado 2025
+</footer>
+
+</body>
+</html>

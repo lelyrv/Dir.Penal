@@ -270,6 +270,23 @@
   strong { font-weight: 700; }
   .leis-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.85rem; }
   .rg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0.7rem; }
+
+.page-wrap {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding-left: clamp(1rem, 3vw, 4rem) !important;
+    padding-right: clamp(1rem, 3vw, 4rem) !important;
+}
+
+.section,
+.prova-section,
+.card,
+.flow-wrap,
+.comp-table,
+.juris-grid {
+    max-width: none !important;
+}
 </style>
 </head>
 <body>

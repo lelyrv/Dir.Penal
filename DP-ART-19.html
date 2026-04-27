@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 19º CP — Agravação pelo Resultado | Magistratura ENAM</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:#0d1b2a;--navy-mid:#1a2f45;--navy-light:#243b55;
+    --gold:#c8960c;--gold-light:#e8b84b;--gold-pale:#fdf3d8;
+    --cream:#faf7f2;--cream-mid:#f0ebe2;
+    --text-dark:#1a1208;--text-mid:#3d3020;--text-soft:#6b5c40;
+    --border:#d4c49a;--border-light:#e8dcbf;
+    --red-accent:#8b1a1a;--green-accent:#1a4a2e;
+    --blue-accent:#1a3a5c;--purple-accent:#4a1a5c;
+    --shadow:0 4px 24px rgba(13,27,42,0.10);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Source Serif 4',Georgia,serif;background:var(--cream);color:var(--text-dark);font-size:15px;line-height:1.75;}
+
+  #top-nav{position:sticky;top:0;z-index:999;background:var(--navy);border-bottom:3px solid var(--gold);padding:0 1.5rem;display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;}
+  #top-nav::-webkit-scrollbar{display:none;}
+  #top-nav .nav-brand{font-family:'Playfair Display',serif;color:var(--gold-light);font-size:0.9rem;font-weight:700;white-space:nowrap;padding:0.85rem 1.2rem 0.85rem 0;border-right:1px solid rgba(200,150,12,0.3);margin-right:0.5rem;letter-spacing:0.5px;}
+  #top-nav a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.72rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;padding:0.85rem 0.8rem;white-space:nowrap;transition:color .2s;border-bottom:3px solid transparent;margin-bottom:-3px;}
+  #top-nav a:hover{color:var(--gold-light);border-bottom-color:var(--gold);}
+
+  #hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 60%,#1e3d5c 100%);color:white;padding:3.5rem 2rem 3rem;text-align:center;position:relative;overflow:hidden;}
+  #hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(200,150,12,0.03) 0px,rgba(200,150,12,0.03) 1px,transparent 1px,transparent 40px);}
+  #hero .badge{display:inline-block;background:rgba(200,150,12,0.15);border:1px solid rgba(200,150,12,0.5);color:var(--gold-light);font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;padding:0.35rem 1rem;border-radius:2px;margin-bottom:1.2rem;font-family:'Source Serif 4',serif;font-weight:600;}
+  #hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.15;margin-bottom:0.6rem;letter-spacing:-0.5px;}
+  #hero h1 span{color:var(--gold-light);}
+  #hero .subtitle{font-size:1rem;color:rgba(255,255,255,0.65);font-style:italic;margin-bottom:1.5rem;}
+  #hero .law-box{display:inline-block;background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.4);border-left:4px solid var(--gold);color:rgba(255,255,255,0.9);font-family:'Source Serif 4',serif;font-size:0.95rem;font-style:italic;padding:1rem 1.5rem;max-width:820px;text-align:left;line-height:1.85;border-radius:0 4px 4px 0;}
+  #hero .law-box strong{color:var(--gold-light);font-style:normal;display:block;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem;}
+
+  .page-wrap{max-width:1100px;margin:0 auto;padding:0 1.5rem 4rem;}
+  .section{margin-top:3.5rem;scroll-margin-top:56px;}
+  .section-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:0.75rem;border-bottom:2px solid var(--border);}
+  .section-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--border);line-height:1;min-width:2.5rem;}
+  .section-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--navy);line-height:1.2;}
+  .section-title span{display:block;font-size:0.75rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-style:normal;}
+
+  .card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1.4rem 1.6rem;box-shadow:var(--shadow);}
+  .card-grid{display:grid;gap:1rem;}
+  .card-grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
+  .card-grid-2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr));}
+  .card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:0.6rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border-light);}
+  .card p,.card li{font-size:0.88rem;line-height:1.7;color:var(--text-mid);}
+  .card ul{padding-left:1.1rem;}.card li{margin-bottom:0.3rem;}
+  .type-card{border-top:4px solid;}
+  .tc-red{border-top-color:var(--red-accent);}.tc-red h3{color:var(--red-accent);}
+  .tc-green{border-top-color:var(--green-accent);}.tc-green h3{color:var(--green-accent);}
+  .tc-blue{border-top-color:var(--blue-accent);}.tc-blue h3{color:var(--blue-accent);}
+  .tc-gold{border-top-color:var(--gold);}.tc-gold h3{color:#7a5a00;}
+  .tc-purple{border-top-color:var(--purple-accent);}.tc-purple h3{color:var(--purple-accent);}
+
+  .flow-wrap{background:white;border:1px solid var(--border-light);border-radius:6px;padding:2rem 1.5rem;box-shadow:var(--shadow);overflow-x:auto;}
+  .flow-center{display:flex;flex-direction:column;align-items:center;}
+  .flow-node{border-radius:4px;padding:0.65rem 1.4rem;font-family:'Source Serif 4',serif;font-size:0.82rem;font-weight:600;text-align:center;min-width:220px;max-width:580px;}
+  .flow-start{background:var(--navy);color:white;border-radius:50px;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;}
+  .flow-end-green{background:var(--green-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+  .flow-end-red{background:var(--red-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+  .flow-end-gold{background:var(--gold);color:var(--navy);border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+  .flow-end-blue{background:var(--blue-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+  .flow-end-purple{background:var(--purple-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+  .flow-box-navy{background:var(--navy-mid);color:white;border-left:4px solid var(--gold);font-size:0.8rem;}
+  .flow-box-green{background:#edf7f0;border:1px solid #7ec89a;border-left:4px solid var(--green-accent);color:var(--text-dark);}
+  .flow-box-blue{background:#edf2f8;border:1px solid #8eb4d8;border-left:4px solid var(--blue-accent);color:var(--text-dark);}
+  .flow-box-red{background:#fdf0f0;border:1px solid #e09090;border-left:4px solid var(--red-accent);color:var(--text-dark);}
+  .flow-box-gold{background:var(--gold-pale);border:2px solid var(--gold);color:var(--text-dark);}
+  .flow-box-purple{background:#f3eef8;border:1px solid #b89dd8;border-left:4px solid var(--purple-accent);color:var(--text-dark);}
+  .flow-arrow{font-size:1.3rem;color:var(--border);line-height:1;margin:0.15rem 0;}
+  .flow-row{display:flex;align-items:flex-start;gap:1.5rem;width:100%;justify-content:center;flex-wrap:wrap;}
+  .flow-branch{display:flex;flex-direction:column;align-items:center;flex:1;min-width:175px;}
+  .flow-label{font-size:0.68rem;color:var(--text-soft);font-weight:600;letter-spacing:0.5px;text-transform:uppercase;background:var(--cream-mid);padding:0.15rem 0.5rem;border-radius:2px;margin:0.15rem 0;}
+  .flow-connector-line{width:1px;height:28px;background:var(--border);}
+
+  .comp-table{width:100%;border-collapse:collapse;font-size:0.84rem;background:white;box-shadow:var(--shadow);border-radius:6px;overflow:hidden;}
+  .comp-table thead{background:var(--navy);color:white;}
+  .comp-table thead th{padding:0.85rem 1rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:0.5px;font-size:0.8rem;text-align:left;}
+  .comp-table thead th:first-child{color:var(--gold-light);}
+  .comp-table tbody tr{border-bottom:1px solid var(--border-light);}
+  .comp-table tbody tr:last-child{border-bottom:none;}
+  .comp-table tbody tr:nth-child(even){background:var(--cream);}
+  .comp-table td{padding:0.75rem 1rem;color:var(--text-mid);vertical-align:top;}
+  .comp-table td:first-child{font-weight:600;color:var(--navy);font-size:0.8rem;}
+  .comp-table .hl td{background:var(--gold-pale)!important;}
+  .comp-table .hl2 td{background:#edf7f0!important;}
+  .comp-table .hl3 td{background:#edf2f8!important;}
+  .comp-table .hl4 td{background:#fdf0f0!important;}
+  .comp-table .hl5 td{background:#f3eef8!important;}
+
+  .juris-card{background:white;border:1px solid var(--border-light);border-left:5px solid;border-radius:0 6px 6px 0;padding:1.2rem 1.4rem;box-shadow:var(--shadow);}
+  .juris-card.stf{border-left-color:var(--red-accent);}
+  .juris-card.stj{border-left-color:var(--navy);}
+  .juris-card.doutrina{border-left-color:var(--gold);}
+  .juris-header{display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem;flex-wrap:wrap;}
+  .juris-badge{font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:0.2rem 0.55rem;border-radius:2px;font-family:'Source Serif 4',serif;}
+  .juris-badge.stf{background:var(--red-accent);color:white;}
+  .juris-badge.stj{background:var(--navy);color:white;}
+  .juris-badge.doutrina{background:var(--gold);color:var(--navy);}
+  .juris-badge.sumula{background:var(--green-accent);color:white;}
+  .juris-badge.tese{background:var(--blue-accent);color:white;}
+  .juris-badge.purple{background:var(--purple-accent);color:white;}
+  .juris-title{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--navy);}
+  .juris-body{font-size:0.84rem;color:var(--text-mid);line-height:1.7;}
+  .juris-body em{font-style:italic;color:var(--navy);}
+  .juris-grid{display:grid;gap:1rem;}
+
+  .alert{padding:0.9rem 1.2rem;border-radius:4px;font-size:0.84rem;line-height:1.7;display:flex;gap:0.7rem;align-items:flex-start;}
+  .alert-gold{background:var(--gold-pale);border:1px solid #d4aa3a;color:#5a4000;}
+  .alert-red{background:#fdf0f0;border:1px solid #e09090;color:#5a0000;}
+  .alert-navy{background:#f0f4f8;border:1px solid #abc;color:var(--navy);}
+  .alert-green{background:#edf7f0;border:1px solid #7ec89a;color:#1a4a2e;}
+  .alert-purple{background:#f3eef8;border:1px solid #b89dd8;color:var(--purple-accent);}
+  .alert-icon{font-size:1.1rem;flex-shrink:0;margin-top:0.05rem;}
+  .alert strong{font-weight:700;}
+
+  .prova-section{background:var(--navy);border-radius:8px;padding:2rem;color:white;margin-top:3.5rem;scroll-margin-top:56px;}
+  .prova-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold-light);margin-bottom:0.5rem;}
+  .prova-section .intro{font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;font-style:italic;}
+  .prova-items{display:grid;gap:0.75rem;}
+  .prova-item{background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.25);border-left:4px solid var(--gold);border-radius:0 4px 4px 0;padding:1rem 1.2rem;}
+  .prova-item-q{font-size:0.82rem;font-weight:600;color:var(--gold-light);margin-bottom:0.4rem;display:flex;align-items:flex-start;gap:0.6rem;}
+  .prova-item-q .qnum{background:var(--gold);color:var(--navy);font-size:0.65rem;font-weight:700;padding:0.1rem 0.45rem;border-radius:2px;flex-shrink:0;margin-top:0.1rem;}
+  .prova-item-a{font-size:0.82rem;color:rgba(255,255,255,0.8);line-height:1.65;}
+  .prova-item-a strong{color:white;}
+
+  .tag{display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;padding:0.15rem 0.5rem;border-radius:2px;margin:0.1rem;font-family:'Source Serif 4',serif;}
+  .tag-blue{background:#dce8f5;color:var(--blue-accent);}
+  .tag-green{background:#dceee3;color:var(--green-accent);}
+  .tag-gold{background:var(--gold-pale);color:#7a5a00;border:1px solid #d4aa3a;}
+  .tag-red{background:#fde8e8;color:var(--red-accent);}
+  .tag-purple{background:#ece5f5;color:var(--purple-accent);}
+
+  .example-box{background:var(--navy-mid);color:white;border-radius:6px;padding:1.2rem 1.4rem;font-size:0.84rem;line-height:1.75;}
+  .example-box .ex-title{color:var(--gold-light);font-weight:700;font-family:'Playfair Display',serif;font-size:0.95rem;margin-bottom:0.5rem;}
+  .example-box .ex-calc{background:rgba(200,150,12,0.12);border:1px solid rgba(200,150,12,0.3);border-radius:4px;padding:0.7rem 1rem;margin-top:0.7rem;font-family:'JetBrains Mono',monospace;font-size:0.79rem;color:var(--gold-light);white-space:pre-wrap;}
+
+  .law-quote{background:var(--cream-mid);border-left:4px solid var(--navy);padding:0.9rem 1.2rem;font-size:0.88rem;font-style:italic;color:var(--text-mid);line-height:1.7;border-radius:0 4px 4px 0;}
+  .law-quote strong{font-style:normal;color:var(--navy);font-size:0.75rem;letter-spacing:0.5px;display:block;margin-bottom:0.25rem;}
+  .divider{height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);margin:1.2rem 0;}
+
+  /* CRIME GRID */
+  .crime-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0.85rem;}
+  .crime-item{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1rem 1.2rem;border-left:4px solid;box-shadow:var(--shadow);}
+  .crime-item h4{font-family:'Playfair Display',serif;font-size:0.92rem;font-weight:700;margin-bottom:0.4rem;}
+  .crime-item p,.crime-item li{font-size:0.82rem;color:var(--text-mid);line-height:1.6;}
+  .crime-item ul{padding-left:1rem;margin-top:0.3rem;}
+  .crime-item li{margin-bottom:0.25rem;}
+  .ci-red{border-left-color:var(--red-accent);}.ci-red h4{color:var(--red-accent);}
+  .ci-green{border-left-color:var(--green-accent);}.ci-green h4{color:var(--green-accent);}
+  .ci-gold{border-left-color:var(--gold);}.ci-gold h4{color:#7a5a00;}
+  .ci-blue{border-left-color:var(--blue-accent);}.ci-blue h4{color:var(--blue-accent);}
+  .ci-purple{border-left-color:var(--purple-accent);}.ci-purple h4{color:var(--purple-accent);}
+
+  /* ESTRUTURA PRETERDOLO */
+  .preterdolo-visual{display:flex;align-items:stretch;gap:0;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);}
+  .pd-col{flex:1;padding:1.2rem 1.4rem;}
+  .pd-dolo{background:var(--red-accent);color:white;}
+  .pd-mais{background:var(--navy);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:2rem;font-family:'Playfair Display',serif;font-weight:900;flex:0 0 3rem;}
+  .pd-culpa{background:var(--blue-accent);color:white;}
+  .pd-igual{background:var(--navy-mid);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:2rem;font-family:'Playfair Display',serif;font-weight:900;flex:0 0 3rem;}
+  .pd-result{background:var(--green-accent);color:white;}
+  .pd-col h4{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;margin-bottom:0.5rem;border-bottom:1px solid rgba(255,255,255,0.25);padding-bottom:0.35rem;}
+  .pd-col p,.pd-col li{font-size:0.82rem;line-height:1.65;}
+  .pd-col ul{padding-left:1rem;margin-top:0.3rem;}
+
+  footer{background:var(--navy);color:rgba(255,255,255,0.45);text-align:center;padding:1.5rem;font-size:0.75rem;border-top:2px solid var(--gold);}
+  footer strong{color:var(--gold-light);}
+
+  @media print{
+    #top-nav{display:none;}
+    #hero{padding:2rem 1rem;}#hero::before{display:none;}
+    .page-wrap{max-width:100%;padding:0 0.5rem 2rem;}
+    .section{margin-top:2rem;page-break-inside:avoid;}
+    .card,.juris-card,.flow-wrap,.example-box{box-shadow:none;border:1px solid #ccc;}
+    .prova-section{background:#f0f4f8!important;color:#000!important;}
+    .prova-section h2{color:#0d1b2a!important;}
+    .prova-item{background:white!important;border:1px solid #ccc!important;}
+    .prova-item-q{color:#7a5a00!important;}
+    .prova-item-a{color:#333!important;}
+    .example-box{background:#f0f4f8!important;color:#000!important;}
+    .preterdolo-visual{flex-direction:column;}
+    .pd-mais,.pd-igual{padding:0.5rem;flex:0 0 2rem;}
+    footer{display:none;}body{font-size:11pt;}
+  }
+  @media(max-width:640px){
+    #hero{padding:2rem 1rem;}#hero h1{font-size:1.6rem;}
+    .card-grid-3,.card-grid-2{grid-template-columns:1fr;}
+    .section-title{font-size:1.1rem;}
+    .comp-table{font-size:0.76rem;}
+    .comp-table td,.comp-table th{padding:0.55rem 0.65rem;}
+    .flow-node{min-width:150px;font-size:0.74rem;}
+    .preterdolo-visual{flex-direction:column;}
+    .pd-mais,.pd-igual{padding:0.5rem;flex:0 0 2rem;}
+  }
+  .mt1{margin-top:0.75rem;}.mt2{margin-top:1rem;}.mt3{margin-top:1.5rem;}
+  .flex-gap{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:flex-start;}
+  strong{font-weight:700;}
+
+  .page-wrap {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding-left: clamp(1rem, 3vw, 4rem) !important;
+    padding-right: clamp(1rem, 3vw, 4rem) !important;
+}
+
+.section,
+.prova-section,
+.card,
+.flow-wrap,
+.comp-table,
+.juris-grid {
+    max-width: none !important;
+}
+</style>
+</head>
+<body>
+
+<nav id="top-nav" aria-label="Atalhos do artigo">
+  <div class="nav-brand">Art. 19º CP</div>
+
+  <div class="nav-main-links">
+    <a href="#visao-geral">Visão Geral</a>
+    <a href="#conceito">Conceito</a>
+    <a href="#estrutura">Estrutura</a>
+    <a href="#requisitos">Requisitos</a>
+    <a href="#dolo-culpa">Dolo × Culpa no Resultado</a>
+    <a href="#tipos-penais">Tipos Qualificados</a>
+    <a href="#distincoes">Distinções Cruciais</a>
+    <a href="#fluxograma">Fluxograma</a>
+    <a href="#hemofilia">Hemofilia e Art. 19</a>
+    <a href="#comparativo">Comparativo</a>
+    <a href="#exemplos">Exemplos</a>
+    <a href="#jurisprudencia">Juris. STF/STJ</a>
+    <a href="#doutrina">Doutrina</a>
+    <a href="#sistematica">Sistemática</a>
+    <a href="#prova" class="nav-prova">Prova</a>
+  </div>
+</nav>
+
+<header id="hero">
+  <div class="badge">Código Penal · Título II · Do Crime · Capítulo III</div>
+  <h1>Art. 19º — <span>Agravação pelo Resultado</span></h1>
+  <p class="subtitle">Crime Preterdoloso · Vedação da Responsabilidade Objetiva · Resultado Agravador · Nexo Subjetivo · Magistratura · ENAM</p>
+  <div class="law-box">
+    <strong>Art. 19.º do Decreto-Lei n.º 2.848/1940 (Código Penal)</strong>
+    "Pelo resultado que agrava especialmente a pena, só responde o agente que o houver causado ao menos culposamente."
+  </div>
+</header>
+
+<div class="page-wrap">
+
+<!-- 1. VISÃO GERAL -->
+<section class="section" id="visao-geral">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div class="section-title"><span>Introdução &amp; Estrutura</span>Visão Geral do Artigo</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📍 Finalidade e Posição Sistemática</h3>
+      <p>O art. 19 CP integra o <strong>Capítulo III do Título II da Parte Geral</strong> ("Do Crime Doloso e do Crime Culposo") e é o dispositivo que <strong>veda a responsabilidade penal objetiva nos crimes qualificados pelo resultado</strong>. Sua função é estabelecer que o resultado mais grave — que agrava especialmente a pena — só pode ser imputado ao agente se ele o causou com ao menos culpa.</p>
+      <p class="mt2">O art. 19 CP completa o sistema dos arts. 18 e 20 CP: enquanto o art. 18 define o dolo e a culpa para o crime base, o art. 19 estende a exigência de nexo subjetivo ao resultado agravador, proibindo a responsabilidade objetiva (pelo mero nexo causal) para os qualificadores de resultado.</p>
+    </div>
+    <div class="card">
+      <h3>🏛️ Estrutura e Função do Art. 19 CP</h3>
+      <ul>
+        <li><strong>"Pelo resultado que agrava especialmente a pena":</strong> O dispositivo trata dos <em>crimes qualificados pelo resultado</em> — tipos penais em que um resultado mais grave do que o pretendido eleva a pena</li>
+        <li><strong>"Só responde o agente":</strong> Responsabilidade pessoal — cada agente responde por seu próprio nexo subjetivo; vedação à responsabilização objetiva</li>
+        <li><strong>"Que o houver causado ao menos culposamente":</strong> Exige-se nexo subjetivo mínimo (culpa) em relação ao resultado agravador — não basta o nexo causal puro</li>
+        <li><strong>Aplicação sistemática:</strong> O art. 19 CP aplica-se a todos os crimes qualificados pelo resultado (preterdolosos e dolosos qualificados pelo resultado)</li>
+        <li><strong>Vedação expressa:</strong> É a vedação legislativa mais explícita à responsabilidade penal objetiva no CP de 1940</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert alert-gold mt2">
+    <div class="alert-icon">⭐</div>
+    <div><strong>Fundamento Constitucional — Vedação à Responsabilidade Penal Objetiva:</strong> O art. 19 CP concretiza o <strong>princípio da culpabilidade</strong> (<em>nulla poena sine culpa</em>), derivado da dignidade da pessoa humana (art. 1.º, III, CF/88) e do devido processo legal (art. 5.º, LIV, CF/88). Antes do Código Penal de 1940, o Brasil adotava a responsabilidade objetiva nos crimes qualificados pelo resultado — o resultado mais grave era sempre imputado ao agente, independentemente de dolo ou culpa. O art. 19 CP veio corrigir essa injustiça, exigindo ao menos culpa em relação ao resultado agravador. O STF e o STJ reafirmam que punir agente por resultado causalmente produzido sem ao menos culpa violaria a CF/88.</div>
+  </div>
+
+  <div class="card-grid card-grid-3 mt2">
+    <div class="card type-card tc-red">
+      <h3>🔴 Crimes Qualificados pelo Resultado</h3>
+      <p>Tipos penais que preveem pena maior quando o resultado produzido supera o pretendido. Podem ser: (a) preterdolosos — dolo no antecedente + culpa no consequente; ou (b) dolosos qualificados — dolo em ambos, com agravação pelo resultado mais grave.</p>
+    </div>
+    <div class="card type-card tc-blue">
+      <h3>🔵 "Ao menos culposamente"</h3>
+      <p>O resultado agravador pode ser imputado com <strong>dolo</strong> (o agente queria o resultado mais grave) ou com <strong>culpa</strong> (o agente não queria, mas o resultado era previsível e evitável). A culpa é o piso mínimo de nexo subjetivo exigido.</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>🟡 Vedação à Responsabilidade Objetiva</h3>
+      <p>O art. 19 CP proíbe expressamente que o resultado agravador seja imputado ao agente pelo <strong>simples nexo causal</strong> (responsabilidade objetiva). Sem dolo ou culpa em relação ao resultado mais grave → sem agravação da pena pelo resultado.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2. CONCEITO PROFUNDO -->
+<section class="section" id="conceito">
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div class="section-title"><span>Análise Dogmática</span>Conceito de Crime Qualificado pelo Resultado e Preterdolo</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📋 Crime Qualificado pelo Resultado — Taxonomia</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.6rem;">Os crimes qualificados pelo resultado são aqueles em que o tipo penal prevê pena agravada quando da conduta resulta um dano mais grave que o pretendido. A doutrina identifica duas espécies:</p>
+      <div style="display:flex;flex-direction:column;gap:0.45rem;">
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);padding:0.55rem 0.85rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">1. Crime Preterdoloso (Preterintencional):</strong> Dolo no antecedente (crime base) + culpa no consequente (resultado agravador). O agente queria o crime base, mas não queria e não aceitou o resultado mais grave — que decorre de culpa. Ex.: lesão corporal seguida de morte (art. 129, §3.º CP) — dolo de lesionar + culpa para a morte.
+        </div>
+        <div style="background:#edf2f8;border-left:3px solid var(--blue-accent);padding:0.55rem 0.85rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--blue-accent);">2. Crime Doloso Qualificado pelo Resultado (dolo + dolo):</strong> O agente age com dolo em relação tanto ao crime base quanto ao resultado agravador. Ex.: lesão corporal gravíssima dolosa (art. 129, §2.º CP) — o agente quis a lesão grave. Ou homicídio doloso seguido de morte de terceiro (concurso formal).
+        </div>
+        <div style="background:#dceee3;border-left:3px solid var(--green-accent);padding:0.55rem 0.85rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--green-accent);">3. Crime Culposo Qualificado pelo Resultado (culpa + culpa):</strong> Raro — toda a conduta é culposa, e o resultado agravador também é produto de culpa. Alguns crimes do CTB (art. 302, §§) preveem penas maiores conforme as circunstâncias.
+        </div>
+      </div>
+      <div class="alert alert-gold mt2" style="font-size:0.81rem;">
+        <div>⭐ <strong>Para o concurso:</strong> O art. 19 CP tem aplicação principal nos crimes <em>preterdolosos</em> (dolo + culpa) — é aqui que a vedação da responsabilidade objetiva tem maior relevância prática. Nos crimes dolosos qualificados, o nexo subjetivo já existe; a questão é verificar o dolo em relação ao resultado mais grave.</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>⚖️ O Que Significa "Agrava Especialmente a Pena"</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">O art. 19 CP refere-se ao resultado que "agrava <em>especialmente</em> a pena" — expressão técnica que designa:</p>
+      <ul style="font-size:0.83rem;">
+        <li><strong>Qualificadoras de resultado:</strong> Resultados que alteram qualitativamente o tipo penal — ex.: lesão corporal grave, gravíssima e seguida de morte (arts. 129, §§1.º, 2.º e 3.º CP) — a pena mínima e máxima do tipo qualificado são substancialmente superiores à do tipo simples</li>
+        <li><strong>Não se confunde com agravantes genéricas:</strong> As agravantes dos arts. 61–65 CP não são "resultados que agravam especialmente a pena" no sentido do art. 19 — são circunstâncias subjetivas ou objetivas, não resultados naturalísticos autônomos</li>
+        <li><strong>Não se confunde com causas de aumento:</strong> As causas de aumento da 3.ª fase também não são "resultados" qualificadores no sentido do art. 19 — são majorantes processuais</li>
+        <li><strong>Conceito técnico:</strong> "Agrava especialmente" = produz um tipo qualificado distinto do tipo simples, com pena autônoma substancialmente maior. O resultado qualificador é um elemento do tipo qualificado — não mera circunstância</li>
+      </ul>
+      <div class="alert alert-navy mt2" style="font-size:0.8rem;">
+        <div>📌 <strong>Exemplos de resultados que "agravam especialmente a pena" (art. 19 CP):</strong> morte no crime de lesão corporal (art. 129, §3.º); lesão grave/gravíssima no contexto de lesão simples; morte na rixa (art. 137, §único); morte no abandono de incapaz (art. 133, §2.º); morte ou lesão grave no latrocínio (art. 157, §3.º); morte no sequestro-extorsão (art. 159, §3.º).</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. ESTRUTURA DO PRETERDOLO -->
+<section class="section" id="estrutura">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div class="section-title"><span>Estrutura Visual</span>Anatomia do Crime Preterdoloso</div>
+  </div>
+
+  <div class="preterdolo-visual">
+    <div class="pd-col pd-dolo">
+      <h4>🔴 ANTECEDENTE — DOLO</h4>
+      <p><strong>Conduta dolosa:</strong> O agente quer praticar o crime base</p>
+      <ul>
+        <li>Há vontade consciente de realizar o tipo penal antecedente</li>
+        <li>Há dolo direto ou eventual quanto ao crime inicial</li>
+        <li>Ex.: Dolo de LESIONAR a vítima (art. 129, caput CP)</li>
+        <li>Ex.: Dolo de PRIVAR da liberdade (sequestro — art. 148 CP)</li>
+        <li>Ex.: Dolo de ABANDONAR o recém-nascido (art. 134 CP)</li>
+      </ul>
+    </div>
+    <div class="pd-mais">+</div>
+    <div class="pd-col pd-culpa">
+      <h4>🔵 CONSEQUENTE — CULPA (AO MENOS)</h4>
+      <p><strong>Resultado agravador culposo:</strong> O agente não queria o resultado mais grave, mas era previsível</p>
+      <ul>
+        <li>Não há dolo (direto ou eventual) quanto ao resultado mais grave</li>
+        <li>O resultado mais grave é previsível (culpa inconsciente) ou previsto mas não aceito (culpa consciente)</li>
+        <li>Ex.: MORTE decorrente da lesão corporal (previsível, mas não desejada)</li>
+        <li>O resultado mais grave não era o fim nem foi assumido como risco</li>
+        <li>Art. 19 CP: sem ao menos culpa → sem imputação do resultado</li>
+      </ul>
+    </div>
+    <div class="pd-igual">=</div>
+    <div class="pd-col pd-result">
+      <h4>🟢 RESULTADO — TIPO QUALIFICADO</h4>
+      <p><strong>Crime qualificado pelo resultado:</strong> Pena substancialmente agravada</p>
+      <ul>
+        <li>O tipo qualificado absorve o crime base e o resultado mais grave</li>
+        <li>Ex.: Lesão corporal seguida de morte (art. 129, §3.º CP) — reclusão 4 a 12 anos</li>
+        <li>Julgado pelo Juízo Singular (não Júri — crime preterdoloso)</li>
+        <li>Se houvesse dolo para a morte → Homicídio doloso (art. 121 CP) → Júri</li>
+        <li>Se não houvesse culpa → Responde apenas pelo crime base (lesão corporal simples)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert alert-red mt2">
+    <div class="alert-icon">🔴</div>
+    <div><strong>Consequência da Ausência de Nexo Subjetivo (Sem Dolo e Sem Culpa para o Resultado Agravador):</strong> Se o resultado agravador não for causado com ao menos culpa — ou seja, o resultado era imprevisível para o homem médio —, o agente responde apenas pelo crime base doloso (ex.: lesão corporal simples — art. 129, caput CP), sem a qualificação pelo resultado. O art. 19 CP protege o agente de responder pelo resultado puramente fortuito — caso fortuito ou força maior que produziram o resultado mais grave → sem imputação do qualificador.</div>
+  </div>
+</section>
+
+<!-- 4. REQUISITOS DO ART. 19 CP -->
+<section class="section" id="requisitos">
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <div class="section-title"><span>Análise Literal — Alta Cobrança</span>Requisitos para Imputação do Resultado Agravador</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📋 Requisitos Cumulativos para a Qualificação pelo Resultado</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.6rem;">Para que o resultado agravador seja imputado ao agente, exige-se a conjugação de:</p>
+      <div style="display:flex;flex-direction:column;gap:0.45rem;">
+        <div style="background:var(--cream-mid);border-left:3px solid var(--red-accent);padding:0.55rem 0.85rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">1. Crime base doloso (antecedente):</strong> O agente praticou conduta dolosa (dolo direto ou eventual) em relação ao crime previsto no tipo simples. Ex.: o agente quis lesionar a vítima.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);padding:0.55rem 0.85rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--blue-accent);">2. Nexo causal entre a conduta e o resultado agravador:</strong> Relação de causalidade (art. 13 CP) entre a conduta dolosa inicial e o resultado mais grave. Sem nexo causal → sem imputação do qualificador.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--green-accent);padding:0.55rem 0.85rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--green-accent);">3. Ao menos culpa em relação ao resultado agravador (art. 19 CP):</strong> O resultado agravador deve ter sido causado com ao menos culpa. Não basta o nexo causal puro. Sem dolo ou culpa → sem imputação → responde apenas pelo crime base.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--gold);padding:0.55rem 0.85rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:#7a5a00;">4. Previsão legal expressa do tipo qualificado:</strong> O tipo qualificado pelo resultado deve estar expressamente previsto em lei — não há qualificação pelo resultado sem previsão legal (princípio da legalidade).
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>⚠️ O Que NÃO Basta para Imputar o Resultado Agravador</h3>
+      <div style="display:flex;flex-direction:column;gap:0.45rem;">
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">Apenas o nexo causal (Responsabilidade Objetiva):</strong> A mera causação do resultado mais grave não gera imputação do qualificador. Art. 19 CP veda expressamente. Ex.: agente que lesiona e, por evento completamente imprevisível, a vítima morre → sem culpa para a morte → sem qualificação → só responde por lesão corporal.
+        </div>
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">Resultado fortuito (caso fortuito):</strong> Se o resultado agravador era absolutamente imprevisível (até para o homem médio nas mesmas circunstâncias), não há culpa → sem imputação do qualificador. O agente responde pelo crime base doloso.
+        </div>
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">Dolo quanto ao crime base, mas resultado absolutamente imprevisível:</strong> Mesmo que o agente tenha cometido dolosa e gravemente o crime base, se o resultado agravador era imprevisível → sem culpa → sem qualificação. Ex.: soco leve em vítima hemofílica desconhecida que morre de hemorragia — a morte era imprevisível para quem não sabia da hemofilia → discute-se se há culpa (ver Seção 08).
+        </div>
+      </div>
+      <div class="alert alert-gold mt2" style="font-size:0.81rem;">
+        <div>⭐ <strong>Regra Mnemônica:</strong> CAUSAL + DOLOSO (base) + AO MENOS CULPOSO (resultado) = Qualificação. CAUSAL + DOLOSO (base) + SEM CULPA (resultado) = Só crime base.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. DOLO OU CULPA NO RESULTADO AGRAVADOR -->
+<section class="section" id="dolo-culpa">
+  <div class="section-header">
+    <div class="section-num">05</div>
+    <div class="section-title"><span>Nexo Subjetivo — Alta Cobrança</span>Dolo ou Culpa no Resultado Agravador: Análise das Hipóteses</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔵 Hipótese 1 — CULPA no Resultado Agravador (Preterdolo Clássico)</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Conceito:</strong> O agente age com dolo no crime base e causa o resultado agravador por culpa (imprudência, negligência ou imperícia). Não queria e não aceitou o resultado mais grave — mas ele era previsível e evitável.</p>
+      <div class="divider"></div>
+      <ul style="font-size:0.83rem;">
+        <li><strong>Estrutura subjetiva:</strong> Dolo (crime base) + Culpa (resultado agravador)</li>
+        <li><strong>Denominação:</strong> Crime preterdoloso ou preterintencional</li>
+        <li><strong>Art. 19 CP aplicável:</strong> A culpa é suficiente para a imputação do qualificador</li>
+        <li><strong>Exemplo paradigmático:</strong> Lesão corporal seguida de morte (art. 129, §3.º CP) — agente desfere soco com dolo de lesionar → vítima morre de hemorragia interna (culpa para a morte — era previsível) → crime preterdoloso → juízo singular</li>
+        <li><strong>Culpa consciente no preterdolo:</strong> O agente previu a possibilidade de resultado grave mas confiou que não ocorreria → culpa consciente → ainda é preterdolo (desde que não tenha aceitado o risco)</li>
+        <li><strong>Culpa inconsciente no preterdolo:</strong> O agente não previu o resultado grave, mas deveria ter previsto (previsível para o homem médio) → culpa inconsciente → preterdolo</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🔴 Hipótese 2 — DOLO no Resultado Agravador (Qualificado Doloso)</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Conceito:</strong> O agente age com dolo tanto no crime base quanto no resultado agravador. O resultado mais grave foi querido (dolo direto) ou assumido como risco (dolo eventual). Não é preterdolo — é um crime doloso qualificado.</p>
+      <div class="divider"></div>
+      <ul style="font-size:0.83rem;">
+        <li><strong>Estrutura subjetiva:</strong> Dolo (crime base) + Dolo (resultado agravador)</li>
+        <li><strong>Denominação:</strong> Crime doloso qualificado pelo resultado</li>
+        <li><strong>Art. 19 CP aplicável:</strong> O dolo é suficiente para a imputação — e mais grave que a culpa</li>
+        <li><strong>Exemplo 1:</strong> Lesão corporal gravíssima dolosa (art. 129, §2.º CP) — o agente quer produzir a lesão grave ou gravíssima; há dolo para o resultado qualificado</li>
+        <li><strong>Exemplo 2:</strong> Latrocínio (art. 157, §3.º CP) — roubo com morte dolosa; há dolo para o roubo + dolo para a morte → crime doloso contra a vida → Júri</li>
+        <li><strong>Exemplo 3 (dolo eventual):</strong> Se o agente assume o risco de matar ao lesionar → dolo eventual para a morte → homicídio doloso (art. 121 CP), não lesão seguida de morte → Júri</li>
+      </ul>
+      <div class="alert alert-red mt2" style="font-size:0.8rem;">
+        <div>🔴 <strong>Atenção — Mudança de Tipo:</strong> Quando há <em>dolo</em> para o resultado morte, o crime deixa de ser "lesão corporal seguida de morte" (preterdolo — art. 129, §3.º CP → juízo singular) e passa a ser "homicídio doloso" (art. 121 CP → Tribunal do Júri). O nexo subjetivo define o tipo penal e a competência.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt2">
+    <h3>⚡ "Ao Menos Culposamente" — Análise do Critério Mínimo do Art. 19 CP</h3>
+    <div class="card-grid card-grid-3 mt1">
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Culpa Inconsciente (suficiente):</strong> O agente não previu o resultado agravador, mas ele era objetivamente previsível para um homem médio nas mesmas circunstâncias → culpa inconsciente → preenche o "ao menos culposamente" → imputação do qualificador. Exemplo: agente desfere soco e vítima cai, batendo a cabeça e morrendo → a morte era previsível → culpa inconsciente → lesão seguida de morte.</p>
+      </div>
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Culpa Consciente (suficiente):</strong> O agente previu o resultado agravador como possível, mas confiou que não ocorreria → culpa consciente → preenche o "ao menos culposamente" → imputação do qualificador. Exemplo: agente desfere golpe forte no tórax, prevê que pode causar dano grave mas confia que a vítima irá se recuperar → culpa consciente → lesão seguida de resultado grave.</p>
+      </div>
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Resultado Imprevisível / Caso Fortuito (insuficiente):</strong> O resultado agravador era absolutamente imprevisível para qualquer pessoa nas mesmas circunstâncias → sem culpa → sem preenchimento do art. 19 CP → agente responde apenas pelo crime base doloso. Exemplo: soco leve causa morte por aneurisma cerebral congênito absolutamente desconhecido → sem culpa → lesão corporal simples (art. 129, caput CP).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. TIPOS PENAIS QUALIFICADOS PELO RESULTADO -->
+<section class="section" id="tipos-penais">
+  <div class="section-header">
+    <div class="section-num">06</div>
+    <div class="section-title"><span>Aplicação Prática — Alta Cobrança</span>Principais Crimes Qualificados pelo Resultado</div>
+  </div>
+
+  <div class="alert alert-gold" style="margin-bottom:1rem;">
+    <div class="alert-icon">⭐</div>
+    <div><strong>Ponto Altamente Cobrado em Magistratura:</strong> O candidato deve dominar os principais tipos qualificados pelo resultado e saber: (a) qual o nexo subjetivo exigido para o resultado qualificador (dolo ou culpa); (b) se é crime preterdoloso (juízo singular) ou doloso (Júri, se homicídio); e (c) como o art. 19 CP proíbe a imputação objetiva do resultado. Esta seção mapeia os crimes mais cobrados.</div>
+  </div>
+
+  <div class="crime-grid">
+    <div class="crime-item ci-red">
+      <h4>🔴 Lesão Corporal Seguida de Morte — Art. 129, §3.º CP</h4>
+      <p><strong>Pena:</strong> Reclusão 4 a 12 anos</p>
+      <ul>
+        <li><strong>Nexo subjetivo:</strong> Dolo de lesionar + Culpa para a morte (preterdolo)</li>
+        <li><strong>Art. 19 CP:</strong> A morte só é imputada se houve ao menos culpa — morte imprevisível → responde por lesão simples</li>
+        <li><strong>Competência:</strong> Juízo singular (não Júri — a morte é culposa)</li>
+        <li><strong>Distinção:</strong> Se havia dolo eventual para a morte → homicídio doloso → Júri</li>
+        <li><strong>Exemplo:</strong> Soco que causa trauma craniano mortal previsível → culpa → §3.º</li>
+      </ul>
+    </div>
+    <div class="crime-item ci-red">
+      <h4>🔴 Lesão Corporal Grave — Art. 129, §1.º CP</h4>
+      <p><strong>Pena:</strong> Reclusão 1 a 5 anos</p>
+      <ul>
+        <li><strong>Nexo subjetivo:</strong> Dolo de lesionar + (Dolo ou Culpa para a lesão grave)</li>
+        <li><strong>Art. 19 CP:</strong> Incapacidade >30 dias, perigo de vida, debilidade permanente, aceleração do parto — devem ser ao menos culposos</li>
+        <li><strong>Estrutura mista:</strong> Pode ser preterdoloso (culpa para o resultado grave) ou doloso qualificado (dolo para o resultado grave)</li>
+        <li><strong>Exemplo:</strong> Agente desfere golpe no olho querendo lesionar → perda do olho → dolo ou culpa para o resultado → §1.º</li>
+      </ul>
+    </div>
+    <div class="crime-item ci-red">
+      <h4>🔴 Lesão Corporal Gravíssima — Art. 129, §2.º CP</h4>
+      <p><strong>Pena:</strong> Reclusão 2 a 8 anos</p>
+      <ul>
+        <li><strong>Nexo subjetivo:</strong> Em regra, dolo para o resultado gravíssimo (debilidade permanente grave, perda de membro, deformidade permanente, doença incurável etc.)</li>
+        <li><strong>Art. 19 CP:</strong> Sem ao menos culpa para o resultado gravíssimo → responde por lesão simples ou grave</li>
+        <li><strong>HIV (doença incurável — inciso II):</strong> Dolo eventual de transmitir o vírus → §2.º, II — lesão gravíssima dolosa</li>
+      </ul>
+    </div>
+    <div class="crime-item ci-blue">
+      <h4>🔵 Rixa com Morte ou Lesão Grave — Art. 137, §único CP</h4>
+      <p><strong>Pena:</strong> Detenção 6 meses a 2 anos (morte) ou 1 mês a 1 ano (lesão grave)</p>
+      <ul>
+        <li><strong>Nexo subjetivo:</strong> Dolo de participar da rixa + Culpa para a morte ou lesão grave de qualquer participante</li>
+        <li><strong>Art. 19 CP:</strong> A morte ou lesão grave só é imputada ao participante que a causou ao menos culposamente</li>
+        <li><strong>Dificuldade prática:</strong> Em rixa, pode ser difícil identificar quem causou o resultado → princípio do <em>in dubio pro reo</em></li>
+        <li><strong>Alta cobrança:</strong> Todos os participantes respondem pelo §único ou apenas quem causou o resultado?</li>
+      </ul>
+    </div>
+    <div class="crime-item ci-blue">
+      <h4>🔵 Abandono de Incapaz com Resultado Grave/Morte — Art. 133, §§1.º e 2.º CP</h4>
+      <p><strong>Pena (morte):</strong> Reclusão 4 a 12 anos</p>
+      <ul>
+        <li><strong>Nexo subjetivo:</strong> Dolo de abandonar + Culpa para o resultado morte ou lesão grave</li>
+        <li><strong>Art. 19 CP:</strong> A agravação pelo resultado só ocorre se o agente o causou ao menos culposamente</li>
+        <li><strong>Exemplo:</strong> Mãe que abandona recém-nascido em local seguro mas que, por circunstâncias imprevisíveis, morre → sem culpa → sem agravação; mãe que abandona em local de risco evidente → culpa → agravação</li>
+      </ul>
+    </div>
+    <div class="crime-item ci-gold">
+      <h4>🟡 Roubo com Lesão Grave ou Morte — Latrocínio (Art. 157, §3.º CP)</h4>
+      <p><strong>Pena (morte):</strong> Reclusão 20 a 30 anos</p>
+      <ul>
+        <li><strong>Nexo subjetivo:</strong> Dolo de roubar + (Dolo ou Culpa para a lesão grave/morte)</li>
+        <li><strong>Latrocínio com morte dolosa:</strong> Crime doloso contra a vida → Tribunalg do Júri (Súmula 603 STF — reconsiderada — ver Seção 11)</li>
+        <li><strong>Latrocínio com morte culposa:</strong> Crime preterdoloso → Competência discutida — STF: Júri (pelo elemento patrimonial)</li>
+        <li><strong>Art. 19 CP:</strong> A morte só agrava se causada ao menos culposamente</li>
+      </ul>
+    </div>
+    <div class="crime-item ci-gold">
+      <h4>🟡 Extorsão Mediante Sequestro com Resultado Morte — Art. 159, §3.º CP</h4>
+      <p><strong>Pena:</strong> Reclusão 24 a 30 anos</p>
+      <ul>
+        <li><strong>Nexo subjetivo:</strong> Dolo de sequestrar para extorsão + (Dolo ou Culpa para a morte)</li>
+        <li><strong>Art. 19 CP:</strong> A morte só agrava se causada ao menos culposamente</li>
+        <li><strong>Se morte dolosa:</strong> Crime hediondo com pena máxima de 30 anos → crime contra a vida; debate sobre competência do Júri</li>
+      </ul>
+    </div>
+    <div class="crime-item ci-purple">
+      <h4>🟣 Crimes Culposos do CTB com Resultado Agravado — Arts. 302, 303 CTB</h4>
+      <p><strong>Exemplo:</strong> Homicídio culposo no trânsito com agravantes específicas</p>
+      <ul>
+        <li><strong>Nexo subjetivo:</strong> Culpa (conduta) + Resultado morte ou lesão grave</li>
+        <li><strong>Art. 19 CP:</strong> Mesmo nos crimes culposos, o resultado agravado só é imputável se causado culposamente (o que é presumido nos crimes culposos)</li>
+        <li><strong>Causa de aumento:</strong> As causas de aumento do CTB (§§) exigem o resultado como parte do tipo agravado — sem resultado → sem aumento</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 7. DISTINÇÕES CRUCIAIS -->
+<section class="section" id="distinções">
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <div class="section-title"><span>Alta Cobrança — Fronteiras Dogmáticas</span>Distinções Cruciais: Preterdolo × Homicídio Doloso × Culposo</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔴 Lesão Seguida de Morte × Homicídio Doloso — O Critério Definitivo</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">A distinção mais cobrada em magistratura sobre o art. 19 CP é entre a lesão corporal seguida de morte (art. 129, §3.º) e o homicídio doloso (art. 121 CP). O critério é o <strong>elemento subjetivo em relação à morte</strong>:</p>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;">
+        <div style="background:var(--gold-pale);border:1px solid var(--gold);border-radius:6px;padding:0.8rem 1rem;font-size:0.82rem;">
+          <strong style="color:#7a5a00;">Lesão corporal seguida de morte (art. 129, §3.º):</strong><br>
+          Dolo: LESIONAR | Para a morte: CULPA<br>
+          → Crime preterdoloso → Juízo SINGULAR<br>
+          → Pena: 4 a 12 anos de reclusão
+        </div>
+        <div style="background:#fde8e8;border:1px solid #e09090;border-radius:6px;padding:0.8rem 1rem;font-size:0.82rem;">
+          <strong style="color:var(--red-accent);">Homicídio doloso (art. 121 CP):</strong><br>
+          Dolo: MATAR (direto ou eventual) | Para a morte: DOLO<br>
+          → Crime doloso contra a vida → TRIBUNAL DO JÚRI<br>
+          → Pena: 6 a 20 anos (simples); 12 a 30 anos (qualificado)
+        </div>
+        <div style="background:#edf2f8;border:1px solid #8eb4d8;border-radius:6px;padding:0.8rem 1rem;font-size:0.82rem;">
+          <strong style="color:var(--blue-accent);">Homicídio culposo (art. 121, §3.º):</strong><br>
+          Toda a conduta: CULPOSA | Para a morte: CULPA<br>
+          → Crime culposo → Juízo SINGULAR<br>
+          → Pena: 1 a 3 anos de detenção
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📋 Elementos para Inferir o Dolo de Matar — STJ</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">O STJ utiliza critérios objetivos para inferir o <em>animus necandi</em> (intenção de matar) e distinguir o homicídio doloso do preterdolo:</p>
+      <ul style="font-size:0.83rem;">
+        <li><strong>Instrumento utilizado:</strong> Arma de fogo ou faca → mais próximo do homicídio doloso. Soco ou tapa → mais próximo do preterdolo (lesão seguida de morte)</li>
+        <li><strong>Região do corpo atingida:</strong> Golpe na cabeça, pescoço, tórax (regiões vitais) → infere dolo de matar. Golpe nas extremidades → infere apenas dolo de lesionar</li>
+        <li><strong>Intensidade da agressão:</strong> Múltiplos golpes violentos → infere dolo de matar. Única agressão leve → infere apenas dolo de lesionar</li>
+        <li><strong>Contexto e intenção declarada:</strong> Ameaça de morte anterior + agressão = dolo de matar. Briga com agressão moderada = preterdolo</li>
+        <li><strong>Dolo eventual:</strong> Se o agente assumiu o risco de matar (ex.: racha, atirar em direção à multidão) → dolo eventual de homicídio → Júri</li>
+      </ul>
+      <div class="alert alert-red mt2" style="font-size:0.8rem;">
+        <div>🔴 <strong>Para prova:</strong> O STJ rejeita que o simples fato de a morte ter ocorrido, por si só, demonstre dolo de matar. É necessária prova adicional do animus necandi. Sem prova de dolo de matar → lesão seguida de morte (preterdolo, art. 129, §3.º CP).</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt2">
+    <h3>⚡ Quadro Sinóptico das Distinções — Alta Cobrança em Magistratura</h3>
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:0.82rem;">
+        <thead style="background:var(--navy);color:white;">
+          <tr>
+            <th style="padding:0.55rem 0.8rem;">Hipótese</th>
+            <th style="padding:0.55rem 0.8rem;">Dolo da Conduta</th>
+            <th style="padding:0.55rem 0.8rem;">Nexo p/ Morte</th>
+            <th style="padding:0.55rem 0.8rem;">Crime</th>
+            <th style="padding:0.55rem 0.8rem;">Competência</th>
+            <th style="padding:0.55rem 0.8rem;">Pena</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#fde8e8;"><td style="padding:0.5rem 0.8rem;font-weight:700;">Dolo direto de matar</td><td style="padding:0.5rem 0.8rem;">Dolo de matar</td><td style="padding:0.5rem 0.8rem;font-weight:700;color:var(--red-accent);">Dolo direto</td><td style="padding:0.5rem 0.8rem;">Homicídio doloso (art. 121 CP)</td><td style="padding:0.5rem 0.8rem;font-weight:700;">Tribunal do Júri</td><td style="padding:0.5rem 0.8rem;">6-20 anos</td></tr>
+          <tr style="background:#fde8e8;"><td style="padding:0.5rem 0.8rem;font-weight:700;">Dolo eventual de matar</td><td style="padding:0.5rem 0.8rem;">Qualquer (racha)</td><td style="padding:0.5rem 0.8rem;font-weight:700;color:var(--red-accent);">Dolo eventual</td><td style="padding:0.5rem 0.8rem;">Homicídio doloso (art. 121 CP)</td><td style="padding:0.5rem 0.8rem;font-weight:700;">Tribunal do Júri</td><td style="padding:0.5rem 0.8rem;">6-20 anos</td></tr>
+          <tr style="background:var(--gold-pale);"><td style="padding:0.5rem 0.8rem;font-weight:700;">Dolo de lesionar + Culpa para a morte</td><td style="padding:0.5rem 0.8rem;">Dolo de lesionar</td><td style="padding:0.5rem 0.8rem;font-weight:700;color:#7a5a00;">Culpa (ao menos)</td><td style="padding:0.5rem 0.8rem;">Lesão seguida de morte (art. 129, §3.º CP)</td><td style="padding:0.5rem 0.8rem;font-weight:700;">Juízo Singular</td><td style="padding:0.5rem 0.8rem;">4-12 anos</td></tr>
+          <tr style="background:#edf2f8;"><td style="padding:0.5rem 0.8rem;font-weight:700;">Culpa na conduta + Culpa para a morte</td><td style="padding:0.5rem 0.8rem;">Culpa na conduta</td><td style="padding:0.5rem 0.8rem;font-weight:700;color:var(--blue-accent);">Culpa</td><td style="padding:0.5rem 0.8rem;">Homicídio culposo (art. 121, §3.º CP)</td><td style="padding:0.5rem 0.8rem;font-weight:700;">Juízo Singular</td><td style="padding:0.5rem 0.8rem;">1-3 anos</td></tr>
+          <tr style="background:#dceee3;"><td style="padding:0.5rem 0.8rem;font-weight:700;">Dolo de lesionar + Resultado imprevisível (sem culpa)</td><td style="padding:0.5rem 0.8rem;">Dolo de lesionar</td><td style="padding:0.5rem 0.8rem;font-weight:700;color:var(--green-accent);">Sem dolo ou culpa</td><td style="padding:0.5rem 0.8rem;">Lesão corporal simples (art. 129, caput CP)</td><td style="padding:0.5rem 0.8rem;font-weight:700;">Juízo Singular</td><td style="padding:0.5rem 0.8rem;">3 meses a 1 ano</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 8. FLUXOGRAMA -->
+<section class="section" id="fluxograma">
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma: Verificação da Imputação do Resultado Agravador (Art. 19 CP)</div>
+  </div>
+
+  <div class="flow-wrap">
+    <div class="flow-center">
+
+      <div class="flow-node flow-start">RESULTADO MAIS GRAVE OCORREU — VERIFICAR ART. 19 CP</div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 1 — Qual era o dolo da conduta antecedente?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Identificar o elemento subjetivo da ação que causou o resultado mais grave</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">DOLO de obter o resultado grave (direto/eventual)</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:185px;">
+            Dolo para o resultado mais grave<br>Art. 19 CP satisfeito (dolo > culpa)<br><small>Verificar o tipo doloso qualificado ou homicídio</small>
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-red" style="font-size:0.72rem;">Tipo Doloso Qualificado</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:115px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">DOLO do crime base apenas</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;min-width:185px;">
+            Dolo apenas para o crime base<br>Verificar nexo subjetivo para o resultado agravador<br>Prosseguir para Passo 2
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 2 — O agente PREVIU o resultado agravador?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Elemento cognitivo — consciência da possibilidade do resultado mais grave</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">SIM — previu e ACEITOU o risco</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:185px;">
+            DOLO EVENTUAL para o resultado grave<br>Art. 19 CP satisfeito<br><small>Tipo qualificado doloso ou homicídio doloso</small>
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-red" style="font-size:0.72rem;">Dolo Eventual — Tipo Doloso</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:115px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">SIM — previu mas CONFIOU que não ocorreria</div>
+          <div class="flow-node flow-box-blue" style="font-size:0.76rem;text-align:center;min-width:185px;">
+            CULPA CONSCIENTE para o resultado grave<br>Art. 19 CP satisfeito (ao menos culposo)<br><small>Tipo qualificado — PRETERDOLO</small>
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-blue" style="font-size:0.72rem;">Culpa Consciente — Preterdolo</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:115px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">NÃO previu</div>
+          <div class="flow-node flow-box-purple" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Não previu o resultado<br>Prosseguir para Passo 3</div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 3 — O resultado era objetivamente PREVISÍVEL para o homem médio?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Critério da previsibilidade objetiva — um homem médio nas mesmas circunstâncias teria previsto o resultado agravador?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">SIM — era previsível (culpa inconsciente)</div>
+          <div class="flow-node flow-box-blue" style="font-size:0.76rem;text-align:center;min-width:185px;">
+            CULPA INCONSCIENTE para o resultado grave<br>Art. 19 CP satisfeito ("ao menos culposamente")<br>Tipo qualificado → <strong>PRETERDOLO</strong>
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-blue" style="font-size:0.72rem;">Culpa Inconsciente — Preterdolo Configurado</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:115px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — imprevisível / caso fortuito</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;min-width:185px;">
+            SEM nexo subjetivo para o resultado<br>Art. 19 CP: NÃO imputar o qualificador<br>Agente responde APENAS pelo crime base doloso
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-gold" style="font-size:0.72rem;">Caso Fortuito — Sem Qualificação</div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 4 — Há nexo causal entre a conduta e o resultado agravador? (Art. 13 CP)</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Verificar o nexo causal (conditio sine qua non) entre a conduta dolosa e o resultado mais grave</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">SIM — há nexo causal</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;min-width:185px;">
+            <strong>TODOS OS REQUISITOS PREENCHIDOS</strong><br>
+            PRETERDOLO CONFIGURADO<br>Art. 19 CP satisfeito<br>Tipo qualificado pelo resultado
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-green" style="font-size:0.72rem;">Crime Qualificado pelo Resultado — Imputação Total</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — sem nexo causal (causa alheia)</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;min-width:185px;">
+            Sem nexo causal → sem imputação do resultado<br>Verificar art. 13, §1.º (causa superveniente)<br>Agente responde pelo crime base
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-gold" style="font-size:0.72rem;">Sem Nexo Causal — Sem Qualificação</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 9. CASO DA HEMOFILIA E ART. 19 CP -->
+<section class="section" id="hemofilia">
+  <div class="section-header">
+    <div class="section-num">09</div>
+    <div class="section-title"><span>Caso Paradigmático — Alta Cobrança</span>A Hemofilia e o Art. 19 CP: Previsibilidade do Resultado</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>⚡ Caso da Hemofilia — Análise Completa</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Fato:</strong> A desfere soco leve em B. A não sabia que B era hemofílico (condição genética que impede a coagulação do sangue). B morre de hemorragia incontrolável pela lesão aparentemente leve.</p>
+      <div class="divider"></div>
+      <p style="font-size:0.84rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Questão central:</strong> A responde por lesão corporal seguida de morte (art. 129, §3.º CP — preterdolo) ou apenas por lesão corporal simples (art. 129, caput CP)?</p>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;">
+        <div style="background:var(--gold-pale);border:1px solid var(--gold);border-radius:6px;padding:0.8rem 1rem;font-size:0.82rem;">
+          <strong style="color:#7a5a00;">Critério do Art. 19 CP:</strong> A só responde pela morte se a causou "ao menos culposamente". Há culpa para a morte de hemofílico desconhecido?<br>
+          → Previsibilidade objetiva: a morte por hemorragia de hemofílico era previsível para um <em>homem médio</em> que desconhecia a condição? → NÃO, em regra. A hemofilia é condição rara e desconhecida → o resultado morte era imprevisível → sem culpa → sem qualificação → lesão corporal simples.
+        </div>
+        <div style="background:#fde8e8;border:1px solid #e09090;border-radius:6px;padding:0.8rem 1rem;font-size:0.82rem;">
+          <strong style="color:var(--red-accent);">SE A SABIA da hemofilia:</strong> O resultado morte era previsível (ele tinha ciência da condição) → há culpa (no mínimo culpa consciente ou até dolo eventual se aceitou o risco de matar) → responde pelo resultado mais grave.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📋 Posições Doutrinárias sobre a Hemofilia</h3>
+      <div style="display:flex;flex-direction:column;gap:0.5rem;">
+        <div style="background:#dceee3;border-left:3px solid var(--green-accent);border-radius:0 4px 4px 0;padding:0.65rem 0.9rem;font-size:0.82rem;">
+          <strong style="color:var(--green-accent);">Posição Majoritária (Masson, Bitencourt, Greco):</strong> A hemofilia desconhecida → resultado morte absolutamente imprevisível para o homem médio → sem culpa → art. 19 CP impede a imputação do qualificador → A responde por lesão corporal simples (art. 129, caput CP). Fundamento: o art. 19 CP exige ao menos culpa; sem previsibilidade objetiva, não há culpa.
+        </div>
+        <div style="background:#edf2f8;border-left:3px solid var(--blue-accent);border-radius:0 4px 4px 0;padding:0.65rem 0.9rem;font-size:0.82rem;">
+          <strong style="color:var(--blue-accent);">Posição Minoritária (responsabilidade pelo risco criado):</strong> Alguns autores argumentam que qualquer agressão física cria o risco de resultado mais grave, e as condições pessoais da vítima devem ser absorvidas pelo agente. Essa posição, no entanto, é incompatível com o art. 19 CP — que exige ao menos culpa — e é rejeitada pela maioria da doutrina e pelo STJ.
+        </div>
+        <div style="background:var(--gold-pale);border:1px solid var(--gold);border-radius:6px;padding:0.65rem 0.9rem;font-size:0.82rem;">
+          <strong style="color:#7a5a00;">⭐ Para o concurso:</strong> Adote a posição majoritária: hemofilia desconhecida → resultado imprevisível → sem culpa → art. 19 CP → sem imputação do resultado morte → A responde por lesão corporal simples. A questão do dolo (se A queria matar ou lesionar) é separada da questão do nexo subjetivo para o resultado morte.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. COMPARATIVO -->
+<section class="section" id="comparativo">
+  <div class="section-header">
+    <div class="section-num">10</div>
+    <div class="section-title"><span>Quadro Sinóptico Completo</span>Art. 19 CP × Art. 18 CP × Art. 13 CP — Nexo Causal e Nexo Subjetivo</div>
+  </div>
+
+  <div style="overflow-x:auto;">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Critério</th>
+          <th>Preterdolo (Art. 19 + Art. 18, II)</th>
+          <th>Crime Doloso Qualificado (Art. 19 + Art. 18, I)</th>
+          <th>Crime Culposo (Art. 18, II)</th>
+          <th>Resp. Objetiva (VEDADA — Art. 19)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hl">
+          <td>Conduta base</td>
+          <td>DOLOSA (dolo direto ou eventual)</td>
+          <td>DOLOSA (dolo direto ou eventual)</td>
+          <td>CULPOSA (imprudência/negligência/imperícia)</td>
+          <td>Qualquer</td>
+        </tr>
+        <tr>
+          <td>Nexo subjetivo para o resultado agravador</td>
+          <td>CULPA (inconsciente ou consciente) — "ao menos culposamente"</td>
+          <td>DOLO (direto ou eventual)</td>
+          <td>CULPA — por definição</td>
+          <td>NENHUM — só nexo causal</td>
+        </tr>
+        <tr class="hl2">
+          <td>Art. 19 CP satisfeito?</td>
+          <td>SIM — culpa é suficiente</td>
+          <td>SIM — dolo é mais que suficiente</td>
+          <td>SIM — culpa no próprio crime</td>
+          <td>NÃO — vedado pelo art. 19 CP</td>
+        </tr>
+        <tr>
+          <td>Resultado do exame</td>
+          <td>Tipo qualificado preterdoloso — Ex.: art. 129, §3.º CP</td>
+          <td>Tipo qualificado doloso — Ex.: latrocínio, homicídio doloso</td>
+          <td>Crime culposo — Ex.: homicídio culposo</td>
+          <td>Só crime base (Ex.: lesão corporal simples)</td>
+        </tr>
+        <tr class="hl3">
+          <td>Exemplo</td>
+          <td>Dolo de lesionar + culpa para morte → lesão seguida de morte (art. 129, §3.º)</td>
+          <td>Dolo de roubar + dolo de matar → latrocínio (art. 157, §3.º, in fine)</td>
+          <td>Culpa de dirigir + culpa para morte → homicídio culposo (art. 121, §3.º)</td>
+          <td>Dolo de lesionar + morte imprevisível → somente lesão corporal (art. 129, caput)</td>
+        </tr>
+        <tr>
+          <td>Competência (se morte)</td>
+          <td>Juízo SINGULAR (morte culposa)</td>
+          <td>TRIBUNAL DO JÚRI (morte dolosa) — crimes dolosos contra a vida</td>
+          <td>Juízo SINGULAR (morte culposa)</td>
+          <td>Juízo SINGULAR (crime base)</td>
+        </tr>
+        <tr class="hl4">
+          <td>Fundamento legal</td>
+          <td>Art. 19 CP (ao menos culposo) + art. 18, II CP (culpa)</td>
+          <td>Art. 19 CP (ao menos culposo = dolo OK) + art. 18, I CP (dolo)</td>
+          <td>Art. 18, II CP (culpa é o próprio tipo)</td>
+          <td>Vedação expressa do art. 19 CP</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="alert alert-red mt2">
+    <div class="alert-icon">🔴</div>
+    <div><strong>Resumo Mnemônico para o Exame:</strong><br>
+    <strong>Art. 19 CP:</strong> Resultado agravador → ao menos CULPOSAMENTE → sim: qualifica; não: só crime base.<br>
+    <strong>Preterdolo:</strong> Dolo (crime base) + Culpa (resultado) = Tipo qualificado preterdoloso → Juízo Singular<br>
+    <strong>Doloso qualificado:</strong> Dolo (crime base) + Dolo (resultado) = Tipo qualificado doloso → Júri (se morte)<br>
+    <strong>Vedação:</strong> Dolo (crime base) + Nenhum nexo (resultado) = Só crime base → Art. 19 proíbe a qualificação</div>
+  </div>
+</section>
+
+<!-- 11. EXEMPLOS PRÁTICOS -->
+<section class="section" id="exemplos">
+  <div class="section-header">
+    <div class="section-num">11</div>
+    <div class="section-title"><span>Casos Concretos Resolvidos</span>Exemplos Práticos do Art. 19 CP</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 1 — Lesão Seguida de Morte com Culpa (Preterdolo Configurado)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A agride B com um soco forte na cabeça, com intenção de lesioná-lo. B cai, bate o crânio no chão e morre de hemorragia cerebral. A não queria matar B. A morte era previsível dado a intensidade do soco na cabeça.</p>
+      <div class="ex-calc">ANÁLISE — ART. 19 CP:
+
+1. Crime base: Dolo de LESIONAR B (art. 129, caput CP) ✅
+2. Resultado agravador: MORTE de B
+
+3. Nexo subjetivo para a morte (art. 19 CP):
+   - A quis a morte? NÃO (sem dolo direto)
+   - A assumiu o risco de matar? NÃO (sem dolo eventual)
+   - A previu a morte? Verificar...
+   - A morte por trauma craniano em soco na cabeça:
+     PREVISÍVEL para o homem médio? SIM
+   - A não previu (culpa inconsciente) → AO MENOS CULPOSA ✅
+
+4. Nexo causal: soco → queda → trauma → morte ✅
+
+ART. 19 CP SATISFEITO → Qualificação pelo resultado admitida
+
+CRIME: Lesão Corporal Seguida de Morte (art. 129, §3.º CP)
+→ PRETERDOLO: Dolo (lesão) + Culpa inconsciente (morte)
+→ Pena: reclusão 4 a 12 anos
+→ Competência: JUÍZO SINGULAR (morte culposa)
+
+SE A SOUBESSE que poderia matar e aceitasse o risco:
+→ DOLO EVENTUAL de homicídio → art. 121 CP → JÚRI ✅</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 2 — Lesão com Resultado Imprevisível (Art. 19 CP Afasta a Qualificação)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A dá um tapa leve no rosto de B, em briga corriqueira. B cai e morre por aneurisma cerebral congênito que se rompe com a mínima força. Ninguém sabia do aneurisma — nem B.</p>
+      <div class="ex-calc">ANÁLISE — ART. 19 CP:
+
+1. Crime base: Dolo de LESIONAR (tapa — art. 129, caput CP) ✅
+2. Resultado agravador: MORTE por ruptura de aneurisma
+
+3. Nexo subjetivo para a morte (art. 19 CP):
+   - A quis a morte? NÃO
+   - A aceitou o risco de matar? NÃO
+   - A previu a possibilidade de morte? NÃO
+   - Era PREVISÍVEL para um homem médio que um tapa leve
+     no rosto causaria morte por aneurisma congênito
+     desconhecido? NÃO — resultado absolutamente imprevisível
+
+   → SEM CULPA para o resultado morte
+
+4. ART. 19 CP: "Só responde o agente que o houver causado
+   AO MENOS CULPOSAMENTE" → SEM culpa → SEM qualificação
+
+RESULTADO: A responde apenas por LESÃO CORPORAL SIMPLES
+→ Art. 129, caput CP
+→ Pena: detenção 3 meses a 1 ano
+→ A MORTE NÃO É IMPUTADA a A
+
+O art. 19 CP proíbe a responsabilidade objetiva:
+A causou a morte (nexo causal existe), mas sem nexo
+subjetivo (culpa) → vedado imputar o qualificador ✅</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 3 — Rixa com Resultado Morte (Art. 137, §único CP)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A, B e C participam de rixa violenta. C morre durante a briga. Não foi possível identificar precisamente quem desferiu o golpe fatal em C.</p>
+      <div class="ex-calc">ANÁLISE — ART. 19 CP NA RIXA:
+
+Crime base: Participação em rixa (art. 137, caput CP)
+→ Pena: detenção 15 dias a 2 meses (tipo simples)
+→ Dolo de participar da rixa
+
+Resultado agravador: MORTE de C (art. 137, §único CP)
+→ Pena: detenção 6 meses a 2 anos
+
+Art. 19 CP: Só responde pelo §único quem CAUSOU a morte
+ao menos culposamente.
+
+PROBLEMA: Não identificado quem causou a morte de C.
+
+POSIÇÃO STJ/DOUTRINA MAJORITÁRIA:
+→ Se não identificado o autor do golpe fatal → TODOS os
+   participantes respondem pelo §único, pois todos
+   participaram dolosamente da rixa que causou a morte
+   (dolo na rixa + previsibilidade da morte = culpa)
+→ O §único pune o PARTICIPANTE da rixa com resultado morte
+
+POSIÇÃO MINORITÁRIA (Bitencourt):
+→ Só responde pelo §único quem causou concretamente
+   a morte — sem identificação do autor → todos respondem
+   apenas pelo tipo simples (art. 137, caput)
+
+PARA O CONCURSO: Adote a posição majoritária →
+todos os participantes respondem pelo §único
+(art. 137, §único CP) pois todos causaram ao menos
+culposamente (previsível que alguém morreria na rixa) ✅</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 4 — Latrocínio (Art. 157, §3.º, In Fine CP) — Art. 19 CP e Dolo para a Morte</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A pratica roubo armado contra B. No curso do roubo, A dispara contra B para dominar a resistência. B morre. Cenários: (a) A quis matar; (b) A não queria matar, mas a morte era previsível.</p>
+      <div class="ex-calc">ANÁLISE — ART. 19 CP NO LATROCÍNIO:
+
+Crime base: Roubo (art. 157 CP)
+Resultado agravador: MORTE (art. 157, §3.º, in fine CP)
+→ Latrocínio: Reclusão 20 a 30 anos
+
+CENÁRIO A — A quis matar B (dolo de matar):
+→ Dolo de roubar + DOLO de matar (resultado morte)
+→ Art. 19 CP satisfeito (dolo > culpa)
+→ LATROCÍNIO (art. 157, §3.º, in fine)
+→ Competência: Juízo SINGULAR (STF Súmula 603 — agora
+   controversa após decisão de 2018)
+   → OBS: O STF em 2018 (HC 133.987) sinalizou possível
+   revisão da Súmula 603, mas a questão da competência
+   permanece discutida; para provas: latrocínio → Juízo Singular
+   (posição dominante STF — Súmula 603)
+
+CENÁRIO B — Morte foi acidente culposo no roubo:
+→ Dolo de roubar + CULPA para a morte (ao menos culposa)
+→ Art. 19 CP satisfeito (ao menos culposamente)
+→ LATROCÍNIO (art. 157, §3.º, in fine) — pena idêntica
+→ Art. 19 CP: mesmo a morte culposa qualifica → latrocínio ✅</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 12. JURISPRUDÊNCIA STF/STJ -->
+<section class="section" id="jurisprudencia">
+  <div class="section-header">
+    <div class="section-num">12</div>
+    <div class="section-title"><span>STF · STJ · Súmulas · Teses</span>Jurisprudência sobre o Art. 19 CP</div>
+  </div>
+
+  <div class="juris-grid">
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Art. 19 CP — Vedação da Responsabilidade Objetiva nos Crimes Qualificados pelo Resultado</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ aplica sistematicamente o art. 19 CP para vedar a responsabilidade penal objetiva nos crimes qualificados pelo resultado. Quando o resultado agravador é causado sem ao menos culpa (resultado imprevisível), o agente responde apenas pelo crime base doloso — sem a qualificação. O STJ exige nexo subjetivo (ao menos culposo) entre a conduta dolosa e o resultado mais grave; o nexo causal puro não é suficiente para a agravação.</p>
+        <p class="mt1">Em recursos especiais de dosimetria e tipificação, o STJ analisa se o resultado agravador era previsível nas circunstâncias concretas. A ausência de previsibilidade objetiva → sem culpa → art. 19 CP afasta a qualificação → agente responde pelo tipo base. Esta posição protege o princípio da culpabilidade constitucionalmente assegurado.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Art. 19 CP — Nexo Subjetivo Mínimo</span>
+          <span class="tag tag-gold">Vedação Resp. Objetiva</span>
+          <span class="tag tag-blue">Culpabilidade — CF/88</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Lesão Corporal Seguida de Morte × Homicídio Doloso — Critério do Elemento Subjetivo em Relação à Morte</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ firma o critério definitivo: a distinção entre lesão corporal seguida de morte (art. 129, §3.º CP — preterdolo → juízo singular) e homicídio doloso (art. 121 CP → Tribunal do Júri) depende do <strong>elemento subjetivo em relação à morte</strong>. Se há dolo (direto ou eventual) em relação à morte → homicídio doloso → Júri. Se há apenas culpa para a morte → preterdolo → juízo singular.</p>
+        <p class="mt1">O STJ analisa os critérios objetivos para inferir o animus necandi: instrumento usado (arma vs. soco), região atingida (regiões vitais vs. extremidades), intensidade da agressão (múltiplos golpes vs. golpe único). O simples fato de a morte ter ocorrido não demonstra, por si só, o dolo de matar — é necessária prova adicional do elemento subjetivo de homicídio.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Lesão + Morte Culposa → Art. 129, §3.º → Singular</span>
+          <span class="tag tag-gold">Dolo de Matar → Art. 121 → Júri</span>
+          <span class="tag tag-blue">Animus necandi — Critérios Objetivos</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <span class="juris-badge sumula">Súmula 603</span>
+        <div class="juris-title">Latrocínio — Competência do Juízo Singular (Não do Tribunal do Júri)</div>
+      </div>
+      <div class="juris-body">
+        <p>A <strong>Súmula 603 do STF</strong> enuncia: <em>"A competência para o processo e julgamento de latrocínio é do juiz singular e não do Tribunal do Júri."</em> O fundamento é que o latrocínio (art. 157, §3.º, in fine CP) é crime complexo contra o patrimônio — a morte é resultado agravador do roubo, não o objeto jurídico primário. Como crime patrimonial (não "crime doloso contra a vida" no sentido estrito do art. 5.º, XXXVIII, CF/88), a competência é do juízo singular.</p>
+        <p class="mt1"><strong>Atenção — evolução jurisprudencial:</strong> Em 2018, o STF no julgamento do HC 133.987 (caso diferente do latrocínio stricto sensu) sinalizou possível revisão da competência quando a morte é dolosa no latrocínio. O STF ainda não cancelou formalmente a Súmula 603, mas há debate sobre sua manutenção. <strong>Para provas:</strong> mantenha a Súmula 603 (latrocínio → juízo singular) como posição dominante, mas mencione o debate se a questão for dissertativa.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Súmula 603/STF — Latrocínio → Juízo Singular</span>
+          <span class="tag tag-gold">Crime Patrimonial Complexo</span>
+          <span class="tag tag-blue">Não é Crime Doloso Contra a Vida (STF)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Proibição da Responsabilidade Penal Objetiva — Fundamento Constitucional do Art. 19 CP</div>
+      </div>
+      <div class="juris-body">
+        <p>O STF reconhece que o art. 19 CP é concretização infraconstitucional do <strong>princípio da culpabilidade</strong> — derivado da dignidade da pessoa humana (art. 1.º, III, CF/88) e do due process of law (art. 5.º, LIV, CF/88). Punir alguém por resultado agravador sem ao menos culpa seria responsabilidade objetiva — inconstitucional. O STF tem revertido condenações que imputaram resultados qualificadores sem nexo subjetivo demonstrado.</p>
+        <p class="mt1">O STF enfatiza que a exigência do art. 19 CP ("ao menos culposamente") não é mera formalidade — é a barreira constitucional que impede que o direito penal se transforme em responsabilidade pelo resultado puro. Em crimes empresariais e ambientais com resultados agravados, o STF exige individualização do nexo subjetivo de cada agente em relação ao resultado qualificador.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Princípio da Culpabilidade — CF/88</span>
+          <span class="tag tag-gold">Art. 1.º, III + Art. 5.º, LIV, CF/88</span>
+          <span class="tag tag-blue">Art. 19 CP — Barreira Constitucional</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Rixa com Resultado Morte (Art. 137, §único CP) — Todos os Participantes Respondem</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ consolidou que em crime de rixa com resultado morte ou lesão grave (art. 137, §único CP), <strong>todos os participantes da rixa respondem pelo §único</strong>, mesmo que não identificado o autor específico do golpe fatal — desde que tenham contribuído para a situação de violência que produziu o resultado. O fundamento é que todos, ao participar dolosamente da rixa, criaram o risco do resultado mais grave, que era objetivamente previsível (culpa) dado o contexto de violência coletiva.</p>
+        <p class="mt1">O STJ aplica aqui o art. 19 CP: cada participante da rixa causou o resultado morte "ao menos culposamente" — pois era previsível, na situação de rixa, que alguém poderia morrer. A previsibilidade objetiva configura a culpa exigida pelo art. 19 CP para imputar o qualificador a todos os participantes.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Rixa — Todos Respondem pelo §único</span>
+          <span class="tag tag-gold">Previsibilidade = Culpa — Art. 19 CP</span>
+          <span class="tag tag-blue">Art. 137, §único CP</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Concurso de Pessoas em Crime Preterdoloso — Art. 19 CP e Individualização</div>
+      </div>
+      <div class="juris-body">
+        <p>Em casos de concurso de pessoas em crime preterdoloso, o STJ aplica o art. 19 CP de forma individualizada: cada coautor só responde pelo resultado agravador se o causou "ao menos culposamente". Não basta a participação no crime base; é necessário que o coautor tenha contribuído para o resultado mais grave com ao menos culpa.</p>
+        <p class="mt1">Exemplo relevante: dois agentes brigam com a vítima; um desfere o golpe fatal; o outro apenas participou da agressão inicial. O STJ analisa o nexo subjetivo de cada um em relação ao resultado morte — o agente que não desferiu o golpe fatal pode não responder pelo §3.º se a morte era imprevisível a partir de sua conduta específica. Individualização do nexo subjetivo é fundamental para aplicar o art. 19 CP em concurso de pessoas.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Concurso de Pessoas — Individualização</span>
+          <span class="tag tag-gold">Nexo Subjetivo Individual — Art. 19 CP</span>
+          <span class="tag tag-blue">Coautoria × Resultado Agravador</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 13. DOUTRINA -->
+<section class="section" id="doutrina">
+  <div class="section-header">
+    <div class="section-num">13</div>
+    <div class="section-title"><span>Doutrina Nacional</span>Principais Posições sobre o Art. 19 CP</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cleber Masson — Direito Penal Esquematizado</div>
+      </div>
+      <div class="juris-body">
+        <p>Masson sistematiza o art. 19 CP como o dispositivo que concretiza a vedação à responsabilidade penal objetiva nos crimes qualificados pelo resultado. Distingue claramente: (a) crimes preterdolosos — dolo no antecedente, culpa no consequente; (b) crimes dolosos qualificados pelo resultado — dolo em ambas as partes; (c) crimes culposos qualificados — culpa em toda a conduta. Para o art. 19 CP, o mínimo exigido é a culpa — sem ela, o resultado agravador não pode ser imputado. Analisa detidamente o caso da hemofilia: condição desconhecida → imprevisível → sem culpa → art. 19 CP afasta a qualificação → apenas crime base. Quanto ao latrocínio, Masson aplica a Súmula 603/STF (juízo singular) e registra o debate sobre eventual revisão.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cezar Roberto Bitencourt — Tratado de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Bitencourt apresenta o art. 19 CP com profundidade histórica: antes do CP de 1940, os crimes qualificados pelo resultado eram imputados objetivamente — bastava o nexo causal para a agravação. O art. 19 CP corrigiu essa injustiça ao exigir nexo subjetivo mínimo. Bitencourt critica a insuficiência do critério "ao menos culposamente" — defende que, para crimes graves, deveria ser exigido pelo menos culpa consciente (não apenas culpa inconsciente) para o resultado agravador. Na rixa qualificada (art. 137, §único CP), Bitencourt discorda do STJ: defende que só responde pelo §único quem concretamente causou o resultado morte — não todos os participantes da rixa. Esta é a posição garantista, não adotada pelo STJ.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Rogério Greco — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Greco analisa o art. 19 CP sob perspectiva constitucional: o dispositivo é expressão do princípio da culpabilidade — <em>nulla poena sine culpa</em> — que proíbe o direito penal do resultado puro. Para Greco, o art. 19 CP deve ser interpretado de forma a garantir que o resultado agravador só seja imputado quando o agente, objetivamente, poderia ter previsto e evitado o resultado mais grave. A imprevisibilidade absoluta exclui a culpa e, consequentemente, a imputação do qualificador. Quanto à rixa qualificada, Greco adota posição próxima à de Bitencourt (garantista) — a rixa deveria ser analisada de forma individualizada quanto ao resultado agravador. Quanto ao latrocínio, Greco destaca a tensão entre a Súmula 603/STF e o art. 5.º, XXXVIII, CF/88 quando a morte é dolosa.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Guilherme de Souza Nucci — Código Penal Comentado</div>
+      </div>
+      <div class="juris-body">
+        <p>Nucci comenta o art. 19 CP com foco forense e na aplicação pelo juiz. Destaca a importância prática do dispositivo: o juiz, na sentença, deve verificar se há nexo subjetivo entre a conduta e o resultado agravador — não basta o nexo causal para a tipificação qualificada. Na ausência de nexo subjetivo, o juiz deve condenar apenas pelo crime base doloso, sem a qualificação. Nucci é detalhado na análise da previsibilidade: o critério do "homem médio" deve ser aplicado às circunstâncias concretas — o que era previsível para o homem médio naquela situação, não em abstrato. Adota a Súmula 603/STF para o latrocínio, mas reconhece o debate doutrinário crescente sobre a competência do Júri quando a morte é dolosa.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Fernando Capez — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Capez apresenta o art. 19 CP de forma didática, com ênfase em concursos. Sistematiza a regra com clareza: resultado agravador → ao menos culposamente → sim, qualifica; não, apenas crime base. Aplica o critério da previsibilidade objetiva para verificar a culpa: resultado previsível pelo homem médio → culpa (inconsciente ou consciente) → art. 19 CP satisfeito; resultado imprevisível → sem culpa → apenas crime base. Analisa o preterdolo como a principal manifestação do art. 19 CP: dolo no antecedente + culpa no consequente = crime qualificado preterdoloso. Para o latrocínio, adota a Súmula 603/STF. Para a rixa qualificada, adota a posição majoritária (STJ) de que todos os participantes respondem pelo §único.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Controvérsia: Rixa Qualificada — Todos Respondem ou Só Quem Causou o Resultado?</div>
+      </div>
+      <div class="juris-body">
+        <p>O principal debate doutrinário sobre o art. 19 CP no contexto da rixa:</p>
+        <ul class="mt1">
+          <li><strong>Posição A — Todos os participantes (STJ, Masson, Nucci, Capez):</strong> Todos os que participaram da rixa responderm pelo §único (morte/lesão grave), pois a previsibilidade do resultado era objetiva para todos — o art. 19 CP é satisfeito pela culpa coletiva implícita na participação dolosa em rixa violenta.</li>
+          <li><strong>Posição B — Só quem causou o resultado (Bitencourt, Greco):</strong> O art. 19 CP exige que cada agente individualmente tenha causado o resultado "ao menos culposamente". Sem identificação do autor do golpe fatal → não há como imputar o resultado agravador ao participante que não o causou. Posição garantista e mais fiel ao texto do art. 19 CP.</li>
+          <li><strong>Para o concurso:</strong> Adote a Posição A (STJ majorit ário). Registre a controvérsia doutrinária em questões dissertativas. A posição do STJ — todos respondem pelo §único — está consolidada.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 14. SISTEMÁTICA -->
+<section class="section" id="sistematica">
+  <div class="section-header">
+    <div class="section-num">14</div>
+    <div class="section-title"><span>Conexões Sistemáticas</span>Art. 19 CP na Sistemática do Código Penal</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔗 Artigos Diretamente Conectados ao Art. 19 CP</h3>
+      <ul>
+        <li><strong>Art. 13 CP (Nexo causal):</strong> O nexo causal é pressuposto do art. 19 — sem nexo causal entre a conduta e o resultado agravador, nem o art. 19 se aplica. O art. 13 trata do nexo fático; o art. 19 exige o nexo normativo-subjetivo adicional</li>
+        <li><strong>Art. 18, II CP (Culpa):</strong> O "ao menos culposamente" do art. 19 remete diretamente à culpa do art. 18, II CP — imprudência, negligência ou imperícia. A culpa exigida pelo art. 19 é a culpa do art. 18, II</li>
+        <li><strong>Art. 20 CP (Erro de tipo):</strong> O erro de tipo exclui o dolo — e, se invencível, pode excluir também a culpa. Se o agente estava em erro invencível sobre circunstâncias que tornariam o resultado agravador previsível → sem culpa → art. 19 CP afasta a qualificação</li>
+        <li><strong>Art. 29 CP (Concurso de pessoas):</strong> Em concurso, cada coautor/partícipe responde pelo resultado agravador apenas se o causou ao menos culposamente — individualização do nexo subjetivo conforme o art. 19 CP</li>
+        <li><strong>Art. 121, §3.º CP (Homicídio culposo):</strong> Art. 19 CP não se aplica ao homicídio culposo — neste, toda a conduta é culposa; o resultado morte é o próprio elemento do tipo culposo, não um agravador de crime base doloso</li>
+        <li><strong>Art. 129, §§1.º, 2.º, 3.º CP (Lesão corporal qualificada):</strong> Principal campo de aplicação do art. 19 CP — os qualificadores de resultado (lesão grave, gravíssima, seguida de morte) exigem nexo subjetivo conforme o art. 19</li>
+        <li><strong>Art. 137, §único CP (Rixa qualificada):</strong> Art. 19 CP aplicável — a morte/lesão grave na rixa só é imputada ao participante que a causou ao menos culposamente</li>
+        <li><strong>Art. 157, §3.º CP (Latrocínio):</strong> Art. 19 CP aplicável ao latrocínio — a morte só agrava o roubo se causada ao menos culposamente</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📋 Art. 19 CP × Crimes Ambientais e Empresariais</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">O art. 19 CP tem crescente aplicação em crimes ambientais (Lei 9.605/98) e crimes empresariais, especialmente para afastar a responsabilidade objetiva:</p>
+      <ul style="font-size:0.83rem;">
+        <li><strong>Crimes ambientais qualificados:</strong> A Lei 9.605/98 prevê formas qualificadas pelo resultado (ex.: crime ambiental com resultado morte de animais — art. 29, §4.º). O art. 19 CP, via art. 12 CP, veda a imputação objetiva do resultado qualificador</li>
+        <li><strong>Responsabilidade do dirigente empresarial:</strong> O STJ aplica o art. 19 CP para vedar a responsabilidade objetiva do diretor/gestor pelo resultado agravado ocorrido na empresa — é necessária prova individual do nexo subjetivo (ao menos culposo) de cada dirigente</li>
+        <li><strong>Crimes previdenciários qualificados:</strong> Em crimes de apropriação indébita previdenciária (art. 168-A CP) com resultado grave, o art. 19 CP exige nexo subjetivo mínimo para o resultado agravador</li>
+      </ul>
+      <div class="alert alert-navy mt2" style="font-size:0.8rem;">
+        <div>📌 <strong>Art. 12 CP (Subsidiariedade):</strong> O art. 19 CP, como regra geral da Parte Geral do CP, aplica-se a todas as leis penais especiais que prevejam crimes qualificados pelo resultado, salvo disposição expressa em contrário (art. 12 CP). A vedação à responsabilidade objetiva do art. 19 CP é de aplicação geral no sistema penal brasileiro.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-3 mt2">
+    <div class="card">
+      <h3>⚡ Art. 19 CP e a Dosimetria</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">A verificação do art. 19 CP é prévia à dosimetria — ocorre na fase de <strong>tipificação</strong>:</p>
+      <ul class="mt1" style="font-size:0.84rem;">
+        <li><strong>Sem nexo subjetivo para o resultado agravador:</strong> O tipo qualificado não se aplica → o juiz tipifica no crime base → a dosimetria recai sobre o tipo simples</li>
+        <li><strong>Com nexo subjetivo (ao menos culposo):</strong> O tipo qualificado se aplica → a dosimetria recai sobre o tipo qualificado (com pena autônoma mais grave)</li>
+        <li><strong>A intensidade da culpa:</strong> Culpa consciente ou inconsciente para o resultado agravador pode ser valorada nas circunstâncias judiciais do art. 59 CP (intensidade do dolo ou culpa) dentro do tipo qualificado</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🔄 Resumo Mnemônico para Prova</h3>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.82rem;line-height:1.85;">
+        <p><strong style="color:var(--gold-light);">Art. 19 CP — Regra Central:</strong><br>
+        Resultado agravador = ao menos CULPOSO<br>
+        Culpa → qualifica | Sem culpa → só crime base</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.5rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Preterdolo:</strong><br>
+        Dolo (base) + Culpa (resultado) = Tipo qualificado<br>
+        → Juízo Singular<br>
+        → Ex.: Lesão seguida de morte (art. 129, §3.º)</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.5rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Vedação expressa:</strong><br>
+        Nexo causal puro ≠ Nexo subjetivo<br>
+        Art. 19 CP proíbe Resp. Objetiva</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.5rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Latrocínio:</strong><br>
+        Súmula 603 STF → Juízo Singular<br>
+        (não Tribunal do Júri)</p>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📅 Art. 19 CP e o Processo Penal</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">Impactos processuais do art. 19 CP:</p>
+      <ul class="mt1" style="font-size:0.84rem;">
+        <li><strong>Denúncia:</strong> O MP deve narrar o nexo subjetivo (ao menos culposo) do resultado agravador para fundamentar a denúncia pelo tipo qualificado</li>
+        <li><strong>Instrução probatória:</strong> A prova do nexo subjetivo para o resultado agravador é ônus do MP — sem prova → absolvição pelo tipo qualificado, condenação pelo tipo base</li>
+        <li><strong>Sentença:</strong> O juiz deve fundamentar por que reconhece (ou não) o nexo subjetivo para o resultado agravador — omissão gera nulidade</li>
+        <li><strong>Recurso especial:</strong> Discussão sobre art. 19 CP é questão de direito — admite recurso especial para revisão da tipificação pelo STJ</li>
+        <li><strong>Habeas corpus:</strong> A imputação objetiva do resultado agravador configura ilegalidade corrigível por HC</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROVA / ENAM -->
+<section id="prova" class="prova-section">
+  <h2>⚖️ Pontos Cobrados em Magistratura e ENAM</h2>
+  <p class="intro">Questões, teses e pegadinhas recorrentes nos concursos de Juiz de Direito, ENAM e equivalentes relacionadas ao Art. 19 CP.</p>
+
+  <div class="prova-items">
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">01</span>O que estabelece o art. 19 CP? Qual sua função no sistema penal brasileiro?</div>
+      <div class="prova-item-a">O art. 19 CP estabelece que <strong>"pelo resultado que agrava especialmente a pena, só responde o agente que o houver causado ao menos culposamente."</strong> Sua função é <strong>vedar expressamente a responsabilidade penal objetiva</strong> nos crimes qualificados pelo resultado — proibindo que o resultado mais grave seja imputado ao agente pelo simples nexo causal, sem ao menos culpa. Antes do CP de 1940, os crimes qualificados pelo resultado eram imputados objetivamente — bastava o nexo causal para a agravação. O art. 19 CP corrigiu essa injustiça, exigindo nexo subjetivo mínimo (culpa) em relação ao resultado agravador. É a concretização infraconstitucional do princípio da culpabilidade (<em>nulla poena sine culpa</em>), derivado da dignidade da pessoa humana (art. 1.º, III, CF/88).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">02</span>O que é crime preterdoloso? Explique sua estrutura com exemplo.</div>
+      <div class="prova-item-a">Crime preterdoloso (preterintencional) é aquele em que há <strong>dolo no antecedente</strong> (o agente queria o crime base) e <strong>culpa no consequente</strong> (o resultado mais grave foi causado por culpa, não por dolo). Estrutura: Dolo (crime base) + Culpa (resultado agravador) = Tipo qualificado preterdoloso. <strong>Exemplo paradigmático:</strong> Lesão corporal seguida de morte (art. 129, §3.º CP) — A desfere soco em B com intenção de lesionar (dolo de lesionar); B cai, bate a cabeça e morre de hemorragia cerebral (culpa para a morte — era previsível). A não queria e não aceitou o risco de matar — houve culpa para o resultado morte. Consequências: o crime é o tipo qualificado preterdoloso (não homicídio doloso); competência é do juízo singular (não do Júri, pois a morte foi culposa); pena de 4 a 12 anos (reclusão). Se houvesse dolo eventual para a morte → homicídio doloso → Tribunal do Júri.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">03</span>Qual a diferença entre lesão corporal seguida de morte (art. 129, §3.º CP) e homicídio doloso (art. 121 CP)? Qual a consequência para a competência?</div>
+      <div class="prova-item-a">O critério é o <strong>elemento subjetivo em relação à morte</strong>. <strong>Lesão corporal seguida de morte (art. 129, §3.º CP — preterdolo):</strong> Dolo de lesionar + Culpa para a morte. O agente não quis matar e não aceitou o risco de matar; a morte ocorreu por culpa (previsível mas não desejada). Competência: Juízo Singular. Pena: 4 a 12 anos. <strong>Homicídio doloso (art. 121 CP):</strong> Dolo de matar — direto (quis a morte) ou eventual (aceitou o risco de matar). Competência: Tribunal do Júri (art. 5.º, XXXVIII, CF/88). Pena: 6 a 20 anos (simples). O STJ usa critérios objetivos para inferir o dolo de matar: instrumento (arma → infere dolo), região atingida (área vital → infere dolo), intensidade da agressão. Sem prova de dolo de matar → presume-se preterdolo → juízo singular.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">04</span>Se o resultado agravador era imprevisível (caso fortuito), o agente responde pelo crime qualificado?</div>
+      <div class="prova-item-a"><strong>Não.</strong> O art. 19 CP exige que o resultado agravador tenha sido causado "ao menos culposamente" — sem culpa (culpa = violação do dever de cuidado + previsibilidade objetiva), não há imputação do qualificador. Se o resultado era absolutamente imprevisível para o homem médio nas mesmas circunstâncias (caso fortuito), não há culpa → sem nexo subjetivo → o art. 19 CP afasta a qualificação → agente responde apenas pelo crime base doloso. Exemplo: A dá tapa leve em B; B morre por aneurisma cerebral congênito absolutamente desconhecido e imprevisível → morte imprevisível → sem culpa → art. 19 CP → A responde por lesão corporal simples (art. 129, caput CP), não por lesão seguida de morte. Esta é a principal aplicação prática do art. 19 CP: proteger o agente do resultado puramente fortuito.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">05</span>O "ao menos culposamente" do art. 19 CP exige culpa consciente ou basta culpa inconsciente?</div>
+      <div class="prova-item-a">O art. 19 CP exige "<strong>ao menos culposamente</strong>" — o que significa que qualquer espécie de culpa é suficiente para a imputação do resultado agravador. <strong>Culpa inconsciente</strong> (o agente não previu, mas o resultado era objetivamente previsível) é suficiente. <strong>Culpa consciente</strong> (o agente previu mas confiou que não ocorreria) também é suficiente. O "ao menos" indica o mínimo exigido — e esse mínimo é a culpa, seja ela consciente ou inconsciente. <strong>Acima do mínimo:</strong> se o agente agiu com dolo (direto ou eventual) em relação ao resultado agravador, o art. 19 CP também é satisfeito — o dolo supera o mínimo exigido. <strong>Abaixo do mínimo:</strong> resultado puramente fortuito (caso fortuito — imprevisível para o homem médio) → sem culpa → art. 19 CP afasta a qualificação.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">06</span>Qual a competência para julgamento do latrocínio? Explique a Súmula 603 STF e seu estado atual.</div>
+      <div class="prova-item-a">A <strong>Súmula 603 do STF</strong> estabelece que a competência para processo e julgamento do latrocínio é do <strong>juízo singular</strong> — não do Tribunal do Júri. O fundamento é que o latrocínio (art. 157, §3.º, in fine CP) é crime complexo contra o patrimônio, no qual a morte é resultado agravador; não é "crime doloso contra a vida" em sentido estrito (crime cujo objeto jurídico primário é a vida). Assim, o art. 5.º, XXXVIII, CF/88 (que garante o Júri para crimes dolosos contra a vida) não se aplica. <strong>Estado atual:</strong> Em 2018, o STF no HC 133.987 sinalizou possível revisão quando a morte é dolosa no latrocínio, mas não cancelou formalmente a Súmula 603. Para provas: <strong>mantenha a Súmula 603</strong> como posição dominante (latrocínio → juízo singular), mencionando o debate se a questão for dissertativa.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">07</span>Na rixa com resultado morte (art. 137, §único CP), todos os participantes respondem pelo §único mesmo sem identificação do autor do golpe fatal?</div>
+      <div class="prova-item-a"><strong>Sim, segundo o STJ e a doutrina majoritária.</strong> Todos os participantes da rixa respondem pelo §único quando há resultado morte ou lesão grave, mesmo sem identificação do autor específico do golpe fatal. O fundamento é o art. 19 CP: todos os participantes causaram o resultado "ao menos culposamente" — ao participar dolosamente da rixa, cada um criou e contribuiu para o risco de resultado grave, que era objetivamente previsível (culpa). A previsibilidade objetiva do resultado grave em contexto de rixa violenta satisfaz o "ao menos culposamente" exigido pelo art. 19 CP para todos. <strong>Posição garantista (Bitencourt, Greco):</strong> Só deveria responder pelo §único quem concretamente causou o resultado morte — mas esta posição não foi adotada pelo STJ. <strong>Para o concurso:</strong> Adote a posição do STJ — todos os participantes respondem pelo §único.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">08</span>A responsabilidade penal objetiva é admitida no Brasil? Qual a relação com o art. 19 CP?</div>
+      <div class="prova-item-a"><strong>Não.</strong> A responsabilidade penal objetiva (punição com base no nexo causal, sem dolo ou culpa) é vedada no ordenamento brasileiro pelo princípio constitucional da culpabilidade — <em>nulla poena sine culpa</em> — derivado da dignidade da pessoa humana (art. 1.º, III, CF/88) e do due process of law (art. 5.º, LIV, CF/88). O <strong>art. 19 CP</strong> é a vedação legislativa mais explícita a essa proibição no âmbito dos crimes qualificados pelo resultado: ao exigir "ao menos culposamente" para a imputação do resultado agravador, o art. 19 CP proíbe que o resultado mais grave seja imputado pelo simples nexo causal. Complementa o art. 18 CP (que exige dolo ou culpa para o crime base) e o art. 13 CP (que define o nexo causal): sem nexo subjetivo mínimo (ao menos culpa) para o resultado agravador → sem qualificação → sem responsabilidade objetiva.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">09</span>[ENAM — alta recorrência] A desfere socos em B com dolo de lesionar. B morre. Analise: (a) se a morte era previsível; (b) se A aceitou o risco de matar. Qual o crime em cada caso e a competência?</div>
+      <div class="prova-item-a"><strong>(a) Morte previsível + A não aceitou o risco de matar (culpa):</strong> A tinha dolo de lesionar + culpa para a morte (resultado previsível mas não desejado) → <strong>Preterdolo → Lesão corporal seguida de morte (art. 129, §3.º CP)</strong> → art. 19 CP satisfeito (ao menos culposamente) → Pena: 4 a 12 anos → Competência: <strong>Juízo Singular</strong> (morte foi culposa). <strong>(b) A aceitou o risco de matar (dolo eventual):</strong> A tinha dolo de lesionar e ACEITOU o risco de matar ("tanto faz") → dolo eventual de homicídio → <strong>Homicídio doloso (art. 121 CP)</strong> → art. 19 CP satisfeito (dolo > culpa) → Pena: 6 a 20 anos (simples) → Competência: <strong>Tribunal do Júri</strong> (crime doloso contra a vida — art. 5.º, XXXVIII, CF/88). <strong>Adicionalmente:</strong> se a morte fosse absolutamente imprevisível (ex.: aneurisma desconhecido) → sem culpa → art. 19 CP afasta qualificação → A: lesão corporal simples (art. 129, caput CP) → Juízo Singular → pena: 3 meses a 1 ano.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">10</span>Em concurso de pessoas, o art. 19 CP é aplicado de forma individual ou coletiva?</div>
+      <div class="prova-item-a"><strong>Individual</strong> — o art. 19 CP é aplicado de forma individualizada a cada coautor ou partícipe. Cada agente só responde pelo resultado agravador se o causou "ao menos culposamente". O STJ, em consonância com o art. 29 CP (que prevê responsabilidade individual no concurso de pessoas), exige que se verifique o nexo subjetivo de cada coautor em relação ao resultado mais grave. Exemplo: A e B batem na vítima; A desfere o golpe fatal (morte era previsível para A); B apenas participou da agressão inicial sem que a morte fosse previsível a partir de sua conduta específica. Resultado: A responde pelo tipo qualificado (art. 129, §3.º CP + art. 19 CP satisfeito); B pode responder apenas pelo crime base (art. 129, caput CP) se a morte era imprevisível para ele. A individualização do nexo subjetivo pelo art. 19 CP em concurso de pessoas é ponto fundamental de magistratura.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">11</span>O crime de lesão corporal seguida de morte (art. 129, §3.º CP) é sempre um crime preterdoloso?</div>
+      <div class="prova-item-a"><strong>Em regra sim, mas não necessariamente.</strong> O tipo do art. 129, §3.º CP admite duas configurações: <strong>(a) Preterdolosa (estrutura clássica):</strong> Dolo de lesionar + Culpa para a morte. O agente quis lesionar, não quis matar, e a morte ocorreu por culpa. É a forma mais comum e a que a doutrina e a jurisprudência tratam como regra. <strong>(b) Dolosa qualificada pelo resultado (estrutura alternativa — rara):</strong> Dolo de lesionar + Dolo para a morte? Nesse caso, se há dolo de matar, o crime deixa de ser art. 129, §3.º e passa a ser homicídio doloso (art. 121 CP), pois o elemento subjetivo em relação à morte é o critério que distingue os tipos. Logo, na prática, o art. 129, §3.º CP é quase sempre preterdoloso — quando há dolo de matar, o tipo é o homicídio doloso, não a lesão seguida de morte. O que o art. 19 CP exige é que a morte tenha sido causada "ao menos culposamente" — e o §3.º é o tipo que prevê essa configuração.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">12</span>A hemofilia desconhecida afasta a qualificação do resultado morte no crime de lesão corporal?</div>
+      <div class="prova-item-a"><strong>Sim, segundo a doutrina majoritária e o art. 19 CP.</strong> Se o agente desconhecia a hemofilia da vítima e a morte ocorreu por hemorragia decorrente dessa condição genética, o resultado morte era <strong>objetivamente imprevisível</strong> para o homem médio nas mesmas circunstâncias (sem conhecimento da hemofilia). Sem previsibilidade objetiva → sem culpa → art. 19 CP afasta a qualificação → agente responde apenas por lesão corporal simples (art. 129, caput CP). <strong>Se o agente sabia da hemofilia:</strong> a morte era previsível (ou até certa) → culpa consciente ou dolo eventual → art. 19 CP satisfeito → lesão seguida de morte (§3.º) ou homicídio doloso, conforme o elemento subjetivo. O art. 13, caput CP (equivalência das condições) mantém o nexo causal em ambos os casos — a questão é o nexo subjetivo (previsibilidade para fins do art. 19 CP), não o nexo fático.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">13</span>[ENAM — questão integrada] Explique como o art. 19 CP articula-se com os arts. 13 e 18 do CP para compor o sistema de imputação penal.</div>
+      <div class="prova-item-a">Os três artigos formam o sistema de imputação penal no CP brasileiro: <strong>Art. 13 CP (nexo causal — pressuposto fático):</strong> Define que o resultado só é imputável a quem lhe deu causa (conditio sine qua non). Sem nexo causal → sem imputação alguma. <strong>Art. 18 CP (nexo subjetivo — dolo ou culpa para o crime base):</strong> Exige dolo ou culpa para a imputação do crime. Sem dolo ou culpa → sem crime (responsabilidade objetiva vedada). Art. 18 define o elemento subjetivo do crime base. <strong>Art. 19 CP (nexo subjetivo mínimo para o resultado agravador):</strong> Para crimes qualificados pelo resultado, exige-se ao menos culpa em relação ao resultado mais grave — além do nexo causal (art. 13) e do dolo no crime base (art. 18). Sem ao menos culpa para o resultado agravador → qualificador não imputado. <strong>Síntese do sistema:</strong> Nexo causal (art. 13) + Dolo/culpa crime base (art. 18) + Ao menos culpa resultado agravador (art. 19) = Crime qualificado pelo resultado. Faltando qualquer elemento: reduz-se para o crime base ou afasta-se totalmente a imputação. Este sistema trifásico materializa a proibição constitucional da responsabilidade objetiva.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">14</span>A lesão corporal seguida de morte é julgada pelo Tribunal do Júri? E se o agente tinha dolo eventual de matar?</div>
+      <div class="prova-item-a"><strong>Regra — Juízo Singular:</strong> A lesão corporal seguida de morte (art. 129, §3.º CP — preterdolo) é julgada pelo <strong>Juízo Singular</strong>, não pelo Tribunal do Júri. O fundamento é que a morte foi culposa — o crime não é "doloso contra a vida" (art. 5.º, XXXVIII, CF/88). O Tribunal do Júri tem competência para crimes dolosos contra a vida (art. 5.º, XXXVIII, d, CF/88 c/c art. 74, §1.º, CPP) — e o preterdolo não é crime doloso contra a vida (a morte foi culposa). <strong>Se o agente tinha dolo eventual de matar:</strong> O crime deixa de ser lesão seguida de morte e passa a ser <strong>homicídio doloso</strong> (art. 121 CP) — com dolo eventual. Crime doloso contra a vida → competência do <strong>Tribunal do Júri</strong>. Este é o critério central: a competência depende do elemento subjetivo em relação à morte. Culpa → Juízo Singular. Dolo (direto ou eventual) → Tribunal do Júri.</div>
+    </div>
+
+  </div>
+</section>
+
+</div><!-- /page-wrap -->
+
+<footer>
+  <strong>Art. 19.º do Código Penal Brasileiro</strong> — Decreto-Lei n.º 2.848/1940<br>
+  Material elaborado para preparação à Magistratura / ENAM · Doutrina e jurisprudência consolidadas · Atualizado 2025
+</footer>
+
+</body>
+</html>
