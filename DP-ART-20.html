@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 20º CP — Erro de Tipo | Magistratura ENAM</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0d1b2a;--navy-mid:#1a2f45;--navy-light:#243b55;--gold:#c8960c;--gold-light:#e8b84b;--gold-pale:#fdf3d8;--cream:#faf7f2;--cream-mid:#f0ebe2;--text-dark:#1a1208;--text-mid:#3d3020;--text-soft:#6b5c40;--border:#d4c49a;--border-light:#e8dcbf;--red-accent:#8b1a1a;--green-accent:#1a4a2e;--blue-accent:#1a3a5c;--purple-accent:#4a1a5c;--shadow:0 4px 24px rgba(13,27,42,0.10);}
+  *{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+  body{font-family:'Source Serif 4',Georgia,serif;background:var(--cream);color:var(--text-dark);font-size:15px;line-height:1.75;}
+  #top-nav{position:sticky;top:0;z-index:999;background:var(--navy);border-bottom:3px solid var(--gold);padding:0 1.5rem;display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;}
+  #top-nav::-webkit-scrollbar{display:none;}
+  #top-nav .nav-brand{font-family:'Playfair Display',serif;color:var(--gold-light);font-size:0.9rem;font-weight:700;white-space:nowrap;padding:0.85rem 1.2rem 0.85rem 0;border-right:1px solid rgba(200,150,12,0.3);margin-right:0.5rem;letter-spacing:0.5px;}
+  #top-nav a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.72rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;padding:0.85rem 0.8rem;white-space:nowrap;transition:color .2s;border-bottom:3px solid transparent;margin-bottom:-3px;}
+  #top-nav a:hover{color:var(--gold-light);border-bottom-color:var(--gold);}
+  #hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 60%,#1e3d5c 100%);color:white;padding:3.5rem 2rem 3rem;text-align:center;position:relative;overflow:hidden;}
+  #hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(200,150,12,0.03) 0px,rgba(200,150,12,0.03) 1px,transparent 1px,transparent 40px);}
+  #hero .badge{display:inline-block;background:rgba(200,150,12,0.15);border:1px solid rgba(200,150,12,0.5);color:var(--gold-light);font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;padding:0.35rem 1rem;border-radius:2px;margin-bottom:1.2rem;font-family:'Source Serif 4',serif;font-weight:600;}
+  #hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.15;margin-bottom:0.6rem;letter-spacing:-0.5px;}
+  #hero h1 span{color:var(--gold-light);}
+  #hero .subtitle{font-size:1rem;color:rgba(255,255,255,0.65);font-style:italic;margin-bottom:1.5rem;}
+  #hero .law-box{display:inline-block;background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.4);border-left:4px solid var(--gold);color:rgba(255,255,255,0.9);font-family:'Source Serif 4',serif;font-size:0.9rem;font-style:italic;padding:1rem 1.5rem;max-width:860px;text-align:left;line-height:1.85;border-radius:0 4px 4px 0;}
+  #hero .law-box strong{color:var(--gold-light);font-style:normal;display:block;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem;}
+  .page-wrap{max-width:1100px;margin:0 auto;padding:0 1.5rem 4rem;}
+  .section{margin-top:3.5rem;scroll-margin-top:56px;}
+  .section-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:0.75rem;border-bottom:2px solid var(--border);}
+  .section-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--border);line-height:1;min-width:2.5rem;}
+  .section-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--navy);line-height:1.2;}
+  .section-title span{display:block;font-size:0.75rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-style:normal;}
+  .card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1.4rem 1.6rem;box-shadow:var(--shadow);}
+  .card-grid{display:grid;gap:1rem;}
+  .card-grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
+  .card-grid-2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr));}
+  .card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:0.6rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border-light);}
+  .card p,.card li{font-size:0.88rem;line-height:1.7;color:var(--text-mid);}
+  .card ul{padding-left:1.1rem;}.card li{margin-bottom:0.3rem;}
+  .type-card{border-top:4px solid;}
+  .tc-red{border-top-color:var(--red-accent);}.tc-red h3{color:var(--red-accent);}
+  .tc-green{border-top-color:var(--green-accent);}.tc-green h3{color:var(--green-accent);}
+  .tc-blue{border-top-color:var(--blue-accent);}.tc-blue h3{color:var(--blue-accent);}
+  .tc-gold{border-top-color:var(--gold);}.tc-gold h3{color:#7a5a00;}
+  .tc-purple{border-top-color:var(--purple-accent);}.tc-purple h3{color:var(--purple-accent);}
+  .flow-wrap{background:white;border:1px solid var(--border-light);border-radius:6px;padding:2rem 1.5rem;box-shadow:var(--shadow);overflow-x:auto;}
+  .flow-center{display:flex;flex-direction:column;align-items:center;}
+  .flow-node{border-radius:4px;padding:0.65rem 1.4rem;font-family:'Source Serif 4',serif;font-size:0.82rem;font-weight:600;text-align:center;min-width:220px;max-width:580px;}
+  .flow-start{background:var(--navy);color:white;border-radius:50px;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;}
+  .flow-end-green{background:var(--green-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+  .flow-end-red{background:var(--red-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+  .flow-end-gold{background:var(--gold);color:var(--navy);border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+  .flow-end-blue{background:var(--blue-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+  .flow-end-purple{background:var(--purple-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+  .flow-box-navy{background:var(--navy-mid);color:white;border-left:4px solid var(--gold);font-size:0.8rem;}
+  .flow-box-green{background:#edf7f0;border:1px solid #7ec89a;border-left:4px solid var(--green-accent);color:var(--text-dark);}
+  .flow-box-blue{background:#edf2f8;border:1px solid #8eb4d8;border-left:4px solid var(--blue-accent);color:var(--text-dark);}
+  .flow-box-red{background:#fdf0f0;border:1px solid #e09090;border-left:4px solid var(--red-accent);color:var(--text-dark);}
+  .flow-box-gold{background:var(--gold-pale);border:2px solid var(--gold);color:var(--text-dark);}
+  .flow-box-purple{background:#f3eef8;border:1px solid #b89dd8;border-left:4px solid var(--purple-accent);color:var(--text-dark);}
+  .flow-arrow{font-size:1.3rem;color:var(--border);line-height:1;margin:0.15rem 0;}
+  .flow-row{display:flex;align-items:flex-start;gap:1.5rem;width:100%;justify-content:center;flex-wrap:wrap;}
+  .flow-branch{display:flex;flex-direction:column;align-items:center;flex:1;min-width:175px;}
+  .flow-label{font-size:0.68rem;color:var(--text-soft);font-weight:600;letter-spacing:0.5px;text-transform:uppercase;background:var(--cream-mid);padding:0.15rem 0.5rem;border-radius:2px;margin:0.15rem 0;}
+  .flow-connector-line{width:1px;height:28px;background:var(--border);}
+  .comp-table{width:100%;border-collapse:collapse;font-size:0.84rem;background:white;box-shadow:var(--shadow);border-radius:6px;overflow:hidden;}
+  .comp-table thead{background:var(--navy);color:white;}
+  .comp-table thead th{padding:0.85rem 1rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:0.5px;font-size:0.8rem;text-align:left;}
+  .comp-table thead th:first-child{color:var(--gold-light);}
+  .comp-table tbody tr{border-bottom:1px solid var(--border-light);}
+  .comp-table tbody tr:last-child{border-bottom:none;}
+  .comp-table tbody tr:nth-child(even){background:var(--cream);}
+  .comp-table td{padding:0.75rem 1rem;color:var(--text-mid);vertical-align:top;}
+  .comp-table td:first-child{font-weight:600;color:var(--navy);font-size:0.8rem;}
+  .comp-table .hl td{background:var(--gold-pale)!important;}
+  .comp-table .hl2 td{background:#edf7f0!important;}
+  .comp-table .hl3 td{background:#edf2f8!important;}
+  .comp-table .hl4 td{background:#fdf0f0!important;}
+  .comp-table .hl5 td{background:#f3eef8!important;}
+  .juris-card{background:white;border:1px solid var(--border-light);border-left:5px solid;border-radius:0 6px 6px 0;padding:1.2rem 1.4rem;box-shadow:var(--shadow);}
+  .juris-card.stf{border-left-color:var(--red-accent);}
+  .juris-card.stj{border-left-color:var(--navy);}
+  .juris-card.doutrina{border-left-color:var(--gold);}
+  .juris-header{display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem;flex-wrap:wrap;}
+  .juris-badge{font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:0.2rem 0.55rem;border-radius:2px;font-family:'Source Serif 4',serif;}
+  .juris-badge.stf{background:var(--red-accent);color:white;}
+  .juris-badge.stj{background:var(--navy);color:white;}
+  .juris-badge.doutrina{background:var(--gold);color:var(--navy);}
+  .juris-badge.sumula{background:var(--green-accent);color:white;}
+  .juris-badge.tese{background:var(--blue-accent);color:white;}
+  .juris-badge.purple{background:var(--purple-accent);color:white;}
+  .juris-title{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--navy);}
+  .juris-body{font-size:0.84rem;color:var(--text-mid);line-height:1.7;}
+  .juris-body em{font-style:italic;color:var(--navy);}
+  .juris-grid{display:grid;gap:1rem;}
+  .alert{padding:0.9rem 1.2rem;border-radius:4px;font-size:0.84rem;line-height:1.7;display:flex;gap:0.7rem;align-items:flex-start;}
+  .alert-gold{background:var(--gold-pale);border:1px solid #d4aa3a;color:#5a4000;}
+  .alert-red{background:#fdf0f0;border:1px solid #e09090;color:#5a0000;}
+  .alert-navy{background:#f0f4f8;border:1px solid #abc;color:var(--navy);}
+  .alert-green{background:#edf7f0;border:1px solid #7ec89a;color:#1a4a2e;}
+  .alert-purple{background:#f3eef8;border:1px solid #b89dd8;color:var(--purple-accent);}
+  .alert-icon{font-size:1.1rem;flex-shrink:0;margin-top:0.05rem;}
+  .alert strong{font-weight:700;}
+  .prova-section{background:var(--navy);border-radius:8px;padding:2rem;color:white;margin-top:3.5rem;scroll-margin-top:56px;}
+  .prova-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold-light);margin-bottom:0.5rem;}
+  .prova-section .intro{font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;font-style:italic;}
+  .prova-items{display:grid;gap:0.75rem;}
+  .prova-item{background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.25);border-left:4px solid var(--gold);border-radius:0 4px 4px 0;padding:1rem 1.2rem;}
+  .prova-item-q{font-size:0.82rem;font-weight:600;color:var(--gold-light);margin-bottom:0.4rem;display:flex;align-items:flex-start;gap:0.6rem;}
+  .prova-item-q .qnum{background:var(--gold);color:var(--navy);font-size:0.65rem;font-weight:700;padding:0.1rem 0.45rem;border-radius:2px;flex-shrink:0;margin-top:0.1rem;}
+  .prova-item-a{font-size:0.82rem;color:rgba(255,255,255,0.8);line-height:1.65;}
+  .prova-item-a strong{color:white;}
+  .tag{display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;padding:0.15rem 0.5rem;border-radius:2px;margin:0.1rem;font-family:'Source Serif 4',serif;}
+  .tag-blue{background:#dce8f5;color:var(--blue-accent);}
+  .tag-green{background:#dceee3;color:var(--green-accent);}
+  .tag-gold{background:var(--gold-pale);color:#7a5a00;border:1px solid #d4aa3a;}
+  .tag-red{background:#fde8e8;color:var(--red-accent);}
+  .tag-purple{background:#ece5f5;color:var(--purple-accent);}
+  .example-box{background:var(--navy-mid);color:white;border-radius:6px;padding:1.2rem 1.4rem;font-size:0.84rem;line-height:1.75;}
+  .example-box .ex-title{color:var(--gold-light);font-weight:700;font-family:'Playfair Display',serif;font-size:0.95rem;margin-bottom:0.5rem;}
+  .example-box .ex-calc{background:rgba(200,150,12,0.12);border:1px solid rgba(200,150,12,0.3);border-radius:4px;padding:0.7rem 1rem;margin-top:0.7rem;font-family:'JetBrains Mono',monospace;font-size:0.79rem;color:var(--gold-light);white-space:pre-wrap;}
+  .law-quote{background:var(--cream-mid);border-left:4px solid var(--navy);padding:0.9rem 1.2rem;font-size:0.88rem;font-style:italic;color:var(--text-mid);line-height:1.7;border-radius:0 4px 4px 0;}
+  .law-quote strong{font-style:normal;color:var(--navy);font-size:0.75rem;letter-spacing:0.5px;display:block;margin-bottom:0.25rem;}
+  .divider{height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);margin:1.2rem 0;}
+  /* ESPÉCIE CARDS */
+  .especie-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0.85rem;}
+  .especie-card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1rem 1.2rem;border-left:4px solid;box-shadow:var(--shadow);}
+  .especie-card h4{font-family:'Playfair Display',serif;font-size:0.92rem;font-weight:700;margin-bottom:0.35rem;}
+  .especie-card p,.especie-card li{font-size:0.82rem;color:var(--text-mid);line-height:1.6;}
+  .especie-card ul{padding-left:1rem;margin-top:0.3rem;}
+  .ec-red{border-left-color:var(--red-accent);}.ec-red h4{color:var(--red-accent);}
+  .ec-blue{border-left-color:var(--blue-accent);}.ec-blue h4{color:var(--blue-accent);}
+  .ec-green{border-left-color:var(--green-accent);}.ec-green h4{color:var(--green-accent);}
+  .ec-gold{border-left-color:var(--gold);}.ec-gold h4{color:#7a5a00;}
+  .ec-purple{border-left-color:var(--purple-accent);}.ec-purple h4{color:var(--purple-accent);}
+  /* MATRIZ ERRO */
+  .matriz{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);}
+  .mcel{padding:0.9rem 1rem;font-size:0.82rem;border:1px solid rgba(255,255,255,0.1);}
+  .mhead{background:var(--navy);color:var(--gold-light);font-weight:700;font-family:'Playfair Display',serif;}
+  .mred{background:#fdf0f0;border-color:var(--border-light);}
+  .mgreen{background:#edf7f0;border-color:var(--border-light);}
+  .mgold{background:var(--gold-pale);border-color:var(--border-light);}
+  footer{background:var(--navy);color:rgba(255,255,255,0.45);text-align:center;padding:1.5rem;font-size:0.75rem;border-top:2px solid var(--gold);}
+  footer strong{color:var(--gold-light);}
+  @media print{#top-nav{display:none;}#hero{padding:2rem 1rem;}#hero::before{display:none;}.page-wrap{max-width:100%;padding:0 0.5rem 2rem;}.section{margin-top:2rem;page-break-inside:avoid;}.card,.juris-card,.flow-wrap,.example-box{box-shadow:none;border:1px solid #ccc;}.prova-section{background:#f0f4f8!important;color:#000!important;}.prova-section h2{color:#0d1b2a!important;}.prova-item{background:white!important;border:1px solid #ccc!important;}.prova-item-q{color:#7a5a00!important;}.prova-item-a{color:#333!important;}.example-box{background:#f0f4f8!important;color:#000!important;}footer{display:none;}body{font-size:11pt;}}
+  @media(max-width:640px){#hero{padding:2rem 1rem;}#hero h1{font-size:1.6rem;}.card-grid-3,.card-grid-2{grid-template-columns:1fr;}.section-title{font-size:1.1rem;}.comp-table{font-size:0.76rem;}.comp-table td,.comp-table th{padding:0.55rem 0.65rem;}.flow-node{min-width:150px;font-size:0.74rem;}.matriz{grid-template-columns:1fr;}}
+  .mt1{margin-top:0.75rem;}.mt2{margin-top:1rem;}.mt3{margin-top:1.5rem;}
+  .flex-gap{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:flex-start;}
+  strong{font-weight:700;}
+</style>
+</head>
+<body>
+
+<nav id="top-nav">
+  <div class="nav-brand">Art. 20º CP</div>
+  <a href="#visao-geral">Visão Geral</a>
+  <a href="#conceito">Conceito</a>
+  <a href="#evitavel-inevitavel">Evitável × Inevitável</a>
+  <a href="#par1">§1.º Descriminantes</a>
+  <a href="#par2">§2.º Erro por Terceiro</a>
+  <a href="#par3">§3.º Erro sobre Pessoa</a>
+  <a href="#aberratio">Aberratio Ictus</a>
+  <a href="#teorias">Teorias</a>
+  <a href="#fluxograma">Fluxograma</a>
+  <a href="#comparativo">Comparativo</a>
+  <a href="#exemplos">Exemplos</a>
+  <a href="#jurisprudencia">Juris. STF/STJ</a>
+  <a href="#doutrina">Doutrina</a>
+  <a href="#sistematica">Sistemática</a>
+  <a href="#prova">⚖ Prova</a>
+</nav>
+
+<header id="hero">
+  <div class="badge">Código Penal · Título II · Do Crime · Capítulo III</div>
+  <h1>Art. 20º — <span>Erro de Tipo</span></h1>
+  <p class="subtitle">Erro Essencial · Erro Acidental · Descriminantes Putativas · Erro sobre Pessoa · Aberratio Ictus · Magistratura · ENAM</p>
+  <div class="law-box">
+    <strong>Art. 20.º do Decreto-Lei n.º 2.848/1940 (Código Penal)</strong>
+    "O erro sobre elemento constitutivo do tipo legal de crime exclui o dolo, mas permite a punição por crime culposo, se previsto em lei.<br>
+    <span style="color:rgba(255,255,255,0.55);font-style:normal;font-size:0.8rem;">§ 1.º</span> É isento de pena quem, por erro plenamente justificado pelas circunstâncias, supõe situação de fato que, se existisse, tornaria a ação legítima. Não há isenção de pena quando o erro deriva de culpa e o fato é punível como crime culposo.<br>
+    <span style="color:rgba(255,255,255,0.55);font-style:normal;font-size:0.8rem;">§ 2.º</span> Responde pelo crime o terceiro que determina o erro.<br>
+    <span style="color:rgba(255,255,255,0.55);font-style:normal;font-size:0.8rem;">§ 3.º</span> O erro quanto à pessoa contra a qual o crime é praticado não isenta de pena. Considera-se, neste caso, as qualidades da vítima que o agente supôs ter ofendido."
+  </div>
+</header>
+
+<div class="page-wrap">
+
+<!-- 1. VISÃO GERAL -->
+<section class="section" id="visao-geral">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div class="section-title"><span>Introdução &amp; Estrutura</span>Visão Geral do Artigo</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📍 Finalidade e Posição Sistemática</h3>
+      <p>O art. 20 CP integra o <strong>Capítulo III do Título II da Parte Geral</strong> e disciplina o <strong>erro de tipo</strong> — instituto que trata do erro do agente sobre elemento constitutivo do tipo penal. Quando o agente desconhece ou tem falsa representação de circunstância que integra o tipo, não há o elemento cognitivo do dolo — e o art. 20 CP estabelece as consequências jurídicas desse erro.</p>
+      <p class="mt2">O art. 20 CP possui quatro núcleos: (a) <em>caput</em> — erro de tipo essencial (exclui o dolo); (b) §1.º — descriminantes putativas (erro sobre situação de fato que tornaria a ação legítima); (c) §2.º — erro determinado por terceiro; (d) §3.º — erro sobre a pessoa (<em>error in persona</em>).</p>
+    </div>
+    <div class="card">
+      <h3>🏛️ Estrutura do Art. 20 CP e Conceitos-Chave</h3>
+      <ul>
+        <li><strong>Caput:</strong> erro sobre elemento constitutivo do tipo → exclui o dolo → se o erro era evitável: pune por culpa (se previsto em lei); se inevitável: atipicidade</li>
+        <li><strong>§1.º:</strong> erro sobre pressupostos fáticos de excludente de ilicitude (descriminante putativa) → isenção de pena se erro inevitável; crime culposo se erro evitável por culpa</li>
+        <li><strong>§2.º:</strong> responsabilidade do terceiro que dolosamente determina o erro do agente → autoria mediata</li>
+        <li><strong>§3.º:</strong> erro sobre a pessoa (agente erra ao identificar a vítima) → responde como se tivesse atingido a pessoa que pretendia atingir; irrelevante para tipicidade</li>
+        <li><strong>Instituto correlato — Aberratio ictus (art. 73 CP):</strong> erro na execução (agente acerta pessoa diversa da pretendida por erro de pontaria); tratado no art. 73 CP</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert alert-gold mt2">
+    <div class="alert-icon">⭐</div>
+    <div><strong>Fundamento Constitucional — Princípio da Culpabilidade e Vedação à Responsabilidade Objetiva:</strong> O art. 20 CP concretiza o <strong>princípio da culpabilidade</strong> (<em>nulla poena sine culpa</em>): se o agente desconhecia a circunstância que tornava sua conduta típica, não há dolo → sem dolo, não há crime doloso. A vedação constitucional à responsabilidade objetiva (dignidade da pessoa humana — art. 1.º, III, CF/88; devido processo legal — art. 5.º, LIV, CF/88) fundamenta o instituto: punir alguém que não sabia o que estava fazendo violaria a Constituição.</div>
+  </div>
+
+  <div class="card-grid card-grid-3 mt2">
+    <div class="card type-card tc-red">
+      <h3>🔴 Caput — Erro de Tipo Essencial</h3>
+      <p>Erro sobre elemento <em>constitutivo</em> do tipo legal. Exclui o dolo. Se o erro era evitável (culposo): pune por crime culposo se previsto em lei. Se inevitável: fato atípico (exclui dolo e culpa).</p>
+    </div>
+    <div class="card type-card tc-blue">
+      <h3>🔵 §1.º — Descriminante Putativa</h3>
+      <p>Erro sobre pressupostos fáticos de uma causa excludente de ilicitude. Se inevitável: isento de pena. Se evitável (culposo): crime culposo (se previsto em lei). Ex.: agente que imagina equivocadamente estar sendo agredido.</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>🟡 §3.º — Erro sobre a Pessoa</h3>
+      <p>Agente confunde a identidade da vítima e atinge pessoa diversa. Crime é doloso; responde como se tivesse atingido a pessoa pretendida. Considera-se as qualidades da vítima visada — não da atingida.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2. CONCEITO PROFUNDO -->
+<section class="section" id="conceito">
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div class="section-title"><span>Análise Dogmática</span>Conceito, Espécies e Distinções Fundamentais</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📋 Conceito de Erro de Tipo</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.6rem;">O <strong>erro de tipo</strong> ocorre quando o agente tem falsa percepção ou ignora circunstância que integra o tipo penal objetivo — elemento que, se conhecido, caracterizaria o crime. É o oposto do dolo: sem consciência do elemento típico, não há vontade de praticar o tipo penal.</p>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.83rem;line-height:1.85;">
+        <strong style="color:var(--gold-light);">Fórmula do Art. 20, Caput:</strong>
+        <p style="margin-top:0.4rem;">Elemento típico desconhecido (erro) → Sem consciência do elemento → Sem dolo</p>
+        <p>Erro <strong>inevitável</strong> (escusável) → Exclui dolo e culpa → Fato <strong>atípico</strong></p>
+        <p>Erro <strong>evitável</strong> (inescusável) → Exclui dolo → Mantém culpa → Pune por <strong>crime culposo</strong> (se previsto em lei)</p>
+      </div>
+      <div class="alert alert-gold mt2" style="font-size:0.8rem;">
+        <div>⭐ <strong>Erro de Tipo × Erro de Proibição (Art. 21 CP):</strong> Erro de TIPO → recai sobre elemento fático do tipo penal (o agente não sabe O QUE está fazendo). Erro de PROIBIÇÃO → o agente conhece os fatos, mas desconhece a ilicitude da conduta (não sabe que é proibido). Essa distinção é o ponto mais cobrado em magistratura sobre os arts. 20 e 21 CP.</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>⚖️ Espécies de Erro — Taxonomia Completa</h3>
+      <div style="display:flex;flex-direction:column;gap:0.45rem;">
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);padding:0.55rem 0.85rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">Erro Essencial (Próprio):</strong> Recai sobre elemento constitutivo do tipo → exclui o dolo. É o erro do art. 20, caput CP. Subdivide-se em inevitável (atipicidade total) e evitável (culpa, se prevista).
+        </div>
+        <div style="background:#edf2f8;border-left:3px solid var(--blue-accent);padding:0.55rem 0.85rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--blue-accent);">Erro Acidental (Impróprio):</strong> Recai sobre circunstâncias não elementares do tipo — não exclui o crime. Espécies: (a) erro sobre a pessoa (art. 20, §3.º CP); (b) erro na execução/aberratio ictus (art. 73 CP); (c) aberratio criminis/delicti (art. 74 CP).
+        </div>
+        <div style="background:#dceee3;border-left:3px solid var(--green-accent);padding:0.55rem 0.85rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--green-accent);">Erro sobre Qualificadora (Erro Acidental sobre Circunstância Agravante):</strong> Recai sobre circunstância que qualifica ou agrava o crime. Não exclui o tipo básico — exclui apenas a qualificadora. Ex.: agente que agride ignorando que a vítima é seu pai (sem parricídio agravado — sem circunstância de parentesco).
+        </div>
+        <div style="background:var(--gold-pale);border:1px solid var(--gold);border-radius:6px;padding:0.65rem 0.9rem;font-size:0.82rem;">
+          <strong style="color:#7a5a00;">Descriminante Putativa (§1.º):</strong> Erro sobre os pressupostos fáticos de causa de justificação (excludente de ilicitude) — ex.: agente crê estar em legítima defesa, mas não há agressão real. Tratamento especial no §1.º do art. 20 CP.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt2">
+    <h3>📐 Objeto do Erro de Tipo — Elementos que Podem ser Objeto do Erro</h3>
+    <div class="card-grid card-grid-3 mt1">
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Elementos Objetivos do Tipo:</strong> Qualidade da vítima (ex.: ignorar que é funcionário público → sem crime contra a administração doloso); natureza da coisa (ignorar que é coisa alheia → sem furto doloso); causalidade (ignorar que o resultado poderia ocorrer). Todo elemento descritivo do tipo pode ser objeto de erro de tipo.</p>
+      </div>
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Elementos Normativos do Tipo:</strong> Erro sobre o conceito jurídico ou social que integra o tipo (ex.: "indevida" no peculato — erro sobre a indevidez; "funcionário público" — erro sobre quem é funcionário para fins penais). O erro sobre elementos normativos jurídicos tem tratamento mais complexo.</p>
+      </div>
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Elementos Subjetivos do Tipo:</strong> Em tipos que exigem elemento subjetivo especial (ex.: fim especial de agir), o erro sobre esse elemento também pode caracterizar erro de tipo. Ex.: agente que acredita ter autorização para usar o bem alheio → sem dolo de furto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. ERRO EVITÁVEL × INEVITÁVEL -->
+<section class="section" id="evitavel-inevitavel">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div class="section-title"><span>Núcleo Central — Alta Cobrança</span>Erro Evitável × Inevitável: Consequências Jurídicas</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-green">
+      <h3>🟢 Erro Inevitável (Escusável / Invencível)</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Conceito:</strong> O erro era impossível de ser evitado pelo agente mesmo que tivesse adotado todo o cuidado exigível do homem médio nas mesmas circunstâncias. Nenhuma pessoa razoável, naquelas condições, teria percebido a circunstância típica.</p>
+      <div class="divider"></div>
+      <ul style="font-size:0.83rem;">
+        <li><strong>Consequência:</strong> Exclui o dolo E a culpa → Fato <strong>atípico</strong> → Agente não responde por nenhum crime</li>
+        <li><strong>Fundamento:</strong> Sem previsibilidade objetiva (homem médio não preveria) → sem culpa; sem consciência → sem dolo</li>
+        <li><strong>Denominações:</strong> Inevitável, escusável, invencível, desculpável</li>
+        <li><strong>Exemplo:</strong> Caçador que atira em vulto na floresta pensando ser animal — qualquer pessoa nas mesmas circunstâncias teria feito o mesmo → erro inevitável → atípico</li>
+        <li><strong>Exemplo 2:</strong> Agente que serve bebida que desconhecia ter sido adulterada com substância tóxica por terceiro → erro inevitável → atípico</li>
+        <li><strong>Critério:</strong> Pergunta-se: o homem médio nas mesmas circunstâncias teria percebido o elemento típico? Se NÃO → inevitável → atípico</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>🔴 Erro Evitável (Inescusável / Vencível)</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Conceito:</strong> O erro poderia ter sido evitado se o agente tivesse adotado o cuidado exigível do homem médio nas mesmas circunstâncias. Qualquer pessoa diligente teria percebido a circunstância típica.</p>
+      <div class="divider"></div>
+      <ul style="font-size:0.83rem;">
+        <li><strong>Consequência:</strong> Exclui o dolo → Mantém a culpa → Agente responde por <strong>crime culposo</strong>, SE previsto em lei (art. 18, §único CP)</li>
+        <li><strong>Fundamento:</strong> O agente deveria ter sido mais cuidadoso — violou o dever objetivo de cuidado ao não perceber a circunstância típica</li>
+        <li><strong>Denominações:</strong> Evitável, inescusável, vencível, indesculpável</li>
+        <li><strong>Exemplo:</strong> Caçador que atira em vulto perto de área habitada, sem checar se é animal ou pessoa → qualquer caçador diligente teria verificado → erro evitável → culpa → homicídio culposo (art. 121, §3.º CP)</li>
+        <li><strong>Atenção:</strong> Se o crime não tem modalidade culposa → erro evitável → fato atípico (sem crime culposo previsto = sem punição)</li>
+        <li><strong>Critério:</strong> Pergunta-se: o homem médio nas mesmas circunstâncias teria percebido o elemento típico? Se SIM, o agente deveria ter percebido → evitável</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="overflow-x:auto;margin-top:1rem;">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Tipo de Erro</th>
+          <th>O agente podia ter evitado?</th>
+          <th>Exclui Dolo?</th>
+          <th>Exclui Culpa?</th>
+          <th>Resultado</th>
+          <th>Crime</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hl2">
+          <td>Inevitável (Escusável)</td>
+          <td>NÃO — ninguém evitaria</td>
+          <td style="font-weight:700;color:var(--green-accent);">SIM</td>
+          <td style="font-weight:700;color:var(--green-accent);">SIM</td>
+          <td style="font-weight:700;color:var(--green-accent);">ATÍPICO</td>
+          <td>Nenhum crime</td>
+        </tr>
+        <tr class="hl4">
+          <td>Evitável (Inescusável) + crime culposo previsto</td>
+          <td>SIM — homem médio perceberia</td>
+          <td style="font-weight:700;color:var(--green-accent);">SIM</td>
+          <td style="font-weight:700;color:var(--red-accent);">NÃO</td>
+          <td style="font-weight:700;color:var(--red-accent);">CRIME CULPOSO</td>
+          <td>Crime culposo (se previsto em lei)</td>
+        </tr>
+        <tr class="hl">
+          <td>Evitável + crime culposo NÃO previsto</td>
+          <td>SIM — homem médio perceberia</td>
+          <td style="font-weight:700;color:var(--green-accent);">SIM</td>
+          <td style="font-weight:700;color:var(--red-accent);">NÃO (mas sem tipo culposo)</td>
+          <td style="font-weight:700;color:var(--green-accent);">ATÍPICO</td>
+          <td>Nenhum crime (sem previsão culposa)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="alert alert-red mt2">
+    <div class="alert-icon">🔴</div>
+    <div><strong>Ponto Crítico — Erro Evitável sem Previsão do Crime Culposo:</strong> Se o erro é evitável (culposo) mas o crime não tem modalidade culposa expressamente prevista em lei, o agente NÃO responde. Ex.: erro evitável sobre a "coisa alheia" no furto → sem dolo de furto; furto culposo não existe no CP → fato atípico. O art. 18, §único CP é limitador: sem previsão expressa da forma culposa → sem crime culposo. Esta é uma das pegadinhas mais cobradas sobre o art. 20 CP.</div>
+  </div>
+</section>
+
+<!-- 4. §1.º DESCRIMINANTES PUTATIVAS -->
+<section class="section" id="par1">
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <div class="section-title"><span>Art. 20, §1.º — Alta Cobrança</span>Descriminantes Putativas: Erro sobre Excludentes de Ilicitude</div>
+  </div>
+
+  <div class="alert alert-gold" style="margin-bottom:1rem;">
+    <div class="alert-icon">⭐</div>
+    <div><strong>Ponto Altamente Cobrado em Magistratura:</strong> As descriminantes putativas (art. 20, §1.º CP) são causas imaginárias de justificação — o agente acredita, erroneamente, que está amparado por excludente de ilicitude (legítima defesa, estado de necessidade, estrito cumprimento do dever legal, exercício regular do direito). O tratamento jurídico — teoria limitada da culpabilidade ou teoria extremada — é um dos debates doutrinários mais relevantes e cobrados em concursos de magistratura.</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔵 Conceito e Espécies de Descriminante Putativa</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">O §1.º do art. 20 CP trata do agente que, por erro plenamente justificado pelas circunstâncias, supõe situação de fato que, se existisse, tornaria a ação legítima (amparada por excludente de ilicitude).</p>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;">
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--blue-accent);">Legítima Defesa Putativa:</strong> Agente supõe erroneamente que está sendo agredido injustamente. Ex.: A vê B movendo a mão rapidamente para o bolso e imagina que vai sacar uma arma → A dispara pensando estar em legítima defesa, mas B apenas ia buscar o celular.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">Estado de Necessidade Putativo:</strong> Agente supõe erroneamente estar em situação de perigo que justificaria sacrificar bem jurídico alheio. Ex.: A imagina que a casa está pegando fogo e destrói bens de vizinho para tentar "salvar" pessoas que não correm perigo real.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--green-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--green-accent);">Estrito Cumprimento do Dever Legal Putativo:</strong> Agente imagina erroneamente que sua conduta está amparada por dever legal. Ex.: Policial que usa força excessiva supondo, erroneamente, que havia ordem legal para tanto.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📋 Consequências Jurídicas do §1.º — Teorias</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">O tratamento da descriminante putativa é um dos maiores debates da teoria geral do crime. Duas teorias principais:</p>
+      <div style="display:flex;flex-direction:column;gap:0.5rem;">
+        <div style="background:var(--gold-pale);border:1px solid var(--gold);border-radius:6px;padding:0.8rem 1rem;font-size:0.82rem;">
+          <strong style="color:#7a5a00;">⭐ Teoria Limitada da Culpabilidade (adotada pelo CP de 1940 — §1.º):</strong> A descriminante putativa sobre FATOS (erro factual) é erro de tipo (art. 20, §1.º CP) → exclui o dolo → se inevitável: atípico; se evitável: crime culposo. A descriminante putativa sobre NORMAS (erro sobre os limites legais da excludente) é erro de proibição (art. 21 CP) → exclui/atenua a culpabilidade.
+        </div>
+        <div style="background:#edf2f8;border:1px solid #8eb4d8;border-radius:6px;padding:0.8rem 1rem;font-size:0.82rem;">
+          <strong style="color:var(--blue-accent);">Teoria Extremada (Estrita) da Culpabilidade:</strong> Toda descriminante putativa (factual ou normativa) é erro de proibição (art. 21 CP) → nunca exclui o dolo → exclui ou atenua apenas a culpabilidade. Adotada pela corrente finalista ortodoxa.
+        </div>
+      </div>
+      <div class="alert alert-gold mt2" style="font-size:0.81rem;">
+        <div>⭐ <strong>Para o concurso:</strong> O CP de 1940 adotou a teoria limitada da culpabilidade no §1.º do art. 20 — descriminante putativa factual é erro de tipo (exclui dolo); descriminante putativa normativa é erro de proibição. Esta é a posição majoritária da doutrina e da jurisprudência brasileiras.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt2">
+    <h3>⚡ Consequências Práticas do §1.º CP — Quadro</h3>
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:0.82rem;">
+        <thead style="background:var(--navy);color:white;">
+          <tr>
+            <th style="padding:0.55rem 0.8rem;">Tipo de Erro</th>
+            <th style="padding:0.55rem 0.8rem;">Teoria Limitada (CP)</th>
+            <th style="padding:0.55rem 0.8rem;">Consequência</th>
+            <th style="padding:0.55rem 0.8rem;">Punição</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#dceee3;">
+            <td style="padding:0.5rem 0.8rem;font-weight:700;">Erro factual inevitável (ex.: imaginar agressão que não existe, sem possibilidade de perceber)</td>
+            <td style="padding:0.5rem 0.8rem;">Erro de tipo (art. 20, §1.º) — exclui dolo E culpa</td>
+            <td style="padding:0.5rem 0.8rem;">Atípico — isento de pena</td>
+            <td style="padding:0.5rem 0.8rem;font-weight:700;color:var(--green-accent);">SEM PENA</td>
+          </tr>
+          <tr style="background:#fde8e8;">
+            <td style="padding:0.5rem 0.8rem;font-weight:700;">Erro factual evitável (ex.: imaginar agressão que não existe, mas com cautela teria percebido)</td>
+            <td style="padding:0.5rem 0.8rem;">Erro de tipo culposo (art. 20, §1.º, 2.ª parte) — exclui dolo, mantém culpa</td>
+            <td style="padding:0.5rem 0.8rem;">Crime culposo (se previsto em lei)</td>
+            <td style="padding:0.5rem 0.8rem;font-weight:700;color:var(--red-accent);">CRIME CULPOSO</td>
+          </tr>
+          <tr style="background:var(--gold-pale);">
+            <td style="padding:0.5rem 0.8rem;font-weight:700;">Erro normativo (ex.: entender erroneamente os limites legais da legítima defesa)</td>
+            <td style="padding:0.5rem 0.8rem;">Erro de proibição (art. 21 CP) — não exclui dolo; exclui/atenua culpabilidade</td>
+            <td style="padding:0.5rem 0.8rem;">Crime doloso; culpabilidade diminuída ou excluída</td>
+            <td style="padding:0.5rem 0.8rem;font-weight:700;color:#7a5a00;">CRIME DOLOSO (com possível isenção)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 5. §2.º ERRO DETERMINADO POR TERCEIRO -->
+<section class="section" id="par2">
+  <div class="section-header">
+    <div class="section-num">05</div>
+    <div class="section-title"><span>Art. 20, §2.º</span>Erro Determinado por Terceiro — Autoria Mediata</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📋 Conceito e Fundamento</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">O §2.º do art. 20 CP estabelece que <strong>responde pelo crime o terceiro que determina o erro</strong>. Quando um terceiro dolosamente provoca o erro de tipo no agente, explorando esse erro para a prática do crime, o terceiro responde como autor do crime.</p>
+      <div class="divider"></div>
+      <ul style="font-size:0.83rem;">
+        <li><strong>Fundamento:</strong> O agente enganado é mero instrumento — age sem dolo por força do erro criado pelo terceiro. O terceiro, que age com plena consciência, é o verdadeiro responsável.</li>
+        <li><strong>Instituto correlato:</strong> Autoria mediata — o terceiro usa o agente como instrumento não doloso para praticar o crime</li>
+        <li><strong>Exemplo clássico:</strong> A (médico) dá a B (enfermeira) seringa com veneno dizendo ser medicamento. B, sem saber, aplica o veneno na vítima C. → B não responde (erro de tipo inevitável); A responde como autor mediato do homicídio doloso</li>
+        <li><strong>Exemplo 2:</strong> A entrega encomenda a B dizendo que é medicamento — na verdade é droga. B transporta sem saber. → B: erro de tipo inevitável → sem crime; A: responde pelo tráfico como autor mediato</li>
+        <li><strong>O agente enganado:</strong> age sem dolo (erro de tipo) → se o erro era inevitável, não responde; se era evitável, responde por culpa</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>⚖️ Autoria Mediata × Coautoria × Participação</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">O §2.º do art. 20 CP é o fundamento da <strong>autoria mediata por erro determinado por terceiro</strong>. Distinções essenciais:</p>
+      <div style="display:flex;flex-direction:column;gap:0.45rem;">
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">Autoria Mediata (§2.º CP):</strong> Terceiro usa o agente como instrumento que não age com dolo (por erro, coação irresistível, inimputabilidade). O terceiro é o único autor. O instrumento não é coautor.
+        </div>
+        <div style="background:#edf2f8;border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--blue-accent);">Coautoria (art. 29 CP):</strong> Todos os agentes agem com dolo. Não há agente não doloso. Todos respondem pelo crime.
+        </div>
+        <div style="background:#dceee3;border-left:3px solid var(--green-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--green-accent);">Participação (art. 29 CP):</strong> O partícipe contribui dolosamente para crime cometido por autor que também age com dolo. Não há uso de instrumento não doloso.
+        </div>
+      </div>
+      <div class="alert alert-navy mt2" style="font-size:0.8rem;">
+        <div>📌 <strong>Autoria Mediata não se confunde com Participação:</strong> O autor mediato responde pelo crime do agente instrumento — não como partícipe, mas como autor principal. O instrumento (agente enganado) não é coautor — é mero objeto da vontade alheia. Regra: autor mediato responde pelo crime doloso; instrumento pode não responder (erro inevitável) ou responder culposamente (erro evitável).</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. §3.º ERRO SOBRE A PESSOA -->
+<section class="section" id="par3">
+  <div class="section-header">
+    <div class="section-num">06</div>
+    <div class="section-title"><span>Art. 20, §3.º — Alta Cobrança</span>Erro sobre a Pessoa (Error in Persona)</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📋 Conceito e Regra do §3.º</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Conceito:</strong> No erro sobre a pessoa (<em>error in persona</em>), o agente <strong>confunde a identidade</strong> da vítima — quer atingir A, mas por erro de identificação (não de execução), acaba atingindo B, que toma o lugar de A.</p>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.83rem;line-height:1.85;">
+        <strong style="color:var(--gold-light);">Regra do Art. 20, §3.º:</strong>
+        <p style="margin-top:0.4rem;">O erro quanto à pessoa NÃO isenta de pena</p>
+        <p>Considera-se as qualidades da <strong>vítima que o agente SUPÔS ofender</strong> (a vítima visada), não as qualidades da vítima efetivamente atingida</p>
+        <p style="margin-top:0.4rem;color:var(--gold-light);font-style:italic;">Crime doloso em relação à pessoa visada; as qualidades da vítima real são irrelevantes para a tipificação</p>
+      </div>
+      <ul class="mt2" style="font-size:0.83rem;">
+        <li><strong>Exemplo:</strong> A quer matar seu pai B. À noite, A confunde seu vizinho C com B (mesmo porte físico) e mata C. → A responde por homicídio qualificado (art. 121, §2.º, I CP — motivo torpe?). Para o crime: considera-se que B (o pai, a vítima visada) foi atingido. A agravante de parentesco aplica-se.</li>
+        <li><strong>Irrelevância das qualidades reais:</strong> As condições pessoais de C (a vítima real) não são consideradas para tipificação — importam as de B (a vítima visada)</li>
+        <li><strong>Crime é doloso:</strong> O agente quis matar B (dolo); apenas errou na identificação</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>⚡ Error in Persona × Aberratio Ictus (Art. 73 CP) — Distinção Crucial</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">A distinção entre erro sobre a pessoa (art. 20, §3.º CP) e erro na execução/aberratio ictus (art. 73 CP) é o ponto mais cobrado em magistratura sobre erros do iter criminis:</p>
+      <div style="display:flex;flex-direction:column;gap:0.5rem;">
+        <div style="background:#fde8e8;border:1px solid #e09090;border-radius:6px;padding:0.8rem 1rem;font-size:0.82rem;">
+          <strong style="color:var(--red-accent);">Error in Persona (Art. 20, §3.º CP):</strong><br>
+          Erro de identificação — agente CONFUNDE as pessoas mentalmente. Não há erro de execução física: a pontaria é perfeita, o alvo é que era errado. O agente achava que aquela pessoa era o seu alvo.<br>
+          <em>Ex.: A mira em quem pensa ser B, mas era C.</em>
+        </div>
+        <div style="background:#edf2f8;border:1px solid #8eb4d8;border-radius:6px;padding:0.8rem 1rem;font-size:0.82rem;">
+          <strong style="color:var(--blue-accent);">Aberratio Ictus (Art. 73 CP):</strong><br>
+          Erro de execução — agente ERRA a pontaria. Ele SABE quem é o alvo (não há confusão de identidade), mas por desvio na execução, atinge pessoa diversa. <br>
+          <em>Ex.: A mira em B sabendo que é B, mas erra o tiro e acerta C que estava ao lado.</em>
+        </div>
+      </div>
+      <div class="alert alert-gold mt2" style="font-size:0.81rem;">
+        <div>⭐ <strong>Consequência da Distinção:</strong> No erro sobre a pessoa (§3.º): considera-se as qualidades da vítima VISADA (a que o agente confundiu com a real); sem concurso formal de crimes. Na aberratio ictus (art. 73 CP): aplica-se a regra mais grave (art. 73 CP); se atingir também a vítima pretendida: concurso formal de crimes. A diferença fundamental é: erro mental (§3.º) × erro físico de execução (art. 73).</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. ABERRATIO ICTUS -->
+<section class="section" id="aberratio">
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <div class="section-title"><span>Art. 73 CP — Conexo ao Art. 20, §3.º</span>Aberratio Ictus: Erro na Execução</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔵 Aberratio Ictus — Conceito e Regra (Art. 73 CP)</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Conceito:</strong> O agente quer atingir determinada pessoa mas, por erro no uso dos meios de execução (desvio de pontaria, falha no mecanismo), atinge outra. Não há confusão mental sobre quem é o alvo — há falha material na execução.</p>
+      <div class="law-quote">
+        <strong>Art. 73 CP — Erro na Execução:</strong>
+        "Quando, por acidente ou erro no uso dos meios de execução, o agente, ao invés de atingir a pessoa que pretendia ofender, atinge pessoa diversa, responde como se tivesse praticado o crime contra aquela, atendendo-se ao disposto no §3.º do art. 20 deste Código. No caso de ser também atingida a pessoa que o agente pretendia ofender, aplica-se a regra do art. 70 deste Código."
+      </div>
+      <ul class="mt2" style="font-size:0.83rem;">
+        <li><strong>Regra quando só atinge pessoa diversa:</strong> Aplica-se o §3.º do art. 20 CP — considera-se as qualidades da vítima pretendida; responde como se tivesse atingido a vítima visada</li>
+        <li><strong>Regra quando atinge ambas (pretendida + diversa):</strong> Art. 70 CP — concurso formal de crimes (crime doloso em relação à vítima pretendida + crime culposo em relação à vítima atingida por descuido)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📋 Quadro Comparativo Completo: §3.º × Art. 73 × Art. 74</h3>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.81rem;">
+          <thead style="background:var(--navy);color:white;">
+            <tr>
+              <th style="padding:0.5rem 0.7rem;">Instituto</th>
+              <th style="padding:0.5rem 0.7rem;">Natureza do Erro</th>
+              <th style="padding:0.5rem 0.7rem;">Resultado</th>
+              <th style="padding:0.5rem 0.7rem;">Regra Aplicada</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fde8e8;">
+              <td style="padding:0.5rem 0.7rem;font-weight:700;">Error in persona (art. 20, §3.º CP)</td>
+              <td style="padding:0.5rem 0.7rem;">Mental — confunde identidade</td>
+              <td style="padding:0.5rem 0.7rem;">Atinge pessoa diversa (A queria B, matou C que julgava ser B)</td>
+              <td style="padding:0.5rem 0.7rem;">Considera qualidades da vítima visada (B)</td>
+            </tr>
+            <tr>
+              <td style="padding:0.5rem 0.7rem;font-weight:700;">Aberratio ictus (art. 73 CP) — só atinge diversa</td>
+              <td style="padding:0.5rem 0.7rem;">Físico — erra pontaria</td>
+              <td style="padding:0.5rem 0.7rem;">Queria B, errou o tiro, matou C</td>
+              <td style="padding:0.5rem 0.7rem;">Considera qualidades de B (vítima visada) — mesma do §3.º</td>
+            </tr>
+            <tr style="background:var(--gold-pale);">
+              <td style="padding:0.5rem 0.7rem;font-weight:700;">Aberratio ictus (art. 73 CP) — atinge ambas</td>
+              <td style="padding:0.5rem 0.7rem;">Físico — erra pontaria mas alcança os dois</td>
+              <td style="padding:0.5rem 0.7rem;">Queria B, matou B e C</td>
+              <td style="padding:0.5rem 0.7rem;">Art. 70 CP — Concurso formal (doloso para B + culposo para C)</td>
+            </tr>
+            <tr style="background:#edf2f8;">
+              <td style="padding:0.5rem 0.7rem;font-weight:700;">Aberratio criminis (art. 74 CP)</td>
+              <td style="padding:0.5rem 0.7rem;">Físico — atinge coisa ou bem diverso</td>
+              <td style="padding:0.5rem 0.7rem;">Queria atingir pessoa, atinge coisa (ou vice-versa)</td>
+              <td style="padding:0.5rem 0.7rem;">Responde pelo resultado produzido (crime culposo, se previsto)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. TEORIAS -->
+<section class="section" id="teorias">
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <div class="section-title"><span>Dogmática — Alta Cobrança</span>Teorias sobre as Descriminantes Putativas</div>
+  </div>
+
+  <div class="especie-grid">
+    <div class="especie-card ec-red">
+      <h4>🔴 Teoria Extremada (Estrita) da Culpabilidade</h4>
+      <p style="font-size:0.82rem;color:var(--text-soft);margin-bottom:0.35rem;font-style:italic;">Finalismo Ortodoxo (Welzel)</p>
+      <p><strong>Premissa:</strong> Toda descriminante putativa (factual ou normativa) é sempre erro de proibição — incide sobre a culpabilidade, nunca sobre o tipo.</p>
+      <ul>
+        <li>O dolo é o dolo natural (sem consciência da ilicitude) → elemento do tipo subjetivo</li>
+        <li>A consciência da ilicitude está na culpabilidade, não no dolo</li>
+        <li>Logo: erro sobre excludente → erro de proibição → atinge culpabilidade → nunca exclui o dolo</li>
+        <li><strong>Consequência:</strong> Descriminante putativa → sempre crime doloso; se erro inevitável → culpabilidade excluída (isenção de pena); se evitável → pena atenuada</li>
+        <li style="color:var(--text-soft);">⚠️ NÃO adotada pelo CP de 1940 (art. 20, §1.º adotou o tratamento de erro de tipo para erros factuais)</li>
+      </ul>
+    </div>
+    <div class="especie-card ec-blue">
+      <h4>🔵 Teoria Limitada da Culpabilidade</h4>
+      <p style="font-size:0.82rem;color:var(--text-soft);margin-bottom:0.35rem;font-style:italic;">Finalismo Moderado — Adotada pelo CP/40</p>
+      <p><strong>Premissa:</strong> Distingue o tipo de erro sobre a excludente: se o erro recai sobre os FATOS (pressupostos fáticos da excludente) → erro de tipo (art. 20, §1.º CP); se recai sobre a NORMA (limites jurídicos da excludente) → erro de proibição (art. 21 CP).</p>
+      <ul>
+        <li>Erro factual sobre excludente → art. 20, §1.º → tratamento de erro de tipo → exclui dolo → se inevitável: isento; se evitável: culposo</li>
+        <li>Erro normativo sobre excludente → art. 21 → erro de proibição → atinge culpabilidade → dolo mantido</li>
+        <li><strong>Adoção:</strong> CP brasileiro de 1940, art. 20, §1.º — Reforma Penal de 1984</li>
+        <li style="color:var(--green-accent);font-weight:700;">✅ ADOTADA pelo CP brasileiro — art. 20, §1.º</li>
+      </ul>
+    </div>
+    <div class="especie-card ec-gold">
+      <h4>🟡 Teoria Moderada da Culpabilidade (Variante)</h4>
+      <p style="font-size:0.82rem;color:var(--text-soft);margin-bottom:0.35rem;font-style:italic;">Posição Doutrinária Intermediária</p>
+      <p><strong>Premissa:</strong> O erro sobre os pressupostos fáticos de excludente é tratado como erro de tipo (mesmo resultado da teoria limitada), mas fundamentado de forma diferente: o elemento subjetivo da excludente (o tipo permissivo) integra o tipo total do ilícito.</p>
+      <ul>
+        <li>Defendida por Roxin (Imputação Objetiva) e parte da doutrina alemã</li>
+        <li>Resultado prático idêntico à teoria limitada: erro factual → exclui dolo; erro normativo → erro de proibição</li>
+        <li>Divergência apenas dogmática (fundamento), não prática</li>
+        <li style="color:var(--text-soft);">⚠️ Minoritária no Brasil — mas relevante para questões dissertativas em magistratura</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert alert-gold mt2">
+    <div class="alert-icon">⭐</div>
+    <div><strong>Para o Concurso — Posição Adotada:</strong> O CP brasileiro (art. 20, §1.º) adotou expressamente a <strong>teoria limitada da culpabilidade</strong>: erro sobre os FATOS (pressupostos fáticos da excludente) → erro de tipo (art. 20, §1.º) → exclui dolo → se inevitável: isento de pena; se evitável: crime culposo. Erro sobre os LIMITES NORMATIVOS da excludente → erro de proibição (art. 21 CP) → exclui/atenua culpabilidade. Esta é a posição majoritária da doutrina brasileira (Masson, Greco, Nucci, Capez) e a posição correta para provas de magistratura.</div>
+  </div>
+</section>
+
+<!-- 9. FLUXOGRAMA -->
+<section class="section" id="fluxograma">
+  <div class="section-header">
+    <div class="section-num">09</div>
+    <div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma: Análise do Erro e suas Consequências (Art. 20 CP)</div>
+  </div>
+
+  <div class="flow-wrap">
+    <div class="flow-center">
+
+      <div class="flow-node flow-start">AGENTE PRATICOU CONDUTA — VERIFICAR SE HAVIA ERRO</div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 1 — O agente tinha pleno conhecimento de todos os elementos do tipo?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Havia consciência dos elementos objetivos do tipo penal?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">SIM — pleno conhecimento</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:185px;">
+            Dolo presente<br>Sem erro de tipo<br>Verificar demais elementos
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-red" style="font-size:0.72rem;">Dolo Presente — Sem Art. 20 Caput</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — erro sobre elemento do tipo</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;min-width:185px;">
+            ERRO DE TIPO (art. 20, caput)<br>Exclui o DOLO<br>Prosseguir para Passo 2
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 2 — O erro era INEVITÁVEL? (Homem médio também erraria naquelas circunstâncias?)</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Critério objetivo: seria possível para qualquer pessoa razoável, naquelas condições, perceber o elemento típico?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">SIM — inevitável (ninguém perceberia)</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;min-width:185px;">
+            <strong>Erro INEVITÁVEL</strong><br>
+            Exclui DOLO e CULPA<br>FATO ATÍPICO
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-green" style="font-size:0.72rem;">Atípico — Sem Crime</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — evitável (homem médio perceberia)</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:185px;">
+            Erro EVITÁVEL<br>Exclui DOLO → mantém CULPA<br>Prosseguir para Passo 3
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 3 [ERRO EVITÁVEL] — O crime tem modalidade CULPOSA prevista em lei?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Art. 18, §único CP: crime culposo só existe quando expressamente previsto em lei</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">SIM — crime culposo previsto</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:185px;">
+            Responde por CRIME CULPOSO<br><small>Ex.: homicídio culposo (art. 121, §3.º)</small>
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-red" style="font-size:0.72rem;">Crime Culposo — Art. 18, II CP</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — sem previsão culposa</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;min-width:185px;">
+            Sem crime culposo previsto<br>FATO ATÍPICO<br><small>Ex.: furto culposo — inexistente no CP</small>
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-gold" style="font-size:0.72rem;">Atípico — Sem Previsão Culposa</div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 4 [§1.º] — O erro era sobre pressupostos FÁTICOS de excludente de ilicitude?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Agente imaginou estar em legítima defesa/estado de necessidade? O erro era sobre os FATOS ou sobre os LIMITES NORMATIVOS da excludente?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">Erro FACTUAL sobre excludente (§1.º)</div>
+          <div class="flow-node flow-box-blue" style="font-size:0.74rem;text-align:center;min-width:175px;">
+            Descriminante Putativa Factual<br>Art. 20, §1.º CP<br>Se inevitável: ISENTO DE PENA<br>Se evitável: Crime culposo
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-blue" style="font-size:0.72rem;">Descriminante Putativa Factual</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:120px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">Erro NORMATIVO sobre limites da excludente</div>
+          <div class="flow-node flow-box-purple" style="font-size:0.74rem;text-align:center;min-width:175px;">
+            Erro de Proibição (art. 21 CP)<br>Não exclui dolo<br>Se inevitável: isento de pena<br>Se evitável: pena atenuada
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-purple" style="font-size:0.72rem;">Erro de Proibição — Art. 21 CP</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:120px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">Erro sobre PESSOA (§3.º)</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.74rem;text-align:center;min-width:175px;">
+            Error in persona (art. 20, §3.º)<br>SEM isenção de pena<br>Considera qualidades da vítima visada<br>Crime doloso mantido
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-gold" style="font-size:0.72rem;">Error in Persona — Crime Doloso</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 10. COMPARATIVO -->
+<section class="section" id="comparativo">
+  <div class="section-header">
+    <div class="section-num">10</div>
+    <div class="section-title"><span>Quadro Sinóptico Completo</span>Art. 20 CP × Art. 21 CP × Art. 73 CP — Todos os Tipos de Erro</div>
+  </div>
+
+  <div style="overflow-x:auto;">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Instituto</th>
+          <th>Artigo</th>
+          <th>Natureza do Erro</th>
+          <th>Exclui Dolo?</th>
+          <th>Efeito</th>
+          <th>Inevitável</th>
+          <th>Evitável</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hl2">
+          <td>Erro de Tipo Essencial</td>
+          <td>Art. 20, caput</td>
+          <td>Sobre elemento constitutivo do tipo</td>
+          <td style="color:var(--green-accent);font-weight:700;">SIM</td>
+          <td>Exclui dolo</td>
+          <td style="color:var(--green-accent);font-weight:700;">Atípico</td>
+          <td style="color:var(--red-accent);">Crime culposo (se previsto)</td>
+        </tr>
+        <tr>
+          <td>Descriminante Putativa Factual</td>
+          <td>Art. 20, §1.º</td>
+          <td>Sobre fatos da excludente de ilicitude</td>
+          <td style="color:var(--green-accent);font-weight:700;">SIM</td>
+          <td>Exclui dolo (teoria limitada)</td>
+          <td style="color:var(--green-accent);font-weight:700;">Isento de pena</td>
+          <td style="color:var(--red-accent);">Crime culposo (se previsto)</td>
+        </tr>
+        <tr class="hl4">
+          <td>Descriminante Putativa Normativa</td>
+          <td>Art. 21 CP</td>
+          <td>Sobre limites normativos da excludente</td>
+          <td style="color:var(--red-accent);font-weight:700;">NÃO</td>
+          <td>Exclui/atenua culpabilidade</td>
+          <td style="color:var(--green-accent);font-weight:700;">Isento de pena</td>
+          <td style="color:var(--red-accent);">Crime doloso com pena atenuada</td>
+        </tr>
+        <tr class="hl3">
+          <td>Erro sobre a Pessoa</td>
+          <td>Art. 20, §3.º</td>
+          <td>Confunde identidade da vítima (erro mental)</td>
+          <td style="color:var(--red-accent);font-weight:700;">NÃO</td>
+          <td>Sem isenção; qualidades da vítima visada</td>
+          <td colspan="2" style="color:var(--red-accent);font-weight:700;">Responde como se atingida a vítima visada</td>
+        </tr>
+        <tr>
+          <td>Erro na Execução (só atinge diversa)</td>
+          <td>Art. 73 CP</td>
+          <td>Erra pontaria (erro físico)</td>
+          <td style="color:var(--red-accent);font-weight:700;">NÃO</td>
+          <td>Aplica §3.º do art. 20: qualidades da vítima visada</td>
+          <td colspan="2" style="color:var(--red-accent);">Crime doloso — considera vítima visada</td>
+        </tr>
+        <tr class="hl5">
+          <td>Erro na Execução (atinge ambas)</td>
+          <td>Art. 73 + Art. 70 CP</td>
+          <td>Erra pontaria e atinge ambas</td>
+          <td style="color:var(--red-accent);font-weight:700;">NÃO</td>
+          <td>Concurso formal de crimes</td>
+          <td colspan="2" style="color:var(--red-accent);">Doloso (vítima visada) + Culposo (vítima diversa) — concurso formal</td>
+        </tr>
+        <tr>
+          <td>Aberratio criminis</td>
+          <td>Art. 74 CP</td>
+          <td>Atinge coisa/bem ao invés de pessoa (ou vice-versa)</td>
+          <td style="color:var(--red-accent);font-weight:700;">NÃO para o crime base</td>
+          <td>Responde pelo resultado produzido</td>
+          <td colspan="2" style="color:var(--red-accent);">Crime culposo pelo resultado diverso (se previsto em lei)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="alert alert-red mt2">
+    <div class="alert-icon">🔴</div>
+    <div><strong>Resumo Mnemônico para o Exame:</strong><br>
+    <strong>Art. 20, caput:</strong> Erro sobre ELEMENTO DO TIPO → Exclui dolo → Inevitável: atípico | Evitável: culposo (se previsto)<br>
+    <strong>Art. 20, §1.º:</strong> Erro sobre FATOS da excludente → Exclui dolo → Inevitável: isento | Evitável: culposo<br>
+    <strong>Art. 20, §2.º:</strong> Terceiro causa o erro → Terceiro responde como autor mediato<br>
+    <strong>Art. 20, §3.º:</strong> Confunde IDENTIDADE da vítima → Crime doloso → Qualidades da vítima VISADA<br>
+    <strong>Art. 21 CP:</strong> Erro sobre NORMA/ILICITUDE → Não exclui dolo → Exclui/atenua culpabilidade<br>
+    <strong>Art. 73 CP:</strong> Erra PONTARIA → Se só diversa: §3.º do art. 20 | Se ambas: concurso formal (art. 70)</div>
+  </div>
+</section>
+
+<!-- 11. EXEMPLOS PRÁTICOS -->
+<section class="section" id="exemplos">
+  <div class="section-header">
+    <div class="section-num">11</div>
+    <div class="section-title"><span>Casos Concretos Resolvidos</span>Exemplos Práticos do Art. 20 CP</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 1 — Caçador (Erro de Tipo Essencial)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A vai caçar em floresta e avista vulto se mexendo entre os arbustos. Julgando ser um animal, dispara. Na verdade era B, um caminhante com roupas camufladas que não emitia nenhum som identificador. B morre.</p>
+      <div class="ex-calc">ANÁLISE — ART. 20, CAPUT CP:
+
+Elemento do tipo: "alguém" (vítima humana) — elemento constitutivo
+do tipo penal de homicídio (art. 121 CP)
+
+A sabia que aquele vulto era uma pessoa? NÃO → ERRO DE TIPO
+→ Exclui o DOLO de homicídio
+
+O erro era inevitável ou evitável?
+→ Era de noite, floresta densa, roupas camufladas, sem sons
+→ Qualquer caçador diligente naquelas condições poderia errar?
+→ Cenário A (inevitável): SIM, qualquer pessoa erraria
+   → Erro INEVITÁVEL → Exclui dolo E culpa → ATÍPICO
+   → A não responde por nenhum crime
+
+→ Cenário B (evitável): A estava em área perto de trilha utilizada
+   por caminhantes e não checou se havia pessoas
+   → Homem médio teria verificado → Erro EVITÁVEL
+   → Exclui dolo → Mantém culpa
+   → Homicídio culposo (art. 121, §3.º CP) — previsto em lei ✅</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 2 — Erro sobre Coisa Alheia (Erro de Tipo Acidental)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A pega guarda-chuva em restaurante pensando ser o seu. Na saída, percebe que é de outra pessoa. Devolve imediatamente.</p>
+      <div class="ex-calc">ANÁLISE — ART. 20, CAPUT CP:
+
+Elemento do tipo de furto: "coisa alheia móvel" (art. 155 CP)
+
+A sabia que aquele guarda-chuva era de outra pessoa? NÃO
+→ Erro sobre elemento "alheia" do tipo de furto
+→ ERRO DE TIPO → Exclui o DOLO de furto
+
+O erro era inevitável ou evitável?
+→ Guarda-chuvas idênticos; A tinha um igual; confundiu
+→ Erro INEVITÁVEL → Atípico → A não responde por furto
+
+Mesmo que o erro fosse evitável:
+→ Furto CULPOSO — existe no CP? NÃO
+→ O art. 155 CP não prevê modalidade culposa
+→ Art. 18, §único CP: sem previsão de crime culposo → atípico
+
+RESULTADO: A não responde por nenhum crime
+→ Mesmo se o erro fosse evitável: furto culposo = inexistente ✅
+
+OBS: Situação diferente de quem age com dolo de furto —
+"pego este guarda-chuva, pode ser meu ou de outro, tanto faz"
+→ dolo eventual → furto doloso</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 3 — Legítima Defesa Putativa (§1.º)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A vê B correndo em sua direção às 3h da manhã, com objeto na mão e gritando. A imagina estar prestes a ser assaltado. A atira em B. Na verdade B era um corredor noturno e o objeto era um copo d'água.</p>
+      <div class="ex-calc">ANÁLISE — ART. 20, §1.º CP:
+
+A supôs estar diante de: agressão injusta, iminente, por parte de B
+→ Situação que, SE EXISTISSE, tornaria legítima a ação de A
+→ (Se B realmente fosse atacar: legítima defesa real — art. 23, II CP)
+
+É DESCRIMINANTE PUTATIVA:
+→ Erro factual sobre os pressupostos da legítima defesa
+
+Teoria Limitada da Culpabilidade (CP):
+→ Erro sobre FATOS da excludente → Art. 20, §1.º
+→ Exclui o DOLO de homicídio
+
+O erro era inevitável ou evitável?
+Cenário A — 3h da manhã, bairro violento, B gritava ameaças:
+→ Qualquer pessoa naquelas condições poderia interpretar assim
+→ Erro INEVITÁVEL (justificado pelas circunstâncias)
+→ ISENTO DE PENA (art. 20, §1.º, 1.ª parte)
+
+Cenário B — B estava iluminado, claramente em roupas esportivas,
+não proferiu nenhuma ameaça, mas A agiu com precipitação:
+→ Pessoa razoável perceberia a ausência de agressão
+→ Erro EVITÁVEL (erro culposo)
+→ CRIME CULPOSO → Homicídio culposo (art. 121, §3.º CP) ✅</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 4 — Erro sobre a Pessoa (§3.º) e Comparação com Aberratio Ictus</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A quer matar seu inimigo B. Dois cenários: (a) À noite, confunde C (vizinho) com B e mata C; (b) Mira em B corretamente mas erra a pontaria e mata C que estava ao lado.</p>
+      <div class="ex-calc">CENÁRIO A — ERROR IN PERSONA (art. 20, §3.º CP):
+A CONFUNDIU as identidades: pensava que C era B
+→ Erro MENTAL de identificação
+→ Não há erro de execução — a pontaria era perfeita
+
+Regra do §3.º: não isenta de pena
+→ Considera-se as qualidades da VÍTIMA VISADA (B)
+→ Se B fosse ascendente de A: aplica-se agravante do art. 61, II, "e"
+→ Crime doloso — A quis matar quem achava ser B
+
+RESPONDE POR: Homicídio doloso (art. 121 CP)
+com as qualidades de B (vítima que supôs ofender)
+
+CENÁRIO B — ABERRATIO ICTUS (art. 73 CP):
+A ERROU A PONTARIA — sabia que o alvo era B, não C
+→ Erro FÍSICO de execução (não confundiu identidades)
+→ A tinha dolo de matar B; errou e acertou C
+
+Regra: aplica-se o §3.º do art. 20 → qualidades da vítima visada (B)
+→ Crime doloso com qualidades de B
+
+SE ATINGISSE AMBOS (B e C):
+→ Art. 73 + Art. 70 CP: CONCURSO FORMAL
+→ Homicídio doloso de B + Homicídio culposo de C
+→ Pena do crime mais grave + 1/6 a 1/2 (art. 70 CP) ✅</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 12. JURISPRUDÊNCIA STF/STJ -->
+<section class="section" id="jurisprudencia">
+  <div class="section-header">
+    <div class="section-num">12</div>
+    <div class="section-title"><span>STF · STJ · Teses Consolidadas</span>Jurisprudência sobre o Art. 20 CP</div>
+  </div>
+
+  <div class="juris-grid">
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Erro de Tipo — Vedação à Responsabilidade Objetiva e Exigência de Dolo ou Culpa</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ aplica sistematicamente o art. 20 CP para afastar a responsabilidade penal objetiva: quando o agente age sem conhecimento de elemento essencial do tipo, não há dolo — o erro de tipo essencial exclui o dolo e, se inevitável, exclui também a culpa. O STJ exige que o MP comprove que o agente tinha consciência dos elementos constitutivos do tipo penal para condenação por crime doloso.</p>
+        <p class="mt1">Em crimes funcionais e administrativos (peculato, corrupção), o STJ aplica o art. 20 CP quando o réu demonstra desconhecimento de elemento normativo do tipo (ex.: desconhecer a natureza "pública" da função exercida) — se o erro era inevitável: atipicidade; se evitável: análise da culpa (se crime culposo previsto).</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Art. 20 CP — Erro de Tipo</span>
+          <span class="tag tag-gold">Exclui Dolo → Inevitável: Atípico</span>
+          <span class="tag tag-blue">Vedação à Resp. Objetiva</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Descriminante Putativa — Teoria Limitada da Culpabilidade Adotada</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ confirma que o CP de 1940 (reforma de 1984) adotou a <strong>teoria limitada da culpabilidade</strong> para as descriminantes putativas (art. 20, §1.º CP): o erro factual sobre os pressupostos de excludente de ilicitude (legítima defesa putativa, estado de necessidade putativo etc.) é tratado como erro de tipo — exclui o dolo e, se inevitável, isenta de pena; se evitável, resulta em crime culposo. O erro sobre os limites normativos das excludentes é tratado como erro de proibição (art. 21 CP).</p>
+        <p class="mt1">Em casos de legítima defesa putativa, o STJ analisa as circunstâncias do caso concreto para determinar se o erro era inevitável (absolvição) ou evitável (crime culposo). A intensidade do perigo imaginado, as condições do local, o comportamento da vítima são fatores analisados pelo STJ para essa determinação.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Teoria Limitada — Art. 20, §1.º</span>
+          <span class="tag tag-gold">Legítima Defesa Putativa</span>
+          <span class="tag tag-blue">Inevitável: Isento | Evitável: Culposo</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Legítima Defesa Putativa — Absolvição por Atipicidade × Inimputabilidade</div>
+      </div>
+      <div class="juris-body">
+        <p>O STF firmou que, nas descriminantes putativas inevitáveis (art. 20, §1.º CP — teoria limitada), o fundamento da absolvição é a <strong>atipicidade</strong> — não a excludente de culpabilidade. O agente é absolvido porque o fato é atípico (sem dolo, sem culpa), não porque é inimputável ou inculpável. Esta distinção tem importância processual: a absolvição por atipicidade (art. 386, III, CPP) é diferente da absolvição por excludente de culpabilidade (art. 386, VI, CPP) e tem efeitos distintos em ações civis e administrativas.</p>
+        <p class="mt1">Além disso, o STF reconhece que a avaliação da legítima defesa putativa é questão de mérito — que deve ser submetida ao Tribunal do Júri quando envolve crime doloso contra a vida. O juiz não pode absolver sumariamente por legítima defesa putativa na pronúncia — deve submeter ao Júri.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Absolvição por Atipicidade (Art. 386, III, CPP)</span>
+          <span class="tag tag-gold">Não por Culpabilidade</span>
+          <span class="tag tag-blue">Questão de Mérito — Júri</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Erro sobre Elemento Normativo do Tipo — Análise Caso a Caso</div>
+      </div>
+      <div class="juris-body">
+        <p>Em crimes com elementos normativos jurídicos (ex.: "funcionário público", "indevida", "sem justa causa"), o STJ analisa se o erro do agente sobre o conceito normativo constitui erro de tipo (art. 20 CP) ou erro de proibição (art. 21 CP). A distinção é: se o agente não sabia o que era "funcionário público" para fins penais → erro de tipo sobre elemento normativo. Se sabia que era funcionário público mas ignorava a proibição legal → erro de proibição.</p>
+        <p class="mt1">O STJ exige que o réu comprove de forma concreta o alegado desconhecimento — não basta mera alegação de ignorância. O juiz deve analisar as circunstâncias para verificar se o desconhecimento era real e se era inevitável ou evitável, orientando as consequências (atipicidade ou crime culposo).</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Elementos Normativos do Tipo</span>
+          <span class="tag tag-gold">Prova do Desconhecimento</span>
+          <span class="tag tag-blue">Erro de Tipo × Erro de Proibição</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Error in Persona (Art. 20, §3.º) — Qualidades da Vítima Visada; Irrelevância da Vítima Real</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ consolidou a aplicação do art. 20, §3.º CP: no erro sobre a pessoa (error in persona), o crime é doloso e o agente responde como se tivesse atingido a vítima que pretendia ofender, aplicando-se as qualidades desta, não da vítima real atingida. As qualidades da vítima efetivamente atingida são irrelevantes para a qualificação do crime e para a dosimetria em relação ao tipo qualificado.</p>
+        <p class="mt1">Implicação prática: se A queria matar seu pai B e, por confusão de identidade, mata C (desconhecido), A responde por homicídio com a agravante de relação de parentesco (art. 61, II, "e" CP), como se B (o pai) tivesse sido morto. O STJ rejeita que a identidade da vítima real (C) afaste as circunstâncias que o agente supôs presentes em B.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Error in Persona — Qualidades da Vítima Visada</span>
+          <span class="tag tag-gold">Vítima Real é Irrelevante</span>
+          <span class="tag tag-blue">Art. 20, §3.º — Crime Doloso Mantido</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Erro de Tipo × Erro de Proibição — Distinção e Consequências</div>
+      </div>
+      <div class="juris-body">
+        <p>O STF afirma a distinção capital: <strong>erro de tipo</strong> (art. 20 CP) recai sobre os elementos de fato do tipo penal — o agente não sabe o que está fazendo; exclui o dolo. <strong>Erro de proibição</strong> (art. 21 CP) recai sobre a consciência da ilicitude — o agente sabe o que está fazendo, mas não sabe que é proibido; não exclui o dolo, mas pode excluir ou atenuar a culpabilidade. Em crimes tributários, o STF tem analisado se o contribuinte que declara incorretamente agiu com erro de tipo (não sabia da obrigação tributária) ou com erro de proibição (sabia dos fatos mas ignorava a lei tributária).</p>
+        <p class="mt1">O STF reforça que a inversão desta distinção — tratar como erro de tipo o que é erro de proibição — pode gerar absolvição indevida por atipicidade quando o correto seria apenas atenuar a pena (culpabilidade diminuída). A distinção é, portanto, de extrema relevância prática nas sentenças e acórdãos.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Erro de Tipo → Exclui Dolo (Art. 20)</span>
+          <span class="tag tag-gold">Erro de Proibição → Exclui Culpabilidade (Art. 21)</span>
+          <span class="tag tag-blue">Distinção Capital — Alta Cobrança</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 13. DOUTRINA -->
+<section class="section" id="doutrina">
+  <div class="section-header">
+    <div class="section-num">13</div>
+    <div class="section-title"><span>Doutrina Nacional</span>Principais Posições sobre o Art. 20 CP</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cleber Masson — Direito Penal Esquematizado</div>
+      </div>
+      <div class="juris-body">
+        <p>Masson sistematiza o art. 20 CP com foco em concursos: apresenta os tipos de erro (essencial × acidental; evitável × inevitável) com tabelas claras. Adota a teoria limitada da culpabilidade para as descriminantes putativas: erro factual sobre excludente → art. 20, §1.º (erro de tipo); erro normativo → art. 21 (erro de proibição). Destaca como o mais cobrado em magistratura a distinção error in persona × aberratio ictus. Quanto ao §2.º (autoria mediata), Masson destaca que o instrumento não doloso pode responder por crime culposo se o erro era evitável. Quanto ao §3.º, Masson é preciso: as qualidades da vítima visada determinam a tipificação, as da vítima real são irrelevantes para o tipo penal aplicado.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cezar Roberto Bitencourt — Tratado de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Bitencourt aprofunda a análise dogmática do erro, distinguindo com precisão a teoria limitada da teoria extremada da culpabilidade. Defende a teoria limitada como a adotada pelo CP de 1940, mas faz crítica à sua inconsistência: a distinção entre erro factual e normativo sobre excludentes nem sempre é clara na prática. Para o erro de tipo essencial, Bitencourt detalha os elementos que podem ser objeto do erro (descritivos e normativos) e analisa o impacto no dolo natural vs. dolo normativo das diversas teorias penais. Quanto ao §3.º (error in persona), Bitencourt analisa os casos em que as qualidades da vítima visada agravam a situação do agente em relação à vítima real — e critica o que considera uma ficção jurídica: o agente responde por qualidades que a vítima real não possuía.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Rogério Greco — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Greco analisa o art. 20 CP sob perspectiva constitucional: o erro de tipo é expressão do princípio da culpabilidade — sem conhecimento dos elementos do tipo, não há dolo. Adota a teoria limitada da culpabilidade e analisa em profundidade as consequências do §1.º. Destaca que a reforma penal de 1984 foi deliberada em adotar a teoria limitada (não a extremada) — o próprio texto do §1.º revela isso ao prever "isenção de pena" (não apenas diminuição), equivalendo ao tratamento de erro de tipo. Quanto ao §3.º (error in persona), Greco faz observação importante: se as qualidades da vítima visada são desfavoráveis ao agente (agravantes), aplicam-se; mas se são favoráveis, devem igualmente beneficiar o agente — o §3.º não pode ser interpretado apenas para prejudicar.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Guilherme de Souza Nucci — Código Penal Comentado</div>
+      </div>
+      <div class="juris-body">
+        <p>Nucci comenta o art. 20 CP com foco forense: como o juiz deve aplicar o instituto na sentença. Destaca que o ônus de provar o erro de tipo é do réu (alegação de erro exclui dolo → presunção de inocência inverte o ônus?). Nucci entende que o réu deve ao menos tornar verossímil o erro; o MP deve provar o conhecimento dos elementos típicos para condenação dolosa. Analisa com detalhe o §1.º, distinguindo os requisitos do erro "plenamente justificado pelas circunstâncias" — não basta o erro subjetivo, é preciso que as circunstâncias objetivas justifiquem a suposição equivocada. Quanto ao §3.º, Nucci é cuidadoso: a regra deve ser aplicada tanto para prejudicar quanto para beneficiar o agente.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Controvérsia: Teoria Limitada × Extremada da Culpabilidade — Qual o CP Adotou?</div>
+      </div>
+      <div class="juris-body">
+        <p>A principal controvérsia sobre o art. 20 CP é qual teoria das descriminantes putativas o CP adotou:</p>
+        <ul class="mt1">
+          <li><strong>Posição A — Teoria Limitada (MAJORITÁRIA — Masson, Greco, Nucci, Capez, Bitencourt):</strong> O CP adotou a teoria limitada no §1.º do art. 20: erro factual → erro de tipo (art. 20, §1.º); erro normativo → erro de proibição (art. 21). Fundamento: o §1.º usa "isenção de pena" (tratamento idêntico ao erro de tipo que exclui culpa), não apenas "diminuição de pena" (que seria o efeito do erro de proibição evitável).</li>
+          <li><strong>Posição B — Teoria Extremada (minoritária — alguns finalistas ortodoxos):</strong> Toda descriminante putativa é erro de proibição — nunca exclui o dolo. Esta posição é incompatível com o texto expresso do §1.º do art. 20 CP, que prevê isenção de pena (não apenas diminuição).</li>
+          <li><strong>Para o concurso:</strong> Adote a teoria limitada como posição do CP. Mencione a teoria extremada para contexto doutrinário.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Fernando Capez — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Capez apresenta o art. 20 CP de forma didática, com esquemas voltados para concursos. Sistematiza os tipos de erro com exemplos práticos e tabelas comparativas. Adota a teoria limitada. Destaca o §3.º como um dos pontos mais cobrados — "a vítima virtual (a que o agente pretendia ofender) é que importa; a vítima real é irrelevante para o tipo". Analisa a distinção entre error in persona e aberratio ictus com exemplos práticos: no error in persona o agente não comete erro de execução — sua pontaria é correta, mas ele identificou errado a vítima; na aberratio ictus há falha na execução, não na identificação. Para o §2.º, Capez é didático ao explicar a autoria mediata: o terceiro que dolosamente determina o erro do instrumento é o único responsável pelo crime doloso.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 14. SISTEMÁTICA -->
+<section class="section" id="sistematica">
+  <div class="section-header">
+    <div class="section-num">14</div>
+    <div class="section-title"><span>Conexões Sistemáticas</span>Art. 20 CP na Sistemática do Código Penal</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔗 Artigos Diretamente Conectados ao Art. 20 CP</h3>
+      <ul>
+        <li><strong>Art. 18, I CP (Dolo):</strong> O art. 20, caput exclui o dolo — pressupõe que o dolo exige consciência dos elementos do tipo (art. 18, I). O erro de tipo é a negação do elemento cognitivo do dolo</li>
+        <li><strong>Art. 18, II CP (Culpa):</strong> O art. 20 caput permite a punição por culpa se o erro era evitável — conecta-se com o art. 18, II. O erro de tipo evitável é, em si, uma espécie de culpa (imprudência, negligência)</li>
+        <li><strong>Art. 18, §único CP (Excepcionalidade da culpa):</strong> Limitador essencial do art. 20 — mesmo com erro evitável, só há punição se existe previsão legal de crime culposo</li>
+        <li><strong>Art. 21 CP (Erro de Proibição):</strong> Complementar ao art. 20 — o que não é erro de tipo pode ser erro de proibição. A distinção é fundamental</li>
+        <li><strong>Art. 23 CP (Excludentes de ilicitude):</strong> O §1.º do art. 20 trata de erros sobre os pressupostos fáticos dessas excludentes — legítima defesa (art. 25), estado de necessidade (art. 24), estrito cumprimento do dever legal, exercício regular do direito</li>
+        <li><strong>Art. 29 CP (Concurso de pessoas):</strong> O §2.º do art. 20 é aplicação da autoria mediata — o terceiro que determina o erro responde como autor (não como partícipe) do crime</li>
+        <li><strong>Art. 65, III, "c" CP (Atenuante):</strong> Quando o erro de tipo evitável não exclui a pena (por ausência de tipo culposo previsto), a conduta culposa do agente pode ser considerada circunstância atenuante</li>
+        <li><strong>Art. 73 CP (Aberratio ictus):</strong> Complementar ao §3.º — ambos tratam de "erros sobre a vítima", mas de naturezas distintas; o art. 73 CP remete ao §3.º do art. 20 CP como regra de solução</li>
+        <li><strong>Art. 74 CP (Aberratio criminis):</strong> Completa o quadro dos erros acidentais — agente atinge bem jurídico diverso do pretendido</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📋 Erro de Tipo × Erro de Proibição — Distinção Definitiva</h3>
+      <div style="display:flex;flex-direction:column;gap:0.5rem;">
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);border-radius:0 4px 4px 0;padding:0.65rem 0.9rem;font-size:0.82rem;">
+          <strong style="color:var(--red-accent);">Erro de TIPO (Art. 20 CP):</strong><br>
+          "Eu não sabia O QUE estava fazendo" — erro sobre os FATOS<br>
+          O agente desconhece circunstância que integra o tipo objetivo<br>
+          Exclui o DOLO → Inevitável: atípico; Evitável: culposo (se previsto)
+        </div>
+        <div style="background:#edf2f8;border-left:3px solid var(--blue-accent);border-radius:0 4px 4px 0;padding:0.65rem 0.9rem;font-size:0.82rem;">
+          <strong style="color:var(--blue-accent);">Erro de PROIBIÇÃO (Art. 21 CP):</strong><br>
+          "Eu sabia o que estava fazendo, mas não sabia que era proibido" — erro sobre a NORMA<br>
+          O agente conhece os fatos, mas desconhece a ilicitude<br>
+          NÃO exclui o DOLO → Inevitável: isento de pena; Evitável: pena atenuada
+        </div>
+        <div style="background:var(--gold-pale);border:1px solid var(--gold);border-radius:6px;padding:0.65rem 0.9rem;font-size:0.82rem;">
+          <strong style="color:#7a5a00;">Exemplo Comparativo:</strong><br>
+          Erro de TIPO: A não sabe que a coisa é alheia → sem dolo de furto → art. 20<br>
+          Erro de PROIBIÇÃO: A sabe que a coisa é alheia, mas acha que pode pegar → art. 21
+        </div>
+      </div>
+      <div class="alert alert-navy mt2" style="font-size:0.8rem;">
+        <div>📌 <strong>A Frase Mágica para Distinguir:</strong> Erro de tipo = o agente não sabe o QUE faz. Erro de proibição = o agente sabe o QUE faz, mas não sabe que É ERRADO fazer. Esta distinção é a mais cobrada em concursos sobre os arts. 20 e 21 CP e deve ser dominada de forma automática.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-3 mt2">
+    <div class="card">
+      <h3>⚡ Art. 20 CP e o Processo Penal</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">O art. 20 CP tem importantes reflexos processuais:</p>
+      <ul class="mt1" style="font-size:0.84rem;">
+        <li><strong>Denúncia:</strong> O MP deve narrar os fatos que demonstram o conhecimento do agente sobre os elementos do tipo para fundamentar o dolo</li>
+        <li><strong>Instrução probatória:</strong> O réu que alega erro de tipo deve produzir prova (ou ao menos tornar verossímil) o desconhecimento; o MP deve provar o dolo</li>
+        <li><strong>Sentença (art. 386, III, CPP):</strong> Absolvição por atipicidade quando o erro de tipo inevitável exclui dolo e culpa</li>
+        <li><strong>Tribunal do Júri:</strong> Se há alegação de legítima defesa putativa, o Júri decide — o juiz não pode absolver sumariamente por descriminante putativa na pronúncia</li>
+        <li><strong>HC:</strong> Condenação com erro de tipo demonstrado nos autos pode ser corrigida por habeas corpus (constrangimento ilegal)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🔄 Resumo Mnemônico para Prova</h3>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.82rem;line-height:1.85;">
+        <p><strong style="color:var(--gold-light);">Erro de TIPO (Art. 20, caput):</strong><br>
+        Inevitável → Exclui dolo E culpa → ATÍPICO<br>
+        Evitável → Exclui dolo → CULPOSO (se previsto)<br>
+        Evitável s/ tipo culposo → ATÍPICO</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.5rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">§1.º — Descriminante Putativa:</strong><br>
+        Erro factual → Art. 20, §1.º → Idem caput<br>
+        Erro normativo → Art. 21 → Culpabilidade</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.5rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">§3.º — Error in persona:</strong><br>
+        Confunde identidade → Crime doloso<br>
+        Qualidades da VÍTIMA VISADA</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.5rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Erro tipo × Proibição:</strong><br>
+        Tipo: "não sei O QUE faço"<br>
+        Proibição: "sei o que faço, mas não sei que É ERRADO"</p>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📅 Qualidades da Vítima: §3.º — Quando Agravam e quando Beneficiam</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">O §3.º do art. 20 CP é bilateral — considera-se as qualidades da vítima visada tanto para agravar quanto para beneficiar:</p>
+      <ul class="mt1" style="font-size:0.84rem;">
+        <li><strong>Qualidade agravante (prejudica o agente):</strong> A queria matar seu pai B; confundiu com C (desconhecido) → responde com agravante de parentesco (art. 61, II, "e" CP) — como se B (o pai) fosse a vítima</li>
+        <li><strong>Qualidade atenuante (beneficia o agente):</strong> A queria matar C (agressor que o ameaçou); confundiu com B (inocente) → benefício: se C tivesse provocado A, pode influenciar na dosimetria</li>
+        <li><strong>Qualificadora:</strong> Se a vítima visada tinha qualidade que qualifica o crime, aplica-se a qualificadora mesmo que a vítima real não a tenha — e vice-versa</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROVA / ENAM -->
+<section id="prova" class="prova-section">
+  <h2>⚖️ Pontos Cobrados em Magistratura e ENAM</h2>
+  <p class="intro">Questões, teses e pegadinhas recorrentes nos concursos de Juiz de Direito, ENAM e equivalentes relacionadas ao Art. 20 CP.</p>
+
+  <div class="prova-items">
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">01</span>O que é erro de tipo? Quais suas espécies e consequências jurídicas?</div>
+      <div class="prova-item-a">O <strong>erro de tipo</strong> (art. 20 CP) ocorre quando o agente tem falsa percepção ou ignora circunstância que integra o tipo penal objetivo — elemento que, se conhecido, caracterizaria o crime. Por ausência do elemento cognitivo do dolo, o erro de tipo exclui sempre o dolo. Espécies e consequências: <strong>(1) Erro Inevitável (escusável):</strong> que nenhuma pessoa diligente, nas mesmas circunstâncias, teria evitado. Consequência: exclui dolo E culpa → fato atípico. <strong>(2) Erro Evitável (inescusável):</strong> que qualquer pessoa razoável, com o cuidado exigível, teria percebido. Consequência: exclui o dolo, mantém a culpa → crime culposo, SE expressamente previsto em lei (art. 18, §único CP). Se o crime não tem modalidade culposa: fato atípico mesmo com erro evitável.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">02</span>Qual a diferença entre erro de tipo (art. 20 CP) e erro de proibição (art. 21 CP)?</div>
+      <div class="prova-item-a">A distinção é a mais cobrada em magistratura sobre os arts. 20 e 21 CP. <strong>Erro de tipo (art. 20 CP):</strong> O agente desconhece os FATOS — não sabe o que está fazendo. Ele não conhece circunstância que integra o tipo penal objetivo. <em>"Não sabia que a coisa era alheia"</em>. Consequência: EXCLUI O DOLO. Se inevitável: fato atípico. Se evitável: crime culposo (se previsto em lei). <strong>Erro de proibição (art. 21 CP):</strong> O agente conhece todos os FATOS, mas desconhece a ILICITUDE — não sabe que sua conduta é proibida. <em>"Sabia que a coisa era alheia, mas achava que podia pegar"</em>. Consequência: NÃO EXCLUI O DOLO — o agente sabia o que fazia. Exclui ou atenua a culpabilidade: se inevitável: isento de pena; se evitável: pena atenuada (art. 21, §único CP). <strong>Frase mnemônica:</strong> Tipo = "não sei O QUE faço". Proibição = "sei o que faço, mas não sei que É ERRADO".</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">03</span>O agente comete furto acreditando que a coisa é sua (engano). Qual o instituto aplicável e as consequências?</div>
+      <div class="prova-item-a"><strong>Erro de tipo sobre elemento "coisa alheia" do furto (art. 20, caput CP).</strong> O elemento constitutivo do tipo de furto (art. 155 CP) é "coisa alheia móvel" — se o agente acredita que a coisa é sua, há erro sobre o elemento "alheia" do tipo → ERRO DE TIPO → exclui o dolo de furto. Análise da inevitabilidade: se o erro era inevitável (ex.: coisa idêntica à sua, mesmo local, confusão justificável) → atípico → sem crime. Se o erro era evitável (ex.: deveria ter verificado com mais cuidado) → exclui dolo → mantém culpa. Mas: FURTO CULPOSO EXISTE NO CP? NÃO — o art. 155 CP não prevê modalidade culposa. Logo: mesmo com erro evitável, sem previsão de crime culposo (art. 18, §único CP) → FATO ATÍPICO. Conclusão: em qualquer hipótese (erro inevitável ou evitável), se havia genuíno engano sobre a propriedade da coisa → sem crime de furto.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">04</span>Qual teoria sobre as descriminantes putativas o CP brasileiro adotou? Explique suas consequências.</div>
+      <div class="prova-item-a">O CP brasileiro adotou a <strong>teoria limitada da culpabilidade</strong> (art. 20, §1.º CP — Reforma Penal de 1984). Segundo essa teoria: (a) Erro sobre os FATOS (pressupostos fáticos da excludente de ilicitude) → tratado como erro de tipo (art. 20, §1.º CP) → exclui o dolo → se inevitável: isento de pena; se evitável: crime culposo. (b) Erro sobre os LIMITES NORMATIVOS da excludente → erro de proibição (art. 21 CP) → não exclui o dolo; exclui/atenua culpabilidade. Exemplo de cada: <strong>Erro factual (§1.º):</strong> A imagina erroneamente estar sendo agredido → se justificado pelas circunstâncias e inevitável: isento. <strong>Erro normativo (art. 21):</strong> A conhece os fatos mas entende erroneamente que a lei permite reagir com força desproporcional → erro de proibição → crime doloso com pena atenuada. A teoria extremada (que trata toda descriminante putativa como erro de proibição) NÃO foi adotada pelo CP.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">05</span>Qual a diferença entre error in persona (art. 20, §3.º CP) e aberratio ictus (art. 73 CP)?</div>
+      <div class="prova-item-a">Distinção crucial e altamente cobrada. <strong>Error in persona (art. 20, §3.º CP):</strong> Erro MENTAL de identificação — o agente confunde quem é a vítima. A execução é perfeita; o problema é que o agente acreditava que a pessoa era outra. <em>Ex.: A quer matar B; à noite confunde C com B e mata C.</em> Não há erro de execução. <strong>Aberratio ictus (art. 73 CP):</strong> Erro FÍSICO de execução — o agente sabe quem é o alvo, mas erra a pontaria (por acidente ou falha no meio). <em>Ex.: A mira em B (sabe quem é B), erra o tiro e acerta C ao lado.</em> <strong>Consequências distintas:</strong> Error in persona: aplica-se o §3.º do art. 20 → qualidades da vítima visada. Aberratio ictus (só atinge diversa): igual ao §3.º → qualidades da vítima visada. Aberratio ictus (atinge ambas): art. 70 CP → concurso formal (crime doloso para a pretendida + culposo para a diversa). O error in persona nunca gera concurso formal; a aberratio ictus pode gerá-lo.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">06</span>A quem se aplica o §3.º do art. 20 CP? Se A queria matar B (pai) e confundiu com C (desconhecido), qual o crime e qual a pena?</div>
+      <div class="prova-item-a"><strong>Aplicação do §3.º do art. 20 CP:</strong> O §3.º prevê que o erro sobre a pessoa não isenta de pena. Considera-se as qualidades da <strong>vítima que o agente supôs ofender</strong> (a vítima visada — B), não as da vítima efetivamente atingida (C). <strong>Análise do caso:</strong> A queria matar B (seu pai). Por confusão de identidade, mata C (desconhecido). O crime praticado é doloso (havia intenção de matar B). As qualidades de B (ascendente de A) é que importam. <strong>Crime imputado:</strong> Homicídio doloso com a agravante de relação de parentesco (art. 61, II, "e" CP — crime cometido contra ascendente). As qualidades de C (vítima real — desconhecido) são irrelevantes para a qualificação. <strong>Consequência paradoxal:</strong> A responde com a agravante que se aplicaria se tivesse matado B — mesmo tendo matado C (que nada tinha a ver). Este é o efeito da ficção jurídica do §3.º: considera-se como se a vítima visada (com suas qualidades) tivesse sido efetivamente ofendida.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">07</span>O que é descriminante putativa? Quando isenta de pena e quando resulta em crime culposo?</div>
+      <div class="prova-item-a"><strong>Descriminante putativa</strong> é a causa imaginária de justificação — o agente acredita, erroneamente, estar amparado por excludente de ilicitude (legítima defesa, estado de necessidade, estrito cumprimento do dever legal, exercício regular do direito), quando na verdade a situação justificante não existe. Ex.: legítima defesa putativa — A imagina estar sendo agredido, mas não há agressão real. <strong>Quando isenta de pena (art. 20, §1.º, 1.ª parte):</strong> O erro era plenamente justificado pelas circunstâncias (inevitável) — qualquer pessoa razoável, naquelas condições, teria acreditado estar diante de situação justificante → isento de pena. <strong>Quando resulta em crime culposo (art. 20, §1.º, 2.ª parte):</strong> O erro deriva de culpa (era evitável — com mais cuidado, perceberia que não havia situação justificante) e o fato é punível como crime culposo → responde por crime culposo. Ex.: A, com mais atenção, teria percebido que B não representava perigo → culpa → homicídio culposo.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">08</span>Um enfermeiro aplica medicamento letal em paciente porque o médico lhe entregou como se fosse medicamento comum. O médico sabia do veneno. Qual o crime de cada um?</div>
+      <div class="prova-item-a"><strong>Análise — Art. 20, §2.º CP (Erro Determinado por Terceiro):</strong> <strong>Enfermeiro (instrumento):</strong> Agiu em erro de tipo (não sabia que era veneno — erro sobre elemento constitutivo: a substância letal). Se o erro era inevitável (como parece — qualquer enfermeiro naquela situação confiaria no médico): erro de tipo inevitável → atípico → sem responsabilidade penal. Se havia circunstâncias que tornariam o erro evitável (ex.: odor, cor suspeitos que deveria ter verificado): erro de tipo evitável → crime culposo de homicídio (art. 121, §3.º CP). <strong>Médico (terceiro que determinou o erro):</strong> Art. 20, §2.º CP — "Responde pelo crime o terceiro que determina o erro." O médico dolosamente provocou o erro do instrumento (enfermeiro) → autor mediato do crime. Responde por <strong>homicídio doloso consumado (art. 121 CP)</strong> como autor mediato. O médico usou o enfermeiro como instrumento não doloso — autoria mediata. Pena: 6 a 20 anos.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">09</span>Erro de tipo evitável sobre elemento de crime sem previsão culposa — qual a consequência?</div>
+      <div class="prova-item-a"><strong>Fato atípico — sem punição.</strong> Se o erro é evitável (culposo), o art. 20 CP exclui o dolo e mantém a culpa. Entretanto, o art. 18, §único CP estabelece a regra da excepcionalidade: <em>"Salvo os casos expressos em lei, ninguém pode ser punido por fato previsto como crime, se o praticou culposamente."</em> Portanto, mesmo com culpa (erro evitável), se o crime não tem modalidade culposa expressamente prevista em lei → sem crime culposo → fato atípico. <strong>Exemplos de crimes sem previsão culposa:</strong> Furto culposo (art. 155 não prevê) → erro evitável sobre "coisa alheia" → atípico. Estelionato culposo → atípico. Roubo culposo → atípico. <strong>Exemplos de crimes COM previsão culposa:</strong> Homicídio culposo (art. 121, §3.º) → erro evitável sobre "pessoa" no caçador → homicídio culposo. Esta é uma das pegadinhas mais cobradas sobre o art. 20 CP em magistratura: o candidato deve sempre verificar se o crime tem modalidade culposa antes de concluir que há punição.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">10</span>[ENAM — alta recorrência] Classifique os institutos: (a) A atira em quem pensa ser B (seu inimigo) mas era C; (b) A mira em B corretamente mas erra a pontaria e acerta C ao lado; (c) A imagina que está sendo atacado e dispara, mas não havia agressão alguma; (d) A usa substância que desconhecia ser venenosa para envenenar B.</div>
+      <div class="prova-item-a"><strong>(a) Error in persona (art. 20, §3.º CP):</strong> A confundiu a identidade — erro MENTAL. Execução perfeita, identificação errada. Crime doloso; qualidades da vítima visada (B) determinam a tipificação. Sem isenção de pena. <strong>(b) Aberratio ictus (art. 73 CP) — atingiu só C:</strong> A sabia que o alvo era B; errou a pontaria (erro FÍSICO de execução). Atinge C, não atinge B. → Aplica-se art. 73 + §3.º do art. 20: qualidades da vítima visada (B); crime doloso. <em>Se atingisse ambos: concurso formal (art. 70 CP).</em> <strong>(c) Legítima defesa putativa — Descriminante Putativa (art. 20, §1.º CP):</strong> Erro factual sobre pressupostos fáticos de excludente de ilicitude. Teoria limitada. Se inevitável: isento de pena. Se evitável: crime culposo (homicídio culposo — art. 121, §3.º CP). <strong>(d) Erro de tipo essencial sobre substância (art. 20, caput CP):</strong> Elemento do tipo: "veneno" ou "substância letal". A não sabia que era veneno → erro de tipo. Se inevitável: atípico. Se evitável: culposo (homicídio culposo, art. 121, §3.º CP, se previsto em lei — e está).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">11</span>O erro sobre qualificadoras exclui o tipo penal ou apenas a qualificadora?</div>
+      <div class="prova-item-a">O erro sobre qualificadoras (circunstâncias agravantes do tipo) é modalidade de <strong>erro acidental</strong> — exclui apenas a qualificadora, não o tipo penal básico. <strong>Fundamento:</strong> O erro acidental não recai sobre elemento constitutivo essencial do tipo (que definiria a conduta criminosa básica), mas sobre circunstâncias que qualificam o crime já existente. Portanto: (a) o crime base persiste (com dolo); (b) a qualificadora é afastada (o agente não tinha consciência da circunstância qualificante). <strong>Exemplos:</strong> A agride B sem saber que B é seu filho adotivo (não tem conhecimento da relação de parentesco que qualificaria o crime de lesão) → crime de lesão corporal (art. 129, caput CP) sem a qualificadora; a qualificadora de parentesco não se aplica por falta de dolo sobre esse elemento. A furta B sem saber que o bem tem valor sentimental especial para B → sem qualificadora relacionada a esse valor. O erro sobre a qualificadora é tratado como modalidade do erro de tipo — mas de efeitos parciais: afasta apenas o qualificador, não o tipo base doloso.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">12</span>O §1.º do art. 20 CP fala em "erro plenamente justificado pelas circunstâncias". O que isso significa e qual o critério para verificá-lo?</div>
+      <div class="prova-item-a">A expressão <strong>"plenamente justificado pelas circunstâncias"</strong> do art. 20, §1.º CP define o <strong>critério de inevitabilidade</strong> para as descriminantes putativas — equivale ao que, no caput, seria o "erro inevitável". Significa que o erro factual sobre os pressupostos da excludente era objetivamente justificável — não apenas subjetivamente, mas também objetivamente: qualquer pessoa razoável, naquelas circunstâncias, poderia ter suposto estar diante da situação justificante. <strong>Critério para verificar:</strong> (1) Analisa-se as circunstâncias externas do caso concreto — o contexto fático que o agente percebia; (2) Pergunta-se: um homem médio, diligente, naquelas mesmas circunstâncias externas, também suporia estar diante de situação justificante? (3) Se SIM: erro "plenamente justificado" → inevitável → isenção de pena. (4) Se NÃO: o homem médio perceberia a ausência da situação justificante → erro evitável → não "plenamente justificado" → crime culposo. O critério é OBJETIVO (não basta a crença subjetiva do agente — as circunstâncias devem justificar o erro para qualquer observador razoável).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">13</span>[ENAM — questão integrada] A, policial, em patrulhamento noturno, avista B correndo com objeto reluzente na mão em bairro de alta criminalidade. A dispara, achando que B ia sacar uma arma. B era um médico que corria para atender emergência com estetoscópio na mão. Analise o crime de A.</div>
+      <div class="prova-item-a"><strong>Análise completa — Art. 20, §1.º CP (Legítima Defesa Putativa):</strong> A supôs equivocadamente estar diante de agressão iminente → situação que, SE EXISTISSE, tornaria legítima a ação → descriminante putativa factual (erro sobre os pressupostos fáticos da legítima defesa). <strong>Teoria limitada da culpabilidade:</strong> Erro factual → art. 20, §1.º → exclui dolo. <strong>O erro era inevitável ou evitável?</strong> Fatores a considerar: noite, bairro de alta criminalidade, suspeito correndo, objeto reluzente. Cenário 1 (inevitável — "plenamente justificado"): Naquelas condições específicas, qualquer policial razoável teria a mesma suposição → erro inevitável → ISENTO DE PENA (art. 20, §1.º, 1.ª parte). Cenário 2 (evitável): A não anunciou sua presença, não pediu que B parasse, reagiu precipitadamente sem esgotar outras alternativas (imprudência) → erro evitável → HOMICÍDIO CULPOSO (art. 121, §3.º CP + art. 302, §único, I, CTB se em serviço com veículo?). Para prova: a maioria das bancas entende que circunstâncias de bairro violento + noite + corrida com objeto → erro plenamente justificado → isenção de pena. Mas questões dissertativas exigem apresentar ambas as hipóteses.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">14</span>Existe erro de tipo sobre elementos normativos do tipo penal? Exemplifique.</div>
+      <div class="prova-item-a"><strong>Sim, existe.</strong> Os elementos normativos do tipo são aqueles que exigem um juízo valorativo (jurídico ou social) para serem compreendidos — ex.: "funcionário público", "coisa alheia", "indevida", "sem justa causa". O erro sobre elementos normativos jurídicos pode configurar erro de tipo se o agente desconhecia o significado jurídico do elemento. <strong>Exemplos:</strong> (1) Agente que pratica peculato não sabendo que sua função caracteriza "funcionário público" para fins penais → erro de tipo sobre elemento normativo jurídico "funcionário público" → exclui dolo do peculato. (2) Agente que toma bem pensando ter justa causa (autorização) → erro sobre "sem justa causa" → erro de tipo. (3) Agente que recebe vantagem achando que é devida → erro sobre "indevida" no crime de corrupção passiva → erro de tipo. <strong>Importante:</strong> O erro sobre elemento normativo deve ser real — não basta alegar desconhecimento genérico do direito (que seria erro de proibição). O agente deve desconhecer os FATOS que compõem o elemento normativo (ex.: não saber que a função que exerce é pública) — e não a norma que os qualifica.</div>
+    </div>
+
+  </div>
+</section>
+
+</div><!-- /page-wrap -->
+
+<footer>
+  <strong>Art. 20.º do Código Penal Brasileiro</strong> — Decreto-Lei n.º 2.848/1940<br>
+  Material elaborado para preparação à Magistratura / ENAM · Doutrina e jurisprudência consolidadas · Atualizado 2025
+</footer>
+
+</body>
+</html>
