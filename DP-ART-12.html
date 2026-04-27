@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 12º CP — Subsidiariedade das Regras Gerais | Magistratura ENAM</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a;
+    --navy-mid: #1a2f45;
+    --navy-light: #243b55;
+    --gold: #c8960c;
+    --gold-light: #e8b84b;
+    --gold-pale: #fdf3d8;
+    --cream: #faf7f2;
+    --cream-mid: #f0ebe2;
+    --text-dark: #1a1208;
+    --text-mid: #3d3020;
+    --text-soft: #6b5c40;
+    --border: #d4c49a;
+    --border-light: #e8dcbf;
+    --red-accent: #8b1a1a;
+    --green-accent: #1a4a2e;
+    --blue-accent: #1a3a5c;
+    --purple-accent: #4a1a5c;
+    --shadow: 0 4px 24px rgba(13,27,42,0.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Source Serif 4', Georgia, serif; background: var(--cream); color: var(--text-dark); font-size: 15px; line-height: 1.75; }
+
+  /* ── NAV ── */
+  #top-nav {
+    position: sticky; top: 0; z-index: 999;
+    background: var(--navy); border-bottom: 3px solid var(--gold);
+    padding: 0 1.5rem; display: flex; align-items: center; gap: 0;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  #top-nav::-webkit-scrollbar { display: none; }
+  #top-nav .nav-brand {
+    font-family: 'Playfair Display', serif; color: var(--gold-light);
+    font-size: 0.9rem; font-weight: 700; white-space: nowrap;
+    padding: 0.85rem 1.2rem 0.85rem 0;
+    border-right: 1px solid rgba(200,150,12,0.3); margin-right: 0.5rem; letter-spacing: 0.5px;
+  }
+  #top-nav a {
+    color: rgba(255,255,255,0.75); text-decoration: none;
+    font-size: 0.72rem; font-family: 'Source Serif 4', serif;
+    font-weight: 600; letter-spacing: 0.6px; text-transform: uppercase;
+    padding: 0.85rem 0.8rem; white-space: nowrap;
+    transition: color .2s; border-bottom: 3px solid transparent; margin-bottom: -3px;
+  }
+  #top-nav a:hover { color: var(--gold-light); border-bottom-color: var(--gold); }
+
+  /* ── HERO ── */
+  #hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1e3d5c 100%);
+    color: white; padding: 3.5rem 2rem 3rem;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  #hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: repeating-linear-gradient(45deg,
+      rgba(200,150,12,0.03) 0px, rgba(200,150,12,0.03) 1px,
+      transparent 1px, transparent 40px);
+  }
+  #hero .badge {
+    display: inline-block; background: rgba(200,150,12,0.15);
+    border: 1px solid rgba(200,150,12,0.5); color: var(--gold-light);
+    font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase;
+    padding: 0.35rem 1rem; border-radius: 2px; margin-bottom: 1.2rem;
+    font-family: 'Source Serif 4', serif; font-weight: 600;
+  }
+  #hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 0.6rem; letter-spacing: -0.5px; }
+  #hero h1 span { color: var(--gold-light); }
+  #hero .subtitle { font-size: 1rem; color: rgba(255,255,255,0.65); font-style: italic; margin-bottom: 1.5rem; }
+  #hero .law-box {
+    display: inline-block; background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(200,150,12,0.4); border-left: 4px solid var(--gold);
+    color: rgba(255,255,255,0.9); font-family: 'Source Serif 4', serif;
+    font-size: 0.95rem; font-style: italic; padding: 1rem 1.5rem;
+    max-width: 780px; text-align: left; line-height: 1.7; border-radius: 0 4px 4px 0;
+  }
+  #hero .law-box strong { color: var(--gold-light); font-style: normal; display: block; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.4rem; }
+
+  /* ── LAYOUT ── */
+  .page-wrap { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+  /* ── SECTIONS ── */
+  .section { margin-top: 3.5rem; scroll-margin-top: 56px; }
+  .section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--border); }
+  .section-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--border); line-height: 1; min-width: 2.5rem; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; color: var(--navy); line-height: 1.2; }
+  .section-title span { display: block; font-size: 0.75rem; font-family: 'Source Serif 4', serif; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-style: normal; }
+
+  /* ── CARDS ── */
+  .card { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 1.4rem 1.6rem; box-shadow: var(--shadow); }
+  .card-grid { display: grid; gap: 1rem; }
+  .card-grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .card-grid-2 { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+  .card h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.6rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-light); }
+  .card p, .card li { font-size: 0.88rem; line-height: 1.7; color: var(--text-mid); }
+  .card ul { padding-left: 1.1rem; }
+  .card li { margin-bottom: 0.3rem; }
+
+  /* Elemento cards */
+  .elem-card { border-top: 4px solid; }
+  .elem-regras  { border-top-color: var(--blue-accent); }
+  .elem-lei     { border-top-color: var(--green-accent); }
+  .elem-excecao { border-top-color: var(--red-accent); }
+  .elem-regras h3  { color: var(--blue-accent); }
+  .elem-lei h3     { color: var(--green-accent); }
+  .elem-excecao h3 { color: var(--red-accent); }
+
+  /* ── FLOWCHART ── */
+  .flow-wrap { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 2rem 1.5rem; box-shadow: var(--shadow); overflow-x: auto; }
+  .flow-center { display: flex; flex-direction: column; align-items: center; gap: 0; }
+  .flow-node { border-radius: 4px; padding: 0.65rem 1.4rem; font-family: 'Source Serif 4', serif; font-size: 0.82rem; font-weight: 600; text-align: center; min-width: 220px; max-width: 500px; }
+  .flow-start { background: var(--navy); color: white; border-radius: 50px; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; }
+  .flow-end   { background: var(--gold); color: var(--navy); border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-box-navy   { background: var(--navy-mid); color: white; border-left: 4px solid var(--gold); font-size: 0.8rem; }
+  .flow-box-green  { background: #edf7f0; border: 1px solid #7ec89a; border-left: 4px solid var(--green-accent); color: var(--text-dark); }
+  .flow-box-blue   { background: #edf2f8; border: 1px solid #8eb4d8; border-left: 4px solid var(--blue-accent); color: var(--text-dark); }
+  .flow-box-red    { background: #fdf0f0; border: 1px solid #e09090; border-left: 4px solid var(--red-accent); color: var(--text-dark); }
+  .flow-box-gold   { background: var(--gold-pale); border: 2px solid var(--gold); color: var(--text-dark); }
+  .flow-box-purple { background: #f3eef8; border: 1px solid #b89dd8; border-left: 4px solid var(--purple-accent); color: var(--text-dark); }
+  .flow-arrow { font-size: 1.3rem; color: var(--border); line-height: 1; margin: 0.15rem 0; }
+  .flow-row { display: flex; align-items: flex-start; gap: 1.5rem; width: 100%; justify-content: center; flex-wrap: wrap; }
+  .flow-branch { display: flex; flex-direction: column; align-items: center; gap: 0; flex: 1; min-width: 190px; }
+  .flow-label { font-size: 0.68rem; color: var(--text-soft); font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; background: var(--cream-mid); padding: 0.15rem 0.5rem; border-radius: 2px; margin: 0.15rem 0; }
+  .flow-connector-line { width: 1px; height: 28px; background: var(--border); }
+
+  /* ── TABLE ── */
+  .comp-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; background: white; box-shadow: var(--shadow); border-radius: 6px; overflow: hidden; }
+  .comp-table thead { background: var(--navy); color: white; }
+  .comp-table thead th { padding: 0.85rem 1rem; font-family: 'Source Serif 4', serif; font-weight: 600; letter-spacing: 0.5px; font-size: 0.8rem; text-align: left; }
+  .comp-table thead th:first-child { color: var(--gold-light); }
+  .comp-table tbody tr { border-bottom: 1px solid var(--border-light); }
+  .comp-table tbody tr:last-child { border-bottom: none; }
+  .comp-table tbody tr:nth-child(even) { background: var(--cream); }
+  .comp-table td { padding: 0.75rem 1rem; color: var(--text-mid); vertical-align: top; }
+  .comp-table td:first-child { font-weight: 600; color: var(--navy); white-space: nowrap; font-size: 0.8rem; }
+  .comp-table .hl  td { background: var(--gold-pale) !important; }
+  .comp-table .hl2 td { background: #edf7f0 !important; }
+  .comp-table .hl3 td { background: #edf2f8 !important; }
+  .comp-table .hl4 td { background: #fdf0f0 !important; }
+
+  /* ── JURIS ── */
+  .juris-card { background: white; border: 1px solid var(--border-light); border-left: 5px solid; border-radius: 0 6px 6px 0; padding: 1.2rem 1.4rem; box-shadow: var(--shadow); }
+  .juris-card.stf { border-left-color: var(--red-accent); }
+  .juris-card.stj { border-left-color: var(--navy); }
+  .juris-card.doutrina { border-left-color: var(--gold); }
+  .juris-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
+  .juris-badge { font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 2px; font-family: 'Source Serif 4', serif; }
+  .juris-badge.stf     { background: var(--red-accent); color: white; }
+  .juris-badge.stj     { background: var(--navy); color: white; }
+  .juris-badge.doutrina{ background: var(--gold); color: var(--navy); }
+  .juris-badge.sumula  { background: var(--green-accent); color: white; }
+  .juris-badge.tese    { background: var(--blue-accent); color: white; }
+  .juris-badge.purple  { background: var(--purple-accent); color: white; }
+  .juris-title { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700; color: var(--navy); }
+  .juris-body  { font-size: 0.84rem; color: var(--text-mid); line-height: 1.7; }
+  .juris-body em { font-style: italic; color: var(--navy); }
+  .juris-grid { display: grid; gap: 1rem; }
+
+  /* ── ALERTS ── */
+  .alert { padding: 0.9rem 1.2rem; border-radius: 4px; font-size: 0.84rem; line-height: 1.7; display: flex; gap: 0.7rem; align-items: flex-start; }
+  .alert-gold   { background: var(--gold-pale); border: 1px solid #d4aa3a; color: #5a4000; }
+  .alert-red    { background: #fdf0f0; border: 1px solid #e09090; color: #5a0000; }
+  .alert-navy   { background: #f0f4f8; border: 1px solid #abc; color: var(--navy); }
+  .alert-green  { background: #edf7f0; border: 1px solid #7ec89a; color: #1a4a2e; }
+  .alert-purple { background: #f3eef8; border: 1px solid #b89dd8; color: var(--purple-accent); }
+  .alert-icon   { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.05rem; }
+  .alert strong { font-weight: 700; }
+
+  /* ── PROVA ── */
+  .prova-section { background: var(--navy); border-radius: 8px; padding: 2rem; color: white; margin-top: 3.5rem; scroll-margin-top: 56px; }
+  .prova-section h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--gold-light); margin-bottom: 0.5rem; }
+  .prova-section .intro { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; font-style: italic; }
+  .prova-items { display: grid; gap: 0.75rem; }
+  .prova-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(200,150,12,0.25); border-left: 4px solid var(--gold); border-radius: 0 4px 4px 0; padding: 1rem 1.2rem; }
+  .prova-item-q { font-size: 0.82rem; font-weight: 600; color: var(--gold-light); margin-bottom: 0.4rem; display: flex; align-items: flex-start; gap: 0.6rem; }
+  .prova-item-q .qnum { background: var(--gold); color: var(--navy); font-size: 0.65rem; font-weight: 700; padding: 0.1rem 0.45rem; border-radius: 2px; flex-shrink: 0; margin-top: 0.1rem; }
+  .prova-item-a { font-size: 0.82rem; color: rgba(255,255,255,0.8); line-height: 1.65; }
+  .prova-item-a strong { color: white; }
+
+  /* ── TAGS ── */
+  .tag { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; margin: 0.1rem; font-family: 'Source Serif 4', serif; }
+  .tag-blue   { background: #dce8f5; color: var(--blue-accent); }
+  .tag-green  { background: #dceee3; color: var(--green-accent); }
+  .tag-gold   { background: var(--gold-pale); color: #7a5a00; border: 1px solid #d4aa3a; }
+  .tag-red    { background: #fde8e8; color: var(--red-accent); }
+  .tag-purple { background: #ece5f5; color: var(--purple-accent); }
+
+  /* ── EXAMPLE BOX ── */
+  .example-box { background: var(--navy-mid); color: white; border-radius: 6px; padding: 1.2rem 1.4rem; font-size: 0.84rem; line-height: 1.75; }
+  .example-box .ex-title { color: var(--gold-light); font-weight: 700; font-family: 'Playfair Display', serif; font-size: 0.95rem; margin-bottom: 0.5rem; }
+  .example-box .ex-calc { background: rgba(200,150,12,0.12); border: 1px solid rgba(200,150,12,0.3); border-radius: 4px; padding: 0.7rem 1rem; margin-top: 0.7rem; font-family: 'JetBrains Mono', monospace; font-size: 0.79rem; color: var(--gold-light); white-space: pre-wrap; }
+
+  /* ── LAW QUOTE ── */
+  .law-quote { background: var(--cream-mid); border-left: 4px solid var(--navy); padding: 0.9rem 1.2rem; font-size: 0.88rem; font-style: italic; color: var(--text-mid); line-height: 1.7; border-radius: 0 4px 4px 0; }
+  .law-quote strong { font-style: normal; color: var(--navy); font-size: 0.75rem; letter-spacing: 0.5px; display: block; margin-bottom: 0.25rem; }
+
+  /* ── DIVIDER ── */
+  .divider { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); margin: 1.2rem 0; }
+
+  /* ── LEI ESPECIAL GRID ── */
+  .lei-card { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 1rem 1.2rem; box-shadow: var(--shadow); border-top: 3px solid; }
+  .lei-card.drogas    { border-top-color: #7b2d8b; }
+  .lei-card.hediondos { border-top-color: var(--red-accent); }
+  .lei-card.eca       { border-top-color: #2d6a9f; }
+  .lei-card.maria     { border-top-color: #c0392b; }
+  .lei-card.ambiental { border-top-color: var(--green-accent); }
+  .lei-card.desarmamento { border-top-color: #666; }
+  .lei-card.lcp       { border-top-color: #d4850a; }
+  .lei-card.cpm       { border-top-color: var(--navy); }
+  .lei-card h4 { font-family: 'Playfair Display', serif; font-size: 0.92rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--navy); }
+  .lei-card .lei-num { font-size: 0.68rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text-soft); margin-bottom: 0.5rem; display: block; }
+  .lei-card ul { padding-left: 1rem; }
+  .lei-card li { font-size: 0.81rem; color: var(--text-mid); margin-bottom: 0.25rem; line-height: 1.6; }
+  .lei-card .status-aplica { display: inline-block; font-size: 0.65rem; font-weight: 700; padding: 0.1rem 0.45rem; border-radius: 2px; background: #dceee3; color: var(--green-accent); margin-bottom: 0.5rem; }
+  .lei-card .status-excetua { display: inline-block; font-size: 0.65rem; font-weight: 700; padding: 0.1rem 0.45rem; border-radius: 2px; background: #fde8e8; color: var(--red-accent); margin-bottom: 0.5rem; }
+  .lei-card .status-misto { display: inline-block; font-size: 0.65rem; font-weight: 700; padding: 0.1rem 0.45rem; border-radius: 2px; background: var(--gold-pale); color: #7a5a00; margin-bottom: 0.5rem; }
+
+  /* ── REGRAS GERAIS GRID ── */
+  .rg-item { background: white; border: 1px solid var(--border-light); border-radius: 4px; padding: 0.75rem 1rem; font-size: 0.83rem; }
+  .rg-item .rg-arts { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--gold); font-weight: 600; display: block; margin-bottom: 0.25rem; }
+  .rg-item .rg-titulo { font-weight: 700; color: var(--navy); display: block; margin-bottom: 0.25rem; font-family: 'Playfair Display', serif; }
+  .rg-item p { color: var(--text-mid); line-height: 1.55; font-size: 0.8rem; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--navy); color: rgba(255,255,255,0.45); text-align: center; padding: 1.5rem; font-size: 0.75rem; border-top: 2px solid var(--gold); }
+  footer strong { color: var(--gold-light); }
+
+  /* ── PRINT ── */
+  @media print {
+    #top-nav { display: none; }
+    #hero { padding: 2rem 1rem; }
+    #hero::before { display: none; }
+    .page-wrap { max-width: 100%; padding: 0 0.5rem 2rem; }
+    .section { margin-top: 2rem; page-break-inside: avoid; }
+    .card, .juris-card, .flow-wrap, .example-box { box-shadow: none; border: 1px solid #ccc; }
+    .prova-section { background: #f0f4f8 !important; color: #000 !important; }
+    .prova-section h2 { color: #0d1b2a !important; }
+    .prova-item { background: white !important; border: 1px solid #ccc !important; }
+    .prova-item-q { color: #7a5a00 !important; }
+    .prova-item-a { color: #333 !important; }
+    .example-box { background: #f0f4f8 !important; color: #000 !important; }
+    footer { display: none; }
+    body { font-size: 11pt; }
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 640px) {
+    #hero { padding: 2rem 1rem; }
+    #hero h1 { font-size: 1.6rem; }
+    .card-grid-3, .card-grid-2 { grid-template-columns: 1fr; }
+    .section-title { font-size: 1.1rem; }
+    .comp-table { font-size: 0.76rem; }
+    .comp-table td, .comp-table th { padding: 0.55rem 0.65rem; }
+    .flow-node { min-width: 150px; font-size: 0.74rem; }
+  }
+
+  /* ── MISC ── */
+  .mt1 { margin-top: 0.75rem; }
+  .mt2 { margin-top: 1rem; }
+  .mt3 { margin-top: 1.5rem; }
+  .flex-gap { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: flex-start; }
+  strong { font-weight: 700; }
+  .leis-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.85rem; }
+  .rg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0.7rem; }
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav id="top-nav" aria-label="Atalhos do artigo">
+  <div class="nav-brand">Art. 12º CP</div>
+
+  <div class="nav-main-links">
+    <a href="#visao-geral">Visão Geral</a>
+    <a href="#regras-gerais">Regras Gerais</a>
+    <a href="#lei-especial">Lei Especial</a>
+    <a href="#clausula-excecao">Cláusula Exceção</a>
+    <a href="#fluxograma">Fluxograma</a>
+    <a href="#leis-especiais">Leis Especiais</a>
+    <a href="#comparativo">Comparativo</a>
+    <a href="#exemplos">Exemplos</a>
+    <a href="#jurisprudencia">Juris. STF/STJ</a>
+    <a href="#doutrina">Doutrina</a>
+    <a href="#sistematica">Sistemática</a>
+    <a href="#prova" class="nav-prova">Prova</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<header id="hero">
+  <div class="badge">Código Penal · Título I · Aplicação da Lei Penal</div>
+  <h1>Art. 12º — <span>Subsidiariedade das Regras Gerais do CP</span></h1>
+  <p class="subtitle">Leis Penais Especiais · Regras Gerais · Princípio da Especialidade · Magistratura · ENAM</p>
+  <div class="law-box">
+    <strong>Art. 12.º do Decreto-Lei n.º 2.848/1940 (Código Penal)</strong>
+    "As regras gerais deste Código aplicam-se aos fatos incriminados por lei especial, se esta não dispuser de modo diverso."
+  </div>
+</header>
+
+<div class="page-wrap">
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 1. VISÃO GERAL                            -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="visao-geral">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div class="section-title"><span>Introdução &amp; Sistemática</span>Visão Geral do Artigo</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📍 Finalidade e Posição Sistemática</h3>
+      <p>O art. 12 CP integra o <strong>Título I do Código Penal</strong> ("Da Aplicação da Lei Penal") e consagra o <strong>princípio da subsidiariedade das regras gerais do Código Penal</strong> em relação às leis penais especiais. É um artigo-ponte: conecta a Parte Geral do CP ao universo das leis penais extravagantes, garantindo que o conjunto de princípios e institutos consolidados no CP (imputabilidade, tentativa, concurso de crimes, prescrição, dosimetria etc.) não fique restrito aos crimes tipificados no próprio Código Penal.</p>
+      <p class="mt2">Sua posição topográfica, no Título I que regula a aplicação da lei penal, é reveladora: o legislador quis, desde 1940, que as regras gerais do CP funcionassem como um <strong>código de princípios universais</strong> aplicáveis a todo o ordenamento penal brasileiro — salvo quando a lei especial optar por caminho diverso.</p>
+    </div>
+    <div class="card">
+      <h3>🏛️ Natureza Jurídica, Estrutura e Alcance</h3>
+      <ul>
+        <li><strong>Norma de integração sistêmica:</strong> articula as duas grandes fontes do direito penal brasileiro — Código Penal e leis penais extravagantes</li>
+        <li><strong>Norma de subsidiariedade:</strong> as regras gerais do CP são subsidiárias em relação às normas das leis especiais; prevalecem quando a lei especial é omissa</li>
+        <li><strong>Norma de hierarquia relativa:</strong> não há hierarquia formal entre CP e leis especiais — a prevalência da lei especial decorre do princípio <em>lex specialis derogat generali</em>, não de superioridade hierárquica</li>
+        <li><strong>Âmbito de aplicação:</strong> cobre tanto a Parte Geral do CP (arts. 1–120) quanto, por entendimento doutrinário majoritário, os princípios gerais extraídos da Parte Especial que sejam de aplicação universal</li>
+        <li><strong>"Fatos incriminados por lei especial":</strong> toda conduta tipificada em lei penal fora do CP — desde contravenções até crimes de leis extravagantes modernos</li>
+        <li><strong>Aplicação pelo juiz de ofício:</strong> independe de provocação das partes — o juiz aplica o art. 12 CP automaticamente ao identificar lacuna na lei especial</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert alert-gold mt2">
+    <div class="alert-icon">⭐</div>
+    <div><strong>Fundamento Constitucional do Art. 12 CP — Princípio da Isonomia e Segurança Jurídica:</strong> O art. 12 CP tem assento constitucional mediato nos princípios da <strong>isonomia</strong> (art. 5.º, <em>caput</em>, CF/88) e da <strong>segurança jurídica</strong> (art. 5.º, <em>caput</em>, CF/88). Seria inconstitucional que o réu de um crime previsto em lei especial não pudesse invocar o instituto da tentativa, da imputabilidade ou da prescrição apenas porque a lei especial não os reproduziu — o art. 12 CP evita essa disparidade absurda, garantindo tratamento igualitário a partir dos institutos gerais do CP.</div>
+  </div>
+
+  <div class="alert alert-navy mt2">
+    <div class="alert-icon">📋</div>
+    <div><strong>Os Três Elementos do Art. 12 CP:</strong> O dispositivo possui <strong>três elementos normativos</strong> que devem ser identificados pelo operador do direito: (1) <em>"As regras gerais deste Código"</em> — o que são essas regras?; (2) <em>"aplicam-se aos fatos incriminados por lei especial"</em> — o que é "lei especial"?; e (3) <em>"se esta não dispuser de modo diverso"</em> — qual é o alcance da cláusula de exceção? Cada elemento será analisado em seção própria.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 2. REGRAS GERAIS DO CÓDIGO                -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="regras-gerais">
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div class="section-title"><span>Elemento 1 — Conceito e Extensão</span>"As Regras Gerais Deste Código"</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔵 Conceito de "Regras Gerais" — Parte Geral do CP</h3>
+      <p><strong>Posição majoritária (Masson, Bitencourt, Greco, Nucci):</strong> As "regras gerais" a que se refere o art. 12 CP são os institutos e princípios consagrados na <strong>Parte Geral do Código Penal (arts. 1 a 120)</strong>. É o conjunto de disposições que regulam não um crime específico, mas sim os elementos, as condições de punibilidade e as consequências jurídicas do delito em geral.</p>
+      <p class="mt2"><strong>Posição minoritária (Frederico Marques):</strong> Incluem-se também os princípios gerais extraídos da Parte Especial do CP que tenham caráter universal — ou seja, não apenas a literalidade dos arts. 1–120, mas todos os princípios estruturais do CP de aplicação geral. Esta visão alarga o campo de integração do art. 12, mas é minoritária.</p>
+      <div class="alert alert-navy mt2" style="font-size:0.81rem;">
+        <div>📌 <strong>Conclusão para concurso:</strong> Adote a posição majoritária: "regras gerais" = <strong>Parte Geral do CP (arts. 1–120)</strong>. Em alguns contextos específicos, pode-se reconhecer a aplicação de princípios gerais da Parte Especial, mas isso é excepcional.</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📋 Estrutura da Parte Geral do CP — O Que Se Transfere às Leis Especiais</h3>
+      <p style="font-size:0.84rem;color:var(--text-mid);margin-bottom:0.75rem;">A Parte Geral do CP (arts. 1–120) divide-se em títulos, todos potencialmente aplicáveis às leis especiais via art. 12 CP:</p>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;">
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);padding:0.4rem 0.7rem;font-size:0.8rem;"><strong>Título I (arts. 1–12):</strong> Aplicação da Lei Penal — legalidade, irretroatividade, territorialidade, extraterritorialidade</div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--green-accent);padding:0.4rem 0.7rem;font-size:0.8rem;"><strong>Título II (arts. 13–25):</strong> Infração Penal — resultado, nexo causal, tentativa, desistência, arrependimento, crime impossível, coautoria, participação, erro, excludentes de ilicitude</div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--red-accent);padding:0.4rem 0.7rem;font-size:0.8rem;"><strong>Título III (arts. 26–28):</strong> Imputabilidade Penal — inimputabilidade (doença mental, menoridade), semi-imputabilidade, emoção e paixão, embriaguez</div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--purple-accent);padding:0.4rem 0.7rem;font-size:0.8rem;"><strong>Título IV (arts. 29–30):</strong> Concurso de Pessoas — coautoria, participação, circunstâncias incomunicáveis</div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--gold);padding:0.4rem 0.7rem;font-size:0.8rem;"><strong>Títulos V–VII (arts. 32–95):</strong> Penas — PPL, PRD, multa, dosimetria, suspensão condicional, livramento condicional, efeitos da condenação, medidas de segurança</div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--navy);padding:0.4rem 0.7rem;font-size:0.8rem;"><strong>Título VIII–IX (arts. 96–120):</strong> Ação Penal e Extinção da Punibilidade — prescrição, decadência, perempção, retratação</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt2">
+    <h3>📐 Principais "Regras Gerais" do CP Aplicadas às Leis Especiais via Art. 12 CP</h3>
+    <div class="rg-grid mt1">
+      <div class="rg-item">
+        <span class="rg-arts">Art. 1.º CP</span>
+        <span class="rg-titulo">Princípio da Legalidade</span>
+        <p>Nullum crimen, nulla poena sine lege. Aplica-se a todos os crimes previstos em leis especiais — inclusive quanto à anterioridade e taxatividade das condutas.</p>
+      </div>
+      <div class="rg-item">
+        <span class="rg-arts">Art. 2.º CP</span>
+        <span class="rg-titulo">Irretroatividade e Retroatividade Benéfica</span>
+        <p>A lei penal não retroage, salvo para beneficiar o réu. Aplica-se integralmente às leis especiais — incluindo a <em>lex mitior</em> em crimes previstos em leis extravagantes.</p>
+      </div>
+      <div class="rg-item">
+        <span class="rg-arts">Arts. 13–25 CP</span>
+        <span class="rg-titulo">Teoria do Crime</span>
+        <p>Tipicidade, ilicitude, culpabilidade, nexo causal, resultado, excludentes (legítima defesa, estado de necessidade, estrito cumprimento do dever legal, exercício regular de direito). Aplicam-se integralmente aos crimes de leis especiais.</p>
+      </div>
+      <div class="rg-item">
+        <span class="rg-arts">Art. 14, II, CP</span>
+        <span class="rg-titulo">Tentativa</span>
+        <p>A tentativa do crime previsto em lei especial segue as regras do art. 14, II, CP — salvo se a lei especial tipificar expressamente a tentativa ou excluí-la. Ponto altamente cobrado.</p>
+      </div>
+      <div class="rg-item">
+        <span class="rg-arts">Arts. 26–28 CP</span>
+        <span class="rg-titulo">Imputabilidade</span>
+        <p>Doença mental, menoridade penal, semi-imputabilidade, embriaguez fortuita — aplicam-se integralmente a crimes de leis especiais. O réu inimputável por crime de lei especial recebe medida de segurança (art. 97 CP).</p>
+      </div>
+      <div class="rg-item">
+        <span class="rg-arts">Arts. 29–30 CP</span>
+        <span class="rg-titulo">Concurso de Pessoas</span>
+        <p>Coautoria e participação nos crimes de leis especiais seguem os arts. 29–30 CP. As circunstâncias pessoais incomunicáveis (art. 30 CP) também se aplicam — altamente cobrado na Lei de Drogas e em crimes ambientais.</p>
+      </div>
+      <div class="rg-item">
+        <span class="rg-arts">Arts. 59–76 CP</span>
+        <span class="rg-titulo">Dosimetria e Penas</span>
+        <p>A dosimetria trifásica (art. 68 CP), as agravantes e atenuantes (arts. 61–66 CP), os limites das PPL (art. 75 CP), as causas de aumento e diminuição — aplicam-se às penas cominadas pelas leis especiais, salvo disposição em contrário.</p>
+      </div>
+      <div class="rg-item">
+        <span class="rg-arts">Arts. 109–119 CP</span>
+        <span class="rg-titulo">Prescrição e Extinção da Punibilidade</span>
+        <p>As regras de prescrição do CP (prazos, causas interruptivas e suspensivas, prescrição retroativa, virtual) aplicam-se subsidiariamente aos crimes de leis especiais. É a aplicação mais frequente do art. 12 CP na prática judicial.</p>
+      </div>
+      <div class="rg-item">
+        <span class="rg-arts">Arts. 69–72 CP</span>
+        <span class="rg-titulo">Concurso de Crimes</span>
+        <p>As regras de concurso material, formal e crime continuado aplicam-se quando a lei especial é omissa. Ponto cobrado: continuidade delitiva entre crimes de lei especial ou entre crimes do CP e lei especial.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 3. LEI ESPECIAL                           -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="lei-especial">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div class="section-title"><span>Elemento 2 — Conceito e Extensão</span>"Fatos Incriminados por Lei Especial"</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card elem-card elem-lei">
+      <h3>🟢 O Que É "Lei Especial" para o Art. 12 CP</h3>
+      <p><strong>Conceito:</strong> É qualquer lei penal fora do Código Penal que tipifique condutas como crime ou contravenção, cominando-lhes sanção penal. O critério é <em>topográfico</em> e <em>substancial</em>: a lei está fora do CP E define ilícito penal.</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Lei penal extravagante:</strong> toda norma que tipifica crimes fora do CP — Lei de Drogas, Lei de Crimes Ambientais, Estatuto do Desarmamento etc.</li>
+        <li><strong>Lei penal especial em sentido estrito:</strong> lei que regula situações específicas ou sujeitos determinados — ECA (menores), Lei Maria da Penha (violência doméstica), Lei de Organizações Criminosas etc.</li>
+        <li><strong>Lei das Contravenções Penais (Dec.-Lei 3.688/41):</strong> é lei especial em relação ao CP → art. 12 CP aplica-se subsidiariamente</li>
+        <li><strong>Legislação penal tributária, previdenciária, eleitoral:</strong> também são leis especiais para os fins do art. 12 CP</li>
+        <li><strong>Código Penal Militar (Dec.-Lei 1.001/69):</strong> EXCEÇÃO IMPORTANTE — tem sua própria Parte Geral completa; o art. 12 CP NÃO se aplica ao CPM (ver seção 07)</li>
+        <li><strong>ECA (Lei 8.069/90):</strong> lei especial → regras gerais do CP aplicam-se subsidiariamente quanto às infrações penais nele tipificadas</li>
+      </ul>
+    </div>
+    <div class="card elem-card elem-lei">
+      <h3>⚖️ Distinção: Lei Especial × Lei Excepcional × Lei Temporária</h3>
+      <ul>
+        <li><strong>Lei especial:</strong> regulamenta matéria específica de forma permanente — não se confunde com lei excepcional ou temporária; o art. 12 CP se aplica igualmente a todas elas no que couber</li>
+        <li><strong>Lei excepcional:</strong> vigora durante situação de crise (guerra, calamidade) — prevista no art. 3.º CP; mesmo após cessada a situação, as condenações subsistem; as regras gerais do CP aplicam-se subsidiariamente durante a vigência</li>
+        <li><strong>Lei temporária:</strong> possui prazo de vigência determinado (art. 3.º CP); aplica-se aos fatos praticados durante sua vigência mesmo após seu término; regras gerais do CP incidem subsidiariamente</li>
+        <li><strong>Lei mais benéfica posterior:</strong> a relação entre lei especial posterior e regras gerais do CP segue os arts. 2.º CP e 5.º, XL, CF/88 — a <em>lex mitior</em> retroage, independentemente de ser norma geral ou especial</li>
+      </ul>
+      <div class="alert alert-gold mt2" style="font-size:0.81rem;">
+        <div>⭐ <strong>Critério de identificação da "lei especial":</strong> Para o art. 12 CP, lei especial é aquela que: (a) está fora do Código Penal; (b) incrimina condutas (define crimes ou contravenções); e (c) não possui parte geral completa própria. Preenchidas essas condições, as regras gerais do CP se aplicam subsidiariamente.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-red mt2">
+    <div class="alert-icon">🔴</div>
+    <div><strong>Atenção — O Art. 12 CP NÃO se aplica ao Código Penal Militar:</strong> O Código Penal Militar (CPM — Dec.-Lei 1.001/69) possui <strong>Parte Geral completa e própria</strong> (arts. 1–132), com regras específicas sobre tentativa, imputabilidade, concurso de pessoas, prescrição e dosimetria. Por essa razão, o art. 12 CP não se aplica ao CPM — esse utiliza suas próprias regras gerais. Confundir essa exceção com a regra geral é erro recorrente em provas de magistratura.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 4. CLÁUSULA DE EXCEÇÃO                    -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="clausula-excecao">
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <div class="section-title"><span>Elemento 3 — O Coração do Dispositivo</span>"Se Esta Não Dispuser de Modo Diverso"</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card elem-card elem-excecao">
+      <h3>🔴 A Cláusula de Exceção — Princípio da Especialidade</h3>
+      <p>A cláusula <em>"se esta não dispuser de modo diverso"</em> é a operacionalização do <strong>princípio da especialidade</strong> (<em>lex specialis derogat generali</em>) no campo do direito penal. Quando a lei especial regula o tema de forma expressa e diferente da regra geral do CP, <strong>prevalece a lei especial</strong>.</p>
+      <div class="divider"></div>
+      <p><strong>Fundamento:</strong> A lei especial é posterior e mais específica — o legislador, ao editar a lei especial, deliberadamente optou por regime distinto para aquele ilícito. Respeitar essa opção legislativa é imperativo de coerência sistêmica e separação de poderes.</p>
+      <div class="alert alert-red mt2" style="font-size:0.81rem;">
+        <div>🔴 <strong>Três condições para a cláusula de exceção operar:</strong><br>
+        (1) A lei especial deve tratar do <em>mesmo tema</em> da regra geral do CP;<br>
+        (2) A lei especial deve fazê-lo de forma <em>expressa ou inequivocamente implícita</em>;<br>
+        (3) A disposição da lei especial deve ser <em>incompatível</em> com a regra geral do CP.</div>
+      </div>
+    </div>
+    <div class="card elem-card elem-excecao">
+      <h3>⚖️ Formas de Disposição Diversa pela Lei Especial</h3>
+      <ul>
+        <li><strong>Expressa:</strong> a lei especial regula o instituto explicitamente de modo diferente — ex.: art. 44 da Lei de Drogas proíbe substituição de PPL por PRD para o crime do art. 33, afastando o art. 44 CP</li>
+        <li><strong>Implícita (sistemática):</strong> a incompatibilidade entre a lei especial e a regra geral do CP decorre do sistema — ex.: a Lei de Crimes Hediondos (Lei 8.072/90), ao proibir o livramento condicional para crimes hediondos (art. 44, parágrafo único, revogado — hoje regulado pela reforma de 2019), afastava implicitamente o art. 83 CP para esses crimes</li>
+        <li><strong>Limitativa:</strong> a lei especial não exclui totalmente a regra geral, mas a modifica — ex.: Lei Maria da Penha (art. 17) proíbe que o juiz substitua pena por prestação pecuniária, aplicando-se subsidiariamente as demais formas de PRD do CP</li>
+        <li><strong>Ampliativa:</strong> a lei especial amplia o alcance de instituto do CP — ex.: prazos prescricionais diferenciados para crimes cometidos contra crianças (art. 111, V, CP, inserido pelo ECA/modificações posteriores)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card mt2">
+    <h3>📐 Técnica de Aplicação do Art. 12 CP na Prática — Roteiro do Operador</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:0.75rem;margin-top:0.75rem;">
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.83rem;">
+        <strong style="color:var(--gold-light);display:block;margin-bottom:0.4rem;">PASSO 1</strong>
+        Identificar o instituto ou princípio a ser aplicado (tentativa, prescrição, imputabilidade, etc.)
+      </div>
+      <div style="background:var(--navy-mid);color:white;border-radius:6px;padding:1rem;font-size:0.83rem;">
+        <strong style="color:var(--gold-light);display:block;margin-bottom:0.4rem;">PASSO 2</strong>
+        Verificar se a lei especial regula esse instituto de forma expressa ou sistemicamente incompatível com o CP
+      </div>
+      <div style="background:var(--blue-accent);color:white;border-radius:6px;padding:1rem;font-size:0.83rem;">
+        <strong style="color:var(--gold-light);display:block;margin-bottom:0.4rem;">PASSO 3</strong>
+        SE SIM → aplicar a norma da lei especial (cláusula de exceção do art. 12 CP; especialidade)
+      </div>
+      <div style="background:var(--green-accent);color:white;border-radius:6px;padding:1rem;font-size:0.83rem;">
+        <strong style="color:var(--gold-light);display:block;margin-bottom:0.4rem;">PASSO 4</strong>
+        SE NÃO → aplicar subsidiariamente a regra geral do CP (art. 12 CP — subsidiariedade)
+      </div>
+      <div style="background:var(--red-accent);color:white;border-radius:6px;padding:1rem;font-size:0.83rem;">
+        <strong style="color:var(--gold-light);display:block;margin-bottom:0.4rem;">PASSO 5</strong>
+        Verificar se a aplicação da regra geral do CP viola algum princípio constitucional — se sim, afastá-la
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 5. FLUXOGRAMA                             -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="fluxograma">
+  <div class="section-header">
+    <div class="section-num">05</div>
+    <div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma: Aplicação do Art. 12 CP</div>
+  </div>
+
+  <div class="flow-wrap">
+    <div class="flow-center">
+
+      <div class="flow-node flow-start">SITUAÇÃO CONCRETA — FATO INCRIMINADO POR LEI ESPECIAL</div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:560px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 1 — O fato é incriminado por lei especial ou pelo CP?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Identificar a norma incriminadora: está no CP (arts. 121–361) ou em lei penal extravagante?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">Fato tipificado NO CP</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;">
+            Art. 12 CP não se aplica<br>
+            A Parte Geral do CP incide<br>diretamente, sem intermediação<br>
+            <small>Art. 12 é desnecessário aqui</small>
+          </div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:90px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">Fato tipificado em LEI ESPECIAL</div>
+          <div class="flow-node flow-box-blue" style="font-size:0.76rem;text-align:center;">
+            Art. 12 CP potencialmente<br>
+            aplicável — prosseguir<br>
+            para Passo 2<br>
+            <small>Ex.: Lei de Drogas, ECA, etc.</small>
+          </div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:90px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">Fato tipificado no CPM</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;">
+            ❌ Art. 12 CP NÃO se aplica<br>
+            CPM tem Parte Geral própria<br>
+            <small>Exceção expressa reconhecida<br>por toda a doutrina</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:560px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 2 — Identificar o Instituto do Direito Penal a Aplicar</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Qual regra geral do CP está em questão? Tentativa? Prescrição? Imputabilidade? Dosimetria? Concurso?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:560px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 3 — A Lei Especial Dispõe Expressamente Sobre Esse Instituto?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Verificar a lei especial: ela regula o instituto de forma expressa OU de forma incompatível (implícita) com a regra geral do CP?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">SIM — Lei especial dispõe de modo diverso</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:220px;">
+            <strong>Aplica-se a LEI ESPECIAL</strong><br>
+            Cláusula de exceção do art. 12 CP<br>
+            Princípio da especialidade<br>
+            (<em>lex specialis derogat generali</em>)<br>
+            <small>A regra geral do CP é afastada</small>
+          </div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — Lei especial é OMISSA</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;min-width:220px;">
+            <strong>Aplica-se a REGRA GERAL do CP</strong><br>
+            Subsidiariedade do art. 12 CP<br>
+            (<em>lex generalis</em> preenche lacuna)<br>
+            <small>A regra do CP integra a lei especial</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:560px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 4 — Verificar Compatibilidade Constitucional</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Seja a lei especial, seja a regra geral do CP, a norma a aplicar viola algum princípio constitucional (legalidade, proporcionalidade, favor rei, igualdade)?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">Viola a Constituição</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;">
+            Controle de constitucionalidade<br>
+            Norma afastada (difuso) ou<br>declarada inconstitucional (STF)<br>
+            <small>Aplicar regra subsidiária<br>compatível com CF/88</small>
+          </div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:90px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">Compatível com a Constituição</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;">
+            Norma é válida e deve<br>ser aplicada ao caso concreto<br>
+            <small>Prosseguir para a solução</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:560px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 5 — Distinção: Norma Geral × Norma Especial × Norma Processual Penal</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">O art. 12 CP aplica-se às normas de DIREITO PENAL MATERIAL (Parte Geral do CP). Para normas de processo penal, aplica-se o art. 1.º, II, CPP (subsidiariedade do CPP).</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-end" style="max-width:500px;">
+        Norma aplicada com correção sistêmica · Art. 12 CP operacionalizado · Coerência do ordenamento penal assegurada
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 6. PRINCIPAIS LEIS ESPECIAIS              -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="leis-especiais">
+  <div class="section-header">
+    <div class="section-num">06</div>
+    <div class="section-title"><span>Análise Prática por Diploma</span>Principais Leis Especiais × Regras Gerais do CP</div>
+  </div>
+
+  <div class="alert alert-navy" style="margin-bottom:1.2rem;">
+    <div class="alert-icon">ℹ️</div>
+    <div>Para cada lei especial, indica-se onde as regras gerais do CP <strong>se aplicam</strong> (omissão da lei especial → subsidiariedade) e onde elas são <strong>afastadas</strong> (lei especial dispõe diversamente → especialidade), com base no entendimento doutrinário e jurisprudencial consolidado.</div>
+  </div>
+
+  <div class="leis-grid">
+
+    <div class="lei-card drogas">
+      <span class="lei-num">Lei 11.343/2006 — Lei de Drogas</span>
+      <h4>💊 Lei de Drogas</h4>
+      <span class="status-misto">Aplicação mista — parcial</span>
+      <ul>
+        <li><strong>Aplica-se CP (art. 12):</strong> tentativa (ex.: tráfico tentado — art. 14, II, CP); imputabilidade (arts. 26–28 CP); concurso formal e continuidade delitiva (arts. 70–71 CP); prescrição (arts. 109–119 CP — aplicação subsidiária dos prazos gerais); dosimetria trifásica (art. 68 CP); concurso de pessoas (arts. 29–30 CP)</li>
+        <li><strong>Afasta CP (especialidade):</strong> art. 44 da Lei de Drogas veda expressamente a substituição de PPL por PRD e a suspensão condicional da pena para crimes dos arts. 33, 34, 35, 36 e 37 → afasta arts. 44 e 77 CP; art. 33, §4.º, prevê causa especial de diminuição de 1/6 a 2/3 (não prevista no CP); art. 42 — causas específicas de agravamento</li>
+        <li><strong>STJ Consolidado:</strong> é possível a continuidade delitiva entre crimes de tráfico de drogas (art. 71 CP aplicado via art. 12 CP)</li>
+      </ul>
+    </div>
+
+    <div class="lei-card hediondos">
+      <span class="lei-num">Lei 8.072/1990 — Crimes Hediondos</span>
+      <h4>🔴 Lei de Crimes Hediondos</h4>
+      <span class="status-excetua">Afasta diversas regras do CP</span>
+      <ul>
+        <li><strong>Afasta CP (especialidade):</strong> regime inicial fechado (afastado pelo STF em 2012 — HC 111.840/ES — como inconstitucional); livramento condicional com prazos diferenciados (2/3 + primariedade); vedação de fiança e liberdade provisória (crimes hediondos e equiparados — art. 2.º, II); prazos de prisão temporária diferentes (art. 2.º, §4.º)</li>
+        <li><strong>Aplica-se CP (art. 12):</strong> tentativa dos crimes hediondos → art. 14, II, CP; imputabilidade; dosimetria trifásica; concurso de pessoas; extinção da punibilidade geral</li>
+        <li><strong>STF — HC 111.840/ES (2012):</strong> inconstitucionalidade do regime inicial obrigatoriamente fechado → regime seguia regras gerais do CP com base na pena concretamente aplicada</li>
+      </ul>
+    </div>
+
+    <div class="lei-card eca">
+      <span class="lei-num">Lei 8.069/1990 — ECA</span>
+      <h4>👶 Estatuto da Criança e do Adolescente</h4>
+      <span class="status-misto">Aplicação mista</span>
+      <ul>
+        <li><strong>Aplica-se CP (art. 12):</strong> aos crimes praticados <em>contra</em> crianças (arts. 225–244-B ECA) → prescrição (CP), tentativa (CP), dosimetria (CP); concurso de pessoas nos crimes do ECA → arts. 29–30 CP</li>
+        <li><strong>Afasta CP — atos infracionais:</strong> medidas socioeducativas (não são penas do CP) → regidas pelo próprio ECA; imputabilidade do menor de 18 anos (arts. 27 CP e 228 CF/88) → inimputável, sujeito ao ECA</li>
+        <li><strong>Prescrição especial:</strong> o art. 111, V, CP (inserido pela Lei 12.650/2012) suspende a prescrição de crimes contra crianças até a vítima completar 18 anos</li>
+        <li><strong>STJ:</strong> aplicação subsidiária das regras do CP sobre dosimetria e agravantes aos crimes previstos no ECA</li>
+      </ul>
+    </div>
+
+    <div class="lei-card maria">
+      <span class="lei-num">Lei 11.340/2006 — Lei Maria da Penha</span>
+      <h4>🔴 Lei Maria da Penha</h4>
+      <span class="status-misto">Aplicação mista</span>
+      <ul>
+        <li><strong>Aplica-se CP (art. 12):</strong> dosimetria trifásica para crimes cometidos em contexto doméstico (arts. 59–68 CP); prescrição nos crimes não previstos na LMP; tentativa; imputabilidade</li>
+        <li><strong>Afasta CP (especialidade):</strong> art. 17 LMP — veda substituição de pena por prestação pecuniária ou multa → afasta parcialmente art. 44 CP; art. 41 LMP — veda aplicação da Lei 9.099/95 (JECrim) → afasta transação penal e sursis processual; agravante específica do art. 61, II, <em>f</em>, CP — aplicável mas reforçada pelo art. 5.º LMP</li>
+        <li><strong>STJ — Súmula 536:</strong> a suspensão condicional do processo e a transação penal não se aplicam na hipótese de delitos sujeitos ao rito da Lei Maria da Penha</li>
+        <li><strong>STF:</strong> ADI 4424/DF — ação penal pública incondicionada nos crimes de lesão corporal em contexto doméstico</li>
+      </ul>
+    </div>
+
+    <div class="lei-card ambiental">
+      <span class="lei-num">Lei 9.605/1998 — Crimes Ambientais</span>
+      <h4>🌿 Lei de Crimes Ambientais</h4>
+      <span class="status-aplica">Aplica-se CP (art. 12) — amplamente</span>
+      <ul>
+        <li><strong>Aplica-se CP (art. 12):</strong> tentativa de crimes ambientais (art. 14, II, CP); prescrição (arts. 109–119 CP); dosimetria trifásica (a Lei 9.605/98 prevê circunstâncias específicas — arts. 14–15 — mas a trifásica do CP se aplica subsidiariamente); concurso de pessoas (art. 29–30 CP); imputabilidade</li>
+        <li><strong>Especialidade da lei ambiental:</strong> pena de prestação de serviços à comunidade ambiental (art. 9.º); multa baseada em critérios ambientais; responsabilidade penal da pessoa jurídica (art. 3.º) — instituto não previsto no CP como regra geral; sursis especial ambiental (art. 16)</li>
+        <li><strong>STJ:</strong> responsabilidade penal da pessoa jurídica em crimes ambientais (teoria da dupla imputação progressivamente superada)</li>
+      </ul>
+    </div>
+
+    <div class="lei-card desarmamento">
+      <span class="lei-num">Lei 10.826/2003 — Estatuto do Desarmamento</span>
+      <h4>🔫 Estatuto do Desarmamento</h4>
+      <span class="status-misto">Aplicação mista</span>
+      <ul>
+        <li><strong>Aplica-se CP (art. 12):</strong> tentativa dos crimes do Estatuto; prescrição (CP); dosimetria trifásica; imputabilidade; concurso de pessoas; crime impossível (art. 17 CP — porte de arma desmuniciada e sem condições de disparo: debate jurisprudencial)</li>
+        <li><strong>Especialidade:</strong> causas de aumento específicas (art. 20); vedação de liberdade provisória nos crimes dos arts. 16, parágrafo único, e 17 e 18 — parcialmente afastada pelo STF</li>
+        <li><strong>STF:</strong> inconstitucionalidade da vedação absoluta de liberdade provisória para crimes do Estatuto do Desarmamento (HC 104.339/SP)</li>
+      </ul>
+    </div>
+
+    <div class="lei-card lcp">
+      <span class="lei-num">Dec.-Lei 3.688/1941 — Lei das Contravenções Penais</span>
+      <h4>⚠️ Lei das Contravenções Penais</h4>
+      <span class="status-aplica">Aplica-se CP (art. 12) — amplamente</span>
+      <ul>
+        <li><strong>Aplica-se CP (art. 12):</strong> imputabilidade; prescrição (usando penas da LCP como parâmetro para os prazos do art. 109 CP); concurso de pessoas; dosimetria (agravantes e atenuantes genéricas do CP aplicam-se às contravenções)</li>
+        <li><strong>Tentativa:</strong> art. 4.º LCP — a tentativa de contravenção não é punível. ESTA É A APLICAÇÃO MAIS CLÁSSICA DA CLÁUSULA DE EXCEÇÃO DO ART. 12 CP: a LCP dispõe diversamente (art. 4.º LCP) → afasta o art. 14, II, CP</li>
+        <li><strong>Ponto de prova:</strong> a impunibilidade da tentativa de contravenção penal é o exemplo mais recorrente em provas da cláusula "se esta não dispuser de modo diverso" do art. 12 CP</li>
+      </ul>
+    </div>
+
+    <div class="lei-card cpm">
+      <span class="lei-num">Dec.-Lei 1.001/1969 — Código Penal Militar</span>
+      <h4>🪖 Código Penal Militar</h4>
+      <span class="status-excetua">NÃO se aplica o art. 12 CP</span>
+      <ul>
+        <li><strong>Exceção ao art. 12 CP:</strong> o CPM possui Parte Geral completa (arts. 1–132) com regras próprias sobre tentativa, imputabilidade, concurso de pessoas, prescrição, dosimetria e extinção da punibilidade</li>
+        <li><strong>Sistema autônomo:</strong> o CPM é um sistema penal autossuficiente — não necessita das regras gerais do CP para funcionar</li>
+        <li><strong>Conflito de normas CP × CPM:</strong> resolvido pelo critério da especialidade (competência da Justiça Militar) e pelo critério do bem jurídico protegido (tutela da hierarquia e disciplina militar)</li>
+        <li><strong>STF:</strong> reconhece a autonomia do CPM em relação ao CP — as regras do CPM não podem ser integradas pelas regras gerais do CP comum</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 7. QUADRO COMPARATIVO                     -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="comparativo">
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <div class="section-title"><span>Quadro Sinóptico</span>Art. 12 CP × Princípios Correlatos × Diplomas</div>
+  </div>
+
+  <div style="overflow-x:auto;">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Critério</th>
+          <th>Art. 12 CP — Subsidiariedade</th>
+          <th>Princípio da Especialidade</th>
+          <th>Art. 1.º, II, CPP — Subsidiariedade Processual</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hl">
+          <td>Campo de incidência</td>
+          <td>Direito Penal <strong>material</strong> — Parte Geral do CP</td>
+          <td>Direito Penal material e processual</td>
+          <td>Direito Processual Penal — CPP</td>
+        </tr>
+        <tr>
+          <td>Relação entre normas</td>
+          <td>Geral (CP) × Especial (lei extravagante) — geral é subsidiária</td>
+          <td>Especial prevalece sobre geral em qualquer conflito</td>
+          <td>Geral (CPP) × Especial (lei processual específica)</td>
+        </tr>
+        <tr class="hl2">
+          <td>Previsão legal</td>
+          <td>Art. 12 CP (explícita)</td>
+          <td>Princípio geral implícito no sistema; art. 12 CP o operacionaliza</td>
+          <td>Art. 1.º, II, CPP (explícita)</td>
+        </tr>
+        <tr>
+          <td>Condição de aplicação</td>
+          <td>Omissão da lei especial sobre o tema</td>
+          <td>Conflito entre norma geral e especial regulando o mesmo fato</td>
+          <td>Omissão da lei especial processual sobre procedimento</td>
+        </tr>
+        <tr class="hl3">
+          <td>Direção da prevalência</td>
+          <td>Lei especial prevalece (quando dispõe diversamente)</td>
+          <td>Sempre: especial prevalece sobre geral</td>
+          <td>Lei especial processual prevalece; CPP é subsidiário</td>
+        </tr>
+        <tr>
+          <td>Exemplo clássico</td>
+          <td>Prescrição do CP → aplicada aos crimes da Lei de Drogas</td>
+          <td>Art. 4.º LCP → torna impunível tentativa de contravenção</td>
+          <td>Rito da Lei de Drogas → complementado pelo CPP</td>
+        </tr>
+        <tr class="hl">
+          <td>Limite</td>
+          <td>CPM tem Parte Geral própria → art. 12 CP não se aplica</td>
+          <td>Não pode violar princípios constitucionais</td>
+          <td>CPM tem código processual próprio (CPPM)</td>
+        </tr>
+        <tr class="hl4">
+          <td>Fundamento axiológico</td>
+          <td>Isonomia · Coerência sistêmica · Segurança jurídica</td>
+          <td>Adequação · Racionalidade legislativa</td>
+          <td>Isonomia processual · Due process of law</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card">
+      <h3>🔗 Art. 12 CP × Art. 1.º CP — Legalidade nas Leis Especiais</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">O princípio da legalidade (art. 1.º CP) — uma das "regras gerais" transferidas pelo art. 12 CP às leis especiais — exige que as leis penais especiais também observem a <em>taxatividade</em>, a <em>anterioridade</em> e a <em>lex scripta</em>. O art. 12 CP, ao transferir a regra do art. 1.º CP às leis especiais, garante que nenhum crime de lei extravagante possa ser interpretado de forma análoga <em>in malam partem</em> ou que normas penais especiais retroajam prejudicialmente.</p>
+      <div class="alert alert-navy mt2" style="font-size:0.8rem;">
+        <div>📌 <strong>Consequência prática:</strong> Uma lei penal especial que puna conduta com base em tipo penal aberto ou analógico viola o art. 1.º CP (transferido pelo art. 12 CP) e é inconstitucional por violar o art. 5.º, XXXIX, CF/88.</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📋 Art. 12 CP × Art. 2.º CP — Retroatividade Benéfica nas Leis Especiais</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">A retroatividade da lei penal mais benéfica (art. 2.º, parágrafo único, CP — uma das "regras gerais" do CP) aplica-se, via art. 12 CP, às leis penais especiais. Assim, se uma lei de drogas posterior reduz a pena de determinado crime, essa redução retroage em benefício dos réus condenados anteriormente — independentemente de o crime estar no CP ou em lei especial.</p>
+      <p class="mt2" style="font-size:0.85rem;color:var(--text-mid);">Esta regra tem sede constitucional autônoma (art. 5.º, XL, CF/88), mas o art. 12 CP a opera sistematicamente no campo das leis especiais.</p>
+      <div class="alert alert-gold mt2" style="font-size:0.8rem;">
+        <div>⭐ <strong>Ponto de prova:</strong> A lex mitior retroage mesmo quando a lei mais benéfica é lei especial e o crime anteriormente praticado estava tipificado no CP — ou vice-versa. A natureza (CP ou lei especial) da norma mais benéfica é irrelevante; o que importa é o benefício ao réu.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 8. EXEMPLOS PRÁTICOS                      -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="exemplos">
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <div class="section-title"><span>Casos Concretos Resolvidos</span>Exemplos Práticos de Aplicação do Art. 12 CP</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 1 — Tentativa de Contravenção Penal (Cláusula de Exceção)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">Agente tenta praticar vadiagem (art. 59 LCP — embora derrogada na prática, o raciocínio é válido). Aplica-se o art. 14, II, CP (tentativa)?</p>
+      <div class="ex-calc">ANÁLISE VIA ART. 12 CP:
+
+1. Fato incriminado em lei especial? SIM → LCP (Dec.-Lei 3.688/41)
+
+2. Instituto a aplicar: TENTATIVA (art. 14, II, CP)
+
+3. A LCP dispõe de modo diverso?
+   → Art. 4.º LCP: "Não é punível a tentativa de contravenção."
+   → SIM — disposição expressa e contrária ao art. 14, II, CP
+
+4. Cláusula de exceção do art. 12 CP: ATIVA
+   → Art. 4.º LCP prevalece sobre art. 14, II, CP
+   → Resultado: tentativa de contravenção é IMPUNÍVEL
+
+CONCLUSÃO: Art. 12 CP afastado pela
+especialidade da LCP → art. 14, II, CP não se aplica.
+Este é o exemplo clássico de "dispor de modo diverso".</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 2 — Prescrição em Crime Ambiental (Subsidiariedade)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">Réu condenado por crime ambiental (art. 38 da Lei 9.605/98 — destruição de floresta). Pena aplicada: 1 ano. Prazo prescricional?</p>
+      <div class="ex-calc">ANÁLISE VIA ART. 12 CP:
+
+1. Fato incriminado em lei especial? SIM → Lei 9.605/98
+
+2. Instituto a aplicar: PRESCRIÇÃO
+
+3. A Lei 9.605/98 dispõe sobre prazo prescricional?
+   → NÃO — a Lei Ambiental é OMISSA sobre prescrição
+
+4. Cláusula de exceção: INATIVA
+   → Art. 12 CP: aplica-se subsidiariamente o CP
+
+5. Art. 109, VI, CP: crime com pena ≤ 1 ano → prazo = 3 anos
+
+CONCLUSÃO: Prazo prescricional = 3 anos
+(art. 109, VI, CP — aplicado via art. 12 CP).
+
+Se a Lei Ambiental tivesse prazo próprio, prevaleceria
+esse prazo (especialidade); como é omissa, o CP supre.</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 3 — Dosimetria Trifásica em Crime de Drogas (Subsidiariedade + Especialidade)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">Condenação por tráfico de drogas (art. 33, caput, Lei 11.343/2006). Réu primário, de bons antecedentes, sem integração em organização criminosa.</p>
+      <div class="ex-calc">ANÁLISE VIA ART. 12 CP:
+
+FASE 1 (pena-base) → Art. 59 CP aplicado VIA ART. 12:
+Lei de Drogas é omissa sobre método de pena-base
+→ CP supre subsidiariamente: pena-base = 5 anos
+
+FASE 2 (agravantes/atenuantes) → Arts. 61–66 CP VIA ART. 12:
+Lei de Drogas tem agravantes específicas (art. 40)
+→ Se incidente, prevalecem (especialidade)
+→ Se ausentes, aplica-se CP subsidiariamente
+
+FASE 3 (causas especiais) → LEI ESPECIAL PREVALECE:
+Art. 33, §4.º, Lei 11.343/2006: redução de 1/6 a 2/3
+→ Esta é norma especial da lei extravagante
+→ Aplica-se a lei especial, NÃO o CP
+
+Vedação de substituição → Art. 44 Lei 11.343/2006
+→ Afasta art. 44 CP (especialidade ativa)
+
+CONCLUSÃO: Combinação de subsidiariedade (fases 1–2)
+e especialidade (fase 3 + vedação de substituição).</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 4 — Imputabilidade em Crime de Lei Especial (Subsidiariedade Plena)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">Réu de 17 anos pratica crime ambiental (art. 40 Lei 9.605/98 — dano a Unidade de Conservação). É inimputável? Qual a consequência?</p>
+      <div class="ex-calc">ANÁLISE VIA ART. 12 CP:
+
+1. Fato incriminado em lei especial? SIM → Lei 9.605/98
+
+2. Instituto: IMPUTABILIDADE / MENORIDADE
+
+3. A Lei Ambiental regula imputabilidade?
+   → NÃO — Lei 9.605/98 é OMISSA
+
+4. Art. 12 CP → subsidiariedade do CP:
+   → Art. 27 CP: menor de 18 anos é inimputável
+   → Art. 228 CF/88: menoridade penal — 18 anos
+
+5. Consequência: réu de 17 anos É INIMPUTÁVEL
+   → Não responde perante a Justiça Criminal
+   → Sujeita-se ao ECA (medidas socioeducativas)
+   → Crime ambiental praticado pelo menor → ato infracional
+
+CONCLUSÃO: Regras de imputabilidade do CP (arts. 26–28)
+transferem-se a TODOS os crimes de leis especiais
+via art. 12 CP — é regra universal, não há lei especial
+que a afaste (salvo regras específicas do ECA/CPM).</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 9. JURISPRUDÊNCIA STF/STJ                 -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="jurisprudencia">
+  <div class="section-header">
+    <div class="section-num">09</div>
+    <div class="section-title"><span>STF · STJ · Teses Consolidadas</span>Jurisprudência e Posições dos Tribunais Superiores</div>
+  </div>
+
+  <div class="alert alert-navy mt1" style="margin-bottom:1.2rem;">
+    <div class="alert-icon">ℹ️</div>
+    <div>As posições abaixo refletem entendimentos consolidados do STF e STJ sobre a aplicação do art. 12 CP. São referenciadas por tema e diploma legal para garantia de <strong>zero alucinação</strong>. Os precedentes mais relevantes são os que definem quando as regras gerais do CP se aplicam — ou não — a cada lei especial.</div>
+  </div>
+
+  <div class="juris-grid">
+
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <span class="juris-badge tese">Tese Constitucional</span>
+        <div class="juris-title">Princípio da Legalidade (Art. 1.º CP) como Regra Geral Transferível via Art. 12 CP às Leis Especiais</div>
+      </div>
+      <div class="juris-body">
+        <p>O STF reconhece que o princípio da legalidade (art. 1.º CP — transferido pelo art. 12 CP às leis penais especiais) exige que os tipos penais extravagantes observem os mesmos requisitos de taxatividade, anterioridade e <em>lex scripta</em> exigidos para os crimes do próprio Código Penal. Leis penais especiais com tipos abertos ou que penalizam por analogia são inconstitucionais (art. 5.º, XXXIX, CF/88).</p>
+        <p class="mt1">A constitucionalidade das normas penais especiais é aferida com os mesmos parâmetros das normas do CP — o art. 12 CP garante essa unidade de regime. O STF usa essa premissa em julgamentos de controle de constitucionalidade de leis penais extravagantes.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Legalidade — Art. 5.º, XXXIX, CF</span>
+          <span class="tag tag-gold">Art. 1.º CP via Art. 12 CP</span>
+          <span class="tag tag-blue">Taxatividade em Leis Especiais</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <span class="juris-badge tese">HC 111.840/ES — Plenário 2012</span>
+        <div class="juris-title">Inconstitucionalidade do Regime Inicial Obrigatoriamente Fechado para Crimes Hediondos — Regra Geral do CP Prevalece</div>
+      </div>
+      <div class="juris-body">
+        <p>No julgamento do HC 111.840/ES (Plenário, 2012), o STF declarou inconstitucional o § 1.º do art. 2.º da Lei 8.072/90 (redação dada pela Lei 11.464/2007), que impunha regime inicial obrigatoriamente fechado para crimes hediondos. Com isso, o regime inicial de cumprimento de pena para crimes hediondos passou a ser fixado pelas regras gerais do CP (art. 33, §§ 2.º e 3.º), que levam em conta a pena concretamente aplicada — e não o delito em abstrato.</p>
+        <p class="mt1">Este precedente é paradigmático para o art. 12 CP: a lei especial (Lei 8.072/90) dispunha diversamente (cláusula de exceção ativa), mas o STF declarou essa disposição inconstitucional — devolvendo a matéria às regras gerais do CP (art. 12 CP). A constitucionalidade é o limite externo do art. 12 CP: mesmo quando a lei especial "dispõe de modo diverso", ela não pode violar a Constituição.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">HC 111.840/ES — STF 2012</span>
+          <span class="tag tag-gold">Regime Inicial — Art. 33 CP</span>
+          <span class="tag tag-blue">Crimes Hediondos — Lei 8.072/90</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <span class="juris-badge tese">ADI 4424/DF — 2012</span>
+        <div class="juris-title">Ação Penal Pública Incondicionada — Lei Maria da Penha e Regras Gerais do CP sobre Ação Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Na ADI 4424/DF, o STF declarou a natureza pública incondicionada da ação penal nos crimes de lesão corporal (art. 129 CP) cometidos em contexto de violência doméstica e familiar contra a mulher (Lei Maria da Penha). O STF afastou a aplicação do art. 88 da Lei 9.099/95 (que exigia representação da vítima nas lesões leves), reconhecendo que a Lei Maria da Penha — ao dispor sobre violência doméstica — afasta as regras gerais do JECrim (art. 41 LMP) e que as regras gerais do CP sobre ação penal (pública incondicionada para lesão corporal dolosa) se aplicam via art. 12 CP.</p>
+        <p class="mt1">A lógica do art. 12 CP está presente: a Lei Maria da Penha dispôs de modo diverso (afastou o JECrim — art. 41), e as regras gerais do CP sobre ação penal (pública incondicionada — art. 100 CP) preencheram o vácuo.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">ADI 4424/DF — STF 2012</span>
+          <span class="tag tag-gold">Lei Maria da Penha — Art. 41</span>
+          <span class="tag tag-blue">Ação Penal Pública Incondicionada</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge sumula">Súmula 536</span>
+        <div class="juris-title">Inaplicabilidade do Sursis Processual e da Transação Penal — Lei Maria da Penha × Regras Gerais do CPP/Lei 9.099</div>
+      </div>
+      <div class="juris-body">
+        <p>A Súmula 536 do STJ consolidou o entendimento de que a suspensão condicional do processo e a transação penal não se aplicam nas hipóteses de delitos sujeitos ao rito da Lei Maria da Penha. Esta súmula é aplicação direta da cláusula de exceção do art. 12 CP: o art. 41 da Lei Maria da Penha dispõe de modo diverso (afastando a Lei 9.099/95) → as regras gerais do JECrim ficam excluídas para esses crimes.</p>
+        <p class="mt1">A lógica vale tanto para o direito material (art. 12 CP) quanto para o processual (art. 1.º, II, CPP): a lei especial (LMP) afasta as normas gerais (Lei 9.099/95 e, reflexamente, regras do CP sobre sursis processual). É um precedente que os candidatos a magistratura devem dominar, pois combina arts. 12 CP, 41 LMP, 1.º, II, CPP e a Súmula 536 STJ.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Súmula 536/STJ</span>
+          <span class="tag tag-gold">Art. 41 LMP</span>
+          <span class="tag tag-blue">Sursis Processual — Lei 9.099/95</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Continuidade Delitiva (Art. 71 CP) Aplicada a Crimes de Leis Especiais via Art. 12 CP</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ admite de forma pacífica a continuidade delitiva (art. 71 CP) entre crimes previstos em leis especiais, quando presentes os requisitos do art. 71 CP (crimes da mesma espécie, condições de tempo, lugar, maneira de execução e outras semelhantes). O fundamento é o art. 12 CP: as regras gerais sobre concurso de crimes (arts. 69–72 CP) aplicam-se subsidiariamente às leis especiais omissas sobre o tema.</p>
+        <p class="mt1">Ponto relevante: o STJ também admite continuidade delitiva entre crime do CP e crime de lei especial, desde que sejam da mesma espécie (mesmo bem jurídico). A "mesma espécie" é interpretada não como "mesmo tipo penal", mas como "mesmo bem jurídico tutelado".</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Crime Continuado — Art. 71 CP</span>
+          <span class="tag tag-gold">Art. 12 CP — Subsidiariedade</span>
+          <span class="tag tag-blue">Mesma Espécie — Bem Jurídico</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Aplicação das Agravantes e Atenuantes Genéricas do CP (Arts. 61–65) aos Crimes de Leis Especiais via Art. 12 CP</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ reconhece que as agravantes genéricas (art. 61 CP) e as atenuantes genéricas (art. 65 CP) aplicam-se aos crimes de leis especiais, por força do art. 12 CP — desde que a lei especial não contenha disposição diversa. Assim, a reincidência (art. 61, I, CP) agrava a pena do crime de tráfico de drogas, do crime ambiental, do porte ilegal de arma etc.</p>
+        <p class="mt1">Ponto de cuidado: se a lei especial prevê causas de aumento específicas (ex.: art. 40 da Lei de Drogas), essas prevalecem sobre as agravantes genéricas do CP nas situações que regulam (especialidade). Mas nas situações não reguladas pela lei especial, as agravantes do CP se aplicam via art. 12 CP.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Agravantes — Arts. 61–62 CP</span>
+          <span class="tag tag-gold">Atenuantes — Arts. 65–66 CP</span>
+          <span class="tag tag-blue">Art. 12 CP — Subsidiariedade</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Prescrição dos Crimes de Leis Especiais — Aplicação Subsidiária dos Arts. 109–119 CP via Art. 12</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ aplica sistematicamente os arts. 109–119 CP às leis penais especiais que não possuem regras próprias de prescrição. O cálculo do prazo prescricional dos crimes ambientais, de crimes tributários, de crimes do Estatuto do Desarmamento e de inúmeras outras leis especiais segue os prazos do art. 109 CP — com base no máximo da pena cominada pela lei especial — aplicados via art. 12 CP.</p>
+        <p class="mt1">Essa é, na prática forense cotidiana, a aplicação mais frequente do art. 12 CP: calcular a prescrição de crimes de leis especiais pelos prazos e causas interruptivas e suspensivas do CP. O STJ exige que os juízes e tribunais de origem fundamentem explicitamente a aplicação do art. 12 CP nesses casos.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Prescrição — Arts. 109–119 CP</span>
+          <span class="tag tag-gold">Art. 12 CP — Subsidiariedade</span>
+          <span class="tag tag-blue">Leis Penais Especiais Omissas</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge sumula">Súmula 243</span>
+        <div class="juris-title">Sursis Processual — Inaplicabilidade em Concurso de Crimes (Regra Geral CP × Leis Especiais)</div>
+      </div>
+      <div class="juris-body">
+        <p>A Súmula 243 do STJ enuncia que o benefício da suspensão condicional do processo (sursis processual — art. 89 da Lei 9.099/95) não é aplicável em relação às infrações penais cometidas em concurso material, concurso formal ou continuidade delitiva, quando a pena mínima cominada, seja pelo somatório, seja pela incidência da majorante, ultrapassar dois anos.</p>
+        <p class="mt1">Para o art. 12 CP: as regras de concurso material (art. 69 CP), concurso formal (art. 70 CP) e crime continuado (art. 71 CP) são "regras gerais" aplicadas via art. 12 CP às infrações de leis especiais — e seus efeitos (como o somatório de penas mínimas) impactam a elegibilidade ao sursis processual da Lei 9.099/95.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Súmula 243/STJ</span>
+          <span class="tag tag-gold">Sursis Processual — Lei 9.099/95</span>
+          <span class="tag tag-blue">Concurso de Crimes — Arts. 69–71 CP</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Responsabilidade Penal da Pessoa Jurídica em Crimes Ambientais — Autonomia da Lei Especial em Relação ao CP</div>
+      </div>
+      <div class="juris-body">
+        <p>O STF, seguindo o texto constitucional (art. 225, §3.º, CF/88) e a Lei 9.605/98 (art. 3.º), reconhece a responsabilidade penal da pessoa jurídica em crimes ambientais. Esta é uma hipótese em que a lei especial (Lei Ambiental) <em>afasta</em> a regra geral implícita do CP (que não prevê responsabilização penal das pessoas jurídicas para a generalidade dos crimes). A cláusula "se esta não dispuser de modo diverso" (art. 12 CP) está ativa: a lei especial (art. 3.º Lei 9.605/98 + art. 225, §3.º, CF) dispõe diversamente → o CP não limita a lei ambiental.</p>
+        <p class="mt1">STF — ARE 548181/PR: afastou a "teoria da dupla imputação necessária" que exigia imputação simultânea da pessoa física e jurídica, reconhecendo a autonomia da responsabilização da pessoa jurídica nos crimes ambientais.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">ARE 548181/PR — STF</span>
+          <span class="tag tag-gold">PJ — Crimes Ambientais</span>
+          <span class="tag tag-blue">Art. 225, §3.º, CF/88</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 10. DOUTRINA                              -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="doutrina">
+  <div class="section-header">
+    <div class="section-num">10</div>
+    <div class="section-title"><span>Doutrina Nacional</span>Principais Posições Doutrinárias</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cleber Masson — Direito Penal Esquematizado</div>
+      </div>
+      <div class="juris-body">
+        <p>Masson apresenta o art. 12 CP como consagrador do <strong>"princípio da subsidiariedade das regras gerais do Código Penal"</strong>. Destaca a estrutura dual do dispositivo: (a) regra (subsidiariedade) — quando a lei especial é omissa, aplica-se o CP; e (b) exceção (especialidade) — quando a lei especial "dispõe de modo diverso", suas normas prevalecem. Alerta que a "disposição diversa" pode ser expressa ou implícita (sistemática), desde que inequívoca. Para concursos, enfatiza que o art. 12 CP é norma de integração sistêmica — sua compreensão é pressuposto para resolver questões que envolvam leis especiais em qualquer aspecto da Parte Geral do CP (tentativa, prescrição, dosimetria, concurso de crimes etc.).</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cezar Roberto Bitencourt — Tratado de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Bitencourt aprofunda a análise da relação entre norma geral e norma especial no contexto do art. 12 CP. Destaca que o dispositivo operacionaliza o princípio geral do Direito segundo o qual a norma especial prevalece sobre a geral (<em>lex specialis derogat generali</em>), mas com uma nuance crucial: no campo do Direito Penal, a norma geral do CP não é simplesmente "afastada" — ela é <em>substituída</em> pela norma especial nos pontos em que esta dispõe diversamente, e permanece aplicável em tudo o mais. Critica a terminologia "lei especial" usada no art. 12 CP, preferindo "lei penal extravagante" para distinguir da lei especial no sentido técnico-dogmático de conflito aparente de normas. Analisa detidamente a exceção do CPM como sistema normativo autossuficiente.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Rogério Greco — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Greco destaca a importância prática do art. 12 CP como <strong>mecanismo de coerência do sistema penal brasileiro</strong>: sem ele, o réu de um crime previsto em lei especial ficaria à mercê das lacunas da legislação extravagante — sem tentativa, sem prescrição, sem regras de imputabilidade. O art. 12 CP evita essa fragmentação intolerável. Analisa a interação do art. 12 CP com a Lei de Drogas de forma exaustiva, mapeando onde o CP se aplica (prescrição, imputabilidade, dosimetria das fases 1 e 2) e onde é afastado pela especialidade (vedação de substituição, regime inicial mais rígido para crimes hediondos equiparados). Critica a tendência legislativa de criar "microssistemas" penais cada vez mais fechados que, por omissão ou excesso de especialidade, prejudicam a coerência sistêmica que o art. 12 CP busca preservar.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Guilherme de Souza Nucci — Código Penal Comentado</div>
+      </div>
+      <div class="juris-body">
+        <p>Nucci comenta o art. 12 CP com foco na sua aplicação prática pelo magistrado. Enfatiza três pontos: (1) o juiz deve verificar, em todo processo envolvendo lei especial, se existe norma específica no diploma extravagante sobre o instituto a aplicar — antes de recorrer ao CP; (2) a cláusula "dispuser de modo diverso" abrange tanto disposições expressas quanto disposições implícitas (incompatibilidade sistêmica); (3) o CPM é a grande exceção ao art. 12 CP — e confundir a jurisdição penal militar com a criminal comum, aplicando o CP subsidiariamente ao CPM, é erro grave. Defende a posição de que o art. 12 CP é uma garantia para o réu: ao assegurar que institutos benéficos do CP (como a retroatividade da lei mais benéfica, a imputabilidade baseada em doença mental, a extinção da punibilidade) se apliquem às leis especiais, o dispositivo impede que o legislador ordinário, ao criar leis especiais, prive implicitamente o réu de garantias penais fundamentais.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Fernando Capez — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Capez enfatiza a função do art. 12 CP como <strong>norma de fechamento do sistema penal</strong>: garante que não existam "ilhas" de direito penal desconectadas da Parte Geral do CP. Para ele, o art. 12 CP tem dupla função: (a) integrativa — preenche lacunas das leis especiais com as regras gerais do CP; e (b) limitativa — impede que as leis especiais ignorem os institutos fundamentais do direito penal, forçando sua aplicação salvo disposição expressa em contrário. Faz importante observação sobre a distinção entre "lei penal especial" (para fins do art. 12 CP) e "norma especial em conflito aparente de normas" (princípio da especialidade): são conceitos distintos. No art. 12 CP, "lei especial" significa lei penal fora do CP; no conflito aparente de normas, "norma especial" é a mais específica em relação à geral, independentemente de estar ou não no CP.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Controvérsia: "Regras Gerais" Inclui Princípios da Parte Especial do CP?</div>
+      </div>
+      <div class="juris-body">
+        <p>Há debate doutrinário sobre a extensão das "regras gerais" mencionadas no art. 12 CP:</p>
+        <ul class="mt1">
+          <li><strong>Posição majoritária (Masson, Bitencourt, Greco, Nucci, Capez):</strong> "Regras gerais" = <em>Parte Geral do CP (arts. 1–120)</em> exclusivamente. Apenas os dispositivos da Parte Geral se transferem às leis especiais via art. 12 CP. Critério: sistemático-topográfico.</li>
+          <li><strong>Posição minoritária (Frederico Marques):</strong> "Regras gerais" inclui também os princípios gerais extraídos da Parte Especial do CP que tenham aplicação universal — como os princípios sobre o concurso de agentes inferidos dos crimes plurissubjetivos da Parte Especial.</li>
+          <li><strong>Posição intermediária:</strong> algumas regras da Parte Especial que funcionam como "princípios gerais" (ex.: tipo básico x tipo derivado) podem ser invocadas analogicamente com base no art. 12 CP — mas não como aplicação direta do artigo.</li>
+          <li><strong>Conclusão para concurso:</strong> Adote a posição majoritária. Em questão de múltipla escolha, a resposta esperada é que "regras gerais" = Parte Geral do CP (arts. 1–120).</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 11. SISTEMÁTICA                          -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="sistematica">
+  <div class="section-header">
+    <div class="section-num">11</div>
+    <div class="section-title"><span>Conexões Sistemáticas</span>Art. 12 CP na Sistemática do Ordenamento Penal Brasileiro</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔗 Artigos Diretamente Conectados ao Art. 12 CP</h3>
+      <ul>
+        <li><strong>Art. 1.º CP (Legalidade):</strong> principal regra geral transferida pelo art. 12 CP — taxatividade e anterioridade aplicam-se às leis especiais</li>
+        <li><strong>Art. 2.º CP (Irretroatividade / Lex Mitior):</strong> retroatividade benéfica aplica-se via art. 12 CP às leis especiais; tem sede autônoma na CF/88 (art. 5.º, XL)</li>
+        <li><strong>Art. 4.º LCP:</strong> exemplo paradigmático da cláusula de exceção — tentativa de contravenção é impunível porque a LCP dispõe diversamente do art. 14, II, CP</li>
+        <li><strong>Arts. 14 e 15 CP (Tentativa e desistência):</strong> regras gerais mais frequentemente invocadas via art. 12 CP em crimes de leis especiais</li>
+        <li><strong>Arts. 26–28 CP (Imputabilidade):</strong> aplicam-se universalmente via art. 12 CP a todos os crimes de leis especiais</li>
+        <li><strong>Arts. 29–30 CP (Concurso de pessoas):</strong> coautoria e participação nos crimes de leis especiais seguem as regras do CP</li>
+        <li><strong>Arts. 59–76 CP (Dosimetria):</strong> fases 1 e 2 da dosimetria e limites de pena aplicam-se subsidiariamente às leis especiais</li>
+        <li><strong>Arts. 109–119 CP (Prescrição):</strong> aplicação mais frequente do art. 12 CP na prática forense — prazos e causas interruptivas e suspensivas do CP regem a prescrição das leis especiais omissas</li>
+        <li><strong>Art. 1.º, II, CPP:</strong> norma análoga ao art. 12 CP no campo processual — o CPP se aplica subsidiariamente às leis processuais especiais</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📋 Art. 12 CP × Conflito Aparente de Normas Penais</h3>
+      <div class="law-quote">
+        <strong>Conflito aparente de normas penais — Princípios:</strong>
+        Especialidade (<em>lex specialis</em>), Subsidiariedade (<em>lex primaria</em>), Consunção (<em>lex consumens</em>) e Alternatividade. Não se confundem com o art. 12 CP.
+      </div>
+      <p class="mt2" style="font-size:0.85rem;color:var(--text-mid);">O art. 12 CP <strong>não</strong> resolve conflito aparente de normas penais — esses conflitos ocorrem quando dois tipos penais incidem sobre o mesmo fato concreto, e resolvem-se pelos princípios da especialidade, subsidiariedade e consunção.</p>
+      <p class="mt1" style="font-size:0.85rem;color:var(--text-mid);">O art. 12 CP regula situação diversa: quando um único fato é tipificado por lei especial e surge dúvida sobre qual instituto do Direito Penal Geral (tentativa, prescrição, imputabilidade etc.) aplicar — o CP ou a lei especial. São planos distintos de análise.</p>
+      <div class="alert alert-red mt2" style="font-size:0.8rem;">
+        <div>🔴 <strong>Distinção crítica para concursos:</strong> Conflito aparente de normas → mesmo fato, dois tipos penais, uma solução (especialidade, subsidiariedade, consunção). Art. 12 CP → crime de lei especial, lacuna sobre instituto geral, solução: CP supre (subsidiariedade) ou lei especial prevalece (especialidade). São análises independentes e sequenciais.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-3 mt2">
+    <div class="card">
+      <h3>⚡ Art. 12 CP e o Princípio da Proporcionalidade</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">Quando a lei especial dispõe de modo diverso (cláusula de exceção do art. 12 CP), a norma especial ainda deve observar o princípio da proporcionalidade (art. 5.º, LIV e LV, CF/88). Uma lei especial que estabeleça penas desproporcionais ou vedações absolutas a institutos benéficos (como ocorreu com o regime inicialmente fechado obrigatório — HC 111.840/STF) pode ser inconstitucional mesmo invocando a cláusula de exceção do art. 12 CP.</p>
+      <p class="mt1" style="font-size:0.85rem;color:var(--text-mid);"><strong>Conclusão:</strong> a cláusula de exceção do art. 12 CP tem limite constitucional — não permite que a lei especial viole o núcleo essencial dos direitos fundamentais do acusado.</p>
+    </div>
+    <div class="card">
+      <h3>🔄 Resumo Comparativo Final</h3>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.84rem;line-height:1.9;">
+        <p><strong style="color:var(--gold-light);">Art. 12 CP → SUBSIDIARIEDADE</strong><br>
+        ✅ Regras gerais do CP → leis especiais omissas<br>
+        ❌ Não se aplica ao CPM<br>
+        ✅ Salvo disposição diversa da lei especial</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.7rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Cláusula de exceção → ESPECIALIDADE</strong><br>
+        ✅ Lei especial prevalece quando regula o tema<br>
+        ✅ Pode ser expressa ou sistemática<br>
+        ❌ Não pode violar a CF/88</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.7rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Limite supremo:</strong><br>
+        Constituição Federal/1988<br>
+        Princípios da legalidade,<br>proporcionalidade, isonomia<br>e <em>favor rei</em></p>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📅 Art. 12 CP e Processo Penal — Distinção</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">O art. 12 CP cuida da <strong>subsidiariedade das normas de Direito Penal material</strong>. Para o processo penal, a norma equivalente é o <strong>art. 1.º, II, CPP</strong>, que estabelece a subsidiariedade do CPP em relação às leis processuais especiais.</p>
+      <p class="mt1" style="font-size:0.85rem;color:var(--text-mid);">Exemplo prático: o rito processual dos crimes da Lei de Drogas é regulado pelos arts. 54–59 da Lei 11.343/2006 — se houver lacuna, aplica-se o CPP (art. 1.º, II, CPP). Já as regras materiais sobre tentativa, prescrição e dosimetria do CP aplicam-se subsidiariamente via art. 12 CP.</p>
+      <div class="alert alert-gold mt2" style="font-size:0.8rem;">
+        <div>🎯 <strong>Para a prova:</strong> Art. 12 CP → direito penal material (Parte Geral do CP → leis especiais). Art. 1.º, II, CPP → direito processual penal (CPP → leis processuais especiais). Não confundir os planos material e processual.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- PROVA / ENAM                             -->
+<!-- ══════════════════════════════════════════ -->
+<section id="prova" class="prova-section">
+  <h2>⚖️ Pontos Cobrados em Magistratura e ENAM</h2>
+  <p class="intro">Questões, teses e pegadinhas recorrentes nos concursos de Juiz de Direito, ENAM e equivalentes relacionadas ao Art. 12 CP.</p>
+
+  <div class="prova-items">
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">01</span>O que são as "regras gerais" a que se refere o art. 12 CP?</div>
+      <div class="prova-item-a"><strong>São os institutos e princípios da Parte Geral do Código Penal (arts. 1 a 120 do CP)</strong> — legalidade, irretroatividade, tentativa, imputabilidade, concurso de pessoas, dosimetria, prescrição, extinção da punibilidade etc. A posição majoritária (Masson, Bitencourt, Greco, Nucci) restringe as "regras gerais" à Parte Geral do CP (arts. 1–120). A posição minoritária (Frederico Marques) inclui também princípios gerais da Parte Especial. Para concursos, adote a posição majoritária: regras gerais = Parte Geral do CP.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">02</span>O art. 12 CP aplica-se ao Código Penal Militar?</div>
+      <div class="prova-item-a"><strong>Não.</strong> O Código Penal Militar (Decreto-Lei 1.001/69) possui <strong>Parte Geral completa e própria</strong> (arts. 1–132), com regras autônomas sobre tentativa, imputabilidade, concurso de pessoas, prescrição e dosimetria. Por isso, o art. 12 CP não se aplica ao CPM — esse diploma é autossuficiente. É a grande exceção ao art. 12 CP, reconhecida de forma unânime pela doutrina e pelos tribunais. Confundir essa exceção com a regra é erro muito cobrado em provas.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">03</span>Qual é o exemplo mais clássico e cobrado em provas da cláusula "se esta não dispuser de modo diverso" do art. 12 CP?</div>
+      <div class="prova-item-a">O exemplo mais clássico é a <strong>impunibilidade da tentativa de contravenção penal</strong>. O art. 4.º da Lei das Contravenções Penais (Dec.-Lei 3.688/41) dispõe expressamente que "não é punível a tentativa de contravenção" — assim, a lei especial (LCP) dispõe diversamente do art. 14, II, CP (que pune a tentativa). Pela cláusula de exceção do art. 12 CP, prevalece o art. 4.º LCP: a tentativa de contravenção é impunível. Este é o exemplo mais frequente nas provas de concurso sobre o art. 12 CP.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">04</span>O art. 44 CP (substituição de PPL por PRD) aplica-se ao crime de tráfico de drogas (art. 33, caput, Lei 11.343/2006)?</div>
+      <div class="prova-item-a"><strong>Não.</strong> O art. 44 da Lei 11.343/2006 dispõe expressamente que os crimes previstos nos arts. 33, 34, 35, 36 e 37 da Lei de Drogas são inafiançáveis e insuscetíveis de sursis, graça, indulto, anistia e liberdade provisória, vedando ainda a substituição da pena por restritiva de direitos. Esta é uma hipótese clara da cláusula de exceção do art. 12 CP: a lei especial (Lei de Drogas) dispõe de modo diverso → afasta o art. 44 CP. Cuidado: o STF já afastou a vedação absoluta à liberdade provisória como inconstitucional, mas a vedação à substituição por PRD permanece.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">05</span>Como se calcula a prescrição de crime previsto na Lei de Crimes Ambientais (Lei 9.605/98) que não possui prazo prescricional próprio?</div>
+      <div class="prova-item-a">Aplica-se subsidiariamente os <strong>arts. 109–119 do Código Penal</strong>, por força do art. 12 CP. A Lei de Crimes Ambientais é omissa sobre prazos prescricionais → não há cláusula de exceção ativa → o CP supre a lacuna. O prazo é determinado com base no <strong>máximo da pena cominada pelo crime ambiental</strong> (art. 109 CP): ex., crime com pena máxima de 4 anos → prescrição em 8 anos (art. 109, IV, CP). As causas interruptivas (art. 117 CP) e suspensivas (art. 116 CP) também se aplicam. Esta é, na prática, a aplicação mais frequente do art. 12 CP na prática forense.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">06</span>É possível reconhecer a continuidade delitiva (art. 71 CP) entre crimes da mesma lei especial? E entre crime do CP e crime de lei especial?</div>
+      <div class="prova-item-a"><strong>Sim, em ambos os casos.</strong> O STJ, aplicando o art. 12 CP (que transfere o art. 71 CP às leis especiais), admite: (a) continuidade delitiva entre crimes da mesma lei especial — ex.: vários crimes de tráfico de drogas; (b) continuidade delitiva entre crimes do CP e crimes de lei especial, desde que sejam da <em>mesma espécie</em> — e o STJ interpreta "mesma espécie" como <em>mesmo bem jurídico tutelado</em>, não exigindo identidade de tipo penal. Ambas as hipóteses são cobradas em provas de magistratura.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">07</span>Um menor de 17 anos pratica crime previsto na Lei de Crimes Hediondos. Aplica-se a pena do CP/Lei 8.072/90 ou o ECA?</div>
+      <div class="prova-item-a">Aplica-se o <strong>ECA (Lei 8.069/90)</strong>. A regra de inimputabilidade do menor de 18 anos (art. 27 CP) é "regra geral" transferida pelo art. 12 CP a todas as leis especiais, incluindo a Lei 8.072/90. A Lei de Crimes Hediondos é omissa sobre imputabilidade → o CP supre (art. 12 CP) → menor de 18 anos é inimputável. Sendo inimputável, não se aplica pena criminal, mas medida socioeducativa do ECA. A gravidade do crime (hediondo) é irrelevante para a inimputabilidade pela menoridade — essa é regra absoluta (art. 228 CF/88).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">08</span>As agravantes genéricas do CP (art. 61) aplicam-se aos crimes de leis especiais?</div>
+      <div class="prova-item-a"><strong>Sim, subsidiariamente.</strong> As agravantes (arts. 61–62 CP) e atenuantes genéricas (arts. 65–66 CP) são "regras gerais" que se transferem às leis especiais via art. 12 CP, quando a lei especial não dispõe diversamente. A reincidência (art. 61, I, CP), por exemplo, agrava a pena do crime de tráfico de drogas. Mas atenção: se a lei especial prevê causa de aumento específica para a mesma circunstância (ex.: art. 40 Lei de Drogas), essa prevalece sobre a agravante genérica do CP pela especialidade — não há dupla incidência (vedação ao bis in idem).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">09</span>[ENAM — alta recorrência] Assinale a alternativa correta sobre o art. 12 CP.</div>
+      <div class="prova-item-a">O art. 12 CP estabelece que as <strong>regras gerais do Código Penal (Parte Geral — arts. 1 a 120) aplicam-se subsidiariamente</strong> aos fatos incriminados por lei especial, desde que a lei especial não disponha de modo diverso. Pontos-chave: (a) não se aplica ao CPM (que tem Parte Geral própria); (b) a cláusula de exceção pode ser expressa ou implícita/sistemática; (c) o exemplo clássico da exceção é o art. 4.º LCP (impunibilidade da tentativa de contravenção); (d) a aplicação mais frequente é o cálculo da prescrição de crimes de leis especiais pelos prazos do CP; (e) mesmo quando a lei especial dispõe diversamente, a norma especial não pode violar a Constituição.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">10</span>A retroatividade da lei penal mais benéfica (art. 2.º, parágrafo único, CP) se aplica às leis especiais, via art. 12 CP?</div>
+      <div class="prova-item-a"><strong>Sim, e com duplo fundamento.</strong> A retroatividade da <em>lex mitior</em> aplica-se aos crimes de leis especiais: (a) via art. 12 CP, como "regra geral" transferida pelo CP às leis especiais; e (b) diretamente pela Constituição Federal — art. 5.º, XL, CF/88 ("a lei penal não retroagirá, salvo para beneficiar o réu"). O fundamento constitucional é autônomo e independente do art. 12 CP. Exemplo: nova lei de drogas que reduza a pena mínima do tráfico retroage para beneficiar réus já condenados.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">11</span>Qual a diferença entre "lei especial" para fins do art. 12 CP e "norma especial" no conflito aparente de normas?</div>
+      <div class="prova-item-a">São conceitos distintos e frequentemente confundidos: (a) <strong>"Lei especial" no art. 12 CP</strong>: é qualquer lei penal extravagante (fora do CP) que tipifique crimes ou contravenções. Critério: topográfico e substancial. O art. 12 CP trata da relação entre a Parte Geral do CP e as leis extravagantes. (b) <strong>"Norma especial" no conflito aparente de normas</strong>: é a norma que descreve com mais especificidade o mesmo fato descrito pela norma geral. Pode estar dentro ou fora do CP. O conflito aparente trata da relação entre dois tipos penais que aparentemente incidem sobre o mesmo fato. Exemplo: art. 155 CP (furto — geral) × art. 168 CP (apropriação indébita — especial) é conflito aparente. Não é aplicação do art. 12 CP.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">12</span>[ENAM — questão integrada] Réu primário, de bons antecedentes, condenado por porte ilegal de arma de fogo de uso restrito (art. 16 Lei 10.826/2003 — pena: 3 a 6 anos). A Defensoria pede substituição da pena por PRD e sursis. São cabíveis?</div>
+      <div class="prova-item-a"><strong>Análise via art. 12 CP:</strong> (1) <em>Substituição por PRD (art. 44 CP)</em>: A Lei 10.826/2003 (Estatuto do Desarmamento) não contém vedação expressa à substituição para o art. 16 (diferentemente dos arts. 33–37 da Lei de Drogas). Mas a pena mínima é de 3 anos → requisito do art. 44, I, CP: pena não superior a 4 anos (sendo crime doloso) → 3 a 6 anos → a pena concreta pode ou não superar 4 anos. Se a pena concreta for até 4 anos, cabe substituição (art. 44, I, CP aplicado via art. 12 CP). (2) <em>Sursis (art. 77 CP)</em>: exige pena privativa de liberdade não superior a 2 anos → crime do art. 16 tem mínimo de 3 anos → em regra, pena concreta supera 2 anos → sursis não cabe. Conclusão: a substituição por PRD pode caber se a pena concreta for de até 4 anos; o sursis ordinário não cabe dado o quantum mínimo do tipo. Regras do CP aplicadas via art. 12 CP na ausência de vedação específica do Estatuto do Desarmamento.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">13</span>O crime impossível (art. 17 CP) pode ser reconhecido em crimes de leis especiais?</div>
+      <div class="prova-item-a"><strong>Sim.</strong> O crime impossível (art. 17 CP) é "regra geral" transferida pelo art. 12 CP às leis especiais. Se os meios empregados ou o objeto sobre que recai a conduta são absolutamente ineficazes ou absolutamente impróprios, não há punição — mesmo que o crime seja previsto em lei especial. Exemplo de alta cobrança: <strong>porte de arma de fogo completamente inapta a disparar</strong> (peça sem condições de funcionar). O STJ tem debate sobre se configuraria crime do Estatuto do Desarmamento ou crime impossível pelo art. 17 CP. Posição majoritária do STJ: arma sem condições de disparo → crime impossível (art. 17 CP aplicado via art. 12 CP) → atipicidade relativa → não há crime. Entretanto, munição isolada e acessórios foram tratados de forma diferente. Este ponto é altamente cobrado em magistratura.</div>
+    </div>
+
+  </div>
+</section>
+
+</div><!-- /page-wrap -->
+
+<footer>
+  <strong>Art. 12.º do Código Penal Brasileiro</strong> — Decreto-Lei n.º 2.848/1940<br>
+  Material elaborado para preparação à Magistratura / ENAM · Doutrina e jurisprudência consolidadas · Atualizado 2025
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 17º CP — Crime Impossível | Magistratura ENAM</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a; --navy-mid: #1a2f45; --navy-light: #243b55;
+    --gold: #c8960c; --gold-light: #e8b84b; --gold-pale: #fdf3d8;
+    --cream: #faf7f2; --cream-mid: #f0ebe2;
+    --text-dark: #1a1208; --text-mid: #3d3020; --text-soft: #6b5c40;
+    --border: #d4c49a; --border-light: #e8dcbf;
+    --red-accent: #8b1a1a; --green-accent: #1a4a2e;
+    --blue-accent: #1a3a5c; --purple-accent: #4a1a5c;
+    --shadow: 0 4px 24px rgba(13,27,42,0.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Source Serif 4', Georgia, serif; background: var(--cream); color: var(--text-dark); font-size: 15px; line-height: 1.75; }
+
+  /* NAV */
+  #top-nav { position: sticky; top: 0; z-index: 999; background: var(--navy); border-bottom: 3px solid var(--gold); padding: 0 1.5rem; display: flex; align-items: center; overflow-x: auto; scrollbar-width: none; }
+  #top-nav::-webkit-scrollbar { display: none; }
+  #top-nav .nav-brand { font-family: 'Playfair Display', serif; color: var(--gold-light); font-size: 0.9rem; font-weight: 700; white-space: nowrap; padding: 0.85rem 1.2rem 0.85rem 0; border-right: 1px solid rgba(200,150,12,0.3); margin-right: 0.5rem; letter-spacing: 0.5px; }
+  #top-nav a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.72rem; font-family: 'Source Serif 4', serif; font-weight: 600; letter-spacing: 0.6px; text-transform: uppercase; padding: 0.85rem 0.8rem; white-space: nowrap; transition: color .2s; border-bottom: 3px solid transparent; margin-bottom: -3px; }
+  #top-nav a:hover { color: var(--gold-light); border-bottom-color: var(--gold); }
+
+  /* HERO */
+  #hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1e3d5c 100%); color: white; padding: 3.5rem 2rem 3rem; text-align: center; position: relative; overflow: hidden; }
+  #hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, rgba(200,150,12,0.03) 0px, rgba(200,150,12,0.03) 1px, transparent 1px, transparent 40px); }
+  #hero .badge { display: inline-block; background: rgba(200,150,12,0.15); border: 1px solid rgba(200,150,12,0.5); color: var(--gold-light); font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; padding: 0.35rem 1rem; border-radius: 2px; margin-bottom: 1.2rem; font-family: 'Source Serif 4', serif; font-weight: 600; }
+  #hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 0.6rem; letter-spacing: -0.5px; }
+  #hero h1 span { color: var(--gold-light); }
+  #hero .subtitle { font-size: 1rem; color: rgba(255,255,255,0.65); font-style: italic; margin-bottom: 1.5rem; }
+  #hero .law-box { display: inline-block; background: rgba(255,255,255,0.06); border: 1px solid rgba(200,150,12,0.4); border-left: 4px solid var(--gold); color: rgba(255,255,255,0.9); font-family: 'Source Serif 4', serif; font-size: 0.95rem; font-style: italic; padding: 1rem 1.5rem; max-width: 820px; text-align: left; line-height: 1.8; border-radius: 0 4px 4px 0; }
+  #hero .law-box strong { color: var(--gold-light); font-style: normal; display: block; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.4rem; }
+
+  /* LAYOUT */
+  .page-wrap { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+  /* SECTIONS */
+  .section { margin-top: 3.5rem; scroll-margin-top: 56px; }
+  .section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--border); }
+  .section-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--border); line-height: 1; min-width: 2.5rem; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; color: var(--navy); line-height: 1.2; }
+  .section-title span { display: block; font-size: 0.75rem; font-family: 'Source Serif 4', serif; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-style: normal; }
+
+  /* CARDS */
+  .card { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 1.4rem 1.6rem; box-shadow: var(--shadow); }
+  .card-grid { display: grid; gap: 1rem; }
+  .card-grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .card-grid-2 { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+  .card h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.6rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-light); }
+  .card p, .card li { font-size: 0.88rem; line-height: 1.7; color: var(--text-mid); }
+  .card ul { padding-left: 1.1rem; }
+  .card li { margin-bottom: 0.3rem; }
+  .type-card { border-top: 4px solid; }
+  .tc-red { border-top-color: var(--red-accent); } .tc-red h3 { color: var(--red-accent); }
+  .tc-green { border-top-color: var(--green-accent); } .tc-green h3 { color: var(--green-accent); }
+  .tc-blue { border-top-color: var(--blue-accent); } .tc-blue h3 { color: var(--blue-accent); }
+  .tc-gold { border-top-color: var(--gold); } .tc-gold h3 { color: #7a5a00; }
+  .tc-purple { border-top-color: var(--purple-accent); } .tc-purple h3 { color: var(--purple-accent); }
+
+  /* FLOWCHART */
+  .flow-wrap { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 2rem 1.5rem; box-shadow: var(--shadow); overflow-x: auto; }
+  .flow-center { display: flex; flex-direction: column; align-items: center; }
+  .flow-node { border-radius: 4px; padding: 0.65rem 1.4rem; font-family: 'Source Serif 4', serif; font-size: 0.82rem; font-weight: 600; text-align: center; min-width: 220px; max-width: 540px; }
+  .flow-start { background: var(--navy); color: white; border-radius: 50px; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; }
+  .flow-end-green { background: var(--green-accent); color: white; border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-end-red { background: var(--red-accent); color: white; border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-end-gold { background: var(--gold); color: var(--navy); border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-end-blue { background: var(--blue-accent); color: white; border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-box-navy { background: var(--navy-mid); color: white; border-left: 4px solid var(--gold); font-size: 0.8rem; }
+  .flow-box-green { background: #edf7f0; border: 1px solid #7ec89a; border-left: 4px solid var(--green-accent); color: var(--text-dark); }
+  .flow-box-blue { background: #edf2f8; border: 1px solid #8eb4d8; border-left: 4px solid var(--blue-accent); color: var(--text-dark); }
+  .flow-box-red { background: #fdf0f0; border: 1px solid #e09090; border-left: 4px solid var(--red-accent); color: var(--text-dark); }
+  .flow-box-gold { background: var(--gold-pale); border: 2px solid var(--gold); color: var(--text-dark); }
+  .flow-box-purple { background: #f3eef8; border: 1px solid #b89dd8; border-left: 4px solid var(--purple-accent); color: var(--text-dark); }
+  .flow-arrow { font-size: 1.3rem; color: var(--border); line-height: 1; margin: 0.15rem 0; }
+  .flow-row { display: flex; align-items: flex-start; gap: 1.5rem; width: 100%; justify-content: center; flex-wrap: wrap; }
+  .flow-branch { display: flex; flex-direction: column; align-items: center; flex: 1; min-width: 175px; }
+  .flow-label { font-size: 0.68rem; color: var(--text-soft); font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; background: var(--cream-mid); padding: 0.15rem 0.5rem; border-radius: 2px; margin: 0.15rem 0; }
+  .flow-connector-line { width: 1px; height: 28px; background: var(--border); }
+
+  /* TABLE */
+  .comp-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; background: white; box-shadow: var(--shadow); border-radius: 6px; overflow: hidden; }
+  .comp-table thead { background: var(--navy); color: white; }
+  .comp-table thead th { padding: 0.85rem 1rem; font-family: 'Source Serif 4', serif; font-weight: 600; letter-spacing: 0.5px; font-size: 0.8rem; text-align: left; }
+  .comp-table thead th:first-child { color: var(--gold-light); }
+  .comp-table tbody tr { border-bottom: 1px solid var(--border-light); }
+  .comp-table tbody tr:last-child { border-bottom: none; }
+  .comp-table tbody tr:nth-child(even) { background: var(--cream); }
+  .comp-table td { padding: 0.75rem 1rem; color: var(--text-mid); vertical-align: top; }
+  .comp-table td:first-child { font-weight: 600; color: var(--navy); font-size: 0.8rem; }
+  .comp-table .hl td { background: var(--gold-pale) !important; }
+  .comp-table .hl2 td { background: #edf7f0 !important; }
+  .comp-table .hl3 td { background: #edf2f8 !important; }
+  .comp-table .hl4 td { background: #fdf0f0 !important; }
+  .comp-table .hl5 td { background: #f3eef8 !important; }
+
+  /* JURIS */
+  .juris-card { background: white; border: 1px solid var(--border-light); border-left: 5px solid; border-radius: 0 6px 6px 0; padding: 1.2rem 1.4rem; box-shadow: var(--shadow); }
+  .juris-card.stf { border-left-color: var(--red-accent); }
+  .juris-card.stj { border-left-color: var(--navy); }
+  .juris-card.doutrina { border-left-color: var(--gold); }
+  .juris-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
+  .juris-badge { font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 2px; font-family: 'Source Serif 4', serif; }
+  .juris-badge.stf { background: var(--red-accent); color: white; }
+  .juris-badge.stj { background: var(--navy); color: white; }
+  .juris-badge.doutrina { background: var(--gold); color: var(--navy); }
+  .juris-badge.sumula { background: var(--green-accent); color: white; }
+  .juris-badge.tese { background: var(--blue-accent); color: white; }
+  .juris-badge.purple { background: var(--purple-accent); color: white; }
+  .juris-title { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700; color: var(--navy); }
+  .juris-body { font-size: 0.84rem; color: var(--text-mid); line-height: 1.7; }
+  .juris-body em { font-style: italic; color: var(--navy); }
+  .juris-grid { display: grid; gap: 1rem; }
+
+  /* ALERTS */
+  .alert { padding: 0.9rem 1.2rem; border-radius: 4px; font-size: 0.84rem; line-height: 1.7; display: flex; gap: 0.7rem; align-items: flex-start; }
+  .alert-gold { background: var(--gold-pale); border: 1px solid #d4aa3a; color: #5a4000; }
+  .alert-red { background: #fdf0f0; border: 1px solid #e09090; color: #5a0000; }
+  .alert-navy { background: #f0f4f8; border: 1px solid #abc; color: var(--navy); }
+  .alert-green { background: #edf7f0; border: 1px solid #7ec89a; color: #1a4a2e; }
+  .alert-purple { background: #f3eef8; border: 1px solid #b89dd8; color: var(--purple-accent); }
+  .alert-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.05rem; }
+  .alert strong { font-weight: 700; }
+
+  /* PROVA */
+  .prova-section { background: var(--navy); border-radius: 8px; padding: 2rem; color: white; margin-top: 3.5rem; scroll-margin-top: 56px; }
+  .prova-section h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--gold-light); margin-bottom: 0.5rem; }
+  .prova-section .intro { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; font-style: italic; }
+  .prova-items { display: grid; gap: 0.75rem; }
+  .prova-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(200,150,12,0.25); border-left: 4px solid var(--gold); border-radius: 0 4px 4px 0; padding: 1rem 1.2rem; }
+  .prova-item-q { font-size: 0.82rem; font-weight: 600; color: var(--gold-light); margin-bottom: 0.4rem; display: flex; align-items: flex-start; gap: 0.6rem; }
+  .prova-item-q .qnum { background: var(--gold); color: var(--navy); font-size: 0.65rem; font-weight: 700; padding: 0.1rem 0.45rem; border-radius: 2px; flex-shrink: 0; margin-top: 0.1rem; }
+  .prova-item-a { font-size: 0.82rem; color: rgba(255,255,255,0.8); line-height: 1.65; }
+  .prova-item-a strong { color: white; }
+
+  /* TAGS */
+  .tag { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; margin: 0.1rem; font-family: 'Source Serif 4', serif; }
+  .tag-blue { background: #dce8f5; color: var(--blue-accent); }
+  .tag-green { background: #dceee3; color: var(--green-accent); }
+  .tag-gold { background: var(--gold-pale); color: #7a5a00; border: 1px solid #d4aa3a; }
+  .tag-red { background: #fde8e8; color: var(--red-accent); }
+  .tag-purple { background: #ece5f5; color: var(--purple-accent); }
+
+  /* EXAMPLE BOX */
+  .example-box { background: var(--navy-mid); color: white; border-radius: 6px; padding: 1.2rem 1.4rem; font-size: 0.84rem; line-height: 1.75; }
+  .example-box .ex-title { color: var(--gold-light); font-weight: 700; font-family: 'Playfair Display', serif; font-size: 0.95rem; margin-bottom: 0.5rem; }
+  .example-box .ex-calc { background: rgba(200,150,12,0.12); border: 1px solid rgba(200,150,12,0.3); border-radius: 4px; padding: 0.7rem 1rem; margin-top: 0.7rem; font-family: 'JetBrains Mono', monospace; font-size: 0.79rem; color: var(--gold-light); white-space: pre-wrap; }
+
+  /* LAW QUOTE */
+  .law-quote { background: var(--cream-mid); border-left: 4px solid var(--navy); padding: 0.9rem 1.2rem; font-size: 0.88rem; font-style: italic; color: var(--text-mid); line-height: 1.7; border-radius: 0 4px 4px 0; }
+  .law-quote strong { font-style: normal; color: var(--navy); font-size: 0.75rem; letter-spacing: 0.5px; display: block; margin-bottom: 0.25rem; }
+
+  /* DIVIDER */
+  .divider { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); margin: 1.2rem 0; }
+
+  /* TEORIA GRID */
+  .teoria-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.85rem; }
+  .teoria-card { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 1rem 1.2rem; box-shadow: var(--shadow); border-top: 3px solid; }
+  .teoria-card h4 { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+  .teoria-card p, .teoria-card li { font-size: 0.82rem; color: var(--text-mid); line-height: 1.6; }
+  .teoria-card ul { padding-left: 1rem; }
+  .t-red { border-top-color: var(--red-accent); } .t-red h4 { color: var(--red-accent); }
+  .t-blue { border-top-color: var(--blue-accent); } .t-blue h4 { color: var(--blue-accent); }
+  .t-green { border-top-color: var(--green-accent); } .t-green h4 { color: var(--green-accent); }
+  .t-gold { border-top-color: var(--gold); } .t-gold h4 { color: #7a5a00; }
+  .t-purple { border-top-color: var(--purple-accent); } .t-purple h4 { color: var(--purple-accent); }
+  .t-adot { border: 2px solid var(--gold); background: var(--gold-pale); grid-column: 1/-1; } .t-adot h4 { color: #7a5a00; }
+
+  /* CRIME GRID */
+  .crime-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.8rem; }
+  .crime-item { background: white; border: 1px solid var(--border-light); border-radius: 4px; padding: 0.85rem 1rem; border-left: 3px solid; }
+  .crime-item h5 { font-family: 'Playfair Display', serif; font-size: 0.86rem; font-weight: 700; margin-bottom: 0.3rem; }
+  .crime-item p { font-size: 0.79rem; color: var(--text-mid); line-height: 1.55; }
+  .ci-red { border-left-color: var(--red-accent); } .ci-red h5 { color: var(--red-accent); }
+  .ci-green { border-left-color: var(--green-accent); } .ci-green h5 { color: var(--green-accent); }
+  .ci-gold { border-left-color: var(--gold); } .ci-gold h5 { color: #7a5a00; }
+  .ci-blue { border-left-color: var(--blue-accent); } .ci-blue h5 { color: var(--blue-accent); }
+  .ci-navy { border-left-color: var(--navy); } .ci-navy h5 { color: var(--navy); }
+
+  /* FOOTER */
+  footer { background: var(--navy); color: rgba(255,255,255,0.45); text-align: center; padding: 1.5rem; font-size: 0.75rem; border-top: 2px solid var(--gold); }
+  footer strong { color: var(--gold-light); }
+
+  /* PRINT */
+  @media print {
+    #top-nav { display: none; }
+    #hero { padding: 2rem 1rem; } #hero::before { display: none; }
+    .page-wrap { max-width: 100%; padding: 0 0.5rem 2rem; }
+    .section { margin-top: 2rem; page-break-inside: avoid; }
+    .card, .juris-card, .flow-wrap, .example-box { box-shadow: none; border: 1px solid #ccc; }
+    .prova-section { background: #f0f4f8 !important; color: #000 !important; }
+    .prova-section h2 { color: #0d1b2a !important; }
+    .prova-item { background: white !important; border: 1px solid #ccc !important; }
+    .prova-item-q { color: #7a5a00 !important; }
+    .prova-item-a { color: #333 !important; }
+    .example-box { background: #f0f4f8 !important; color: #000 !important; }
+    footer { display: none; }
+    body { font-size: 11pt; }
+  }
+
+  /* MOBILE */
+  @media (max-width: 640px) {
+    #hero { padding: 2rem 1rem; } #hero h1 { font-size: 1.6rem; }
+    .card-grid-3, .card-grid-2 { grid-template-columns: 1fr; }
+    .section-title { font-size: 1.1rem; }
+    .comp-table { font-size: 0.76rem; }
+    .comp-table td, .comp-table th { padding: 0.55rem 0.65rem; }
+    .flow-node { min-width: 150px; font-size: 0.74rem; }
+  }
+
+  .mt1 { margin-top: 0.75rem; } .mt2 { margin-top: 1rem; } .mt3 { margin-top: 1.5rem; }
+  .flex-gap { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: flex-start; }
+  strong { font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="top-nav" aria-label="Atalhos do artigo">
+  <div class="nav-brand">Art. 17º CP</div>
+
+  <div class="nav-main-links">
+    <a href="#visao-geral">Visão Geral</a>
+    <a href="#conceito">Conceito</a>
+    <a href="#hipoteses">2 Hipóteses</a>
+    <a href="#absoluta-relativa">Absoluta × Relativa</a>
+    <a href="#teorias">Teorias</a>
+    <a href="#fluxograma">Fluxograma</a>
+    <a href="#flagrante">Flagrante Preparado</a>
+    <a href="#agente-provocador">Ag. Provocador</a>
+    <a href="#comparativo">Comparativo</a>
+    <a href="#exemplos">Exemplos</a>
+    <a href="#jurisprudencia">Juris. STF/STJ</a>
+    <a href="#doutrina">Doutrina</a>
+    <a href="#sistematica">Sistemática</a>
+    <a href="#prova" class="nav-prova">Prova</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="hero">
+  <div class="badge">Código Penal · Título II · Do Crime · Capítulo II</div>
+  <h1>Art. 17º — <span>Crime Impossível</span></h1>
+  <p class="subtitle">Meio Absolutamente Ineficaz · Objeto Absolutamente Impróprio · Flagrante Provocado · Teorias · Magistratura · ENAM</p>
+  <div class="law-box">
+    <strong>Art. 17.º do Decreto-Lei n.º 2.848/1940 (Código Penal)</strong>
+    "Não se pune a tentativa quando, por ineficácia absoluta do meio ou por absoluta impropriedade do objeto, é impossível consumar-se o crime."
+  </div>
+</header>
+
+<div class="page-wrap">
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 1. VISÃO GERAL                            -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="visao-geral">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div class="section-title"><span>Introdução &amp; Sistemática</span>Visão Geral do Artigo</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📍 Finalidade e Posição Sistemática</h3>
+      <p>O art. 17 CP integra o <strong>Capítulo II do Título II da Parte Geral</strong> ("Das Causas que Excluem o Crime") e consagra o instituto do <strong>crime impossível</strong> (também chamado de <em>tentativa inidônea</em>, <em>tentativa inadequada</em>, <em>quase-crime</em> ou <em>crime putativo por erro de tipo ao revés</em>). Sua aplicação exclui a punição da tentativa quando, desde o início, era absolutamente impossível a consumação do crime.</p>
+      <p class="mt2">O art. 17 completa o sistema do iter criminis no CP: enquanto o art. 14, II consagra a tentativa punível (atos executórios idôneos que não consumam por fator externo), o art. 17 exclui a punição de condutas que, embora externamente parecidas com tentativas, jamais poderiam produzir o resultado típico — seja pelo meio empregado, seja pela natureza do objeto.</p>
+    </div>
+    <div class="card">
+      <h3>🏛️ Natureza Jurídica, Fundamento e Alcance</h3>
+      <ul>
+        <li><strong>Natureza jurídica:</strong> causa de exclusão da tipicidade — o crime impossível não é tentativa punível; é conduta atípica. Não há crime, logo não há pena</li>
+        <li><strong>Fundamento:</strong> princípio da ofensividade (<em>nullum crimen sine iniuria</em>) — sem perigo real ao bem jurídico, não há injusto penal punível</li>
+        <li><strong>Distinção da tentativa (art. 14, II):</strong> na tentativa, os meios eram idôneos e o resultado poderia ter ocorrido; no crime impossível, a consumação era objetivamente impossível desde o início</li>
+        <li><strong>Critério da inidoneidade:</strong> a inidoneidade deve ser <em>absoluta</em> — não relativa. Inidoneidade relativa (meio menos eficaz, mas capaz de produzir o resultado) → tentativa punível</li>
+        <li><strong>Teoria adotada pelo CP:</strong> teoria objetiva (temperada), adotada no art. 17 — o critério é objetivo (aptidão do meio / propriedade do objeto), não subjetivo (intenção do agente)</li>
+        <li><strong>Consequência processual:</strong> absolvição (atipicidade); ou rejeição da denúncia por ausência de justa causa (art. 395, III, CPP) se verificado antes da ação penal</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert alert-gold mt2">
+    <div class="alert-icon">⭐</div>
+    <div><strong>Fundamento Constitucional — Princípio da Ofensividade e Proporcionalidade:</strong> O crime impossível (art. 17 CP) tem fundamento constitucional no <strong>princípio da ofensividade</strong> (<em>nullum crimen sine iniuria</em>), derivado do Estado Democrático de Direito (art. 1.º CF/88) e da dignidade da pessoa humana (art. 1.º, III, CF/88). Se a conduta não pode, nem remotamente, lesar ou expor a perigo o bem jurídico protegido (porque o meio é absolutamente ineficaz ou o objeto absolutamente impróprio), punir o agente pelo mero dolo seria punir a intenção — o que o direito penal moderno vedou ao rejeitar o <em>Gesinnungsstrafrecht</em> (direito penal da atitude interior). A proporcionalidade (art. 5.º, XLVI, CF/88) também fundamenta o instituto: não há resposta penal justa para quem não criou risco real ao bem jurídico.</div>
+  </div>
+
+  <div class="card-grid card-grid-3 mt2">
+    <div class="card type-card tc-red">
+      <h3>🔴 Ineficácia Absoluta do Meio</h3>
+      <p>O instrumento ou método empregado pelo agente é, em termos objetivos, <strong>absolutamente incapaz</strong> de produzir o resultado típico em qualquer circunstância. Ex.: tentar matar alguém com açúcar pensando ser veneno; disparar arma completamente inapta.</p>
+    </div>
+    <div class="card type-card tc-blue">
+      <h3>🔵 Absoluta Impropriedade do Objeto</h3>
+      <p>O objeto sobre o qual recai a conduta é <strong>absolutamente impróprio</strong> para sofrer o dano típico. Ex.: tentar matar cadáver (objeto = cadáver, sem vida para ser tirada); furtar cofre vazio; aborto em mulher não grávida.</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>🟡 Resultado: Atipicidade</h3>
+      <p>Presente qualquer das duas hipóteses com caráter <strong>absoluto</strong>, o fato é <strong>atípico</strong> — não constitui crime tentado. O agente não é punido. Inidoneidade <em>relativa</em> mantém a tentativa punível.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 2. CONCEITO PROFUNDO                      -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="conceito">
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div class="section-title"><span>Análise Dogmática</span>Conceito, Denominações e Fundamento Teórico</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📋 Denominações do Instituto</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.6rem;">O crime impossível recebe diversas denominações na doutrina, todas referindo-se ao mesmo instituto do art. 17 CP:</p>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;">
+        <div style="background:var(--cream-mid);border-left:3px solid var(--navy);padding:0.45rem 0.7rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong>Crime impossível (CP):</strong> Denominação legal adotada pelo Código Penal de 1940</div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);padding:0.45rem 0.7rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong>Tentativa inidônea / inadequada:</strong> Denominação doutrinária mais usada — ressalta que os meios ou o objeto eram inadequados para a consumação</div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--green-accent);padding:0.45rem 0.7rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong>Quase-crime:</strong> Denominação popular — indica que o agente quis praticar um crime, mas sua conduta não chegou a configurá-lo</div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--gold);padding:0.45rem 0.7rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong>Crime putativo por erro de tipo ao revés:</strong> Denominação técnica usada por parte da doutrina — o agente supõe que sua conduta é criminosa, mas é atípica pela inidoneidade</div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--purple-accent);padding:0.45rem 0.7rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong>Crime de alucinação / crime oco:</strong> Denominações menos comuns — crime existe apenas na mente do agente; a realidade objetiva revela sua impossibilidade</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>⚖️ Crime Impossível × Crime Putativo × Crime Experimental</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">Distinções essenciais que frequentemente são cobradas em provas:</p>
+      <div style="display:flex;flex-direction:column;gap:0.5rem;">
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);border-radius:0 4px 4px 0;padding:0.55rem 0.8rem;font-size:0.82rem;">
+          <strong style="color:var(--red-accent);">Crime Impossível (Art. 17 CP):</strong> O agente comete atos executórios concretos, mas a consumação é objetivamente impossível por inidoneidade absoluta do meio ou do objeto. A inidoneidade é real, objetiva. → Atípico.
+        </div>
+        <div style="background:#edf2f8;border-left:3px solid var(--blue-accent);border-radius:0 4px 4px 0;padding:0.55rem 0.8rem;font-size:0.82rem;">
+          <strong style="color:var(--blue-accent);">Crime Putativo (Imaginário):</strong> O agente pratica conduta que considera criminosa, mas que na verdade é lícita (erro de proibição ao revés — o agente supõe que a lei pune algo que na verdade não pune). Ex.: agente pratica beijo consentido achando que é crime. → Atípico por ausência de tipo penal.
+        </div>
+        <div style="background:#dceee3;border-left:3px solid var(--green-accent);border-radius:0 4px 4px 0;padding:0.55rem 0.8rem;font-size:0.82rem;">
+          <strong style="color:var(--green-accent);">Crime Experimental (Flagrante Preparado / Provocado):</strong> Agente provocador cria a situação para que o agente cometa o crime e seja preso em flagrante. → Súmula 145 STF: não há crime quando a preparação do flagrante torna impossível a consumação. → Crime impossível pelo art. 17 CP.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-red mt2">
+    <div class="alert-icon">🔴</div>
+    <div><strong>A Chave do Art. 17 CP — "Absoluta" × "Relativa":</strong> O art. 17 CP só exclui a punição quando a ineficácia do meio ou a impropriedade do objeto é <strong>ABSOLUTA</strong> — isto é, em qualquer circunstância e para qualquer pessoa, a consumação seria impossível. A inidoneidade <strong>RELATIVA</strong> (meio menos eficaz, objeto menos vulnerável, mas que em certas condições poderia produzir o resultado) configura <strong>tentativa punível</strong> (art. 14, II CP). Essa distinção absoluta × relativa é o ponto mais cobrado em provas de magistratura sobre o art. 17 CP.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 3. AS DUAS HIPÓTESES                      -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="hipoteses">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div class="section-title"><span>Art. 17 CP — As Duas Hipóteses Legais</span>Ineficácia do Meio e Impropriedade do Objeto</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-red">
+      <h3>🔴 Hipótese 1 — Ineficácia Absoluta do Meio</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.6rem;"><em>"por ineficácia absoluta do meio"</em> — o instrumento, método ou processo empregado pelo agente é objetivamente incapaz de produzir o resultado típico.</p>
+      <div class="divider"></div>
+      <p style="font-size:0.84rem;color:var(--text-mid);margin-bottom:0.4rem;"><strong>Conceito de "meio":</strong> O instrumento material (arma, veneno, explosivo) ou o método (forma de execução) utilizado para praticar o crime.</p>
+      <p style="font-size:0.84rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Ineficácia ABSOLUTA:</strong> O meio é absolutamente incapaz de produzir o resultado em qualquer circunstância — não apenas nas circunstâncias do caso concreto.</p>
+      <ul style="font-size:0.83rem;">
+        <li><strong>Ex. 1 (clássico):</strong> Tentar matar alguém administrando açúcar pensando ser veneno letal → açúcar é absolutamente ineficaz para matar → crime impossível</li>
+        <li><strong>Ex. 2:</strong> Tentar matar com arma de brinquedo (sem mecanismo de disparo real) → absolutamente ineficaz como arma letal → crime impossível</li>
+        <li><strong>Ex. 3:</strong> Tentar envenenar com substância inerte (ex.: farinha pensando ser arsênico) → crime impossível</li>
+        <li><strong>Ex. 4 (relativo — NÃO é crime impossível):</strong> Tentar matar com dose baixa de veneno real que não seria letal naquela quantidade → meio relativamente ineficaz → tentativa punível</li>
+      </ul>
+      <div class="alert alert-red mt2" style="font-size:0.8rem;">
+        <div>🔴 <strong>STJ — Arma Desmuniciada:</strong> Debate clássico: disparar arma desmuniciada no momento do crime, mas com munição disponível → meio relativamente ineficaz naquela circunstância → tentativa (não crime impossível). Ver Seção 11.</div>
+      </div>
+    </div>
+    <div class="card type-card tc-blue">
+      <h3>🔵 Hipótese 2 — Absoluta Impropriedade do Objeto</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.6rem;"><em>"por absoluta impropriedade do objeto"</em> — o objeto (a pessoa ou a coisa) sobre o qual recai a conduta é absolutamente incapaz de sofrer o dano típico descrito no crime.</p>
+      <div class="divider"></div>
+      <p style="font-size:0.84rem;color:var(--text-mid);margin-bottom:0.4rem;"><strong>Conceito de "objeto":</strong> A pessoa (vítima) ou a coisa sobre a qual o agente dirige sua conduta criminosa.</p>
+      <p style="font-size:0.84rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Impropriedade ABSOLUTA:</strong> O objeto é, em sua natureza, absolutamente inadequado para sofrer o dano típico — não pode ser atingido pelo crime em hipótese alguma.</p>
+      <ul style="font-size:0.83rem;">
+        <li><strong>Ex. 1 (clássico):</strong> Tentar matar um cadáver pensando que ainda está vivo → não há vida a ser ceifada → objeto absolutamente impróprio → crime impossível</li>
+        <li><strong>Ex. 2:</strong> Tentativa de aborto em mulher não grávida → sem gravidez, não há feto/embrião a ser suprimido → objeto absolutamente impróprio → crime impossível</li>
+        <li><strong>Ex. 3:</strong> Furtar cofre vazio → sem bem algum a ser subtraído → objeto absolutamente impróprio → crime impossível (patrimonial inexistente)</li>
+        <li><strong>Ex. 4:</strong> Estelionato contra pessoa já falecida → não há vítima para ser enganada → objeto impróprio</li>
+        <li><strong>Ex. 5 (relativo — NÃO é crime impossível):</strong> Tentar furtar cofre que deveria estar cheio mas por coincidência estava vazio → no plano normal, o objeto era próprio; o esvaziamento foi circunstancial → tentativa punível (posição STJ)</li>
+      </ul>
+      <div class="alert alert-navy mt2" style="font-size:0.8rem;">
+        <div>📌 <strong>Impropriedade Absoluta × Ocasional:</strong> Se o objeto é impróprio apenas naquela ocasião específica (mas normalmente seria próprio), é impropriedade relativa → tentativa. Se é impróprio por sua própria natureza → crime impossível.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 4. ABSOLUTA × RELATIVA                    -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="absoluta-relativa">
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <div class="section-title"><span>Distinção Central — Alta Cobrança</span>Inidoneidade Absoluta × Inidoneidade Relativa</div>
+  </div>
+
+  <div class="card">
+    <h3>📐 O Critério da Absoluta × Relativa — Quadro Analítico</h3>
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:0.83rem;">
+        <thead style="background:var(--navy);color:white;">
+          <tr>
+            <th style="padding:0.6rem 0.8rem;text-align:left;">Critério</th>
+            <th style="padding:0.6rem 0.8rem;text-align:left;">Inidoneidade ABSOLUTA → Crime Impossível (Art. 17)</th>
+            <th style="padding:0.6rem 0.8rem;text-align:left;">Inidoneidade RELATIVA → Tentativa (Art. 14, II)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#dceee3;">
+            <td style="padding:0.55rem 0.8rem;font-weight:700;">Definição</td>
+            <td style="padding:0.55rem 0.8rem;">A consumação é impossível em QUALQUER circunstância, para qualquer pessoa, sempre</td>
+            <td style="padding:0.55rem 0.8rem;">A consumação era impossível NAQUELE CASO CONCRETO, mas poderia ocorrer em outras circunstâncias</td>
+          </tr>
+          <tr>
+            <td style="padding:0.55rem 0.8rem;font-weight:700;">Exemplo do meio</td>
+            <td style="padding:0.55rem 0.8rem;">Veneno que na verdade é açúcar (nunca mataria ninguém)</td>
+            <td style="padding:0.55rem 0.8rem;">Dose baixa de veneno real (poderia matar em dose maior; naquela dose não matou)</td>
+          </tr>
+          <tr style="background:var(--cream);">
+            <td style="padding:0.55rem 0.8rem;font-weight:700;">Exemplo do objeto</td>
+            <td style="padding:0.55rem 0.8rem;">Tentar matar cadáver (nunca haverá vida a ser ceifada)</td>
+            <td style="padding:0.55rem 0.8rem;">Furtar cofre que por acaso estava vazio (mas normalmente haveria dinheiro)</td>
+          </tr>
+          <tr>
+            <td style="padding:0.55rem 0.8rem;font-weight:700;">Perigo ao bem jurídico</td>
+            <td style="padding:0.55rem 0.8rem;">NENHUM — nem em tese o bem jurídico correu risco</td>
+            <td style="padding:0.55rem 0.8rem;">SIM — houve perigo real, embora o resultado não tenha ocorrido</td>
+          </tr>
+          <tr style="background:var(--gold-pale);">
+            <td style="padding:0.55rem 0.8rem;font-weight:700;">Consequência penal</td>
+            <td style="padding:0.55rem 0.8rem;font-weight:700;color:var(--green-accent);">ATÍPICO — não há crime; não há punição</td>
+            <td style="padding:0.55rem 0.8rem;font-weight:700;color:var(--red-accent);">TENTATIVA PUNÍVEL — pena reduzida de 1/3 a 2/3</td>
+          </tr>
+          <tr>
+            <td style="padding:0.55rem 0.8rem;font-weight:700;">Artigo aplicável</td>
+            <td style="padding:0.55rem 0.8rem;">Art. 17 CP</td>
+            <td style="padding:0.55rem 0.8rem;">Art. 14, II + Art. 14, §único, CP</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card">
+      <h3>⚡ Casos Fronteiriços Altamente Cobrados</h3>
+      <ul>
+        <li><strong>Arma desmuniciada:</strong> STJ — arma sem munição, mas com munição disponível nas proximidades → meio relativamente ineficaz → tentativa. Arma sem mecanismo de disparo funcionando e sem possibilidade de ser carregada imediatamente → absolutamente ineficaz → crime impossível. Ponto de alta divergência jurisprudencial.</li>
+        <li><strong>Sistema de vigilância (furto):</strong> STJ Súmula 567 — câmeras e seguranças NÃO tornam o furto crime impossível. O objeto (bem a ser furtado) existe e pode ser subtraído; a dificuldade adicional é inidoneidade relativa → tentativa de furto.</li>
+        <li><strong>Tráfico de drogas — substância inerte:</strong> Agente que vende como droga substância que não é droga (ex.: talco como cocaína) → objeto absolutamente impróprio para o crime do art. 33 Lei 11.343/06 → crime impossível. Mas há debate sobre outros crimes (estelionato).</li>
+        <li><strong>Furto de coisa alheia mas que é do próprio agente:</strong> Se o agente subtrai coisa que acredita ser alheia mas que na verdade é sua → objeto impróprio (coisa própria não pode ser furtada) → crime impossível. Mas é crime putativo por erro de tipo ao revés.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📋 Método para Verificar se é Absoluta ou Relativa</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">Para determinar se a inidoneidade é absoluta (crime impossível) ou relativa (tentativa), o operador deve aplicar o seguinte raciocínio:</p>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.83rem;line-height:1.85;">
+        <strong style="color:var(--gold-light);">Teste da Inidoneidade Absoluta:</strong>
+        <p style="margin-top:0.4rem;">1. Retire o caso concreto de sua especificidade</p>
+        <p>2. Pergunte: <em>em quaisquer circunstâncias, para qualquer pessoa, o meio/objeto seria absolutamente incapaz de produzir o resultado?</em></p>
+        <p>3. Se SIM → inidoneidade absoluta → crime impossível (art. 17 CP)</p>
+        <p>4. Se NÃO (em outras circunstâncias poderia produzir o resultado) → inidoneidade relativa → tentativa (art. 14, II CP)</p>
+      </div>
+      <div class="alert alert-gold mt2" style="font-size:0.81rem;">
+        <div>⭐ <strong>Exemplo prático do teste:</strong> Açúcar como veneno → "Em quaisquer circunstâncias, açúcar pode matar?" → Não → inidoneidade absoluta → crime impossível. Dose baixa de veneno real → "Em dose maior, poderia matar?" → Sim → inidoneidade relativa → tentativa.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 5. TEORIAS SOBRE CRIME IMPOSSÍVEL         -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="teorias">
+  <div class="section-header">
+    <div class="section-num">05</div>
+    <div class="section-title"><span>Dogmática Penal — Alta Cobrança</span>Teorias sobre o Crime Impossível</div>
+  </div>
+
+  <div class="alert alert-navy" style="margin-bottom:1rem;">
+    <div class="alert-icon">ℹ️</div>
+    <div>A definição do que é "crime impossível" e como tratá-lo varia conforme a teoria adotada. O CP brasileiro de 1940 adotou expressamente uma teoria específica no art. 17, mas as demais teorias são cobradas em provas de magistratura, especialmente para distinguir a posição brasileira das estrangeiras.</div>
+  </div>
+
+  <div class="teoria-grid">
+    <div class="teoria-card t-red">
+      <h4>🔴 Teoria Subjetiva</h4>
+      <ul>
+        <li><strong>Premissa:</strong> O que importa é o dolo do agente — se o agente tinha intenção criminosa, a tentativa é punível independentemente da idoneidade do meio ou do objeto</li>
+        <li><strong>Consequência:</strong> não há crime impossível — toda tentativa, mesmo com meio ineficaz ou objeto impróprio, é punida como tentativa comum</li>
+        <li><strong>Fundamento:</strong> a periculosidade do agente é revelada pelo dolo, independentemente de resultado</li>
+        <li><strong>Crítica:</strong> pune a intenção, não o ato; viola a ofensividade e a proporcionalidade; Direito Penal do Autor</li>
+        <li><strong>Adoção:</strong> Código Penal italiano de 1889 (Zanardelli)</li>
+        <li style="color:var(--red-accent);font-weight:700;">❌ NÃO adotada pelo CP brasileiro</li>
+      </ul>
+    </div>
+
+    <div class="teoria-card t-blue">
+      <h4>🔵 Teoria Objetiva Pura</h4>
+      <ul>
+        <li><strong>Premissa:</strong> Qualquer inidoneidade do meio ou do objeto — absoluta ou relativa — exclui a tentativa punível; toda tentativa inidônea é crime impossível</li>
+        <li><strong>Consequência:</strong> amplíssima exclusão da tentativa — se o crime poderia não ter ocorrido por qualquer razão objetiva, não há tentativa punível</li>
+        <li><strong>Fundamento:</strong> sem perigo ao bem jurídico, não há crime — critério puramente objetivo</li>
+        <li><strong>Crítica:</strong> excessivamente ampla; praticamente elimina a tentativa punível, pois toda tentativa fracassada tem algum elemento inidôneo</li>
+        <li><strong>Adoção:</strong> doutrina de Liszt, Carrara</li>
+        <li style="color:var(--text-soft);">⚠️ NÃO adotada pelo CP brasileiro</li>
+      </ul>
+    </div>
+
+    <div class="teoria-card t-green">
+      <h4>🟢 Teoria Objetiva Temperada (Intermediária)</h4>
+      <ul>
+        <li><strong>Premissa:</strong> A inidoneidade <em>absoluta</em> exclui a tentativa (crime impossível). A inidoneidade <em>relativa</em> mantém a tentativa punível. Critério objetivo + graduação</li>
+        <li><strong>Consequência:</strong> Equilíbrio — pune tentativas que geraram perigo real ao bem jurídico; exclui as que não puderam sequer criar perigo em hipótese alguma</li>
+        <li><strong>Fundamento:</strong> ofensividade como limite; perigo real como pressuposto da punição</li>
+        <li><strong>Adoção:</strong> CP brasileiro de 1940 (art. 17) — expressamente adotada ao exigir <em>ineficácia absoluta</em> e <em>absoluta impropriedade</em></li>
+        <li style="color:var(--green-accent);font-weight:700;">✅ ADOTADA pelo CP brasileiro — art. 17</li>
+      </ul>
+    </div>
+
+    <div class="teoria-card t-purple">
+      <h4>🟣 Teoria Sintomática</h4>
+      <ul>
+        <li><strong>Premissa:</strong> A tentativa impossível deve ser punida quando revela a periculosidade do agente, como sintoma de sua perigosidade — critério personalístico</li>
+        <li><strong>Consequência:</strong> o juiz pode aplicar medida de segurança (não pena) ao agente do crime impossível que demonstra periculosidade</li>
+        <li><strong>Fundamento:</strong> Escola Positiva italiana (Lombroso, Ferri, Garofalo) — Direito Penal do Autor</li>
+        <li><strong>Adoção:</strong> influenciou o CP de 1969 (que não entrou em vigor) — o Código de 1969 previa medida de segurança para o crime impossível</li>
+        <li style="color:var(--text-soft);">⚠️ NÃO adotada pelo CP vigente de 1940</li>
+      </ul>
+    </div>
+
+    <div class="teoria-card t-adot">
+      <h4>⭐ Posição do CP Brasileiro e para o Concurso — Objetiva Temperada</h4>
+      <p style="font-size:0.83rem;color:var(--text-mid);">O CP brasileiro (art. 17) adota expressamente a <strong>teoria objetiva temperada (intermediária)</strong>: pune a tentativa quando os meios eram idôneos ou o objeto era próprio (mesmo que relativamente); exclui a punição quando a inidoneidade é <strong>absoluta</strong>. O texto da lei é inequívoco: "ineficácia <em>absoluta</em> do meio" e "<em>absoluta</em> impropriedade do objeto". A palavra "absoluta" marca a opção pela teoria objetiva temperada em detrimento da objetiva pura (que puniria apenas tentativas com meios e objetos plenamente idôneos) e da subjetiva (que puniria toda tentativa). <strong>Para o concurso:</strong> afirme que o CP adota a teoria objetiva temperada; diferencie das demais; destaque que a inidoneidade deve ser ABSOLUTA para configurar o crime impossível.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 6. FLUXOGRAMA                             -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="fluxograma">
+  <div class="section-header">
+    <div class="section-num">06</div>
+    <div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma: Verificação do Crime Impossível × Tentativa</div>
+  </div>
+
+  <div class="flow-wrap">
+    <div class="flow-center">
+
+      <div class="flow-node flow-start">CONDUTA DO AGENTE — CRIME NÃO SE CONSUMOU</div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 1 — O agente praticou ATOS EXECUTÓRIOS?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Houve início de execução (teoria objetivo-material) ou a conduta é ainda preparatória/cogitação?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — cogitação ou preparação</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Atípico — impunível<br><small>Sem início de execução → sem tentativa<br>e sem crime impossível</small>
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-gold" style="font-size:0.72rem;">Atipicidade — Iter não iniciado</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">SIM — atos executórios praticados</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Execução iniciada<br>Crime não consumou<br>Prosseguir para Passo 2
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 2 — O MEIO empregado era absolutamente ineficaz?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">O instrumento / método era incapaz de produzir o resultado em QUALQUER circunstância, para qualquer pessoa? (Teste da inidoneidade absoluta)</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">SIM — absolutamente ineficaz</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            <strong>CRIME IMPOSSÍVEL — Art. 17 CP</strong><br>
+            Hipótese 1: Ineficácia absoluta do meio<br><small>Fato atípico — sem punição</small>
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-green" style="font-size:0.72rem;">Crime Impossível — Atípico</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:115px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — relativamente ineficaz ou idôneo</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Meio não afasta a tentativa<br>Prosseguir para Passo 3<br><small>(verificar o objeto)</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 3 — O OBJETO era absolutamente impróprio?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">A pessoa ou coisa sobre a qual recaiu a conduta era, por sua natureza, absolutamente incapaz de sofrer o dano típico? (Impropriedade por natureza, não circunstancial)</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">SIM — absolutamente impróprio</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            <strong>CRIME IMPOSSÍVEL — Art. 17 CP</strong><br>
+            Hipótese 2: Absoluta impropriedade do objeto<br><small>Fato atípico — sem punição</small>
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-green" style="font-size:0.72rem;">Crime Impossível — Atípico</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:115px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — relativamente impróprio ou próprio</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Objeto não configura crime impossível<br>Prosseguir para Passo 4
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 4 — É Flagrante Preparado (Agente Provocador)?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">A situação foi arquitetada por agente provocador de forma que tornava impossível a consumação? → Súmula 145 STF: crime impossível</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">SIM — flagrante preparado</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            <strong>CRIME IMPOSSÍVEL</strong><br>
+            Súmula 145 STF<br><small>Consumação impossibilitada pelo provocador → Atípico</small>
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-green" style="font-size:0.72rem;">Crime Impossível — Súmula 145 STF</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:115px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — flagrante esperado ou espontâneo</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Meio idôneo + objeto próprio<br>Não é crime impossível<br>Prosseguir para Passo 5
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 5 — A não consumação se deveu à VONTADE do agente ou a CIRCUNSTÂNCIAS ALHEIAS?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Fórmula de Frank: "Posso, mas não quis" = art. 15. "Quis, mas não pude" = art. 14, II</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">VONTADE do agente</div>
+          <div class="flow-node flow-box-purple" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Art. 15 CP<br>Desistência voluntária ou<br>Arrependimento eficaz<br><small>Responde pelos atos praticados</small>
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-blue" style="font-size:0.72rem;">Art. 15 CP — Ponte de Ouro</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">CIRCUNSTÂNCIAS ALHEIAS</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            <strong>TENTATIVA PUNÍVEL</strong><br>
+            Art. 14, II + Art. 14, §único CP<br>Pena reduzida de 1/3 a 2/3
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-red" style="font-size:0.72rem;">Tentativa — Art. 14, II CP</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 7. FLAGRANTE PREPARADO × FLAGRANTE ESPERADO -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="flagrante">
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <div class="section-title"><span>Súmula 145 STF — Alta Cobrança</span>Flagrante Preparado × Flagrante Esperado</div>
+  </div>
+
+  <div class="alert alert-gold" style="margin-bottom:1rem;">
+    <div class="alert-icon">⭐</div>
+    <div><strong>Súmula 145 do STF:</strong> <em>"Não há crime, quando a preparação do flagrante pela polícia torna impossível a sua consumação."</em> Esta súmula é a aplicação mais importante e mais cobrada do crime impossível (art. 17 CP) em provas de magistratura. O candidato deve dominar a distinção entre flagrante preparado (crime impossível) e flagrante esperado (tentativa punível ou crime consumado).</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-red">
+      <h3>🔴 Flagrante Preparado (Provocado) — Crime Impossível</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Conceito:</strong> O agente provocador (policial ou particular) induz o suspeito a praticar o crime e, simultaneamente, toma medidas que tornam impossível a consumação. A situação é artificialmente criada para que o agente seja preso sem que o crime se consume.</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Agente provocador:</strong> Aquele que, por ação ou omissão, instiga o agente a cometer o crime e, ao mesmo tempo, providencia para que o crime não se consume (ex.: policial que controla o ambiente tornando a consumação impossível)</li>
+        <li><strong>Consequência — Súmula 145 STF:</strong> Crime impossível → fato atípico → absolvição</li>
+        <li><strong>Fundamento:</strong> O bem jurídico não correu risco real — a consumação era objetivamente impossível desde o início, dada a preparação do flagrante</li>
+        <li><strong>Exemplos:</strong> Policial que induz suspeito a tentar vender droga falsa que o próprio agente substituiu; policial que instiga furto em estabelecimento com vigilância que tornará a subtração impossível</li>
+      </ul>
+      <div class="alert alert-red mt2" style="font-size:0.8rem;">
+        <div>🔴 <strong>Atenção:</strong> O simples fato de um policial ter instigado o crime NÃO, por si só, gera crime impossível. É necessário que a preparação do flagrante tenha tornado a consumação IMPOSSÍVEL. Se a consumação era possível e foi impedida por fator externo → flagrante esperado → tentativa.</div>
+      </div>
+    </div>
+    <div class="card type-card tc-green">
+      <h3>🟢 Flagrante Esperado — Tentativa Punível ou Crime Consumado</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Conceito:</strong> A polícia (ou terceiro) aguarda o agente cometer o crime espontaneamente, sem induzi-lo e sem criar uma situação artificial. O agente chegou à situação criminosa por sua própria iniciativa; a polícia apenas aproveita para prendê-lo.</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Distingue-se do flagrante preparado</strong> porque no esperado: (a) não há agente provocador que instigue o crime; (b) a consumação não foi tornada impossível pela ação policial</li>
+        <li><strong>Consequência:</strong> Tentativa punível (se não houve consumação) ou crime consumado (se houve) → responde pelo crime correspondente</li>
+        <li><strong>Exemplos:</strong> Policial que recebe denúncia de que determinado local está sendo usado para tráfico e aguarda para prender o traficante → flagrante esperado → crime consumado; policial que fica escondido em supermercado após suspeitar de furto e prende o ladrão ao tentar sair → crime consumado (teoria da apprehensio)</li>
+        <li><strong>STJ Súmula 567:</strong> Sistema de vigilância por câmeras e seguranças não torna o furto crime impossível → flagrante esperado → tentativa (se antes da subtração) ou consumado</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card mt2">
+    <h3>⚡ Quadro Comparativo: Flagrante Preparado × Esperado × Forjado</h3>
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:0.82rem;">
+        <thead style="background:var(--navy);color:white;">
+          <tr>
+            <th style="padding:0.5rem 0.7rem;">Modalidade</th>
+            <th style="padding:0.5rem 0.7rem;">Definição</th>
+            <th style="padding:0.5rem 0.7rem;">Crime Possível?</th>
+            <th style="padding:0.5rem 0.7rem;">Consequência</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#fde8e8;">
+            <td style="padding:0.5rem 0.7rem;font-weight:700;color:var(--red-accent);">Preparado (Provocado)</td>
+            <td style="padding:0.5rem 0.7rem;">Agente provoca o crime e torna a consumação impossível</td>
+            <td style="padding:0.5rem 0.7rem;font-weight:700;color:var(--red-accent);">NÃO — crime impossível</td>
+            <td style="padding:0.5rem 0.7rem;">Atípico — Súmula 145 STF</td>
+          </tr>
+          <tr style="background:#dceee3;">
+            <td style="padding:0.5rem 0.7rem;font-weight:700;color:var(--green-accent);">Esperado</td>
+            <td style="padding:0.5rem 0.7rem;">Polícia aguarda o crime espontâneo sem indução</td>
+            <td style="padding:0.5rem 0.7rem;font-weight:700;color:var(--green-accent);">SIM — tentativa ou consumado</td>
+            <td style="padding:0.5rem 0.7rem;">Responde pelo crime (tentado ou consumado)</td>
+          </tr>
+          <tr style="background:var(--gold-pale);">
+            <td style="padding:0.5rem 0.7rem;font-weight:700;color:#7a5a00;">Forjado</td>
+            <td style="padding:0.5rem 0.7rem;">Policial planta provas sobre pessoa inocente que nada fez</td>
+            <td style="padding:0.5rem 0.7rem;font-weight:700;color:#7a5a00;">Irrelevante — sem conduta do agente</td>
+            <td style="padding:0.5rem 0.7rem;">Absolvição (sem autoria); policial responde por abuso, falsidade etc.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 8. AGENTE PROVOCADOR                      -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="agente-provocador">
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <div class="section-title"><span>Operações Policiais — Alta Cobrança</span>Agente Infiltrado × Agente Provocador</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔴 Agente Provocador — Gera Crime Impossível</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Definição:</strong> O agente provocador (<em>agent provocateur</em>) é aquele que induz o suspeito a praticar o crime E simultaneamente toma medidas que tornam a consumação impossível — seja porque controla o ambiente, seja porque o objeto/meio já foi neutralizado previamente.</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Característica essencial:</strong> A impossibilidade de consumação é gerada PELO PRÓPRIO AGENTE PROVOCADOR, que arquitetou a situação</li>
+        <li><strong>Consequência:</strong> Crime impossível (art. 17 CP + Súmula 145 STF) → atipicidade → absolvição do agente induzido</li>
+        <li><strong>Responsabilidade do provocador:</strong> O agente provocador (policial) pode responder por outros crimes — ex.: corrupção, abuso de autoridade — dependendo das circunstâncias</li>
+        <li><strong>Exemplos:</strong> Policial que substitui droga real por substância inerte antes de prender o traficante; agente que cria loja fictícia de receptação sem produtos reais para induzir suspeito a "receptar"</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🟢 Agente Infiltrado — NÃO Gera Crime Impossível</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Definição:</strong> O agente infiltrado é um policial que se infiltra em organização criminosa para colher provas e informações, participando das atividades criminosas sem instigar novos crimes e sem tornar a consumação impossível.</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Regulamentação:</strong> Lei 12.850/13 (ORCRIM) e Lei 11.343/06 (drogas) regulamentam a infiltração policial — atividade lícita com autorização judicial</li>
+        <li><strong>Diferença do provocador:</strong> O infiltrado não instiga o crime; observa e documenta crimes que os membros da organização praticam por iniciativa própria. O provocador instiga o crime e torna a consumação impossível.</li>
+        <li><strong>Consequência:</strong> Os crimes praticados pela organização (com o infiltrado presente) são tentativas reais ou crimes consumados — não há crime impossível</li>
+        <li><strong>Excludente para o infiltrado:</strong> O agente infiltrado que pratica crimes para manter a cobertura pode invocar excludente de ilicitude (estrito cumprimento do dever legal ou estado de necessidade) — Lei 12.850/13, art. 13</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card mt2">
+    <h3>📋 Operação Policial com "Flagrante Esperado" em Tráfico de Drogas — Alta Cobrança</h3>
+    <div class="card-grid card-grid-3 mt1">
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Cenário 1 — Crime Impossível:</strong> Policial infiltrado substitui droga real por substância inerte antes da entrega. O traficante entrega a substância inerte pensando ser droga. → Crime impossível (objeto absolutamente impróprio — a substância não é droga) → atipicidade do tráfico. Possível estelionato passivo (a vítima foi o comprador).</p>
+      </div>
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Cenário 2 — Crime Consumado:</strong> Policial aguarda (flagrante esperado) e prende o traficante no momento da entrega da droga real. A droga é real, a transação é real. → Crime consumado de tráfico (art. 33 Lei 11.343/06) → sem crime impossível. STJ: tentativa difícil de configurar no tráfico pelo tipo misto alternativo.</p>
+      </div>
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Cenário 3 — Fronteira:</strong> Policial compra droga real de traficante (como comprador fictício). O traficante vende droga real voluntariamente. → Flagrante esperado → crime consumado (o tráfico já se consumou ao transferir a droga). Não é crime impossível mesmo com policial como "comprador".</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 9. QUADRO COMPARATIVO                     -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="comparativo">
+  <div class="section-header">
+    <div class="section-num">09</div>
+    <div class="section-title"><span>Quadro Sinóptico</span>Crime Impossível × Tentativa × Desistência Voluntária × Arrependimento Eficaz</div>
+  </div>
+
+  <div style="overflow-x:auto;">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Critério</th>
+          <th>Crime Impossível — Art. 17 CP</th>
+          <th>Tentativa — Art. 14, II CP</th>
+          <th>Desistência Voluntária — Art. 15, 1.ª parte</th>
+          <th>Arrep. Eficaz — Art. 15, 2.ª parte</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hl">
+          <td>Execução</td>
+          <td>Iniciada, mas inidônea ab initio</td>
+          <td>Iniciada com meio idôneo e objeto próprio</td>
+          <td>Iniciada e interrompida voluntariamente</td>
+          <td>Iniciada e concluída; resultado evitado voluntariamente</td>
+        </tr>
+        <tr>
+          <td>Meio/Objeto</td>
+          <td>Absolutamente ineficaz / Absolutamente impróprio</td>
+          <td>Idôneo ou relativamente inidôneo</td>
+          <td>Idôneo (crime poderia consumar-se)</td>
+          <td>Idôneo (resultado ocorreria sem intervenção)</td>
+        </tr>
+        <tr class="hl2">
+          <td>Resultado</td>
+          <td>Impossível em qualquer circunstância</td>
+          <td>Não ocorreu por fator externo</td>
+          <td>Não ocorreu por vontade do agente (interrupção)</td>
+          <td>Não ocorreu por vontade do agente (reversão)</td>
+        </tr>
+        <tr>
+          <td>Perigo ao BJ</td>
+          <td>NENHUM — nem em tese</td>
+          <td>SIM — perigo real criado</td>
+          <td>SIM — perigo real criado, mas revertido</td>
+          <td>SIM — perigo real criado, resultado revertido</td>
+        </tr>
+        <tr class="hl3">
+          <td>Consequência</td>
+          <td>Atípico — sem crime, sem pena</td>
+          <td>Crime tentado — pena reduzida de 1/3 a 2/3</td>
+          <td>Responde pelos atos praticados (ex.: lesão consumada)</td>
+          <td>Responde pelos atos praticados (ex.: lesão consumada)</td>
+        </tr>
+        <tr>
+          <td>Fundamento</td>
+          <td>Ofensividade — sem risco ao BJ</td>
+          <td>Proporcionalidade — crime incompleto, pena menor</td>
+          <td>Política criminal — "ponte de ouro" de Von Liszt</td>
+          <td>Política criminal — "ponte de prata" de Von Liszt</td>
+        </tr>
+        <tr class="hl4">
+          <td>Teoria</td>
+          <td>Objetiva temperada (CP art. 17)</td>
+          <td>Objetiva temperada (CP art. 14, II)</td>
+          <td>Política criminal — voluntariedade</td>
+          <td>Política criminal — voluntariedade + eficácia</td>
+        </tr>
+        <tr>
+          <td>Artigo</td>
+          <td>Art. 17 CP</td>
+          <td>Art. 14, II + §único CP</td>
+          <td>Art. 15, 1.ª parte CP</td>
+          <td>Art. 15, 2.ª parte CP</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="alert alert-red mt2">
+    <div class="alert-icon">🔴</div>
+    <div><strong>Resumo Mnemônico para o Exame:</strong><br>
+    <strong>Art. 17 CP (Crime Impossível):</strong> Meio absolut. ineficaz ou objeto absolut. impróprio → Atípico → Sem crime, sem pena<br>
+    <strong>Art. 14, II (Tentativa):</strong> Execução + não consumação por causa externa + meio idôneo/objeto próprio → Crime tentado → Pena 1/3 a 2/3<br>
+    <strong>Art. 15, 1.ª parte (Desistência):</strong> Execução + interrupção voluntária antes de esgotar os atos → "Posso mas não quis" → Responde só pelos atos<br>
+    <strong>Art. 15, 2.ª parte (Arrep. Eficaz):</strong> Execução completa + reversão voluntária do resultado → "Atirei mas salvei" → Responde só pelos atos</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 10. EXEMPLOS PRÁTICOS                     -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="exemplos">
+  <div class="section-header">
+    <div class="section-num">10</div>
+    <div class="section-title"><span>Casos Concretos Resolvidos</span>Exemplos Práticos do Art. 17 CP</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 1 — Veneno que é Açúcar (Meio Absolutamente Ineficaz)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A quer matar B. A adquire o que acredita ser arsênico letal, mas na verdade comprou açúcar por engano. A mistura o açúcar na bebida de B. B bebe e não sente nada.</p>
+      <div class="ex-calc">ANÁLISE — Art. 17 CP:
+
+Conduta: A praticou ato executório (administrou substância)
+Meio empregado: açúcar (substância inerte)
+Teste da inidoneidade absoluta:
+→ "Em qualquer circunstância, açúcar pode matar alguém?"
+→ NÃO → ineficácia ABSOLUTA do meio
+
+Art. 17 CP → CRIME IMPOSSÍVEL
+→ Hipótese 1: ineficácia absoluta do meio
+→ Fato ATÍPICO → sem tentativa punível
+→ A não responde por tentativa de homicídio
+
+Teoria adotada: OBJETIVA TEMPERADA
+→ O critério é objetivo (o açúcar nunca mata)
+→ Irrelevante que A tivesse intenção de matar
+→ A teoria subjetiva (não adotada) puniria A
+
+CONSEQUÊNCIA:
+→ A é absolvido por atipicidade
+→ Eventual responsabilização por crime diverso? 
+→ Ex.: se tivesse obtido o açúcar ilicitamente, 
+   responderia por esse crime autônomo, não 
+   por tentativa de homicídio ✅</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 2 — Tentativa de Matar Cadáver (Objeto Absolutamente Impróprio)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A quer matar B. A vai ao apartamento de B e o esfaqueia repetidamente. Não sabe que B havia morrido de infarto 2 horas antes.</p>
+      <div class="ex-calc">ANÁLISE — Art. 17 CP:
+
+Conduta: A praticou atos executórios (esfaqueamentos)
+Objeto: cadáver de B (já sem vida)
+Teste da impropriedade absoluta:
+→ "Um cadáver pode ser 'vítima' de homicídio (ter sua vida ceifada)?"
+→ NÃO — não há vida a ser tirada → objeto absolutamente impróprio
+
+Art. 17 CP → CRIME IMPOSSÍVEL
+→ Hipótese 2: absoluta impropriedade do objeto
+→ Fato ATÍPICO → sem tentativa de homicídio
+
+CONSEQUÊNCIA:
+→ A não responde por tentativa de homicídio
+→ Possível responsabilização por:
+   → Violação de cadáver (art. 211 CP)
+   → Dano ao patrimônio (se danificou bens)
+   → Não por tentativa de homicídio
+
+DISTINÇÃO IMPORTANTE:
+→ Se A tinha matado B antes (desconhecendo) e depois
+   voltou para dar mais facadas → homicídio consumado (morte anterior)
+   → As facadas posteriores → crime impossível
+   → Concurso aparente → absorção pelo homicídio ✅</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 3 — Flagrante Preparado (Súmula 145 STF)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A polícia recebe denúncia de que A comercializa drogas. Policiais abordam A e substituem a droga real por substância inerte. Em seguida, um policial disfarçado de comprador realiza a transação com A.</p>
+      <div class="ex-calc">ANÁLISE — Crime Impossível + Súmula 145 STF:
+
+Fato: A entregou substância inerte pensando ser droga
+→ Policiais criaram a situação (flagrante preparado)
+→ Consumação do tráfico foi tornada IMPOSSÍVEL pelos policiais
+   (a substância não é droga → objeto absolutamente impróprio)
+
+Súmula 145 STF: "Não há crime, quando a preparação 
+do flagrante pela polícia torna impossível a sua consumação"
+
+Art. 17 CP: objeto absolutamente impróprio (substância inerte 
+≠ droga) → CRIME IMPOSSÍVEL → ATÍPICO
+
+A não responde por tráfico de drogas
+
+DISTINÇÃO — Se os policiais não tivessem substituído:
+→ A entrega droga real para policial disfarçado
+→ FLAGRANTE ESPERADO (não preparado)
+→ Tráfico CONSUMADO → A responde pelo crime ✅
+
+Possíveis outros crimes de A:
+→ Se A vendeu substância inerte como droga → estelionato (art. 171 CP)
+   contra o comprador
+→ O crime impossível de tráfico não impede outros crimes autônomos</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 4 — Arma Desmuniciada × Arma Inapta (Debate STJ)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">Dois cenários sobre arma de fogo e crime impossível.</p>
+      <div class="ex-calc">CENÁRIO A — ARMA COMPLETAMENTE INAPTA:
+A aponta para B arma de fogo que não tem mecanismo
+de disparo funcionando e que NÃO poderia ser carregada
+imediatamente com nenhuma munição disponível.
+→ Meio ABSOLUTAMENTE ineficaz
+→ CRIME IMPOSSÍVEL (art. 17 CP)
+→ A não responde por tentativa de homicídio
+→ Pode responder por porte ilegal (se a arma, mesmo inapta,
+   configurar arma para fins do Estatuto do Desarmamento)
+
+CENÁRIO B — ARMA DESMUNICIADA (com munição próxima):
+A aponta para B arma desmuniciada. A tem munição
+no bolso que poderia ser carregada em segundos.
+→ STJ MAJORITÁRIO: ineficácia RELATIVA
+   (meio poderia produzir o resultado com ação simples)
+→ TENTATIVA PUNÍVEL (art. 14, II CP)
+→ A responde por tentativa de homicídio
+
+CENÁRIO C — ARMA DESMUNICIADA (sem munição alguma):
+A aponta arma sem munição nem acesso imediato à munição.
+→ Debate doutrinário e jurisprudencial
+→ STJ: tendência a considerar ineficácia relativa → tentativa
+→ Doutrina minoritária: crime impossível ✅
+
+O CRITÉRIO STJ: avalia se, no caso concreto e nas 
+circunstâncias, o meio poderia produzir o resultado 
+com ação simples e imediata do agente.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 11. JURISPRUDÊNCIA STF/STJ                -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="jurisprudencia">
+  <div class="section-header">
+    <div class="section-num">11</div>
+    <div class="section-title"><span>STF · STJ · Súmulas · Teses</span>Jurisprudência e Posições dos Tribunais Superiores</div>
+  </div>
+
+  <div class="alert alert-navy mt1" style="margin-bottom:1.2rem;">
+    <div class="alert-icon">ℹ️</div>
+    <div>As posições abaixo refletem entendimentos consolidados do STF e STJ sobre o crime impossível (art. 17 CP). São referenciadas por tema e diploma legal para garantia de <strong>zero alucinação</strong>. O art. 17 CP tem vasta aplicação jurisprudencial, especialmente em casos de flagrante preparado, arma desmuniciada e câmeras de vigilância.</div>
+  </div>
+
+  <div class="juris-grid">
+
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <span class="juris-badge sumula">Súmula 145</span>
+        <div class="juris-title">Flagrante Preparado — Crime Impossível (Não há Crime)</div>
+      </div>
+      <div class="juris-body">
+        <p>A <strong>Súmula 145 do STF</strong> é a mais importante tese jurisprudencial sobre o crime impossível: <em>"Não há crime, quando a preparação do flagrante pela polícia torna impossível a sua consumação."</em> É a aplicação expressa do art. 17 CP ao flagrante preparado ou provocado. O STF consolidou que, quando o agente provocador (normalmente policial) cria artificialmente a situação criminosa tornando a consumação objetivamente impossível, o fato é atípico por força do art. 17 CP.</p>
+        <p class="mt1">A Súmula 145 é aplicada em casos em que: (a) a droga foi substituída por substância inerte antes da entrega; (b) os bens foram previamente retirados do local que seria furtado; (c) o sistema foi configurado de forma que qualquer transação seria automaticamente bloqueada. Em todas essas situações, a consumação era impossível — crime impossível configurado.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Súmula 145/STF</span>
+          <span class="tag tag-gold">Flagrante Preparado → Crime Impossível</span>
+          <span class="tag tag-blue">Art. 17 CP — Atipicidade</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge sumula">Súmula 567</span>
+        <div class="juris-title">Sistema de Vigilância — NÃO Configura Crime Impossível no Furto</div>
+      </div>
+      <div class="juris-body">
+        <p>A <strong>Súmula 567 do STJ</strong> enuncia: <em>"Sistema de vigilância realizado por monitoramento eletrônico ou por existência de segurança no interior de estabelecimento comercial, por si só, não torna impossível a prática do crime de furto."</em> Esta súmula é a aplicação da distinção entre inidoneidade absoluta (crime impossível) e inidoneidade relativa (tentativa punível).</p>
+        <p class="mt1">O simples fato de haver câmeras e seguranças não torna o objeto (bem a ser furtado) absolutamente impróprio, nem torna o meio (ato de subtrair) absolutamente ineficaz. O bem existe e pode ser subtraído — a vigilância cria dificuldade adicional (inidoneidade relativa), mas não impossibilidade absoluta. Logo: furto em estabelecimento com câmeras, flagrado antes da subtração → tentativa de furto (art. 155 + art. 14, II CP), não crime impossível. Furto consumado (subtração efetivada) → crime consumado.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Súmula 567/STJ</span>
+          <span class="tag tag-gold">Câmeras — Inidoneidade Relativa</span>
+          <span class="tag tag-blue">Tentativa de Furto — Não Crime Impossível</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Arma Desmuniciada — Inidoneidade Relativa → Tentativa (não Crime Impossível)</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ firmou posição majoritária de que a <strong>arma de fogo desmuniciada</strong>, mas com munição disponível nas proximidades do agente, configura inidoneidade <em>relativa</em> do meio — não absoluta — e portanto caracteriza tentativa punível, não crime impossível. O raciocínio é que a arma, embora sem munição no momento do ato, poderia produzir o resultado com ação simples e imediata do agente (carregar a arma).</p>
+        <p class="mt1">Distinção feita pelo STJ: <strong>arma com defeito irreparável que a torna completamente inapta</strong> para disparo em qualquer circunstância → inidoneidade absoluta → crime impossível. <strong>Arma desmuniciada com munição disponível</strong> → inidoneidade relativa → tentativa. Essa distinção é altamente cobrada em provas de magistratura. O STJ analisa o caso concreto — a disponibilidade de munição é fator determinante para distinguir absoluta de relativa inidoneidade.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Arma Desmuniciada → Tentativa</span>
+          <span class="tag tag-gold">Inidoneidade Relativa — STJ Majoritário</span>
+          <span class="tag tag-blue">Arma Inapta → Crime Impossível</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Tentativa de Tráfico com Substância Inerte (Não Droga) — Crime Impossível</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ consolidou que a venda de <strong>substância inerte como se fosse droga</strong> (ex.: talco vendido como cocaína; farinha vendida como heroína) configura crime impossível de tráfico de drogas (art. 33 Lei 11.343/06) por absoluta impropriedade do objeto — a substância não é droga, portanto não há o objeto do crime de tráfico. O fato é atípico em relação ao tráfico.</p>
+        <p class="mt1">Consequência importante: embora não haja crime de tráfico (crime impossível), o agente pode responder por <strong>estelionato</strong> (art. 171 CP) em relação ao comprador — pois enganou o comprador para obter vantagem ilícita. Esses são crimes distintos e autônomos. O crime impossível de tráfico não impede a imputação de outros crimes autônomos que efetivamente tenham sido praticados.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Substância Inerte → Crime Impossível (Tráfico)</span>
+          <span class="tag tag-gold">Estelionato → Crime Autônomo Possível</span>
+          <span class="tag tag-blue">Art. 17 CP — Objeto Absolutamente Impróprio</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Aborto em Mulher Não Grávida — Crime Impossível</div>
+      </div>
+      <div class="juris-body">
+        <p>O STF e o STJ reconhecem que a tentativa de aborto em <strong>mulher não grávida</strong> configura crime impossível por absoluta impropriedade do objeto — não há gravidez, portanto não há feto ou embrião a ser suprimido, que é o objeto do crime de aborto (arts. 124–127 CP). A mulher não grávida é absolutamente imprópria como objeto do crime de aborto.</p>
+        <p class="mt1">Esta é uma das hipóteses mais clássicas e didáticas de crime impossível por absoluta impropriedade do objeto, frequentemente usada em exemplos de doutrina e em questões de provas. O agente que acredita que a mulher está grávida e administra abortivo ou realiza procedimento → crime impossível → sem punição por aborto. Pode responder por outros crimes autônomos (ex.: lesão corporal pelo procedimento invasivo).</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Aborto — Mulher Não Grávida</span>
+          <span class="tag tag-gold">Objeto Absolutamente Impróprio</span>
+          <span class="tag tag-blue">Crime Impossível Clássico — Art. 17 CP</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Cofre Vazio — Inidoneidade Relativa → Tentativa de Furto (Não Crime Impossível)</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ consolidou que o furto tentado em cofre que, por coincidência, estava vazio no momento do crime configura <strong>tentativa de furto</strong> — não crime impossível. O cofre é objeto <em>relativamente</em> impróprio (estava vazio por circunstância acidental, mas normalmente conteria bens), não absolutamente impróprio (cofre pode conter bens e ser objeto de furto).</p>
+        <p class="mt1">A distinção do STJ: objeto absolutamente impróprio → está vazio por sua natureza ou de forma permanente (ex.: cofre desativado sem função, que o agente sabia estar vazio, ou que se revelava impróprio ab initio). Objeto relativamente impróprio → estava vazio naquela ocasião, mas poderia conter bens (e normalmente conteria). No segundo caso → tentativa punível. O critério é se a impropriedade é da natureza do objeto ou apenas circunstancial.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Cofre Vazio por Circunstância → Tentativa</span>
+          <span class="tag tag-gold">Inidoneidade Relativa — STJ</span>
+          <span class="tag tag-blue">Cofre Absolutamente Vazio por Natureza → Crime Impossível</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Flagrante Esperado × Preparado — Distinção e Aplicação da Súmula 145 STF</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ aplica sistematicamente a distinção entre flagrante esperado e flagrante preparado para determinar a aplicação da Súmula 145/STF (crime impossível). No flagrante <strong>esperado</strong>, a polícia aguarda o crime que o agente praticará por iniciativa própria, sem indução e sem tornar a consumação impossível → crime punível (tentado ou consumado). No flagrante <strong>preparado</strong>, a consumação foi tornada impossível pelo provocador → Súmula 145/STF → crime impossível → atipicidade.</p>
+        <p class="mt1">O STJ analisa caso a caso: há indução pelo agente provocador? A consumação foi tornada impossível pela atuação policial? Se ambas as respostas forem positivas → crime impossível. Se apenas há monitoramento sem indução e sem neutralização da possibilidade de consumação → flagrante esperado → crime punível.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Flagrante Esperado → Crime Punível</span>
+          <span class="tag tag-gold">Flagrante Preparado → Súmula 145 STF</span>
+          <span class="tag tag-blue">Distinção: Indução + Impossibilidade</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 12. DOUTRINA                              -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="doutrina">
+  <div class="section-header">
+    <div class="section-num">12</div>
+    <div class="section-title"><span>Doutrina Nacional</span>Principais Posições Doutrinárias</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cleber Masson — Direito Penal Esquematizado</div>
+      </div>
+      <div class="juris-body">
+        <p>Masson sistematiza o crime impossível com foco em concursos. Adota expressamente a teoria objetiva temperada como posição do art. 17 CP. Apresenta o teste da inidoneidade absoluta: verificar se, em qualquer circunstância e para qualquer pessoa, a consumação seria impossível — se sim, crime impossível; se apenas circunstancialmente, tentativa. Analisa detidamente a Súmula 145/STF e a Súmula 567/STJ, destacando a aplicação prática. Quanto à arma desmuniciada, adota a posição do STJ: inidoneidade relativa (com munição próxima) → tentativa; arma completamente inapta → crime impossível. Destaca que o crime impossível gera atipicidade — não excludente de ilicitude ou culpabilidade.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cezar Roberto Bitencourt — Tratado de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Bitencourt aprofunda a análise dogmática do crime impossível com extensa análise histórica das teorias (subjetiva, objetiva pura, objetiva temperada, sintomática). Defende com vigor a teoria objetiva temperada como a única compatível com o Estado Democrático de Direito e com o princípio da ofensividade. Critica a teoria subjetiva por violar a ofensividade: punir a intenção sem criação de risco real é Direito Penal do Autor. Analisa detalhadamente o conceito de "absoluta" inidoneidade, com exemplos dos dois tipos (meio e objeto). Quanto à arma desmuniciada, Bitencourt é mais rigoroso: sem munição imediatamente disponível → crime impossível (mesmo sem acesso imediato à munição). Posição mais garantista que o STJ.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Rogério Greco — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Greco apresenta o crime impossível sob perspectiva constitucional: o art. 17 CP é concretização dos princípios da ofensividade, da legalidade e da proporcionalidade. O crime impossível respeita esses princípios ao não punir condutas que jamais poderiam lesar ou expor a perigo real o bem jurídico. Analisa com precisão a distinção entre crime impossível, crime putativo e tentativa, com exemplos práticos. Quanto à Súmula 145/STF, Greco a adota integralmente e critica a prática policial do flagrante preparado como violação ao princípio da lealdade processual — embora reconheça que a consequência jurídica (crime impossível) é a correta. Discorda da posição do STJ sobre arma desmuniciada em casos onde não havia munição disponível — para Greco, sem acesso imediato à munição, o meio é absolutamente ineficaz naquele momento.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Guilherme de Souza Nucci — Código Penal Comentado</div>
+      </div>
+      <div class="juris-body">
+        <p>Nucci comenta o art. 17 CP com foco forense. Destaca a importância prática da distinção entre inidoneidade absoluta e relativa, alertando que o juiz deve analisar cada caso concretamente — não há fórmula mecânica. Adota a teoria objetiva temperada e a Súmula 145/STF. Quanto à arma desmuniciada, Nucci adota a posição do STJ: com munição disponível → tentativa; completamente inapta → crime impossível. Analisa o flagrante preparado com atenção especial ao papel do agente provocador: o que determina o crime impossível não é apenas a indução, mas o efetivo impedimento da consumação. Destaca que o crime impossível gera absolvição por atipicidade — não rejeição liminar da denúncia — na maioria dos casos, pois a questão é de mérito.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Fernando Capez — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Capez apresenta o art. 17 CP de forma didática e voltada a concursos. Sistematiza as duas hipóteses (meio ineficaz e objeto impróprio) com exemplos claros. Adota a teoria objetiva temperada. Destaca o ponto mais cobrado em provas: a distinção entre inidoneidade absoluta (crime impossível) e relativa (tentativa) — critério: em qualquer circunstância seria impossível? Aplica a Súmula 145/STF ao flagrante preparado. Quanto à arma desmuniciada, segue o STJ. Destaca ainda a diferença entre crime impossível (art. 17) e crime putativo: no impossível, o agente pretende cometer um crime que a lei tipifica, mas a situação fática impede a consumação; no putativo, o agente pratica fato lícito que erroneamente acredita ser crime — dois institutos com natureza diversa, frequentemente confundidos em provas.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Controvérsia: Arma Desmuniciada é Crime Impossível ou Tentativa?</div>
+      </div>
+      <div class="juris-body">
+        <p>O caso da arma desmuniciada divide doutrina e jurisprudência:</p>
+        <ul class="mt1">
+          <li><strong>Posição A — Tentativa (STJ majoritário, Masson, Nucci, Capez):</strong> Arma desmuniciada com munição próxima e disponível = inidoneidade relativa → tentativa. O critério é a disponibilidade imediata de munição; com ela, o meio poderia produzir o resultado.</li>
+          <li><strong>Posição B — Crime Impossível (Bitencourt, Greco — em casos sem munição disponível):</strong> Arma desmuniciada sem munição imediatamente disponível = inidoneidade absoluta naquele momento → crime impossível. O critério é a incapacidade objetiva de atirar no momento do ato.</li>
+          <li><strong>Posição C — STJ caso a caso:</strong> Analisa concretamente: (a) havia munição disponível imediatamente? (b) o agente podia carregar a arma rapidamente? Se sim → tentativa. Se não → crime impossível.</li>
+          <li><strong>Para o concurso:</strong> Adote a Posição A (STJ) como regra geral para arma desmuniciada com munição disponível. Mencione que arma completamente inapta (sem mecanismo funcionante, sem possibilidade de disparo em qualquer hipótese) → crime impossível.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 13. SISTEMÁTICA                           -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="sistematica">
+  <div class="section-header">
+    <div class="section-num">13</div>
+    <div class="section-title"><span>Conexões Sistemáticas</span>Art. 17 CP na Sistemática do Código Penal e do CPP</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔗 Artigos Diretamente Conectados ao Art. 17 CP</h3>
+      <ul>
+        <li><strong>Art. 13 CP (Nexo causal):</strong> No crime impossível, sequer há nexo causal possível entre a conduta e o resultado — o resultado jamais poderia ser causado pelo meio ineficaz ou sobre o objeto impróprio</li>
+        <li><strong>Art. 14, II CP (Tentativa):</strong> Antítese do art. 17 — a tentativa pressupõe meio idôneo e objeto próprio; o crime impossível é a negação da tentativa punível</li>
+        <li><strong>Art. 15 CP (Desistência e Arrependimento Eficaz):</strong> Ambos pressupõem tentativa real (meio idôneo, objeto próprio); o crime impossível exclui a própria tentativa, tornando irrelevante a análise do art. 15</li>
+        <li><strong>Art. 18, I CP (Dolo):</strong> No crime impossível, o dolo do agente existe — mas o CP adota critério objetivo (teoria objetiva temperada), tornando irrelevante o dolo para a exclusão da punição</li>
+        <li><strong>Art. 23 CP (Excludentes de ilicitude):</strong> Crime impossível é causa de exclusão da tipicidade — não se confunde com excludentes de ilicitude. O art. 17 exclui o fato típico, não apenas a ilicitude</li>
+        <li><strong>Art. 1.º CP (Legalidade):</strong> O crime impossível respeita a legalidade — ao excluir a punição de condutas que não criam risco real ao bem jurídico, protege o cidadão de criminalização de intenções</li>
+        <li><strong>Súmula 145 STF:</strong> Principal precedente sobre crime impossível no flagrante preparado — aplicação direta do art. 17 CP</li>
+        <li><strong>Súmula 567 STJ:</strong> Delimita o crime impossível no furto com sistema de vigilância — inidoneidade relativa → tentativa</li>
+        <li><strong>Art. 395, III, CPP (Rejeição da denúncia):</strong> Se o crime impossível é verificável de plano (ex.: o promotor denuncia pelo crime, mas os fatos narrados revelam claramente crime impossível), o juiz pode rejeitar a denúncia por ausência de justa causa</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📋 Crime Impossível × Inexigibilidade de Conduta Diversa</h3>
+      <div class="law-quote">
+        <strong>Art. 22 CP — Coação Irresistível e Obediência Hierárquica:</strong>
+        "Se o fato é cometido sob coação irresistível ou em estrita obediência a ordem, não manifestamente ilegal, de superior hierárquico, só é punível o autor da coação ou da ordem."
+      </div>
+      <p class="mt2" style="font-size:0.85rem;color:var(--text-mid);">O crime impossível é frequentemente confundido com causas de inexigibilidade (art. 22 CP). São institutos distintos: crime impossível → exclui a tipicidade (não há crime); inexigibilidade → exclui a culpabilidade (há crime, mas o agente não é culpável). As consequências processuais e substanciais são diferentes.</p>
+      <div class="alert alert-gold mt2" style="font-size:0.8rem;">
+        <div>⭐ <strong>Hierarquia das Excludentes:</strong> (1) Tipicidade ausente (art. 17 — crime impossível) → sem crime; (2) Ilicitude ausente (arts. 23–25) → sem crime; (3) Culpabilidade ausente (arts. 21, 22, 26, 27, 28) → sem crime. O crime impossível atua na tipicidade — é a causa mais ampla de exclusão, pois o fato não é sequer típico.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-3 mt2">
+    <div class="card">
+      <h3>⚡ Crime Impossível e Processo Penal</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">O crime impossível tem importantes efeitos processuais:</p>
+      <ul class="mt1" style="font-size:0.84rem;">
+        <li><strong>Rejeição da denúncia (art. 395, III, CPP):</strong> Se o crime impossível resulta de causa aparente (visível na própria peça acusatória), o juiz pode rejeitar a denúncia por ausência de justa causa, evitando processo inútil</li>
+        <li><strong>Absolvição sumária (art. 397, III, CPP):</strong> Se o crime impossível é verificado após o recebimento da denúncia mas antes da instrução, pode-se reconhecer a atipicidade via absolvição sumária</li>
+        <li><strong>Absolvição na sentença:</strong> Se o crime impossível só é demonstrado na instrução → absolvição por atipicidade na sentença</li>
+        <li><strong>Habeas corpus:</strong> STF e STJ admitem trancamento do inquérito ou da ação penal por crime impossível via habeas corpus, quando a atipicidade é manifesta</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🔄 Resumo Mnemônico para Prova</h3>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.82rem;line-height:1.85;">
+        <p><strong style="color:var(--gold-light);">Art. 17 CP — Duas Hipóteses:</strong><br>
+        1️⃣ Meio ABSOLUTAMENTE ineficaz<br>
+        2️⃣ Objeto ABSOLUTAMENTE impróprio</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.5rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Consequência:</strong> Atípico — sem crime, sem pena<br>
+        Teoria: Objetiva Temperada (CP art. 17)</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.5rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Súmulas:</strong><br>
+        STF 145: Flagrante preparado → Crime impossível<br>
+        STJ 567: Câmeras → NÃO → Crime impossível<br>(furto: inidoneidade relativa → tentativa)</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.5rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">ABSOLUTA × RELATIVA:</strong><br>
+        Absoluta → Art. 17 → Crime impossível<br>
+        Relativa → Art. 14, II → Tentativa punível</p>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📅 Crime Impossível e Medidas de Segurança</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">O Código Penal de 1969 (que não entrou em vigor) previa medida de segurança para o agente do crime impossível que revelasse periculosidade (influência da teoria sintomática). O CP vigente (1940) <strong>não</strong> prevê medida de segurança para o crime impossível:</p>
+      <ul class="mt1" style="font-size:0.84rem;">
+        <li><strong>Crime impossível → atipicidade:</strong> Sem crime, sem pena, sem medida de segurança pelo fato</li>
+        <li><strong>Inimputável em crime impossível:</strong> Inimputável que pratica crime impossível também não responde — a atipicidade é objetiva e beneficia qualquer agente</li>
+        <li><strong>Periculosidade residual:</strong> Se o agente revelar periculosidade por outras condutas, pode ser submetido a medida de segurança por outros fundamentos — nunca pelo crime impossível em si</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- PROVA / ENAM                              -->
+<!-- ══════════════════════════════════════════ -->
+<section id="prova" class="prova-section">
+  <h2>⚖️ Pontos Cobrados em Magistratura e ENAM</h2>
+  <p class="intro">Questões, teses e pegadinhas recorrentes nos concursos de Juiz de Direito, ENAM e equivalentes relacionadas ao Art. 17 CP.</p>
+
+  <div class="prova-items">
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">01</span>Quais são as duas hipóteses de crime impossível previstas no art. 17 CP? Explique cada uma.</div>
+      <div class="prova-item-a"><strong>Hipótese 1 — Ineficácia absoluta do meio:</strong> O instrumento, método ou processo empregado pelo agente é objetivamente incapaz de produzir o resultado típico em qualquer circunstância. O meio nunca poderia, para nenhuma pessoa, produzir o resultado. Ex.: tentar matar com açúcar pensando ser veneno; disparar arma completamente inapta. <strong>Hipótese 2 — Absoluta impropriedade do objeto:</strong> A pessoa ou coisa sobre a qual recai a conduta é absolutamente incapaz de sofrer o dano típico por sua natureza. Ex.: tentar matar cadáver (sem vida para ser ceifada); aborto em mulher não grávida (sem feto); furtar cofre vazio por natureza. Em ambas as hipóteses, a inidoneidade deve ser ABSOLUTA — a relativa configura tentativa punível (art. 14, II CP).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">02</span>Qual a teoria adotada pelo CP brasileiro sobre o crime impossível? Explique as demais teorias existentes.</div>
+      <div class="prova-item-a">O CP brasileiro adota a <strong>teoria objetiva temperada (intermediária)</strong>, expressa na palavra "absoluta" do art. 17 CP: apenas a inidoneidade absoluta (do meio ou do objeto) exclui a punição. A inidoneidade relativa mantém a tentativa punível. As demais teorias: <strong>Teoria Subjetiva:</strong> toda tentativa, mesmo com meio ineficaz, é punível — o que importa é o dolo; não há crime impossível. ❌ Não adotada pelo CP — viola a ofensividade. <strong>Teoria Objetiva Pura:</strong> qualquer inidoneidade (absoluta ou relativa) exclui a tentativa — amplíssima. ❌ Não adotada — praticamente elimina a tentativa punível. <strong>Teoria Sintomática:</strong> o crime impossível revela periculosidade → medida de segurança. ❌ Não adotada pelo CP de 1940 (foi prevista no CP de 1969, não vigente).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">03</span>O que é flagrante preparado? Qual sua consequência jurídica? Diferencie do flagrante esperado.</div>
+      <div class="prova-item-a"><strong>Flagrante preparado (ou provocado):</strong> O agente provocador (policial ou particular) induz o suspeito a praticar o crime E, simultaneamente, toma medidas que tornam a consumação objetivamente impossível. → <strong>Crime impossível (art. 17 CP + Súmula 145 STF)</strong> → fato atípico → absolvição. <strong>Flagrante esperado:</strong> A polícia aguarda o crime que o agente praticará por iniciativa própria, sem induzi-lo e sem tornar a consumação impossível. → <strong>Tentativa punível ou crime consumado</strong> → o agente responde pelo crime. <strong>Distinção essencial:</strong> No preparado, há (a) indução pelo provocador E (b) impossibilidade de consumação gerada pela atuação policial. No esperado, a polícia apenas observa e aguarda o crime espontâneo do agente. <strong>Flagrante forjado:</strong> policial planta provas em pessoa inocente → absolvição por ausência de autoria (diferente do crime impossível).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">04</span>A presença de câmeras de segurança em supermercado torna o furto crime impossível?</div>
+      <div class="prova-item-a"><strong>Não.</strong> O STJ, na Súmula 567, consolidou que o sistema de vigilância por monitoramento eletrônico ou existência de segurança em estabelecimento comercial <em>não torna impossível, por si só</em>, a prática do crime de furto. O raciocínio: a presença de câmeras e seguranças constitui inidoneidade <em>relativa</em> — torna a subtração mais difícil, mas não absolutamente impossível (o bem existe e pode ser subtraído). A inidoneidade relativa configura tentativa punível (art. 14, II CP) — não crime impossível (art. 17 CP). Logo: furto flagrado por câmeras antes da subtração → tentativa de furto → pena reduzida de 1/3 a 2/3. Furto consumado com câmeras presentes → crime consumado.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">05</span>A arma desmuniciada configura crime impossível? Qual a posição do STJ?</div>
+      <div class="prova-item-a">O STJ firmou posição majoritária: a <strong>arma desmuniciada com munição disponível nas proximidades</strong> configura inidoneidade <em>relativa</em> do meio — não absoluta — portanto caracteriza <strong>tentativa punível</strong>, não crime impossível. A arma poderia produzir o resultado com ação simples (carregar a munição). Já a <strong>arma com defeito irreparável, completamente inapta para disparo em qualquer circunstância</strong>, configura inidoneidade <em>absoluta</em> → crime impossível (art. 17 CP). A distinção: (a) arma desmuniciada + munição disponível → tentativa; (b) arma tecnicamente inapta/sem mecanismo funcionante → crime impossível. A doutrina (Bitencourt, Greco) tende a ser mais garantista, reconhecendo crime impossível quando não há munição imediatamente disponível — mas o STJ prevalece nos concursos.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">06</span>Qual a diferença entre crime impossível (art. 17 CP) e crime putativo?</div>
+      <div class="prova-item-a"><strong>Crime impossível (art. 17 CP):</strong> O agente pratica conduta que a lei tipifica como crime, mas a consumação é objetivamente impossível por inidoneidade absoluta do meio (ex.: veneno que é açúcar) ou do objeto (ex.: cadáver). O crime existe como tipo penal — é a situação fática que impede a consumação. A inidoneidade é objetiva. <strong>Crime putativo (imaginário):</strong> O agente pratica conduta que considera criminosa, mas que na verdade a lei não tipifica como crime — há erro sobre a proibição ao revés. Ex.: agente que pratica ato lícito achando que é crime (bigamia em país que a permite; relação sexual consentida entre adultos que o agente acha ser proibida). O fato é atípico por ausência de tipo penal — não por inidoneidade do meio ou objeto. No crime impossível: há tipo penal, mas impossibilidade fática. No crime putativo: há possibilidade fática, mas ausência de tipo penal.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">07</span>A tentativa de aborto em mulher não grávida é crime impossível? Fundamente.</div>
+      <div class="prova-item-a"><strong>Sim.</strong> A tentativa de aborto em mulher não grávida é crime impossível por <strong>absoluta impropriedade do objeto</strong> (art. 17, 2.ª hipótese, CP). Fundamento: o crime de aborto (arts. 124–127 CP) pressupõe como objeto a gravidez (feto ou embrião). Sem gravidez, não há gravidez a ser interrompida — o objeto sobre o qual a conduta recai é absolutamente impróprio (a mulher não grávida não pode ser objeto do crime de aborto em qualquer circunstância, dada a ausência de gravidez). O agente que pratica procedimento abortivo em mulher que erroneamente acredita estar grávida não comete tentativa de aborto — o fato é atípico em relação ao aborto. Possível responsabilização por outros crimes autônomos praticados (ex.: lesão corporal pelo procedimento invasivo).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">08</span>O crime impossível exclui a tipicidade, a ilicitude ou a culpabilidade?</div>
+      <div class="prova-item-a">O crime impossível exclui a <strong>tipicidade</strong> — especificamente, o nexo de imputação entre a conduta e o resultado típico. O fato é atípico; não constitui crime tentado. Não há crime consumado nem tentado. O art. 17 CP não é excludente de ilicitude (arts. 23–25 CP) nem de culpabilidade (arts. 21, 22, 26, 27, 28 CP). É causa de exclusão da tipicidade — a conduta não configura o tipo penal da tentativa (art. 14, II). Consequência processual: o agente é absolvido por atipicidade — não por falta de ilicitude ou culpabilidade. A distinção é relevante para a sentença penal (art. 386 CPP): absolvição por atipicidade (inciso III — fato não constituir infração penal) e não por excludente de ilicitude (inciso VI) ou culpabilidade.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">09</span>A venda de substância inerte como se fosse droga é crime de tráfico ou estelionato?</div>
+      <div class="prova-item-a">É crime impossível de tráfico de drogas (art. 33 Lei 11.343/06) + possivelmente estelionato (art. 171 CP). Análise: quanto ao tráfico → a substância inerte é absolutamente imprópria para ser o objeto do crime de tráfico (a substância não é droga) → crime impossível → atípico o tráfico. Quanto ao estelionato → o agente obteve vantagem ilícita induzindo o comprador em erro (fez-se passar por traficante, vendeu substância inerte como droga) → estelionato consumado (art. 171 CP) → crime autônomo que pode ser imputado. O crime impossível de tráfico não impede a imputação de outros crimes autônomos. STJ: confirma esse raciocínio — crime impossível de tráfico + possível estelionato. Distinção importante: a análise de cada crime é independente; o crime impossível de um tipo não afeta a tipicidade de outros.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">10</span>[ENAM — alta recorrência] Distinga: flagrante preparado (crime impossível), flagrante esperado e flagrante forjado. Com exemplos.</div>
+      <div class="prova-item-a"><strong>Flagrante preparado (crime impossível — Súmula 145 STF):</strong> A polícia induz o suspeito ao crime E torna a consumação impossível. Ex.: policial infiltrado substitui droga real por talco antes da venda; o "traficante" é preso vendendo talco. → Crime impossível → absolvição. <strong>Flagrante esperado:</strong> A polícia aguarda o crime espontâneo do agente, sem indução e sem tornar a consumação impossível. Ex.: policial recebe denúncia de tráfico, se disfarça de comprador e compra droga real do traficante. → Tráfico consumado → responde pelo crime. <strong>Flagrante forjado:</strong> Policial planta provas sobre pessoa inocente que nada praticou. Ex.: policial coloca droga no bolso de inocente e o prende. → Absolvição (sem autoria/conduta do acusado); policial responde por abuso, falsa comunicação de crime etc. → Sem crime impossível (não há conduta do agente para ser analisada). A diferença fundamental: preparado = indução + impossibilidade criada pelo provocador; esperado = aguardar crime espontâneo; forjado = sem conduta real do acusado.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">11</span>O furto de cofre que, por coincidência, estava vazio é crime impossível?</div>
+      <div class="prova-item-a"><strong>Não, segundo o STJ.</strong> O furto de cofre que estava vazio por circunstância acidental configura <strong>tentativa de furto</strong> — não crime impossível. O cofre é objeto <em>relativamente</em> impróprio (estava vazio por coincidência, mas normalmente conteria bens e poderia ser objeto de furto), não absolutamente impróprio (a natureza do cofre não o impede de conter bens). A impropriedade é circunstancial, não absoluta. Logo: inidoneidade relativa do objeto → tentativa punível. Contrastando: se o agente tenta furtar cofre que, por sua natureza ou de forma permanente e conhecida, está absolutamente vazio e impossibilitado de conter bem algum (ex.: cofre decorativo fixado em parede e sabidamente vazio e inacessível) → debate sobre impropriedade absoluta. Mas em regra, cofre vazio por coincidência → tentativa de furto.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">12</span>Qual a consequência jurídica para o agente inimputável que pratica crime impossível?</div>
+      <div class="prova-item-a">O agente inimputável (por doença mental, menoridade etc.) que pratica crime impossível <strong>também não responde</strong> — a atipicidade do crime impossível é objetiva e beneficia qualquer agente, independentemente de imputabilidade. No crime impossível, o fato é atípico porque a consumação era objetivamente impossível — não por razões subjetivas do agente. Mesmo o agente com dolo de consumação (imputável ou não) não responde, pois o critério é objetivo (teoria objetiva temperada do art. 17 CP). Sem tipicidade → sem crime → sem pena e sem medida de segurança pelo crime impossível. A medida de segurança (art. 97 CP) pressupõe a prática de fato típico por inimputável — mas o crime impossível não é fato típico. Portanto: inimputável em crime impossível → sem responsabilização penal nem medida de segurança por aquele fato.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">13</span>[ENAM — questão integrada] A atirou em B com arma de fogo completamente inapta para disparar (mecanismo de disparo quebrado). B não foi atingido. A responde por quê? E se a arma estivesse apenas desmuniciada com munição no bolso de A?</div>
+      <div class="prova-item-a"><strong>Cenário 1 — Arma completamente inapta:</strong> Meio absolutamente ineficaz (arma sem mecanismo de disparo funcionante jamais poderia disparar em qualquer circunstância) → CRIME IMPOSSÍVEL (art. 17 CP, hipótese 1) → fato atípico → A não responde por tentativa de homicídio. A pode responder por outros crimes autônomos: porte ilegal de arma (se a arma, mesmo inapta, configurar arma para fins do Estatuto do Desarmamento — debate jurisprudencial); ameaça (se proferiu ameaças verbais); constrangimento ilegal. <strong>Cenário 2 — Arma desmuniciada com munição no bolso:</strong> Meio relativamente ineficaz (poderia carregar a arma imediatamente) → TENTATIVA DE HOMICÍDIO (art. 121 + art. 14, II CP) — posição STJ majoritária → pena reduzida de 1/3 a 2/3 conforme iter criminis percorrido. Fundamento STJ: a disponibilidade imediata de munição torna o meio apenas relativamente ineficaz naquele momento específico, não absolutamente ineficaz em qualquer circunstância.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">14</span>Qual a diferença entre crime impossível e tentativa supersticiosa? O CP pune a tentativa supersticiosa?</div>
+      <div class="prova-item-a"><strong>Tentativa supersticiosa:</strong> O agente emprega meio que, cientificamente, nunca poderia produzir qualquer resultado físico real — mas o agente acredita em sua eficácia por superstição. Ex.: "matar" alguém por macumba, simpatia, feitiço; "envenenar" com reza. Esses meios são absolutamente ineficazes do ponto de vista objetivo. <strong>Relação com o art. 17 CP:</strong> A tentativa supersticiosa é a hipótese mais extrema de ineficácia absoluta do meio → crime impossível (art. 17 CP) → atípico. O CP não pune a tentativa supersticiosa — não há nem tentativa punível (os meios são absolutamente ineficazes; nenhum bem jurídico correu risco). <strong>Distinção do crime impossível comum:</strong> Na tentativa supersticiosa, a ineficácia é ainda mais evidente (meios que nunca surtem efeito físico real por sua natureza mística/simbólica). No crime impossível comum, o meio é fisicamente real mas não capaz de produzir o resultado típico (ex.: açúcar como veneno). Em ambos os casos → crime impossível → atipicidade.</div>
+    </div>
+
+  </div>
+</section>
+
+</div><!-- /page-wrap -->
+
+<footer>
+  <strong>Art. 17.º do Código Penal Brasileiro</strong> — Decreto-Lei n.º 2.848/1940<br>
+  Material elaborado para preparação à Magistratura / ENAM · Doutrina e jurisprudência consolidadas · Atualizado 2025
+</footer>
+
+</body>
+</html>

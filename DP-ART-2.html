@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 2° do CP — Lei Penal no Tempo | Magistratura/ENAM 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:   #0e1e3a;
+  --navy2:  #162848;
+  --gold:   #c9982a;
+  --gold2:  #e6b842;
+  --crim:   #7d1a1a;
+  --crim2:  #a82a2a;
+  --teal:   #145a4a;
+  --slate:  #3a4a5a;
+  --sand:   #f4ede0;
+  --paper:  #faf6ef;
+  --border: #c8b87a;
+  --shadow: rgba(14,30,58,.13);
+  --olive:  #3a5228;
+  --purple: #3a1a5a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Crimson Pro',Georgia,serif;background:var(--sand);color:var(--navy);min-height:100vh}
+
+/* ── HEADER ── */
+header{
+  background:linear-gradient(150deg,var(--navy) 0%,var(--navy2) 70%,#1a3060 100%);
+  padding:2.8rem 2rem 2.2rem;text-align:center;position:relative;overflow:hidden;
+  border-bottom:4px solid var(--gold);
+}
+header::before{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c9982a' fill-opacity='0.05'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72l12-24 12 24H0zm64-8l8-16 8 16H64zM48 32l8-16 8 16H48zm-32 0l8-16 8 16H16zm38 56l8-16 8 16H54zm-40 0l8-16 8 16H14z'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events:none;
+}
+.hbadge{display:inline-block;background:var(--gold);color:var(--navy);font-size:.7rem;font-family:'Crimson Pro',serif;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:.3rem 1rem;border-radius:2px;margin-bottom:1rem}
+header h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.8rem,4.5vw,3rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:.5rem}
+header h1 em{color:var(--gold2);font-style:italic}
+header p.sub{color:rgba(255,255,255,.7);font-size:.95rem;font-style:italic;margin-bottom:1.4rem}
+.lei-box{margin:.5rem auto 0;max-width:760px;background:rgba(201,152,42,.1);border:1px solid rgba(201,152,42,.35);border-radius:6px;padding:1.1rem 1.6rem;color:#fff;font-size:1.05rem;line-height:1.75}
+.lei-box strong{color:var(--gold2);font-style:italic}
+
+/* ── TABS ── */
+.tabs-wrap{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:2px solid var(--gold);overflow-x:auto;scrollbar-width:none}
+.tabs-wrap::-webkit-scrollbar{display:none}
+.tabs{display:flex;padding:0 .8rem;white-space:nowrap}
+.tb{background:none;border:none;color:rgba(255,255,255,.55);font-family:'Crimson Pro',serif;font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.9rem 1rem;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;flex-shrink:0}
+.tb:hover{color:#fff}
+.tb.on{color:var(--gold2);border-bottom-color:var(--gold2)}
+
+/* ── MAIN ── */
+main{max-width:1120px;margin:0 auto;padding:2rem 1.2rem 5rem}
+.sec{display:none}
+.sec.on{display:block}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:1.75rem;font-weight:700;color:var(--navy);border-bottom:2.5px solid var(--gold);padding-bottom:.6rem;margin-bottom:1.7rem}
+
+/* ── CARD ── */
+.card{background:var(--paper);border:1px solid var(--border);border-radius:8px;padding:1.4rem 1.6rem;margin-bottom:1.2rem;box-shadow:0 2px 10px var(--shadow)}
+.ct{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:.75rem;display:flex;align-items:center;flex-wrap:wrap;gap:.55rem}
+.badge{font-family:'Crimson Pro',serif;font-size:.63rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:.22rem .65rem;border-radius:3px;flex-shrink:0}
+.bd{background:#e5f0da;color:var(--olive);border:1px solid #aac888}
+.bstf{background:#fce8e8;color:var(--crim);border:1px solid #d8a0a0}
+.bstj{background:#e5eef8;color:var(--navy2);border:1px solid #9ab5d5}
+.bw{background:#fff8e5;color:#7a5a00;border:1px solid #e6c84a}
+.bp{background:#e5f8e5;color:var(--olive);border:1px solid #88c888}
+.bpur{background:#f0e5ff;color:var(--purple);border:1px solid #c0a0e0}
+
+/* ── FLOW ── */
+.fw{display:flex;flex-direction:column;align-items:center;gap:0}
+.fn{width:100%;max-width:760px;background:var(--paper);border:2px solid var(--border);border-radius:8px;padding:1.1rem 1.5rem;box-shadow:0 2px 8px var(--shadow);position:relative}
+.fn.root{background:var(--navy);border-color:var(--gold);color:#fff;text-align:center;border-radius:50px;padding:1rem 2rem}
+.fn.root .nt{color:var(--gold2);font-size:1.25rem}
+.fn.sub{background:#eef3fa;border-color:#9ab5d5;max-width:720px}
+.fn.green{background:#eef7ee;border-color:#88c888}
+.fn.red{background:#fdf0f0;border-color:#c88888}
+.fn.gold{background:#fdf6e5;border-color:var(--gold)}
+.fn.purple{background:#f5eeff;border-color:#c0a0e0}
+.nt{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.4rem}
+.nb{font-size:.9rem;line-height:1.7;color:var(--slate)}
+.arrow{text-align:center;font-size:1.5rem;color:var(--gold);padding:.28rem 0;line-height:1}
+.row2{display:flex;gap:1rem;width:100%;max-width:760px}
+.row2 .fn{flex:1}
+@media(max-width:620px){.row2{flex-direction:column}}
+
+/* ── JULGADO ── */
+.jg{background:#f8f3ea;border-left:4px solid var(--crim2);padding:.9rem 1.1rem;margin:.7rem 0;border-radius:0 6px 6px 0;font-size:.88rem;line-height:1.7}
+.jg.stj{border-left-color:var(--navy2)}
+.jg.teal{border-left-color:var(--teal)}
+.jg.gold{border-left-color:var(--gold)}
+.jr{font-size:.72rem;color:var(--crim2);font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.3rem}
+.jg.stj .jr{color:var(--navy2)}
+.jg.teal .jr{color:var(--teal)}
+.jg.gold .jr{color:#7a5a00}
+
+/* ── TABLE ── */
+table{width:100%;border-collapse:collapse;font-size:.87rem;margin:.6rem 0}
+th{background:var(--navy);color:var(--gold2);font-family:'Crimson Pro',serif;font-weight:600;letter-spacing:.04em;padding:.62rem .85rem;text-align:left}
+td{padding:.55rem .85rem;border-bottom:1px solid #e5ddc8;vertical-align:top;line-height:1.55}
+tr:nth-child(even) td{background:rgba(200,184,120,.07)}
+
+/* ── ACCORDION ── */
+.abtn{width:100%;background:none;border:none;border-bottom:1px solid var(--border);padding:.9rem .2rem;text-align:left;font-family:'Cormorant Garamond',serif;font-size:1.02rem;font-weight:700;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.abtn:hover{color:var(--gold)}
+.aico{transition:transform .25s;font-size:.88rem}
+.abtn.open .aico{transform:rotate(180deg)}
+.abody{display:none;padding:.9rem .2rem}
+.abody.open{display:block}
+
+/* ── GRID ── */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:640px){.g2{grid-template-columns:1fr}}
+
+/* ── PROVA BOX ── */
+.pbox{background:linear-gradient(135deg,var(--navy),var(--navy2));border:2.5px solid var(--gold);border-radius:10px;padding:1.6rem 2rem;margin:1rem 0;color:#fff}
+.pbox h3{font-family:'Cormorant Garamond',serif;font-size:1.18rem;color:var(--gold2);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.pi{display:flex;gap:.8rem;padding:.58rem 0;border-bottom:1px solid rgba(201,152,42,.22);font-size:.88rem;line-height:1.65;color:rgba(255,255,255,.88)}
+.pi:last-child{border-bottom:none}
+.pn{min-width:1.6rem;color:var(--gold2);font-weight:700;font-family:'Cormorant Garamond',serif;font-size:1.1rem}
+.danger{background:#fdf0f0;border:2px solid var(--crim2);border-radius:8px;padding:1.3rem 1.5rem;margin:1rem 0}
+.danger h4{font-family:'Cormorant Garamond',serif;color:var(--crim);font-size:1.05rem;margin-bottom:.7rem;display:flex;align-items:center;gap:.4rem}
+
+/* ── TIMELINE ── */
+.timeline{position:relative;padding-left:2.2rem;margin:.8rem 0}
+.timeline::before{content:'';position:absolute;left:.6rem;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--gold),var(--navy2))}
+.tli{position:relative;margin-bottom:1rem;font-size:.88rem;line-height:1.65}
+.tli::before{content:'';position:absolute;left:-1.7rem;top:.45rem;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);border:2px solid var(--navy)}
+
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:var(--sand)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hbadge">Magistratura · ENAM · 2026</div>
+  <h1>Art. 2° do <em>Código Penal</em><br>Lei Penal no Tempo</h1>
+  <p class="sub">Fluxograma Completo · Doutrina · STF · STJ · Pontos de Prova</p>
+  <div class="lei-box">
+    <strong>"Ninguém pode ser punido por fato que lei posterior deixa de considerar crime,<br>
+    cessando em virtude dela a execução e os efeitos penais da sentença condenatória."</strong><br>
+    <span style="font-size:.85rem;opacity:.8">Parágrafo único — A lei posterior, que de qualquer modo favorecer o agente, aplica-se aos fatos anteriores, ainda que decididos por sentença condenatória transitada em julgado.<br>
+    <em>Art. 2° do CP · Reafirmado no art. 5°, XL, CF/1988</em></span>
+  </div>
+</header>
+
+<div class="tabs-wrap">
+  <div class="tabs">
+    <button class="tb on" onclick="showTab('fluxo',this)">⊞ Fluxograma</button>
+    <button class="tb" onclick="showTab('fenomenos',this)">📋 Fenômenos</button>
+    <button class="tb" onclick="showTab('doutrina',this)">📚 Doutrina</button>
+    <button class="tb" onclick="showTab('stf',this)">⚖ STF</button>
+    <button class="tb" onclick="showTab('stj',this)">⚖ STJ</button>
+    <button class="tb" onclick="showTab('prova',this)">🎯 Prova</button>
+  </div>
+</div>
+
+<main>
+
+<!-- ══════════ TAB 1: FLUXOGRAMA ══════════ -->
+<div id="tab-fluxo" class="sec on">
+  <div class="sec-title">Fluxograma Estrutural — Art. 2° do CP</div>
+  <div class="fw">
+
+    <div class="fn root">
+      <div class="nt">ART. 2° DO CÓDIGO PENAL</div>
+      <div style="font-size:.85rem;color:rgba(255,255,255,.75);font-style:italic">Lei Penal no Tempo · Extra-atividade da Lei Penal</div>
+    </div>
+    <div class="arrow">▼</div>
+
+    <div class="fn gold">
+      <div class="nt">🏛 Fundamento Constitucional</div>
+      <div class="nb">
+        <strong>Art. 5°, XL, CF/88 (cláusula pétrea):</strong> "A lei penal não retroagirá, salvo para beneficiar o réu"<br>
+        <strong>Art. 2°, caput, CP</strong> → <em>Abolitio criminis</em> (abolição do crime)<br>
+        <strong>Art. 2°, parágrafo único, CP</strong> → <em>Novatio legis in mellius</em> (lei mais benéfica)<br>
+        <em>Regra geral:</em> <strong>tempus regit actum</strong> — lei vigente ao tempo do fato rege o caso
+      </div>
+    </div>
+    <div class="arrow">▼</div>
+
+    <div class="fn sub">
+      <div class="nt">⚡ EXTRA-ATIVIDADE DA LEI PENAL (Gênero)</div>
+      <div class="nb" style="margin-bottom:.6rem">A lei penal pode ultrapassar sua vigência para alcançar fatos anteriores ou posteriores ao seu período de vigência. Divide-se em duas espécies:</div>
+      <div class="row2" style="margin-top:.5rem">
+        <div style="background:#eef7ee;border:1px solid #88c888;border-radius:6px;padding:.8rem">
+          <strong style="color:var(--olive)">↩ RETROATIVIDADE</strong>
+          <p style="font-size:.85rem;margin-top:.3rem;line-height:1.6">A lei penal nova mais benéfica retroage para alcançar fatos ocorridos antes de sua vigência. É obrigatória — não depende de requerimento.</p>
+        </div>
+        <div style="background:#eef3fa;border:1px solid #9ab5d5;border-radius:6px;padding:.8rem">
+          <strong style="color:var(--navy2)">↪ ULTRATIVIDADE</strong>
+          <p style="font-size:.85rem;margin-top:.3rem;line-height:1.6">A lei penal mais benéfica, mesmo revogada, continua a reger os fatos ocorridos durante sua vigência (ex: lei intermediária mais favorável).</p>
+        </div>
+      </div>
+    </div>
+    <div class="arrow">▼</div>
+
+    <div class="fn sub">
+      <div class="nt">📊 OS 4 FENÔMENOS DO CONFLITO DE LEIS PENAIS NO TEMPO</div>
+    </div>
+    <div class="arrow">▼</div>
+
+    <!-- Fenomeno 1 -->
+    <div class="fn red">
+      <div class="nt">❌ 1. NOVATIO LEGIS INCRIMINADORA (lex gravior)</div>
+      <div class="nb">Lei nova que <strong>cria novo crime</strong> para fato antes não incriminado.<br>
+      → Irretroativa: não se aplica a fatos anteriores à sua vigência (art. 1° CP + art. 5°, XXXIX, CF).<br>
+      <em>Ex.: tipificação de nova conduta que antes era atípica.</em></div>
+    </div>
+    <div class="arrow">▼</div>
+
+    <!-- Fenomeno 2 -->
+    <div class="fn green">
+      <div class="nt">✅ 2. ABOLITIO CRIMINIS (art. 2°, caput)</div>
+      <div class="nb">Lei nova que <strong>descriminaliza</strong> conduta anteriormente típica.<br>
+      → Retroage e extingue a punibilidade (art. 107, III, CP) · Cessa a execução e os efeitos penais da sentença.<br>
+      → <strong>Persiste a obrigação civil</strong> de reparação do dano.<br>
+      → Apaga os efeitos penais (não gera reincidência, não conta como antecedente).<br>
+      <em>Ex.: crimes de sedução, rapto e adultério (Lei 11.106/2005).</em><br>
+      ⚠ <strong>Distinguir de continuidade normativo-típica</strong>: revogação formal sem supressão material = NÃO é abolitio.<br>
+      <em>Ex.: atentado violento ao pudor (art. 214 CP, revogado) → absorvido pelo art. 213 CP (Lei 12.015/2009) = continuidade.</em></div>
+    </div>
+    <div class="arrow">▼</div>
+
+    <!-- Fenomeno 3 -->
+    <div class="fn red">
+      <div class="nt">❌ 3. NOVATIO LEGIS IN PEJUS (lex gravior)</div>
+      <div class="nb">Lei nova que <strong>agrava</strong> o tratamento da conduta já tipificada (pena maior, novos qualificadores, suprime atenuantes, endurece requisitos de benefícios, etc.).<br>
+      → Irretroativa: lei anterior mais benéfica aplica-se com ultratividade aos fatos pretéritos.<br>
+      <em>Ex.: Lei 14.843/2024 — exame criminológico obrigatório. STJ: irretroativa (nova lex in pejus).</em></div>
+    </div>
+    <div class="arrow">▼</div>
+
+    <!-- Fenomeno 4 -->
+    <div class="fn green">
+      <div class="nt">✅ 4. NOVATIO LEGIS IN MELLIUS (lex mitior) — art. 2°, §único</div>
+      <div class="nb">Lei nova que <strong>favorece</strong> o agente de qualquer modo (pena menor, novas atenuantes, benefícios mais fáceis, etc.).<br>
+      → Retroage obrigatoriamente, <strong>inclusive após sentença transitada em julgado</strong>.<br>
+      → Após o trânsito em julgado: competência do <strong>Juízo das Execuções Penais</strong> (Súmula 611/STF + art. 66, I, LEP).<br>
+      → Não é causa de revisão criminal — o remédio é o pedido ao juízo da execução.<br>
+      <em>"De qualquer modo favorecer" = qualquer benefício, por menor que seja.</em></div>
+    </div>
+    <div class="arrow">▼</div>
+
+    <!-- CASOS ESPECIAIS -->
+    <div class="fn gold">
+      <div class="nt">⚠ CASOS ESPECIAIS E SITUAÇÕES CONTROVERTIDAS</div>
+      <div class="nb">
+        <strong>A) Lei intermediária</strong> — vigente entre o fato e a sentença, mais benéfica que ambas: aplica-se com <em>dupla extratividade</em> (retroativa + ultrativa).<br><br>
+        <strong>B) Lei temporária/excepcional (art. 3° CP)</strong> — ultratividade mesmo que mais severa; aplica-se aos fatos cometidos durante sua vigência (exceção à retroatividade benéfica). Divergência: Greco e Bitencourt defendem não recepção pelo art. 5°, XL, CF/88.<br><br>
+        <strong>C) Combinação de leis (lex tertia)</strong> — STF (RE 600.817) e STJ (Súmula 501) <strong>vedam</strong>: o juiz não pode criar terceira lei combinando partes benéficas de duas leis distintas. Aplica-se integralmente a mais favorável.<br><br>
+        <strong>D) Norma processual penal (art. 2° CPP)</strong> — rege-se pelo <em>tempus regit actum</em> (aplicação imediata), NÃO pela retroatividade benéfica. Exceção: norma processual com conteúdo material (norma híbrida) → segue a regra penal (retroatividade benéfica).<br><br>
+        <strong>E) Lei penal benéfica em vacatio legis</strong> — posição majoritária da doutrina: <strong>NÃO retroage</strong> durante o período de vacatio (questão puramente doutrinária, sem casos conhecidos na prática).
+      </div>
+    </div>
+    <div class="arrow">▼</div>
+
+    <!-- CONSEQUENCIAS ABOLITIO -->
+    <div class="fn sub">
+      <div class="nt">📌 Efeitos da Retroatividade Benéfica — Síntese</div>
+      <div class="nb">
+        <strong>Antes do trânsito em julgado:</strong> aplica-se imediatamente pelo juiz do processo<br>
+        <strong>Após o trânsito em julgado:</strong> aplica-se pelo Juízo das Execuções (Súmula 611/STF)<br>
+        <strong>Abolitio criminis:</strong> extingue punibilidade (art. 107, III, CP) + cessa execução + apaga efeitos penais<br>
+        <strong>Novatio legis in mellius:</strong> redimensiona a pena sem extinguir o crime<br>
+        <strong>Efeitos civis:</strong> sempre subsistem (responsabilidade civil independe da penal)<br>
+        <strong>Mudança jurisprudencial:</strong> <strong>NÃO</strong> equivale a lei mais benéfica — não retroage (STJ: AgRg no HC 970.169/SP, 2025)
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════ TAB 2: FENÔMENOS ══════════ -->
+<div id="tab-fenomenos" class="sec">
+  <div class="sec-title">Os 4 Fenômenos — Análise Detalhada</div>
+
+  <div class="card">
+    <div class="ct"><span class="badge bd">Conceito</span>Mapa dos Fenômenos — Art. 2° do CP</div>
+    <table>
+      <tr><th>Fenômeno</th><th>Conceito</th><th>Efeito</th><th>Exemplo</th></tr>
+      <tr>
+        <td><strong>Novatio Legis Incriminadora</strong></td>
+        <td>Lei nova cria crime para conduta antes atípica</td>
+        <td style="color:var(--crim)">❌ Irretroativa</td>
+        <td>Criação do crime de stalking (art. 147-A CP, Lei 14.132/2021)</td>
+      </tr>
+      <tr>
+        <td><strong>Abolitio Criminis</strong></td>
+        <td>Lei nova descriminaliza conduta antes típica</td>
+        <td style="color:var(--teal)">✅ Retroage · Extingue punibilidade</td>
+        <td>Sedução, rapto, adultério (Lei 11.106/2005)</td>
+      </tr>
+      <tr>
+        <td><strong>Novatio Legis in Pejus</strong></td>
+        <td>Lei nova agrava tratamento de crime já existente</td>
+        <td style="color:var(--crim)">❌ Irretroativa · Lei anterior ultrativa</td>
+        <td>Aumento de penas mínimas, novos qualificadores, exame criminológico (Lei 14.843/2024)</td>
+      </tr>
+      <tr>
+        <td><strong>Novatio Legis in Mellius</strong></td>
+        <td>Lei nova favorece o agente de qualquer modo</td>
+        <td style="color:var(--teal)">✅ Retroage · Inclusive após TJ</td>
+        <td>Redução de penas, novos benefícios, tráfico privilegiado (§4° art. 33, Lei 11.343/2006)</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="badge bstf">STF/STJ</span>Abolitio Criminis × Continuidade Normativo-Típica — Distinção Crucial</div>
+    <div class="g2">
+      <div>
+        <p style="font-weight:700;color:var(--teal);margin-bottom:.5rem">✅ Abolitio Criminis</p>
+        <p style="font-size:.9rem;line-height:1.7">Ocorre quando há revogação <strong>formal E material</strong> do tipo penal: a conduta deixa de ser crime em qualquer disposição do ordenamento. Ex.: revogação do crime de adultério sem que a conduta seja prevista em outro tipo.</p>
+      </div>
+      <div>
+        <p style="font-weight:700;color:var(--crim);margin-bottom:.5rem">❌ Continuidade Normativo-Típica</p>
+        <p style="font-size:.9rem;line-height:1.7">Há revogação formal, mas a conduta migra para outro tipo penal — o conteúdo incriminador persiste. <strong>NÃO há abolitio criminis</strong>. Ex.: atentado violento ao pudor (art. 214) → art. 213 CP (STJ: HC 204.416/SP, Min. Gilson Dipp, 2012).</p>
+      </div>
+    </div>
+    <div class="jg teal" style="margin-top:.8rem">
+      <div class="jr" style="color:var(--teal)">STJ — Posição Consolidada (Jurisprudência em Teses)</div>
+      O delito de atentado violento ao pudor, antes tipificado no art. 214 do CP, com a reforma da Lei 12.015/2009, foi aglutinado no art. 213 — não há abolitio criminis, mas continuidade normativo-típica. Da mesma forma, a revogação do art. 65 do DL 3.688/1941 (perturbação da tranquilidade) não importa abolitio se a conduta continua tipificada como perturbação da paz (art. 147-A, §1°, II, CP).
+    </div>
+    <div class="jg teal" style="margin-top:.5rem">
+      <div class="jr" style="color:var(--teal)">STJ — AgRg no REsp 2.114.154/SP · Rel. Min. Rogério Schietti Cruz · 6ª Turma · 8/4/2024</div>
+      A Lei 14.133/2021 (Nova Lei de Licitações) revogou o art. 89 da Lei 8.666/1993. A conduta foi parcialmente absorvida pelo art. 337-E do CP, com novo preceito secundário. Não houve descriminalização — aplicação da continuidade normativo-típica. A pena mais onerosa do novo tipo não retroage, mas a conduta continua incriminada.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="badge bw">Especial</span>Abolitio Criminis Temporária (Temporalis)</div>
+    <p style="font-size:.9rem;line-height:1.7;margin-bottom:.8rem">Ocorre quando a lei <em>temporariamente</em> suspende a incriminação de certas condutas para fomentar regularização (ex.: art. 30-32 da Lei 10.826/2003 — prazo para entrega de armas).</p>
+    <table>
+      <tr><th>Tribunal</th><th>Posição sobre Abolitio Criminis Temporária</th></tr>
+      <tr>
+        <td><strong>STJ</strong> (posição histórica)</td>
+        <td>Reconhecia a abolitio criminis temporária e aplicava retroativamente para beneficiar réus condenados pelo crime de posse ilegal anterior ao prazo legal (RHC 21.271/DF, 2007)</td>
+      </tr>
+      <tr>
+        <td><strong>STF</strong> (posição divergente)</td>
+        <td>No HC 90.995/SP (2008), entendeu que a atipicidade temporária criada pelo art. 30 da Lei 10.826/2003 tem caráter transitório e NÃO configura abolitio criminis em relação a ilícitos anteriores. Trata-se de norma temporária, sem força retroativa.</td>
+      </tr>
+    </table>
+    <p style="font-size:.85rem;color:var(--crim);margin-top:.6rem"><strong>Para concurso:</strong> adotar posição do STF — norma temporária não retroage como abolitio criminis (art. 3° CP).</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="badge bpur">Teoria</span>Lei Intermediária — Dupla Extratividade</div>
+    <p style="font-size:.9rem;line-height:1.7">Quando existem <strong>três leis sucessivas</strong> (lei do fato → lei intermediária → lei da sentença), deve-se sempre aplicar a mais benéfica. Se a lei intermediária for a mais favorável:</p>
+    <ul style="font-size:.9rem;line-height:1.9;padding-left:1.2rem;margin-top:.5rem">
+      <li><strong>Retroage</strong> para alcançar o fato (não era vigente no momento do crime)</li>
+      <li><strong>Ultra-age</strong> em relação à sentença (já não é vigente no momento do julgamento)</li>
+    </ul>
+    <p style="font-size:.88rem;color:var(--slate);margin-top:.6rem"><em>Doutrina unânime:</em> aplica-se a lei intermediária por inteiro — vedada a combinação (não se pode pegar o benefício da intermediária e a pena mínima da lei do fato, criando lex tertia).</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="badge bstf">STF · STJ</span>Combinação de Leis (Lex Tertia) — Vedação</div>
+    <p style="font-size:.9rem;line-height:1.7;margin-bottom:.8rem">Quando uma nova lei é em parte mais benéfica e em parte mais gravosa, <strong>é vedado</strong> combinar as partes favoráveis de cada lei para criar uma terceira norma inexistente.</p>
+    <div class="jg">
+      <div class="jr">STF · RE 600.817/MS · Plenário · Rel. Min. Ricardo Lewandowski · 7/11/2013</div>
+      Por maioria (6×4), o Plenário do STF vedou a combinação de leis penais (lex tertia). Não é possível conjugar a pena menor da Lei 6.368/1976 com a causa de diminuição do art. 33, §4°, da Lei 11.343/2006. O juiz não pode criar uma terceira lei, sob pena de violação à legalidade e à separação de poderes. Deve ser aplicada integralmente a lei mais favorável.
+    </div>
+    <div class="jg stj">
+      <div class="jr">Súmula 501/STJ</div>
+      "É cabível a aplicação retroativa da Lei n. 11.343/2006, desde que o resultado da incidência das suas disposições, na íntegra, seja mais favorável ao réu do que o advindo da aplicação da Lei n. 6.368/1976, sendo vedada a combinação de leis."
+    </div>
+    <div class="jg gold" style="margin-top:.5rem">
+      <div class="jr" style="color:#7a5a00">EXCEÇÃO JURISPRUDENCIAL — STJ · REsp 2.026.837/SC · 2024</div>
+      Não configura combinação de leis (lex tertia) a aplicação do requisito de progressão de regime da antiga LEP para crime comum, com aplicação retroativa do Pacote Anticrime para o crime hediondo, quando ambos compõem a mesma execução penal. Isso porque os regimes têm tratamento legal independente, não havendo criação de norma inexistente. (RHC 221.271 AgR, STF, Rel. Min. Luiz Fux, 2023 — no mesmo sentido).
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ TAB 3: DOUTRINA ══════════ -->
+<div id="tab-doutrina" class="sec">
+  <div class="sec-title">Doutrina — Lei Penal no Tempo</div>
+
+  <div class="card">
+    <div class="ct"><span class="badge bd">Doutrina</span>Princípio da Extra-atividade da Lei Penal</div>
+    <p style="font-size:.9rem;line-height:1.7">O art. 2° do CP consagra o <strong>princípio da extra-atividade da lei penal</strong>, que é o gênero do qual são espécies: (a) retroatividade e (b) ultratividade. A regra geral é o <em>tempus regit actum</em> — a lei vigente ao tempo do fato rege o caso. O art. 2° é a <strong>exceção</strong>: a lei penal mais benéfica pode ser aplicada fora do seu período de vigência.</p>
+    <br>
+    <p style="font-size:.9rem;line-height:1.7"><strong>Mirabete:</strong> "havendo conflito de leis penais com o surgimento de novos preceitos jurídicos após a prática do fato delituoso, será aplicada sempre a lei mais favorável." O Estado, detentor exclusivo do <em>ius puniendi</em>, ao descriminalizar uma conduta, manifesta desinteresse na punição — a abolitio criminis opera como reconhecimento de que a tutela penal não mais se justifica pela política criminal.</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="badge bd">Doutrina</span>Natureza Jurídica da Retroatividade Benéfica</div>
+    <div class="g2">
+      <div>
+        <strong>Automatismo da retroatividade</strong>
+        <p style="font-size:.88rem;line-height:1.7;margin-top:.4rem">A retroatividade da lei penal mais benéfica é automática e obrigatória — independe de requerimento do interessado ou provocação do juízo. Decorre diretamente do art. 5°, XL, CF/88. O juiz deve aplicar de ofício.</p>
+      </div>
+      <div>
+        <strong>Abolitio e coisa julgada</strong>
+        <p style="font-size:.88rem;line-height:1.7;margin-top:.4rem">A retroatividade benéfica <strong>desfaz a coisa julgada penal</strong> — é exceção constitucional expressa ao princípio da coisa julgada (art. 5°, XXXVI, CF). Súmula 654/STF: "A garantia da irretroatividade da lei, prevista no art. 5°, XXXVI, da CF, não é invocável pela entidade estatal que a tenha editado."</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="badge bd">Doutrina</span>Norma Processual Penal × Norma Penal Material × Norma Híbrida</div>
+    <table>
+      <tr><th>Tipo de Norma</th><th>Regra Intertemporal</th><th>Exemplos</th></tr>
+      <tr>
+        <td><strong>Penal Material</strong> (art. 2° CP)</td>
+        <td>Retroatividade obrigatória se benéfica · Irretroatividade se gravosa</td>
+        <td>Cominação de penas, definição de crimes, causas extintivas de punibilidade</td>
+      </tr>
+      <tr>
+        <td><strong>Processual Penal pura</strong> (art. 2° CPP)</td>
+        <td><em>Tempus regit actum</em> — aplicação imediata, sem retroatividade benéfica</td>
+        <td>Prazo de recursos, produção de provas, procedimentos</td>
+      </tr>
+      <tr>
+        <td><strong>Híbrida (mista)</strong></td>
+        <td>Segue a regra penal material — retroatividade benéfica obrigatória</td>
+        <td>ANPP (art. 28-A, CPP) · Suspensão condicional do processo · Transação penal</td>
+      </tr>
+    </table>
+    <p style="font-size:.85rem;margin-top:.6rem;color:var(--crim)"><strong>Ponto crítico:</strong> A classificação da norma como processual ou material é questão frequentemente cobrada. A natureza da norma é determinada por seu conteúdo, não por sua localização no Código.</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="badge bd">Doutrina</span>Efeitos da Abolitio Criminis — Extensão</div>
+    <div class="g2">
+      <div style="background:#eef7ee;border:1px solid #88c888;border-radius:6px;padding:.9rem">
+        <strong style="color:var(--teal)">✅ Efeitos que CESSAM (penais)</strong>
+        <ul style="font-size:.87rem;line-height:1.85;padding-left:1rem;margin-top:.4rem">
+          <li>Execução da pena privativa de liberdade</li>
+          <li>Execução da pena restritiva de direitos</li>
+          <li>Execução da pena de multa</li>
+          <li>Medida de segurança</li>
+          <li>Registro nos antecedentes criminais</li>
+          <li>Reincidência</li>
+          <li>Efeitos penais secundários da condenação</li>
+        </ul>
+      </div>
+      <div style="background:#fdf0f0;border:1px solid #c88888;border-radius:6px;padding:.9rem">
+        <strong style="color:var(--crim)">❌ Efeitos que PERMANECEM (civis)</strong>
+        <ul style="font-size:.87rem;line-height:1.85;padding-left:1rem;margin-top:.4rem">
+          <li>Obrigação de reparar o dano (art. 91, I, CP)</li>
+          <li>Execução civil da sentença penal condenatória</li>
+          <li>Efeitos de natureza extrapenal</li>
+          <li>Perda do cargo público (se já decretada na esfera cível)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="badge bd">Doutrina</span>Lei Temporária e Lei Excepcional — Art. 3° CP e Divergência</div>
+
+    <button class="abtn" onclick="tAcc(this)">
+      Ultratividade das Leis Temporárias e Excepcionais (art. 3° CP) <span class="aico">▾</span>
+    </button>
+    <div class="abody">
+      <p style="font-size:.9rem;line-height:1.7"><strong>Art. 3°, CP:</strong> "A lei excepcional ou temporária, embora decorrido o período de sua duração ou cessadas as circunstâncias que a determinaram, aplica-se ao fato praticado durante sua vigência."</p>
+      <br>
+      <p style="font-size:.9rem;line-height:1.7"><strong>Fundamento da ultratividade (doutrina majoritária):</strong> se as leis temporárias/excepcionais não ultrapassassem sua vigência, perderiam toda a eficácia — ninguém seria punido pelas condutas praticadas durante seu período, o que esvaziaria completamente sua função preventiva.</p>
+      <br>
+      <table>
+        <tr><th>Posição</th><th>Argumento</th><th>Autores</th></tr>
+        <tr><td><strong>Majoritária (ultratividade válida)</strong></td><td>Art. 3° do CP é exceção legítima ao art. 5°, XL, CF — preserva a eficácia da norma temporária</td><td>Nelson Hungria, Damásio, Mirabete, Cleber Masson</td></tr>
+        <tr><td><strong>Minoritária (inconstitucionalidade)</strong></td><td>Art. 3° viola art. 5°, XL, CF/88 — a CF proíbe retroatividade gravosa sem exceções, incluindo leis temporárias</td><td>Rogério Greco, Cezar Bitencourt</td></tr>
+      </table>
+      <p style="font-size:.85rem;margin-top:.5rem;color:var(--crim)"><strong>Para concurso:</strong> adotar a posição majoritária (ultratividade válida das leis temporárias e excepcionais). O art. 3° é constitucional segundo a doutrina dominante.</p>
+    </div>
+
+    <button class="abtn" onclick="tAcc(this)">
+      Lei Temporária (stricto sensu) × Lei Excepcional <span class="aico">▾</span>
+    </button>
+    <div class="abody">
+      <div class="g2">
+        <div>
+          <strong>Lei Temporária (stricto sensu)</strong>
+          <p style="font-size:.88rem;line-height:1.7;margin-top:.3rem">Possui prazo determinado de vigência expressamente fixado em seu texto. Exemplo: Lei 12.663/2012 (Copa das Confederações/Copa do Mundo — vigência até 31/12/2014).</p>
+        </div>
+        <div>
+          <strong>Lei Excepcional</strong>
+          <p style="font-size:.88rem;line-height:1.7;margin-top:.3rem">Vigente durante situação anormal (guerra, calamidade, pandemia). Vigência condicionada à duração da circunstância excepcional que a motivou. Exemplo: decretos penais editados durante estado de guerra.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ TAB 4: STF ══════════ -->
+<div id="tab-stf" class="sec">
+  <div class="sec-title">Jurisprudência do STF — Art. 2° do CP</div>
+
+  <div class="card">
+    <div class="ct"><span class="badge bstf">STF · Súmulas</span>Súmulas Fundamentais</div>
+    <div class="jg">
+      <div class="jr">Súmula 611/STF</div>
+      "Transitada em julgado a sentença condenatória, <strong>compete ao Juízo das Execuções a aplicação de lei mais benigna</strong>." — Fundamento: art. 66, I, LEP. O juízo de conhecimento não tem mais competência; o remédio adequado é o pedido ao juízo de execução, não a revisão criminal. A retroatividade da novatio legis in mellius não é hipótese autorizadora de revisão criminal (art. 621, CPP — rol taxativo).
+    </div>
+    <div class="jg" style="margin-top:.5rem">
+      <div class="jr">Súmula 711/STF</div>
+      "A lei penal mais grave aplica-se ao crime continuado ou ao crime permanente, se a sua vigência é anterior à cessação da continuidade ou da permanência." — Não viola o princípio da anterioridade porque o crime ainda estava em execução quando da vigência da lei mais severa.
+    </div>
+    <div class="jg" style="margin-top:.5rem">
+      <div class="jr">Súmula 654/STF</div>
+      "A garantia da irretroatividade da lei, prevista no art. 5°, XXXVI, da CF, <strong>não é invocável pela entidade estatal que a tenha editado</strong>." — A proteção da coisa julgada é garantia do particular contra o Estado, não do Estado contra o particular.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="badge bstf">STF · 2013</span>Combinação de Leis (Lex Tertia) — Vedada pelo Plenário</div>
+    <div class="jg">
+      <div class="jr">STF · RE 600.817/MS · Plenário · Rel. Min. Ricardo Lewandowski · 7/11/2013</div>
+      Por maioria de 6 votos (Lewandowski, Teori Zavascki, Luiz Fux, Cármen Lúcia, Marco Aurélio, Joaquim Barbosa) contra 4 (Rosa Weber, Dias Toffoli, Gilmar Mendes, Celso de Mello), o Plenário vedou a combinação de partes benéficas de leis distintas para criar uma terceira lei. "Não é possível a conjugação de partes mais benéficas das referidas normas, para criar-se uma terceira lei, sob pena de violação aos princípios da legalidade e da separação de poderes."
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="badge bstf">STF · 2024</span>ANPP — Retroatividade Plena até o Trânsito em Julgado</div>
+    <div class="jg">
+      <div class="jr">STF · HC 185.913/DF · Plenário · Rel. Min. Gilmar Mendes · 18/9/2024</div>
+      <strong>Teses fixadas pelo Plenário do STF:</strong><br><br>
+      1. Compete ao membro do Ministério Público oficialmente, motivadamente no exercício do seu poder-dever, avaliar o preenchimento dos requisitos para negociação e celebração do ANPP, sem prejuízo dos controles jurisdicional e interno.<br><br>
+      2. É cabível a celebração do ANPP em casos de processo em andamento quando da entrada em vigência da Lei 13.964/2019, <strong>mesmo se ausente confissão do réu até aquele momento, desde que o pedido tenha sido feito antes do trânsito em julgado</strong>.<br><br>
+      3. Nas investigações ou ações penais iniciadas a partir de 18/9/2024, a proposição de ANPP deve ser apresentada antes do recebimento da denúncia, ressalvada a possibilidade de proposta no curso da ação, se for o caso.<br><br>
+      <strong>Fundamento:</strong> O ANPP tem natureza híbrida (processual + material) — extingue a punibilidade, afetando o <em>ius puniendi</em> estatal → aplica-se a retroatividade da lei penal benéfica (art. 5°, XL, CF). A decisão tem eficácia vinculante (art. 927, V, CPC).
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="badge bstf">STF · 2024</span>Lei 14.843/2024 — Saídas Temporárias e Irretroatividade (Repercussão Geral)</div>
+    <div class="jg">
+      <div class="jr">STF · RE 1.464.013 · Rel. Min. Gilmar Mendes · Repercussão Geral Reconhecida em 7/9/2024</div>
+      O STF reconheceu repercussão geral sobre a aplicação retroativa da Lei 14.843/2024 (que restringiu saídas temporárias e trabalho externo para condenados por crimes hediondos) aos fatos praticados antes de sua vigência. A questão central: a aplicação da lei mais gravosa sobre saídas temporárias a condenados por fatos anteriores violaria o art. 5°, XL, CF (irretroatividade da lei penal mais gravosa)?
+    </div>
+    <p style="font-size:.85rem;margin-top:.5rem;color:var(--crim)"><strong>Atenção:</strong> Julgamento pendente no STF. A posição dominante nas instâncias inferiores e no STJ é que a lei mais gravosa (como a Lei 14.843/2024) não pode retroagir para atingir fatos anteriores.</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="badge bstf">STF</span>Despenalização ≠ Descriminalização — Drogas para Uso Pessoal</div>
+    <div class="jg">
+      <div class="jr">STF · RHC 220.083 AgR · Rel. Min. André Mendonça · 2ª Turma · 27/11/2023</div>
+      A Lei 11.343/2006, ao deixar de prever pena privativa de liberdade ao delito de posse de drogas para consumo pessoal (art. 28), procedeu à <strong>despenalização</strong> da conduta, e não à descriminalização. Portanto, <strong>não houve abolitio criminis</strong>. O fato continua sendo crime — apenas a sanção foi alterada (medidas alternativas). (Posição também adotada pelo STJ.)
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ TAB 5: STJ ══════════ -->
+<div id="tab-stj" class="sec">
+  <div class="sec-title">Jurisprudência do STJ — Art. 2° do CP</div>
+
+  <div class="card">
+    <div class="ct"><span class="badge bstj">STJ · 2024</span>Exame Criminológico (Lei 14.843/2024) — Irretroatividade</div>
+    <div class="jg stj">
+      <div class="jr">STJ · RHC · Rel. Min. Sebastião Reis Junior · 6ª Turma · 21/10/2024</div>
+      A Lei 14.843/2024 tornou obrigatório o exame criminológico para progressão de regime. O STJ decidiu que a exigência do exame caracteriza <strong>novatio legis in pejus</strong> (incrementa requisito tornando a progressão mais difícil) e, portanto, <strong>não se aplica aos presos condenados antes da publicação da lei</strong>. A retroatividade só é admitida quando a nova lei é mais benéfica — a Constituição (art. 5°, XL) não permite que lei penal mais severa alcance situações anteriores.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="badge bstj">STJ · Tema 1.098 · 2024</span>ANPP — 4 Teses sobre Retroatividade</div>
+    <div class="jg stj">
+      <div class="jr">STJ · REsp 1.890.344/RS · 3ª Seção · Rel. Min. Reynaldo Soares da Fonseca · Tema Repetitivo 1.098 · 23/10/2024</div>
+      <strong>Tese 1:</strong> O ANPP tem natureza híbrida — processual (evita ação penal) e material (extinção da punibilidade, art. 28-A, §13, CPP).<br><br>
+      <strong>Tese 2:</strong> Dada a natureza híbrida, aplica-se o princípio da retroatividade da norma penal benéfica (art. 5°, XL, CF). O ANPP é cabível nos processos em andamento quando da vigência da Lei 13.964/2019, mesmo sem confissão prévia, desde que requerido <strong>antes do trânsito em julgado</strong>.<br><br>
+      <strong>Tese 3:</strong> Nos processos penais em andamento em 18/9/2024, o MP deve se manifestar motivadamente sobre o cabimento do ANPP na primeira oportunidade.<br><br>
+      <strong>Tese 4:</strong> Para ações penais iniciadas após 18/9/2024, o ANPP deve ser proposto antes do recebimento da denúncia, ressalvada a proposta no curso da ação, se cabível.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="badge bstj">STJ · 2024</span>Progressão de Regime — Lei 13.964/2019 (Pacote Anticrime)</div>
+    <div class="jg stj">
+      <div class="jr">STJ · REsps 2.012.101, 2.012.112 e 2.016.358/MG · 3ª Seção · Rel. Min. Jesuíno Rissato · 22/5/2024</div>
+      As normas sobre progressão de regime têm natureza penal material (repercutem no poder punitivo estatal). Ocorrendo successão de leis e sendo a nova norma mais benéfica (<em>novatio legis in mellius</em>), a retroatividade é automática. O STJ definiu que é válida a aplicação retroativa do percentual de 50% (art. 112, VI, "a", LEP, Pacote Anticrime) para reincidente genérico condenado por crime hediondo com resultado morte — mais benéfico que o regime anterior (3/5 = 60%).
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="badge bstj">STJ · 2024</span>Mudança Jurisprudencial NÃO Retroage como Lei Mais Benéfica</div>
+    <div class="jg stj">
+      <div class="jr">STJ · AgRg no HC 868.665/AL · Rel. Min. Daniela Teixeira · 5ª Turma · 9/9/2024</div>
+      A alteração jurisprudencial que definiu a necessidade de justa causa comprovada de forma objetiva para abordagem pessoal (RHC 158.580/BA, 2022) é matéria eminentemente processual e rege-se pelo <em>tempus regit actum</em> (art. 2° CPP) — inconfundível com o princípio da retroatividade benéfica, que se aplica apenas à norma penal. <strong>Mudança de entendimento jurisprudencial não é lei posterior mais benéfica</strong> para fins do art. 2° CP.
+    </div>
+    <div class="jg stj" style="margin-top:.5rem">
+      <div class="jr">STJ · AgRg no HC 970.169/SP · Rel. Min. Joel Ilan Paciornik · 5ª Turma · 5/8/2025</div>
+      Tese de julgamento: "A modificação de entendimento jurisprudencial não se aplica de forma retroativa, sendo destinada apenas à <strong>lei</strong> posterior mais benéfica. A mudança de entendimento jurisprudencial não autoriza a parte a pleitear sua aplicação retroativa, por questões de segurança e estabilidade jurídica."
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="badge bstj">STJ · Abolitio</span>Abolitio Criminis — Competência após Trânsito em Julgado</div>
+    <div class="jg stj">
+      <div class="jr">STJ — Posição Consolidada (com base na Súmula 611/STF)</div>
+      Em se tratando de pedido de reconhecimento de extinção da punibilidade por abolitio criminis, após o trânsito em julgado da sentença condenatória, o pedido deve ser direcionado ao <strong>Juízo das Execuções Penais</strong> (art. 107, III, CP c/c art. 66, I e II, LEP), e não ao juízo de conhecimento ou por meio de revisão criminal. (AgRg no REsp 2.114.154/SP, Rel. Min. Rogério Schietti Cruz, 6ª Turma, 8/4/2024.)
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="badge bstj">STJ · Súmula 501</span>Retroatividade da Lei de Drogas — Vedação de Combinação</div>
+    <div class="jg stj">
+      <div class="jr">Súmula 501/STJ</div>
+      "É cabível a aplicação retroativa da Lei 11.343/2006, desde que o resultado da incidência das suas disposições, na íntegra, seja mais favorável ao réu do que o advindo da aplicação da Lei 6.368/1976, sendo vedada a combinação de leis."
+    </div>
+    <p style="font-size:.87rem;line-height:1.65;margin-top:.6rem">Na prática: compara-se a pena concreta resultante de cada lei aplicada integralmente. Se a Lei 11.343/2006 aplicada por inteiro resultar em pena menor (ex.: pena mínima de 5 anos reduzida de 2/3 = 1,67 anos vs. pena de 3 anos da lei antiga), aplica-se a nova lei integralmente. Se a lei antiga for mais favorável, aplica-se ela integralmente. Vedado mesclar elementos das duas.</p>
+  </div>
+</div>
+
+<!-- ══════════ TAB 6: PROVA ══════════ -->
+<div id="tab-prova" class="sec">
+  <div class="sec-title">🎯 Pontos Sempre Cobrados em Magistratura / ENAM</div>
+
+  <div class="pbox">
+    <h3>📌 Questões de Alta Incidência — Art. 2° do CP</h3>
+
+    <div class="pi"><span class="pn">1</span>
+      <span><strong>Os 4 fenômenos do conflito de leis penais no tempo:</strong> Saber definir, com exemplos atuais, cada fenômeno (novatio incriminadora, abolitio criminis, novatio in pejus e novatio in mellius) e seus respectivos efeitos (retroatividade ou irretroatividade).</span>
+    </div>
+    <div class="pi"><span class="pn">2</span>
+      <span><strong>Abolitio criminis × Continuidade normativo-típica:</strong> A distinção é cobradíssima. Saber que a revogação formal sem supressão material NÃO é abolitio. Exemplos: atentado violento ao pudor → art. 213 CP; art. 65 LCP → art. 147-A, §1°, II, CP; art. 89 Lei 8.666 → art. 337-E CP.</span>
+    </div>
+    <div class="pi"><span class="pn">3</span>
+      <span><strong>Súmula 611/STF (após trânsito em julgado — juízo de execução):</strong> Saber que após o TJ, a aplicação de lei mais benéfica (inclusive abolitio) compete ao Juízo das Execuções Penais (art. 66, I, LEP), não ao juízo de conhecimento e não por revisão criminal.</span>
+    </div>
+    <div class="pi"><span class="pn">4</span>
+      <span><strong>Súmula 711/STF (crimes permanentes e continuados):</strong> A lei mais grave aplica-se se vigente ao tempo da cessação. Exceção legítima à anterioridade — não viola o art. 5°, XL, CF. Muito cobrado em provas objetivas e discursivas.</span>
+    </div>
+    <div class="pi"><span class="pn">5</span>
+      <span><strong>Vedação de combinação de leis (lex tertia):</strong> STF (RE 600.817) e STJ (Súmula 501) vedam. Aplica-se a lei mais favorável integralmente. Cobrado frequentemente no contexto do tráfico de drogas (Lei 6.368/76 vs. Lei 11.343/2006) e do Pacote Anticrime.</span>
+    </div>
+    <div class="pi"><span class="pn">6</span>
+      <span><strong>Norma processual × norma material × norma híbrida:</strong> Norma processual segue tempus regit actum (art. 2° CPP). Norma material segue art. 2° CP. Norma híbrida (como o ANPP) segue a regra penal (retroatividade benéfica). Tema muito quente após HC 185.913/STF (2024).</span>
+    </div>
+    <div class="pi"><span class="pn">7</span>
+      <span><strong>ANPP — Retroatividade (STF HC 185.913 · 18/9/2024 + STJ Tema Repetitivo 1.098 · 2024):</strong> ANPP retroage até o trânsito em julgado. Natureza híbrida. Sem necessidade de confissão prévia. MP deve se manifestar de ofício nos processos em andamento. Alteração radical da jurisprudência anterior.</span>
+    </div>
+    <div class="pi"><span class="pn">8</span>
+      <span><strong>Exame criminológico (Lei 14.843/2024) = novatio legis in pejus:</strong> Irretroativo. STJ (2024): a lei só vale para condenados após sua publicação. Demonstra a aplicação prática do princípio da irretroatividade gravosa em execução penal.</span>
+    </div>
+    <div class="pi"><span class="pn">9</span>
+      <span><strong>Despenalização ≠ Descriminalização:</strong> A posse de drogas para uso pessoal (art. 28, Lei 11.343/2006) sofreu despenalização (não mais prisão), mas não descriminalização — não é abolitio criminis. Posição consolidada do STF e STJ.</span>
+    </div>
+    <div class="pi"><span class="pn">10</span>
+      <span><strong>Lei intermediária — dupla extratividade:</strong> Se 3 leis se sucedem e a lei intermediária é a mais favorável, aplica-se com dupla extratividade (retroatividade + ultratividade) — mas sempre integralmente, sem combinação de leis.</span>
+    </div>
+    <div class="pi"><span class="pn">11</span>
+      <span><strong>Mudança jurisprudencial NÃO é novatio legis in mellius:</strong> STJ (AgRg no HC 868.665/AL, 2024; AgRg no HC 970.169/SP, 2025). Alteração de entendimento do tribunal não retroage como lei mais benéfica. Apenas a lei (em sentido formal) pode operar a retroatividade benéfica.</span>
+    </div>
+    <div class="pi"><span class="pn">12</span>
+      <span><strong>Efeitos da abolitio criminis:</strong> Cessa a execução e os efeitos PENAIS da sentença (não reincide, sem antecedentes criminais). Os efeitos CIVIS (obrigação de reparar dano) subsistem. Muito cobrado em provas discursivas do ENAM.</span>
+    </div>
+    <div class="pi"><span class="pn">13</span>
+      <span><strong>Lei temporária e excepcional (art. 3° CP) — ultratividade:</strong> Aplicam-se aos fatos ocorridos durante sua vigência, mesmo após o término. A doutrina minoritária (Greco, Bitencourt) sustenta inconstitucionalidade — para a prova, adotar a posição majoritária (constitucional, ultratividade válida).</span>
+    </div>
+    <div class="pi"><span class="pn">14</span>
+      <span><strong>Pacote Anticrime (Lei 13.964/2019) e aplicação no tempo:</strong> Tese STJ — não configura lex tertia a aplicação de percentuais distintos de progressão para crimes comuns e hediondos numa mesma execução penal, quando praticados antes da lei nova (REsp 2.026.837/SC, 2024).</span>
+    </div>
+    <div class="pi"><span class="pn">15</span>
+      <span><strong>Revisão criminal × novatio legis in mellius:</strong> A retroatividade da lei penal mais benéfica NÃO é hipótese de revisão criminal (art. 621, CPP — rol taxativo). O remédio correto após o TJ é o pedido ao Juízo das Execuções (Súmula 611/STF). Distinção muito cobrada.</span>
+    </div>
+  </div>
+
+  <!-- QUADRO SÍNTESE -->
+  <div class="card" style="margin-top:1.5rem">
+    <div class="ct"><span class="badge bp">Quadro-Síntese</span>Retroatividade × Irretroatividade — Tabela Completa</div>
+    <table>
+      <tr><th>Situação</th><th>Regra</th><th>Fundamento</th></tr>
+      <tr><td>Lei nova que cria crime (novatio incriminadora)</td><td style="color:var(--crim)">❌ Irretroativa</td><td>Art. 1° CP + art. 5°, XXXIX, CF</td></tr>
+      <tr><td>Lei nova que descriminaliza (abolitio criminis)</td><td style="color:var(--teal)">✅ Retroativa · Extingue punibilidade</td><td>Art. 2°, caput, CP + art. 5°, XL, CF</td></tr>
+      <tr><td>Lei nova que agrava (novatio in pejus)</td><td style="color:var(--crim)">❌ Irretroativa · Lei anterior ultrativa</td><td>Art. 5°, XL, CF</td></tr>
+      <tr><td>Lei nova que beneficia (novatio in mellius)</td><td style="color:var(--teal)">✅ Retroativa · Inclusive após TJ</td><td>Art. 2°, §único, CP + Súmula 611/STF</td></tr>
+      <tr><td>Norma processual pura</td><td>⚡ Imediata (tempus regit actum)</td><td>Art. 2°, CPP</td></tr>
+      <tr><td>Norma híbrida (ex.: ANPP)</td><td style="color:var(--teal)">✅ Retroativa se benéfica</td><td>Art. 5°, XL, CF · STF HC 185.913/2024</td></tr>
+      <tr><td>Lei temporária/excepcional (art. 3° CP)</td><td>⚡ Ultrativa — aplica-se ao fato da vigência</td><td>Art. 3° CP · Doutrina majoritária</td></tr>
+      <tr><td>Combinação de leis (lex tertia)</td><td style="color:var(--crim)">❌ Vedada</td><td>STF RE 600.817 · Súmula 501/STJ</td></tr>
+      <tr><td>Crimes permanentes e continuados</td><td>⚡ Lei vigente na cessação (mesmo que mais grave)</td><td>Súmula 711/STF</td></tr>
+      <tr><td>Mudança jurisprudencial</td><td style="color:var(--crim)">❌ Não retroage como lei benéfica</td><td>STJ (2024/2025) · Só lei retroage</td></tr>
+    </table>
+  </div>
+
+  <!-- ARMADILHAS -->
+  <div class="danger">
+    <h4>⚠ Armadilhas Frequentes em Provas</h4>
+    <ul style="font-size:.9rem;line-height:1.9;padding-left:1.2rem">
+      <li><strong>Confundir abolitio criminis com continuidade normativo-típica</strong> — a revogação do art. 214 CP não foi abolitio (a conduta migrou para o art. 213). Sempre verificar se há supressão real do conteúdo incriminador.</li>
+      <li><strong>Afirmar que a revisão criminal é cabível para novatio legis in mellius</strong> — ERRADO. O remédio é o pedido ao Juízo das Execuções (Súmula 611/STF). A revisão criminal tem rol taxativo (art. 621, CPP).</li>
+      <li><strong>Dizer que mudança de jurisprudência retroage como lei mais benéfica</strong> — ERRADO. Apenas a lei em sentido estrito opera a retroatividade benéfica (STJ, AgRg no HC 970.169/SP, 2025).</li>
+      <li><strong>Afirmar que a despenalização das drogas para uso pessoal é abolitio criminis</strong> — ERRADO. O STF e STJ entendem que houve despenalização (sem pena de prisão), mas não descriminalização — a conduta continua sendo crime.</li>
+      <li><strong>Afirmar que o ANPP só retroage até o recebimento da denúncia</strong> — entendimento SUPERADO. Após HC 185.913/STF (2024) e Tema 1.098/STJ (2024), o ANPP retroage até o trânsito em julgado.</li>
+      <li><strong>Permitir combinação de leis (lex tertia)</strong> — vedada pelo STF (RE 600.817) e STJ (Súmula 501). Aplica-se integralmente a mais favorável.</li>
+      <li><strong>Confundir a regra de crimes continuados (Súmula 711/STF) com violação à anterioridade</strong> — a lei mais grave se aplica ao crime continuado se vigente antes da cessação, sem violar o art. 5°, XL, CF, porque o crime ainda está em execução.</li>
+    </ul>
+  </div>
+
+  <!-- TEMAS DE DISCURSIVA -->
+  <div class="card" style="margin-top:1rem">
+    <div class="ct"><span class="badge bp">Discursiva ENAM</span>Temas Mais Cobrados em Provas Discursivas</div>
+    <ol style="font-size:.9rem;line-height:1.9;padding-left:1.2rem">
+      <li>Dissertar sobre os fenômenos do conflito de leis penais no tempo, diferenciando abolitio criminis de continuidade normativo-típica, com exemplos da jurisprudência.</li>
+      <li>Analisar os limites da retroatividade benéfica após o trânsito em julgado: Súmula 611/STF, competência do Juízo das Execuções e diferença da revisão criminal.</li>
+      <li>Discutir a vedação da combinação de leis penais (lex tertia) à luz do STF e do STJ, confrontando com o princípio da retroatividade benéfica do art. 2°, §único, CP.</li>
+      <li>Analisar a natureza jurídica do ANPP (híbrida) e suas consequências para a retroatividade, à luz do HC 185.913/STF (2024) e do Tema 1.098/STJ (2024).</li>
+      <li>Analisar se a obrigatoriedade do exame criminológico (Lei 14.843/2024) para progressão de regime é novatio legis in pejus e se viola o art. 5°, XL, CF para condenados anteriores.</li>
+    </ol>
+  </div>
+</div>
+
+</main>
+
+<script>
+function showTab(id, btn) {
+  document.querySelectorAll('.sec').forEach(s => s.classList.remove('on'));
+  document.querySelectorAll('.tb').forEach(b => b.classList.remove('on'));
+  document.getElementById('tab-' + id).classList.add('on');
+  btn.classList.add('on');
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+function tAcc(btn) {
+  var body = btn.nextElementSibling;
+  btn.classList.toggle('open');
+  body.classList.toggle('open');
+}
+</script>
+</body>
+</html>

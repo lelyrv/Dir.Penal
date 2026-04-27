@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 5° do CP — Territorialidade | Magistratura/ENAM 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ede8dd;--paper:#faf6ed;
+  --navy:#0a1c38;--navy2:#12284e;--navy3:#1a3460;
+  --gold:#b87a00;--gold2:#d49520;--gold3:#f0b840;
+  --crim:#741212;--crim2:#982020;
+  --teal:#0e4030;--teal2:#155040;
+  --olive:#304018;--olive2:#486028;
+  --purple:#3a1060;--purple2:#5020a0;
+  --amber:#783c00;--amber2:#9a5200;
+  --slate:#38485a;--border:#b89850;
+  --shad:rgba(10,28,56,.14);
+  --emerald:#0a3a28;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Lora',Georgia,serif;background:var(--bg);color:var(--navy);min-height:100vh}
+
+/* ══ HEADER ══ */
+header{
+  background:linear-gradient(155deg,var(--navy) 0%,#0f2040 45%,var(--navy3) 100%);
+  padding:2.9rem 2rem 2.4rem;text-align:center;position:relative;overflow:hidden;
+  border-bottom:5px solid var(--gold2);
+}
+header::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse at 20% 50%,rgba(184,122,0,.12) 0%,transparent 55%),
+    radial-gradient(ellipse at 80% 50%,rgba(14,64,48,.18) 0%,transparent 55%),
+    repeating-linear-gradient(-45deg,rgba(184,122,0,.025) 0,rgba(184,122,0,.025) 1px,transparent 1px,transparent 10px);
+}
+.hbadge{display:inline-block;background:var(--gold2);color:var(--navy);font-family:'Cormorant SC',serif;font-size:.7rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;padding:.28rem 1.1rem;border-radius:2px;margin-bottom:.9rem}
+header h1{font-family:'Cormorant SC',Georgia,serif;font-size:clamp(1.7rem,4.5vw,3rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:.5rem}
+header h1 em{color:var(--gold3);font-style:normal}
+header .sub{color:rgba(255,255,255,.65);font-size:.96rem;font-style:italic;margin-bottom:1.4rem}
+.lei-box{margin:.5rem auto 0;max-width:820px;background:rgba(184,122,0,.11);border:1px solid rgba(184,122,0,.38);border-radius:6px;padding:1.2rem 1.8rem;color:#fff;font-size:1.06rem;line-height:1.82}
+.lei-box strong{color:var(--gold3);font-style:italic}
+.lei-box .fonte{font-size:.8rem;opacity:.7;margin-top:.4rem}
+
+/* ══ TABS ══ */
+.tw{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:2.5px solid var(--gold2);overflow-x:auto;scrollbar-width:none}
+.tw::-webkit-scrollbar{display:none}
+.tabs{display:flex;padding:0 .8rem;white-space:nowrap}
+.tb{background:none;border:none;color:rgba(255,255,255,.5);font-family:'Lora',serif;font-size:.83rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.88rem 1.05rem;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;flex-shrink:0}
+.tb:hover{color:#fff}.tb.on{color:var(--gold3);border-bottom-color:var(--gold3)}
+
+/* ══ MAIN ══ */
+main{max-width:1120px;margin:0 auto;padding:2rem 1.2rem 5rem}
+.sec{display:none}.sec.on{display:block}
+.sec-title{font-family:'Cormorant SC',serif;font-size:1.7rem;font-weight:700;color:var(--navy);border-bottom:2.5px solid var(--gold2);padding-bottom:.55rem;margin-bottom:1.8rem}
+
+/* ══ CARDS ══ */
+.card{background:var(--paper);border:1px solid var(--border);border-radius:8px;padding:1.4rem 1.7rem;margin-bottom:1.3rem;box-shadow:0 2px 10px var(--shad)}
+.ct{font-family:'Cormorant SC',serif;font-size:1.08rem;font-weight:700;color:var(--navy);margin-bottom:.78rem;display:flex;align-items:center;flex-wrap:wrap;gap:.55rem}
+.bx{font-family:'Lora',serif;font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.22rem .7rem;border-radius:3px;flex-shrink:0}
+.bd{background:#e2f0d6;color:var(--olive);border:1px solid #a2c878}
+.bstf{background:#fce4e4;color:var(--crim);border:1px solid #d89090}
+.bstj{background:#e2eef8;color:var(--navy2);border:1px solid #98b2d8}
+.bw{background:#fff4dc;color:var(--amber);border:1px solid #e2b828}
+.bp{background:#e2f8e2;color:var(--olive);border:1px solid #88cc88}
+.bpur{background:#f0e2ff;color:var(--purple);border:1px solid #c098e0}
+.bt{background:#dcf0ec;color:var(--teal);border:1px solid #88c0b0}
+.bem{background:#dcf0e8;color:var(--emerald);border:1px solid #88c0a0}
+
+/* ══ FLOW ══ */
+.fw{display:flex;flex-direction:column;align-items:center}
+.fn{width:100%;max-width:800px;background:var(--paper);border:2px solid var(--border);border-radius:8px;padding:1.15rem 1.5rem;box-shadow:0 2px 8px var(--shad);margin:0}
+.fn.root{background:var(--navy);border-color:var(--gold3);color:#fff;text-align:center;border-radius:50px;padding:.9rem 2rem}
+.fn.root .nt{color:var(--gold3);font-size:1.28rem}
+.fn.dk{background:var(--navy2);border-color:var(--gold2);color:#fff}
+.fn.dk .nt{color:var(--gold3)}.fn.dk .nb{color:rgba(255,255,255,.82)}
+.fn.sub{background:#edf3f8;border-color:#98b2d8}
+.fn.grn{background:#edf8ed;border-color:#88cc88}
+.fn.red{background:#fdf0f0;border-color:#c88888}
+.fn.gold{background:#fdf6e0;border-color:var(--gold2)}
+.fn.teal{background:#edf8f4;border-color:#88c0b0}
+.fn.pur{background:#f5e0ff;border-color:#c098e0}
+.fn.amber{background:#fdf4e0;border-color:#d8a830}
+.fn.em{background:#edf8f0;border-color:#88c0a0}
+.nt{font-family:'Cormorant SC',serif;font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.42rem}
+.nb{font-size:.91rem;line-height:1.8;color:var(--slate)}
+.arr{text-align:center;font-size:1.5rem;color:var(--gold2);padding:.3rem 0;line-height:1}
+.row2{display:flex;gap:1rem;width:100%;max-width:800px}
+.row2 .fn{flex:1}
+.row3{display:flex;gap:.8rem;width:100%;max-width:800px}
+.row3 .fn{flex:1}
+@media(max-width:640px){.row2,.row3{flex-direction:column}}
+
+/* ══ JULGADOS ══ */
+.jg{background:#f8f2e6;border-left:4px solid var(--crim2);padding:.92rem 1.15rem;margin:.7rem 0;border-radius:0 6px 6px 0;font-size:.9rem;line-height:1.76}
+.jg.stj{border-left-color:var(--navy2)}.jg.teal{border-left-color:var(--teal2)}.jg.amb{border-left-color:var(--amber2)}.jg.grn{border-left-color:var(--olive2)}.jg.gold{border-left-color:var(--gold)}.jg.pur{border-left-color:var(--purple2)}
+.jr{font-size:.71rem;color:var(--crim2);font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.3rem}
+.jg.stj .jr{color:var(--navy2)}.jg.teal .jr{color:var(--teal)}.jg.amb .jr{color:var(--amber)}.jg.grn .jr{color:var(--olive)}.jg.gold .jr{color:var(--amber)}.jg.pur .jr{color:var(--purple2)}
+
+/* ══ ACCORDION ══ */
+.abtn{width:100%;background:none;border:none;border-bottom:1px solid var(--border);padding:.9rem .2rem;text-align:left;font-family:'Cormorant SC',serif;font-size:1rem;font-weight:700;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.abtn:hover{color:var(--gold)}.aico{transition:transform .25s;font-size:.88rem}
+.abtn.open .aico{transform:rotate(180deg)}
+.abody{display:none;padding:.9rem .2rem}.abody.open{display:block}
+
+/* ══ TABLE ══ */
+table{width:100%;border-collapse:collapse;font-size:.88rem;margin:.6rem 0}
+th{background:var(--navy);color:var(--gold3);font-family:'Lora',serif;font-weight:700;letter-spacing:.04em;padding:.65rem .9rem;text-align:left}
+td{padding:.55rem .9rem;border-bottom:1px solid #e8ddb8;vertical-align:top;line-height:1.62}
+tr:nth-child(even) td{background:rgba(184,122,0,.05)}
+
+/* ══ GRID ══ */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.8rem}
+@media(max-width:640px){.g2,.g3{grid-template-columns:1fr}}
+
+/* ══ PROVA BOX ══ */
+.pbox{background:linear-gradient(135deg,var(--navy),var(--navy2));border:2.5px solid var(--gold2);border-radius:10px;padding:1.7rem 2rem;margin:1rem 0;color:#fff}
+.pbox h3{font-family:'Cormorant SC',serif;font-size:1.12rem;color:var(--gold3);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.pi{display:flex;gap:.8rem;padding:.58rem 0;border-bottom:1px solid rgba(184,122,0,.22);font-size:.9rem;line-height:1.68;color:rgba(255,255,255,.88)}
+.pi:last-child{border-bottom:none}
+.pn{min-width:1.6rem;color:var(--gold3);font-weight:700;font-family:'Cormorant SC',serif;font-size:1.12rem}
+.danger{background:#fdf0f0;border:2.5px solid var(--crim2);border-radius:8px;padding:1.3rem 1.6rem;margin:1rem 0}
+.danger h4{font-family:'Cormorant SC',serif;color:var(--crim);font-size:1.02rem;margin-bottom:.7rem;display:flex;align-items:center;gap:.4rem}
+
+/* ══ MAP VISUAL ══ */
+.mapbox{background:linear-gradient(135deg,var(--emerald),var(--teal2));border-radius:10px;padding:1.5rem 2rem;margin:.8rem 0;color:#fff}
+.mapbox h3{font-family:'Cormorant SC',serif;font-size:1.15rem;color:var(--gold3);margin-bottom:.9rem}
+.maprow{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:.5rem;justify-content:center}
+.mapitem{background:rgba(255,255,255,.1);border:1px solid rgba(240,184,64,.3);border-radius:6px;padding:.7rem 1.1rem;text-align:center;font-size:.82rem;min-width:130px}
+.mapitem .big{font-family:'Cormorant SC',serif;font-size:1.3rem;color:var(--gold3);font-weight:700}
+
+/* ══ PRINCIP BOX ══ */
+.princbox{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.8rem;margin:.7rem 0}
+.pbox2{background:var(--paper);border:1.5px solid var(--border);border-radius:6px;padding:.9rem 1.1rem}
+.pbox2 .ptit{font-family:'Cormorant SC',serif;font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.3rem}
+.pbox2 .psub{font-size:.78rem;color:var(--gold);font-style:italic;margin-bottom:.4rem}
+
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hbadge">Magistratura · ENAM · 2026</div>
+  <h1>Art. 5° do <em>Código Penal</em><br>Territorialidade da Lei Penal</h1>
+  <p class="sub">Fluxograma Completo · Território · Princípios · STF · STJ 2024/2025 · Pontos de Prova</p>
+  <div class="lei-box">
+    <strong>"Aplica-se a lei brasileira, sem prejuízo de convenções, tratados e regras de direito internacional, ao crime cometido no território nacional."</strong>
+    <br><em style="font-size:.9rem;opacity:.85">§1° — extensão do território nacional (embarcações e aeronaves) · §2° — embarcações e aeronaves estrangeiras</em>
+    <div class="fonte">Art. 5° do CP · Redação dada pela Lei n° 7.209, de 11.7.1984</div>
+  </div>
+</header>
+
+<div class="tw">
+  <div class="tabs">
+    <button class="tb on" onclick="showTab('fluxo',this)">⊞ Fluxograma</button>
+    <button class="tb" onclick="showTab('territorio',this)">🗺 Território</button>
+    <button class="tb" onclick="showTab('principios',this)">📐 Princípios</button>
+    <button class="tb" onclick="showTab('imunidades',this)">🛡 Imunidades</button>
+    <button class="tb" onclick="showTab('stf',this)">⚖ STF · STJ</button>
+    <button class="tb" onclick="showTab('prova',this)">🎯 Prova</button>
+  </div>
+</div>
+
+<main>
+
+<!-- ════ TAB 1 — FLUXOGRAMA ════ -->
+<div id="tab-fluxo" class="sec on">
+  <div class="sec-title">Fluxograma Estrutural — Art. 5° do CP</div>
+
+  <div class="fw">
+    <div class="fn root">
+      <div class="nt">ART. 5° DO CÓDIGO PENAL</div>
+      <div style="font-size:.85rem;color:rgba(255,255,255,.7);font-style:italic">Territorialidade da Lei Penal · Lex Loci Delicti</div>
+    </div>
+    <div class="arr">▼</div>
+
+    <!-- REGRA GERAL -->
+    <div class="fn gold">
+      <div class="nt">🏛 Regra Geral — Princípio da Territorialidade Temperada</div>
+      <div class="nb">
+        Aplica-se a <strong>lei brasileira</strong> aos crimes cometidos em <strong>território nacional</strong> (caput do art. 5°).<br>
+        <strong>"Sem prejuízo de convenções, tratados e regras de direito internacional"</strong> → não é territorialidade absoluta, mas <em>temperada/mitigada</em>.<br><br>
+        Fundamento: soberania estatal. O Estado exerce poder soberano em seu território — portanto tem o dever e o direito de punir as infrações nele cometidas, independentemente da nacionalidade do agente ou da vítima.<br><br>
+        <em>Consequência:</em> estrangeiro que comete crime no Brasil responde pela lei brasileira. Brasileiro que comete crime no Brasil responde pela lei brasileira.
+      </div>
+    </div>
+    <div class="arr">▼</div>
+
+    <!-- TERRITORIO -->
+    <div class="fn dk">
+      <div class="nt">🗺 Conceito de Território Nacional (para fins penais)</div>
+      <div class="nb">
+        <strong>Território Real (efetivo):</strong><br>
+        • Solo e subsolo (superfície terrestre dentro das fronteiras)<br>
+        • Mar territorial: 12 milhas náuticas da costa (art. 1°, Lei 8.617/1993)<br>
+        • Rios e lagos nacionais (exclusivos e fronteiriços — conforme tratados)<br>
+        • Espaço aéreo: coluna atmosférica sobre o solo e mar territorial (art. 11, CBA — Lei 7.565/1986)<br><br>
+        <strong>Território por Equiparação/Ficção (art. 5°, §1° e §2°, CP):</strong><br>
+        Embarcações e aeronaves — ver estrutura abaixo
+      </div>
+    </div>
+    <div class="arr">▼</div>
+
+    <!-- §1 E §2 -->
+    <div class="fn sub">
+      <div class="nt">⚓ §1° e §2° do Art. 5° — Território por Equiparação</div>
+    </div>
+    <div class="arr">▼</div>
+
+    <!-- §1° SUBDIVISÃO -->
+    <div class="fn gold">
+      <div class="nt">📌 §1° — Extensão do Território Nacional</div>
+      <div class="nb">Consideram-se parte do território nacional (por equiparação = ficção jurídica):</div>
+    </div>
+    <div class="arr">▼</div>
+
+    <div class="row2">
+      <div class="fn grn">
+        <div class="nt" style="color:var(--teal)">🚢⚓ Embarcações/Aeronaves BRASILEIRAS PÚBLICAS</div>
+        <div class="nb">
+          <strong>"de natureza pública ou a serviço do governo brasileiro"</strong><br><br>
+          Consideram-se território nacional <strong>ONDE QUER QUE SE ENCONTREM</strong> — em alto-mar, em porto estrangeiro, em espaço aéreo estrangeiro.<br><br>
+          <em>Exemplos:</em><br>
+          • Navios de guerra<br>
+          • Aeronaves militares<br>
+          • Navios de pesquisa governamentais<br>
+          • Aeronaves e navios a serviço do governo<br><br>
+          → Princípio do Pavilhão absoluto para embarcações/aeronaves públicas.
+        </div>
+      </div>
+      <div class="fn amber">
+        <div class="nt" style="color:var(--amber)">🚢 Embarcações/Aeronaves BRASILEIRAS PRIVADAS</div>
+        <div class="nb">
+          <strong>"mercantes ou de propriedade privada"</strong><br><br>
+          Consideram-se território nacional quando em:<br>
+          • <strong>Embarcações:</strong> em alto-mar<br>
+          • <strong>Aeronaves:</strong> no espaço aéreo correspondente ao alto-mar<br><br>
+          <em>Atenção:</em> Quando em território estrangeiro, NÃO são extensão do território nacional — mas podem se sujeitar à lei brasileira pelo art. 7°, II, "c" (extraterritorialidade condicionada), se não julgadas no estrangeiro.<br><br>
+          → Princípio do Pavilhão relativo para privadas.
+        </div>
+      </div>
+    </div>
+    <div class="arr">▼</div>
+
+    <!-- §2° -->
+    <div class="fn teal">
+      <div class="nt" style="color:var(--teal)">📌 §2° — Embarcações e Aeronaves ESTRANGEIRAS PRIVADAS</div>
+      <div class="nb">
+        É também aplicável a lei brasileira aos crimes praticados a bordo de aeronaves ou embarcações <strong>estrangeiras de propriedade privada</strong>, quando:<br><br>
+        • <strong>Aeronaves estrangeiras privadas:</strong> em pouso no território nacional OU em voo no espaço aéreo nacional<br>
+        • <strong>Embarcações estrangeiras privadas:</strong> em porto brasileiro OU no mar territorial do Brasil<br><br>
+        <em>Regra geral: na dúvida sobre aplicação da lei brasileira, basta lembrar — se a embarcação ou aeronave privada estiver dentro do território brasileiro (solo, porto, mar territorial, espaço aéreo), aplica-se a lei brasileira.</em>
+      </div>
+    </div>
+    <div class="arr">▼</div>
+
+    <!-- EXCEÇÕES -->
+    <div class="fn red">
+      <div class="nt">⚠ EXCEÇÕES À TERRITORIALIDADE — Quando NÃO se aplica o art. 5°</div>
+      <div class="nb">
+        <strong>1. Imunidades diplomáticas (Convenção de Viena, 1961):</strong> diplomatas acreditados no Brasil são imunes à jurisdição penal brasileira → respondem pelo país que representam.<br>
+        <strong>2. Embarcações/aeronaves estrangeiras PÚBLICAS:</strong> não se sujeitam à lei brasileira (mesmo em nosso território) — reciprocidade internacional.<br>
+        <strong>3. Passagem inocente:</strong> embarcação estrangeira privada em mera passagem pelo mar territorial, se o crime não afetar interesses brasileiros, pode não sujeitar à lei brasileira (doutrina diverge).<br>
+        <strong>4. Tratados e convenções internacionais:</strong> o próprio caput ressalva: "sem prejuízo de convenções, tratados e regras de direito internacional" → acordos bilaterais podem alterar a regra.
+      </div>
+    </div>
+    <div class="arr">▼</div>
+
+    <!-- QUADRO SÍNTESE -->
+    <div class="fn sub">
+      <div class="nt">📊 Quadro-Síntese — Aplicação da Lei Brasileira (Art. 5°)</div>
+      <div class="nb">
+        <table>
+          <tr><th>Embarcação/Aeronave</th><th>Localização</th><th>Lei Brasileira?</th></tr>
+          <tr><td>Brasileira pública</td><td>Qualquer lugar</td><td style="color:var(--teal)">✅ SIM — sempre</td></tr>
+          <tr><td>Brasileira privada</td><td>Alto-mar / espaço aéreo do alto-mar</td><td style="color:var(--teal)">✅ SIM</td></tr>
+          <tr><td>Brasileira privada</td><td>Território estrangeiro</td><td style="color:var(--crim)">⚠ NÃO (art. 5°) — mas art. 7°, II, c se não julgada lá</td></tr>
+          <tr><td>Estrangeira privada</td><td>Pouso/voo no Brasil ou porto/mar territorial</td><td style="color:var(--teal)">✅ SIM — §2°</td></tr>
+          <tr><td>Estrangeira pública</td><td>Qualquer lugar</td><td style="color:var(--crim)">❌ NÃO — imunidade</td></tr>
+        </table>
+      </div>
+    </div>
+
+  </div><!-- fim fw -->
+</div>
+
+<!-- ════ TAB 2 — TERRITÓRIO ════ -->
+<div id="tab-territorio" class="sec">
+  <div class="sec-title">Conceito de Território Nacional — Análise Profunda</div>
+
+  <!-- MAPA VISUAL -->
+  <div class="mapbox">
+    <h3>🗺 Componentes do Território Nacional para Fins Penais</h3>
+    <div class="maprow">
+      <div class="mapitem"><div class="big">🏔</div><div>Solo e<br>subsolo</div></div>
+      <div class="mapitem"><div class="big">🌊</div><div>Mar territorial<br>(12 mi náuticas)</div></div>
+      <div class="mapitem"><div class="big">🏞</div><div>Rios, lagos<br>e baías</div></div>
+      <div class="mapitem"><div class="big">☁</div><div>Espaço aéreo<br>(coluna atmosférica)</div></div>
+      <div class="mapitem"><div class="big">⚓</div><div>Embarcações/<br>aeronaves (§1°)</div></div>
+      <div class="mapitem"><div class="big">🚢</div><div>Embarcações<br>estrang. privadas (§2°)</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bd">Território Real</span>Componentes Detalhados</div>
+
+    <button class="abtn" onclick="tAcc(this)">Solo, Subsolo e Território Terrestre <span class="aico">▾</span></button>
+    <div class="abody">
+      <p style="font-size:.9rem;line-height:1.78">Compreende toda a superfície terrestre (inclusive o subsolo) delimitada pelas fronteiras do Estado brasileiro, incluindo ilhas fluviais e costeiras, arquipélagos e penhascos oceânicos pertencentes ao Brasil. O espaço interior das fronteiras terrestres, incluindo os rios e lagos interiores que estejam inteiramente no território brasileiro.</p>
+    </div>
+
+    <button class="abtn" onclick="tAcc(this)">Mar Territorial — 12 Milhas Náuticas <span class="aico">▾</span></button>
+    <div class="abody">
+      <p style="font-size:.9rem;line-height:1.78"><strong>Lei 8.617/1993</strong> — O mar territorial brasileiro compreende uma faixa de <strong>12 milhas náuticas</strong> de largura, medidas a partir da linha de baixa-mar do litoral continental e insular. Dentro do mar territorial, o Brasil exerce plena soberania penal.</p>
+      <br>
+      <p style="font-size:.9rem;line-height:1.78"><strong>Zona Contígua:</strong> faixa adicional de 12 milhas após o mar territorial (12 a 24 milhas). O Brasil pode exercer controle para prevenir e reprimir infrações às leis de polícia aduaneira, fiscal, sanitária e de imigração — mas não exerce plena soberania penal.</p>
+      <br>
+      <p style="font-size:.9rem;line-height:1.78"><strong>Zona Econômica Exclusiva (ZEE):</strong> 200 milhas náuticas a partir da costa. O Brasil tem direitos soberanos sobre recursos naturais, mas não exerce plena jurisdição penal sobre crimes comuns cometidos por estrangeiros.</p>
+      <div class="jg amb" style="margin-top:.6rem">
+        <div class="jr">Ponto de Atenção para Prova</div>
+        A ZEE e a zona contígua NÃO são extensão plena do território nacional para fins penais. Apenas o mar territorial (12 milhas) é tratado como território para aplicação do art. 5° CP.
+      </div>
+    </div>
+
+    <button class="abtn" onclick="tAcc(this)">Espaço Aéreo — Teoria da Soberania Absoluta <span class="aico">▾</span></button>
+    <div class="abody">
+      <p style="font-size:.9rem;line-height:1.78">O Brasil adota a <strong>Teoria da Soberania Absoluta</strong> sobre o espaço aéreo (art. 11 do Código Brasileiro de Aeronáutica — Lei 7.565/1986). O espaço aéreo nacional compreende a coluna atmosférica sobre o território terrestre e o mar territorial.</p>
+      <br>
+      <p style="font-size:.9rem;line-height:1.78">O espaço aéreo vai até onde termina a atmosfera. Acima disso — <strong>espaço extra-atmosférico</strong> (ou espaço cósmico) — é considerado análogo ao alto-mar, não sujeito a soberania estatal exclusiva.</p>
+      <p style="font-size:.88rem;margin-top:.5rem;color:var(--crim)"><strong>Para prova:</strong> se um crime é cometido em aeronave em voo sobre o território nacional, aplica-se a lei do art. 5° CP (território nacional). Se é em aeronave em voo sobre o alto-mar, aplica-se a lei do §1° se aeronave brasileira, ou §2° se estrangeira privada — mas não exatamente art. 5°, caput.</p>
+    </div>
+
+    <button class="abtn" onclick="tAcc(this)">Rios Internacionais — Regras Específicas <span class="aico">▾</span></button>
+    <div class="abody">
+      <p style="font-size:.9rem;line-height:1.78">Os rios internacionais podem ser classificados como:</p>
+      <ul style="padding-left:1.2rem;line-height:1.85;font-size:.9rem;margin-top:.4rem">
+        <li><strong>Rios sucessivos:</strong> passam por dois ou mais países, mas sem separá-los. Considera-se o trecho que atravessa o Brasil como território nacional.</li>
+        <li><strong>Rios fronteiriços (simultâneos):</strong> separam os territórios de dois países. A fronteira geralmente é fixada pela linha de talvegue (ponto mais profundo do canal) — metade do rio pertence a cada país, salvo tratados em contrário.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bw">Especial</span>Território por Equiparação — Embarcações e Aeronaves (§1° e §2°)</div>
+    <p style="font-size:.91rem;line-height:1.78;margin-bottom:.8rem">O art. 5° amplia o conceito de território para incluir espaços físicos que, por <em>ficção jurídica</em>, são considerados extensões do território nacional. A doutrina denomina esses espaços de <strong>"território flutuante", "ficto" ou "por extensão"</strong>.</p>
+    <div class="g2">
+      <div>
+        <strong>§1° — Embarcações/Aeronaves Brasileiras PÚBLICAS:</strong>
+        <p style="font-size:.88rem;line-height:1.72;margin-top:.4rem">São parte do território nacional <em>onde quer que se encontrem</em>. Não importa se estão em porto estrangeiro, em mar territorial estrangeiro ou sobrevoando outro país. A lei brasileira se aplica integralmente.<br><br><em>Exemplos:</em> Fragata da Marinha brasileira em visita a um porto argentino; caça da FAB em missão na Amazônia fronteiriça com o Peru.</p>
+      </div>
+      <div>
+        <strong>§1° — Embarcações/Aeronaves Brasileiras PRIVADAS:</strong>
+        <p style="font-size:.88rem;line-height:1.72;margin-top:.4rem">São parte do território nacional apenas quando em alto-mar ou espaço aéreo do alto-mar. Se entram em território estrangeiro, deixam de ser extensão territorial — mas podem ter a lei brasileira aplicada pelo art. 7°, II, "c" CP se o crime não for julgado no país estrangeiro.</p>
+      </div>
+    </div>
+    <div class="g2" style="margin-top:.8rem">
+      <div>
+        <strong>§2° — Aeronaves ESTRANGEIRAS PRIVADAS:</strong>
+        <p style="font-size:.88rem;line-height:1.72;margin-top:.4rem">Aplica-se a lei brasileira quando: (a) em <strong>pouso no território nacional</strong> (aeroporto, pista); ou (b) em <strong>voo no espaço aéreo correspondente ao território nacional</strong>.</p>
+      </div>
+      <div>
+        <strong>§2° — Embarcações ESTRANGEIRAS PRIVADAS:</strong>
+        <p style="font-size:.88rem;line-height:1.72;margin-top:.4rem">Aplica-se a lei brasileira quando: (a) em <strong>porto brasileiro</strong>; ou (b) no <strong>mar territorial do Brasil</strong> (12 milhas).</p>
+      </div>
+    </div>
+    <div class="jg amb" style="margin-top:.8rem">
+      <div class="jr">Regra Mnemônica para Provas</div>
+      <strong>Privadas estrangeiras:</strong> se estiver DENTRO do Brasil (pouso, porto, mar territorial, espaço aéreo nacional) → aplica-se a lei brasileira (§2°).<br>
+      <strong>Privadas brasileiras:</strong> se estiver FORA do Brasil (alto-mar ou espaço aéreo do alto-mar) → aplica-se a lei brasileira (§1°).<br>
+      <strong>Públicas brasileiras:</strong> SEMPRE se aplica a lei brasileira (§1°).
+    </div>
+  </div>
+</div>
+
+<!-- ════ TAB 3 — PRINCÍPIOS ════ -->
+<div id="tab-principios" class="sec">
+  <div class="sec-title">Princípios da Aplicação da Lei Penal no Espaço</div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bd">Sistema</span>Visão Geral — Regra e Exceções</div>
+    <p style="font-size:.91rem;line-height:1.78">O Código Penal brasileiro adota um sistema misto de aplicação da lei no espaço. A regra é a <strong>territorialidade temperada</strong> (art. 5°). Como exceção, admite a <strong>extraterritorialidade</strong> (art. 7°) fundamentada em outros princípios. O CP adotou como regra geral o princípio da territorialidade, e como exceção subsidiária os demais princípios:</p>
+  </div>
+
+  <div class="princbox">
+    <div class="pbox2">
+      <div class="ptit">1. Territorialidade (Temperada/Mitigada)</div>
+      <div class="psub">Art. 5°, caput, CP — Regra Geral</div>
+      <p style="font-size:.85rem;line-height:1.65">Aplica-se a lei do Estado onde o crime foi cometido, independentemente da nacionalidade do agente ou da vítima. É "temperada" porque comporta exceções (tratados, imunidades).</p>
+    </div>
+    <div class="pbox2">
+      <div class="ptit">2. Personalidade (Ativa)</div>
+      <div class="psub">Art. 7°, II, "b" + I, "d", CP — Exceção</div>
+      <p style="font-size:.85rem;line-height:1.65">Aplica-se a lei da <em>nacionalidade do agente</em>. Crimes praticados por brasileiros no exterior. Fundamento: o nacional deve obediência à lei de seu país.</p>
+    </div>
+    <div class="pbox2">
+      <div class="ptit">3. Personalidade (Passiva)</div>
+      <div class="psub">Art. 7°, §3°, CP — Exceção</div>
+      <p style="font-size:.85rem;line-height:1.65">Aplica-se a lei da <em>nacionalidade da vítima</em>. Crime praticado por estrangeiro contra brasileiro fora do Brasil. Condicionada.</p>
+    </div>
+    <div class="pbox2">
+      <div class="ptit">4. Real / Defesa / Proteção</div>
+      <div class="psub">Art. 7°, I, "a", "b", "c", CP — Exceção</div>
+      <p style="font-size:.85rem;line-height:1.65">Aplica-se a lei do Estado cujo <em>bem jurídico foi lesado</em>. Crimes contra o Presidente da República, o patrimônio ou a fé pública nacional — independentemente de onde cometidos.</p>
+    </div>
+    <div class="pbox2">
+      <div class="ptit">5. Universalidade / Cosmopolita</div>
+      <div class="psub">Art. 7°, II, "a", CP — Exceção</div>
+      <p style="font-size:.85rem;line-height:1.65">Todo Estado tem o dever de punir crimes considerados internacionais, independentemente de onde praticados ou de quem os praticou. Crimes por tratado o Brasil se comprometeu a reprimir.</p>
+    </div>
+    <div class="pbox2">
+      <div class="ptit">6. Bandeira / Pavilhão / Representação</div>
+      <div class="psub">Art. 7°, II, "c", CP — Exceção</div>
+      <p style="font-size:.85rem;line-height:1.65">Aplica-se a lei do Estado cujo pavilhão (bandeira) a embarcação ou aeronave ostenta. Para privadas brasileiras em território estrangeiro, se o crime não for julgado no estrangeiro.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bw">Distinção Crucial</span>Territorialidade Absoluta × Temperada × Extraterritorialidade</div>
+    <table>
+      <tr><th>Tipo</th><th>Conceito</th><th>Adotado pelo Brasil?</th></tr>
+      <tr>
+        <td><strong>Territorialidade Absoluta</strong></td>
+        <td>Somente a lei nacional se aplica aos crimes no território — sem qualquer exceção</td>
+        <td style="color:var(--crim)">❌ NÃO — muito rígida, impede cooperação internacional</td>
+      </tr>
+      <tr>
+        <td><strong>Territorialidade Temperada/Mitigada</strong></td>
+        <td>A lei nacional aplica-se como regra, mas com ressalvas de tratados, convenções e normas internacionais</td>
+        <td style="color:var(--teal)">✅ SIM — art. 5°, caput, CP</td>
+      </tr>
+      <tr>
+        <td><strong>Extraterritorialidade</strong></td>
+        <td>A lei nacional aplica-se a crimes praticados fora do território</td>
+        <td style="color:var(--teal)">✅ SIM — art. 7° CP (exceção subsidiária)</td>
+      </tr>
+    </table>
+    <p style="font-size:.88rem;margin-top:.5rem;color:var(--slate)">O sistema brasileiro = Territorialidade Temperada (regra) + Extraterritorialidade em hipóteses específicas (exceção).</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bd">Enunciado CJF 24</span>Provedores de Internet e Territorialidade</div>
+    <div class="jg teal">
+      <div class="jr" style="color:var(--teal)">Enunciado n° 24 do CJF/STJ</div>
+      "Nos crimes submetidos à jurisdição brasileira, os provedores de conexão e de aplicações de internet que prestam serviços no Brasil devem fornecer o conteúdo de comunicações armazenadas em seu poder, não lhes sendo lícito, sob pena de sanções processuais, invocar legislação estrangeira para eximir-se do dever de cumprir a decisão judicial."
+    </div>
+    <p style="font-size:.88rem;margin-top:.5rem;color:var(--slate)"><em>Relevância para o art. 5°:</em> mesmo que os servidores da empresa estejam no exterior, se o crime ocorreu no Brasil e o provedor presta serviços no Brasil, a lei brasileira é aplicável — e a empresa não pode alegar legislação estrangeira (e.g., Marco Legal dos EUA) para se esquivar.</p>
+  </div>
+</div>
+
+<!-- ════ TAB 4 — IMUNIDADES ════ -->
+<div id="tab-imunidades" class="sec">
+  <div class="sec-title">Imunidades — Exceções à Territorialidade</div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bpur">Diplomática</span>Imunidade Diplomática — Convenção de Viena (1961)</div>
+    <p style="font-size:.91rem;line-height:1.78;margin-bottom:.7rem">A imunidade diplomática é a exceção mais importante à territorialidade. Fundamenta-se na <strong>Convenção de Viena sobre Relações Diplomáticas (1961)</strong>, ratificada pelo Brasil. O diplomata acreditado no Brasil não está sujeito à lei penal brasileira — responde pela lei do país que representa.</p>
+    <div class="g2">
+      <div>
+        <strong>Quem tem imunidade PLENA:</strong>
+        <ul style="padding-left:1.1rem;line-height:1.85;font-size:.88rem;margin-top:.3rem">
+          <li>Chefes de missão (embaixadores, ministros plenipotenciários)</li>
+          <li>Membros do pessoal diplomático (secretários, conselheiros, adidos)</li>
+          <li>Familiares dos diplomatas (que vivam com eles e não sejam nacionais do Brasil)</li>
+          <li>Pessoal técnico e administrativo da missão (com imunidade mais restrita)</li>
+        </ul>
+      </div>
+      <div>
+        <strong>Características da Imunidade Diplomática:</strong>
+        <ul style="padding-left:1.1rem;line-height:1.85;font-size:.88rem;margin-top:.3rem">
+          <li>É <strong>irrenunciável</strong> pelo próprio diplomata — só o Estado representado pode renunciá-la</li>
+          <li>A renúncia deve ser <strong>expressa</strong></li>
+          <li>Natureza jurídica: para a doutrina majoritária = <em>causa pessoal de exclusão da pena</em> (Heleno Fragoso)</li>
+          <li>Fundamento: reciprocidade e necessidade de assegurar o exercício das funções diplomáticas</li>
+        </ul>
+      </div>
+    </div>
+    <div class="jg pur" style="margin-top:.8rem">
+      <div class="jr" style="color:var(--purple2)">STF · ACO 633 AgR/SP e ACO 645 AgR/SP · Plenário · Rel.ª Min.ª Ellen Gracie / Min. Gilmar Mendes · 11/4/2007</div>
+      A imunidade diplomática é consentida com fundamento no princípio da reciprocidade, a fim de assegurar ao diplomata estrangeiro, nos limites do ato de ofício, inviolabilidades e imunidades de jurisdição penal, civil, administrativa e tributária perante o Estado concedente.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bpur">Consular</span>Imunidade Consular — Limitada</div>
+    <div class="g2">
+      <div>
+        <strong>Cônsules — Imunidade Limitada:</strong>
+        <p style="font-size:.88rem;line-height:1.72;margin-top:.3rem">Cônsules NÃO são representantes do Estado estrangeiro perante o governo brasileiro. Têm imunidade penal <em>limitada aos atos praticados no exercício das funções consulares</em>. Para crimes praticados fora das funções consulares, estão sujeitos à lei brasileira.</p>
+      </div>
+      <div>
+        <strong>Cônsul Honorário — Sem Imunidade Penal:</strong>
+        <p style="font-size:.88rem;line-height:1.72;margin-top:.3rem">O cônsul honorário que pratica crime não vinculado a ato oficial no exercício das funções não goza de imunidade penal (STF, HC 81.158/RJ, 1ª T., rel.ª p/ acórdão Min.ª Ellen Gracie).</p>
+      </div>
+    </div>
+    <p style="font-size:.88rem;margin-top:.6rem;color:var(--crim)"><strong>Para prova (Cleber Masson):</strong> "Os cônsules, por seu turno, são funcionários públicos de carreira ou honorários e indicados para a realização de determinadas funções em outros países, com imunidades e privilégios inferiores aos dos diplomatas. A imunidade penal é limitada aos atos de ofício, podendo ser processados e condenados por outros crimes."</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bpur">Organizações</span>Imunidade de Organismos Internacionais</div>
+    <p style="font-size:.91rem;line-height:1.78">Agentes e funcionários de organizações internacionais como ONU e OEA, quando em serviço no Brasil, podem gozar de imunidades semelhantes às diplomáticas, incluindo seus familiares — mas excluindo empregados particulares. O fundamento é o tratado constitutivo da organização e os acordos de sede firmados com o Brasil.</p>
+    <p style="font-size:.88rem;margin-top:.5rem;color:var(--slate)"><em>Importante:</em> as sedes de embaixadas e organismos internacionais NÃO são extensões de território estrangeiro. Trata-se de <em>inviolabilidade</em> — as autoridades brasileiras não podem adentrar nas sedes sem autorização, mas o espaço continua sendo território brasileiro.</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bd">Distinção</span>Imunidade Parlamentar × Imunidade Diplomática</div>
+    <table>
+      <tr><th>Característica</th><th>Imunidade Diplomática</th><th>Imunidade Parlamentar (CF, art. 53)</th></tr>
+      <tr><td><strong>Fundamento</strong></td><td>Direito Internacional (Conv. de Viena)</td><td>Direito Constitucional interno</td></tr>
+      <tr><td><strong>Destinatários</strong></td><td>Diplomatas estrangeiros no Brasil</td><td>Membros do Congresso Nacional</td></tr>
+      <tr><td><strong>Abrangência penal</strong></td><td>Imunidade jurisdicional total (plena)</td><td>Inviolabilidade por opiniões, palavras, votos (material) + Imunidade processual (formal)</td></tr>
+      <tr><td><strong>Exceção à territorialidade?</strong></td><td>✅ Sim — afasta a lei penal brasileira</td><td>Não — é exceção à responsabilidade penal, não à lei aplicável</td></tr>
+      <tr><td><strong>Renúncia</strong></td><td>Pelo Estado representado (expressa)</td><td>Pela Casa Legislativa (maioria absoluta)</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ════ TAB 5 — STF/STJ ════ -->
+<div id="tab-stf" class="sec">
+  <div class="sec-title">Jurisprudência — STF e STJ</div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bstj">STJ · 2024</span>Crime em Rede Social Aberta — Presunção de Transnacionalidade (NOVIDADE)</div>
+    <div class="jg stj">
+      <div class="jr">STJ · CC 205.569/SP · Rel. Min. Messod Azulay Neto · 3ª Seção · 13/11/2024 · DJe 19/11/2024 (Info Extraordinário 24)</div>
+      <strong>Tese:</strong> Compete à Justiça Federal processar e julgar o crime de discriminação contra pessoa com deficiência (art. 88 da Lei 13.146/2015), quando praticado mediante publicação de conteúdo em rede social aberta, em face da <strong>presunção de transnacionalidade do delito</strong>. A transnacionalidade é presumida, sendo <strong>desnecessária a demonstração de que o conteúdo atingiu usuários no exterior</strong>. Ademais, ao assinar a Convenção Internacional sobre os Direitos das Pessoas com Deficiência, o Brasil comprometeu-se a proibir práticas discriminatórias — o que justifica o interesse federal.
+    </div>
+    <p style="font-size:.88rem;margin-top:.5rem;color:var(--slate)"><em>Contexto:</em> Crime praticado no Instagram (rede social aberta). O STJ estendeu à discriminação por deficiência o mesmo raciocínio aplicado ao racismo/xenofobia em redes sociais abertas (CC 175.525/SP, 2020). A territorialidade é ultrapassada quando o crime praticado no Brasil tem alcance potencial além das fronteiras nacionais — exigindo a competência federal.</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bstf">STF · Informativo 609</span>Homicídio de Brasileiro no Exterior — Competência Federal</div>
+    <div class="jg">
+      <div class="jr">STF · Informativo 609 · 1ª Turma</div>
+      Homicídio de juiz de direito (cidadão brasileiro) no Paraguai, com indícios de relação com o tráfico internacional de drogas. A 1ª Turma, por maioria, indeferiu habeas corpus que alegava incompetência da Justiça Federal. O caso envolveu a articulação entre o princípio da territorialidade (crime ocorreu no Paraguai) e a extraterritorialidade (art. 7°), bem como os critérios de definição da competência federal (art. 109, CF).
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bstj">STJ</span>Racismo em Redes Sociais — Competência Federal (Precedente Fundante)</div>
+    <div class="jg stj">
+      <div class="jr">STJ · CC 175.525/SP · Rel. Min. João Otávio de Noronha · 3ª Seção · DJe 11/12/2020</div>
+      A Justiça Federal detém competência para julgar ações penais sobre prática, indução ou incitação à discriminação ou ao preconceito de raça, cor, etnia, religião ou procedência nacional, praticadas em redes sociais <em>abertas</em>. O simples fato de a rede ser aberta presume o alcance transnacional, sem necessidade de prova de que usuários no exterior foram atingidos.
+    </div>
+    <p style="font-size:.88rem;margin-top:.5rem;color:var(--slate)"><em>Importante:</em> Crimes em redes sociais <em>fechadas</em> (grupos privados, conversas restritas) não presumem transnacionalidade — competência estadual.</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bstj">STJ</span>Internet — Mera Utilização Não Atrai Competência Federal</div>
+    <div class="jg stj">
+      <div class="jr">STJ · CC 121.431/SE · Rel. Min. Marco Aurélio Bellizze · 3ª Seção · DJe 7/5/2012</div>
+      O simples fato de o suposto delito ter sido cometido pela internet não atrai, por si só, a competência da Justiça Federal. Necessária a existência de indícios mínimos de extraterritorialidade. Se as ofensas têm caráter exclusivamente pessoal e não se enquadram em nenhuma hipótese do art. 109, IV e V, da CF, a competência é estadual. <strong>Síntese: internet ≠ transnacionalidade automática.</strong>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bstf">STF</span>Imunidade Diplomática — Natureza Irrenunciável pelo Beneficiário</div>
+    <div class="jg">
+      <div class="jr">STF · ACO 633 AgR/SP e ACO 645 AgR/SP · Plenário · 11/4/2007</div>
+      A imunidade diplomática é irrenunciável por seu destinatário — apenas o Estado representado pode renunciá-la expressamente. O diplomata que comete crime no Brasil não será processado no território nacional. A causa jurídica da imunidade é o princípio da reciprocidade e a necessidade de assegurar o exercício das funções diplomáticas. Natureza: causa pessoal de exclusão da pena (doutrina majoritária — Heleno Fragoso).
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bstj">STJ</span>Balão de Ar Quente — Não é Aeronave para fins do art. 5° CP</div>
+    <div class="jg stj">
+      <div class="jr">STJ · 3ª Seção — Conflito de Competência</div>
+      A Terceira Seção do STJ decidiu que compete à Justiça Estadual processar e julgar crime ocorrido a bordo de balão de ar quente, pois esse tipo de veículo NÃO se enquadra no conceito legal de aeronave (art. 106 do Código Brasileiro de Aeronáutica — CBA/Lei 7.565/1986). Portanto, não se aplica a regra de competência federal do art. 109, IX, CF, nem a extensão territorial do art. 5°, §1° e §2°, CP.
+    </div>
+    <p style="font-size:.88rem;margin-top:.5rem;color:var(--crim)"><strong>Para prova:</strong> O conceito de "aeronave" para fins do art. 5° CP é o do CBA — não qualquer veículo capaz de voar. Balão de ar quente, por exemplo, não é aeronave para esses fins.</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bstf">STF</span>Cônsul Honorário — Sem Imunidade Penal Geral</div>
+    <div class="jg">
+      <div class="jr">STF · HC 81.158/RJ · 1ª Turma · Rel.ª p/ acórdão Min.ª Ellen Gracie</div>
+      A inviolabilidade pessoal dos cônsules só abrange os atos realizados no exercício das funções consulares, não se aplicando ao cônsul honorário que pratica crime não vinculado a ato oficial no exercício das funções. Para crimes comuns, o cônsul honorário está sujeito à lei penal brasileira.
+    </div>
+  </div>
+</div>
+
+<!-- ════ TAB 6 — PROVA ════ -->
+<div id="tab-prova" class="sec">
+  <div class="sec-title">🎯 Pontos Sempre Cobrados em Magistratura / ENAM</div>
+
+  <div class="pbox">
+    <h3>📌 Questões de Alta Incidência — Art. 5° do CP</h3>
+
+    <div class="pi"><span class="pn">1</span>
+      <span><strong>Territorialidade temperada (≠ absoluta):</strong> O art. 5° adota a territorialidade <em>mitigada/temperada</em> — a lei brasileira se aplica ao crime no território nacional, "sem prejuízo de convenções, tratados e regras de direito internacional". A exceção são as imunidades e tratados. Jamais marcar "territorialidade absoluta" como resposta.</span>
+    </div>
+    <div class="pi"><span class="pn">2</span>
+      <span><strong>Embarcações/aeronaves PÚBLICAS BRASILEIRAS — onde quer que se encontrem:</strong> O §1° é claro. Uma fragata da Marinha em porto estrangeiro é território nacional. Um Boeing militar a serviço do governo em voo sobre Buenos Aires é território nacional. Sem exceção.</span>
+    </div>
+    <div class="pi"><span class="pn">3</span>
+      <span><strong>Embarcações/aeronaves PRIVADAS BRASILEIRAS — só em alto-mar:</strong> Atenção crítica! Se a embarcação/aeronave privada brasileira estiver em território estrangeiro (porto, mar territorial, espaço aéreo) — NÃO é território nacional pelo art. 5°. Pode haver extraterritorialidade pelo art. 7°, II, "c" (se não julgada lá).</span>
+    </div>
+    <div class="pi"><span class="pn">4</span>
+      <span><strong>Embarcações/aeronaves ESTRANGEIRAS PRIVADAS — quando em território brasileiro:</strong> §2°: aplica-se a lei brasileira quando em pouso/voo no espaço aéreo nacional (aeronaves) ou em porto/mar territorial (navios). A regra prática: se está dentro do Brasil, lei brasileira.</span>
+    </div>
+    <div class="pi"><span class="pn">5</span>
+      <span><strong>Mar territorial = 12 milhas náuticas:</strong> Saber que o mar territorial é de 12 milhas (Lei 8.617/1993). A zona contígua (12-24 milhas) e a ZEE (até 200 milhas) NÃO são território pleno para fins penais. O crime na ZEE por estrangeiro não necessariamente se sujeita ao art. 5° CP.</span>
+    </div>
+    <div class="pi"><span class="pn">6</span>
+      <span><strong>Imunidade diplomática — irrenunciável pelo beneficiário:</strong> O diplomata não pode renunciar à sua própria imunidade. Só o Estado representado pode renunciá-la, de forma expressa. Clássica pegadinha: o diplomata "concorda em ser julgado" — sem validade.</span>
+    </div>
+    <div class="pi"><span class="pn">7</span>
+      <span><strong>Cônsul ≠ Diplomata — imunidade diferente:</strong> Cônsul tem imunidade limitada aos atos de ofício. Cônsul honorário não tem imunidade penal geral. Cônsul pratica crime comum no Brasil → julgado pela lei brasileira (STF, HC 81.158/RJ).</span>
+    </div>
+    <div class="pi"><span class="pn">8</span>
+      <span><strong>Balão de ar quente ≠ aeronave (STJ):</strong> O conceito legal de aeronave é do CBA (Lei 7.565/1986). Balão de ar quente não é aeronave para fins do art. 5°, §1° e §2°, CP — competência estadual, não federal (STJ, 3ª Seção).</span>
+    </div>
+    <div class="pi"><span class="pn">9</span>
+      <span><strong>Internet e territorialidade — regras:</strong> (a) Rede social ABERTA → presume-se transnacionalidade → competência federal (STJ, CC 205.569/SP, 2024). (b) Rede social FECHADA → sem transnacionalidade automática → competência estadual. (c) Mera utilização da internet ≠ transnacionalidade (STJ, CC 121.431/SE, 2012).</span>
+    </div>
+    <div class="pi"><span class="pn">10</span>
+      <span><strong>Enunciado CJF 24 — provedores de internet:</strong> Provedores que prestam serviços no Brasil não podem invocar legislação estrangeira para descumprir decisão judicial brasileira. Conexão direta com o princípio da territorialidade no ambiente digital.</span>
+    </div>
+    <div class="pi"><span class="pn">11</span>
+      <span><strong>Sede de embaixada NÃO é território estrangeiro:</strong> A embaixada no Brasil é território brasileiro. A inviolabilidade (as autoridades brasileiras não podem entrar sem autorização) é diferente de ser território estrangeiro. Crime cometido por não diplomata dentro da embaixada — lei brasileira é aplicável.</span>
+    </div>
+    <div class="pi"><span class="pn">12</span>
+      <span><strong>Princípio do Pavilhão/Bandeira — confusão comum:</strong> O princípio do pavilhão é usado para embarcações/aeronaves em alto-mar ou espaço aéreo do alto-mar. Não confundir com a extraterritorialidade do art. 7°, II, "c" — que se aplica quando privadas brasileiras estão em território estrangeiro.</span>
+    </div>
+    <div class="pi"><span class="pn">13</span>
+      <span><strong>Espaço aéreo — teoria da soberania absoluta:</strong> O Brasil adota a teoria da soberania absoluta sobre o espaço aéreo nacional (art. 11 CBA). Espaço extra-atmosférico = equiparado ao alto-mar. Crime em aeronave em voo sobre território nacional → lei brasileira (art. 5°).</span>
+    </div>
+    <div class="pi"><span class="pn">14</span>
+      <span><strong>Princípios da aplicação da lei no espaço — denominações:</strong> Saber identificar: territorialidade, personalidade ativa, personalidade passiva, real/defesa/proteção, universalidade/cosmopolita, bandeira/pavilhão/representação — e qual artigo do CP corresponde a cada um. Muito cobrado em provas de magistratura e ENAM.</span>
+    </div>
+    <div class="pi"><span class="pn">15</span>
+      <span><strong>Crime praticado em navio estrangeiro privado em passagem pelo Brasil:</strong> Se o navio está em passagem pelo mar territorial e o crime não afeta interesses brasileiros (princípio da passagem inocente), a doutrina diverge sobre a aplicação do §2°. A tendência é a aplicação literal do §2° (se em mar territorial, lei brasileira). Para provas: aplicar o §2° literalmente.</span>
+    </div>
+  </div>
+
+  <!-- QUADRO-SÍNTESE -->
+  <div class="card" style="margin-top:1.5rem">
+    <div class="ct"><span class="bx bp">Quadro-Síntese Premium</span>Art. 5° CP — Respostas Objetivas para Prova</div>
+    <table>
+      <tr><th>Situação</th><th>Lei Brasileira?</th><th>Base Legal</th></tr>
+      <tr><td>Crime no território terrestre brasileiro</td><td style="color:var(--teal)">✅ SIM</td><td>Art. 5°, caput</td></tr>
+      <tr><td>Crime no mar territorial (até 12 milhas)</td><td style="color:var(--teal)">✅ SIM</td><td>Art. 5°, caput</td></tr>
+      <tr><td>Crime na ZEE (12–200 milhas) por estrangeiro</td><td style="color:var(--crim)">⚠ NÃO (regra)</td><td>ZEE ≠ território penal</td></tr>
+      <tr><td>Navio de guerra brasileiro em porto estrangeiro</td><td style="color:var(--teal)">✅ SIM — sempre</td><td>Art. 5°, §1°</td></tr>
+      <tr><td>Navio mercante PRIVADO brasileiro no alto-mar</td><td style="color:var(--teal)">✅ SIM</td><td>Art. 5°, §1°</td></tr>
+      <tr><td>Navio mercante PRIVADO brasileiro em porto estrangeiro</td><td style="color:var(--crim)">⚠ Não (art. 5°) — art. 7°, II, c se condicionado</td><td>Art. 7°, II, c</td></tr>
+      <tr><td>Aeronave privada ESTRANGEIRA em voo sobre o Brasil</td><td style="color:var(--teal)">✅ SIM</td><td>Art. 5°, §2°</td></tr>
+      <tr><td>Embaixador estrangeiro comete crime no Brasil</td><td style="color:var(--crim)">❌ NÃO — imunidade diplomática</td><td>Conv. de Viena 1961</td></tr>
+      <tr><td>Cônsul pratica crime comum no Brasil</td><td style="color:var(--teal)">✅ SIM (fora do ato de ofício)</td><td>STF HC 81.158/RJ</td></tr>
+      <tr><td>Crime em rede social aberta</td><td style="color:var(--teal)">✅ SIM — Justiça Federal (transnacionalidade presumida)</td><td>STJ CC 205.569/SP (2024)</td></tr>
+      <tr><td>Crime em rede social fechada/grupo privado</td><td>Estadual — sem presunção de transnacionalidade</td><td>STJ — posição consolidada</td></tr>
+    </table>
+  </div>
+
+  <!-- ARMADILHAS -->
+  <div class="danger">
+    <h4>⚠ Armadilhas Frequentes em Provas</h4>
+    <ul style="font-size:.91rem;line-height:1.9;padding-left:1.2rem">
+      <li><strong>Afirmar que o Brasil adota a territorialidade ABSOLUTA:</strong> ERRADO. É territorialidade <em>temperada/mitigada</em> — com ressalvas de tratados e imunidades.</li>
+      <li><strong>Dizer que a embarcação/aeronave privada brasileira em porto estrangeiro é extensão do território:</strong> ERRADO. O §1° só abrange a situação de "alto-mar" para privadas. Em porto estrangeiro → art. 7°, II, c (extraterritorialidade condicionada, se não julgado lá).</li>
+      <li><strong>Confundir competência federal com territorialidade:</strong> A Justiça Federal pode ser competente por força do art. 109, CF — não necessariamente porque a lei estrangeira se aplica. No crime em rede social, a lei brasileira se aplica (territorialidade), e a competência é federal (por força do interesse federal + transnacionalidade).</li>
+      <li><strong>Dizer que a sede da embaixada é território estrangeiro:</strong> ERRADO. É inviolável (autoridades brasileiras não entram sem autorização), mas é território brasileiro. Crime cometido por não diplomata dentro da embaixada → lei brasileira aplicável.</li>
+      <li><strong>Afirmar que o diplomata pode renunciar à sua imunidade:</strong> ERRADO. Só o Estado que enviou o diplomata pode renunciá-la, de forma expressa. O diplomata individualmente não tem esse poder.</li>
+      <li><strong>Aplicar o §2° a aeronaves estrangeiras PÚBLICAS:</strong> ERRADO. O §2° só se aplica a aeronaves e embarcações estrangeiras de <em>propriedade privada</em>. Navios de guerra ou aeronaves militares estrangeiros no Brasil não se submetem à lei brasileira.</li>
+    </ul>
+  </div>
+
+  <!-- DISCURSIVAS -->
+  <div class="card" style="margin-top:1rem">
+    <div class="ct"><span class="bx bp">Discursiva ENAM</span>Temas Cobrados em Provas Discursivas</div>
+    <ol style="font-size:.91rem;line-height:1.9;padding-left:1.2rem">
+      <li>Disserte sobre o princípio da territorialidade no Código Penal brasileiro, explicando sua natureza temperada e as exceções previstas em tratados internacionais, com foco nas imunidades diplomáticas.</li>
+      <li>Analise a extensão do território nacional para fins penais (art. 5°, §1° e §2°, CP), diferenciando o tratamento das embarcações e aeronaves brasileiras públicas e privadas, e das estrangeiras privadas.</li>
+      <li>Discuta a aplicação da territorialidade penal no ambiente digital, analisando os entendimentos do STJ sobre a competência para julgar crimes praticados em redes sociais (CC 205.569/SP, 2024, e precedentes).</li>
+      <li>Explique os princípios que fundamentam a aplicação da lei penal no espaço no ordenamento jurídico brasileiro, identificando qual princípio é a regra geral e quais são as exceções, com indicação dos dispositivos legais correspondentes.</li>
+    </ol>
+  </div>
+</div>
+
+</main>
+
+<script>
+function showTab(id,btn){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.tb').forEach(b=>b.classList.remove('on'));
+  document.getElementById('tab-'+id).classList.add('on');
+  btn.classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function tAcc(btn){
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+</script>
+</body>
+</html>

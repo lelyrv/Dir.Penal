@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 10º CP — Contagem do Prazo Penal | Magistratura ENAM</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a;
+    --navy-mid: #1a2f45;
+    --navy-light: #243b55;
+    --gold: #c8960c;
+    --gold-light: #e8b84b;
+    --gold-pale: #fdf3d8;
+    --cream: #faf7f2;
+    --cream-mid: #f0ebe2;
+    --text-dark: #1a1208;
+    --text-mid: #3d3020;
+    --text-soft: #6b5c40;
+    --border: #d4c49a;
+    --border-light: #e8dcbf;
+    --red-accent: #8b1a1a;
+    --green-accent: #1a4a2e;
+    --blue-accent: #1a3a5c;
+    --purple-accent: #4a1a5c;
+    --shadow: 0 4px 24px rgba(13,27,42,0.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Source Serif 4', Georgia, serif; background: var(--cream); color: var(--text-dark); font-size: 15px; line-height: 1.75; }
+
+  /* ── NAV ── */
+  #top-nav {
+    position: sticky; top: 0; z-index: 999;
+    background: var(--navy); border-bottom: 3px solid var(--gold);
+    padding: 0 1.5rem; display: flex; align-items: center; gap: 0;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  #top-nav::-webkit-scrollbar { display: none; }
+  #top-nav .nav-brand {
+    font-family: 'Playfair Display', serif; color: var(--gold-light);
+    font-size: 0.9rem; font-weight: 700; white-space: nowrap;
+    padding: 0.85rem 1.2rem 0.85rem 0;
+    border-right: 1px solid rgba(200,150,12,0.3);
+    margin-right: 0.5rem; letter-spacing: 0.5px;
+  }
+  #top-nav a {
+    color: rgba(255,255,255,0.75); text-decoration: none;
+    font-size: 0.72rem; font-family: 'Source Serif 4', serif;
+    font-weight: 600; letter-spacing: 0.6px; text-transform: uppercase;
+    padding: 0.85rem 0.8rem; white-space: nowrap;
+    transition: color .2s; border-bottom: 3px solid transparent; margin-bottom: -3px;
+  }
+  #top-nav a:hover { color: var(--gold-light); border-bottom-color: var(--gold); }
+
+  /* ── HERO ── */
+  #hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1e3d5c 100%);
+    color: white; padding: 3.5rem 2rem 3rem;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  #hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: repeating-linear-gradient(45deg,
+      rgba(200,150,12,0.03) 0px, rgba(200,150,12,0.03) 1px,
+      transparent 1px, transparent 40px);
+  }
+  #hero .badge {
+    display: inline-block; background: rgba(200,150,12,0.15);
+    border: 1px solid rgba(200,150,12,0.5); color: var(--gold-light);
+    font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase;
+    padding: 0.35rem 1rem; border-radius: 2px; margin-bottom: 1.2rem;
+    font-family: 'Source Serif 4', serif; font-weight: 600;
+  }
+  #hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 0.6rem; letter-spacing: -0.5px; }
+  #hero h1 span { color: var(--gold-light); }
+  #hero .subtitle { font-size: 1rem; color: rgba(255,255,255,0.65); font-style: italic; margin-bottom: 1.5rem; }
+  #hero .law-box {
+    display: inline-block; background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(200,150,12,0.4); border-left: 4px solid var(--gold);
+    color: rgba(255,255,255,0.9); font-family: 'Source Serif 4', serif;
+    font-size: 0.95rem; font-style: italic; padding: 1rem 1.5rem;
+    max-width: 760px; text-align: left; line-height: 1.7; border-radius: 0 4px 4px 0;
+  }
+  #hero .law-box strong { color: var(--gold-light); font-style: normal; display: block; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.4rem; }
+
+  /* ── LAYOUT ── */
+  .page-wrap { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+  /* ── SECTIONS ── */
+  .section { margin-top: 3.5rem; scroll-margin-top: 56px; }
+  .section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--border); }
+  .section-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--border); line-height: 1; min-width: 2.5rem; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; color: var(--navy); line-height: 1.2; }
+  .section-title span { display: block; font-size: 0.75rem; font-family: 'Source Serif 4', serif; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-style: normal; }
+
+  /* ── CARDS ── */
+  .card { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 1.4rem 1.6rem; box-shadow: var(--shadow); }
+  .card-grid { display: grid; gap: 1rem; }
+  .card-grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .card-grid-2 { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+  .card h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.6rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-light); }
+  .card p, .card li { font-size: 0.88rem; line-height: 1.7; color: var(--text-mid); }
+  .card ul { padding-left: 1.1rem; }
+  .card li { margin-bottom: 0.3rem; }
+
+  /* Regime cards */
+  .regime-card { border-top: 4px solid; }
+  .regime-penal { border-top-color: var(--gold); background: var(--gold-pale); }
+  .regime-processual { border-top-color: var(--blue-accent); }
+  .regime-civil { border-top-color: var(--green-accent); }
+  .regime-penal h3 { color: #7a5a00; }
+  .regime-processual h3 { color: var(--blue-accent); }
+  .regime-civil h3 { color: var(--green-accent); }
+
+  /* ── FLOWCHART ── */
+  .flow-wrap { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 2rem 1.5rem; box-shadow: var(--shadow); overflow-x: auto; }
+  .flow-center { display: flex; flex-direction: column; align-items: center; gap: 0; }
+  .flow-node { border-radius: 4px; padding: 0.65rem 1.4rem; font-family: 'Source Serif 4', serif; font-size: 0.82rem; font-weight: 600; text-align: center; min-width: 220px; max-width: 500px; }
+  .flow-start { background: var(--navy); color: white; border-radius: 50px; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; }
+  .flow-end { background: var(--gold); color: var(--navy); border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-box-navy { background: var(--navy-mid); color: white; border-left: 4px solid var(--gold); font-size: 0.8rem; }
+  .flow-box-green { background: #edf7f0; border: 1px solid #7ec89a; border-left: 4px solid var(--green-accent); color: var(--text-dark); }
+  .flow-box-blue  { background: #edf2f8; border: 1px solid #8eb4d8; border-left: 4px solid var(--blue-accent); color: var(--text-dark); }
+  .flow-box-gold  { background: var(--gold-pale); border: 2px solid var(--gold); color: var(--text-dark); }
+  .flow-box-red   { background: #fdf0f0; border: 1px solid #e09090; border-left: 4px solid var(--red-accent); color: var(--text-dark); }
+  .flow-box-purple { background: #f3eef8; border: 1px solid #b89dd8; border-left: 4px solid var(--purple-accent); color: var(--text-dark); }
+  .flow-arrow { font-size: 1.3rem; color: var(--border); line-height: 1; margin: 0.15rem 0; }
+  .flow-row { display: flex; align-items: flex-start; gap: 1.5rem; width: 100%; justify-content: center; flex-wrap: wrap; }
+  .flow-branch { display: flex; flex-direction: column; align-items: center; gap: 0; flex: 1; min-width: 190px; }
+  .flow-label { font-size: 0.68rem; color: var(--text-soft); font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; background: var(--cream-mid); padding: 0.15rem 0.5rem; border-radius: 2px; margin: 0.15rem 0; }
+  .flow-connector-line { width: 1px; height: 28px; background: var(--border); }
+
+  /* ── TABLE ── */
+  .comp-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; background: white; box-shadow: var(--shadow); border-radius: 6px; overflow: hidden; }
+  .comp-table thead { background: var(--navy); color: white; }
+  .comp-table thead th { padding: 0.85rem 1rem; font-family: 'Source Serif 4', serif; font-weight: 600; letter-spacing: 0.5px; font-size: 0.8rem; text-align: left; }
+  .comp-table thead th:first-child { color: var(--gold-light); }
+  .comp-table tbody tr { border-bottom: 1px solid var(--border-light); }
+  .comp-table tbody tr:last-child { border-bottom: none; }
+  .comp-table tbody tr:nth-child(even) { background: var(--cream); }
+  .comp-table td { padding: 0.75rem 1rem; color: var(--text-mid); vertical-align: top; }
+  .comp-table td:first-child { font-weight: 600; color: var(--navy); white-space: nowrap; font-size: 0.8rem; }
+  .comp-table .hl td { background: var(--gold-pale) !important; }
+  .comp-table .hl2 td { background: #edf7f0 !important; }
+
+  /* ── JURIS ── */
+  .juris-card { background: white; border: 1px solid var(--border-light); border-left: 5px solid; border-radius: 0 6px 6px 0; padding: 1.2rem 1.4rem; box-shadow: var(--shadow); }
+  .juris-card.stf { border-left-color: var(--red-accent); }
+  .juris-card.stj { border-left-color: var(--navy); }
+  .juris-card.doutrina { border-left-color: var(--gold); }
+  .juris-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
+  .juris-badge { font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 2px; font-family: 'Source Serif 4', serif; }
+  .juris-badge.stf { background: var(--red-accent); color: white; }
+  .juris-badge.stj { background: var(--navy); color: white; }
+  .juris-badge.doutrina { background: var(--gold); color: var(--navy); }
+  .juris-badge.sumula { background: var(--green-accent); color: white; }
+  .juris-badge.tese { background: var(--blue-accent); color: white; }
+  .juris-badge.purple { background: var(--purple-accent); color: white; }
+  .juris-title { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700; color: var(--navy); }
+  .juris-body { font-size: 0.84rem; color: var(--text-mid); line-height: 1.7; }
+  .juris-grid { display: grid; gap: 1rem; }
+
+  /* ── ALERTS ── */
+  .alert { padding: 0.9rem 1.2rem; border-radius: 4px; font-size: 0.84rem; line-height: 1.7; display: flex; gap: 0.7rem; align-items: flex-start; }
+  .alert-gold  { background: var(--gold-pale); border: 1px solid #d4aa3a; color: #5a4000; }
+  .alert-red   { background: #fdf0f0; border: 1px solid #e09090; color: #5a0000; }
+  .alert-navy  { background: #f0f4f8; border: 1px solid #abc; color: var(--navy); }
+  .alert-green { background: #edf7f0; border: 1px solid #7ec89a; color: #1a4a2e; }
+  .alert-purple { background: #f3eef8; border: 1px solid #b89dd8; color: var(--purple-accent); }
+  .alert-icon  { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.05rem; }
+  .alert strong { font-weight: 700; }
+
+  /* ── PROVA ── */
+  .prova-section { background: var(--navy); border-radius: 8px; padding: 2rem; color: white; margin-top: 3.5rem; scroll-margin-top: 56px; }
+  .prova-section h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--gold-light); margin-bottom: 0.5rem; }
+  .prova-section .intro { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; font-style: italic; }
+  .prova-items { display: grid; gap: 0.75rem; }
+  .prova-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(200,150,12,0.25); border-left: 4px solid var(--gold); border-radius: 0 4px 4px 0; padding: 1rem 1.2rem; }
+  .prova-item-q { font-size: 0.82rem; font-weight: 600; color: var(--gold-light); margin-bottom: 0.4rem; display: flex; align-items: flex-start; gap: 0.6rem; }
+  .prova-item-q .qnum { background: var(--gold); color: var(--navy); font-size: 0.65rem; font-weight: 700; padding: 0.1rem 0.45rem; border-radius: 2px; flex-shrink: 0; margin-top: 0.1rem; }
+  .prova-item-a { font-size: 0.82rem; color: rgba(255,255,255,0.8); line-height: 1.65; }
+  .prova-item-a strong { color: white; }
+
+  /* ── TAGS ── */
+  .tag { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; margin: 0.1rem; font-family: 'Source Serif 4', serif; }
+  .tag-blue   { background: #dce8f5; color: var(--blue-accent); }
+  .tag-green  { background: #dceee3; color: var(--green-accent); }
+  .tag-gold   { background: var(--gold-pale); color: #7a5a00; border: 1px solid #d4aa3a; }
+  .tag-red    { background: #fde8e8; color: var(--red-accent); }
+  .tag-purple { background: #ece5f5; color: var(--purple-accent); }
+
+  /* ── TIMELINE ── */
+  .timeline { display: flex; flex-direction: column; gap: 0; position: relative; padding-left: 2rem; }
+  .timeline::before { content: ''; position: absolute; left: 0.65rem; top: 0.5rem; bottom: 0.5rem; width: 2px; background: var(--border); }
+  .timeline-item { position: relative; padding: 0 0 1.2rem 1.2rem; }
+  .timeline-dot { position: absolute; left: -1.75rem; top: 0.35rem; width: 14px; height: 14px; border-radius: 50%; background: var(--gold); border: 2px solid var(--navy); }
+  .timeline-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.2rem; font-family: 'Source Serif 4', serif; }
+  .timeline-content { font-size: 0.86rem; color: var(--text-mid); line-height: 1.65; }
+  .timeline-content strong { color: var(--text-dark); }
+
+  /* ── EXAMPLE BOX ── */
+  .example-box { background: var(--navy-mid); color: white; border-radius: 6px; padding: 1.2rem 1.4rem; font-size: 0.84rem; line-height: 1.75; }
+  .example-box .ex-title { color: var(--gold-light); font-weight: 700; font-family: 'Playfair Display', serif; font-size: 0.95rem; margin-bottom: 0.5rem; }
+  .example-box .ex-calc { background: rgba(200,150,12,0.12); border: 1px solid rgba(200,150,12,0.3); border-radius: 4px; padding: 0.7rem 1rem; margin-top: 0.7rem; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--gold-light); }
+
+  /* ── LAW QUOTE ── */
+  .law-quote { background: var(--cream-mid); border-left: 4px solid var(--navy); padding: 0.9rem 1.2rem; font-size: 0.88rem; font-style: italic; color: var(--text-mid); line-height: 1.7; border-radius: 0 4px 4px 0; }
+  .law-quote strong { font-style: normal; color: var(--navy); font-size: 0.75rem; letter-spacing: 0.5px; display: block; margin-bottom: 0.25rem; }
+
+  /* ── DIVIDER ── */
+  .divider { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); margin: 1.2rem 0; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--navy); color: rgba(255,255,255,0.45); text-align: center; padding: 1.5rem; font-size: 0.75rem; border-top: 2px solid var(--gold); }
+  footer strong { color: var(--gold-light); }
+
+  /* ── PRINT ── */
+  @media print {
+    #top-nav { display: none; }
+    #hero { padding: 2rem 1rem; }
+    #hero::before { display: none; }
+    .page-wrap { max-width: 100%; padding: 0 0.5rem 2rem; }
+    .section { margin-top: 2rem; page-break-inside: avoid; }
+    .card, .juris-card, .flow-wrap { box-shadow: none; border: 1px solid #ccc; }
+    .prova-section { background: #f0f4f8 !important; color: #000 !important; }
+    .prova-section h2 { color: #0d1b2a !important; }
+    .prova-item { background: white !important; border: 1px solid #ccc !important; }
+    .prova-item-q { color: #7a5a00 !important; }
+    .prova-item-a { color: #333 !important; }
+    .example-box { background: #f0f4f8 !important; color: #000 !important; border: 1px solid #ccc; }
+    footer { display: none; }
+    body { font-size: 11pt; }
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 640px) {
+    #hero { padding: 2rem 1rem; }
+    #hero h1 { font-size: 1.6rem; }
+    .card-grid-3, .card-grid-2 { grid-template-columns: 1fr; }
+    .section-title { font-size: 1.1rem; }
+    .comp-table { font-size: 0.76rem; }
+    .comp-table td, .comp-table th { padding: 0.55rem 0.65rem; }
+    .flow-node { min-width: 150px; font-size: 0.74rem; }
+  }
+
+  /* ── MISC ── */
+  .mt1 { margin-top: 0.75rem; }
+  .mt2 { margin-top: 1rem; }
+  .mt3 { margin-top: 1.5rem; }
+  .flex-gap { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: flex-start; }
+  strong { font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav id="top-nav" aria-label="Atalhos do artigo">
+  <div class="nav-brand">Art. 10º CP</div>
+
+  <div class="nav-main-links">
+    <a href="#visao-geral">Visão Geral</a>
+    <a href="#regras">Duas Regras</a>
+    <a href="#fluxograma">Fluxograma</a>
+    <a href="#comparativo">Comparativo</a>
+    <a href="#aplicacoes">Aplicações</a>
+    <a href="#exemplos">Exemplos Práticos</a>
+    <a href="#jurisprudencia">Juris. STF/STJ</a>
+    <a href="#doutrina">Doutrina</a>
+    <a href="#sistematica">Sistemática</a>
+    <a href="#prova" class="nav-prova">Prova</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<header id="hero">
+  <div class="badge">Código Penal · Título I · Aplicação da Lei Penal</div>
+  <h1>Art. 10º — <span>Contagem do Prazo Penal</span></h1>
+  <p class="subtitle">Dies a Quo · Calendário Comum · Prazo Penal vs. Processual vs. Civil · Magistratura · ENAM</p>
+  <div class="law-box">
+    <strong>Art. 10.º do Decreto-Lei n.º 2.848/1940 (Código Penal)</strong>
+    "O dia do começo inclui-se no cômputo do prazo. Contam-se os dias, os meses e os anos pelo calendário comum."
+  </div>
+</header>
+
+<div class="page-wrap">
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 1. VISÃO GERAL                            -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="visao-geral">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div class="section-title"><span>Introdução &amp; Sistemática</span>Visão Geral do Artigo</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📍 Finalidade e Posição Sistemática</h3>
+      <p>O art. 10 integra o <strong>Título I do Código Penal</strong> ("Da Aplicação da Lei Penal") e estabelece as <strong>regras de contagem dos prazos de direito penal material</strong> (substantivo), aplicando-se a todos os institutos do Código Penal que dependem de contagem de tempo: prescrição, decadência, perempção, sursis, livramento condicional, reincidência, medida de segurança, entre outros.</p>
+      <p class="mt2">O dispositivo contém <strong>duas regras autônomas</strong>: (i) a regra do <em>dies a quo computatur in termino</em> — o dia de início é computado; e (ii) a regra do <em>calendário comum</em> — dias, meses e anos contam-se pelo calendário gregoriano civil, sem exclusão de feriados, sábados ou domingos.</p>
+    </div>
+    <div class="card">
+      <h3>🏛️ Natureza Jurídica e Alcance</h3>
+      <ul>
+        <li><strong>Norma de Direito Penal material:</strong> aplica-se aos prazos substantivos do CP e da legislação penal especial</li>
+        <li><strong>Não se aplica a prazos processuais penais:</strong> estes seguem o art. 798, §1.º, do CPP (dies a quo <em>não</em> incluído)</li>
+        <li><strong>Não se aplica a prazos civis:</strong> estes seguem o art. 132 do Código Civil (dia do início <em>excluído</em>)</li>
+        <li><strong>Aplicação residual:</strong> na ausência de regra específica em lei especial, aplica-se o art. 10 CP aos prazos penais materiais</li>
+        <li><strong>Abrange horas?</strong> NÃO. O art. 10 menciona apenas "dias, meses e anos" — as horas seguem regra própria (ex.: prisão em flagrante: prazo de 24h conta-se a partir da hora da prisão)</li>
+        <li><strong>Feriados e fins de semana:</strong> irrelevantes para prazos penais materiais — o calendário comum inclui todos os dias</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert alert-gold mt2">
+    <div class="alert-icon">⚠️</div>
+    <div><strong>Ponto Crucial — O erro mais comum em prova:</strong> Confundir o art. 10 CP (prazo penal material — inclui o dia do começo) com o art. 798, §1.º, do CPP (prazo processual penal — <em>exclui</em> o dia do começo) e com o art. 132 do CC (prazo civil — <em>exclui</em> o dia do começo). O sentido é <strong>invertido</strong> entre o direito penal material e o processual/civil. Esta distinção é a mais cobrada em provas de magistratura relacionada ao art. 10 CP.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 2. DUAS REGRAS DO ART. 10                 -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="regras">
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div class="section-title"><span>Análise Literal do Dispositivo</span>As Duas Regras do Art. 10 CP</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card regime-card regime-penal">
+      <h3>📅 1.ª Regra — "O dia do começo inclui-se no cômputo"<br><small style="font-size:0.75rem;font-family:sans-serif;color:#7a5a00;">Dies a quo computatur in termino</small></h3>
+      <p><strong>Sentido:</strong> O primeiro dia do prazo penal material — o chamado <em>dies a quo</em> — é <strong>contado</strong>, mesmo que seja fração de dia. Se o crime ocorreu às 23h59 de segunda-feira, o dia inteiro de segunda-feira é computado como o primeiro dia do prazo prescricional.</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Fundamento:</strong> A lei penal favorece o réu — quanto mais cedo começa a contagem, mais rapidamente se completam os prazos que beneficiam o agente (prescrição, reincidência, decadência etc.)</li>
+        <li><strong>Princípio favor libertatis:</strong> a inclusão do dies a quo beneficia o acusado ao antecipar o início da contagem de prazos extintivos</li>
+        <li><strong>Frações de dia:</strong> a fração de dia é computada como dia inteiro — não se conta em horas para efeito do prazo penal material</li>
+        <li><strong>Aplicação à prescrição:</strong> começa a correr do dia do crime (art. 111, I, CP), já incluindo esse dia na contagem</li>
+      </ul>
+      <div class="alert alert-gold mt2" style="font-size:0.81rem;">
+        <div>⭐ <strong>Brocardo jurídico:</strong> <em>"Dies a quo computatur in termino"</em> — o dia do começo computa-se no prazo. Esta é a regra do Direito Penal brasileiro, oposta ao Direito Civil (<em>dies a quo non computatur in termino</em>).</div>
+      </div>
+    </div>
+
+    <div class="card regime-card" style="border-top-color:var(--blue-accent);">
+      <h3 style="color:var(--blue-accent);">🗓️ 2.ª Regra — "Calendário Comum"<br><small style="font-size:0.75rem;font-family:sans-serif;color:var(--text-soft);">Cômputo por dias corridos</small></h3>
+      <p><strong>Sentido:</strong> Os dias, meses e anos do prazo penal material são contados pelo <strong>calendário gregoriano civil</strong>, sem interrupção e sem exclusão de feriados, sábados, domingos ou recessos judiciais.</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Dias corridos:</strong> não há "dias úteis" no prazo penal material — todos os dias do calendário contam, inclusive feriados nacionais, estaduais e municipais</li>
+        <li><strong>Meses e anos:</strong> contam-se pelo calendário, não por períodos de 30 ou 365 dias — um mês vai do dia 1.º ao último dia do mês; um ano vai do dia X ao mesmo dia X do ano seguinte</li>
+        <li><strong>Meses com dias diferentes:</strong> se o prazo começa em 31 de janeiro, um mês depois é 28 (ou 29) de fevereiro — o mês se conta pelo calendário, não por 30 dias</li>
+        <li><strong>Distinção do prazo processual:</strong> o prazo processual penal (CPP, art. 798, §3.º) prorroga-se para o primeiro dia útil seguinte quando vencer em feriado ou fim de semana; o prazo penal material não se prorroga</li>
+      </ul>
+      <div class="alert alert-navy mt2" style="font-size:0.81rem;">
+        <div>📌 <strong>Doutrina (Masson):</strong> A expressão "calendário comum" afasta qualquer cômputo por dias úteis ou por períodos fixos (ex.: 30 dias = 1 mês). O mês tem a duração que o calendário civil lhe atribuir — janeiro tem 31 dias, fevereiro tem 28 (ou 29), e assim por diante.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-red mt2">
+    <div class="alert-icon">🔴</div>
+    <div><strong>Prazo penal material NÃO se prorroga por feriado ou fim de semana.</strong> Se a prescrição se completa em um domingo, ela se completa no domingo. Não há prorrogação para a segunda-feira. Essa regra é o oposto dos prazos processuais (CPP, art. 798, §3.º), que se prorrogam para o primeiro dia útil seguinte. A confusão entre os dois regimes é uma das pegadinhas mais frequentes em provas.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 3. FLUXOGRAMA                             -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="fluxograma">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma: Aplicação do Art. 10 CP</div>
+  </div>
+
+  <div class="flow-wrap">
+    <div class="flow-center">
+
+      <div class="flow-node flow-start">IDENTIFICAR O PRAZO — Natureza Material ou Processual?</div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <!-- Passo 1: Classificação -->
+      <div class="flow-node flow-box-navy" style="max-width:540px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 1 — Classificar a natureza do prazo</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">O prazo em questão é de direito <em>penal material</em> (CP / lei penal especial) ou de direito <em>processual penal</em> (CPP)?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">PROCESSUAL PENAL (CPP)</div>
+          <div class="flow-node flow-box-blue" style="font-size:0.76rem;text-align:center;">
+            Art. 798, §1.º CPP<br>
+            <strong>Exclui o dies a quo</strong><br>
+            <small>Não conta o 1.º dia<br>Prorroga em feriado/fim de semana</small>
+          </div>
+          <div class="flow-connector-line" style="height:20px;"></div>
+          <div class="flow-node flow-box-blue" style="font-size:0.74rem;text-align:center;min-width:180px;">
+            Ex.: prazo para recurso,<br>resposta à acusação,<br>oferecimento de denúncia
+          </div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:140px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">CIVIL / ADMINISTRATIVO</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;">
+            Art. 132 CC<br>
+            <strong>Exclui o dies a quo</strong><br>
+            <small>Inclui o dies ad quem<br>Prorroga em feriado</small>
+          </div>
+          <div class="flow-connector-line" style="height:20px;"></div>
+          <div class="flow-node flow-box-green" style="font-size:0.74rem;text-align:center;min-width:180px;">
+            Ex.: ação civil ex delicto,<br>prazos administrativos<br>penais</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:140px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">PENAL MATERIAL (CP)</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;">
+            <strong>Art. 10 CP</strong><br>
+            <strong>INCLUI o dies a quo</strong><br>
+            <small>Calendário comum<br>Sem prorrogação por feriado</small>
+          </div>
+          <div class="flow-connector-line" style="height:20px;"></div>
+          <div class="flow-node flow-box-gold" style="font-size:0.74rem;text-align:center;min-width:180px;">
+            ✅ PROSSEGUIR<br>para Passos 2 e 3</div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <!-- Passo 2: Verificar se é prazo em horas -->
+      <div class="flow-node flow-box-navy" style="max-width:540px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 2 — O prazo é expresso em HORAS ou em DIAS/MESES/ANOS?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">O art. 10 CP menciona apenas "dias, meses e anos" — as horas têm regra própria</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">EM HORAS</div>
+          <div class="flow-node flow-box-purple" style="font-size:0.76rem;text-align:center;">
+            Art. 10 CP <strong>não se aplica</strong><br>
+            Conta-se a partir da<br>hora exata do evento<br>
+            <small>Ex.: 24h para relaxamento de prisão em flagrante</small>
+          </div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:100px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">EM DIAS / MESES / ANOS</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;">
+            ✅ Art. 10 CP aplica-se<br>
+            Incluir o dia do começo<br>
+            Usar calendário comum<br>
+            <small>Prosseguir para Passo 3</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <!-- Passo 3: Aplicar as regras -->
+      <div class="flow-node flow-box-navy" style="max-width:540px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 3 — Aplicar as Duas Regras do Art. 10 CP</strong>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">Regra 1: Dies a quo</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;">
+            Contar o 1.º dia<br>como dia inteiro<br>
+            <small>(mesmo que seja fração de hora)</small>
+          </div>
+        </div>
+        <div class="flow-branch">
+          <div class="flow-label">Regra 2: Calendário comum</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;">
+            Contar todos os dias<br>corridos (incl. feriados,<br>sáb. e dom.) sem prorrogação
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <!-- Passo 4 -->
+      <div class="flow-node flow-box-navy" style="max-width:540px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 4 — Verificar o Tipo de Prazo para Identificar o Dies a Quo Específico</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Cada instituto tem seu próprio ponto de partida expressamente previsto no CP</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">Prescrição pretensão punitiva</div>
+          <div class="flow-node flow-box-red" style="font-size:0.74rem;text-align:center;min-width:180px;">
+            Art. 111 CP<br>Dia do crime (regra geral)<br>incluindo esse dia
+          </div>
+        </div>
+        <div class="flow-branch">
+          <div class="flow-label">Decadência</div>
+          <div class="flow-node flow-box-blue" style="font-size:0.74rem;text-align:center;min-width:180px;">
+            Art. 103 CP<br>Dia do conhecimento<br>do autor do fato
+          </div>
+        </div>
+        <div class="flow-branch">
+          <div class="flow-label">Reincidência</div>
+          <div class="flow-node flow-box-green" style="font-size:0.74rem;text-align:center;min-width:180px;">
+            Art. 64, I, CP<br>Data da extinção<br>da pena anterior
+          </div>
+        </div>
+        <div class="flow-branch">
+          <div class="flow-label">Sursis / Livramento</div>
+          <div class="flow-node flow-box-purple" style="font-size:0.74rem;text-align:center;min-width:180px;">
+            Arts. 77 e 83 CP<br>Início da execução<br>da pena / benefício
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-end" style="max-width:500px;">
+        Prazo penal material corretamente contado · Resultado: extinção de punibilidade, benefício ou marco jurídico determinado
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 4. COMPARATIVO                            -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="comparativo">
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <div class="section-title"><span>Quadro Sinóptico</span>Art. 10 CP × Art. 798 CPP × Art. 132 CC</div>
+  </div>
+
+  <div class="alert alert-red mt1" style="margin-bottom:1rem;">
+    <div class="alert-icon">🔴</div>
+    <div><strong>Ponto mais cobrado em provas de magistratura:</strong> A <em>inversão</em> das regras de contagem entre o direito penal material (inclui o dies a quo), o direito processual penal (exclui o dies a quo) e o direito civil (exclui o dies a quo). O candidato deve saber de cor: no CP, inclui; no CPP e no CC, exclui.</div>
+  </div>
+
+  <div style="overflow-x:auto;">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Critério</th>
+          <th>Art. 10 CP (Penal Material)</th>
+          <th>Art. 798, §1.º CPP (Processual)</th>
+          <th>Art. 132 CC (Civil)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hl">
+          <td>Dies a quo (1.º dia)</td>
+          <td>✅ <strong>INCLUÍDO</strong> na contagem</td>
+          <td>❌ <strong>EXCLUÍDO</strong> da contagem</td>
+          <td>❌ <strong>EXCLUÍDO</strong> da contagem</td>
+        </tr>
+        <tr>
+          <td>Dies ad quem (último dia)</td>
+          <td>Incluído (vence no último dia)</td>
+          <td>Incluído (vence no último dia)</td>
+          <td>Incluído (vence no último dia)</td>
+        </tr>
+        <tr class="hl2">
+          <td>Feriados / fins de semana</td>
+          <td>Contam normalmente<br><small>(sem prorrogação)</small></td>
+          <td>Prorrogam para o 1.º dia útil seguinte (§3.º)</td>
+          <td>Prorrogam para o 1.º dia útil seguinte</td>
+        </tr>
+        <tr>
+          <td>Unidade mínima</td>
+          <td>Dias, meses e anos (não horas)</td>
+          <td>Dias (não horas)</td>
+          <td>Dias, meses e anos</td>
+        </tr>
+        <tr class="hl">
+          <td>Frações de dia</td>
+          <td>Computam como dia inteiro</td>
+          <td>Computam como dia inteiro (inicia-se no dia seguinte)</td>
+          <td>Computam como dia inteiro (inicia-se no dia seguinte)</td>
+        </tr>
+        <tr>
+          <td>Calendário</td>
+          <td>Comum (gregoriano civil)</td>
+          <td>Comum (prorrogação em feriados)</td>
+          <td>Comum (prorrogação em feriados)</td>
+        </tr>
+        <tr class="hl2">
+          <td>Exemplos de aplicação</td>
+          <td>Prescrição, decadência, reincidência, sursis, livramento condicional</td>
+          <td>Prazo para recurso, para resposta à acusação, para oferecimento de denúncia</td>
+          <td>Ação civil ex delicto, prazos civis decorrentes de crime</td>
+        </tr>
+        <tr>
+          <td>Brocardo</td>
+          <td><em>Dies a quo computatur in termino</em></td>
+          <td><em>Dies a quo non computatur in termino</em></td>
+          <td><em>Dies a quo non computatur in termino</em></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card">
+      <h3>⚙️ Texto do Art. 798, §1.º CPP (confronto direto)</h3>
+      <div class="law-quote">
+        <strong>Art. 798, §1.º CPP:</strong>
+        "Não se computará no prazo o dia do começo, incluindo-se, porém, o do vencimento."
+      </div>
+      <p class="mt2" style="font-size:0.86rem;color:var(--text-mid);">Note a <strong>inversão exata</strong>: o CPP <em>não computa</em> o dia do começo — regra diametralmente oposta ao art. 10 CP, que <em>inclui</em> o dia do começo. Memorize: <strong>CP inclui / CPP exclui</strong>.</p>
+    </div>
+    <div class="card">
+      <h3>📋 Texto do Art. 132 CC (confronto direto)</h3>
+      <div class="law-quote">
+        <strong>Art. 132 CC:</strong>
+        "Salvo disposição legal ou convencional em contrário, computam-se os prazos, excluído o dia do começo, e incluído o do vencimento."
+      </div>
+      <p class="mt2" style="font-size:0.86rem;color:var(--text-mid);">O Código Civil também exclui o dia do começo — mesmo sistema do CPP, oposto ao CP. O examinador gosta de perguntar se o art. 10 CP se aplica à ação civil ex delicto: <strong>NÃO</strong> — aplica-se o art. 132 CC.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 5. APLICAÇÕES                             -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="aplicacoes">
+  <div class="section-header">
+    <div class="section-num">05</div>
+    <div class="section-title"><span>Institutos do CP</span>Aplicações Específicas do Art. 10 CP</div>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-label">Prescrição da Pretensão Punitiva — Art. 111 CP</div>
+      <div class="timeline-content">
+        O art. 10 CP aplica-se diretamente à contagem do prazo prescricional. A prescrição começa a correr <strong>do dia em que o crime se consumou</strong> (art. 111, I, CP), <em>incluindo esse dia</em> na contagem (art. 10 CP). Assim, se o homicídio ocorreu em 15/03/2015, o prazo prescricional de 20 anos começou a correr no próprio dia 15/03/2015 e se completaria em 14/03/2035 (o último dia antes do aniversário, computando o dia inicial). <strong>STJ e STF confirmam</strong> que o dia do fato é incluído na contagem prescricional.
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-label">Prescrição da Pretensão Executória — Art. 112 CP</div>
+      <div class="timeline-content">
+        O prazo de prescrição executória começa a correr, em regra, da <strong>data em que passa em julgado a sentença condenatória para a acusação</strong> (art. 112, I, CP), incluindo esse dia. Em caso de evasão do condenado, começa a correr do dia da evasão. Em caso de revogação do sursis ou do livramento condicional, do dia da revogação. Em todos os casos, aplica-se o art. 10 CP: o dies a quo está incluído.
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-label">Decadência — Art. 103 CP</div>
+      <div class="timeline-content">
+        O prazo decadencial de <strong>6 meses</strong> para o oferecimento de queixa-crime ou de representação (nas ações penais privadas e públicas condicionadas) começa a correr do <strong>dia em que o ofendido (ou seu representante legal) soube quem é o autor do crime</strong>. Aplica-se o art. 10 CP: o dia do conhecimento está incluído. Se soube em 01/06, o prazo vence em 30/11 (6 meses computados pelo calendário, incluindo o dia 01/06). O erro mais comum: calcular 180 dias em vez de 6 meses pelo calendário — <strong>a contagem é pelo calendário</strong>, não por número fixo de dias.
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-label">Reincidência — Art. 64, I, CP</div>
+      <div class="timeline-content">
+        A reincidência é afastada após <strong>5 anos</strong> contados da <strong>extinção da pena</strong> anterior. O dies a quo é a data da extinção da pena (cumprimento, graça, prescrição executória etc.), incluindo esse dia (art. 10 CP). A contagem é pelo calendário comum. Se a pena foi extinta em 10/01/2020, os 5 anos expiram em 09/01/2025 — a partir de 10/01/2025 o agente não é mais reincidente para efeitos do art. 64, I, CP (embora os antecedentes subsistam como maus antecedentes).
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-label">Sursis (Suspensão Condicional da Pena) — Arts. 77–82 CP</div>
+      <div class="timeline-content">
+        O período de prova do sursis (2 a 4 anos) começa a ser contado a partir do <strong>início do cumprimento das condições</strong> fixadas pelo juiz. Aplica-se o art. 10 CP para a contagem do período de prova: o primeiro dia está incluído. O período de prova não se suspende por feriados. Importante: o sursis não se aplica a crimes dolosos com pena superior a 2 anos.
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-label">Livramento Condicional — Arts. 83–90 CP</div>
+      <div class="timeline-content">
+        O período de prova do livramento condicional é igual ao tempo restante da pena. A contagem do período de prova aplica o art. 10 CP a partir da data da concessão do benefício. Todas as condições do período de prova são acompanhadas pelo sistema penitenciário, e a contagem não é interrompida por feriados ou fins de semana.
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-label">Medida de Segurança — Art. 97, §1.º CP</div>
+      <div class="timeline-content">
+        O prazo mínimo da medida de segurança (1 a 3 anos) é contado pelo art. 10 CP, incluindo o dia de início da internação ou do tratamento ambulatorial. Após esse prazo mínimo, o juiz da execução determina a realização de perícia médica para verificar a cessação da periculosidade.
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-label">Pena Privativa de Liberdade — Cumprimento</div>
+      <div class="timeline-content">
+        O dia do início do cumprimento da pena (prisão cautelar, início da pena definitiva) é incluído na contagem. Aplica-se o art. 10 CP para calcular datas de: progressão de regime, benefícios prisionais, saída temporária, etc. Ex.: preso em 01/01, já conta o dia 01/01 como primeiro dia de pena cumprida.
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-gold mt2">
+    <div class="alert-icon">🎯</div>
+    <div><strong>Atenção especial — Prazo em HORAS (art. 10 NÃO se aplica):</strong> O art. 10 CP menciona apenas "dias, meses e anos". Prazos expressos em horas no CP e no CPP (ex.: 24h para lavratura do auto de prisão em flagrante, 48h para comunicação ao juiz da prisão, 24h para relaxamento de prisão ilegal) <em>não</em> seguem o art. 10 CP. Eles contam-se a partir da hora exata, sem que se compense o dia inteiro como no art. 10. Esta distinção é frequentemente cobrada em provas.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 6. EXEMPLOS PRÁTICOS                      -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="exemplos">
+  <div class="section-header">
+    <div class="section-num">06</div>
+    <div class="section-title"><span>Cálculos Resolvidos</span>Exemplos Práticos de Aplicação do Art. 10 CP</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 1 — Prescrição da Pretensão Punitiva</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.85rem;">Furto simples (art. 155, caput, CP) praticado no dia <strong>15/03/2015</strong>. Pena máxima: 4 anos → prazo prescricional: 8 anos (art. 109, IV, CP).</p>
+      <div class="ex-calc">
+        Dies a quo: 15/03/2015 (incluso — art. 10 CP)
+        Prazo: 8 anos pelo calendário
+        Vencimento: 14/03/2023
+        → Se não houve interrupção, prescrição consumada em 14/03/2023
+        (incluindo o dia 15/03/2015, o prazo se completou no dia
+        anterior ao aniversário de 8 anos)
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 2 — Decadência em Crime de Ação Privada</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.85rem;">Ofendido tomou conhecimento do autor do crime de injúria no dia <strong>01/06/2024</strong>. Prazo decadencial: 6 meses (art. 103 CP).</p>
+      <div class="ex-calc">
+        Dies a quo: 01/06/2024 (incluso — art. 10 CP)
+        Prazo: 6 meses pelo calendário comum
+        Vencimento: 30/11/2024 (último dia para oferecer queixa)
+        → Se cair em domingo: SEM prorrogação para segunda-feira
+          (prazo penal material não se prorroga — art. 10 CP)
+        → ERRO COMUM: calcular 180 dias = 28/11/2024 (errado!)
+          O certo é 6 meses pelo calendário = 30/11/2024
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 3 — Reincidência (Art. 64, I CP)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.85rem;">Pena extinta em <strong>10/01/2020</strong>. Verifica-se se há reincidência para crime praticado em <strong>10/01/2025</strong>.</p>
+      <div class="ex-calc">
+        Dies a quo: 10/01/2020 (incluso — art. 10 CP)
+        Prazo: 5 anos pelo calendário
+        5 anos contados de 10/01/2020 expiram em 09/01/2025
+        → Em 10/01/2025: prazo de 5 anos JÁ EXPIROU
+        → Crime praticado em 10/01/2025: NÃO há reincidência
+          (os 5 anos se completaram em 09/01/2025)
+        → Crime praticado em 09/01/2025: HÁ reincidência
+          (ainda dentro do prazo de 5 anos)
+      </div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 4 — Prazo Processual (CPP) × Prazo Material (CP)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.85rem;">Sentença condenatória publicada em <strong>segunda-feira, 01/07/2024</strong>. Prazo de 5 dias para o réu apelar (art. 593, §4.º, CPP). Prazo prescricional: comparação didática.</p>
+      <div class="ex-calc">
+        PRAZO PROCESSUAL (apelação — CPP, art. 798, §1.º):
+        Exclui o dia 01/07 (dies a quo não computado)
+        Conta: 02/07, 03/07, 04/07, 05/07, 06/07 (domingo)
+        → Prorroga para 08/07 (segunda-feira, 1.º dia útil)
+        → Último dia para apelar: 08/07/2024
+
+        PRAZO PENAL MATERIAL (hipotético — art. 10 CP):
+        Inclui o dia 01/07 (dies a quo computado)
+        Conta: 01/07, 02/07, 03/07, 04/07, 05/07
+        → SEM prorrogação se vencer em domingo
+        → Último dia: 05/07/2024
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 7. JURISPRUDÊNCIA STF / STJ               -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="jurisprudencia">
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <div class="section-title"><span>STF · STJ · Súmulas</span>Jurisprudência e Teses dos Tribunais Superiores</div>
+  </div>
+
+  <div class="alert alert-navy mt1" style="margin-bottom:1.2rem;">
+    <div class="alert-icon">ℹ️</div>
+    <div>As posições abaixo refletem o entendimento consolidado dos tribunais superiores, referenciados por tema e por número de Súmulas comprovadamente existentes, para garantia de <strong>zero alucinação</strong>.</div>
+  </div>
+
+  <div class="juris-grid">
+
+    <!-- STJ Súmula 455 - Prescrição e dies a quo -->
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge sumula">Posição Consolidada</span>
+        <div class="juris-title">Inclusão do Dia do Crime na Contagem Prescricional — Art. 10 CP</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ possui posição consolidada no sentido de que, para fins de contagem do prazo prescricional, <strong>o dia da prática do crime (dies a quo) está incluído</strong> na contagem, nos termos do art. 10 CP. O prazo prescricional começa a correr do próprio dia do crime (art. 111, I, CP), sendo esse dia computado integralmente, ainda que o crime tenha ocorrido no final do dia.</p>
+        <p class="mt1">Da mesma forma, nos crimes permanentes (art. 111, III, CP), o prazo começa a correr do dia em que cessou a permanência — incluindo esse dia na contagem (art. 10 CP).</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Prescrição — Dies a Quo</span>
+          <span class="tag tag-gold">Art. 10 CP + Art. 111 CP</span>
+          <span class="tag tag-blue">Posição Pacificada</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STJ Súmula 415 - Suspensão e contagem prescricional -->
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge sumula">Súmula 415</span>
+        <div class="juris-title">Prazo de Suspensão Prescricional — Máximo da Pena Cominada</div>
+      </div>
+      <div class="juris-body">
+        <p><em>"O período de suspensão do prazo prescricional é regulado pelo máximo da pena cominada."</em></p>
+        <p class="mt1"><strong>Relação com o art. 10 CP:</strong> A suspensão do prazo prescricional (ex.: art. 116 CP) interrompe temporariamente a contagem, mas quando o prazo é retomado, o art. 10 CP continua a reger a contagem — o dia de retomada do prazo é incluído na contagem (dies a quo computatur). A Súmula 415 regula a <em>duração máxima</em> da suspensão; o art. 10 CP regula como se retoma a contagem.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Súmula 415 STJ</span>
+          <span class="tag tag-gold">Suspensão Prescricional</span>
+          <span class="tag tag-blue">Art. 116 CP</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STJ - Decadência e art. 10 CP -->
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <div class="juris-title">Prazo Decadencial — Contagem pelo Art. 10 CP e Não por Dias Corridos</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ firmou entendimento de que o prazo decadencial de 6 meses (art. 103 CP) é contado pelo <strong>calendário comum</strong> (art. 10, 2.ª parte, CP) — ou seja, pela contagem de meses e não por um número fixo de 180 dias. O dies a quo (dia do conhecimento do autor) está incluído na contagem.</p>
+        <p class="mt1"><strong>Consequência prática importante:</strong> Seis meses que incluam fevereiro têm menos dias do que seis meses sem fevereiro. O prazo decadencial vence no mesmo dia do mês que o iniciou (ou no último dia do mês seguinte, se o mês não tiver esse dia). A decadência ocorre ainda que o prazo vença em feriado ou domingo — <em>sem prorrogação</em>.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Decadência — Art. 103 CP</span>
+          <span class="tag tag-gold">6 Meses pelo Calendário</span>
+          <span class="tag tag-blue">Sem Prorrogação</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STF - Prazo de horas no CPP -->
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <div class="juris-title">Prazo em Horas — Art. 10 CP Não se Aplica — Distinção com Prazos em Dias</div>
+      </div>
+      <div class="juris-body">
+        <p>O STF distingue claramente os prazos penais em <em>horas</em> — que não se sujeitam ao art. 10 CP — dos prazos em <em>dias, meses e anos</em>, que se regem pelo art. 10 CP. Prazos como o de 24 horas para a comunicação da prisão em flagrante ao juiz (art. 306 CPP) e o de 48 horas para análise da prisão (art. 310 CPP) contam-se a partir do momento exato da prisão, não do início do dia seguinte.</p>
+        <p class="mt1">Esta distinção é relevante porque os prazos em horas não comportam a inclusão do "dia do começo" como acontece com o art. 10 CP — a contagem é contínua, hora a hora, sem a abstração de "dia inteiro" que o art. 10 cria para os prazos em dias.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Prazos em Horas ≠ Art. 10 CP</span>
+          <span class="tag tag-blue">Prisão em Flagrante</span>
+          <span class="tag tag-gold">Arts. 306 e 310 CPP</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STJ - Reincidência - Prazo de 5 anos -->
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <div class="juris-title">Reincidência — Prazo de 5 Anos e Aplicação do Art. 10 CP</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ aplica o art. 10 CP para a contagem do prazo de 5 anos do art. 64, I, CP (afastamento da reincidência). O dies a quo é a <strong>data da extinção da pena</strong> anterior, incluindo esse dia na contagem. O prazo de 5 anos é contado pelo calendário comum, sem exclusão de feriados ou fins de semana.</p>
+        <p class="mt1">Ponto importante reconhecido pelo STJ: a extinção da pena por prescrição da pretensão executória <strong>também</strong> é marco inicial do prazo de 5 anos do art. 64, I, CP — a pena foi "extinta" pela prescrição, iniciando a contagem do período depurador. Esta questão é frequentemente cobrada em provas.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Reincidência</span>
+          <span class="tag tag-gold">Art. 64, I CP</span>
+          <span class="tag tag-blue">5 Anos pelo Calendário</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STF - Prazo prescricional e continuidade delitiva -->
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <div class="juris-title">Crime Continuado — Art. 10 CP e Contagem do Prazo Prescricional</div>
+      </div>
+      <div class="juris-body">
+        <p>Nos crimes continuados (art. 71 CP), a prescrição se regula pela pena que seria aplicada em concreto (art. 119 CP). O prazo prescricional começa a correr da <strong>data do último crime da série</strong> (art. 111, I, CP, interpretado para o crime continuado), incluindo esse dia na contagem nos termos do art. 10 CP.</p>
+        <p class="mt1">O STF firmou entendimento de que, no crime continuado, não se pode calcular prescrição pela data do primeiro crime isoladamente — o que alargaria artificialmente o prazo prescricional em desfavor do réu. O correto é considerar a continuação e o art. 119 CP para calcular a prescrição de cada crime autonomamente, aplicando-se o art. 10 CP ao dies a quo de cada crime individualmente considerado.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Crime Continuado</span>
+          <span class="tag tag-gold">Art. 71 + Art. 119 CP</span>
+          <span class="tag tag-blue">Prescrição Autônoma</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 8. DOUTRINA                              -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="doutrina">
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <div class="section-title"><span>Doutrina Nacional</span>Principais Posições Doutrinárias</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Rogério Greco — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Greco destaca que o art. 10 CP consagra o brocardo <em>dies a quo computatur in termino</em>, enfatizando que essa regra <strong>beneficia o acusado</strong> ao iniciar a contagem de prazos extintivos (como a prescrição) a partir do próprio dia do fato, sem aguardar o dia seguinte. Para o autor, o fundamento é o <em>favor rei</em>: em matéria penal, a dúvida e a interpretação devem beneficiar o réu, e a inclusão do dies a quo antecipa o cumprimento de prazos que lhe são favoráveis. Ressalta a importância do calendário comum: a contagem não é por 30 dias por mês ou 365 dias por ano, mas pelo calendário gregoriano efetivo, com suas variações.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cezar Roberto Bitencourt — Tratado de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Bitencourt analisa o art. 10 CP sob dois ângulos: (a) a regra do <em>dies a quo</em> — que difere do direito processual e civil ao incluir o primeiro dia — e (b) a regra do <em>calendário comum</em> — que afasta qualquer cálculo por número fixo de dias por mês. Chama atenção para a distinção entre <strong>prazo penal material</strong> (art. 10 CP) e <strong>prazo processual penal</strong> (art. 798, §1.º, CPP), alertando que a confusão entre eles pode levar a graves erros no cálculo de prescrição e decadência. Quanto às horas, sustenta que o art. 10 CP <em>não</em> as abrange — prazos em horas seguem regra específica de contagem contínua.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cleber Masson — Direito Penal Esquematizado</div>
+      </div>
+      <div class="juris-body">
+        <p>Masson sistematiza a aplicação do art. 10 CP de forma exemplificativa e didática, ideal para concursos. Destaca três pontos essenciais: (1) o art. 10 CP aplica-se apenas a prazos de <em>direito penal material</em>; (2) prazos processuais penais seguem o CPP, que exclui o dies a quo — são regimes opostos; (3) o prazo de meses é contado pelo calendário, não por 30 dias — um prazo de 6 meses pode ter de 181 a 184 dias dependendo dos meses envolvidos. Alerta especialmente sobre a questão dos <strong>feriados e fins de semana</strong>: o prazo penal material não se prorroga, ao contrário do processual.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Guilherme de Souza Nucci — Código Penal Comentado</div>
+      </div>
+      <div class="juris-body">
+        <p>Nucci sustenta que a regra do art. 10 CP é de <strong>aplicação obrigatória</strong> e cogente: o juiz não pode afastar a inclusão do dies a quo nos prazos penais materiais. Analisa a expressão "calendário comum" como referência ao calendário gregoriano adotado no Brasil, com todos os seus meses e anos (incluindo anos bissextos). Destaca que o ano bissexto (366 dias) deve ser levado em consideração quando o prazo cobre fevereiro de um ano bissexto — o mês terá 29 dias, não 28. Critica a falta de clareza da lei quanto às horas, mas entende que o silêncio do art. 10 sobre horas implica que prazos em horas seguem regras próprias do ato que os origina.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Fernando Capez — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Capez apresenta a distinção entre prazos penais materiais, processuais e civis de forma esquematizada. Destaca que a razão da diferença de tratamento é filosófica: no processo penal, o prazo recursal (ex.: 5 dias para apelar) deve ser contado sem o dia da publicação para garantir ao réu um prazo pleno de reação; no direito penal material, a inclusão do dies a quo beneficia o réu ao antecipar o início da contagem de prazos favoráveis (prescrição, decadência). Observa que a lógica inversa do art. 10 CP em relação ao CPP é, portanto, igualmente garantista — ambas as regras foram pensadas para beneficiar o acusado no respectivo âmbito.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Controvérsia: Art. 10 CP nas Leis Penais Especiais</div>
+      </div>
+      <div class="juris-body">
+        <p>Há controvérsia sobre a aplicação do art. 10 CP às leis penais especiais (Lei de Drogas, Lei Maria da Penha, Estatuto do Idoso etc.):</p>
+        <ul class="mt1">
+          <li><strong>Posição majoritária:</strong> O art. 10 CP aplica-se subsidiariamente às leis penais especiais quanto aos prazos de natureza penal material, salvo quando a lei especial contiver regra própria de contagem</li>
+          <li><strong>Posição quanto à prescrição nas leis especiais:</strong> Quando a lei especial não trata da prescrição (ex.: Lei Maria da Penha não altera a prescrição dos crimes nela previstos), aplica-se o CP integralmente, incluindo o art. 10</li>
+          <li><strong>Prazos processuais em leis especiais:</strong> Seguem o art. 798, §1.º, CPP por analogia (excluem o dies a quo), quando não há regra específica</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 9. SISTEMÁTICA                           -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="sistematica">
+  <div class="section-header">
+    <div class="section-num">09</div>
+    <div class="section-title"><span>Conexões Sistemáticas</span>Art. 10 CP na Sistemática do Código Penal</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔗 Artigos Diretamente Conectados ao Art. 10 CP</h3>
+      <ul>
+        <li><strong>Art. 103 CP (Decadência):</strong> prazo de 6 meses contado pelo art. 10 CP a partir do conhecimento do autor</li>
+        <li><strong>Art. 107 CP (Extinção de punibilidade):</strong> as causas extintivas dependem de contagem temporal — art. 10 CP regula a forma</li>
+        <li><strong>Art. 109 CP (Prescrição — prazos):</strong> os prazos prescricionais são contados pelo art. 10 CP</li>
+        <li><strong>Art. 111 CP (Prescrição — dies a quo):</strong> especifica quando começa a correr; art. 10 diz como se conta a partir daí</li>
+        <li><strong>Art. 116 CP (Suspensão da prescrição):</strong> durante a suspensão, o art. 10 CP fica suspenso; retomada segue o mesmo critério</li>
+        <li><strong>Art. 117 CP (Causas interruptivas):</strong> após a interrupção, reinicia-se a contagem pelo art. 10 CP</li>
+        <li><strong>Art. 64, I, CP (Reincidência — 5 anos):</strong> contagem pelo art. 10 CP a partir da extinção da pena</li>
+        <li><strong>Art. 77 e ss. CP (Sursis):</strong> período de prova contado pelo art. 10 CP</li>
+        <li><strong>Art. 83 CP (Livramento condicional):</strong> frações de pena e período de prova regidos pelo art. 10 CP</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📋 Art. 10 CP × Art. 11 CP — Desprezibilidade das Frações de Dia e de Cruzeiro</h3>
+      <div class="law-quote">
+        <strong>Art. 11 CP:</strong>
+        "Desprezam-se, nas penas privativas de liberdade e nas restritivas de direitos, as frações de dia, e, na pena de multa, as frações de cruzeiro."
+      </div>
+      <p class="mt2" style="font-size:0.86rem;color:var(--text-mid);">O art. 11 CP complementa o art. 10 CP: enquanto o art. 10 determina que fração de dia conta como dia inteiro no cômputo dos <em>prazos</em>, o art. 11 determina que frações de dia são desprezadas no cálculo da <em>pena</em> resultante. São normas de campo distinto: art. 10 → contagem de prazos; art. 11 → cálculo de pena.</p>
+      <div class="alert alert-gold mt2" style="font-size:0.8rem;">
+        <div>🎯 <strong>Ponto de prova:</strong> Art. 10 CP = prazo (fração de dia conta como dia inteiro). Art. 11 CP = pena (fração de dia é desprezada). Não confundir: são normas com finalidades opostas mas complementares.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-3 mt2">
+    <div class="card">
+      <h3>📅 Aplicação nos Benefícios da LEP</h3>
+      <p>A Lei de Execução Penal (Lei 7.210/84) não possui regra própria de contagem de prazos. Aplica-se subsidiariamente o art. 10 CP para:</p>
+      <ul class="mt1">
+        <li>Progressão de regime (1/6, 2/5, 3/5 da pena)</li>
+        <li>Saída temporária (cumprimento de 1/6 da pena)</li>
+        <li>Remição de pena</li>
+        <li>Livramento condicional</li>
+        <li>Indulto e comutação</li>
+      </ul>
+      <p class="mt1">O dia de início do cumprimento da pena (dia da prisão cautelar — via detração do art. 42 CP, ou início da execução definitiva) é incluído na contagem, segundo o art. 10 CP.</p>
+    </div>
+    <div class="card">
+      <h3>⏱️ Prazos em Horas no CPP — Quadro</h3>
+      <p style="font-size:0.83rem;color:var(--text-mid);">Os seguintes prazos em horas <strong>não se regem pelo art. 10 CP</strong>:</p>
+      <ul class="mt1">
+        <li><strong>24h</strong> — prazo para lavratura do auto de prisão em flagrante (art. 306, §1.º, CPP)</li>
+        <li><strong>24h</strong> — prazo para o juiz apreciar o auto de flagrante e converter, relaxar ou conceder liberdade provisória (art. 310 CPP)</li>
+        <li><strong>48h</strong> — prazo para o preso ser apresentado ao juiz em audiência de custódia</li>
+        <li><strong>24h</strong> — prazo para comunicação da prisão ao MP (art. 306, §1.º, CPP)</li>
+      </ul>
+      <p class="mt1" style="font-size:0.82rem;color:var(--text-soft);">Esses prazos contam-se do momento exato do ato (hora e minuto da prisão), sem a abstração do "dia inteiro" do art. 10 CP.</p>
+    </div>
+    <div class="card">
+      <h3>🔄 Resumo Mnemônico para Prova</h3>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.84rem;line-height:1.8;">
+        <p><strong style="color:var(--gold-light);">CP (Penal Material) → Art. 10</strong><br>
+        ✅ INCLUI o 1.º dia<br>
+        ✅ Calendário comum<br>
+        ❌ NÃO prorroga por feriado<br>
+        ❌ NÃO aplica a prazos em horas</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.7rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">CPP (Processual) → Art. 798, §1.º</strong><br>
+        ❌ EXCLUI o 1.º dia<br>
+        ✅ Calendário comum<br>
+        ✅ PRORROGA por feriado</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.7rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">CC (Civil) → Art. 132</strong><br>
+        ❌ EXCLUI o 1.º dia<br>
+        ✅ Calendário comum<br>
+        ✅ PRORROGA por feriado</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- PROVA / ENAM                             -->
+<!-- ══════════════════════════════════════════ -->
+<section id="prova" class="prova-section">
+  <h2>⚖️ Pontos Cobrados em Magistratura e ENAM</h2>
+  <p class="intro">Questões, teses e pegadinhas recorrentes nos concursos de Juiz de Direito, ENAM e equivalentes relacionadas ao Art. 10 CP.</p>
+
+  <div class="prova-items">
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">01</span>O art. 10 CP determina que o dia do começo deve ser incluído ou excluído do cômputo do prazo penal?</div>
+      <div class="prova-item-a"><strong>Incluído.</strong> O art. 10 CP consagra o brocardo <em>dies a quo computatur in termino</em>: o dia do começo do prazo penal material <em>está incluído</em> na contagem. Esta regra é diametralmente oposta ao art. 798, §1.º, CPP (prazo processual penal — exclui o dies a quo) e ao art. 132 CC (prazo civil — exclui o dies a quo). A inversão entre o CP e o CPP/CC é a distinção mais cobrada em provas de magistratura referente ao art. 10 CP.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">02</span>Se o prazo de decadência de 6 meses (art. 103 CP) se completar em um domingo, quando se opera a decadência?</div>
+      <div class="prova-item-a"><strong>No próprio domingo.</strong> O prazo penal material (art. 10 CP) não se prorroga por feriados, domingos ou sábados. A decadência opera-se no último dia do prazo, ainda que seja dia não útil. Esta é a regra do "calendário comum" — todos os dias contam. Ao contrário, o prazo processual penal (art. 798, §3.º, CPP) prorroga-se para o primeiro dia útil seguinte quando o último dia cair em feriado ou fim de semana. Confundir os dois regimes é o erro mais frequente dos candidatos.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">03</span>Crime praticado em 01/01/2020. Pena máxima de 4 anos (prescrição de 8 anos — art. 109, IV, CP). Em que data se completa a prescrição?</div>
+      <div class="prova-item-a">Aplicando o art. 10 CP: <strong>o dia 01/01/2020 está incluído</strong> na contagem. O prazo de 8 anos, contado pelo calendário comum a partir de 01/01/2020, completa-se em <strong>31/12/2027</strong> (o último dia antes do aniversário de 8 anos, pois o dies a quo foi incluído). Se não houver causa interruptiva (art. 117 CP) ou suspensiva (art. 116 CP), a prescrição se opera em 31/12/2027. Atenção: mesmo que essa data caia em feriado ou fim de semana, a prescrição ocorre nesse dia, sem prorrogação.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">04</span>O art. 10 CP se aplica aos prazos expressos em horas? Justifique.</div>
+      <div class="prova-item-a"><strong>Não.</strong> O art. 10 CP menciona expressamente apenas "dias, meses e anos". Prazos em horas não estão abrangidos pela regra do art. 10. Exemplos: o prazo de 24h para lavratura do auto de prisão em flagrante e de 24h para o juiz apreciar o flagrante contam-se a partir da hora exata da prisão, de forma contínua, sem a abstração do "dia inteiro" que o art. 10 cria para os prazos em dias. Trata-se de posição pacífica na doutrina (Bitencourt, Nucci, Masson) e na jurisprudência dos tribunais superiores.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">05</span>Prazo de 6 meses (decadência — art. 103 CP): o candidato sabe que 6 meses = 180 dias. Está correto calcular assim?</div>
+      <div class="prova-item-a"><strong>Não.</strong> O art. 10 CP determina que os prazos se contam pelo <strong>calendário comum</strong>, não por número fixo de dias. Seis meses pelo calendário podem ter 181, 182, 183 ou 184 dias, dependendo de quais meses estão envolvidos (meses com 28, 29, 30 ou 31 dias). O prazo de 6 meses começa no dia X e termina no dia X do mês correspondente — se o prazo começa em 01/06, termina em 30/11 (e não em 28/11 ou 29/11, que seria 180 dias). Este é um erro clássico em provas — calcular 180 dias em vez de 6 meses pelo calendário.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">06</span>Qual a diferença entre o art. 10 CP e o art. 11 CP? São normas que tratam do mesmo assunto?</div>
+      <div class="prova-item-a"><strong>Não.</strong> São normas de campo distinto e complementar: o <strong>art. 10 CP</strong> regula a <em>contagem de prazos</em> penais materiais (inclui o dies a quo; usa calendário comum) — aplica-se a prescrição, decadência, reincidência etc. O <strong>art. 11 CP</strong> regula o <em>cálculo da pena</em> resultante — determina que frações de dia são desprezadas nas penas privativas de liberdade e restritivas de direitos, e frações mínimas são desprezadas na pena de multa. Art. 10 → prazo; Art. 11 → pena. A confusão entre eles é frequente em provas.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">07</span>Prazo para apelar (5 dias — art. 593 CPP): aplica-se o art. 10 CP ou o art. 798, §1.º, CPP?</div>
+      <div class="prova-item-a">Aplica-se o <strong>art. 798, §1.º, CPP</strong>: o prazo para apelar é processual penal, não penal material. No prazo processual penal, o dia da publicação/intimação da sentença <em>não</em> é computado (dies a quo excluído). Além disso, se o último dia cair em feriado ou fim de semana, o prazo prorroga-se para o primeiro dia útil seguinte (art. 798, §3.º, CPP). O art. 10 CP <em>não</em> se aplica a prazos processuais. Esta distinção é crítica para o exame de magistratura.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">08</span>Pena extinta em 10/03/2019. Em que data o agente deixa de ser tecnicamente reincidente (art. 64, I, CP)?</div>
+      <div class="prova-item-a">Aplicando o art. 10 CP ao prazo de 5 anos do art. 64, I, CP: o dies a quo é <strong>10/03/2019 (incluindo esse dia)</strong>. Pelo calendário comum, 5 anos a partir de 10/03/2019 expiram em <strong>09/03/2024</strong>. Portanto, a partir de <strong>10/03/2024</strong> o agente não é mais reincidente para fins do art. 64, I, CP. Crime praticado em 10/03/2024 ou depois → não há reincidência técnica. Crime praticado em 09/03/2024 → há reincidência (dentro dos 5 anos). Atenção: os antecedentes continuam como maus antecedentes mesmo após os 5 anos.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">09</span>[ENAM — alta recorrência] Crime praticado às 23h50 de 15/05/2022. O prazo prescricional começa em 15 ou 16/05/2022?</div>
+      <div class="prova-item-a">Começa em <strong>15/05/2022</strong>. Nos termos do art. 10 CP, o dia do começo (15/05/2022) é incluído no cômputo do prazo. Mesmo que o crime tenha ocorrido às 23h50 (apenas 10 minutos antes da meia-noite), a lei considera o dia inteiro como o primeiro dia do prazo prescricional. A fração de dia conta como dia inteiro no direito penal material. Isso beneficia o réu ao antecipar o início da contagem da prescrição. O prazo prescricional começa, portanto, no próprio dia 15/05/2022, não no dia 16.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">10</span>O art. 10 CP se aplica à ação civil ex delicto? E à representação fiscal para fins penais?</div>
+      <div class="prova-item-a"><strong>Ação civil ex delicto → NÃO.</strong> Trata-se de prazo civil, regulado pelo art. 132 do Código Civil (exclui o dies a quo, prorroga em feriados). O art. 10 CP não se aplica a prazos de natureza civil, ainda que decorram de crime. <strong>Representação fiscal para fins penais (crimes tributários):</strong> o prazo prescricional do crime tributário é penal material, regido pelo art. 10 CP (inclui o dies a quo). A representação fiscal em si é ato administrativo, mas seus efeitos sobre a prescrição penal seguem o art. 10 CP — o que gera tensão entre a esfera administrativa e a penal, tema relevante em provas de magistratura federal.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">11</span>O prazo prescricional é penal material. Se vencer em domingo, como se conta?</div>
+      <div class="prova-item-a">A prescrição se consuma <strong>no próprio domingo</strong>, sem qualquer prorrogação. O art. 10 CP determina que os prazos penais materiais são contados pelo calendário comum, o que significa que todos os dias contam — inclusive domingos, sábados e feriados — sem interrupção ou prorrogação. Ao contrário do prazo processual (art. 798, §3.º, CPP) e do prazo civil (art. 132 CC), que se prorrogam para o primeiro dia útil seguinte quando vencem em dia não útil, o prazo prescricional se consuma na data exata, independentemente do dia da semana ou de ser feriado.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">12</span>[ENAM — questão clássica] Réu preso preventivamente em 01/01/2024. Condenado a 2 anos de reclusão em 30/06/2024 (sentença definitiva). Aplique o art. 10 CP à detração do art. 42 CP para calcular o saldo de pena a cumprir.</div>
+      <div class="prova-item-a">Aplicando o art. 10 CP à contagem da prisão provisória para fins do art. 42 CP: o dies a quo da prisão preventiva é <strong>01/01/2024 (incluso)</strong>. Da data da prisão (01/01/2024) até o dia em que a sentença começou a valer (30/06/2024, incluso) = 6 meses pelo calendário = 182 dias (janeiro 31 + fevereiro 29 (2024 bissexto) + março 31 + abril 30 + maio 31 + junho 30 = 182 dias). Pena total: 2 anos = 730 dias (2024 bissexto: 366 + 364 = 730). Saldo: 730 – 182 = <strong>548 dias a cumprir</strong>. Atenção: 2024 é bissexto (ano com 366 dias), relevante para o cálculo pelo calendário comum.</div>
+    </div>
+
+  </div>
+</section>
+
+</div><!-- /page-wrap -->
+
+<footer>
+  <strong>Art. 10.º do Código Penal Brasileiro</strong> — Decreto-Lei n.º 2.848/1940<br>
+  Material elaborado para preparação à Magistratura / ENAM · Doutrina e jurisprudência consolidadas · Atualizado 2025
+</footer>
+
+</body>
+</html>

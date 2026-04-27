@@ -1,0 +1,315 @@
+@startmindmap
+
+<style>
+mindmapDiagram {
+  .titulo {
+    BackgroundColor #1a1a2e
+    FontColor #e0e0e0
+    FontSize 18
+    FontStyle bold
+    RoundCorner 15
+    LineColor #4a90d9
+    LineThickness 3
+  }
+  .raiz {
+    BackgroundColor #16213e
+    FontColor #ffffff
+    FontSize 15
+    FontStyle bold
+    RoundCorner 12
+    LineColor #4a90d9
+    LineThickness 2
+  }
+  .nivel1 {
+    BackgroundColor #0f3460
+    FontColor #e0e0e0
+    FontSize 13
+    FontStyle bold
+    RoundCorner 10
+    LineColor #4a90d9
+    LineThickness 2
+  }
+  .nivel2 {
+    BackgroundColor #1a4a7a
+    FontColor #d0d0d0
+    FontSize 12
+    RoundCorner 8
+    LineColor #5a9fd4
+    LineThickness 1.5
+  }
+  .nivel3 {
+    BackgroundColor #1e3a5f
+    FontColor #c0c0c0
+    FontSize 11
+    RoundCorner 6
+    LineColor #6ab0e0
+    LineThickness 1
+  }
+  .stf {
+    BackgroundColor #7b2d00
+    FontColor #ffe0cc
+    FontSize 11
+    FontStyle bold
+    RoundCorner 8
+    LineColor #ff6b35
+    LineThickness 1.5
+  }
+  .stj {
+    BackgroundColor #004d40
+    FontColor #ccffe8
+    FontSize 11
+    FontStyle bold
+    RoundCorner 8
+    LineColor #00c896
+    LineThickness 1.5
+  }
+  .doutrina {
+    BackgroundColor #4a0080
+    FontColor #e8ccff
+    FontSize 11
+    RoundCorner 8
+    LineColor #b366ff
+    LineThickness 1.5
+  }
+  .cf {
+    BackgroundColor #002060
+    FontColor #cce0ff
+    FontSize 11
+    FontStyle bold
+    RoundCorner 8
+    LineColor #4488ff
+    LineThickness 1.5
+  }
+  .alerta {
+    BackgroundColor #7a4000
+    FontColor #ffd0a0
+    FontSize 11
+    FontStyle bold
+    RoundCorner 8
+    LineColor #ffaa44
+    LineThickness 1.5
+  }
+  .prova {
+    BackgroundColor #1a3300
+    FontColor #aaffaa
+    FontSize 12
+    FontStyle bold
+    RoundCorner 10
+    LineColor #44ff44
+    LineThickness 2
+  }
+  .sumula {
+    BackgroundColor #3d0030
+    FontColor #ffccee
+    FontSize 11
+    FontStyle bold
+    RoundCorner 8
+    LineColor #ff66bb
+    LineThickness 1.5
+  }
+}
+</style>
+
+* <b>ART. 1º DO CÓDIGO PENAL\n"Não há crime sem lei anterior que o defina.\nNão há pena sem prévia cominação legal."\n──────────────────────────────\nPRINCÍPIO DA LEGALIDADE ESTRITA\nnullum crimen, nulla poena sine lege</b> <<titulo>>
+
+** <b>1. TEXTO LEGAL\nE POSIÇÃO NO ORDENAMENTO</b> <<raiz>>
+*** <b>Art. 1º CP (Decreto-Lei 2.848/1940)</b> <<nivel1>>
+**** <b>Epígrafe: "Da Anterioridade da Lei"</b>\n(doutrina critica: deveria ser "Da Legalidade") <<nivel2>>
+**** <b>Âmbito: crimes e contravenções penais</b>\n(DL 3.688/1941 – LCP, art. 1º) <<nivel2>>
+*** <b>Previsão Constitucional</b> <<cf>>
+**** <b>Art. 5º, XXXIX, CF/88</b>\n"não há crime sem lei anterior que o defina,\nnem pena sem prévia cominação legal" <<nivel2>>
+**** <b>Art. 5º, XL, CF/88</b>\n"a lei penal não retroagirá,\nsalvo para beneficiar o réu" <<nivel2>>
+**** <b>Art. 22, I, CF/88</b>\nCompetência privativa da União\npara legislar sobre Direito Penal <<nivel2>>
+**** <b>Art. 5º, II, CF/88</b>\nPrincípio geral da legalidade\n(ninguém é obrigado a fazer ou\ndeixar de fazer algo senão\nem virtude de lei) <<nivel2>>
+*** <b>Norma de Direito Humano</b> <<nivel1>>
+**** <b>Art. 9º CADH (Pacto São José)</b>\nPrincípio da legalidade e retroatividade\n(status supralegal – STF, RE 466.343) <<nivel2>>
+**** <b>Art. 15.1 PIDCP (ONU)</b>\nnullum crimen sine lege – Decreto 592/92 <<nivel2>>
+**** <b>Art. 11.2 DUDH (1948)</b>\nIrretroatividade penal como\ndireito humano universal <<nivel2>>
+
+** <b>2. FUNDAMENTOS\nE FUNÇÕES</b> <<raiz>>
+*** <b>Fundamento Político</b> <<doutrina>>
+**** <b>Limitação do jus puniendi estatal</b>\nVinculação do Judiciário e Executivo\nàs leis do Legislativo (Cunha, Bitencourt) <<nivel3>>
+*** <b>Fundamento Democrático</b> <<doutrina>>
+**** <b>Representação popular</b>\nSomente os representantes do povo\npodem definir condutas criminosas <<nivel3>>
+*** <b>Fundamento Jurídico</b> <<doutrina>>
+**** <b>Segurança jurídica</b>\nPrevisibilidade – cidadão conhece\nanticipadamente o que é proibido <<nivel3>>
+*** <b>Origem Histórica</b> <<nivel1>>
+**** <b>Paul Johann Anselm von Feuerbach (1801)</b>\n"Tratado de Direito Penal" – teoria da\ncoação psicológica – formulação latina:\nnullum crimen, nulla poena sine praevia lege <<nivel2>>
+**** <b>Magna Carta (1215)</b>\nArt. 39 – vedação de punição\nsem julgamento por pares <<nivel2>>
+**** <b>Iluminismo</b>\nCessare Beccaria, Montesquieu, Rousseau <<nivel2>>
+*** <b>Funções do Princípio</b> <<nivel1>>
+**** <b>Função de Garantia</b>\nProtege o cidadão do arbítrio estatal <<nivel2>>
+**** <b>Função de Motivação</b>\nCoação psicológica – destinatário\nconhece a proibição antes de agir <<nivel2>>
+**** <b>Função de Segurança Jurídica</b>\nEstabilidade do sistema punitivo <<nivel2>>
+
+** <b>3. QUATRO\nSUBPRINCÍPIOS\n(DESDOBRAMENTOS)</b> <<raiz>>
+*** <b>LEX PRAEVIA\n(Anterioridade)</b> <<nivel1>>
+**** <b>Nullum crimen, nulla poena sine lege praevia</b>\nLei deve ser anterior ao fato criminoso <<nivel2>>
+**** <b>Proibição de retroatividade maléfica</b>\nLei nova mais grave NÃO retroage\n(Art. 5º, XL, CF – cláusula pétrea) <<nivel2>>
+**** <b>Exceção: retroatividade benéfica</b>\nLex mitior retroage sempre\n(Art. 2º, §único, CP) <<nivel2>>
+**** <b>STF – Progressão de regime</b>\n"A lei que estabelece requisitos mais gravosos\npara progressão de regime não se aplica a\ncrimes cometidos antes de sua vigência"\n(RHC 221271 AgR, Min. Luiz Fux, 2023) <<stf>>
+**** <b>STJ – Art. 112, §1º, LEP</b>\nExame criminológico introduzido por lei nova\nnão retroage para crimes anteriores –\n(HC 926.021, Min. Jesuíno Rissato, 2024) <<stj>>
+**** <b>ATENÇÃO: Norma de Execução Penal</b>\nNatureza PENAL (não procedimental)\nSó incide ao tempo do crime <<alerta>>
+*** <b>LEX SCRIPTA\n(Reserva Legal)</b> <<nivel1>>
+**** <b>Nullum crimen, nulla poena sine lege scripta</b>\nSó LEI em sentido formal cria crimes <<nivel2>>
+**** <b>ADMITIDO: Lei Ordinária Federal</b>\nArt. 22, I, CF – competência privativa da União <<nivel2>>
+**** <b>NÃO ADMITIDO: Medida Provisória</b>\npara criar crimes ou penas mais graves\n(STF, RE 254.818, Min. Sepúlveda Pertence, 2000)\n"admissível MP em matéria penal apenas se\nbenéfica ao acusado" <<stf>>
+**** <b>NÃO ADMITIDO: Lei Delegada</b>\nArt. 68, §1º, CF – vedada delegação sobre\ndireitos individuais e matéria penal (Cunha) <<nivel2>>
+**** <b>NÃO ADMITIDO: Decreto / Portaria</b>\nPortarias de Ministérios, Resoluções do CNJ,\nCNMP, TCE, TCU, ANVISA não criam crimes <<nivel2>>
+**** <b>NÃO ADMITIDO: Costume</b>\nCostume não é fonte formal direta do DP\n(pode ser fonte interpretativa mediata) <<nivel2>>
+**** <b>NÃO ADMITIDO: Lei Estadual/Municipal</b>\npara criar tipo penal autônomo (art. 22, I, CF)\nSalvo para complementar norma penal em branco <<nivel2>>
+**** <b>NORMA PENAL EM BRANCO:</b>\nSTF: art. 268 CP – norma em branco\nválida quando complementada por atos\nnormativos da União/Estados/Municípios,\nsem criar novo tipo (RE-RG, 2024) <<stf>>
+*** <b>LEX STRICTA\n(Proibição da Analogia)</b> <<nivel1>>
+**** <b>Nullum crimen, nulla poena sine lege stricta</b>\nProibição da analogia in malam partem <<nivel2>>
+**** <b>VEDADA: Analogia incriminadora</b>\nNão se pode condenar por conduta similar\nnão tipificada expressamente <<nivel2>>
+**** <b>PERMITIDA: Analogia in bonam partem</b>\nAnalogia favorável ao réu – admissível\n(ex: extensão de causas de exclusão de ilicitude) <<nivel2>>
+**** <b>STF – Furto de sinal de TV a cabo</b>\nAtípico – analogia com furto de energia (art. 155, §3º)\nconfiguraria analogia in malam partem –\n(HC 97.261, Min. Joaquim Barbosa, 2011) <<stf>>
+**** <b>STF – Ato infracional (cartão amarelo)</b>\n"É atípica a conduta consistente na provocação\ndeliberada de cartão amarelo em partida de futebol\nem razão do princípio da legalidade estrita"\n(Informativo STF 1202, 2025) <<stf>>
+**** <b>Interpretação extensiva x Analogia</b>\nInterpretação extensiva: revela sentido da norma\n(ADMITIDA em bonam e malam partem)\nAnalogia: cria norma nova para caso omisso\n(VEDADA in malam partem) <<doutrina>>
+*** <b>LEX CERTA\n(Taxatividade / Determinação)</b> <<nivel1>>
+**** <b>Nullum crimen, nulla poena sine lege certa</b>\nTipos penais devem ser claros, precisos,\ndetermináveis – proibição de tipos vagos <<nivel2>>
+**** <b>Destinatário: Legislador</b>\nDirigido ao Poder Legislativo na\ncriminalização de condutas <<nivel2>>
+**** <b>STF – Crime de desobediência</b>\nHC 88.452/RS, Min. Eros Grau, 2006:\n"Desobedecer ordem de servidor público"\n– vagueza compromete legalidade <<stf>>
+**** <b>Crítica doutrinária: Lei de Segurança Nacional</b>\nLei 7.170/83, art. 18 – "ordem política",\n"animosidade" – tipos vagos que violam\nlex certa (Bitencourt, Greco) <<doutrina>>
+**** <b>Tipos penais abertos</b>\nAdmitidos com ressalvas quando\nhá complementação judicial razoável\n(ex: "ato obsceno" do art. 233 CP) <<nivel3>>
+**** <b>Elementos normativos do tipo</b>\nAdmitidos desde que valoração seja\nrazoavelmente determinável pelo juiz <<nivel3>>
+
+** <b>4. NORMA PENAL\nEM BRANCO</b> <<raiz>>
+*** <b>Conceito</b> <<nivel1>>
+**** <b>Tipo cujo preceito primário necessita\nde complementação normativa</b> <<nivel2>>
+*** <b>Homogênea (Própria)</b> <<nivel1>>
+**** <b>Complemento na mesma espécie normativa</b>\nHomovitelina: mesmo diploma legal\nHeterovitelina: diplomas diferentes <<nivel2>>
+*** <b>Heterogênea (Imprópria)</b> <<nivel1>>
+**** <b>Complemento em ato normativo\nde hierarquia inferior</b>\n(portaria, decreto, resolução) <<nivel2>>
+**** <b>Ex: Lei 11.343/2006 + Portaria SVS/MS</b>\n(lista de substâncias entorpecentes) <<nivel2>>
+*** <b>Constitucionalidade (STF)</b> <<stf>>
+**** <b>STF: norma penal em branco é constitucional</b>\ndesde que o núcleo essencial da proibição\nesteja na lei formal (Binding) <<nivel2>>
+**** <b>TESE STF (Repercussão Geral):</b>\n"Art. 268 CP veicula norma penal em branco\nque pode ser complementada por atos\nnormativos infralegais dos entes federados,\nrespeitadas as esferas de atuação, sem\nofensa ao art. 22, I, CF" (2024) <<nivel2>>
+*** <b>Norma Penal em Branco ao Revés</b> <<nivel1>>
+**** <b>Preceito secundário (pena) necessita\ncomplementação</b>\n(doutrina considera inconstitucional) <<nivel2>>
+
+** <b>5. RELAÇÃO COM\nPRINCÍPIOS CONEXOS</b> <<raiz>>
+*** <b>Princípio da Reserva Legal</b> <<nivel1>>
+**** <b>Visão tradicional: sinônimos</b>\nLegalidade = Reserva Legal (maioria) <<nivel2>>
+**** <b>Visão de Bitencourt: distinção</b>\nReserva legal: regulação obrigatória\npor lei formal (mais estrita)\nLegalidade: sentido mais amplo (ratio legis) <<doutrina>>
+*** <b>Princípio da Anterioridade</b> <<nivel1>>
+**** <b>Decorre de lex praevia</b>\nCriminalização somente para fatos futuros <<nivel2>>
+*** <b>Princípio da Irretroatividade</b> <<nivel1>>
+**** <b>Art. 5º, XL, CF – cláusula pétrea</b>\nLex gravior: irretroativa (regra)\nLex mitior: retroativa (exceção favorável) <<nivel2>>
+*** <b>Princípio da Taxatividade</b> <<nivel1>>
+**** <b>Expressão máxima da lex certa</b>\nVedação de tipos genéricos ou abertos\nexcessivamente vagos <<nivel2>>
+*** <b>Princípio da Fragmentariedade</b> <<nivel1>>
+**** <b>DP tutela apenas fragmentos dos bens jurídicos</b>\nBens mais relevantes – ultima ratio <<nivel2>>
+**** <b>Desdobramento: Princípio da Insignificância</b>\n(aplicado pelo STF e STJ com requisitos\nobjeto, grau de lesão, periculosidade,\nreiteração delitiva) <<nivel2>>
+*** <b>Princípio da Intervenção Mínima</b> <<nivel1>>
+**** <b>Complementa legalidade + subsidirariedade</b>\nDP como ultima ratio da política social <<nivel2>>
+*** <b>Princípio da Culpabilidade</b> <<nivel1>>
+**** <b>Nullum crimen sine culpa</b>\nLegalidade sem culpabilidade\nnão é suficiente para punição justa <<nivel2>>
+
+** <b>6. FONTES DO DIREITO PENAL\n(relação com legalidade)</b> <<raiz>>
+*** <b>Fontes Formais Imediatas</b> <<nivel1>>
+**** <b>Lei em sentido estrito</b>\nÚnica apta a criar crimes e penas <<nivel2>>
+*** <b>Fontes Formais Mediatas</b> <<nivel1>>
+**** <b>Costumes (abolitio criminis consuetudinária)</b>\nNão revogam lei penal, mas auxiliam interpretação\nSTF: costume não descriminaliza (ex: pirataria\nde DVDs – HC 98.898/2010; Súmula 502/STJ) <<stf>>
+**** <b>Princípios Gerais do Direito</b>\nInterpretação, não criação de tipos <<nivel2>>
+*** <b>Fontes Materiais</b> <<nivel1>>
+**** <b>Estado (poder de legislar em matéria penal)</b> <<nivel2>>
+*** <b>Analogia in bonam partem</b> <<nivel1>>
+**** <b>Admitida – favorece o réu</b>\nNão é fonte em sentido estrito,\nmas instrumento interpretativo <<nivel2>>
+
+** <b>7. INTERPRETAÇÃO\nDA LEI PENAL</b> <<raiz>>
+*** <b>Quanto ao Sujeito</b> <<nivel1>>
+**** <b>Autêntica/Legislativa</b>\nPelo próprio legislador (ex: art. 327 CP) <<nivel2>>
+**** <b>Doutrinária/Científica</b>\nPela doutrina – não vinculante <<nivel2>>
+**** <b>Judicial/Jurisprudencial</b>\nPelos tribunais – vincula nos precedentes <<nivel2>>
+*** <b>Quanto ao Método</b> <<nivel1>>
+**** <b>Gramatical/Literal</b>\nSentido literal das palavras <<nivel2>>
+**** <b>Sistemática</b>\nConjunto do ordenamento jurídico <<nivel2>>
+**** <b>Histórica/Teleológica</b>\nFinaidade e ratio legis <<nivel2>>
+*** <b>Quanto ao Resultado</b> <<nivel1>>
+**** <b>Declaratória</b>\nEncontra o sentido exato da norma <<nivel2>>
+**** <b>Extensiva</b>\nAmplia sentido além da letra – ADMITIDA\n(in bonam e malam partem) <<nivel2>>
+**** <b>Restritiva</b>\nReduz sentido – ADMITIDA <<nivel2>>
+**** <b>Analógica</b>\nO próprio tipo prevê hipóteses similares\n(ex: art. 121, §2º, CP: "outro motivo torpe") – ADMITIDA <<nivel2>>
+*** <b>ATENÇÃO – Diferença crucial!</b> <<alerta>>
+**** <b>Interpretação Analógica ≠ Analogia</b>\nInterpretação analógica: método previsto\nna própria lei – ADMITIDA\nAnalogia: suprir lacuna por caso similar – VEDADA\nin malam partem <<nivel2>>
+*** <b>Interpretação conforme a CF</b> <<nivel1>>
+**** <b>STF usa como princípio interpretativo</b>\nE como técnica de decisão <<nivel2>>
+
+** <b>8. APLICAÇÃO NO\nTEMPO (ART. 2º CP)</b> <<raiz>>
+*** <b>Regra: Irretroatividade da lei penal</b> <<nivel1>>
+**** <b>Lei nova mais gravosa NÃO retroage</b>\n(art. 5º, XL, CF – cláusula pétrea) <<nivel2>>
+*** <b>Exceção: Retroatividade benéfica</b> <<nivel1>>
+**** <b>Lex mitior retroage SEMPRE</b>\nMesmo após o trânsito em julgado\n(art. 2º, §único, CP) <<nivel2>>
+**** <b>Abolitio criminis (art. 2º, caput, CP)</b>\nLei posterior que suprime o crime:\nextingue punibilidade e apaga\nefeitos penais da condenação <<nivel2>>
+*** <b>Ultratividade</b> <<nivel1>>
+**** <b>Lei mais benéfica revogada continua</b>\naplicando-se a fatos durante sua vigência <<nivel2>>
+*** <b>Lei Intermediária</b> <<nivel1>>
+**** <b>STF: aplica-se a lei intermediária</b>\nque esteve em vigor entre fato e sentença\nse mais benéfica ao réu\n(RE 418.876, Min. Sepúlveda Pertence, 2004) <<stf>>
+*** <b>Leis Excepcionais e Temporárias (art. 3º CP)</b> <<nivel1>>
+**** <b>São ultrativas por natureza</b>\nAplicam-se a fatos praticados\ndurante sua vigência, mesmo após\na cessação desta <<nivel2>>
+*** <b>Irretroatividade da Jurisprudência Maléfica</b> <<nivel1>>
+**** <b>STF: mudança de jurisprudência desfavorável</b>\nnão retroage (AgR no HC 230.733,\nMin. André Mendonça, 2024)\n"atos interpretativos não vinculantes\nnão possuem efeito ultra-ativo" <<stf>>
+
+** <b>9. NORMA PENAL\nEM BRANCO x LEGALIDADE\n(QUESTÃO ESPECIAL)</b> <<raiz>>
+*** <b>Posição do STF</b> <<stf>>
+**** <b>CONSTITUCIONAL desde que:</b>\na) O núcleo da proibição esteja na lei\nb) O complemento seja acessível ao cidadão\nc) Não haja delegação total ao Executivo <<nivel2>>
+**** <b>Ex: Art. 33 Lei 11.343/2006 + Portaria SVS</b>\nLista de drogas é complemento válido <<nivel2>>
+*** <b>Problema da Revogação do Complemento</b> <<nivel1>>
+**** <b>Se o complemento é suprimido:</b>\nNorma penal em branco heterogênea:\n→ Aplica-se abolitio criminis?\n→ Doutrina divide-se\nMaioria: depende da intenção do legislador <<doutrina>>
+
+** <b>10. TESES E JULGADOS\nCOBRADOS EM PROVA\n(STF / STJ)</b> <<raiz>>
+*** <b>STF – Teses Fundamentais</b> <<stf>>
+**** <b>RE 254.818 (2000) – MP Penal</b>\nMP NÃO pode criar crimes ou agravar penas\nPODE conter normas penais benéficas <<nivel2>>
+**** <b>HC 97.261/RS (2011) – Furto de sinal</b>\nFurto de sinal de TV a cabo é atípico\n(analogia in malam partem – vedada) <<nivel2>>
+**** <b>RE 418.876 (2004) – Lei intermediária</b>\nLei mais benéfica vigente entre fato e sentença\naplica-se ao réu <<nivel2>>
+**** <b>AgR HC 230.733 (2024)</b>\nMudança de jurisprudência NÃO retroage\npara prejudicar o réu <<nivel2>>
+**** <b>STF Informativo 1202 (2025)</b>\nAtipicidade da provocação de cartão amarelo\n– legalidade estrita <<nivel2>>
+**** <b>RHC 221271 AgR (2023)</b>\nLei que agrava requisitos de progressão\nnão retroage <<nivel2>>
+*** <b>STJ – Teses Fundamentais</b> <<stj>>
+**** <b>HC 926.021 (2024) – Art. 112, §1º LEP</b>\nExame criminológico: norma de natureza penal\nnão retroage para crimes anteriores <<nivel2>>
+**** <b>AgRg no HC 954.277-SP (2024)</b>\nExigência de exame criminológico como\nrequisito mais gravoso viola art. 5º, XL, CF\ne art. 2º, §único, CP <<nivel2>>
+*** <b>Súmulas Relevantes</b> <<sumula>>
+**** <b>Súmula 502/STJ</b>\nPresente a materialidade e autoria, afigura-se\ntípica a conduta de expor à venda\nCDs e DVDs piratas <<nivel2>>
+**** <b>STF HC 98.898 (2010)</b>\nComércio de DVDs piratas é crime\nprincípio da adequação social não afasta\na tipicidade formal <<nivel2>>
+
+** <b>11. QUESTÕES\nCOBRADAS EM PROVA\nDE MAGISTRATURA / ENAM</b> <<raiz>>
+*** <b>TÓPICO 1 – Fontes do DP</b> <<prova>>
+**** <b>QUESTÃO TÍPICA:</b>\n"Medida provisória pode criar crime?"\nRESPOSTA: Não (vedação – apenas normas\npenais benéficas são admitidas via MP)\n(STF, RE 254.818) <<nivel2>>
+*** <b>TÓPICO 2 – Subprincípios</b> <<prova>>
+**** <b>QUESTÃO TÍPICA:</b>\n"Qual subprincípio proíbe tipos vagos?"\nRESPOSTA: Lex certa / Taxatividade\n(dirigido ao legislador) <<nivel2>>
+*** <b>TÓPICO 3 – Analogia</b> <<prova>>
+**** <b>QUESTÃO TÍPICA:</b>\n"Analogia in malam partem viola qual princípio?"\nRESPOSTA: Legalidade estrita (lex stricta) <<nivel2>>
+*** <b>TÓPICO 4 – Interpretação Analógica</b> <<prova>>
+**** <b>QUESTÃO TÍPICA:</b>\n"Interpretação analógica é vedada no DP?"\nRESPOSTA: Não! A interpretação analógica\n(fórmula casuística na própria lei) é ADMITIDA.\nVedada é a ANALOGIA para criar crimes <<nivel2>>
+*** <b>TÓPICO 5 – Norma Penal em Branco</b> <<prova>>
+**** <b>QUESTÃO TÍPICA:</b>\n"NPB heterogênea viola a legalidade?"\nRESPOSTA: Não, se o núcleo essencial\nda proibição constar da lei formal\n(STF – Repercussão Geral, 2024) <<nivel2>>
+*** <b>TÓPICO 6 – Retroatividade</b> <<prova>>
+**** <b>QUESTÃO TÍPICA:</b>\n"Leis de execução penal têm natureza penal?"\nRESPOSTA: SIM – STJ e STF firmaram que\nbenefícios da execução da pena têm\nnatureza PENAL – retroagem se mais benéficos,\nirretroagem se mais gravosos <<nivel2>>
+*** <b>TÓPICO 7 – Jurisprudência maléfica</b> <<prova>>
+**** <b>QUESTÃO TÍPICA:</b>\n"A mudança de entendimento do STF retroage?"\nRESPOSTA: NÃO retroage se prejudicial ao réu\n(STF, AgR HC 230.733, 2024) <<nivel2>>
+*** <b>TÓPICO 8 – Costume e Adequação Social</b> <<prova>>
+**** <b>QUESTÃO TÍPICA:</b>\n"Costume pode descriminalizar conduta?"\nRESPOSTA: Não – STF e STJ rejeitam\nprincípio da adequação social para\nafastar tipicidade formal (ex: pirataria) <<nivel2>>
+*** <b>TÓPICO 9 – Lei Intermediária</b> <<prova>>
+**** <b>QUESTÃO TÍPICA:</b>\n"O réu pode se beneficiar de lei que\nnão existia quando praticou o fato?"\nRESPOSTA: SIM – lei intermediária mais\nbenéfica aplica-se (STF, RE 418.876) <<nivel2>>
+*** <b>TÓPICO 10 – Competência Legislativa</b> <<prova>>
+**** <b>QUESTÃO TÍPICA:</b>\n"Estado pode legislar sobre crime?"\nRESPOSTA: Não para criar tipo penal autônomo\n(art. 22, I, CF). SIM para complementar\nnorma penal em branco (STF, 2024) <<nivel2>>
+*** <b>TÓPICO 11 – Cláusula Pétrea</b> <<prova>>
+**** <b>QUESTÃO TÍPICA:</b>\n"Emenda constitucional pode permitir\nretroatividade da lei penal gravosa?"\nRESPOSTA: NÃO – art. 5º, XL, CF é\ncláusula pétrea – art. 60, §4º, IV, CF <<nivel2>>
+*** <b>TÓPICO 12 – ATENÇÃO ENAM 2024/2025</b> <<prova>>
+**** <b>STF Informativo 1202 (2025):</b>\nAtipicidade por legalidade estrita –\nCartão amarelo provocado em jogo de futebol\nnão é crime sem previsão legal expressa <<nivel2>>
+**** <b>STJ Informativo Extraordinário 24 (jan/2025):</b>\nNatureza penal das normas de execução:\napenas retroage se benéfica ao executando <<nivel2>>
+
+** <b>12. DOUTRINA\nPRINCIPAL</b> <<raiz>>
+*** <b>Autores nacionais</b> <<doutrina>>
+**** <b>Cezar Roberto Bitencourt</b>\n"Tratado de Direito Penal"\nDistingue legalidade de reserva legal\nLegalidade formal x material <<nivel2>>
+**** <b>Rogério Greco</b>\n"Curso de Direito Penal"\nLegalidade formal (procedimento)\ne material (conteúdo constitucional) <<nivel2>>
+**** <b>Rogério Sanches Cunha</b>\n"Manual de Direito Penal"\nTrês fundamentos: político, democrático\ne jurídico-penal <<nivel2>>
+**** <b>Luiz Regis Prado</b>\n"Curso de Direito Penal"\nLegalidade como princípio basilar\ndo Estado Democrático de Direito <<nivel2>>
+**** <b>Francisco de Assis Toledo</b>\n"Princípios Básicos de Direito Penal"\nLegalidade e seus reflexos práticos <<nivel2>>
+*** <b>Autores estrangeiros de influência</b> <<doutrina>>
+**** <b>Hans Welzel</b>\nFinalismo – relação com tipicidade <<nivel2>>
+**** <b>Eugenio Raúl Zaffaroni</b>\nConteúdo semântico da norma como\nlimite ao poder punitivo <<nivel2>>
+**** <b>Claus Roxin</b>\nLegalidade como garantia jurídico-penal <<nivel2>>
+
+@endmindmap

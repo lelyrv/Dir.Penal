@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 3° do CP — Lei Excepcional e Temporária | Magistratura/ENAM 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3ede2;--paper:#faf6ee;
+  --navy:#0d1f3a;--navy2:#162848;--navy3:#1c3060;
+  --gold:#c08a28;--gold2:#e0a832;--gold3:#f0c050;
+  --crim:#7a1818;--crim2:#a02020;
+  --teal:#124a3c;--teal2:#1a6050;
+  --olive:#384e24;--olive2:#4e6a32;
+  --amber:#7a4a0a;--amber2:#a06210;
+  --slate:#3a4858;--border:#c0a868;
+  --shad:rgba(12,28,58,.13);
+  --purple:#3a1858;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'EB Garamond',Georgia,serif;background:var(--bg);color:var(--navy);min-height:100vh}
+
+/* HEADER */
+header{
+  background:linear-gradient(150deg,var(--navy) 0%,var(--navy2) 60%,var(--navy3) 100%);
+  padding:2.8rem 2rem 2.2rem;text-align:center;position:relative;overflow:hidden;
+  border-bottom:5px solid var(--gold);
+}
+header::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse at 20% 50%,rgba(192,138,40,.08) 0%,transparent 60%),
+    radial-gradient(ellipse at 80% 50%,rgba(18,74,60,.12) 0%,transparent 60%),
+    url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 5L60 30H85L65 48L73 73L50 58L27 73L35 48L15 30H40Z' fill='%23c08a28' fill-opacity='0.04'/%3E%3C/svg%3E") center/80px repeat;
+}
+.hbadge{display:inline-block;background:var(--gold);color:var(--navy);font-family:'EB Garamond',serif;font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:.3rem 1rem;border-radius:2px;margin-bottom:.9rem}
+header h1{font-family:'Libre Baskerville',serif;font-size:clamp(1.7rem,4.5vw,3rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:.5rem}
+header h1 em{color:var(--gold2);font-style:italic}
+header .sub{color:rgba(255,255,255,.68);font-size:.95rem;font-style:italic;margin-bottom:1.3rem}
+.lei-box{margin:.4rem auto 0;max-width:780px;background:rgba(192,138,40,.1);border:1px solid rgba(192,138,40,.38);border-radius:6px;padding:1.1rem 1.8rem;color:#fff;font-size:1.05rem;line-height:1.8}
+.lei-box strong{color:var(--gold2);font-style:italic}
+.lei-box .fonte{font-size:.82rem;opacity:.75;margin-top:.4rem}
+
+/* TABS */
+.tw{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:2.5px solid var(--gold);overflow-x:auto;scrollbar-width:none}
+.tw::-webkit-scrollbar{display:none}
+.tabs{display:flex;padding:0 .8rem;white-space:nowrap}
+.tb{background:none;border:none;color:rgba(255,255,255,.5);font-family:'EB Garamond',serif;font-size:.85rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:.88rem 1.05rem;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;flex-shrink:0}
+.tb:hover{color:#fff}
+.tb.on{color:var(--gold2);border-bottom-color:var(--gold2)}
+
+/* MAIN */
+main{max-width:1120px;margin:0 auto;padding:2rem 1.2rem 5rem}
+.sec{display:none}.sec.on{display:block}
+.sec-title{font-family:'Libre Baskerville',serif;font-size:1.75rem;font-weight:700;color:var(--navy);border-bottom:2.5px solid var(--gold);padding-bottom:.6rem;margin-bottom:1.8rem}
+
+/* CARDS */
+.card{background:var(--paper);border:1px solid var(--border);border-radius:8px;padding:1.4rem 1.6rem;margin-bottom:1.3rem;box-shadow:0 2px 10px var(--shad)}
+.ct{font-family:'Libre Baskerville',serif;font-size:1.08rem;font-weight:700;color:var(--navy);margin-bottom:.75rem;display:flex;align-items:center;flex-wrap:wrap;gap:.55rem}
+.bx{font-family:'EB Garamond',serif;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.22rem .7rem;border-radius:3px;flex-shrink:0}
+.bd{background:#e4f0d8;color:var(--olive);border:1px solid #a8cc88}
+.bstf{background:#fce5e5;color:var(--crim);border:1px solid #d89898}
+.bstj{background:#e4eef8;color:var(--navy2);border:1px solid #98b5d8}
+.bw{background:#fff5e0;color:var(--amber);border:1px solid #e8c840}
+.bp{background:#e4f8e4;color:var(--olive);border:1px solid #88cc88}
+.bpur{background:#f0e5ff;color:var(--purple);border:1px solid #c0a0e0}
+.bt{background:#e0f0f0;color:var(--teal);border:1px solid #88c0b8}
+.bcrim{background:var(--crim);color:#fff;border:1px solid var(--crim)}
+
+/* FLOW */
+.fw{display:flex;flex-direction:column;align-items:center}
+.fn{width:100%;max-width:780px;background:var(--paper);border:2px solid var(--border);border-radius:8px;padding:1.1rem 1.5rem;box-shadow:0 2px 8px var(--shad);margin:0}
+.fn.root{background:var(--navy);border-color:var(--gold2);color:#fff;text-align:center;border-radius:50px;padding:.9rem 2rem}
+.fn.root .nt{color:var(--gold2);font-size:1.25rem}
+.fn.sub{background:#edf3fa;border-color:#98b5d8}
+.fn.grn{background:#edf8ed;border-color:#88cc88}
+.fn.red{background:#fdf0f0;border-color:#c88888}
+.fn.gold{background:#fdf6e4;border-color:var(--gold)}
+.fn.teal{background:#edf8f5;border-color:#88c0b8}
+.fn.pur{background:#f5eeff;border-color:#c0a0e0}
+.fn.amber{background:#fdf5e4;border-color:#d8b040}
+.nt{font-family:'Libre Baskerville',serif;font-size:1.02rem;font-weight:700;color:var(--navy);margin-bottom:.4rem}
+.nb{font-size:.91rem;line-height:1.75;color:var(--slate)}
+.arr{text-align:center;font-size:1.5rem;color:var(--gold);padding:.3rem 0;line-height:1}
+.row2{display:flex;gap:1rem;width:100%;max-width:780px}
+.row2 .fn{flex:1}
+.row3{display:flex;gap:.8rem;width:100%;max-width:780px}
+.row3 .fn{flex:1}
+@media(max-width:640px){.row2,.row3{flex-direction:column}}
+
+/* JULGADOS */
+.jg{background:#f8f3e8;border-left:4px solid var(--crim2);padding:.9rem 1.15rem;margin:.7rem 0;border-radius:0 6px 6px 0;font-size:.9rem;line-height:1.72}
+.jg.stj{border-left-color:var(--navy2)}
+.jg.teal{border-left-color:var(--teal2)}
+.jg.amb{border-left-color:var(--amber2)}
+.jg.grn{border-left-color:var(--olive2)}
+.jr{font-size:.72rem;color:var(--crim2);font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.3rem}
+.jg.stj .jr{color:var(--navy2)}.jg.teal .jr{color:var(--teal)}.jg.amb .jr{color:var(--amber)}.jg.grn .jr{color:var(--olive)}
+
+/* ACCORDION */
+.abtn{width:100%;background:none;border:none;border-bottom:1px solid var(--border);padding:.9rem .2rem;text-align:left;font-family:'Libre Baskerville',serif;font-size:1rem;font-weight:700;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.abtn:hover{color:var(--gold)}.aico{transition:transform .25s;font-size:.88rem}
+.abtn.open .aico{transform:rotate(180deg)}
+.abody{display:none;padding:.9rem .2rem}.abody.open{display:block}
+
+/* TABLE */
+table{width:100%;border-collapse:collapse;font-size:.88rem;margin:.6rem 0}
+th{background:var(--navy);color:var(--gold2);font-family:'EB Garamond',serif;font-weight:700;letter-spacing:.04em;padding:.65rem .9rem;text-align:left}
+td{padding:.55rem .9rem;border-bottom:1px solid #e8ddc8;vertical-align:top;line-height:1.6}
+tr:nth-child(even) td{background:rgba(192,138,40,.05)}
+
+/* GRID */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:640px){.g2{grid-template-columns:1fr}}
+
+/* PROVA BOX */
+.pbox{background:linear-gradient(135deg,var(--navy),var(--navy2));border:2.5px solid var(--gold);border-radius:10px;padding:1.6rem 2rem;margin:1rem 0;color:#fff}
+.pbox h3{font-family:'Libre Baskerville',serif;font-size:1.15rem;color:var(--gold2);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.pi{display:flex;gap:.8rem;padding:.58rem 0;border-bottom:1px solid rgba(192,138,40,.22);font-size:.9rem;line-height:1.67;color:rgba(255,255,255,.88)}
+.pi:last-child{border-bottom:none}
+.pn{min-width:1.6rem;color:var(--gold2);font-weight:700;font-family:'Libre Baskerville',serif;font-size:1.1rem}
+.danger{background:#fdf0f0;border:2.5px solid var(--crim2);border-radius:8px;padding:1.3rem 1.6rem;margin:1rem 0}
+.danger h4{font-family:'Libre Baskerville',serif;color:var(--crim);font-size:1.05rem;margin-bottom:.7rem;display:flex;align-items:center;gap:.4rem}
+
+/* TIMELINE */
+.tl{position:relative;padding-left:2rem;margin:.7rem 0}
+.tl::before{content:'';position:absolute;left:.5rem;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--gold),var(--navy2))}
+.tli{position:relative;margin-bottom:.9rem;font-size:.9rem;line-height:1.65}
+.tli::before{content:'';position:absolute;left:-1.6rem;top:.42rem;width:.7rem;height:.7rem;border-radius:50%;background:var(--gold);border:2px solid var(--navy)}
+
+/* BADGE BOXES */
+.bbox{background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:.9rem 1rem;font-size:.88rem;line-height:1.65}
+
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hbadge">Magistratura · ENAM · 2026</div>
+  <h1>Art. 3° do <em>Código Penal</em><br>Lei Excepcional e Temporária</h1>
+  <p class="sub">Fluxograma Completo · Doutrina · STF · Jurisprudência · Pontos de Prova</p>
+  <div class="lei-box">
+    <strong>"A lei excepcional ou temporária, embora decorrido o período de sua duração ou cessadas as circunstâncias que a determinaram, aplica-se ao fato praticado durante sua vigência."</strong>
+    <div class="fonte">Art. 3° do Código Penal · Redação dada pela Lei n° 7.209, de 11.7.1984 (Reforma da Parte Geral)</div>
+  </div>
+</header>
+
+<div class="tw">
+  <div class="tabs">
+    <button class="tb on" onclick="showTab('fluxo',this)">⊞ Fluxograma</button>
+    <button class="tb" onclick="showTab('conceitos',this)">📋 Conceitos</button>
+    <button class="tb" onclick="showTab('doutrina',this)">📚 Doutrina</button>
+    <button class="tb" onclick="showTab('jurisprudencia',this)">⚖ Jurisprudência</button>
+    <button class="tb" onclick="showTab('npb',this)">🔗 NPB + Art. 3°</button>
+    <button class="tb" onclick="showTab('prova',this)">🎯 Prova</button>
+  </div>
+</div>
+
+<main>
+
+<!-- ════════════════════════════════════
+     TAB 1 — FLUXOGRAMA
+════════════════════════════════════ -->
+<div id="tab-fluxo" class="sec on">
+  <div class="sec-title">Fluxograma Estrutural — Art. 3° do CP</div>
+
+  <div class="fw">
+    <div class="fn root">
+      <div class="nt">ART. 3° DO CÓDIGO PENAL</div>
+      <div style="font-size:.85rem;color:rgba(255,255,255,.72);font-style:italic">Lei Excepcional ou Temporária · Ultratividade</div>
+    </div>
+    <div class="arr">▼</div>
+
+    <!-- NORMA -->
+    <div class="fn gold">
+      <div class="nt">📜 Contexto Normativo e Posição Sistemática</div>
+      <div class="nb">
+        <strong>Art. 3° CP</strong> — regra especial de direito intertemporal penal para leis de vigência predeterminada ou condicionada.<br>
+        Localiza-se entre o art. 2° (retroatividade benéfica) e o art. 4° (tempo do crime): trata das <em>leis intermitentes</em>, como a doutrina as denomina.<br>
+        <strong>Relação com o art. 2°:</strong> O art. 3° é <em>exceção à exceção</em> — o art. 5°, XL, CF ordena retroatividade benéfica; o art. 2° repete esse mandamento; o art. 3° nega essa retroatividade para as leis excepcionais e temporárias (segundo a doutrina majoritária).<br>
+        <strong>Fundamento constitucional:</strong> O CP foi editado em 1940 (sob a CF/1937) e reformado em 1984 (vigente a CF/1969). Com a CF/1988, surge a <strong>controvérsia sobre a recepção</strong> do art. 3° pelo art. 5°, XL, CF.
+      </div>
+    </div>
+    <div class="arr">▼</div>
+
+    <!-- CONCEITOS CENTRAIS -->
+    <div class="fn sub">
+      <div class="nt">⚡ LEIS INTERMITENTES — Espécies</div>
+      <div class="nb" style="margin-bottom:.5rem">O art. 3° abrange duas modalidades de leis <em>autorrevogáveis</em> — que contêm em si mesmas o germe de sua extinção:</div>
+    </div>
+    <div class="arr">▼</div>
+
+    <div class="row2">
+      <div class="fn amber">
+        <div class="nt" style="color:var(--amber)">📅 LEI TEMPORÁRIA</div>
+        <div class="nb">
+          Tem <strong>prazo determinado de vigência</strong> expressamente fixado no próprio texto normativo. Já nasce com "data de validade".<br><br>
+          <em>Características:</em><br>
+          • Prazo certo no texto<br>
+          • Autorrevoga-se pelo decurso do tempo<br>
+          • Não precisa de lei revogatória<br>
+          • Marcada para extinguir-se automaticamente<br><br>
+          <em>Exemplo real:</em> Lei 12.663/2012 (Lei Geral da Copa) — arts. 30–35 traziam tipos penais com vigência até <strong>31/12/2014</strong> (art. 36 da mesma lei).
+        </div>
+      </div>
+      <div class="fn teal">
+        <div class="nt" style="color:var(--teal)">⚡ LEI EXCEPCIONAL</div>
+        <div class="nb">
+          Vigente <strong>durante situação anormal</strong> (emergência, guerra, calamidade, pandemia). Sua duração é condicionada ao fato excepcional que a motivou.<br><br>
+          <em>Características:</em><br>
+          • Vigência indeterminada no tempo<br>
+          • Autorrevoga-se com o fim da situação<br>
+          • Vinculada ao estado de exceção<br>
+          • Nasce e morre com a anormalidade<br><br>
+          <em>Exemplos hipotéticos/históricos:</em> leis editadas durante estado de guerra, epidemias, estado de sítio, calamidades públicas.
+        </div>
+      </div>
+    </div>
+    <div class="arr">▼</div>
+
+    <!-- CARACTERISTICAS COMUNS -->
+    <div class="fn sub">
+      <div class="nt">🔑 Características Comuns às Leis Intermitentes</div>
+      <div class="nb">
+        <strong>1. Autorrevogabilidade</strong> — revogam-se a si mesmas: pela passagem do tempo (temporária) ou pela cessação da situação (excepcional). Não precisam de nova lei.<br>
+        <strong>2. Efêmeridade</strong> — nascem destinadas a ter vigência restrita e limitada.<br>
+        <strong>3. Especialidade</strong> — criadas para tutelar bens jurídicos expostos em contexto específico.<br>
+        <strong>4. Ultratividade (art. 3° CP)</strong> — o fator tempo/situação excepcional integra o tipo penal como elemento normativo, daí por que a extinção da vigência da lei não importa abolitio criminis (segundo a corrente majoritária).
+      </div>
+    </div>
+    <div class="arr">▼</div>
+
+    <!-- ULTRATIVIDADE -->
+    <div class="fn gold">
+      <div class="nt">⚠ ULTRATIVIDADE — O Efeito Central do Art. 3°</div>
+      <div class="nb">
+        A lei excepcional ou temporária continua a regular os fatos praticados <em>durante sua vigência</em>, mesmo após:<br>
+        • O término do prazo (lei temporária)<br>
+        • A cessação das circunstâncias que a determinaram (lei excepcional)<br><br>
+        <strong>Consequência prática:</strong> quem praticou conduta prevista na lei durante sua vigência <strong>pode ser investigado, processado e julgado após o término da lei</strong> pela norma que estava vigente ao tempo do fato.<br><br>
+        <strong>NÃO ocorre abolitio criminis</strong> pelo simples decurso do prazo ou cessação da situação — para haver abolitio criminis de uma lei temporária/excepcional, seria necessária lei expressa revogando os tipos penais e mencionando explicitamente o período de vigência anterior.
+      </div>
+    </div>
+    <div class="arr">▼</div>
+
+    <!-- FUNDAMENTACAO E DIVERGENCIA -->
+    <div class="fn sub">
+      <div class="nt">⚖ A GRANDE QUESTÃO: Constitucionalidade do Art. 3°</div>
+    </div>
+    <div class="arr">▼</div>
+
+    <div class="row2">
+      <div class="fn grn">
+        <div class="nt" style="color:var(--teal)">✅ Corrente Majoritária<br><small style="font-weight:400;font-size:.85rem">(Constitucionalidade)</small></div>
+        <div class="nb">
+          <strong>Autores:</strong> Nelson Hungria, Damásio, Fernando Capez, Rogério Sanches Cunha, Cleber Masson, Luís Flávio Gomes, Magalhães Noronha.<br><br>
+          <strong>Fundamentos:</strong><br>
+          1. Sem ultratividade, as leis seriam inúteis — todos aguardariam o fim da vigência para cometer crimes impunemente<br>
+          2. O fator temporal integra o próprio tipo penal — é elemento do fato típico<br>
+          3. A cessação não reflete desinteresse punitivo (ao contrário da abolitio comum — que sim o reflete)<br>
+          4. Art. 3° é regra especial que coexiste harmonicamente com o art. 5°, XL, CF
+        </div>
+      </div>
+      <div class="fn red">
+        <div class="nt" style="color:var(--crim)">❌ Corrente Minoritária<br><small style="font-weight:400;font-size:.85rem">(Inconstitucionalidade)</small></div>
+        <div class="nb">
+          <strong>Autores:</strong> Rogério Greco, Cezar Roberto Bitencourt, Juarez Cirino dos Santos, Paulo José da Costa Júnior, Guilherme Merolli.<br><br>
+          <strong>Fundamentos:</strong><br>
+          1. Art. 5°, XL, CF não admite exceções — é norma de eficácia plena<br>
+          2. Art. 3° do CP não foi recepcionado pela CF/88<br>
+          3. Qualquer norma que deixe de punir é, para o réu, lei mais benéfica — deve retroagir<br>
+          4. Limitação constitucional não pode ser superada por lei ordinária infraconstitucional
+        </div>
+      </div>
+    </div>
+    <div class="arr">▼</div>
+
+    <!-- EFEITO CARRAPATO -->
+    <div class="fn pur">
+      <div class="nt">📌 O "Efeito Carrapato" — O Tempo Gruda no Fato</div>
+      <div class="nb">
+        Damásio de Jesus cunhou a expressão "<strong>efeito carrapato</strong>" para ilustrar a ultratividade das leis intermitentes: a lei "gruda" no fato praticado durante sua vigência e o persegue mesmo após sua extinção.<br><br>
+        <strong>Argumento técnico da integração temporal ao tipo:</strong> assim como o crime de infanticídio (art. 123 CP) exige que a conduta ocorra "durante o parto ou logo após" (sem que o decurso desse período gere atipicidade), nas leis excepcionais e temporárias o fator temporal é <em>elementar do tipo</em> — "fato praticado durante a vigência".<br><br>
+        <em>Outros exemplos de elementos temporais que integram tipos permanentes:</em> "repouso noturno" (art. 155, §1°), "idade escolar" (art. 246).
+      </div>
+    </div>
+    <div class="arr">▼</div>
+
+    <!-- CASOS ESPECIAIS -->
+    <div class="fn gold">
+      <div class="nt">⚠ Situações Controvertidas e Especiais</div>
+      <div class="nb">
+        <strong>A) Abolitio criminis por lei expressa posterior:</strong> A ultratividade cede APENAS se o legislador editar lei posterior expressamente revogando os tipos da lei temporária/excepcional e fazendo menção ao período de vigência anterior. Nesse caso, pode ocorrer abolitio criminis real.<br><br>
+        <strong>B) Lei temporária mais benéfica:</strong> Se a lei temporária for <em>mais favorável</em> ao réu em relação ao direito comum, ela ultra-age em benefício do réu. Sem controvérsia — todos aceitam a ultratividade benéfica.<br><br>
+        <strong>C) Norma penal em branco com complemento temporário/excepcional (art. 3°):</strong> Se o complemento da norma penal em branco variar por motivo temporário ou excepcional, aplica-se o art. 3° do CP — mantém-se a punibilidade do fato praticado durante a vigência do complemento anterior (STF — HC 73.168/SP, 1995).<br><br>
+        <strong>D) Abolitio criminis temporária (vedação):</strong> O STF entende que a suspensão temporária de tipo penal para regularização (ex.: Estatuto do Desarmamento, arts. 30-32 da Lei 10.826/2003) não retroage como abolitio criminis — aplica-se a lógica do art. 3° (RE 768.494, Rel. Min. Luiz Fux).
+      </div>
+    </div>
+    <div class="arr">▼</div>
+
+    <!-- DIAGRAMA COMPARATIVO -->
+    <div class="fn sub">
+      <div class="nt">📊 Quadro Comparativo — Lei Comum × Lei Intermitente</div>
+      <div class="nb">
+        <table>
+          <tr><th>Característica</th><th>Lei Penal Comum</th><th>Lei Intermitente (art. 3° CP)</th></tr>
+          <tr><td>Vigência</td><td>Indeterminada (até revogação)</td><td>Predeterminada (prazo/situação)</td></tr>
+          <tr><td>Revogação</td><td>Por lei posterior expressa</td><td>Automática (autorrevogável)</td></tr>
+          <tr><td>Cessação = abolitio?</td><td>Sim, se lei nova descriminaliza</td><td>NÃO — ultrativa (art. 3° CP)</td></tr>
+          <tr><td>Retroatividade benéfica</td><td>Obrigatória (art. 2°, §único, CP)</td><td>Não se aplica após o prazo</td></tr>
+          <tr><td>Fundamento da continuidade</td><td>Desinteresse estatal em punir</td><td>Necessidade temporária superada, não equivale a despenalização</td></tr>
+        </table>
+      </div>
+    </div>
+
+  </div><!-- fim fw -->
+</div><!-- fim tab-fluxo -->
+
+<!-- ════════════════════════════════════
+     TAB 2 — CONCEITOS APROFUNDADOS
+════════════════════════════════════ -->
+<div id="tab-conceitos" class="sec">
+  <div class="sec-title">Conceitos Aprofundados — Art. 3° do CP</div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bd">Conceito</span>Definição Doutrinária — Lei Temporária</div>
+    <p style="font-size:.91rem;line-height:1.78">Segundo Fernando Capez: lei temporária "é a feita para vigorar em um período de tempo previamente fixado pelo legislador, trazendo em seu bojo a data de cessação de sua vigência, sendo uma lei que desde a sua entrada em vigor está marcada para morrer."</p>
+    <br>
+    <p style="font-size:.91rem;line-height:1.78">Para Luiz Regis Prado: a lei temporária "prevê formalmente o período de tempo de sua vigência, delimitando de antemão o lapso temporal em que estará em vigor. Exige duas condicionantes: situação transitória de emergência e termo de vigência."</p>
+    <div class="jg grn" style="margin-top:.7rem">
+      <div class="jr" style="color:var(--olive)">Exemplo Real — Lei 12.663/2012 (Lei Geral da Copa)</div>
+      A Lei 12.663/2012 (Lei Geral da Copa) previa tipos penais nos arts. 30–35 (uso indevido de símbolos FIFA, violação de direitos de marketing, etc.), com vigência expressamente limitada até <strong>31/12/2014</strong> (art. 36). Encerrado o prazo, os tipos penais perderam vigência — mas os crimes praticados durante a Copa (2013–2014) continuam puníveis pela ultratividade do art. 3° CP.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bt">Conceito</span>Definição Doutrinária — Lei Excepcional</div>
+    <p style="font-size:.91rem;line-height:1.78">Segundo Fernando Capez: lei excepcional "é a lei feita para vigorar em períodos anormais, como guerra, calamidades, etc. Sua duração coincide com a do período (dura enquanto durar a guerra, a calamidade, etc.)"</p>
+    <br>
+    <p style="font-size:.91rem;line-height:1.78">Luiz Regis Prado: lei excepcional "visa atender situações excepcionais, de anormalidade social ou de emergência, não fixando prazo para sua vigência; vale dizer, tem eficácia enquanto perdurar o fato que a motivou."</p>
+    <div class="g2" style="margin-top:.8rem">
+      <div class="bbox">
+        <strong>Exemplos hipotéticos válidos:</strong>
+        <ul style="padding-left:1.1rem;margin-top:.4rem;line-height:1.9;font-size:.88rem">
+          <li>Leis editadas em estado de guerra</li>
+          <li>Leis editadas durante estado de sítio</li>
+          <li>Leis editadas em calamidade pública</li>
+          <li>Leis para crises econômicas graves</li>
+          <li>Leis sanitárias de emergência (pandemia)</li>
+        </ul>
+      </div>
+      <div class="bbox">
+        <strong>Características distintivas:</strong>
+        <ul style="padding-left:1.1rem;margin-top:.4rem;line-height:1.9;font-size:.88rem">
+          <li>Vigência <em>indeterminada</em> no tempo</li>
+          <li>Condicionada ao fato motivador</li>
+          <li>Revoga-se com o fim da anormalidade</li>
+          <li>Geralmente mais genérica que a temporária</li>
+          <li>Difícil de distinguir da temporária na prática</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bw">Especial</span>Autorrevogabilidade — Diferença de Revogação Ordinária</div>
+    <div class="g2">
+      <div>
+        <strong>Revogação Ordinária (art. 2°, LINDB)</strong>
+        <p style="font-size:.88rem;line-height:1.72;margin-top:.4rem">Ocorre quando uma nova lei determina expressamente a revogação de lei anterior, ou quando a nova lei é incompatível com a anterior (revogação tácita). Exige <em>ato normativo posterior</em>.</p>
+      </div>
+      <div>
+        <strong>Autorrevogação (art. 3° CP)</strong>
+        <p style="font-size:.88rem;line-height:1.72;margin-top:.4rem">Ocorre automaticamente, pelo simples decurso do prazo (temporária) ou pela superação do estado de anormalidade (excepcional). Não exige nova lei. A própria norma determina sua extinção de forma interna.</p>
+      </div>
+    </div>
+    <p style="font-size:.88rem;margin-top:.6rem;color:var(--amber)"><strong>Atenção:</strong> A autorrevogação NÃO equivale à abolitio criminis — é exatamente por isso que o art. 3° prevê a ultratividade.</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bpur">Técnica</span>O Fator Temporal Como Elementar do Tipo</div>
+    <p style="font-size:.91rem;line-height:1.78">A principal tese que sustenta a constitucionalidade do art. 3° CP é a de que o <strong>fator temporal (prazo ou situação excepcional) integra o próprio tipo penal</strong> como elemento normativo implícito. O crime é "praticar X durante a vigência da lei Y". Com o fim da vigência, não houve abolitio da conduta — a conduta permanece reprovável naquele contexto histórico específico.</p>
+    <br>
+    <p style="font-size:.91rem;line-height:1.78"><strong>Damásio de Jesus</strong> ilustra com exemplos de tipos penais que contêm limitações temporais sem que o decurso do tempo gere atipicidade: infanticídio (art. 123 CP — "durante ou logo após o parto"), furto noturno (art. 155, §1° — "durante o repouso noturno"), abandono intelectual (art. 246 — "na idade escolar").</p>
+    <br>
+    <p style="font-size:.88rem;color:var(--slate)">A tese é: assim como ninguém ficaria impune por praticar infanticídio "após o parto" apenas porque esse período cessou, ninguém fica impune por praticar conduta prevista em lei temporária apenas porque o prazo da lei expirou.</p>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════
+     TAB 3 — DOUTRINA
+════════════════════════════════════ -->
+<div id="tab-doutrina" class="sec">
+  <div class="sec-title">Doutrina — Art. 3° do CP</div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bd">Doutrina</span>Origem Histórica — Código Penal Italiano (Projeto Rocco)</div>
+    <p style="font-size:.91rem;line-height:1.78">O art. 3° do CP brasileiro foi inspirado no <strong>Código Penal Italiano (Projeto Rocco, 1930)</strong>, que atribuía às leis excepcionais e temporárias a ultratividade. Nelson Hungria confirma que o dispositivo também se inspirou nos códigos penais polonês (art. 2°, §3°), dinamarquês (art. 3°, I) e nos projetos alemão de 1925 (§3°) e francês (art. 3°, al. 2ª).</p>
+    <br>
+    <p style="font-size:.91rem;line-height:1.78">O art. 3° foi introduzido na redação original do CP de 1940 (durante a vigência da CF/1937, que não previa expressamente o princípio da retroatividade benéfica). Com a CF/1946, passou-se a questionar a recepção do dispositivo, controvérsia que se aprofundou com a CF/1988.</p>
+    <div class="tl" style="margin-top:.7rem">
+      <div class="tli"><strong>1937</strong> — CF/1937 sem previsão da retroatividade benéfica ao réu</div>
+      <div class="tli"><strong>1940</strong> — CP adotado com art. 3° (ultratividade das leis intermitentes) — sem conflito constitucional aparente</div>
+      <div class="tli"><strong>1946</strong> — CF/1946 resgata a retroatividade benéfica → surgem questionamentos sobre o art. 3°</div>
+      <div class="tli"><strong>1984</strong> — Reforma da Parte Geral (Lei 7.209/1984) — mantém o art. 3° com nova redação</div>
+      <div class="tli"><strong>1988</strong> — CF/1988, art. 5°, XL: "a lei penal não retroagirá, salvo para beneficiar o réu" → debate sobre recepção do art. 3°</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bd">Doutrina</span>Correntes Doutrinárias — Constitucionalidade do Art. 3°</div>
+
+    <button class="abtn" onclick="tAcc(this)">
+      Corrente 1 — Constitucionalidade (Maioria) <span class="aico">▾</span>
+    </button>
+    <div class="abody">
+      <p style="font-size:.9rem;line-height:1.72;margin-bottom:.6rem"><strong>Representantes:</strong> Nelson Hungria, Damásio de Jesus, Fernando Capez, Magalhães Noronha, Rogério Sanches Cunha, Cleber Masson, Luís Flávio Gomes, André Estefam.</p>
+      <p style="font-size:.9rem;line-height:1.72;margin-bottom:.5rem"><strong>Argumento 1 — Eficácia preventiva:</strong> sem ultratividade, qualquer pessoa poderia cometer crimes durante a vigência temporária aguardando impunidade com o fim do prazo. A lei perderia toda força intimidativa.</p>
+      <p style="font-size:.9rem;line-height:1.72;margin-bottom:.5rem"><strong>Argumento 2 — Desinteresse punitivo distinto:</strong> o fim da lei temporal não reflete desinteresse punitivo do Estado (como na abolitio comum). Reflete apenas a cessação da necessidade da norma, não do interesse em punir as infrações passadas.</p>
+      <p style="font-size:.9rem;line-height:1.72;margin-bottom:.5rem"><strong>Argumento 3 — Elemento temporal integra o tipo:</strong> o período de vigência é componente da própria tipicidade — a conduta só é criminosa "durante aquele período". Não é ultratividade, mas aplicação da lei ao fato ocorrido sob sua vigência (tempus regit actum).</p>
+      <p style="font-size:.9rem;line-height:1.72"><strong>Argumento 4 — Coexistência harmônica:</strong> o art. 3° é norma especial em relação ao princípio geral do art. 2° — pode coexistir sem inconstitucionalidade, à semelhança de outras exceções ao direito comum.</p>
+    </div>
+
+    <button class="abtn" onclick="tAcc(this)">
+      Corrente 2 — Inconstitucionalidade (Minoria) <span class="aico">▾</span>
+    </button>
+    <div class="abody">
+      <p style="font-size:.9rem;line-height:1.72;margin-bottom:.6rem"><strong>Representantes:</strong> Rogério Greco, Cezar Roberto Bitencourt, Juarez Cirino dos Santos, Paulo José da Costa Júnior, Guilherme Merolli.</p>
+      <p style="font-size:.9rem;line-height:1.72;margin-bottom:.5rem"><strong>Argumento 1 — Eficácia plena do art. 5°, XL, CF:</strong> a norma constitucional que prevê retroatividade benéfica é de eficácia plena e imediata — não admite restrição por lei ordinária infraconstitucional, ainda que com justificativa política criminal.</p>
+      <p style="font-size:.9rem;line-height:1.72;margin-bottom:.5rem"><strong>Argumento 2 — Não recepção:</strong> sendo o CP de 1940 e a CF/1988 com norma em sentido oposto, o art. 3° não foi recepcionado pela nova ordem constitucional. Rogério Greco e Bitencourt adotam expressamente essa posição.</p>
+      <p style="font-size:.9rem;line-height:1.72;margin-bottom:.5rem"><strong>Argumento 3 — Interpretação ampla da proteção individual:</strong> toda norma que deixa de punir ou reduz a punição deve retroagir, sem que o tipo de lei (temporária, excepcional ou comum) importe para o bem jurídico tutelado — a liberdade individual.</p>
+      <p style="font-size:.9rem;line-height:1.72"><strong>Argumento 4 — Garantismo penal (Ferrajoli):</strong> o sistema garantista exige que qualquer restrição de liberdade tenha fundamento constitucional expresso. A ultratividade maléfica do art. 3° viola esse axioma.</p>
+    </div>
+
+    <button class="abtn" onclick="tAcc(this)">
+      Corrente 3 — Posição Intermediária (André Estefam) <span class="aico">▾</span>
+    </button>
+    <div class="abody">
+      <p style="font-size:.9rem;line-height:1.72">André Estefam sustenta que "não se trata do fenômeno da ultratividade, uma vez que, com o passar da situação excepcional ou do período de tempo estipulado na lei, ela continua em vigor, embora não mais seja aplicável." Para ele, a lei temporária permanece vigente — apenas inaplicável a novas condutas — e, ao ser aplicada aos fatos do período, está-se cumprindo o princípio <em>tempus regit actum</em>, sem violar o art. 5°, XL, CF.</p>
+      <p style="font-size:.88rem;margin-top:.5rem;color:var(--slate)"><em>Crítica:</em> a distinção entre "vigência" e "aplicabilidade" é tênue e pode gerar insegurança jurídica. A posição majoritária prefere a denominação "ultratividade" para ser mais direto.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bd">Doutrina</span>Norma Penal em Branco com Complemento Temporário/Excepcional</div>
+    <p style="font-size:.91rem;line-height:1.78">Tema aprofundado: quando a lei penal em branco tem seu complemento (portaria, ato infralegal) com natureza temporária ou excepcional, aplica-se o art. 3° CP — a alteração do complemento não retroage em benefício do réu.</p>
+    <br>
+    <table>
+      <tr><th>Situação do Complemento</th><th>Regra</th><th>Fundamento</th></tr>
+      <tr>
+        <td>Complemento temporário/excepcional</td>
+        <td>Ultratividade — aplica-se o art. 3° CP. O fato praticado durante a vigência do complemento continua punível mesmo após a alteração</td>
+        <td>STF — HC 73.168/SP (1995): norma penal em branco do art. 334 CP complementada por portaria que proibia importação — alteração por motivo político/econômico excepcional = ultratividade</td>
+      </tr>
+      <tr>
+        <td>Complemento permanente alterado por razão científica/permanente</td>
+        <td>Retroatividade — aplica-se o art. 2°, §único, CP. A alteração pode retroagir em benefício do réu</td>
+        <td>STF — HC 73.168/SP: retira-se doença do rol porque se demonstrou que ela não era contagiosa = razão permanente = retroatividade</td>
+      </tr>
+      <tr>
+        <td>Exclusão de substância do rol ANVISA (Lei de Drogas)</td>
+        <td>Abolitio criminis — retroage em benefício do réu</td>
+        <td>STF — Informativo 576: remoção do cloreto de etila do rol de entorpecentes = descriminalização material</td>
+      </tr>
+    </table>
+    <p style="font-size:.88rem;margin-top:.6rem;color:var(--amber)"><strong>Síntese Fernando Capez:</strong> para determinar a retroatividade do complemento de norma penal em branco, verifica-se a presença ou não de caráter temporário/excepcional no complemento — não a natureza formal (lei ou ato infralegal).</p>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════
+     TAB 4 — JURISPRUDÊNCIA
+════════════════════════════════════ -->
+<div id="tab-jurisprudencia" class="sec">
+  <div class="sec-title">Jurisprudência — Art. 3° do CP</div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bstf">STF</span>HC 73.168/SP — 1995 — Leading Case sobre Norma Penal em Branco e Art. 3° CP</div>
+    <div class="jg">
+      <div class="jr">STF · HC 73.168/SP · Rel. Min. Moreira Alves · 1ª Turma · 21/11/1995</div>
+      <strong>Ementa (síntese):</strong> O art. 3° do CP aplica-se à norma penal em branco quando o ato normativo complementador (portaria administrativa) é alterado por motivo temporário ou excepcional (circunstâncias políticas ou econômicas). Não se dá a retroatividade nesses casos. O caso envolvia o crime de contrabando (art. 334 CP): tornando-se permitida a importação de mercadoria que antes era proibida por portaria, em razão de circunstâncias políticas ou econômicas, mantém-se a ultratividade e a punibilidade do agente que praticou o crime quando a vedação estava em vigor. A aplicação do art. 3° do CP só se afasta quando a norma complementadora importa real modificação da figura abstrata do direito penal ou se assenta em motivo permanente, insuscetível de modificar-se por circunstâncias temporárias ou excepcionais.
+    </div>
+    <p style="font-size:.88rem;margin-top:.5rem;color:var(--slate)"><em>Relevância:</em> Este é o precedente mais importante do STF sobre o art. 3° CP aplicado à norma penal em branco heterogênea. O STF traçou a distinção entre alteração por motivo excepcional/temporário (ultratividade) e alteração por motivo permanente/científico (retroatividade).</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bstf">STF</span>RE 768.494 — Estatuto do Desarmamento — Abolitio Criminis Temporária</div>
+    <div class="jg">
+      <div class="jr">STF · RE 768.494 · Rel. Min. Luiz Fux · Plenário</div>
+      O STF firmou o entendimento de que a abolitio criminis temporária prevista nos arts. 30, 31 e 32 do Estatuto do Desarmamento (Lei 10.826/2003) — que suspendeu temporariamente a punibilidade da posse irregular de armas para fins de regularização — <strong>não retroage para beneficiar réus condenados por posse de arma ocorrida antes do prazo legal</strong>. A norma tem natureza temporária, aplicando-se a lógica do art. 3° CP. Tratando-se de lei de vigência temporária para regularização, não configura abolitio criminis em relação a fatos anteriores ao período de regularização.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bstf">STF</span>Informativo 576 — Cloreto de Etila — Retroatividade Benéfica (Distinção)</div>
+    <div class="jg">
+      <div class="jr">STF · Informativo 576</div>
+      O STF aceitou a ocorrência de abolitio criminis em relação ao cloreto de etila (lança-perfume), quando a ANVISA removeu a substância do rol de entorpecentes. Fundamento: a remoção baseou-se em motivo permanente (a substância não era, per se, entorpecente nos termos da legislação) — não se tratou de circunstância temporária ou excepcional. Portanto, NÃO se aplica o art. 3° CP, mas o art. 2°, §único, CP — retroatividade benéfica. <strong>Crítico:</strong> afastou o entendimento do STJ que durante 10 anos mantinha a punibilidade.
+    </div>
+    <p style="font-size:.88rem;margin-top:.5rem;color:var(--slate)"><em>A distinção com o HC 73.168:</em> cloreto de etila → motivo permanente (natureza da substância) → retroage. Contrabando de mercadoria antes proibida por política econômica → motivo temporário/excepcional → ultratividade (art. 3° CP).</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bstf">STF · Posição Geral</span>Constitucionalidade do Art. 3° — Posição dos Tribunais</div>
+    <div class="jg">
+      <div class="jr">STF e STJ — Posição Dominante</div>
+      Tanto o STF quanto o STJ, nas raras vezes em que se manifestaram sobre o art. 3° CP, adotaram implicitamente sua constitucionalidade, aplicando a ultratividade das leis temporárias e excepcionais sem declarar inconstitucionalidade. Os tribunais superiores nunca declararam o art. 3° inconstitucional — o que corrobora a posição da doutrina majoritária. A questão da recepção pelo art. 5°, XL, CF/88 permanece sem pronunciamento direto e definitivo do STF em sede de controle concentrado (ADI/ADC).
+    </div>
+    <p style="font-size:.88rem;margin-top:.5rem;color:var(--crim)"><strong>Para concurso:</strong> Adotar a posição da doutrina majoritária e da jurisprudência implícita dos tribunais — constitucionalidade do art. 3° CP e ultratividade das leis intermitentes.</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bstj">STJ</span>Posição sobre Abolitio Criminis Temporária — Estatuto do Desarmamento</div>
+    <div class="jg stj">
+      <div class="jr">STJ — Posição Anterior ao RE 768.494/STF</div>
+      O STJ havia entendido que os arts. 30, 31 e 32 do Estatuto do Desarmamento configuravam abolitio criminis temporária, retroagindo em favor de réus condenados por posse ilegal de arma antes do prazo de regularização (RHC 21.271/DF, Min. Felix Fischer, 2007). Essa posição foi superada pela decisão do STF no RE 768.494.
+    </div>
+    <div class="jg stj" style="margin-top:.5rem">
+      <div class="jr">STJ — Posição Atual (após RE 768.494/STF)</div>
+      O STJ passou a seguir o entendimento do STF: a suspensão temporária de tipos penais para fins de regularização (abolitio criminis temporária) não retroage para beneficiar réus condenados por fatos anteriores ao período de regularização. A lei de regularização tem natureza temporária — aplica-se o art. 3° CP. (AgRg no HC 773.889/SP, Rel. Min. Rogério Schietti Cruz, 6ª Turma, 2022.)
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════
+     TAB 5 — NPB + ART. 3°
+════════════════════════════════════ -->
+<div id="tab-npb" class="sec">
+  <div class="sec-title">Norma Penal em Branco × Art. 3° do CP</div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bw">Conexão</span>A Interação entre Norma Penal em Branco e o Art. 3° CP</div>
+    <p style="font-size:.91rem;line-height:1.78">Esta é uma das interações mais cobradas em concursos de magistratura e ENAM: quando o complemento de uma norma penal em branco é alterado, qual regra intertemporal se aplica? O art. 2° (retroatividade benéfica) ou o art. 3° (ultratividade da lei excepcional/temporária)?</p>
+    <br>
+    <p style="font-size:.91rem;line-height:1.78">A resposta depende da <strong>natureza do motivo que determinou a alteração do complemento</strong>:</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bstf">STF</span>Critério de Distinção — HC 73.168/SP (1995) + Doutrina</div>
+    <table>
+      <tr><th>Situação do Complemento</th><th>Regra Aplicável</th><th>Efeito</th></tr>
+      <tr>
+        <td><strong>Variação por motivo temporário/excepcional</strong><br>(política econômica, situação emergencial)</td>
+        <td>Art. 3° CP — Ultratividade</td>
+        <td style="color:var(--crim)">❌ A alteração NÃO retroage. O fato praticado durante a vigência do complemento anterior continua punível.</td>
+      </tr>
+      <tr>
+        <td><strong>Variação por motivo permanente/científico</strong><br>(revisão de lista com base em pesquisa científica)</td>
+        <td>Art. 2°, §único, CP — Retroatividade benéfica</td>
+        <td style="color:var(--teal)">✅ A alteração RETROAGE se for mais benéfica ao réu. Pode configurar abolitio criminis.</td>
+      </tr>
+      <tr>
+        <td><strong>Complemento homogêneo (lei) alterado por nova lei</strong></td>
+        <td>Sempre retroatividade benéfica (art. 2°, §único)</td>
+        <td style="color:var(--teal)">✅ Sempre retroage se benéfico — inclusive o STF afirma isso para NPB homogêneas.</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bd">Doutrina</span>Posições sobre Retroatividade do Complemento da NPB</div>
+
+    <button class="abtn" onclick="tAcc(this)">
+      Mirabete — Critério do Caráter Excepcional/Temporário <span class="aico">▾</span>
+    </button>
+    <div class="abody">
+      <p style="font-size:.9rem;line-height:1.72">Mirabete, sem distinguir NPB homogênea de heterogênea, sustenta: (a) se a norma penal em branco tem caráter excepcional ou temporário, aplica-se o art. 3° CP — a norma complementar é ultrativa; (b) se não tem caráter temporário ou excepcional, aplica-se o art. 2°, §único — pode ocorrer abolitio criminis.</p>
+    </div>
+
+    <button class="abtn" onclick="tAcc(this)">
+      Fernando Capez — Critério da Temporariedade do Complemento <span class="aico">▾</span>
+    </button>
+    <div class="abody">
+      <p style="font-size:.9rem;line-height:1.72">Para Fernando Capez e Luiz Régis Prado: a retroatividade deve ser avaliada pela presença ou não do caráter temporário no complemento — não pela natureza formal do complemento (se lei ou ato infralegal). Existindo temporariedade, haverá ultratividade; inexistindo, haverá retroatividade in mellius.</p>
+    </div>
+
+    <button class="abtn" onclick="tAcc(this)">
+      STF — Posição Definitiva (HC 73.168/SP) <span class="aico">▾</span>
+    </button>
+    <div class="abody">
+      <p style="font-size:.9rem;line-height:1.72">O STF (HC 73.168/SP, Min. Moreira Alves) assentou que: "Em princípio, o artigo 3° do CP se aplica à norma penal em branco quando o ato normativo que a integra é revogado por motivo temporário ou excepcional. A aplicação do art. 3° só se afasta quando a norma complementadora importa real modificação da figura abstrata nele prevista ou se assenta em motivo permanente, insusceptível de modificar-se por circunstâncias temporárias ou excepcionais."</p>
+      <p style="font-size:.88rem;margin-top:.5rem;color:var(--slate)">Em complemento: o STF no Informativo 576 reafirmou que motivo científico/permanente (remoção do cloreto de etila da lista de drogas por não ter natureza entorpecente) NÃO é motivo temporário — portanto retroage em benefício do réu.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bw">Casos</span>Aplicação Prática — Exemplos para Prova</div>
+    <div class="jg grn">
+      <div class="jr" style="color:var(--olive)">Caso 1 — Contrabando + Portaria Liberatória (Art. 3° CP)</div>
+      A importação de determinada mercadoria era proibida por portaria editada em razão de crise econômica (motivo excepcional). João importou essa mercadoria em 2020. Em 2021, nova portaria liberou a importação após a crise. João CONTINUA PUNÍVEL pelo crime de contrabando, pois a alteração do complemento ocorreu por motivo temporário/excepcional → aplica-se o art. 3° CP (ultratividade). (Cf. HC 73.168/STF)
+    </div>
+    <div class="jg" style="margin-top:.7rem">
+      <div class="jr">Caso 2 — Droga Removida do Rol por Razão Científica (Art. 2°, §único, CP)</div>
+      Maria portava cloreto de etila para consumo. A ANVISA removeu a substância do rol de entorpecentes por constatar que não possui propriedades entorpecentes. Maria DEVE SER BENEFICIADA pela retroatividade — motivo permanente/científico → aplica-se o art. 2°, §único, CP (abolitio criminis). (Cf. STF, Informativo 576)
+    </div>
+    <div class="jg amb" style="margin-top:.7rem">
+      <div class="jr">Caso 3 — Lei Geral da Copa (Art. 3° CP)</div>
+      Pedro utilizou indevidamente símbolo oficial da FIFA durante a Copa do Mundo de 2014 (crime previsto no art. 30, Lei 12.663/2012). Em 31/12/2014, os tipos penais da lei foram extintos. Pedro CONTINUA PUNÍVEL — a lei era temporária, com vigência até 31/12/2014. A ultratividade do art. 3° CP garante que ele responda pelo crime praticado durante a vigência da lei.
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════
+     TAB 6 — PROVA
+════════════════════════════════════ -->
+<div id="tab-prova" class="sec">
+  <div class="sec-title">🎯 Pontos Sempre Cobrados em Magistratura / ENAM</div>
+
+  <div class="pbox">
+    <h3>📌 Questões de Alta Incidência — Art. 3° do CP</h3>
+
+    <div class="pi"><span class="pn">1</span>
+      <span><strong>Conceito e distinção entre lei temporária e lei excepcional:</strong> Saber que temporária tem prazo certo no texto; excepcional é condicionada à duração de situação anormal. Ambas são autorrevogáveis e ultrativas. Exemplos: Lei 12.663/2012 (temporária); leis de guerra/pandemia (excepcional).</span>
+    </div>
+    <div class="pi"><span class="pn">2</span>
+      <span><strong>Ultratividade — efeito central do art. 3° CP:</strong> A lei continua aplicável aos fatos praticados durante sua vigência, mesmo após o término do prazo ou cessação da situação. NÃO ocorre abolitio criminis pelo simples decurso do prazo ou cessação da situação de emergência.</span>
+    </div>
+    <div class="pi"><span class="pn">3</span>
+      <span><strong>Constitucionalidade do art. 3° CP — controvérsia doutrinária:</strong> Para a prova, adotar a posição majoritária (Constitucional — Nelson Hungria, Capez, Masson, Rogério Sanches). Conhecer a posição minoritária (Greco, Bitencourt: inconstitucional, não recepcionado pelo art. 5°, XL, CF/88). O STF nunca declarou inconstitucional.</span>
+    </div>
+    <div class="pi"><span class="pn">4</span>
+      <span><strong>"Exceção da exceção" — Bitencourt:</strong> O art. 3° CP é uma exceção à regra do art. 2° CP (que é exceção à irretroatividade geral). Saber usar essa nomenclatura em provas discursivas demonstra profundidade.</span>
+    </div>
+    <div class="pi"><span class="pn">5</span>
+      <span><strong>Norma penal em branco com complemento temporário/excepcional:</strong> STF (HC 73.168/SP, 1995): aplica-se o art. 3° CP quando a alteração do complemento ocorre por motivo temporário/excepcional → ultratividade. Motivo permanente/científico → retroatividade benéfica (art. 2°, §único).</span>
+    </div>
+    <div class="pi"><span class="pn">6</span>
+      <span><strong>Distinção: Lei de Drogas e Cloreto de Etila × Contrabando:</strong> Cloreto de etila removido por razão científica permanente → retroage (STF, Informativo 576). Mercadoria proibida por crise econômica temporária → ultratividade (STF, HC 73.168). A distinção é motivo permanente vs. motivo temporário/excepcional.</span>
+    </div>
+    <div class="pi"><span class="pn">7</span>
+      <span><strong>Abolitio criminis temporária (Estatuto do Desarmamento):</strong> STF (RE 768.494) — a suspensão temporária de tipos penais para regularização de armas (arts. 30–32 da Lei 10.826/2003) NÃO retroage como abolitio criminis. Aplica-se a lógica do art. 3° CP — norma temporária. Importante: STJ havia posição contrária antes, depois alinhou-se ao STF.</span>
+    </div>
+    <div class="pi"><span class="pn">8</span>
+      <span><strong>Autorrevogabilidade × Revogação ordinária:</strong> Autorrevogação ocorre automaticamente (sem lei nova). Não equivale a abolitio criminis. Só há abolitio da lei temporária se lei posterior expressamente revogar os tipos e mencionar o período de vigência anterior.</span>
+    </div>
+    <div class="pi"><span class="pn">9</span>
+      <span><strong>O "efeito carrapato" (Damásio) e o fator temporal como elementar do tipo:</strong> O tempo integra o tipo penal das leis intermitentes. Não é ultratividade para alguns (André Estefam), mas aplicação do tempus regit actum. Para provas: usar o argumento para sustentar a constitucionalidade da ultratividade do art. 3°.</span>
+    </div>
+    <div class="pi"><span class="pn">10</span>
+      <span><strong>Relação com o art. 2° CP — não há abolitio pela autorrevogação:</strong> Enquanto no art. 2° a cessação da incriminação demonstra desinteresse punitivo do Estado, na lei temporária/excepcional o fim da vigência demonstra apenas que a situação de necessidade passou — não há despenalização.</span>
+    </div>
+    <div class="pi"><span class="pn">11</span>
+      <span><strong>Posição dos concursos sobre a constitucionalidade:</strong> Em provas objetivas e discursivas de magistratura, a posição a ser adotada é da constitucionalidade e da ultratividade válida. A posição de Greco/Bitencourt pode ser mencionada como doutrina minoritária, mas não deve ser adotada como resposta correta se a questão pedir o posicionamento majoritário/jurisprudencial.</span>
+    </div>
+    <div class="pi"><span class="pn">12</span>
+      <span><strong>Diferença de ultratividade benéfica × ultratividade maléfica:</strong> A ultratividade da lei mais benéfica (art. 2°, §único) é amplamente aceita. A ultratividade da lei mais gravosa (art. 3°) é a polêmica — específica das leis intermitentes. Saber distinguir os dois tipos de ultratividade é fundamental.</span>
+    </div>
+    <div class="pi"><span class="pn">13</span>
+      <span><strong>Lei 12.663/2012 (Lei Geral da Copa) como exemplo real:</strong> É o exemplo mais concreto e atual de lei temporária no Brasil. Crimes praticados durante as Copas de 2013–2014 (uso indevido de símbolo FIFA, violação de marketing) continuam puníveis mesmo após 31/12/2014. Mencionar esse exemplo em provas demonstra atualização.</span>
+    </div>
+    <div class="pi"><span class="pn">14</span>
+      <span><strong>Convecção Americana de Direitos Humanos (CADH), art. 9°:</strong> O art. 9° da CADH prevê legalidade e retroatividade benéfica. Com hierarquia supralegal (STF — RE 466.343), seria um argumento adicional contra a ultratividade gravosa do art. 3° CP. Conhecer essa tensão demonstra aprofundamento doutrinário.</span>
+    </div>
+    <div class="pi"><span class="pn">15</span>
+      <span><strong>Tese discursiva — argumento para e contra constitucionalidade:</strong> PRO: eficácia preventiva, elemento temporal no tipo, coexistência harmônica com CF. CONTRA: art. 5°, XL é eficácia plena, CADH hierarquia supralegal, garantismo penal. Saber construir os dois lados é essencial para discursivas do ENAM.</span>
+    </div>
+  </div>
+
+  <!-- QUADRO SÍNTESE -->
+  <div class="card" style="margin-top:1.5rem">
+    <div class="ct"><span class="bx bp">Quadro-Síntese</span>Art. 3° CP — Pontos Chave</div>
+    <table>
+      <tr><th>Tema</th><th>Resposta Objetiva para Prova</th></tr>
+      <tr><td>Lei temporária — definição</td><td>Tem prazo de vigência expressamente fixado no texto normativo. Autorrevogável pelo decurso do tempo.</td></tr>
+      <tr><td>Lei excepcional — definição</td><td>Vigente durante situação anormal/emergencial. Autorrevogável com o fim da situação que a determinou.</td></tr>
+      <tr><td>Efeito da autorrevogação</td><td>NÃO gera abolitio criminis. A ultratividade (art. 3° CP) garante a punibilidade dos fatos praticados durante a vigência.</td></tr>
+      <tr><td>Constitucionalidade do art. 3°</td><td>Majoritária: constitucional. Minoritária (Greco/Bitencourt): não recepcionado pela CF/88. Para provas: constitucional.</td></tr>
+      <tr><td>NPB + complemento temporário</td><td>Art. 3° CP se aplica → ultratividade do complemento (STF — HC 73.168/SP).</td></tr>
+      <tr><td>NPB + complemento científico permanente</td><td>Art. 2°, §único, CP → retroatividade benéfica (STF — Informativo 576).</td></tr>
+      <tr><td>Abolitio criminis temporária (Desarmamento)</td><td>NÃO retroage para fatos anteriores ao período de regularização (STF — RE 768.494).</td></tr>
+      <tr><td>Único modo de haver abolitio de lei temporária</td><td>Lei posterior que expressamente revogue os tipos penais e mencione o período de vigência anterior.</td></tr>
+      <tr><td>Exemplo real de lei temporária no Brasil</td><td>Lei 12.663/2012 (Lei Geral da Copa) — vigência dos tipos penais até 31/12/2014 (art. 36).</td></tr>
+      <tr><td>CADH e art. 3° CP</td><td>Art. 9° da CADH (hierarquia supralegal) pode ser argumento contra a ultratividade gravosa — conhecer a tensão normativa.</td></tr>
+    </table>
+  </div>
+
+  <!-- ARMADILHAS -->
+  <div class="danger">
+    <h4>⚠ Armadilhas Frequentes em Provas</h4>
+    <ul style="font-size:.91rem;line-height:1.9;padding-left:1.2rem">
+      <li><strong>Confundir ultratividade benéfica com ultratividade maléfica:</strong> A ultratividade da lei mais benéfica (art. 2°, §único) é amplamente aceita para qualquer lei. A ultratividade maléfica (art. 3°) é exclusiva das leis intermitentes e é a polêmica.</li>
+      <li><strong>Afirmar que o art. 3° gera retroatividade:</strong> ERRADO. O art. 3° gera ultratividade (a lei "sobrevive" para os fatos do seu período de vigência) — não retroatividade (que seria aplicar a lei a fatos anteriores à sua vigência).</li>
+      <li><strong>Afirmar que Rogério Greco e Bitencourt aceitam a ultratividade do art. 3°:</strong> ERRADO. Eles sustentam a inconstitucionalidade do art. 3° — a posição deles é que a lei temporal mais gravosa não pode ser ultrativa.</li>
+      <li><strong>Dizer que o simples fim de uma lei temporária gera abolitio criminis:</strong> ERRADO. Só haverá abolitio se lei posterior expressamente revogar os tipos penais e mencionar o período anterior.</li>
+      <li><strong>Confundir lei temporária com lei excepcional:</strong> A temporária tem prazo certo no texto. A excepcional tem vigência condicionada à duração de situação anormal. São espécies do gênero "lei intermitente".</li>
+      <li><strong>Aplicar o critério formal (lei/ato infralegal) para distinguir NPB e retroatividade:</strong> ERRADO. O critério é a natureza do motivo (temporário/excepcional vs. permanente) — não a hierarquia da norma complementadora (STF, HC 73.168/SP).</li>
+    </ul>
+  </div>
+
+  <!-- DISCURSIVAS -->
+  <div class="card" style="margin-top:1rem">
+    <div class="ct"><span class="bx bp">Discursiva ENAM</span>Temas de Alta Incidência em Provas Discursivas</div>
+    <ol style="font-size:.91rem;line-height:1.9;padding-left:1.2rem">
+      <li>Disserte sobre as leis penais intermitentes (temporária e excepcional), explicando o fenômeno da ultratividade do art. 3° CP e analisando criticamente sua constitucionalidade à luz do art. 5°, XL, CF/88.</li>
+      <li>Analise a interação entre o art. 3° do CP e as normas penais em branco, explicando quando o complemento da NPB tem ultratividade e quando retroage em benefício do réu, com base na jurisprudência do STF.</li>
+      <li>Diferencie abolitio criminis (art. 2°, caput, CP) de autorrevogação de lei temporária (art. 3° CP), explicando por que a segunda não gera necessariamente a primeira.</li>
+      <li>Explique, à luz do art. 3° do CP e do RE 768.494/STF, por que a "abolitio criminis temporária" do Estatuto do Desarmamento não retroagiu para beneficiar réus condenados por fatos anteriores ao prazo de regularização.</li>
+    </ol>
+  </div>
+</div><!-- fim tab prova -->
+
+</main>
+
+<script>
+function showTab(id,btn){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.tb').forEach(b=>b.classList.remove('on'));
+  document.getElementById('tab-'+id).classList.add('on');
+  btn.classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function tAcc(btn){
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+</script>
+</body>
+</html>

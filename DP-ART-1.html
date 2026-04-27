@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 1° do Código Penal — Fluxograma Completo | Magistratura/ENAM</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0e0c;
+    --parchment: #f5f0e8;
+    --gold: #b8922a;
+    --gold-light: #d4a843;
+    --crimson: #8b1a1a;
+    --crimson-light: #c0392b;
+    --navy: #1a2744;
+    --navy-mid: #243560;
+    --slate: #4a5568;
+    --olive: #3d5a3e;
+    --teal: #1a4a4a;
+    --border: #c8b882;
+    --bg-main: #f7f2ea;
+    --bg-card: #faf6f0;
+    --shadow: rgba(15,14,12,0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--bg-main);
+    color: var(--ink);
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #1c3a6e 100%);
+    padding: 2.5rem 2rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 4px solid var(--gold);
+  }
+  header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23b8922a' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  .header-badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: .7rem;
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    padding: .3rem .9rem;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+  }
+  header h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.6rem, 4vw, 2.8rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: .5rem;
+  }
+  header h1 span { color: var(--gold-light); }
+  header p {
+    color: rgba(255,255,255,.75);
+    font-size: .95rem;
+    font-style: italic;
+  }
+  .lei-box {
+    margin: 1.5rem auto 0;
+    max-width: 680px;
+    background: rgba(184,146,42,.12);
+    border: 1px solid rgba(184,146,42,.4);
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+    color: #fff;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  .lei-box strong { color: var(--gold-light); font-style: italic; }
+
+  /* ── NAV TABS ── */
+  .tabs-wrap {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--navy);
+    border-bottom: 2px solid var(--gold);
+    overflow-x: auto;
+  }
+  .tabs {
+    display: flex;
+    padding: 0 1rem;
+    white-space: nowrap;
+  }
+  .tab-btn {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,.6);
+    font-family: 'Source Serif 4', serif;
+    font-size: .82rem;
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    padding: .85rem 1.1rem;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all .2s;
+  }
+  .tab-btn:hover { color: #fff; }
+  .tab-btn.active { color: var(--gold-light); border-bottom-color: var(--gold-light); }
+
+  /* ── MAIN CONTENT ── */
+  main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.2rem 4rem; }
+
+  .section { display: none; }
+  .section.active { display: block; }
+
+  /* ── SECTION HEADER ── */
+  .sec-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--navy);
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: .6rem;
+    margin-bottom: 1.6rem;
+  }
+
+  /* ── CARD ── */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.4rem 1.6rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 2px 8px var(--shadow);
+    position: relative;
+  }
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: .7rem;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+  }
+  .card-title .badge {
+    font-family: 'Source Serif 4', serif;
+    font-size: .65rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: .2rem .6rem;
+    border-radius: 3px;
+  }
+  .badge-doutrina { background: #e8f0d8; color: var(--olive); border: 1px solid #b5cfa0; }
+  .badge-stf { background: #fdecea; color: var(--crimson); border: 1px solid #e8a0a0; }
+  .badge-stj { background: #e8f0fa; color: var(--navy-mid); border: 1px solid #9db8d8; }
+  .badge-atencao { background: #fff3cd; color: #856404; border: 1px solid #ffc107; }
+  .badge-prova { background: #e8ffe8; color: var(--olive); border: 1px solid #88cc88; }
+
+  /* ── FLUXO ── */
+  .flow-wrap { display: flex; flex-direction: column; align-items: center; gap: 0; }
+  .flow-node {
+    width: 100%;
+    max-width: 700px;
+    background: var(--bg-card);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: 1.1rem 1.4rem;
+    box-shadow: 0 2px 6px var(--shadow);
+    position: relative;
+  }
+  .flow-node.root {
+    background: var(--navy);
+    border-color: var(--gold);
+    color: #fff;
+    text-align: center;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+  }
+  .flow-node.root .node-title { color: var(--gold-light); font-size: 1.2rem; }
+  .flow-node.sub {
+    background: #f0f4fa;
+    border-color: #9db8d8;
+    max-width: 650px;
+  }
+  .flow-node.warn {
+    background: #fff8ec;
+    border-color: #d4a843;
+  }
+  .flow-node.green {
+    background: #f0f7f0;
+    border-color: #88bb88;
+  }
+  .flow-node.red {
+    background: #fdf0f0;
+    border-color: #cc8888;
+  }
+  .node-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: .4rem;
+  }
+  .node-body { font-size: .88rem; line-height: 1.65; color: var(--slate); }
+  .arrow {
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--gold);
+    padding: .3rem 0;
+    line-height: 1;
+  }
+  .row-nodes { display: flex; gap: 1rem; width: 100%; max-width: 700px; }
+  .row-nodes .flow-node { flex: 1; }
+
+  /* ── GRID CARDS ── */
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media(max-width: 640px) { .grid2 { grid-template-columns: 1fr; } .row-nodes { flex-direction: column; } }
+
+  /* ── TABLE ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .88rem;
+    margin: .6rem 0;
+  }
+  th {
+    background: var(--navy);
+    color: var(--gold-light);
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    letter-spacing: .04em;
+    padding: .6rem .8rem;
+    text-align: left;
+  }
+  td {
+    padding: .55rem .8rem;
+    border-bottom: 1px solid #e8e0d0;
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  tr:nth-child(even) td { background: rgba(200,184,130,.08); }
+
+  /* ── JULGADO ── */
+  .julgado {
+    background: #f9f6f0;
+    border-left: 4px solid var(--crimson);
+    padding: .9rem 1.1rem;
+    margin: .7rem 0;
+    border-radius: 0 6px 6px 0;
+    font-size: .87rem;
+    line-height: 1.65;
+  }
+  .julgado.stj { border-left-color: var(--navy-mid); }
+  .julgado-ref {
+    font-size: .75rem;
+    color: var(--crimson);
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    margin-bottom: .3rem;
+  }
+  .julgado.stj .julgado-ref { color: var(--navy-mid); }
+
+  /* ── PROVA ALERT ── */
+  .prova-box {
+    background: linear-gradient(135deg, #1a2744, #243560);
+    border: 2px solid var(--gold);
+    border-radius: 10px;
+    padding: 1.6rem 2rem;
+    margin: 1rem 0;
+    color: #fff;
+  }
+  .prova-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: var(--gold-light);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+  .prova-item {
+    display: flex;
+    gap: .8rem;
+    padding: .55rem 0;
+    border-bottom: 1px solid rgba(184,146,42,.2);
+    font-size: .88rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,.88);
+  }
+  .prova-item:last-child { border-bottom: none; }
+  .prova-num {
+    min-width: 1.5rem;
+    color: var(--gold-light);
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+  }
+
+  /* ── ACCORDION ── */
+  .acc-btn {
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    padding: .9rem .2rem;
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--navy);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .acc-btn:hover { color: var(--gold); }
+  .acc-icon { transition: transform .25s; font-size: .9rem; }
+  .acc-btn.open .acc-icon { transform: rotate(180deg); }
+  .acc-body { display: none; padding: 1rem .2rem; }
+  .acc-body.open { display: block; }
+
+  /* ── TAG LIST ── */
+  .tag-list { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .6rem; }
+  .tag {
+    font-size: .75rem;
+    font-weight: 600;
+    padding: .25rem .65rem;
+    border-radius: 20px;
+    letter-spacing: .04em;
+  }
+  .tag-proibido { background: #fdecea; color: var(--crimson); border: 1px solid #e8aaaa; }
+  .tag-permitido { background: #e8f7e8; color: var(--olive); border: 1px solid #aacc88; }
+
+  /* scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg-main); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-badge">Preparação Magistratura · ENAM · 2026</div>
+  <h1>Art. 1° do <span>Código Penal</span><br>Princípio da Legalidade</h1>
+  <p>Fluxograma Completo · Doutrina · STF · STJ · Pontos de Prova</p>
+  <div class="lei-box">
+    <strong>"Não há crime sem lei anterior que o defina.<br>
+    Não há pena sem prévia cominação legal."</strong><br>
+    <span style="font-size:.85rem;opacity:.8">Art. 1° do Decreto-Lei n° 2.848/1940 (Código Penal) · Reafirmado no art. 5°, XXXIX, CF/1988</span>
+  </div>
+</header>
+
+<div class="tabs-wrap">
+  <div class="tabs">
+    <button class="tab-btn active" onclick="showTab('fluxo')">⊞ Fluxograma</button>
+    <button class="tab-btn" onclick="showTab('doutrina')">📚 Doutrina</button>
+    <button class="tab-btn" onclick="showTab('norma')">📋 Norma Penal em Branco</button>
+    <button class="tab-btn" onclick="showTab('stf')">⚖ STF</button>
+    <button class="tab-btn" onclick="showTab('stj')">⚖ STJ</button>
+    <button class="tab-btn" onclick="showTab('prova')">🎯 Pontos de Prova</button>
+  </div>
+</div>
+
+<main>
+
+<!-- ══════════════════════════════════════════
+     TAB 1: FLUXOGRAMA
+══════════════════════════════════════════ -->
+<div id="tab-fluxo" class="section active">
+  <div class="sec-title">Fluxograma Estrutural do Art. 1° do CP</div>
+
+  <div class="flow-wrap">
+
+    <!-- RAIZ -->
+    <div class="flow-node root">
+      <div class="node-title">ART. 1° DO CÓDIGO PENAL</div>
+      <div style="font-size:.85rem;color:rgba(255,255,255,.8);font-style:italic">
+        "Nullum crimen, nulla poena sine praevia lege"
+      </div>
+    </div>
+    <div class="arrow">▼</div>
+
+    <!-- FUNDAMENTOS -->
+    <div class="flow-node">
+      <div class="node-title">🏛 Fundamento Constitucional Duplo</div>
+      <div class="node-body">
+        <strong>Art. 5°, XXXIX, CF/88</strong> — Direito fundamental individual (cláusula pétrea, art. 60, §4°, IV, CF)<br>
+        <strong>Art. 1° do CP</strong> — Repetição infraconstitucional com função interpretativa<br>
+        <em>→ Dupla proteção: não pode ser suprimido nem por emenda constitucional</em>
+      </div>
+    </div>
+    <div class="arrow">▼</div>
+
+    <!-- 4 SUBPRINCÍPIOS -->
+    <div class="flow-node" style="background:#f0f4fa;border-color:#9db8d8;">
+      <div class="node-title">OS 4 SUBPRINCÍPIOS (FUNÇÕES DA LEGALIDADE)</div>
+    </div>
+    <div class="arrow">▼</div>
+
+    <div class="row-nodes">
+      <div class="flow-node sub">
+        <div class="node-title" style="color:#8b1a1a">① LEX PRAEVIA</div>
+        <div class="node-body"><strong>Anterioridade</strong><br>A lei deve ser anterior ao fato delituoso. Proíbe a retroatividade <em>in malam partem</em>.<br><br>
+        <em>Exceção:</em> retroatividade <em>in bonam partem</em> (art. 5°, XL, CF).<br>
+        <em>Atenção crimes permanentes e continuadosss:</em> Súmula 711/STF — aplica-se a lei mais grave vigente na cessação.</div>
+      </div>
+      <div class="flow-node sub">
+        <div class="node-title" style="color:#1a4a4a">② LEX SCRIPTA</div>
+        <div class="node-body"><strong>Lei escrita</strong><br>Apenas lei em sentido formal e material pode criar crimes e penas.<br><br>
+        <em>Vedado:</em> costume incriminador, resolução, portaria como tipo penal autônomo.<br>
+        <em>Atenção:</em> Medida Provisória em matéria penal — STF admite apenas se benéfica ao réu.</div>
+      </div>
+    </div>
+    <div class="row-nodes" style="margin-top:1rem">
+      <div class="flow-node sub">
+        <div class="node-title" style="color:#3d5a3e">③ LEX STRICTA</div>
+        <div class="node-body"><strong>Estrita / Vedação da Analogia in Malam Partem</strong><br>Proibição de analogia para criar crimes ou agravar penas.<br><br>
+        <em>Permitido:</em> analogia <em>in bonam partem</em> (favorável ao réu).<br>
+        Interpretação extensiva é admitida quando favorável ao acusado.<br>
+        <em>STF HC 97.261/RS:</em> "sinal de TV a cabo" ≠ energia elétrica (analogia vedada).</div>
+      </div>
+      <div class="flow-node sub">
+        <div class="node-title" style="color:#1a2744">④ LEX CERTA</div>
+        <div class="node-body"><strong>Taxatividade / Determinação</strong><br>A lei deve definir condutas com clareza e precisão. Veda tipos vagos, abertos ou indeterminados.<br><br>
+        <em>Mandado de criminalização de determinação</em> — obriga o legislador a ser preciso.<br>
+        <em>STF HC 88.452-1/RS (Eros Grau):</em> "desobedecer a ordem de servidor" é vago — afastado o crime de desobediência.</div>
+      </div>
+    </div>
+
+    <div class="arrow">▼</div>
+
+    <!-- DESDOBRAMENTOS -->
+    <div class="flow-node warn">
+      <div class="node-title">⚠ Desdobramentos e Corolários do Princípio</div>
+      <div class="node-body">
+        <strong>→ Irretroatividade da lei penal mais gravosa</strong> (art. 5°, XL, CF — regra)<br>
+        <strong>→ Retroatividade da lei mais benéfica</strong> (exceção — inclusive após trânsito em julgado: art. 2°, §único, CP)<br>
+        <strong>→ Proibição de responsabilidade penal objetiva</strong> (exige dolo ou culpa)<br>
+        <strong>→ Reserva de lei federal</strong> (art. 22, I, CF — competência privativa da União para Direito Penal)<br>
+        <strong>→ Vedação de lei delegada e decreto autônomo</strong> em matéria incriminadora
+      </div>
+    </div>
+    <div class="arrow">▼</div>
+
+    <div class="flow-node green">
+      <div class="node-title">✅ O que a Legalidade PERMITE</div>
+      <div class="node-body">
+        • Norma penal em branco (desde que o núcleo do tipo esteja na lei formal)<br>
+        • Interpretação extensiva <em>in bonam partem</em><br>
+        • Analogia <em>in bonam partem</em><br>
+        • Causas supralegais de exclusão da culpabilidade (inexigibilidade de conduta diversa)<br>
+        • Medida Provisória em matéria penal se <em>benéfica</em> ao réu (STF, posição majoritária)<br>
+        • Tipos penais abertos com elementos normativos (desde que determináveis pelo intérprete)
+      </div>
+    </div>
+    <div class="arrow">▼</div>
+
+    <div class="flow-node red">
+      <div class="node-title">❌ O que a Legalidade PROÍBE</div>
+      <div class="node-body">
+        • Costume incriminador ou agravante<br>
+        • Analogia <em>in malam partem</em><br>
+        • Retroatividade <em>in malam partem</em><br>
+        • Tipos penais absolutamente vagos ou indeterminados<br>
+        • Criação de crime por resolução, portaria, decreto ou ato infralegal autônomo<br>
+        • Lei delegada em matéria penal (art. 68, §1°, CF)<br>
+        • Medida Provisória que crie ou agrave tipo penal
+      </div>
+    </div>
+    <div class="arrow">▼</div>
+
+    <!-- RELAÇÃO COM OUTROS PRINCÍPIOS -->
+    <div class="flow-node">
+      <div class="node-title">🔗 Princípios Conexos e Relação Sistêmica</div>
+      <div class="node-body">
+        <strong>Intervenção Mínima (Ultima ratio):</strong> DP atua somente quando outros ramos forem insuficientes<br>
+        <strong>Fragmentariedade:</strong> DP tutela apenas bens jurídicos essenciais e os mais graves ataques<br>
+        <strong>Subsidiariedade:</strong> DP é subsidiário a outros ramos do Direito<br>
+        <strong>Tipicidade Material:</strong> não basta a subsunção formal; exige-se relevância lesiva real ao bem jurídico<br>
+        <strong>Insignificância (Bagatela):</strong> afasta a tipicidade material — STF: vetores objetivos (HC 84.412/SP, Min. Celso de Mello)
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     TAB 2: DOUTRINA
+══════════════════════════════════════════ -->
+<div id="tab-doutrina" class="section">
+  <div class="sec-title">Doutrina — Princípio da Legalidade</div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="badge badge-doutrina">Doutrina</span>
+      Origem Histórica e Fundamentos
+    </div>
+    <p style="font-size:.9rem;line-height:1.7">O princípio da legalidade remonta à <strong>Magna Carta inglesa de 1215</strong> (art. 39). Foi positivado no Direito Penal moderno pela obra de <strong>Paul Johann Anselm von Feuerbach</strong> (século XIX), que cunhou a expressão latina <em>"nullum crimen, nulla poena sine praevia lege scripta et stricta"</em>. No Brasil, está presente desde a Constituição de 1824 e reafirmado em todas as Constituições subsequentes.</p>
+    <br>
+    <p style="font-size:.9rem;line-height:1.7"><strong>Fundamentos (Rogério Sanches Cunha):</strong></p>
+    <table>
+      <tr><th>Fundamento</th><th>Conteúdo</th></tr>
+      <tr><td><strong>Político</strong></td><td>Vinculação dos Poderes Executivo e Judiciário às leis elaboradas pelo Legislativo — impede poder punitivo arbitrário</td></tr>
+      <tr><td><strong>Democrático</strong></td><td>Respeita a separação de poderes: somente o povo, por seus representantes, define crimes e penas</td></tr>
+      <tr><td><strong>Jurídico</strong></td><td>Gera segurança jurídica — o cidadão conhece previamente as consequências de seus atos</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="badge badge-doutrina">Doutrina</span>
+      Legalidade Formal vs. Material (Rogério Greco)
+    </div>
+    <div class="grid2">
+      <div>
+        <strong>Legalidade Formal</strong>
+        <p style="font-size:.88rem;line-height:1.6;margin-top:.4rem">Obediência aos trâmites procedimentais previstos na Constituição para criação da lei (processo legislativo, bicameralismo, sanção presidencial).</p>
+      </div>
+      <div>
+        <strong>Legalidade Material</strong>
+        <p style="font-size:.88rem;line-height:1.6;margin-top:.4rem">Obediência ao conteúdo da Constituição, especialmente aos direitos e garantias fundamentais. A lei pode ser formalmente válida, mas materialmente inconstitucional se violar direitos fundamentais.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="badge badge-doutrina">Doutrina</span>
+      Medida Provisória em Matéria Penal
+    </div>
+    <p style="font-size:.9rem;line-height:1.7">Posição da doutrina majoritária e do STF: <strong>MP não pode criar crimes ou agravar penas</strong> (viola a <em>lex scripta</em> e a reserva de lei). Contudo, o STF já admitiu MP em matéria penal quando <strong>benéfica</strong> ao réu (ex: descriminalização temporária, ampliação de prazo prescricional, abolitio criminis temporária).</p>
+    <div class="julgado" style="margin-top:.8rem">
+      <div class="julgado-ref">STF — Posição Consolidada</div>
+      A reserva legal absoluta veda MP incriminadora. A MP benéfica, contudo, pode retroagir para favorecer o réu enquanto vigente, pois gera efeitos favoráveis semelhantes à <em>abolitio criminis</em>.
+    </div>
+    <p style="font-size:.85rem;margin-top:.5rem;color:var(--slate)"><em>Rogério Sanches Cunha</em> acrescenta: lei delegada também é vedada em matéria penal (art. 68, §1°, CF — impede delegação de atos de competência exclusiva do Congresso Nacional e veda disciplina sobre direitos individuais).</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="badge badge-doutrina">Doutrina</span>
+      Distinção: Princípio da Legalidade × Princípio da Reserva Legal
+    </div>
+    <table>
+      <tr><th>Conceito</th><th>Abrangência</th><th>Aplicação</th></tr>
+      <tr>
+        <td><strong>Legalidade (geral)</strong></td>
+        <td>Toda atuação estatal deve ter base legal (art. 37, <em>caput</em>, CF)</td>
+        <td>Todo o Direito Público</td>
+      </tr>
+      <tr>
+        <td><strong>Reserva Legal (penal)</strong></td>
+        <td>Somente lei em sentido estrito (formal e material) pode criar crimes e cominar penas</td>
+        <td>Exclusivo do Direito Penal — mais restritiva</td>
+      </tr>
+    </table>
+    <p style="font-size:.85rem;margin-top:.6rem;color:var(--slate)"><em>Posição dominante:</em> os termos são frequentemente usados como sinônimos na doutrina penal brasileira, mas tecnicamente reserva legal é mais restrita — exige lei formal específica.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="badge badge-doutrina">Doutrina</span>
+      Interpretação Extensiva vs. Analogia — Distinção Crucial
+    </div>
+    <table>
+      <tr><th>Modalidade</th><th>Conceito</th><th>Admissibilidade no DP</th></tr>
+      <tr>
+        <td><strong>Interpretação extensiva</strong></td>
+        <td>Amplia o alcance da norma para casos que estão dentro do espírito da lei, mas não na letra</td>
+        <td>✅ Admitida (inclusive in malam partem, segundo posição majoritária, pois é interpretação, não integração)</td>
+      </tr>
+      <tr>
+        <td><strong>Analogia in bonam partem</strong></td>
+        <td>Aplica norma a caso semelhante não previsto, em favor do réu</td>
+        <td>✅ Permitida</td>
+      </tr>
+      <tr>
+        <td><strong>Analogia in malam partem</strong></td>
+        <td>Aplica norma a caso semelhante não previsto, em prejuízo do réu</td>
+        <td>❌ Vedada pelo princípio da legalidade (lex stricta)</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="badge badge-doutrina">Doutrina</span>
+      Tipicidade Formal vs. Tipicidade Material
+    </div>
+    <p style="font-size:.9rem;line-height:1.7">A legalidade garante a <strong>tipicidade formal</strong> (subsunção do fato à norma). Porém, a corrente dominante — adotada pelo STF e pelo STJ — exige também a <strong>tipicidade material</strong>: o fato deve causar lesão efetiva ou exposição a perigo de bem jurídico penalmente relevante.</p>
+    <br>
+    <p style="font-size:.9rem;line-height:1.7">Daí surgem o <strong>princípio da insignificância</strong> (bagatela própria) e a <strong>bagatela imprópria</strong> (irrelevância penal do fato — desnecessidade da pena no caso concreto, usada na dosimetria). Ambos afastam ou atenuam a intervenção penal, sem violar a legalidade.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="badge badge-doutrina">Doutrina</span>
+      Princípio da Legalidade e o Direito Costumeiro
+    </div>
+    <p style="font-size:.9rem;line-height:1.7">O costume é <strong>fonte formal mediata</strong> do Direito Penal — serve apenas para interpretação da lei (ex.: art. 155, §1°, CP — furto noturno — o conceito de "repouso noturno" é interpretado com base no costume local).</p>
+    <br>
+    <p style="font-size:.9rem;line-height:1.7">O costume <strong>jamais pode</strong>: (a) criar crimes (costume incriminador); (b) criar agravantes; (c) revogar tipos penais (ab-rogação consuetudinária não é aceita — apenas lei pode revogar lei).</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     TAB 3: NORMA PENAL EM BRANCO
+══════════════════════════════════════════ -->
+<div id="tab-norma" class="section">
+  <div class="sec-title">Norma Penal em Branco e Legalidade</div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="badge badge-doutrina">Conceito</span>
+      O que é Norma Penal em Branco?
+    </div>
+    <p style="font-size:.9rem;line-height:1.7">É a norma penal cujo <strong>preceito primário</strong> (descrição da conduta) é incompleto, necessitando de complementação por outra norma para ter plena aplicabilidade. O <strong>preceito secundário</strong> (sanção) está completo.</p>
+    <br>
+    <p style="font-size:.9rem;line-height:1.7"><strong>Validade constitucional:</strong> admitida pelo STF como técnica legislativa legítima, desde que a norma penal em branco: (i) contenha o <em>núcleo essencial</em> do tipo penal; (ii) a complementação seja acessível, clara e publicamente disponível.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="badge badge-doutrina">Classificação</span>
+      Classificação Doutrinária Completa
+    </div>
+
+    <button class="acc-btn" onclick="toggleAcc(this)">
+      I — Norma Penal em Branco Homogênea (Imprópria) <span class="acc-icon">▾</span>
+    </button>
+    <div class="acc-body">
+      <p style="font-size:.88rem;line-height:1.65">Complementação advém de <strong>norma de mesma natureza jurídica</strong> (lei). Não há polêmica constitucional — a fonte é o próprio Poder Legislativo.</p>
+      <br>
+      <strong>Homovitelínea</strong> — complemento no mesmo diploma legal:
+      <div class="julgado" style="border-left-color:var(--olive)">
+        <div class="julgado-ref" style="color:var(--olive)">Exemplo</div>
+        Art. 312, CP (Peculato) → exige o conceito de "funcionário público" → art. 327, CP. Mesma fonte, mesmo código.
+      </div>
+      <br>
+      <strong>Heterovitelínea</strong> — complemento em diploma diverso (mas mesma natureza — lei):
+      <div class="julgado" style="border-left-color:var(--olive)">
+        <div class="julgado-ref" style="color:var(--olive)">Exemplo</div>
+        Art. 236, CP (fraude no casamento) → "impedimento" → Código Civil. Mesma fonte (lei), diplomas distintos.
+      </div>
+    </div>
+
+    <button class="acc-btn" onclick="toggleAcc(this)">
+      II — Norma Penal em Branco Heterogênea (Própria) <span class="acc-icon">▾</span>
+    </button>
+    <div class="acc-body">
+      <p style="font-size:.88rem;line-height:1.65">Complementação advém de <strong>fonte normativa diversa</strong> — ato infralegal (portaria, resolução, regulamento, decreto).</p>
+      <div class="julgado">
+        <div class="julgado-ref">Exemplo Clássico — Tráfico de Drogas</div>
+        Art. 33 da Lei 11.343/2006 → "substâncias entorpecentes" → Portaria n° 344/98 da ANVISA (ato infralegal do Executivo federal).
+      </div>
+      <br>
+      <p style="font-size:.88rem;line-height:1.65"><strong>Constitucionalidade:</strong> O STF declarou constitucional a norma penal em branco heterogênea, desde que o complemento: (a) não crie o tipo penal; (b) apenas complemente elementos descritivos; (c) seja de autoridade competente. A complementação não reveste caráter criminal — é de natureza administrativa e técnico-científica.</p>
+      <div class="julgado">
+        <div class="julgado-ref">STF — RE 979.962 (Tema 703) — Covid-19 / Art. 268 CP</div>
+        Tratando-se de norma penal em branco heterogênea, sua complementação se faz por ato do poder público, compreendida a competência de quaisquer dos entes federados (ADI 6.341-MC-Ref/DF, ADPF 672-MC-Ref/DF, ADI 6.855/RN). A complementação não se reveste, só por esse motivo, de natureza criminal.
+      </div>
+    </div>
+
+    <button class="acc-btn" onclick="toggleAcc(this)">
+      III — Norma Penal em Branco ao Revés (Invertida) <span class="acc-icon">▾</span>
+    </button>
+    <div class="acc-body">
+      <p style="font-size:.88rem;line-height:1.65">É aquela em que o <strong>preceito secundário</strong> (sanção) é que necessita de complementação, remissão a sanção prevista em outro tipo penal. Exs.: crimes que remetem à pena de delito anteriormente descrito.</p>
+    </div>
+
+    <button class="acc-btn" onclick="toggleAcc(this)">
+      IV — Norma Penal em Branco de Fundo Constitucional <span class="acc-icon">▾</span>
+    </button>
+    <div class="acc-body">
+      <p style="font-size:.88rem;line-height:1.65">O complemento do preceito primário encontra-se na própria Constituição Federal.</p>
+      <div class="julgado" style="border-left-color:var(--olive)">
+        <div class="julgado-ref" style="color:var(--olive)">Exemplo</div>
+        Art. 246, CP (Abandono intelectual) — o conceito de "instrução primária" é buscado no art. 208 da CF/88.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="badge badge-atencao">⚠ Ponto Crítico</span>
+      Retroatividade da Norma Complementar — Posição do STF
+    </div>
+    <p style="font-size:.9rem;line-height:1.7">Quando o ato normativo complementar de uma norma penal em branco heterogênea for alterado (ex.: substância excluída do rol da ANVISA), <strong>há divergência</strong>:</p>
+    <br>
+    <table>
+      <tr><th>Corrente</th><th>Fundamento</th><th>Consequência</th></tr>
+      <tr>
+        <td><strong>STF (posição dominante)</strong></td>
+        <td>A exclusão da substância do rol ANVISA descriminaliza a conduta — <em>abolitio criminis</em> material</td>
+        <td>Retroage para beneficiar o réu</td>
+      </tr>
+      <tr>
+        <td><strong>Doutrina minoritária</strong></td>
+        <td>Mera alteração regulamentar não equivale a <em>abolitio criminis</em> (norma penal não mudou)</td>
+        <td>Não retroage</td>
+      </tr>
+    </table>
+    <br>
+    <p style="font-size:.85rem;color:var(--crimson)"><strong>Para concursos:</strong> Adotar a posição do STF — exclusão da substância do rol ANVISA configura novatio legis in mellius, retroagindo para beneficiar o réu (HC 99.402/RS).</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     TAB 4: STF
+══════════════════════════════════════════ -->
+<div id="tab-stf" class="section">
+  <div class="sec-title">Jurisprudência do STF — Legalidade Penal</div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="badge badge-stf">STF</span>
+      Julgados Fundamentais — Subprincípios da Legalidade
+    </div>
+
+    <div class="julgado">
+      <div class="julgado-ref">STF · HC 97.261/RS · Rel. Min. Joaquim Barbosa · 2ª Turma · 2011</div>
+      <strong>Lex Stricta — Proibição de Analogia in Malam Partem:</strong> "Sinal de TV a cabo" não pode ser equiparado à "energia com valor econômico" para fins do crime de furto (art. 155, §3°, CP). A equiparação configuraria analogia in malam partem, vedada pelo princípio da legalidade.
+    </div>
+
+    <div class="julgado">
+      <div class="julgado-ref">STF · HC 88.452-1/RS · Rel. Min. Eros Grau · 2ª Turma · 2006</div>
+      <strong>Lex Certa — Taxatividade:</strong> O tipo penal de desobediência (art. 330, CP) não se configura quando a ordem de servidor público já prevê punição administrativa própria para o caso de descumprimento, pois o termo "desobedecer a ordem" possui vagueza que não pode ser preenchida de forma a ampliar indevidamente a criminalização.
+    </div>
+
+    <div class="julgado">
+      <div class="julgado-ref">STF · HC 84.412/SP · Rel. Min. Celso de Mello · 2ª Turma · 2004</div>
+      <strong>Princípio da Insignificância — Vetores Objetivos (Leading Case):</strong><br>
+      (i) Mínima ofensividade da conduta; (ii) Nenhuma periculosidade social da ação; (iii) Reduzido grau de reprovabilidade do comportamento; (iv) Inexpressividade da lesão jurídica produzida. Afasta a tipicidade material sem violar a legalidade formal.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="badge badge-stf">STF · 2025</span>
+      Cartão Amarelo no Futebol — Legalidade Estrita (Informativo 1202)
+    </div>
+    <div class="julgado">
+      <div class="julgado-ref">STF · AgRg no RHC 238.757 · Rel. Min. André Mendonça (vencido) · Min. Gilmar Mendes (voto vencedor) · 2ª Turma · 2/12/2025</div>
+      <strong>Tese firmada:</strong> É atípica, à luz do princípio da legalidade estrita (CF/1988, art. 5°, XXXIX), a conduta consistente na provocação deliberada de um cartão amarelo em partida de futebol, ainda que motivada por vantagem indevida, quando não houver demonstração de potencial concreto de alteração do resultado da competição esportiva. O art. 198 da Lei Geral do Esporte (Lei 14.597/2023) exige que a conduta vise "alterar ou falsear o resultado da competição" — requisito não preenchido pela ação individual de receber um único cartão amarelo. Impõe-se, nessa hipótese, o trancamento da ação penal por falta de justa causa.
+    </div>
+    <p style="font-size:.85rem;margin-top:.6rem;color:var(--slate)"><em>Relevância para o concurso:</em> O caso ilustra com clareza a distinção entre tipicidade formal e tipicidade material, e como a legalidade estrita impede a interpretação extensiva in malam partem dos tipos penais. O jogador Igor Cariús (Cuiabá/Sport) fora denunciado pelo MP-GO pela Operação Penalidade Máxima III.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="badge badge-stf">STF</span>
+      Norma Penal em Branco Heterogênea — Constitucionalidade (Covid-19)
+    </div>
+    <div class="julgado">
+      <div class="julgado-ref">STF · RE 979.962 · Repercussão Geral (Tema) · 2021/2022</div>
+      Tratando-se de norma penal em branco heterogênea (art. 268, CP — infração de medida sanitária preventiva), sua complementação se faz por ato do poder público, compreendida a competência de quaisquer dos entes federados, conforme ADI 6.341-MC-Ref/DF, ADPF 672-MC-Ref/DF e ADI 6.855/RN. O ato normativo complementador deve ser: (i) claro; (ii) baseado em evidências científicas; (iii) cogente (não mera recomendação); (iv) proporcional. É possível o exame de constitucionalidade e legalidade das normas complementadoras a cada ato normativo e a cada fato imputado.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="badge badge-stf">STF · Súmula 711</span>
+      Crimes Permanentes, Continuados e Lex Praevia
+    </div>
+    <div class="julgado">
+      <div class="julgado-ref">Súmula 711/STF</div>
+      "A lei penal mais grave aplica-se ao crime continuado ou ao crime permanente, se a sua vigência é anterior à cessação da continuidade ou da permanência."
+    </div>
+    <p style="font-size:.85rem;margin-top:.5rem;color:var(--slate)"><em>Exceção constitucional à lex praevia:</em> não viola o princípio da anterioridade porque o crime já estava em execução quando da vigência da lei mais grave. O Estado não está punindo por fato anterior à lei — o fato (permanência ou continuidade) ocorre sob vigência da nova lei.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="badge badge-stf">STF</span>
+      Medida Provisória em Matéria Penal
+    </div>
+    <div class="julgado">
+      <div class="julgado-ref">STF — Posição Dominante</div>
+      O STF admite que medida provisória verse sobre matéria penal desde que seja <strong>mais benéfica</strong> ao acusado. MP incriminadora ou agravadora de pena viola a reserva de lei (art. 62, §1°, I, "b", CF/88 — vedação expressa: MP não pode tratar de matéria penal).
+    </div>
+    <p style="font-size:.85rem;margin-top:.5rem;color:var(--crimson)"><strong>Atenção:</strong> a CF/88, com a EC 32/2001, vedou expressamente (art. 62, §1°, I, "b") a MP sobre "matéria relativa a direito penal, processual penal e processual civil". Contudo, o STF entende que a vedação não alcança MP benéfica ao réu — posição a ser adotada em provas.</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     TAB 5: STJ
+══════════════════════════════════════════ -->
+<div id="tab-stj" class="section">
+  <div class="sec-title">Jurisprudência do STJ — Legalidade Penal</div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="badge badge-stj">STJ</span>
+      Princípio da Insignificância — Delegado e Tipicidade
+    </div>
+    <div class="julgado stj">
+      <div class="julgado-ref">STJ · HC 154.949/MG · 6ª Turma</div>
+      O reconhecimento do princípio da insignificância (bagatela) cabe <strong>somente ao Poder Judiciário</strong>. O Delegado de Polícia tem o dever de ratificar a prisão em flagrante, ainda que entenda ser a conduta materialmente atípica por insignificância, pois cabe à autoridade judiciária o juízo de tipicidade material. (Parte da doutrina — André Nicolitt, Cleber Masson — discorda, pois se o fato é atípico, também o é para a autoridade policial.)
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="badge badge-stj">STJ · Súmula 502</span>
+      Pirataria e Princípio da Insignificância
+    </div>
+    <div class="julgado stj">
+      <div class="julgado-ref">Súmula 502/STJ</div>
+      "Presentes a materialidade e a autoria, afigura-se típica, em relação ao crime previsto no art. 184, §2°, do CP, a conduta de expor à venda CDs e DVDs piratas." <strong>Não se aplica a insignificância ao crime de violação de direito autoral</strong>, ainda que exista tolerância social e das autoridades, pois a conduta causa prejuízos à indústria fonográfica, aos comerciantes e ao Fisco (STF HC 98.898/2010).
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="badge badge-stj">STJ</span>
+      Analogia in Bonam Partem — Admissibilidade
+    </div>
+    <div class="julgado stj">
+      <div class="julgado-ref">STJ — Posição Consolidada</div>
+      A analogia <em>in bonam partem</em> é admitida no Direito Penal como instrumento de integração favorável ao réu, sem violação da legalidade. Exemplo: aplicação analógica das causas de diminuição de pena de um tipo penal a outro quando há semelhança de situações e ausência de expressa previsão.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="badge badge-stj">STJ · Tema Repetitivo 933</span>
+      Princípio da Consunção (Absorção) e Legalidade
+    </div>
+    <div class="julgado stj">
+      <div class="julgado-ref">STJ · REsp 1.378.053/PR · 3ª Seção · Tema Repetitivo 933 · 2016</div>
+      "Quando o falso se exaure no descaminho, sem mais potencialidade lesiva, é por este absorvido, como crime-fim, condição que não se altera por ser menor a pena a este cominada." Reafirmado pela Súmula 17/STJ. A aplicação do princípio da consunção não viola a legalidade — é critério de solução de aparente conflito de normas penais.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="badge badge-stj">STJ · 2024/2025</span>
+      Legalidade e Suspensão da Prescrição — Recurso Repetitivo
+    </div>
+    <div class="julgado stj">
+      <div class="julgado-ref">STJ — Tese Repetitiva (2024)</div>
+      1ª Tese: A suspensão de recurso extraordinário nos tribunais de origem para aguardar julgamento de tema de repercussão geral (art. 1.030, III, CPC) <strong>não suspende automaticamente</strong> o prazo prescricional da pretensão punitiva penal.<br><br>
+      2ª Tese: A determinação de suspensão nacional dos processos (art. 1.035, §5°, CPC) resulta na suspensão de ações penais em curso que tratem da mesma controvérsia, bem como do prazo prescricional.
+    </div>
+    <p style="font-size:.85rem;margin-top:.5rem;color:var(--slate)"><em>Relevância:</em> O STJ reafirma que normas processuais civis não podem, por analogia automática, suspender prazos penais prescricionais — aplica-se a lex stricta.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">
+      <span class="badge badge-stj">STJ</span>
+      Majorante de Arma no Tráfico — Legalidade e Especialidade
+    </div>
+    <div class="julgado stj">
+      <div class="julgado-ref">STJ · Processo em Segredo de Justiça · Rel. Min. Ribeiro Dantas · 5ª Turma · 12/11/2024</div>
+      "A majorante do art. 40, IV, da Lei 11.343/2006 aplica-se quando há nexo finalístico entre o uso da arma e o tráfico de drogas, sendo a arma usada para garantir o sucesso da atividade criminosa, hipótese em que o crime de porte ou posse ilegal de arma é absorvido pelo tráfico. Do contrário, o delito previsto no Estatuto do Desarmamento é considerado crime autônomo, em concurso material."
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     TAB 6: PONTOS DE PROVA
+══════════════════════════════════════════ -->
+<div id="tab-prova" class="section">
+  <div class="sec-title">🎯 Pontos Sempre Cobrados em Magistratura / ENAM</div>
+
+  <div class="prova-box">
+    <h3>📌 Questões de Alta Incidência — Art. 1° do CP</h3>
+    <div class="prova-item">
+      <span class="prova-num">1</span>
+      <span><strong>Os 4 subprincípios e suas vedações específicas:</strong> <em>lex praevia</em> (anterioridade), <em>lex scripta</em> (lei escrita — veda costume incriminador), <em>lex stricta</em> (veda analogia in malam partem) e <em>lex certa</em> (taxatividade — veda tipos vagos). Saber diferenciar cada um com exemplos é essencial.</span>
+    </div>
+    <div class="prova-item">
+      <span class="prova-num">2</span>
+      <span><strong>Norma Penal em Branco — classificação completa:</strong> Homogênea (homovitelínea e heterovitelínea) vs. Heterogênea. Saber o exemplo canônico da Lei de Drogas + Portaria 344 ANVISA e a posição do STF sobre constitucionalidade.</span>
+    </div>
+    <div class="prova-item">
+      <span class="prova-num">3</span>
+      <span><strong>Medida Provisória em matéria penal:</strong> art. 62, §1°, I, "b", CF — vedação expressa. STF admite apenas MP benéfica. MP incriminadora ou agravante = inconstitucional. Essa distinção é frequentemente cobrada.</span>
+    </div>
+    <div class="prova-item">
+      <span class="prova-num">4</span>
+      <span><strong>Súmula 711/STF — Crimes permanentes e continuados:</strong> aplica-se a lei mais grave vigente ao tempo da cessação. Não viola a anterioridade. ENAM adora cobrar se a lei posterior mais grave pode ou não ser aplicada a crimes permanentes em andamento.</span>
+    </div>
+    <div class="prova-item">
+      <span class="prova-num">5</span>
+      <span><strong>Legalidade Formal vs. Material:</strong> diferença entre validade procedimental (formal) e conformidade com direitos fundamentais (material). Uma lei formalmente válida pode ser materialmente inconstitucional.</span>
+    </div>
+    <div class="prova-item">
+      <span class="prova-num">6</span>
+      <span><strong>Tipicidade Formal vs. Material:</strong> a legalidade garante apenas a tipicidade formal. A tipicidade material exige lesão efetiva ou exposição a perigo relevante. O STF (HC 84.412/SP) consolidou os 4 vetores da insignificância.</span>
+    </div>
+    <div class="prova-item">
+      <span class="prova-num">7</span>
+      <span><strong>Reserva de Lei Federal (art. 22, I, CF):</strong> somente a União pode legislar sobre Direito Penal. Estados e Municípios não podem criar crimes, mesmo por lei. Resolução, portaria e decreto não criam tipos penais autônomos.</span>
+    </div>
+    <div class="prova-item">
+      <span class="prova-num">8</span>
+      <span><strong>Analogia in bonam partem:</strong> admitida no DP — não viola a legalidade. Analogia in malam partem: vedada. A interpretação extensiva (ainda que desfavorável) é admitida — distinguir de analogia!</span>
+    </div>
+    <div class="prova-item">
+      <span class="prova-num">9</span>
+      <span><strong>Costume no Direito Penal:</strong> fonte formal mediata (apenas interpreta). Nunca cria crimes (costume incriminador vedado), nunca ab-roga lei penal. Apenas a lei revoga a lei.</span>
+    </div>
+    <div class="prova-item">
+      <span class="prova-num">10</span>
+      <span><strong>Cláusula pétrea:</strong> o art. 5°, XXXIX, CF consagra o princípio da legalidade como direito fundamental individual — não pode ser abolido nem por Emenda Constitucional (art. 60, §4°, IV, CF).</span>
+    </div>
+    <div class="prova-item">
+      <span class="prova-num">11</span>
+      <span><strong>STF — Informativo 1202 (2025) — Cartão amarelo:</strong> A legalidade estrita impede a interpretação extensiva in malam partem. Conduta formalmente típica pode ser materialmente atípica se ausente o potencial lesivo ao bem jurídico. Distinguir tipicidade formal de material. RHC 238.757.</span>
+    </div>
+    <div class="prova-item">
+      <span class="prova-num">12</span>
+      <span><strong>Retroatividade do complemento da norma penal em branco:</strong> STF entende que a exclusão de substância do rol ANVISA opera <em>abolitio criminis</em> material, retroagindo para beneficiar o réu. Divergência doutrinária — para prova: seguir STF.</span>
+    </div>
+    <div class="prova-item">
+      <span class="prova-num">13</span>
+      <span><strong>Diferença: Legalidade Geral (art. 37 CF) × Reserva Legal Penal (art. 5°, XXXIX, CF):</strong> a reserva legal é mais restritiva — exige lei em sentido estrito formal e material. Frequentemente cobrado em discursivas do ENAM.</span>
+    </div>
+    <div class="prova-item">
+      <span class="prova-num">14</span>
+      <span><strong>Norma Penal em Branco ao Revés (Invertida):</strong> é o preceito secundário (sanção) incompleto, remetendo à pena de outro crime. Menos cobrado, mas diferencia o candidato preparado.</span>
+    </div>
+    <div class="prova-item">
+      <span class="prova-num">15</span>
+      <span><strong>Princípio da insignificância e Delegado de Polícia:</strong> STJ (HC 154.949/MG) — somente o Judiciário reconhece a bagatela. Policial deve ratificar o flagrante mesmo entendendo ser insignificante. Posição divergente da doutrina (Masson, Nicolitt).</span>
+    </div>
+  </div>
+
+  <!-- TABELA SÍNTESE -->
+  <div class="card" style="margin-top:1.5rem">
+    <div class="card-title">
+      <span class="badge badge-prova">Quadro-síntese</span>
+      Permitido × Proibido — Legalidade Penal
+    </div>
+    <table>
+      <tr><th>Tema</th><th>✅ Permitido</th><th>❌ Proibido</th></tr>
+      <tr>
+        <td><strong>Fonte do Crime</strong></td>
+        <td>Lei federal em sentido estrito</td>
+        <td>Costume, portaria, resolução, decreto autônomo, MP incriminadora</td>
+      </tr>
+      <tr>
+        <td><strong>Analogia</strong></td>
+        <td>In bonam partem</td>
+        <td>In malam partem</td>
+      </tr>
+      <tr>
+        <td><strong>Retroatividade</strong></td>
+        <td>Lei mais benéfica (irrestrita)</td>
+        <td>Lei mais gravosa (regra — exceção: crimes permanentes/continuados, Súmula 711)</td>
+      </tr>
+      <tr>
+        <td><strong>Tipo Penal</strong></td>
+        <td>Elementos normativos, tipos abertos com núcleo definido, norma penal em branco</td>
+        <td>Tipos absolutamente vagos, indeterminados, sem núcleo essencial</td>
+      </tr>
+      <tr>
+        <td><strong>Medida Provisória</strong></td>
+        <td>Benéfica ao réu (posição STF)</td>
+        <td>Incriminadora ou agravante (art. 62, §1°, I, "b", CF)</td>
+      </tr>
+      <tr>
+        <td><strong>Lei Delegada</strong></td>
+        <td>—</td>
+        <td>Qualquer matéria penal (art. 68, §1°, CF)</td>
+      </tr>
+      <tr>
+        <td><strong>Norma Penal em Branco</strong></td>
+        <td>Heterogênea (STF declarou constitucional)</td>
+        <td>Complemento que crie o próprio núcleo do tipo penal</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card" style="margin-top:1rem">
+    <div class="card-title">
+      <span class="badge badge-prova">Dica ENAM</span>
+      Temas de Discursiva Mais Cobrados
+    </div>
+    <ol style="font-size:.9rem;line-height:1.8;padding-left:1.2rem">
+      <li>Dissertar sobre os 4 subprincípios do princípio da legalidade penal com exemplos jurisprudenciais concretos.</li>
+      <li>Analisar a constitucionalidade da norma penal em branco heterogênea à luz da lex scripta e da reserva de lei (art. 22, I, CF).</li>
+      <li>Discutir se a Súmula 711/STF viola ou excepciona validamente o princípio da anterioridade.</li>
+      <li>Diferençar tipicidade formal de material e analisar o papel do princípio da insignificância no controle de legalidade.</li>
+      <li>Apontar os limites constitucionais da analogia em matéria penal, distinguindo interpretação extensiva de integração analógica.</li>
+    </ol>
+  </div>
+
+  <div class="card" style="margin-top:1rem;border-color:var(--crimson);border-width:2px">
+    <div class="card-title" style="color:var(--crimson)">
+      ⚠ Armadilhas Frequentes em Provas
+    </div>
+    <ul style="font-size:.9rem;line-height:1.85;padding-left:1.2rem">
+      <li>Confundir <em>lex scripta</em> com <em>lex certa</em> — scripta veda o costume incriminador; certa veda a vagueza do tipo.</li>
+      <li>Afirmar que MP nunca pode tratar de matéria penal — ERRADO; MP benéfica é admitida pelo STF.</li>
+      <li>Dizer que interpretação extensiva in malam partem viola a legalidade — INCORRETO para a doutrina majoritária; a vedação é da analogia, não da interpretação.</li>
+      <li>Afirmar que norma penal em branco heterogênea é inconstitucional — ERRADO; o STF declarou constitucional, condicionada ao núcleo essencial na lei formal.</li>
+      <li>Confundir bagatela própria (insignificância — afasta tipicidade material) com bagatela imprópria (irrelevância penal do fato — não afasta o crime, mas pode afastar a pena — usada na dosimetria e no ANPP).</li>
+      <li>Esquecer que a Súmula 711/STF aplica a lei mais grave ao crime permanente sem violar anterioridade — é exceção legítima.</li>
+    </ul>
+  </div>
+</div>
+
+</main>
+
+<script>
+function showTab(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  event.currentTarget.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function toggleAcc(btn) {
+  const body = btn.nextElementSibling;
+  btn.classList.toggle('open');
+  body.classList.toggle('open');
+}
+</script>
+</body>
+</html>

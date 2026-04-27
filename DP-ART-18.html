@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 18º CP — Dolo e Culpa | Magistratura ENAM</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a; --navy-mid: #1a2f45; --navy-light: #243b55;
+    --gold: #c8960c; --gold-light: #e8b84b; --gold-pale: #fdf3d8;
+    --cream: #faf7f2; --cream-mid: #f0ebe2;
+    --text-dark: #1a1208; --text-mid: #3d3020; --text-soft: #6b5c40;
+    --border: #d4c49a; --border-light: #e8dcbf;
+    --red-accent: #8b1a1a; --green-accent: #1a4a2e;
+    --blue-accent: #1a3a5c; --purple-accent: #4a1a5c;
+    --shadow: 0 4px 24px rgba(13,27,42,0.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Source Serif 4', Georgia, serif; background: var(--cream); color: var(--text-dark); font-size: 15px; line-height: 1.75; }
+
+  #top-nav { position: sticky; top: 0; z-index: 999; background: var(--navy); border-bottom: 3px solid var(--gold); padding: 0 1.5rem; display: flex; align-items: center; overflow-x: auto; scrollbar-width: none; }
+  #top-nav::-webkit-scrollbar { display: none; }
+  #top-nav .nav-brand { font-family: 'Playfair Display', serif; color: var(--gold-light); font-size: 0.9rem; font-weight: 700; white-space: nowrap; padding: 0.85rem 1.2rem 0.85rem 0; border-right: 1px solid rgba(200,150,12,0.3); margin-right: 0.5rem; letter-spacing: 0.5px; }
+  #top-nav a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.72rem; font-family: 'Source Serif 4', serif; font-weight: 600; letter-spacing: 0.6px; text-transform: uppercase; padding: 0.85rem 0.8rem; white-space: nowrap; transition: color .2s; border-bottom: 3px solid transparent; margin-bottom: -3px; }
+  #top-nav a:hover { color: var(--gold-light); border-bottom-color: var(--gold); }
+
+  #hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1e3d5c 100%); color: white; padding: 3.5rem 2rem 3rem; text-align: center; position: relative; overflow: hidden; }
+  #hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, rgba(200,150,12,0.03) 0px, rgba(200,150,12,0.03) 1px, transparent 1px, transparent 40px); }
+  #hero .badge { display: inline-block; background: rgba(200,150,12,0.15); border: 1px solid rgba(200,150,12,0.5); color: var(--gold-light); font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; padding: 0.35rem 1rem; border-radius: 2px; margin-bottom: 1.2rem; font-family: 'Source Serif 4', serif; font-weight: 600; }
+  #hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 0.6rem; letter-spacing: -0.5px; }
+  #hero h1 span { color: var(--gold-light); }
+  #hero .subtitle { font-size: 1rem; color: rgba(255,255,255,0.65); font-style: italic; margin-bottom: 1.5rem; }
+  #hero .law-box { display: inline-block; background: rgba(255,255,255,0.06); border: 1px solid rgba(200,150,12,0.4); border-left: 4px solid var(--gold); color: rgba(255,255,255,0.9); font-family: 'Source Serif 4', serif; font-size: 0.93rem; font-style: italic; padding: 1rem 1.5rem; max-width: 860px; text-align: left; line-height: 1.85; border-radius: 0 4px 4px 0; }
+  #hero .law-box strong { color: var(--gold-light); font-style: normal; display: block; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.4rem; }
+
+  .page-wrap { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+  .section { margin-top: 3.5rem; scroll-margin-top: 56px; }
+  .section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--border); }
+  .section-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--border); line-height: 1; min-width: 2.5rem; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; color: var(--navy); line-height: 1.2; }
+  .section-title span { display: block; font-size: 0.75rem; font-family: 'Source Serif 4', serif; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-style: normal; }
+
+  .card { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 1.4rem 1.6rem; box-shadow: var(--shadow); }
+  .card-grid { display: grid; gap: 1rem; }
+  .card-grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .card-grid-2 { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+  .card h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.6rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-light); }
+  .card p, .card li { font-size: 0.88rem; line-height: 1.7; color: var(--text-mid); }
+  .card ul { padding-left: 1.1rem; } .card li { margin-bottom: 0.3rem; }
+  .type-card { border-top: 4px solid; }
+  .tc-red { border-top-color: var(--red-accent); } .tc-red h3 { color: var(--red-accent); }
+  .tc-green { border-top-color: var(--green-accent); } .tc-green h3 { color: var(--green-accent); }
+  .tc-blue { border-top-color: var(--blue-accent); } .tc-blue h3 { color: var(--blue-accent); }
+  .tc-gold { border-top-color: var(--gold); } .tc-gold h3 { color: #7a5a00; }
+  .tc-purple { border-top-color: var(--purple-accent); } .tc-purple h3 { color: var(--purple-accent); }
+
+  .flow-wrap { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 2rem 1.5rem; box-shadow: var(--shadow); overflow-x: auto; }
+  .flow-center { display: flex; flex-direction: column; align-items: center; }
+  .flow-node { border-radius: 4px; padding: 0.65rem 1.4rem; font-family: 'Source Serif 4', serif; font-size: 0.82rem; font-weight: 600; text-align: center; min-width: 220px; max-width: 560px; }
+  .flow-start { background: var(--navy); color: white; border-radius: 50px; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; }
+  .flow-end-green { background: var(--green-accent); color: white; border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-end-red { background: var(--red-accent); color: white; border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-end-gold { background: var(--gold); color: var(--navy); border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-end-blue { background: var(--blue-accent); color: white; border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-end-purple { background: var(--purple-accent); color: white; border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-box-navy { background: var(--navy-mid); color: white; border-left: 4px solid var(--gold); font-size: 0.8rem; }
+  .flow-box-green { background: #edf7f0; border: 1px solid #7ec89a; border-left: 4px solid var(--green-accent); color: var(--text-dark); }
+  .flow-box-blue { background: #edf2f8; border: 1px solid #8eb4d8; border-left: 4px solid var(--blue-accent); color: var(--text-dark); }
+  .flow-box-red { background: #fdf0f0; border: 1px solid #e09090; border-left: 4px solid var(--red-accent); color: var(--text-dark); }
+  .flow-box-gold { background: var(--gold-pale); border: 2px solid var(--gold); color: var(--text-dark); }
+  .flow-box-purple { background: #f3eef8; border: 1px solid #b89dd8; border-left: 4px solid var(--purple-accent); color: var(--text-dark); }
+  .flow-arrow { font-size: 1.3rem; color: var(--border); line-height: 1; margin: 0.15rem 0; }
+  .flow-row { display: flex; align-items: flex-start; gap: 1.5rem; width: 100%; justify-content: center; flex-wrap: wrap; }
+  .flow-branch { display: flex; flex-direction: column; align-items: center; flex: 1; min-width: 175px; }
+  .flow-label { font-size: 0.68rem; color: var(--text-soft); font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; background: var(--cream-mid); padding: 0.15rem 0.5rem; border-radius: 2px; margin: 0.15rem 0; }
+  .flow-connector-line { width: 1px; height: 28px; background: var(--border); }
+
+  .comp-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; background: white; box-shadow: var(--shadow); border-radius: 6px; overflow: hidden; }
+  .comp-table thead { background: var(--navy); color: white; }
+  .comp-table thead th { padding: 0.85rem 1rem; font-family: 'Source Serif 4', serif; font-weight: 600; letter-spacing: 0.5px; font-size: 0.8rem; text-align: left; }
+  .comp-table thead th:first-child { color: var(--gold-light); }
+  .comp-table tbody tr { border-bottom: 1px solid var(--border-light); }
+  .comp-table tbody tr:last-child { border-bottom: none; }
+  .comp-table tbody tr:nth-child(even) { background: var(--cream); }
+  .comp-table td { padding: 0.75rem 1rem; color: var(--text-mid); vertical-align: top; }
+  .comp-table td:first-child { font-weight: 600; color: var(--navy); font-size: 0.8rem; }
+  .comp-table .hl td { background: var(--gold-pale) !important; }
+  .comp-table .hl2 td { background: #edf7f0 !important; }
+  .comp-table .hl3 td { background: #edf2f8 !important; }
+  .comp-table .hl4 td { background: #fdf0f0 !important; }
+  .comp-table .hl5 td { background: #f3eef8 !important; }
+
+  .juris-card { background: white; border: 1px solid var(--border-light); border-left: 5px solid; border-radius: 0 6px 6px 0; padding: 1.2rem 1.4rem; box-shadow: var(--shadow); }
+  .juris-card.stf { border-left-color: var(--red-accent); }
+  .juris-card.stj { border-left-color: var(--navy); }
+  .juris-card.doutrina { border-left-color: var(--gold); }
+  .juris-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
+  .juris-badge { font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 2px; font-family: 'Source Serif 4', serif; }
+  .juris-badge.stf { background: var(--red-accent); color: white; }
+  .juris-badge.stj { background: var(--navy); color: white; }
+  .juris-badge.doutrina { background: var(--gold); color: var(--navy); }
+  .juris-badge.sumula { background: var(--green-accent); color: white; }
+  .juris-badge.tese { background: var(--blue-accent); color: white; }
+  .juris-badge.purple { background: var(--purple-accent); color: white; }
+  .juris-title { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700; color: var(--navy); }
+  .juris-body { font-size: 0.84rem; color: var(--text-mid); line-height: 1.7; }
+  .juris-body em { font-style: italic; color: var(--navy); }
+  .juris-grid { display: grid; gap: 1rem; }
+
+  .alert { padding: 0.9rem 1.2rem; border-radius: 4px; font-size: 0.84rem; line-height: 1.7; display: flex; gap: 0.7rem; align-items: flex-start; }
+  .alert-gold { background: var(--gold-pale); border: 1px solid #d4aa3a; color: #5a4000; }
+  .alert-red { background: #fdf0f0; border: 1px solid #e09090; color: #5a0000; }
+  .alert-navy { background: #f0f4f8; border: 1px solid #abc; color: var(--navy); }
+  .alert-green { background: #edf7f0; border: 1px solid #7ec89a; color: #1a4a2e; }
+  .alert-purple { background: #f3eef8; border: 1px solid #b89dd8; color: var(--purple-accent); }
+  .alert-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.05rem; }
+  .alert strong { font-weight: 700; }
+
+  .prova-section { background: var(--navy); border-radius: 8px; padding: 2rem; color: white; margin-top: 3.5rem; scroll-margin-top: 56px; }
+  .prova-section h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--gold-light); margin-bottom: 0.5rem; }
+  .prova-section .intro { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; font-style: italic; }
+  .prova-items { display: grid; gap: 0.75rem; }
+  .prova-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(200,150,12,0.25); border-left: 4px solid var(--gold); border-radius: 0 4px 4px 0; padding: 1rem 1.2rem; }
+  .prova-item-q { font-size: 0.82rem; font-weight: 600; color: var(--gold-light); margin-bottom: 0.4rem; display: flex; align-items: flex-start; gap: 0.6rem; }
+  .prova-item-q .qnum { background: var(--gold); color: var(--navy); font-size: 0.65rem; font-weight: 700; padding: 0.1rem 0.45rem; border-radius: 2px; flex-shrink: 0; margin-top: 0.1rem; }
+  .prova-item-a { font-size: 0.82rem; color: rgba(255,255,255,0.8); line-height: 1.65; }
+  .prova-item-a strong { color: white; }
+
+  .tag { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; margin: 0.1rem; font-family: 'Source Serif 4', serif; }
+  .tag-blue { background: #dce8f5; color: var(--blue-accent); }
+  .tag-green { background: #dceee3; color: var(--green-accent); }
+  .tag-gold { background: var(--gold-pale); color: #7a5a00; border: 1px solid #d4aa3a; }
+  .tag-red { background: #fde8e8; color: var(--red-accent); }
+  .tag-purple { background: #ece5f5; color: var(--purple-accent); }
+
+  .example-box { background: var(--navy-mid); color: white; border-radius: 6px; padding: 1.2rem 1.4rem; font-size: 0.84rem; line-height: 1.75; }
+  .example-box .ex-title { color: var(--gold-light); font-weight: 700; font-family: 'Playfair Display', serif; font-size: 0.95rem; margin-bottom: 0.5rem; }
+  .example-box .ex-calc { background: rgba(200,150,12,0.12); border: 1px solid rgba(200,150,12,0.3); border-radius: 4px; padding: 0.7rem 1rem; margin-top: 0.7rem; font-family: 'JetBrains Mono', monospace; font-size: 0.79rem; color: var(--gold-light); white-space: pre-wrap; }
+
+  .law-quote { background: var(--cream-mid); border-left: 4px solid var(--navy); padding: 0.9rem 1.2rem; font-size: 0.88rem; font-style: italic; color: var(--text-mid); line-height: 1.7; border-radius: 0 4px 4px 0; }
+  .law-quote strong { font-style: normal; color: var(--navy); font-size: 0.75rem; letter-spacing: 0.5px; display: block; margin-bottom: 0.25rem; }
+  .divider { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); margin: 1.2rem 0; }
+
+  /* TEORIA GRID */
+  .teoria-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.85rem; }
+  .teoria-card { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 1rem 1.2rem; box-shadow: var(--shadow); border-top: 3px solid; }
+  .teoria-card h4 { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+  .teoria-card p, .teoria-card li { font-size: 0.82rem; color: var(--text-mid); line-height: 1.6; }
+  .teoria-card ul { padding-left: 1rem; }
+  .t-red { border-top-color: var(--red-accent); } .t-red h4 { color: var(--red-accent); }
+  .t-blue { border-top-color: var(--blue-accent); } .t-blue h4 { color: var(--blue-accent); }
+  .t-green { border-top-color: var(--green-accent); } .t-green h4 { color: var(--green-accent); }
+  .t-gold { border-top-color: var(--gold); } .t-gold h4 { color: #7a5a00; }
+  .t-purple { border-top-color: var(--purple-accent); } .t-purple h4 { color: var(--purple-accent); }
+  .t-adot { border: 2px solid var(--gold); background: var(--gold-pale); grid-column: 1/-1; } .t-adot h4 { color: #7a5a00; }
+
+  /* ESPÉCIE CARDS */
+  .especie-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.8rem; }
+  .especie-card { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 1rem 1.2rem; border-left: 4px solid; box-shadow: var(--shadow); }
+  .especie-card h4 { font-family: 'Playfair Display', serif; font-size: 0.92rem; font-weight: 700; margin-bottom: 0.35rem; }
+  .especie-card p, .especie-card li { font-size: 0.82rem; color: var(--text-mid); line-height: 1.6; }
+  .especie-card ul { padding-left: 1rem; margin-top: 0.3rem; }
+  .ec-red { border-left-color: var(--red-accent); } .ec-red h4 { color: var(--red-accent); }
+  .ec-blue { border-left-color: var(--blue-accent); } .ec-blue h4 { color: var(--blue-accent); }
+  .ec-green { border-left-color: var(--green-accent); } .ec-green h4 { color: var(--green-accent); }
+  .ec-gold { border-left-color: var(--gold); } .ec-gold h4 { color: #7a5a00; }
+  .ec-purple { border-left-color: var(--purple-accent); } .ec-purple h4 { color: var(--purple-accent); }
+
+  footer { background: var(--navy); color: rgba(255,255,255,0.45); text-align: center; padding: 1.5rem; font-size: 0.75rem; border-top: 2px solid var(--gold); }
+  footer strong { color: var(--gold-light); }
+
+  @media print {
+    #top-nav { display: none; }
+    #hero { padding: 2rem 1rem; } #hero::before { display: none; }
+    .page-wrap { max-width: 100%; padding: 0 0.5rem 2rem; }
+    .section { margin-top: 2rem; page-break-inside: avoid; }
+    .card, .juris-card, .flow-wrap, .example-box { box-shadow: none; border: 1px solid #ccc; }
+    .prova-section { background: #f0f4f8 !important; color: #000 !important; }
+    .prova-section h2 { color: #0d1b2a !important; }
+    .prova-item { background: white !important; border: 1px solid #ccc !important; }
+    .prova-item-q { color: #7a5a00 !important; }
+    .prova-item-a { color: #333 !important; }
+    .example-box { background: #f0f4f8 !important; color: #000 !important; }
+    footer { display: none; } body { font-size: 11pt; }
+  }
+  @media (max-width: 640px) {
+    #hero { padding: 2rem 1rem; } #hero h1 { font-size: 1.6rem; }
+    .card-grid-3, .card-grid-2 { grid-template-columns: 1fr; }
+    .section-title { font-size: 1.1rem; }
+    .comp-table { font-size: 0.76rem; }
+    .comp-table td, .comp-table th { padding: 0.55rem 0.65rem; }
+    .flow-node { min-width: 150px; font-size: 0.74rem; }
+  }
+  .mt1 { margin-top: 0.75rem; } .mt2 { margin-top: 1rem; } .mt3 { margin-top: 1.5rem; }
+  .flex-gap { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: flex-start; }
+  strong { font-weight: 700; }
+</style>
+</head>
+<body>
+
+<nav id="top-nav" aria-label="Atalhos do artigo">
+  <div class="nav-brand">Art. 18º CP</div>
+
+  <div class="nav-main-links">
+    <a href="#visao-geral">Visão Geral</a>
+    <a href="#dolo">Dolo — Conceito</a>
+    <a href="#dolo-direto">Dolo Direto</a>
+    <a href="#dolo-eventual">Dolo Eventual</a>
+    <a href="#culpa">Culpa — Conceito</a>
+    <a href="#culpa-consciente">Culpa Consciente</a>
+    <a href="#modalidades-culpa">Modalidades Culpa</a>
+    <a href="#culpa-inconsciente">Culpa Inconsciente</a>
+    <a href="#preterintencao">Preterdolo</a>
+    <a href="#fluxograma">Fluxograma</a>
+    <a href="#comparativo">Comparativo</a>
+    <a href="#exemplos">Exemplos</a>
+    <a href="#jurisprudencia">Juris. STF/STJ</a>
+    <a href="#doutrina">Doutrina</a>
+    <a href="#sistematica">Sistemática</a>
+    <a href="#prova" class="nav-prova">Prova</a>
+  </div>
+</nav>
+
+<header id="hero">
+  <div class="badge">Código Penal · Título II · Do Crime · Capítulo III</div>
+  <h1>Art. 18º — <span>Dolo e Culpa</span></h1>
+  <p class="subtitle">Dolo Direto · Dolo Eventual · Culpa Consciente · Culpa Inconsciente · Preterdolo · Magistratura · ENAM</p>
+  <div class="law-box">
+    <strong>Art. 18.º do Decreto-Lei n.º 2.848/1940 (Código Penal)</strong>
+    "Diz-se o crime:<br>
+    <span style="color:var(--gold-light);font-style:normal;">I —</span> doloso, quando o agente quis o resultado ou assumiu o risco de produzi-lo;<br>
+    <span style="color:var(--gold-light);font-style:normal;">II —</span> culposo, quando o agente deu causa ao resultado por imprudência, negligência ou imperícia.<br>
+    <span style="color:rgba(255,255,255,0.55);font-style:normal;font-size:0.82rem;">Parágrafo único.</span> Salvo os casos expressos em lei, ninguém pode ser punido por fato previsto como crime, se o praticou culposamente."
+  </div>
+</header>
+
+<div class="page-wrap">
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 1. VISÃO GERAL                            -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="visao-geral">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div class="section-title"><span>Introdução &amp; Estrutura</span>Visão Geral do Artigo</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📍 Finalidade e Posição Sistemática</h3>
+      <p>O art. 18 CP integra o <strong>Capítulo III do Título II da Parte Geral</strong> ("Do Crime Doloso e do Crime Culposo") e é o dispositivo central do elemento subjetivo do crime. Ele disciplina as duas formas básicas do nexo psicológico entre o agente e o resultado: o <strong>dolo</strong> (vontade dirigida ao resultado típico) e a <strong>culpa</strong> (violação do dever objetivo de cuidado com resultado não querido).</p>
+      <p class="mt2">O art. 18 CP é o fundamento da <strong>responsabilidade penal subjetiva</strong> no Brasil — ninguém pode ser punido sem dolo ou culpa (princípio da culpabilidade). O parágrafo único estabelece a regra geral de que o crime culposo só é punido quando há previsão legal expressa — ao contrário do dolo, que é a regra.</p>
+    </div>
+    <div class="card">
+      <h3>🏛️ Estrutura do Art. 18 CP</h3>
+      <ul>
+        <li><strong>Art. 18, I — Dolo direto (1.ª parte):</strong> "quando o agente <em>quis</em> o resultado" — o resultado é a meta da conduta; vontade de produzir o resultado típico</li>
+        <li><strong>Art. 18, I — Dolo eventual (2.ª parte):</strong> "ou <em>assumiu o risco</em> de produzi-lo" — o agente prevê o resultado como possível e aceita seu advento</li>
+        <li><strong>Art. 18, II — Culpa (três modalidades):</strong> "por imprudência, negligência ou imperícia" — violação do dever de cuidado com resultado previsível não previsto (inconsciente) ou previsto mas não aceito (consciente)</li>
+        <li><strong>Parágrafo único — Regra da excepcionalidade do crime culposo:</strong> só se pune o crime culposo quando expressamente previsto em lei — a modalidade dolosa é a regra</li>
+        <li><strong>Instituto conexo — Crime preterdoloso (não expresso no art. 18):</strong> dolo no antecedente + culpa no consequente; tratado no art. 19 CP</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert alert-gold mt2">
+    <div class="alert-icon">⭐</div>
+    <div><strong>Fundamento Constitucional — Responsabilidade Penal Subjetiva:</strong> O art. 18 CP concretiza o <strong>princípio da culpabilidade</strong> — <em>nulla poena sine culpa</em> — que, embora não expressamente previsto na CF/88, é derivado dos princípios da dignidade da pessoa humana (art. 1.º, III, CF/88), do devido processo legal (art. 5.º, LIV, CF/88) e da individualização da pena (art. 5.º, XLVI, CF/88). O STF e o STJ reafirmam sistematicamente a vedação à responsabilidade penal objetiva — punir alguém sem dolo ou culpa violaria a culpabilidade como princípio constitucional implícito. O art. 18 CP é o dispositivo que operacionaliza essa garantia no plano infraconstitucional.</div>
+  </div>
+
+  <div class="card-grid card-grid-3 mt2">
+    <div class="card type-card tc-red">
+      <h3>🔴 Crime Doloso — Regra (Art. 18, I)</h3>
+      <p>O dolo é a modalidade-regra do elemento subjetivo. Todo crime, por padrão, é doloso — salvo expressa previsão legal de forma culposa. Pressupõe consciência (elemento cognitivo) e vontade (elemento volitivo) de realizar o tipo penal.</p>
+    </div>
+    <div class="card type-card tc-blue">
+      <h3>🔵 Crime Culposo — Exceção (Art. 18, II)</h3>
+      <p>O crime culposo é exceção — só existe quando expressamente previsto em lei (parágrafo único do art. 18 CP). Pressupõe violação do dever objetivo de cuidado (imprudência, negligência ou imperícia) com resultado típico previsível não desejado.</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>🟡 Preterdolo — Misto (Art. 19 CP)</h3>
+      <p>Dolo no antecedente (conduta ilícita dolosa) + culpa no consequente (resultado mais grave não querido mas previsível). Ex.: lesão corporal seguida de morte (art. 129, §3.º CP). Tratado expressamente no art. 19 CP.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 2. DOLO — CONCEITO E ELEMENTOS            -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="dolo">
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div class="section-title"><span>Art. 18, I — Análise Profunda</span>Dolo: Conceito, Elementos e Teorias</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔴 Conceito de Dolo e seus Elementos</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.6rem;">O art. 18, I CP define o crime doloso como aquele em que o agente <strong>"quis o resultado"</strong> (dolo direto) ou <strong>"assumiu o risco de produzi-lo"</strong> (dolo eventual). O dolo é a vontade consciente de realizar o tipo penal. Dois elementos essenciais:</p>
+      <div style="display:flex;flex-direction:column;gap:0.45rem;">
+        <div style="background:var(--cream-mid);border-left:3px solid var(--red-accent);padding:0.55rem 0.85rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">1. Elemento Cognitivo (Consciência):</strong> O agente deve ter consciência (conhecimento) dos elementos constitutivos do tipo penal — saber o que está fazendo e qual o resultado de sua conduta. Sem consciência → erro de tipo (art. 20 CP) → exclui o dolo.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);padding:0.55rem 0.85rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--blue-accent);">2. Elemento Volitivo (Vontade):</strong> O agente deve querer a realização do tipo penal — quer o resultado (dolo direto) ou assume o risco de produzi-lo (dolo eventual). A vontade é o que distingue o dolo da culpa consciente.
+        </div>
+      </div>
+      <div class="divider"></div>
+      <p style="font-size:0.84rem;color:var(--text-mid);"><strong>Objeto do dolo:</strong> O dolo deve abranger todos os elementos do tipo objetivo — conduta, resultado, nexo causal, e eventuais circunstâncias elementares do tipo. Dolo que não abrange elemento objetivo essencial → erro de tipo → exclui o dolo.</p>
+    </div>
+    <div class="card">
+      <h3>📋 Teorias sobre o Dolo — Qual a Adotada?</h3>
+      <div style="display:flex;flex-direction:column;gap:0.45rem;">
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);border-radius:0 4px 4px 0;padding:0.55rem 0.8rem;font-size:0.82rem;">
+          <strong style="color:var(--red-accent);">Teoria da Vontade:</strong> Dolo = consciência + vontade de produzir o resultado. Para o dolo direto, o agente quer o resultado como fim ou como meio necessário. Adotada para o <em>dolo direto</em> ("quis o resultado").
+        </div>
+        <div style="background:#edf2f8;border-left:3px solid var(--blue-accent);border-radius:0 4px 4px 0;padding:0.55rem 0.8rem;font-size:0.82rem;">
+          <strong style="color:var(--blue-accent);">Teoria da Representação:</strong> Dolo = apenas consciência (previsão) do resultado, sem exigir vontade. Se o agente previu o resultado, há dolo — independentemente de querer. Muito ampla — equipara dolo eventual e culpa consciente.
+        </div>
+        <div style="background:#dceee3;border-left:3px solid var(--green-accent);border-radius:0 4px 4px 0;padding:0.55rem 0.8rem;font-size:0.82rem;">
+          <strong style="color:var(--green-accent);">Teoria do Consentimento (Assentimento):</strong> Dolo eventual = previsão do resultado + consentimento/aceitação do agente. O agente prevê o resultado e consente com ele. Adotada para o <em>dolo eventual</em> ("assumiu o risco de produzi-lo").
+        </div>
+        <div style="background:var(--gold-pale);border:1px solid var(--gold);border-radius:6px;padding:0.65rem 0.9rem;font-size:0.82rem;">
+          <strong style="color:#7a5a00;">⭐ Posição do CP Brasileiro:</strong> Teoria da vontade para o dolo direto + Teoria do consentimento para o dolo eventual. O art. 18, I, 1.ª parte ("quis o resultado") adota a teoria da vontade; a 2.ª parte ("assumiu o risco") adota a teoria do consentimento.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 3. DOLO DIRETO                            -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="dolo-direto">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div class="section-title"><span>Art. 18, I, 1.ª Parte</span>Dolo Direto: 1.º Grau e 2.º Grau</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔴 Dolo Direto de 1.º Grau</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Conceito:</strong> O agente pratica a conduta com a intenção de produzir o resultado típico como <em>fim principal</em> de sua ação. O resultado é a meta imediata da vontade.</p>
+      <ul style="font-size:0.83rem;">
+        <li><strong>Fórmula:</strong> O resultado é o FIM da conduta — o que o agente quer alcançar diretamente</li>
+        <li><strong>Previsibilidade:</strong> O resultado é certo (o agente tem certeza de que ocorrerá) ou altamente provável</li>
+        <li><strong>Exemplo 1:</strong> A dispara em B com intenção de matar → resultado morte = fim direto da conduta → dolo direto de 1.º grau</li>
+        <li><strong>Exemplo 2:</strong> A subtrai bolsa de B com intenção de apropriar-se dos bens → subtração = fim direto → dolo direto de 1.º grau de furto</li>
+        <li><strong>Elemento volitivo:</strong> máximo — o agente QUER o resultado como fim</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🔴 Dolo Direto de 2.º Grau (ou de Consequências Necessárias)</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Conceito:</strong> O agente persegue um resultado principal (fim), mas sabe que, como <em>consequência necessária e inevitável</em> de seu meio de atuação, ocorrerá um segundo resultado (consequência necessária), não desejado em si mesmo, mas aceito como inexorável.</p>
+      <ul style="font-size:0.83rem;">
+        <li><strong>Fórmula:</strong> O resultado secundário é consequência NECESSÁRIA do meio escolhido — não é a meta, mas é inevitável</li>
+        <li><strong>Exemplo clássico:</strong> A quer matar B (o alvo), que viaja em navio. A planta bomba no navio para matá-lo. Sabe que os outros passageiros também morrerão. A tem dolo direto de 1.º grau para a morte de B (fim) e dolo direto de 2.º grau para a morte dos demais (consequência necessária do meio — a bomba)</li>
+        <li><strong>Distinção do dolo eventual:</strong> No 2.º grau, a consequência é CERTA (inevitável); no eventual, a consequência é apenas possível (incerta)</li>
+        <li><strong>Posição CP:</strong> Dolo direto de 2.º grau = "quis o resultado" (art. 18, I, 1.ª parte) — consequência necessária é "querida" como meio</li>
+        <li><strong>Alta cobrança em magistratura:</strong> A distinção dolo direto 2.º grau × dolo eventual é frequentemente cobrada</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert alert-red mt2">
+    <div class="alert-icon">🔴</div>
+    <div><strong>Dolo Direto de 2.º Grau × Dolo Eventual — Distinção Crucial:</strong> No <strong>dolo direto de 2.º grau</strong>, as consequências colaterais são <em>certas e inevitáveis</em> — o agente as prevê como resultado necessário do meio escolhido. No <strong>dolo eventual</strong>, as consequências colaterais são <em>possíveis mas incertas</em> — o agente as prevê como possíveis e assume o risco. A certeza é o divisor: consequência certa → dolo direto 2.º grau; consequência possível → dolo eventual.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 4. DOLO EVENTUAL                          -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="dolo-eventual">
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <div class="section-title"><span>Art. 18, I, 2.ª Parte — Alta Cobrança</span>Dolo Eventual: Conceito, Teorias e Distinção da Culpa Consciente</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔴 Dolo Eventual — Conceito e Requisitos</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Conceito:</strong> O agente prevê o resultado típico como possível consequência de sua conduta e, mesmo assim, <strong>aceita (consente com) o risco</strong> de produzi-lo — continua agindo indiferente ao advento do resultado. "Tanto faz, ocorra ou não o resultado" — é a postura do agente no dolo eventual.</p>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.83rem;line-height:1.85;">
+        <strong style="color:var(--gold-light);">Fórmula de Frank (Teoria do Consentimento):</strong>
+        <p style="margin-top:0.4rem;">O agente diz a si mesmo: <em>"ocorra ou não o resultado, em todo caso eu ajo"</em></p>
+        <p>Se o agente diz: <em>"se eu soubesse que o resultado ocorreria, eu não agiria"</em> → culpa consciente</p>
+        <p style="margin-top:0.4rem;color:var(--gold-light);font-style:italic;">Dolo eventual: "tanto faz" → age aceitando o resultado<br>Culpa consciente: "espero que não aconteça" → age confiando que não ocorrerá</p>
+      </div>
+      <ul class="mt2" style="font-size:0.83rem;">
+        <li><strong>Requisito 1:</strong> Previsão do resultado como possível (elemento cognitivo)</li>
+        <li><strong>Requisito 2:</strong> Consentimento/aceitação do risco (elemento volitivo — aceitação, não desejo)</li>
+        <li><strong>Teoria adotada:</strong> Teoria do consentimento (assentimento)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📋 Dolo Eventual × Culpa Consciente — A Fronteira</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">A distinção entre dolo eventual e culpa consciente é o ponto mais cobrado em provas de magistratura sobre o art. 18 CP. Ambos envolvem previsão do resultado, mas divergem no elemento volitivo:</p>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.82rem;">
+          <thead style="background:var(--navy);color:white;">
+            <tr>
+              <th style="padding:0.5rem 0.7rem;">Critério</th>
+              <th style="padding:0.5rem 0.7rem;">Dolo Eventual</th>
+              <th style="padding:0.5rem 0.7rem;">Culpa Consciente</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#fde8e8;"><td style="padding:0.5rem 0.7rem;font-weight:700;">Previsão</td><td style="padding:0.5rem 0.7rem;">SIM — prevê como possível</td><td style="padding:0.5rem 0.7rem;">SIM — prevê como possível</td></tr>
+            <tr><td style="padding:0.5rem 0.7rem;font-weight:700;">Elemento volitivo</td><td style="padding:0.5rem 0.7rem;">ACEITA o resultado — "tanto faz"</td><td style="padding:0.5rem 0.7rem;">REJEITA o resultado — "confio que não ocorrerá"</td></tr>
+            <tr style="background:var(--gold-pale);"><td style="padding:0.5rem 0.7rem;font-weight:700;">Postura interna</td><td style="padding:0.5rem 0.7rem;">Indiferença ao resultado</td><td style="padding:0.5rem 0.7rem;">Confiança (leviana) de que não ocorrerá</td></tr>
+            <tr><td style="padding:0.5rem 0.7rem;font-weight:700;">Consequência</td><td style="padding:0.5rem 0.7rem;">Crime DOLOSO — pena maior</td><td style="padding:0.5rem 0.7rem;">Crime CULPOSO — pena menor (se previsto em lei)</td></tr>
+            <tr style="background:#dceee3;"><td style="padding:0.5rem 0.7rem;font-weight:700;">Artigo</td><td style="padding:0.5rem 0.7rem;">Art. 18, I, 2.ª parte CP</td><td style="padding:0.5rem 0.7rem;">Art. 18, II CP</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="alert alert-gold mt2" style="font-size:0.81rem;">
+        <div>⭐ <strong>Exemplo comparativo:</strong> Corrida de rua ilegal (racha) → motorista prevê que pode matar pedestre → dolo eventual (aceita o risco, "tanto faz"). Cirurgião que realiza cirurgia difícil → prevê que pode ocorrer complicação → culpa consciente (confia que não ocorrerá com sua habilidade). Distinção: aceitação × confiança negativa.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt2">
+    <h3>⚡ Dolo Eventual na Jurisprudência — Casos Paradigmáticos</h3>
+    <div class="card-grid card-grid-3 mt1">
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Racha / Competição ilegal (art. 308 CTB):</strong> STJ e STF reconhecem dolo eventual quando o condutor participa de racha e provoca morte — prevê a possibilidade de matar e aceita o risco. → Homicídio doloso (art. 121 CP) + pronúncia para o Júri. É a aplicação mais emblemática do dolo eventual na jurisprudência brasileira.</p>
+      </div>
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Embriaguez ao volante com morte:</strong> STJ: embriaguez ao volante com acidente fatal pode configurar dolo eventual (se o condutor embriagado assumiu o risco de matar, dirigindo em alta velocidade) ou culpa consciente (se apenas negligente). O Júri decide. STJ impede decisão liminar do juiz sumular como culposo — necessário o Júri para decidir entre dolo eventual e culpa consciente.</p>
+      </div>
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Transmissão dolosa de HIV:</strong> STJ: quem tem ciência da soropositividade e tem relação sexual sem preservativo com parceiro que desconhece → dolo eventual de lesão corporal gravíssima (art. 129, §2.º, II CP) ou tentativa de homicídio (conforme o dolo). O elemento "assumiu o risco" é verificado pela ciência da soropositividade + omissão da informação ao parceiro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 5. CULPA — CONCEITO                       -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="culpa">
+  <div class="section-header">
+    <div class="section-num">05</div>
+    <div class="section-title"><span>Art. 18, II — Análise Profunda</span>Culpa: Conceito, Elementos e Fundamento</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔵 Conceito de Crime Culposo e seus Elementos</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.6rem;">O crime culposo (art. 18, II CP) é aquele em que o agente causa o resultado típico por <strong>violação do dever objetivo de cuidado</strong>, sob a forma de imprudência, negligência ou imperícia, produzindo resultado previsível que não desejou e não aceitou. Os elementos são:</p>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;">
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--blue-accent);">1. Conduta humana voluntária:</strong> Ação ou omissão voluntária (mas sem dolo em relação ao resultado típico)</div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--blue-accent);">2. Violação do dever objetivo de cuidado:</strong> Imprudência, negligência ou imperícia — o agente não observou o cuidado exigido nas circunstâncias</div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--blue-accent);">3. Resultado típico (naturalístico):</strong> Resultado previsto no tipo penal culposo — morte, lesão, dano etc.</div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--blue-accent);">4. Nexo causal:</strong> Relação causal entre a conduta descuidada e o resultado</div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--blue-accent);">5. Previsibilidade objetiva:</strong> O resultado era previsível para um homem médio (padrão objetivo) nas mesmas circunstâncias — sem previsibilidade, sem culpa</div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--blue-accent);">6. Ausência de dolo:</strong> O agente não quis e não assumiu o risco do resultado — se houvesse dolo, seria crime doloso</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📋 O Dever Objetivo de Cuidado — Padrão do "Homem Médio"</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">O critério central da culpa é a <strong>violação do dever objetivo de cuidado</strong> — o padrão de comportamento exigido de uma pessoa razoável e diligente nas mesmas circunstâncias:</p>
+      <ul style="font-size:0.83rem;">
+        <li><strong>Critério objetivo (regra geral):</strong> Compara-se a conduta do agente com a de um "homem médio, razoável e diligente" na mesma situação — se a conduta ficou aquém desse padrão, há violação do dever de cuidado</li>
+        <li><strong>Critério subjetivo (complementar — Greco, Bitencourt):</strong> Em alguns casos, deve-se considerar as capacidades pessoais do agente — quem tem habilidades acima da média pode ser mais exigido; quem tem limitações pessoais pode ser menos exigido</li>
+        <li><strong>Previsibilidade objetiva:</strong> Resultado que um homem médio não conseguiria prever → não há culpa (caso fortuito). Resultado que um homem médio poderia prever → há culpa se o agente não previu (culpa inconsciente) ou previu mas confiou que não ocorreria (culpa consciente)</li>
+        <li><strong>Risco permitido:</strong> Certas atividades com risco inerente são permitidas; o exercício dentro dos limites do risco permitido não gera culpa</li>
+      </ul>
+      <div class="alert alert-navy mt2" style="font-size:0.8rem;">
+        <div>📌 <strong>Parágrafo único — Regra da Excepcionalidade:</strong> A culpa só é punível quando expressamente prevista em lei — ex.: art. 121, §3.º (homicídio culposo); art. 129, §6.º (lesão culposa); art. 250, §2.º (incêndio culposo). Sem previsão legal expressa do crime na modalidade culposa → fato atípico se praticado sem dolo.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 6. CULPA CONSCIENTE                       -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="culpa-consciente">
+  <div class="section-header">
+    <div class="section-num">06</div>
+    <div class="section-title"><span>Culpa com Previsão — Alta Cobrança</span>Culpa Consciente: Conceito e Distinção do Dolo Eventual</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔵 Culpa Consciente (Com Previsão)</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Conceito:</strong> O agente prevê o resultado como possível, mas confia levianamente (indevidamente) que ele não ocorrerá, seja por sua habilidade, sorte ou qualquer outra razão. Age apesar da previsão, acreditando que o resultado não se concretizará.</p>
+      <div class="divider"></div>
+      <ul style="font-size:0.83rem;">
+        <li><strong>Elemento cognitivo:</strong> Previsão do resultado como possível — o agente PREVIU</li>
+        <li><strong>Elemento volitivo:</strong> Rejeição do resultado — o agente NÃO QUER o resultado e NÃO ACEITA o risco; confia que não ocorrerá</li>
+        <li><strong>Fórmula de Frank (negativa):</strong> "Se eu soubesse que o resultado ocorreria, eu não agiria" → culpa consciente</li>
+        <li><strong>Exemplo 1:</strong> Atirador habilidoso que atira em objeto próximo à cabeça de alguém (como malabarismo) → prevê o risco de erro → confia na própria habilidade → culpa consciente (se atingir a pessoa)</li>
+        <li><strong>Exemplo 2:</strong> Motorista que ultrapassa em curva → prevê que pode colidir → confia que não virá carro → culpa consciente</li>
+        <li><strong>Distinção crucial do dolo eventual:</strong> Na culpa consciente, o agente REJEITA o resultado (não aceita, confia que não ocorrerá); no dolo eventual, ACEITA (tanto faz)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>⚡ Como Distinguir na Prática — Critérios Doutrinários</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">A distinção entre dolo eventual e culpa consciente é um dos temas mais complexos e mais cobrados. A doutrina desenvolveu critérios auxiliares:</p>
+      <div style="display:flex;flex-direction:column;gap:0.45rem;">
+        <div style="background:var(--cream-mid);border-left:3px solid var(--red-accent);border-radius:0 4px 4px 0;padding:0.5rem 0.8rem;font-size:0.82rem;">
+          <strong style="color:var(--red-accent);">Critério 1 — Fórmula de Frank:</strong> "Se eu soubesse que o resultado ocorreria, eu agiria mesmo assim?" → SIM: dolo eventual. "Não, eu não agiria" → culpa consciente.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);border-radius:0 4px 4px 0;padding:0.5rem 0.8rem;font-size:0.82rem;">
+          <strong style="color:var(--blue-accent);">Critério 2 — Probabilidade do resultado:</strong> Quanto mais provável o resultado, mais se aproxima do dolo eventual (difícil confiar que não ocorrerá). Quanto menos provável, mais se aproxima da culpa consciente (confiança mais razoável).
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--green-accent);border-radius:0 4px 4px 0;padding:0.5rem 0.8rem;font-size:0.82rem;">
+          <strong style="color:var(--green-accent);">Critério 3 — Capacidade de controle:</strong> Se o agente tinha capacidade de controlar o risco (habilidade especial), a confiança é mais legítima → culpa consciente. Se o risco era totalmente fora do controle → mais próximo do dolo eventual.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--gold);border-radius:0 4px 4px 0;padding:0.5rem 0.8rem;font-size:0.82rem;">
+          <strong style="color:#7a5a00;">Critério 4 — Circunstâncias externas:</strong> O contexto do crime importa. Racha em alta velocidade → mais próximo do dolo eventual. Médico em cirurgia de risco → mais próximo da culpa consciente (confia na habilidade profissional).
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 7. MODALIDADES DA CULPA                   -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="modalidades-culpa">
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <div class="section-title"><span>Art. 18, II — As Três Modalidades</span>Imprudência, Negligência e Imperícia</div>
+  </div>
+
+  <div class="alert alert-navy" style="margin-bottom:1rem;">
+    <div class="alert-icon">ℹ️</div>
+    <div>O art. 18, II CP prevê três modalidades de culpa: imprudência, negligência e imperícia. São formas distintas de violação do dever objetivo de cuidado. O candidato deve dominar a definição, os exemplos e a distinção de cada modalidade — e saber que basta uma delas para configurar crime culposo.</div>
+  </div>
+
+  <div class="especie-grid">
+    <div class="especie-card ec-red">
+      <h4>🔴 Imprudência</h4>
+      <p style="font-size:0.82rem;color:var(--text-soft);margin-bottom:0.35rem;font-style:italic;">"Ação descuidada — fazer o que não devia"</p>
+      <p><strong>Conceito:</strong> Conduta positiva (ação) praticada sem o cuidado necessário, de forma precipitada, açodada ou temerária. A imprudência é a culpa <em>in agendo</em> — o agente age quando deveria agir com mais cautela.</p>
+      <ul>
+        <li><strong>Momento:</strong> Ocorre DURANTE a ação — o descuido é contemporâneo à conduta</li>
+        <li><strong>Exemplos:</strong> Dirigir em velocidade excessiva; ultrapassar em faixa proibida; realizar manobra perigosa no trânsito; disparar arma sem verificar se está carregada em ambiente com pessoas</li>
+        <li><strong>Distinção:</strong> Na imprudência, há ação → o agente FAZ o que não deveria fazer (ou faz de forma descuidada)</li>
+      </ul>
+    </div>
+    <div class="especie-card ec-blue">
+      <h4>🔵 Negligência</h4>
+      <p style="font-size:0.82rem;color:var(--text-soft);margin-bottom:0.35rem;font-style:italic;">"Inação descuidada — não fazer o que devia"</p>
+      <p><strong>Conceito:</strong> Omissão de cuidado — o agente deixa de adotar as precauções que deveria e que seriam capazes de evitar o resultado. A negligência é a culpa <em>in omittendo</em> — o agente omite o cuidado exigido.</p>
+      <ul>
+        <li><strong>Momento:</strong> Ocorre ANTES da ação principal — o descuido é anterior (omissão de precauções)</li>
+        <li><strong>Exemplos:</strong> Deixar arma carregada ao alcance de criança; não verificar freios do veículo antes de viajar; médico que não lê prontuário antes de ministrar medicamento; deixar objeto cortante em local de risco</li>
+        <li><strong>Distinção:</strong> Na negligência, há omissão → o agente NÃO FAZ o que deveria fazer (não toma as precauções devidas)</li>
+      </ul>
+    </div>
+    <div class="especie-card ec-green">
+      <h4>🟢 Imperícia</h4>
+      <p style="font-size:0.82rem;color:var(--text-soft);margin-bottom:0.35rem;font-style:italic;">"Falta de habilidade técnica na atividade"</p>
+      <p><strong>Conceito:</strong> Falta de aptidão técnica, habilidade ou conhecimento para o exercício de arte, ofício ou profissão. A imperícia é a culpa técnica — o agente atua em área que requer conhecimento especializado sem ter o domínio suficiente.</p>
+      <ul>
+        <li><strong>Requisito:</strong> Só existe imperícia no exercício de atividade que exige capacitação técnica específica (medicina, direito, engenharia, pilotagem etc.)</li>
+        <li><strong>Exemplos:</strong> Médico que realiza procedimento cirúrgico sem dominar a técnica → imperícia médica; motorista inexperiente que não controla o veículo em situação que exige habilidade; eletricista que não conhece o procedimento de segurança correto</li>
+        <li><strong>Distinção com negligência:</strong> Imperícia = falta de conhecimento técnico; negligência = falta de cuidado. Médico que sabe a técnica mas não a aplica com cuidado → negligência. Médico que não sabe a técnica → imperícia.</li>
+        <li><strong>Erro médico:</strong> Pode ser imperícia (falta de habilidade técnica), negligência (falta de cuidado no procedimento) ou imprudência (procedimento precipitado)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 8. CULPA INCONSCIENTE                     -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="culpa-inconsciente">
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <div class="section-title"><span>Culpa sem Previsão</span>Culpa Inconsciente e Graus de Culpa</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔵 Culpa Inconsciente (Sem Previsão)</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Conceito:</strong> O agente não prevê o resultado que era objetivamente previsível — viola o dever de cuidado sem sequer imaginar que o resultado poderia ocorrer. É a forma mais básica de culpa.</p>
+      <div class="divider"></div>
+      <ul style="font-size:0.83rem;">
+        <li><strong>Elemento cognitivo:</strong> Ausência de previsão — o agente NÃO PREVIU o resultado</li>
+        <li><strong>Previsibilidade objetiva:</strong> O resultado era previsível para um homem médio nas mesmas circunstâncias (mas o agente concreto não previu)</li>
+        <li><strong>Fundamento:</strong> O agente PODERIA ter previsto, mas não o fez por descuido</li>
+        <li><strong>Exemplo 1:</strong> Motorista que não verifica freios (negligência) e atropela pedestre → não previu o resultado → culpa inconsciente</li>
+        <li><strong>Exemplo 2:</strong> Médico que presceve medicamento sem ler o prontuário → não previu a reação alérgica → culpa inconsciente (negligência)</li>
+        <li><strong>Distinção da culpa consciente:</strong> Na inconsciente, o agente não previu; na consciente, previu mas confiou que não ocorreria</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📋 Graus de Culpa e Dosimetria</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">Embora o CP não preveja explicitamente graus de culpa, a doutrina e a jurisprudência reconhecem que a <strong>intensidade da culpa</strong> influi na dosimetria da pena (art. 59 CP — circunstâncias do crime):</p>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;">
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);padding:0.45rem 0.7rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong>Culpa grave (lata):</strong> Violação grosseira do dever de cuidado — resultado altamente previsível; negligência evidente. Ex.: dirigir completamente embriagado em alta velocidade → culpa grave → pena mais próxima do máximo
+        </div>
+        <div style="background:#edf2f8;border-left:3px solid var(--blue-accent);padding:0.45rem 0.7rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong>Culpa leve:</strong> Violação moderada do dever de cuidado — resultado previsível com atenção especial. Ex.: motorista que passa semáforo vermelho em madrugada sem movimento → culpa leve
+        </div>
+        <div style="background:#dceee3;border-left:3px solid var(--green-accent);padding:0.45rem 0.7rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong>Culpa levíssima:</strong> Violação mínima — apenas com atenção extraordinária o resultado seria evitável. Resultado dificilmente previsível para o homem médio
+        </div>
+      </div>
+      <div class="alert alert-gold mt2" style="font-size:0.81rem;">
+        <div>⭐ <strong>Para a dosimetria:</strong> O art. 59 CP inclui as "circunstâncias do crime" como critério da pena-base — a intensidade da culpa (grave, leve, levíssima) é avaliada aqui. Culpa grave → pena mais próxima do máximo; culpa levíssima → pena próxima ao mínimo.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 9. PRETERDOLO                             -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="preterintencao">
+  <div class="section-header">
+    <div class="section-num">09</div>
+    <div class="section-title"><span>Crime Preterdoloso — Art. 19 CP</span>Dolo no Antecedente + Culpa no Consequente</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🟡 Crime Preterdoloso (Preterintencional)</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;"><strong>Conceito:</strong> Crime em que o agente pratica conduta dolosa (com intenção de causar determinado resultado) e, além desse resultado, causa por culpa um resultado mais grave que não pretendia e não aceitou. Estrutura: dolo no antecedente (conduta e resultado pretendido) + culpa no consequente (resultado mais grave).</p>
+      <div class="divider"></div>
+      <ul style="font-size:0.83rem;">
+        <li><strong>Fórmula:</strong> Dolo (conduta + resultado menos grave) + Culpa (resultado mais grave que o querido)</li>
+        <li><strong>Fundamento legal:</strong> Art. 19 CP — "pelo resultado que agrava especialmente a pena, só responde o agente que o houver causado ao menos culposamente"</li>
+        <li><strong>Exemplos clássicos:</strong> Lesão corporal seguida de morte (art. 129, §3.º CP): agente quer lesionar (dolo de lesão) → vítima morre por complicação previsível (culpa para a morte); Abandono de recém-nascido com resultado morte (art. 134, §2.º CP)</li>
+        <li><strong>Distinção do homicídio doloso:</strong> No preterdolo, não há dolo de matar — apenas culpa para o resultado morte. No homicídio doloso (art. 121 CP), há dolo de matar. A diferença é no elemento subjetivo em relação ao resultado mais grave.</li>
+        <li><strong>Distinção do homicídio culposo:</strong> No preterdolo, a conduta inicial é dolosa (quis lesionar). No homicídio culposo, toda a conduta é culposa.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📋 Preterdolo × Dolo Eventual × Homicídio Doloso</h3>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.82rem;">
+          <thead style="background:var(--navy);color:white;">
+            <tr>
+              <th style="padding:0.5rem 0.7rem;">Critério</th>
+              <th style="padding:0.5rem 0.7rem;">Preterdolo</th>
+              <th style="padding:0.5rem 0.7rem;">Dolo Eventual (para a morte)</th>
+              <th style="padding:0.5rem 0.7rem;">Homicídio Doloso</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:var(--gold-pale);">
+              <td style="padding:0.5rem 0.7rem;font-weight:700;">Conduta inicial</td>
+              <td style="padding:0.5rem 0.7rem;">Dolosa (quer lesionar)</td>
+              <td style="padding:0.5rem 0.7rem;">Dolosa (qualquer)</td>
+              <td style="padding:0.5rem 0.7rem;">Dolosa</td>
+            </tr>
+            <tr>
+              <td style="padding:0.5rem 0.7rem;font-weight:700;">Relação com a morte</td>
+              <td style="padding:0.5rem 0.7rem;">Culpa — previu ou podia prever, mas não quis</td>
+              <td style="padding:0.5rem 0.7rem;">Previu e ACEITOU o risco</td>
+              <td style="padding:0.5rem 0.7rem;">QUIS a morte (dolo direto)</td>
+            </tr>
+            <tr style="background:var(--cream);">
+              <td style="padding:0.5rem 0.7rem;font-weight:700;">Exemplo</td>
+              <td style="padding:0.5rem 0.7rem;">Soco que causa morte inesperada</td>
+              <td style="padding:0.5rem 0.7rem;">Racha com morte aceita</td>
+              <td style="padding:0.5rem 0.7rem;">Disparo para matar</td>
+            </tr>
+            <tr style="background:#fde8e8;">
+              <td style="padding:0.5rem 0.7rem;font-weight:700;">Crime</td>
+              <td style="padding:0.5rem 0.7rem;">Lesão corporal seguida de morte (art. 129, §3.º)</td>
+              <td style="padding:0.5rem 0.7rem;">Homicídio doloso (art. 121 CP)</td>
+              <td style="padding:0.5rem 0.7rem;">Homicídio doloso (art. 121 CP)</td>
+            </tr>
+            <tr>
+              <td style="padding:0.5rem 0.7rem;font-weight:700;">Julgamento</td>
+              <td style="padding:0.5rem 0.7rem;">Juízo singular</td>
+              <td style="padding:0.5rem 0.7rem;">Tribunal do Júri</td>
+              <td style="padding:0.5rem 0.7rem;">Tribunal do Júri</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="alert alert-gold mt2" style="font-size:0.8rem;">
+        <div>⭐ <strong>Alta cobrança:</strong> A distinção entre lesão corporal seguida de morte (preterdolo → juízo singular) e homicídio doloso com dolo eventual (→ Tribunal do Júri) é frequentemente explorada em provas. O critério é o elemento subjetivo em relação à morte: culpa → preterdolo; aceitar o risco → dolo eventual → homicídio doloso.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 10. FLUXOGRAMA                            -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="fluxograma">
+  <div class="section-header">
+    <div class="section-num">10</div>
+    <div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma: Identificação do Elemento Subjetivo — Dolo ou Culpa</div>
+  </div>
+
+  <div class="flow-wrap">
+    <div class="flow-center">
+
+      <div class="flow-node flow-start">RESULTADO TÍPICO OCORREU — IDENTIFICAR O ELEMENTO SUBJETIVO</div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 1 — O agente PREVIU o resultado típico como possível ou certo?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Elemento cognitivo — consciência da possibilidade do resultado</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">NÃO previu (resultado imprevisível)</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Caso fortuito / Força maior<br>Sem responsabilidade penal<br><small>Ausência de dolo e de culpa</small>
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-gold" style="font-size:0.72rem;">Caso Fortuito — Sem Crime</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">NÃO previu (mas era previsível)</div>
+          <div class="flow-node flow-box-blue" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Culpa Inconsciente<br><small>Não previu o previsível<br>Prosseguir verificar violação do dever de cuidado</small>
+          </div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">SIM previu</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Previu o resultado<br>Prosseguir para Passo 2
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 2 — O agente QUIS o resultado (fim ou meio necessário)?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Elemento volitivo — o resultado era a meta ou consequência necessária da ação?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">SIM — quis como FIM principal</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            <strong>DOLO DIRETO de 1.º Grau</strong><br>
+            Art. 18, I, 1.ª parte CP<br><small>"Quis o resultado" — meta</small>
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-red" style="font-size:0.72rem;">Dolo Direto 1.º Grau</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">SIM — consequência CERTA e necessária</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            <strong>DOLO DIRETO de 2.º Grau</strong><br>
+            Art. 18, I, 1.ª parte CP<br><small>"Quis o resultado" — consequência necessária</small>
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-red" style="font-size:0.72rem;">Dolo Direto 2.º Grau</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — não quis, mas previu como possível</div>
+          <div class="flow-node flow-box-purple" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Previu mas não quis<br>Prosseguir para Passo 3
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 3 — O agente ACEITOU (consentiu com) o risco de produzir o resultado?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Fórmula de Frank: "Tanto faz, ocorra ou não o resultado, eu ajo" = dolo eventual. "Espero que não ocorra" = culpa consciente</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">SIM — aceitou o risco ("tanto faz")</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:185px;">
+            <strong>DOLO EVENTUAL</strong><br>
+            Art. 18, I, 2.ª parte CP<br><small>"Assumiu o risco de produzi-lo"<br>Crime DOLOSO</small>
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-red" style="font-size:0.72rem;">Dolo Eventual — Crime Doloso</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:115px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — confiou que não ocorreria</div>
+          <div class="flow-node flow-box-blue" style="font-size:0.76rem;text-align:center;min-width:185px;">
+            <strong>CULPA CONSCIENTE</strong><br>
+            Art. 18, II CP<br><small>"Confiei que não ocorreria"<br>Crime CULPOSO</small>
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-blue" style="font-size:0.72rem;">Culpa Consciente — Crime Culposo</div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 4 [CULPA INCONSCIENTE] — Houve violação do dever objetivo de cuidado?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Verificar se houve imprudência, negligência ou imperícia — e se o resultado era objetivamente previsível para o homem médio</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — sem violação / resultado imprevisível</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.74rem;text-align:center;min-width:185px;">
+            Caso fortuito<br>Sem culpa → sem crime<br><small>Ausência de culpabilidade subjetiva</small>
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-gold" style="font-size:0.72rem;">Caso Fortuito — Sem Crime</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">SIM — violação do dever de cuidado</div>
+          <div class="flow-node flow-box-blue" style="font-size:0.74rem;text-align:center;min-width:185px;">
+            <strong>CULPA INCONSCIENTE</strong><br>
+            Art. 18, II CP<br>Imprudência/Negligência/Imperícia<br><small>Se crime culposo previsto em lei → pune</small>
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-blue" style="font-size:0.72rem;">Culpa Inconsciente — Crime Culposo</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 11. QUADRO COMPARATIVO                    -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="comparativo">
+  <div class="section-header">
+    <div class="section-num">11</div>
+    <div class="section-title"><span>Quadro Sinóptico</span>Dolo Direto × Dolo Eventual × Culpa Consciente × Culpa Inconsciente × Preterdolo</div>
+  </div>
+
+  <div style="overflow-x:auto;">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Critério</th>
+          <th>Dolo Direto 1.º Grau</th>
+          <th>Dolo Direto 2.º Grau</th>
+          <th>Dolo Eventual</th>
+          <th>Culpa Consciente</th>
+          <th>Culpa Inconsciente</th>
+          <th>Preterdolo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hl">
+          <td>Previsão</td>
+          <td>Sim — certa</td>
+          <td>Sim — certa (inevitável)</td>
+          <td>Sim — possível</td>
+          <td>Sim — possível</td>
+          <td>Não (mas previsível)</td>
+          <td>Sim (resultado pretendido)</td>
+        </tr>
+        <tr>
+          <td>Vontade sobre o resultado</td>
+          <td>QUER (fim)</td>
+          <td>QUER (meio inevitável)</td>
+          <td>ACEITA ("tanto faz")</td>
+          <td>REJEITA ("não ocorrerá")</td>
+          <td>Não existe (não previu)</td>
+          <td>QUER o antecedente; NÃO QUER o consequente</td>
+        </tr>
+        <tr class="hl2">
+          <td>Elemento volitivo</td>
+          <td>Máximo</td>
+          <td>Alto (certeza)</td>
+          <td>Médio (indiferença)</td>
+          <td>Baixo (confiança negativa)</td>
+          <td>Nenhum</td>
+          <td>Dolo + Culpa</td>
+        </tr>
+        <tr>
+          <td>Natureza do crime</td>
+          <td>DOLOSO</td>
+          <td>DOLOSO</td>
+          <td>DOLOSO</td>
+          <td>CULPOSO</td>
+          <td>CULPOSO</td>
+          <td>PRETERDOLOSO (misto)</td>
+        </tr>
+        <tr class="hl3">
+          <td>Artigo</td>
+          <td>Art. 18, I, 1.ª p.</td>
+          <td>Art. 18, I, 1.ª p.</td>
+          <td>Art. 18, I, 2.ª p.</td>
+          <td>Art. 18, II CP</td>
+          <td>Art. 18, II CP</td>
+          <td>Art. 19 CP</td>
+        </tr>
+        <tr>
+          <td>Teoria</td>
+          <td>Da vontade</td>
+          <td>Da vontade (necessidade)</td>
+          <td>Do consentimento</td>
+          <td>–</td>
+          <td>–</td>
+          <td>Mista</td>
+        </tr>
+        <tr class="hl4">
+          <td>Exemplo</td>
+          <td>Atirar para matar</td>
+          <td>Bomba no navio — mata alvo + passageiros</td>
+          <td>Racha com morte aceita</td>
+          <td>Atirador habilidoso que erra</td>
+          <td>Motorista sem verificar freios</td>
+          <td>Soco → morte inesperada</td>
+        </tr>
+        <tr>
+          <td>Julgamento (se homicídio)</td>
+          <td>Tribunal do Júri</td>
+          <td>Tribunal do Júri</td>
+          <td>Tribunal do Júri</td>
+          <td>Juízo singular</td>
+          <td>Juízo singular</td>
+          <td>Juízo singular</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 12. EXEMPLOS PRÁTICOS                     -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="exemplos">
+  <div class="section-header">
+    <div class="section-num">12</div>
+    <div class="section-title"><span>Casos Concretos Resolvidos</span>Exemplos Práticos — Dolo e Culpa</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 1 — Racha com Morte: Dolo Eventual × Culpa Consciente</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A e B participam de racha em via pública a 140 km/h. A prevê que pode matar alguém. Atropela e mata C (pedestre). B, dirigindo a 60 km/h em via de 50 km/h, prevê que pode bater, mas confia em sua habilidade. Atropela e mata D.</p>
+      <div class="ex-calc">CASO A — RACHA a 140 km/h:
+Previsão: SIM — A previu que poderia matar
+Querer: NÃO — não queria matar C especificamente
+Aceitar o risco: SIM — "tanto faz, dirijo assim mesmo"
+
+→ DOLO EVENTUAL (art. 18, I, 2.ª parte CP)
+→ HOMICÍDIO DOLOSO (art. 121 CP)
+→ Crime doloso contra a vida → TRIBUNAL DO JÚRI
+→ Pena: 6 a 20 anos (+ qualificadora, se aplicável)
+
+CASO B — EXCESSO DE VELOCIDADE MODERADO:
+Previsão: SIM — previu possibilidade de acidente
+Querer: NÃO — não queria matar
+Aceitar: NÃO — confiou em sua habilidade ("não vai acontecer")
+
+→ CULPA CONSCIENTE (art. 18, II CP)
+→ HOMICÍDIO CULPOSO (art. 121, §3.º CP)
+→ Crime culposo → JUÍZO SINGULAR
+→ Pena: 1 a 3 anos (culposo) + CTB pode aumentar
+
+STJ: O racha com morte gera dolo eventual → Júri ✅</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 2 — Lesão Corporal Seguida de Morte: Preterdolo</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A agride B com socos, com intenção apenas de lesioná-lo. B cai e bate a cabeça no chão, morrendo por traumatismo craniano.</p>
+      <div class="ex-calc">ANÁLISE DO ELEMENTO SUBJETIVO:
+
+Conduta: socos (ação dolosa)
+Resultado pretendido: lesão corporal (DOLO)
+Resultado efetivo: morte de B
+
+Dolo para a LESÃO? SIM — quis lesionar B
+Dolo para a MORTE? NÃO — não quis e não aceitou o risco de matar
+Culpa para a MORTE? VERIFICAR: a morte por queda era previsível?
+→ SIM — traumatismo por queda em agressão física = previsível
+→ A não previu (culpa inconsciente) ou previu e confiou (culpa consciente)
+
+ELEMENTO SUBJETIVO: Dolo (lesão) + Culpa (morte)
+→ PRETERDOLO (crime preterintencional)
+→ Art. 129, §3.º CP: Lesão Corporal Seguida de Morte
+→ Pena: reclusão 4 a 12 anos
+→ Juízo SINGULAR (não Tribunal do Júri)
+
+DISTINÇÃO:
+→ Se A previa que poderia matar E aceitou o risco → DOLO EVENTUAL
+   → Homicídio doloso (art. 121 CP) → JÚRI
+→ Se A não previa possibilidade de morte → culpa inconsciente
+   → Lesão seguida de morte (preterdolo) → Juízo singular ✅</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 3 — Dolo Direto de 2.º Grau (Consequências Necessárias)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A quer matar seu inimigo B, que viaja de trem. A planta uma bomba no vagão onde B está. Sabe que os outros 20 passageiros também morrerão. A bomba explode e mata B e os 20 passageiros.</p>
+      <div class="ex-calc">ANÁLISE — DOLO DE 2.º GRAU:
+
+Resultado pretendido (FIM): morte de B
+→ Dolo direto de 1.º grau para a morte de B
+
+Resultado colateral (CONSEQUÊNCIA NECESSÁRIA): 
+→ A SABIA que os 20 passageiros também morreriam
+→ Era consequência CERTA e INEVITÁVEL do meio (bomba no vagão)
+→ A não podia ativar a bomba sem matar os passageiros
+
+Para a morte dos 20 passageiros:
+→ A não QUIS como fim (não era sua meta)
+→ A PREVIU como CERTA (não apenas possível)
+→ Consequência NECESSÁRIA do meio escolhido
+
+→ DOLO DIRETO de 2.º GRAU para os 20 passageiros
+   (não dolo eventual — a consequência era certa, não apenas possível)
+
+DISTINÇÃO DO DOLO EVENTUAL:
+→ Dolo direto 2.º grau: consequência CERTA → "sei que vai acontecer"
+→ Dolo eventual: consequência POSSÍVEL → "pode ou não acontecer"
+
+CRIME: 21 homicídios dolosos (art. 121 CP)
+→ 1 com dolo direto 1.º grau (B) + 20 com dolo direto 2.º grau ✅</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 4 — Imprudência, Negligência e Imperícia Distintas</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">Três médicos praticam conduta culposa distinta no mesmo hospital.</p>
+      <div class="ex-calc">CASO A — IMPRUDÊNCIA:
+Dr. A realiza procedimento cirúrgico de alto risco em excesso
+de velocidade operatória, sem aguardar resultado de exame
+crucial. Paciente sofre complicação grave.
+→ Agiu precipitadamente, de forma temerária (AÇÃO descuidada)
+→ IMPRUDÊNCIA ("fez o que não devia fazer assim")
+→ Homicídio culposo por imprudência (art. 121, §3.º CP)
+
+CASO B — NEGLIGÊNCIA:
+Dr. B não lê o prontuário do paciente antes de prescrever
+medicamento. Paciente tinha alergia grave anotada. Reação
+alérgica → óbito.
+→ Omitiu a precaução necessária (OMISSÃO de cuidado)
+→ NEGLIGÊNCIA ("não fez o que deveria fazer")
+→ Homicídio culposo por negligência (art. 121, §3.º CP)
+
+CASO C — IMPERÍCIA:
+Dr. C, cirurgião geral, realiza neurocirurgia de alta
+complexidade sem nunca ter recebido treinamento específico
+em neurocirurgia. Paciente vai a óbito.
+→ Falta de habilidade técnica especializada para aquela atividade
+→ IMPERÍCIA ("não tinha conhecimento técnico para o procedimento")
+→ Homicídio culposo por imperícia (art. 121, §3.º CP) ✅
+
+OBS: É possível que o mesmo fato configure mais de uma
+modalidade (ex.: imprudência + negligência concomitantes),
+mas basta uma para configurar crime culposo.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 13. JURISPRUDÊNCIA STF/STJ                -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="jurisprudencia">
+  <div class="section-header">
+    <div class="section-num">13</div>
+    <div class="section-title"><span>STF · STJ · Teses Consolidadas</span>Jurisprudência sobre Dolo e Culpa</div>
+  </div>
+
+  <div class="juris-grid">
+
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Racha com Morte — Dolo Eventual → Tribunal do Júri</div>
+      </div>
+      <div class="juris-body">
+        <p>O STF consolidou que a morte decorrente de participação em racha (competição automobilística não autorizada — art. 308 CTB) configura, em regra, <strong>dolo eventual</strong> — o participante prevê a possibilidade de matar e assume o risco, sendo indiferente ao resultado morte. Por ser crime doloso contra a vida, a competência é do <strong>Tribunal do Júri</strong> (art. 5.º, XXXVIII, CF/88).</p>
+        <p class="mt1">O STF distingue: mero excesso de velocidade sem racha → crime de trânsito culposo (CTB) → juízo singular. Racha → presunção de dolo eventual → Júri. Quem julga se há dolo eventual ou culpa consciente é o Júri, não o juiz singular — impedir a pronúncia para racha violaria a competência constitucional do Tribunal Popular.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Racha → Dolo Eventual</span>
+          <span class="tag tag-gold">Tribunal do Júri — Art. 5.º, XXXVIII, CF/88</span>
+          <span class="tag tag-blue">Art. 18, I, 2.ª Parte CP</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Embriaguez ao Volante com Morte — Dolo Eventual ou Culpa Consciente: Decide o Júri</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ consolidou que, em casos de <strong>embriaguez ao volante com resultado morte</strong>, a qualificação do elemento subjetivo como dolo eventual (→ homicídio doloso → Júri) ou culpa consciente (→ homicídio culposo → juízo singular) <strong>deve ser feita pelo Tribunal do Júri</strong>, não pelo juiz na fase de pronúncia. O juiz deve pronunciar o acusado por homicídio doloso (dolo eventual) quando há elementos indicativos suficientes (embriaguez + alta velocidade + contexto), reservando ao Júri a decisão final sobre o elemento subjetivo.</p>
+        <p class="mt1">O STJ rejeita que o juiz decida, na fase de pronúncia, que o fato foi culposo (impronuncia ou desclassifica para homicídio culposo) quando há dúvida razoável sobre dolo eventual. O princípio <em>in dubio pro societate</em> prevalece na pronúncia — a dúvida beneficia a pronúncia para o Júri, não a desclassificação para o juízo singular.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Embriaguez + Morte → Júri Decide</span>
+          <span class="tag tag-gold">In dubio pro societate — Pronúncia</span>
+          <span class="tag tag-blue">Art. 18, I, 2.ª Parte × Art. 18, II CP</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Vedação da Responsabilidade Penal Objetiva — Dolo ou Culpa São Indispensáveis</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ reafirma sistematicamente que a <strong>responsabilidade penal objetiva</strong> — punição sem dolo ou culpa, com base apenas no nexo causal — é vedada no ordenamento jurídico brasileiro. Todo crime exige, no mínimo, culpa em relação ao resultado (art. 18 CP c/c art. 19 CP). O simples fato de o agente ter causado o resultado não basta para sua punição — é necessária a prova do elemento subjetivo (dolo ou culpa).</p>
+        <p class="mt1">Aplicação prática: em crimes empresariais e coletivos, o STJ exige prova individualizada do dolo ou culpa de cada agente — a posição hierárquica ou a participação na empresa não gera responsabilidade objetiva. Cada dirigente deve ter sua responsabilidade penal subjetiva demonstrada individualmente.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Resp. Objetiva — Vedada</span>
+          <span class="tag tag-gold">Art. 18 CP — Dolo ou Culpa Indispensável</span>
+          <span class="tag tag-blue">Princípio da Culpabilidade</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Transmissão de HIV — Dolo Eventual ou Tentativa de Homicídio</div>
+      </div>
+      <div class="juris-body">
+        <p>O STF e o STJ reconhecem que a <strong>transmissão dolosa de HIV</strong> (relação sexual sem preservativo com conhecimento da soropositividade e ocultação ao parceiro) pode configurar dolo eventual de lesão corporal gravíssima (art. 129, §2.º, II CP — doença incurável) — o agente prevê a transmissão como possível e assume o risco. Em casos de tentativa de homicídio: se o agente tinha dolo de matar (eventual ou direto), o crime é tentativa de homicídio.</p>
+        <p class="mt1">A distinção entre dolo eventual de lesão e tentativa de homicídio depende do elemento volitivo: transmitir HIV (lesão) ou matar a vítima (homicídio). O STJ analisa o caso concreto: contexto da relação, consciência da soropositividade, reiteração da conduta, declarações do agente. Relação com preservativo correto → risco permitido → sem imputação de dolo eventual.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">HIV — Dolo Eventual de Lesão</span>
+          <span class="tag tag-gold">Art. 129, §2.º, II CP — Doença Incurável</span>
+          <span class="tag tag-blue">Risco Permitido × Risco Proibido</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Lesão Corporal Seguida de Morte (Art. 129, §3.º) × Homicídio Doloso — Critério do Elemento Subjetivo</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ firma o critério para distinguir lesão corporal seguida de morte (preterdolo — art. 129, §3.º CP) do homicídio doloso (art. 121 CP): o elemento subjetivo em relação ao <em>resultado morte</em>. Se o agente quis apenas lesionar e a morte decorreu de culpa (previsível mas não desejada) → lesão seguida de morte (preterdolo) → juízo singular. Se o agente teve dolo eventual em relação à morte (assumiu o risco de matar) → homicídio doloso → Tribunal do Júri.</p>
+        <p class="mt1">O STJ analisa o caso concreto: a intensidade da agressão (paulada na cabeça → mais próximo do homicídio doloso; tapa → mais próximo do preterdolo), a reiteração, as circunstâncias. O STJ rejeita que o simples fato de a morte ter ocorrido caracterize, por si só, dolo eventual — é necessária a prova do consentimento com o risco de matar.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Lesão + Morte Culposa → Art. 129, §3.º</span>
+          <span class="tag tag-gold">Preterdolo → Juízo Singular</span>
+          <span class="tag tag-blue">Dolo Eventual para Morte → Júri</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Crimes Culposos e Regra da Excepcionalidade (Art. 18, §único CP)</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ aplica sistematicamente a <strong>regra da excepcionalidade do crime culposo</strong> (art. 18, §único CP): ninguém pode ser punido por crime culposo sem que a lei expressamente preveja a modalidade culposa. Em crimes que não têm previsão legal da forma culposa, o fato culposo é atípico — o agente não responde penalmente, mesmo que tenha violado o dever de cuidado e causado o resultado.</p>
+        <p class="mt1">Exemplo relevante: o crime de dano (art. 163 CP) não prevê a modalidade culposa — se alguém danifica propriedade alheia por culpa, não há crime de dano culposo (fato atípico). Da mesma forma, o crime de estelionato (art. 171 CP) não tem modalidade culposa — a obtenção de vantagem ilícita por mera imprudência não configura estelionato. O STJ rejeita sistematicamente condenações por crimes culposos sem previsão legal expressa da modalidade culposa.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Culpa → Só Pune se Previsto em Lei</span>
+          <span class="tag tag-gold">Art. 18, §único CP — Regra da Excepcionalidade</span>
+          <span class="tag tag-blue">Dano Culposo → Atípico</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 14. DOUTRINA                              -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="doutrina">
+  <div class="section-header">
+    <div class="section-num">14</div>
+    <div class="section-title"><span>Doutrina Nacional</span>Principais Posições Doutrinárias sobre Dolo e Culpa</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cleber Masson — Direito Penal Esquematizado</div>
+      </div>
+      <div class="juris-body">
+        <p>Masson apresenta o dolo e a culpa com organização didática voltada para concursos. Adota a teoria da vontade para o dolo direto e a teoria do consentimento para o dolo eventual. Analisa detalhadamente o dolo direto de 2.º grau (consequências necessárias) como espécie distinta do dolo eventual — a certeza da consequência é o divisor. Quanto à culpa, Masson sistematiza as três modalidades (imprudência, negligência e imperícia) com exemplos práticos de cada uma. Para a distinção dolo eventual × culpa consciente, Masson aplica a fórmula de Frank como principal critério, complementada pela análise da probabilidade do resultado. Quanto ao preterdolo, Masson o identifica como categoria distinta: dolo no antecedente + culpa no consequente — sendo necessário ao menos culpa para o resultado agravador (art. 19 CP).</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cezar Roberto Bitencourt — Tratado de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Bitencourt aprofunda a análise histórica e dogmática do dolo e da culpa. Destaca que o CP de 1940 adotou teoria mista: vontade para o dolo direto, consentimento para o eventual. Critica a imprecisão da fórmula de Frank como critério único para o dolo eventual — propõe análise mais matizada considerando todas as circunstâncias do fato. Quanto à culpa, Bitencourt defende o critério subjetivo complementar ao objetivo para a violação do dever de cuidado: as capacidades pessoais do agente devem ser consideradas. Na distinção dolo eventual × culpa consciente em crimes de trânsito, Bitencourt é mais garantista que o STJ — tende a reconhecer culpa consciente em mais casos, reservando o dolo eventual para situações de maior manifesto desprezo pela vida humana.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Rogério Greco — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Greco analisa o dolo e a culpa sob perspectiva constitucional: o art. 18 CP é operacionalização do princípio da culpabilidade — nulla poena sine culpa. Adota a teoria finalista: o dolo é elemento subjetivo da conduta (não da culpabilidade), integrando o tipo subjetivo. Destaca que o dolo direto de 2.º grau é muitas vezes negligenciado na prática forense — mas é de grande relevância dogmática. Quanto à culpa, Greco ressalta a importância da previsibilidade objetiva (critério do homem médio) temperada pela capacidade pessoal do agente. Para o dolo eventual nos crimes de trânsito, Greco é mais restritivo que o STJ — prefere reconhecer culpa consciente em muitos casos de embriaguez ao volante, reservando o dolo eventual para situações de nítido desprezo pelo bem jurídico.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Guilherme de Souza Nucci — Código Penal Comentado</div>
+      </div>
+      <div class="juris-body">
+        <p>Nucci comenta o art. 18 CP com foco forense e na aplicação pelo juiz. Destaca a dificuldade prática de provar o elemento volitivo do dolo — especialmente para o dolo eventual — e propõe critérios objetivos para a análise: contexto da ação, intensidade do risco criado, reiteração de comportamentos perigosos, declarações do agente. Adota a teoria do consentimento para o dolo eventual. Quanto à culpa, Nucci é minucioso nas três modalidades, apresentando farta jurisprudência de cada. Destaca que a regra da excepcionalidade do crime culposo (art. 18, §único CP) é frequentemente esquecida na prática — o promotor deve verificar se o crime tem previsão legal na forma culposa antes de oferecer denúncia por crime culposo.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Controvérsia: Dolo Eventual nos Crimes de Trânsito — STJ × Doutrina</div>
+      </div>
+      <div class="juris-body">
+        <p>O debate mais aceso sobre o art. 18 CP é a extensão do dolo eventual nos crimes de trânsito:</p>
+        <ul class="mt1">
+          <li><strong>Posição STJ/STF (majoritária):</strong> Racha com morte → dolo eventual presumido → Tribunal do Júri. Embriaguez ao volante + alta velocidade + morte → indícios de dolo eventual → pronúncia para o Júri (Júri decide). In dubio pro societate na pronúncia.</li>
+          <li><strong>Posição doutrinária garantista (Bitencourt, Greco):</strong> Dolo eventual em crimes de trânsito deve ser reservado para casos de evidente indiferença à vida — embriaguez sozinha não gera dolo eventual; é modalidade de culpa consciente agravada. Ampliação do dolo eventual no trânsito viola princípio da culpabilidade.</li>
+          <li><strong>Posição intermediária (Masson, Nucci):</strong> Caso a caso — analisar intensidade do risco, contexto, velocidade, histórico do agente. Algumas situações de racha/embriaguez configuram dolo eventual; outras, culpa consciente.</li>
+          <li><strong>Para o concurso:</strong> Adote a posição do STJ (racha → dolo eventual → Júri). Mencione a controvérsia doutrinária. Em questões dissertativas, apresente ambas as posições.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Fernando Capez — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Capez apresenta o art. 18 CP de forma didática e voltada para concursos, com tabelas e esquemas de fácil memorização. Adota teoria da vontade para o dolo direto e teoria do consentimento para o dolo eventual. Define o dolo eventual pela fórmula: "o agente prevê o resultado e diz: tanto faz, ocorra ou não". Para a culpa, sistematiza as três modalidades com exemplos práticos de cada e destaca a regra da excepcionalidade do crime culposo (§único). Quanto à distinção dolo eventual × culpa consciente, Capez destaca a diferença entre aceitar e confiar negativamente: na culpa consciente, o agente confia que o resultado não ocorrerá — confiança que, embora indevida, demonstra que ele não se tornou indiferente ao bem jurídico. Quanto ao preterdolo, Capez o analisa em articulação com o art. 19 CP.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 15. SISTEMÁTICA                           -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="sistematica">
+  <div class="section-header">
+    <div class="section-num">15</div>
+    <div class="section-title"><span>Conexões Sistemáticas</span>Art. 18 CP na Sistemática do Código Penal</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔗 Artigos Diretamente Conectados ao Art. 18 CP</h3>
+      <ul>
+        <li><strong>Art. 13 CP (Nexo causal):</strong> O nexo causal do art. 13 é pressuposto do art. 18 — sem nexo causal, nem dolo nem culpa geram imputação. O art. 13 é fático; o art. 18 é normativo-subjetivo</li>
+        <li><strong>Art. 19 CP (Resultado agravador — Preterdolo):</strong> Complementa o art. 18 — o resultado agravador só é imputado se houver ao menos culpa; é a vedação expressa à responsabilidade objetiva para resultados qualificadores</li>
+        <li><strong>Art. 20 CP (Erro de tipo):</strong> O erro de tipo exclui o dolo (art. 18, I) — sem consciência dos elementos do tipo, não há elemento cognitivo do dolo. Erro evitável → culpa (se prevista em lei); erro inevitável → atipicidade</li>
+        <li><strong>Art. 21 CP (Erro de proibição):</strong> Não exclui o dolo (art. 18, I) — o agente conhece o tipo penal objetivo, mas erra sobre a ilicitude. Exclui a culpabilidade (potencial consciência da ilicitude)</li>
+        <li><strong>Art. 23 CP (Excludentes de ilicitude):</strong> O agente pode agir com dolo (saber o que faz) mas estar acobertado por excludente de ilicitude. A análise é sequencial: tipicidade (dolo/culpa) → ilicitude → culpabilidade</li>
+        <li><strong>Art. 28, II CP (Embriaguez voluntária):</strong> A embriaguez voluntária não exclui o dolo — posição da <em>actio libera in causa</em>. O STJ: dirigir embriagado evidencia assunção do risco (dolo eventual)</li>
+        <li><strong>Art. 33 CP (Pena):</strong> O regime penal e a pena diferem conforme o crime seja doloso ou culposo — crimes dolosos têm penas maiores e regimes mais rigorosos</li>
+        <li><strong>Art. 44 CP (PRD):</strong> Crimes dolosos com pena ≤ 4 anos e crimes culposos (qualquer pena) podem ter pena substituída por PRD — o elemento subjetivo influencia a substituição</li>
+        <li><strong>Art. 5.º, XXXVIII, CF/88 (Tribunal do Júri):</strong> Crimes dolosos contra a vida → Júri. A caracterização como dolo eventual (e não culpa consciente) determina a competência constitucional</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📋 Regra da Excepcionalidade — Art. 18, §único CP</h3>
+      <div class="law-quote">
+        <strong>Art. 18, §único CP:</strong>
+        "Salvo os casos expressos em lei, ninguém pode ser punido por fato previsto como crime, se o praticou culposamente."
+      </div>
+      <p class="mt2" style="font-size:0.85rem;color:var(--text-mid);">A regra geral é o crime doloso. O crime culposo é exceção — só existe quando expressamente previsto em lei. Principais crimes que têm previsão da forma culposa:</p>
+      <ul class="mt1" style="font-size:0.83rem;">
+        <li>Homicídio culposo — art. 121, §3.º CP</li>
+        <li>Lesão corporal culposa — art. 129, §6.º CP</li>
+        <li>Incêndio culposo — art. 250, §2.º CP</li>
+        <li>Explosão culposa — art. 251, §3.º CP</li>
+        <li>Inundação culposa — art. 254 CP</li>
+        <li>Desastre ferroviário culposo — art. 260, §2.º CP</li>
+        <li>Envenenamento de água culposo — art. 270, §único CP</li>
+        <li>Crimes culposos do CTB — arts. 302, 303 CTB</li>
+      </ul>
+      <div class="alert alert-red mt2" style="font-size:0.8rem;">
+        <div>🔴 <strong>Crimes SEM previsão culposa (atípicos se culposos):</strong> Furto culposo, estelionato culposo, dano culposo, roubo culposo — não existem no sistema penal brasileiro. Se o agente pratica esses atos culposamente → fato atípico.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-3 mt2">
+    <div class="card">
+      <h3>⚡ Dolo e Culpa no Concurso de Pessoas</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">O dolo de cada coautor ou partícipe deve ser analisado individualmente (art. 29 CP):</p>
+      <ul class="mt1" style="font-size:0.84rem;">
+        <li><strong>Coautoria dolosa:</strong> Todos os coautores devem ter dolo de realizar o tipo — a ausência de dolo em um deles impede a imputação do crime doloso (mas pode gerar responsabilidade culposa)</li>
+        <li><strong>Participação dolosa em crime culposo:</strong> Debate — é possível participação dolosa em crime culposo? Majoritariamente: não — o tipo culposo não admite concurso de pessoas no sentido estrito</li>
+        <li><strong>Desvio subjetivo (art. 29, §2.º CP):</strong> Se um coautor vai além do dolo acordado (ex.: um quer lesionar, outro mata com dolo direto) → cada um responde pelo seu dolo</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🔄 Resumo Mnemônico para Prova</h3>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.82rem;line-height:1.85;">
+        <p><strong style="color:var(--gold-light);">DOLO (Art. 18, I):</strong><br>
+        Direto 1.º: QUER o resultado (fim)<br>
+        Direto 2.º: SABE que é consequência certa<br>
+        Eventual: ACEITA o risco ("tanto faz")<br>
+        Teoria: Vontade (direto) + Consentimento (eventual)</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.5rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">CULPA (Art. 18, II):</strong><br>
+        Consciente: PREVIU, mas CONFIOU que não ocorreria<br>
+        Inconsciente: NÃO previu o que era previsível<br>
+        Modalidades: Imprudência / Negligência / Imperícia<br>
+        Regra: só pune se PREVISTO EM LEI</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.5rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">DISTINÇÃO CHAVE:</strong><br>
+        Dolo eventual × Culpa consciente<br>
+        = Aceitar × Confiar negativamente<br>
+        = "tanto faz" × "espero que não"</p>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📅 Dolo e a Qualificação do Homicídio</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">O tipo de dolo influencia diretamente as qualificadoras do homicídio (art. 121, §2.º CP):</p>
+      <ul class="mt1" style="font-size:0.84rem;">
+        <li><strong>Qualificadoras subjetivas:</strong> Motivo torpe, motivo fútil, meio cruel, modo surpresa — pressupõem dolo direto ou eventual quanto ao resultado morte</li>
+        <li><strong>Dolo eventual + qualificadora:</strong> É possível qualificadora de motivo torpe/fútil com dolo eventual? Há debate — STJ: admite em casos de racha com evidente desprezo pela vida humana</li>
+        <li><strong>Animus necandi (intenção de matar):</strong> STJ usa o contexto fático para inferir o dolo de matar (animus necandi) nos crimes de trânsito e agressões físicas — analisa instrumento, intensidade, região atingida</li>
+        <li><strong>Homicídio doloso × qualificado:</strong> A qualificadora não muda o elemento subjetivo — o dolo continua sendo o mesmo; muda apenas a gravidade das circunstâncias</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- PROVA / ENAM                              -->
+<!-- ══════════════════════════════════════════ -->
+<section id="prova" class="prova-section">
+  <h2>⚖️ Pontos Cobrados em Magistratura e ENAM</h2>
+  <p class="intro">Questões, teses e pegadinhas recorrentes nos concursos de Juiz de Direito, ENAM e equivalentes relacionadas ao Art. 18 CP.</p>
+
+  <div class="prova-items">
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">01</span>Quais as espécies de dolo previstas no art. 18, I CP? Explique cada uma.</div>
+      <div class="prova-item-a"><strong>Dolo direto de 1.º grau ("quis o resultado" como fim):</strong> O resultado é a meta imediata da conduta — o agente quer o resultado como fim principal. Ex.: atirar para matar. <strong>Dolo direto de 2.º grau ("quis o resultado" como consequência necessária):</strong> O resultado não é a meta, mas é consequência certa e inevitável do meio escolhido. O agente prevê a consequência como certa e age mesmo assim. Ex.: bomba em navio para matar um alvo — a morte dos outros passageiros é consequência necessária. <strong>Dolo eventual ("assumiu o risco de produzi-lo"):</strong> O agente prevê o resultado como possível (não certo) e assume o risco — "tanto faz, ocorra ou não". Ex.: racha com resultado morte. Critério distintivo: dolo direto 2.º grau → consequência certa; dolo eventual → consequência possível.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">02</span>Qual a diferença entre dolo eventual e culpa consciente? Use a Fórmula de Frank.</div>
+      <div class="prova-item-a">Ambos pressupõem previsão do resultado como possível. A diferença está no elemento volitivo. <strong>Dolo eventual:</strong> o agente prevê o resultado e o ACEITA — "tanto faz, ocorra ou não o resultado, em todo caso eu ajo." (fórmula de Frank positiva) → crime doloso. <strong>Culpa consciente:</strong> o agente prevê o resultado mas o REJEITA — "se eu soubesse que o resultado ocorreria com certeza, eu não agiria." Ele confia (levianamente) que o resultado não ocorrerá. (fórmula de Frank negativa) → crime culposo. <strong>Consequência prática:</strong> dolo eventual → crime doloso (homicídio doloso → Tribunal do Júri). Culpa consciente → crime culposo (homicídio culposo → juízo singular). A distinção é o ponto mais cobrado sobre o art. 18 CP em magistratura.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">03</span>Quais as três modalidades de culpa? Explique e diferencie com exemplos.</div>
+      <div class="prova-item-a"><strong>Imprudência (culpa in agendo — ação descuidada):</strong> O agente pratica conduta positiva de forma temerária, precipitada, sem o cuidado necessário. O descuido ocorre DURANTE a ação. Ex.: dirigir em alta velocidade, realizar cirurgia sem aguardar exame necessário. <strong>Negligência (culpa in omittendo — omissão do cuidado):</strong> O agente deixa de adotar as precauções necessárias antes ou durante a ação principal. O descuido é uma omissão de cuidado ANTERIOR ou concomitante. Ex.: não verificar freios antes de viajar, não ler prontuário antes de prescrever. <strong>Imperícia (culpa técnica — falta de habilidade):</strong> Falta de aptidão ou conhecimento técnico para exercício de arte, ofício ou profissão. Só existe em atividades que exigem capacitação técnica específica. Ex.: médico que não domina a técnica cirúrgica que executa; eletricista que desconhece procedimento de segurança.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">04</span>Qual a regra sobre a punição do crime culposo? O crime de dano culposo é punível?</div>
+      <div class="prova-item-a">O art. 18, §único CP estabelece a <strong>regra da excepcionalidade do crime culposo</strong>: "Salvo os casos expressos em lei, ninguém pode ser punido por fato previsto como crime, se o praticou culposamente." O crime culposo só é punível quando <strong>expressamente previsto em lei</strong> — é exceção; o dolo é a regra. <strong>Crime de dano culposo (art. 163 CP):</strong> O art. 163 CP não prevê a modalidade culposa — apenas o dano doloso é tipificado. Logo, o dano culposo é <strong>atípico</strong> no direito penal brasileiro (pode gerar responsabilidade civil, mas não penal). Da mesma forma, furto culposo, estelionato culposo, roubo culposo — não existem como crimes no CP brasileiro. O candidato deve verificar, para cada tipo penal, se há previsão expressa da modalidade culposa antes de imputá-la.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">05</span>O que é crime preterdoloso? Distinga da lesão corporal seguida de morte do homicídio doloso.</div>
+      <div class="prova-item-a"><strong>Crime preterdoloso (preterintencional):</strong> Dolo no antecedente (conduta + resultado pretendido) + culpa no consequente (resultado mais grave não querido). A lei exige ao menos culpa para o resultado agravador (art. 19 CP). Exemplo paradigmático: lesão corporal seguida de morte (art. 129, §3.º CP) — agente quer lesionar (dolo) → vítima morre por complicação previsível mas não desejada (culpa). <strong>Distinção da lesão corporal seguida de morte (preterdolo) do homicídio doloso:</strong> O critério é o elemento subjetivo em relação à MORTE. Lesão seguida de morte (preterdolo): dolo de lesionar + culpa para a morte → juízo singular → pena de 4 a 12 anos. Homicídio doloso (art. 121 CP): dolo direto ou eventual de matar → Tribunal do Júri → pena de 6 a 20 anos (simples). Se o agente assumiu o risco de matar (dolo eventual) → homicídio doloso. Se não aceitou o risco de matar, apenas de lesionar → preterdolo.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">06</span>Quais teorias sobre o dolo o CP brasileiro adotou? E sobre a culpa?</div>
+      <div class="prova-item-a">Quanto ao <strong>dolo</strong>: o CP adotou teoria mista. Para o <strong>dolo direto</strong> ("quis o resultado" — art. 18, I, 1.ª parte): <strong>teoria da vontade</strong> — o agente deve querer o resultado como fim ou como consequência necessária do meio. Para o <strong>dolo eventual</strong> ("assumiu o risco de produzi-lo" — art. 18, I, 2.ª parte): <strong>teoria do consentimento (assentimento)</strong> — além da previsão, exige que o agente consinta com o resultado (aceite o risco). A teoria da representação (que exige apenas previsão, sem vontade) não foi adotada — ela não diferenciaria dolo eventual de culpa consciente. Quanto à <strong>culpa</strong>: o art. 18, II CP não adota explicitamente uma teoria, mas a doutrina majoritária adota o critério do <strong>dever objetivo de cuidado</strong> com parâmetro do "homem médio" — teoria objetiva da culpa. O critério subjetivo complementar (capacidades do agente) é reconhecido doutrinariamente mas não positivado expressamente.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">07</span>A embriaguez voluntária exclui o dolo? Qual a posição do STJ?</div>
+      <div class="prova-item-a"><strong>Não exclui o dolo.</strong> O art. 28, II CP estabelece expressamente que a embriaguez voluntária ou culposa não exclui a imputabilidade penal — e consequentemente não exclui o dolo. A doutrina fundamenta pelo princípio da <em>actio libera in causa</em>: o agente que se embriagou voluntariamente transferiu para o momento anterior (quando decidiu beber) a análise do elemento subjetivo. O STJ vai além: a embriaguez voluntária ao volante pode ser <em>indicativo</em> do dolo eventual — quem decide dirigir embriagado prevê a possibilidade de causar acidente e assume o risco. Por isso, embriaguez ao volante com morte pode configurar dolo eventual (→ homicídio doloso → Tribunal do Júri) em vez de culpa consciente (→ homicídio culposo → juízo singular). O STJ determina que o Júri decida, não o juiz na pronúncia.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">08</span>Qual a competência para julgamento do crime de trânsito com morte: Júri ou juízo singular? Depende do quê?</div>
+      <div class="prova-item-a">Depende do <strong>elemento subjetivo</strong> do crime. Se o agente agiu com <strong>dolo eventual</strong> (previu a possibilidade de matar e assumiu o risco — "tanto faz") → crime doloso contra a vida → <strong>competência do Tribunal do Júri</strong> (art. 5.º, XXXVIII, CF/88 c/c art. 74, §1.º, CPP). Se o agente agiu com <strong>culpa consciente</strong> (previu mas confiou que não ocorreria) ou <strong>culpa inconsciente</strong> (não previu o que era previsível) → crime culposo → <strong>juízo singular</strong>. Quem determina o elemento subjetivo é o <strong>Tribunal do Júri</strong>, não o juiz na pronúncia. O STJ: em casos de racha → presume dolo eventual → pronúncia para o Júri. Em casos de embriaguez → analisa o conjunto de circunstâncias → se há indícios de dolo eventual → pronúncia para o Júri; se apenas culpa → juízo singular.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">09</span>O que distingue imprudência de negligência no crime culposo?</div>
+      <div class="prova-item-a"><strong>Imprudência:</strong> Culpa <em>in agendo</em> — conduta positiva (ação) realizada de forma precipitada, açodada ou temerária. O descuido manifesta-se durante a execução da ação. O agente FAZ o que não deveria fazer (ou faz de forma mais descuidada do que deveria). Exemplos: dirigir em excesso de velocidade, realizar procedimento sem aguardar exame. <strong>Negligência:</strong> Culpa <em>in omittendo</em> — omissão de cuidado antes ou durante a ação. O agente NÃO FAZ o que deveria fazer (não adota as precauções necessárias). Exemplos: deixar de verificar os freios antes de viajar, não ler o prontuário antes de prescrever medicamento. <strong>Diferença essencial:</strong> Imprudência = ação descuidada (faz demais, de forma errada); Negligência = omissão de cuidado (não faz o que devia). Ambas violam o dever objetivo de cuidado, mas por modos opostos — ação × omissão.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">10</span>[ENAM — alta recorrência] Classifique o elemento subjetivo: (a) A atropela B após ultrapassar sinal vermelho sem percebê-lo; (b) A dirige em racha e atropela pedestre; (c) A, atirador de circo, acerta B em show de habilidades; (d) A desfere facada querendo matar B.</div>
+      <div class="prova-item-a"><strong>(a) Ultrapassar sinal sem perceber — Culpa Inconsciente:</strong> A não previu o resultado (não percebeu o sinal vermelho) → não havia previsão do resultado → culpa inconsciente por negligência (não prestou atenção ao sinal) → homicídio culposo (art. 121, §3.º CP) se B morrer. <strong>(b) Racha — Dolo Eventual:</strong> A previu a possibilidade de matar no racha e assumiu o risco ("tanto faz") → dolo eventual → homicídio doloso (art. 121 CP) → Tribunal do Júri. STJ consolidado. <strong>(c) Atirador de circo — Culpa Consciente:</strong> A previu que poderia errar e acertar B, mas confiou em sua habilidade excepcional ("não vai acontecer comigo") → culpa consciente → homicídio culposo (art. 121, §3.º CP) se B morrer. <strong>(d) Facada para matar — Dolo Direto de 1.º Grau:</strong> A quis o resultado (a morte de B) como fim principal de sua conduta → dolo direto de 1.º grau → homicídio doloso (art. 121 CP) → Tribunal do Júri.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">11</span>Qual a diferença entre dolo direto de 2.º grau e dolo eventual? Por que isso importa?</div>
+      <div class="prova-item-a">A diferença está na <strong>certeza das consequências colaterais</strong>. <strong>Dolo direto de 2.º grau:</strong> as consequências colaterais são <em>certas e inevitáveis</em> — o agente prevê que CERTAMENTE ocorrerão como resultado necessário do meio escolhido. O agente as "quer" porque são inseparáveis do seu fim. Ex.: A detona bomba para matar B num vagão cheio — a morte dos demais passageiros é CERTA. <strong>Dolo eventual:</strong> as consequências colaterais são <em>possíveis mas incertas</em> — o agente prevê que PODEM ocorrer, aceita o risco, mas não tem certeza. Ex.: A dirige em alta velocidade no centro da cidade — pode matar pedestre (possível, não certo). <strong>Por que importa:</strong> Ambos são modalidades de crime doloso e geram imputação por crime doloso. A distinção é dogmática e influencia a qualificação da imputação (grau de culpabilidade). Na dosimetria, dolo direto (1.º e 2.º graus) tende a ser valorado como mais grave que o dolo eventual nas circunstâncias judiciais do art. 59 CP.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">12</span>A responsabilidade penal objetiva é admitida no Brasil? Qual o papel do art. 18 CP?</div>
+      <div class="prova-item-a"><strong>Não.</strong> A responsabilidade penal objetiva — punição com base apenas no nexo causal, sem dolo ou culpa — é vedada no ordenamento jurídico brasileiro. O fundamento é o <strong>princípio da culpabilidade</strong> (<em>nulla poena sine culpa</em>), derivado da dignidade da pessoa humana (art. 1.º, III, CF/88) e do devido processo legal (art. 5.º, LIV, CF/88). <strong>Papel do art. 18 CP:</strong> O art. 18 CP é o dispositivo infraconstitucional que operacionaliza a vedação à responsabilidade objetiva — ao exigir dolo (art. 18, I) ou culpa (art. 18, II) para a imputação de crime, o art. 18 CP garante que ninguém seja punido pelo mero nexo causal entre conduta e resultado. O art. 19 CP reforça: o resultado agravador só é imputado se houver ao menos culpa. STF e STJ reafirmam sistematicamente: sem dolo ou culpa demonstrados individualmente → sem crime → sem pena.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">13</span>[ENAM — questão integrada] A transmite HIV a B intencionalmente, sem informar B sobre sua soropositividade e sem usar preservativo. B contrai HIV. Qual o crime? Qual o elemento subjetivo?</div>
+      <div class="prova-item-a"><strong>Análise do elemento subjetivo:</strong> A tinha ciência da soropositividade e da possibilidade de transmissão. A praticou a conduta sem preservativo e sem informar B. A PREVIU a possibilidade de transmitir o vírus e ASSUMIU O RISCO (dolo eventual — "tanto faz"). A não queria diretamente transmitir (dolo direto), mas aceitou o risco de transmitir. <strong>Dolo eventual de lesão corporal gravíssima:</strong> transmissão de doença incurável (art. 129, §2.º, II CP) → dolo eventual de lesão corporal gravíssima. Pena: reclusão 2 a 8 anos. STJ e STF adotam esse entendimento. <strong>Se A tinha intenção de matar B (dolo de matar):</strong> tentativa de homicídio (art. 121 + art. 14, II CP). <strong>Se B morrer em razão do HIV:</strong> debate — homicídio doloso (dolo eventual de matar?) ou lesão corporal gravíssima com resultado morte? O STJ analisa caso a caso o elemento subjetivo. <strong>Se A usou preservativo corretamente:</strong> risco permitido → sem imputação penal (imputação objetiva — sem criação de risco proibido relevante).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">14</span>O crime de imperícia pressupõe atividade técnica regulamentada? O médico que erra pode responder por imperícia, imprudência ou negligência?</div>
+      <div class="prova-item-a"><strong>Sim, a imperícia pressupõe atividade que exige capacitação técnica especializada</strong> — não é qualquer erro, mas a falta de aptidão técnica para o exercício de arte, ofício ou profissão específica. Não há imperícia em atividades comuns que qualquer pessoa realiza (dirigir, cozinhar informalmente). <strong>O médico pode responder por qualquer das três modalidades culposas:</strong> (1) <strong>Imperícia:</strong> quando não tem o domínio técnico da técnica que executa — ex.: cirurgião geral que realiza neurocirurgia complexa sem treinamento. (2) <strong>Negligência:</strong> quando não adota as precauções devidas — ex.: não ler o prontuário, não pedir exame pré-operatório obrigatório, deixar de monitorar paciente em UTI. (3) <strong>Imprudência:</strong> quando age de forma precipitada ou temerária — ex.: iniciar cirurgia sem aguardar resultado de exame essencial; prescrever medicamento em dose excessiva sem verificar. A mesma conduta pode caracterizar simultaneamente mais de uma modalidade — basta uma para configurar o crime culposo. O STJ analisa o caso concreto para identificar a modalidade predominante, o que influencia a dosimetria (art. 59 CP).</div>
+    </div>
+
+  </div>
+</section>
+
+</div><!-- /page-wrap -->
+
+<footer>
+  <strong>Art. 18.º do Código Penal Brasileiro</strong> — Decreto-Lei n.º 2.848/1940<br>
+  Material elaborado para preparação à Magistratura / ENAM · Doutrina e jurisprudência consolidadas · Atualizado 2025
+</footer>
+
+</body>
+</html>

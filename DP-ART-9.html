@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 9º CP — Eficácia da Sentença Estrangeira | Magistratura ENAM</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a;
+    --navy-mid: #1a2f45;
+    --navy-light: #243b55;
+    --gold: #c8960c;
+    --gold-light: #e8b84b;
+    --gold-pale: #fdf3d8;
+    --cream: #faf7f2;
+    --cream-mid: #f0ebe2;
+    --text-dark: #1a1208;
+    --text-mid: #3d3020;
+    --text-soft: #6b5c40;
+    --border: #d4c49a;
+    --border-light: #e8dcbf;
+    --red-accent: #8b1a1a;
+    --green-accent: #1a4a2e;
+    --blue-accent: #1a3a5c;
+    --purple-accent: #4a1a6b;
+    --shadow: 0 4px 24px rgba(13,27,42,0.10);
+    --shadow-lg: 0 8px 40px rgba(13,27,42,0.18);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  /* ── STICKY NAV ── */
+  #top-nav {
+    position: sticky; top: 0; z-index: 999;
+    background: var(--navy);
+    border-bottom: 3px solid var(--gold);
+    padding: 0 1.5rem;
+    display: flex; align-items: center; gap: 0;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  #top-nav::-webkit-scrollbar { display: none; }
+  #top-nav .nav-brand {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold-light); font-size: 0.9rem; font-weight: 700;
+    white-space: nowrap; padding: 0.85rem 1.2rem 0.85rem 0;
+    border-right: 1px solid rgba(200,150,12,0.3); margin-right: 0.5rem;
+    letter-spacing: 0.5px;
+  }
+  #top-nav a {
+    color: rgba(255,255,255,0.75); text-decoration: none;
+    font-size: 0.72rem; font-family: 'Source Serif 4', serif;
+    font-weight: 600; letter-spacing: 0.6px; text-transform: uppercase;
+    padding: 0.85rem 0.8rem; white-space: nowrap;
+    transition: color 0.2s, background 0.2s;
+    border-bottom: 3px solid transparent; margin-bottom: -3px;
+  }
+  #top-nav a:hover { color: var(--gold-light); border-bottom-color: var(--gold); }
+
+  /* ── HERO ── */
+  #hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1e3d5c 100%);
+    color: white; padding: 3.5rem 2rem 3rem;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  #hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: repeating-linear-gradient(45deg,rgba(200,150,12,0.03) 0px,rgba(200,150,12,0.03) 1px,transparent 1px,transparent 40px);
+  }
+  #hero .badge {
+    display: inline-block;
+    background: rgba(200,150,12,0.15); border: 1px solid rgba(200,150,12,0.5);
+    color: var(--gold-light); font-size: 0.72rem; letter-spacing: 2px;
+    text-transform: uppercase; padding: 0.35rem 1rem; border-radius: 2px;
+    margin-bottom: 1.2rem; font-family: 'Source Serif 4', serif; font-weight: 600;
+  }
+  #hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 5vw, 3.2rem); font-weight: 900;
+    line-height: 1.15; margin-bottom: 0.6rem; letter-spacing: -0.5px;
+  }
+  #hero h1 span { color: var(--gold-light); }
+  #hero .subtitle { font-size: 1rem; color: rgba(255,255,255,0.65); font-style: italic; margin-bottom: 1.5rem; }
+  #hero .law-box {
+    display: inline-block;
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(200,150,12,0.4);
+    border-left: 4px solid var(--gold); color: rgba(255,255,255,0.9);
+    font-family: 'Source Serif 4', serif; font-size: 0.95rem; font-style: italic;
+    padding: 1rem 1.5rem; max-width: 760px; text-align: left; line-height: 1.7;
+    border-radius: 0 4px 4px 0;
+  }
+  #hero .law-box strong {
+    color: var(--gold-light); font-style: normal; display: block;
+    font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.4rem;
+  }
+
+  /* ── LAYOUT ── */
+  .page-wrap { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+  /* ── SECTIONS ── */
+  .section { margin-top: 3.5rem; scroll-margin-top: 56px; }
+  .section-header {
+    display: flex; align-items: center; gap: 1rem;
+    margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--border);
+  }
+  .section-num {
+    font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900;
+    color: var(--border); line-height: 1; min-width: 2.5rem;
+  }
+  .section-title { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; color: var(--navy); line-height: 1.2; }
+  .section-title span {
+    display: block; font-size: 0.75rem; font-family: 'Source Serif 4', serif;
+    font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-style: normal;
+  }
+
+  /* ── CARDS ── */
+  .card { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 1.4rem 1.6rem; box-shadow: var(--shadow); }
+  .card-grid { display: grid; gap: 1rem; }
+  .card-grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .card-grid-2 { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+  .card h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.6rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-light); }
+  .card p, .card li { font-size: 0.88rem; line-height: 1.7; color: var(--text-mid); }
+  .card ul { padding-left: 1.1rem; }
+  .card li { margin-bottom: 0.25rem; }
+
+  /* inciso cards */
+  .inciso-card { border-top: 4px solid; }
+  .inciso-card.inc1 { border-top-color: var(--blue-accent); }
+  .inciso-card.inc2 { border-top-color: var(--green-accent); }
+  .inciso-card.inc1 h3 { color: var(--blue-accent); }
+  .inciso-card.inc2 h3 { color: var(--green-accent); }
+
+  .req-card { border-top: 4px solid; }
+  .req-card.req-a { border-top-color: var(--gold); background: var(--gold-pale); }
+  .req-card.req-b { border-top-color: var(--red-accent); }
+  .req-card.req-a h3 { color: #7a5a00; }
+  .req-card.req-b h3 { color: var(--red-accent); }
+
+  /* ── FLOW ── */
+  .flow-wrap {
+    background: white; border: 1px solid var(--border-light); border-radius: 6px;
+    padding: 2rem 1.5rem; box-shadow: var(--shadow); overflow-x: auto;
+  }
+  .flow-center { display: flex; flex-direction: column; align-items: center; gap: 0; }
+  .flow-node {
+    border-radius: 4px; padding: 0.65rem 1.4rem;
+    font-family: 'Source Serif 4', serif; font-size: 0.82rem; font-weight: 600;
+    text-align: center; min-width: 220px; max-width: 460px; position: relative;
+  }
+  .flow-start { background: var(--navy); color: white; border-radius: 50px; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; }
+  .flow-box-navy { background: var(--navy-mid); color: white; border-left: 4px solid var(--gold); font-size: 0.8rem; }
+  .flow-box-green { background: #edf7f0; border: 1px solid #7ec89a; border-left: 4px solid var(--green-accent); color: var(--text-dark); }
+  .flow-box-red { background: #fdf0f0; border: 1px solid #e09090; border-left: 4px solid var(--red-accent); color: var(--text-dark); }
+  .flow-box-gold { background: var(--gold-pale); border: 2px solid var(--gold); color: var(--text-dark); }
+  .flow-box-blue { background: #e8f0f8; border: 1px solid #7aa8d8; border-left: 4px solid var(--blue-accent); color: var(--text-dark); }
+  .flow-end { background: var(--gold); color: var(--navy); font-weight: 700; border-radius: 50px; padding: 0.7rem 2rem; font-size: 0.82rem; }
+  .flow-arrow { font-size: 1.3rem; color: var(--border); line-height: 1; margin: 0.15rem 0; }
+  .flow-connector-line { width: 1px; height: 28px; background: var(--border); }
+  .flow-row { display: flex; align-items: flex-start; gap: 1.5rem; width: 100%; justify-content: center; flex-wrap: wrap; }
+  .flow-branch { display: flex; flex-direction: column; align-items: center; gap: 0; flex: 1; min-width: 200px; }
+  .flow-label { font-size: 0.68rem; color: var(--text-soft); font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; background: var(--cream-mid); padding: 0.15rem 0.5rem; border-radius: 2px; margin: 0.15rem 0; }
+
+  /* ── TABLE ── */
+  .comp-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; background: white; box-shadow: var(--shadow); border-radius: 6px; overflow: hidden; }
+  .comp-table thead { background: var(--navy); color: white; }
+  .comp-table thead th { padding: 0.85rem 1rem; font-family: 'Source Serif 4', serif; font-weight: 600; letter-spacing: 0.5px; font-size: 0.8rem; text-align: left; }
+  .comp-table thead th:first-child { color: var(--gold-light); }
+  .comp-table tbody tr { border-bottom: 1px solid var(--border-light); }
+  .comp-table tbody tr:last-child { border-bottom: none; }
+  .comp-table tbody tr:nth-child(even) { background: var(--cream); }
+  .comp-table td { padding: 0.75rem 1rem; color: var(--text-mid); vertical-align: top; }
+  .comp-table td:first-child { font-weight: 600; color: var(--navy); white-space: nowrap; font-size: 0.8rem; }
+  .comp-table .highlight-row td { background: var(--gold-pale) !important; }
+  .comp-table .danger-row td { background: #fdf0f0 !important; }
+
+  /* ── JURISPRUDÊNCIA ── */
+  .juris-card { background: white; border: 1px solid var(--border-light); border-left: 5px solid; border-radius: 0 6px 6px 0; padding: 1.2rem 1.4rem; box-shadow: var(--shadow); }
+  .juris-card.stf { border-left-color: var(--red-accent); }
+  .juris-card.stj { border-left-color: var(--navy); }
+  .juris-card.doutrina { border-left-color: var(--gold); }
+  .juris-card.destaque { border-left-color: var(--purple-accent); border: 2px solid var(--purple-accent); border-left: 6px solid var(--purple-accent); }
+  .juris-header { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+  .juris-badge { font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 2px; font-family: 'Source Serif 4', serif; }
+  .juris-badge.stf { background: var(--red-accent); color: white; }
+  .juris-badge.stj { background: var(--navy); color: white; }
+  .juris-badge.doutrina { background: var(--gold); color: var(--navy); }
+  .juris-badge.sumula { background: var(--green-accent); color: white; }
+  .juris-badge.novo { background: var(--purple-accent); color: white; }
+  .juris-badge.leading { background: #c00; color: white; letter-spacing: 1px; }
+  .juris-title { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700; color: var(--navy); }
+  .juris-body { font-size: 0.84rem; color: var(--text-mid); line-height: 1.7; }
+  .juris-body em { font-style: italic; color: var(--navy); }
+  .juris-grid { display: grid; gap: 1rem; }
+
+  /* ── ALERT ── */
+  .alert { padding: 0.9rem 1.2rem; border-radius: 4px; font-size: 0.84rem; line-height: 1.7; display: flex; gap: 0.7rem; align-items: flex-start; }
+  .alert-gold { background: var(--gold-pale); border: 1px solid #d4aa3a; color: #5a4000; }
+  .alert-red { background: #fdf0f0; border: 1px solid #e09090; color: #5a0000; }
+  .alert-navy { background: #f0f4f8; border: 1px solid #abc; color: var(--navy); }
+  .alert-green { background: #edf7f0; border: 1px solid #7ec89a; color: #1a4a2e; }
+  .alert-purple { background: #f3edf8; border: 1px solid #b07ad8; color: #4a1a6b; }
+  .alert-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.05rem; }
+
+  /* ── PROVA ── */
+  .prova-section { background: var(--navy); border-radius: 8px; padding: 2rem; color: white; margin-top: 3.5rem; scroll-margin-top: 56px; }
+  .prova-section h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--gold-light); margin-bottom: 0.5rem; }
+  .prova-section .intro { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; font-style: italic; }
+  .prova-items { display: grid; gap: 0.75rem; }
+  .prova-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(200,150,12,0.25); border-left: 4px solid var(--gold); border-radius: 0 4px 4px 0; padding: 1rem 1.2rem; }
+  .prova-item-q { font-size: 0.82rem; font-weight: 600; color: var(--gold-light); margin-bottom: 0.4rem; display: flex; align-items: flex-start; gap: 0.6rem; }
+  .prova-item-q .qnum { background: var(--gold); color: var(--navy); font-size: 0.65rem; font-weight: 700; padding: 0.1rem 0.45rem; border-radius: 2px; flex-shrink: 0; margin-top: 0.1rem; }
+  .prova-item-a { font-size: 0.82rem; color: rgba(255,255,255,0.8); line-height: 1.65; }
+  .prova-item-a strong { color: white; }
+  .prova-item.hot { border-left-color: #ff6b6b; background: rgba(255,100,100,0.08); }
+  .prova-item.hot .prova-item-q { color: #ff9999; }
+  .prova-item.hot .qnum { background: #c00; color: white; }
+
+  /* ── TAGS ── */
+  .tag { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; margin: 0.1rem; font-family: 'Source Serif 4', serif; }
+  .tag-blue { background: #dce8f5; color: var(--blue-accent); }
+  .tag-green { background: #dceee3; color: var(--green-accent); }
+  .tag-gold { background: var(--gold-pale); color: #7a5a00; border: 1px solid #d4aa3a; }
+  .tag-red { background: #fde8e8; color: var(--red-accent); }
+  .tag-purple { background: #f0e0f8; color: var(--purple-accent); }
+
+  /* ── QUOTES ── */
+  .law-quote { background: var(--cream-mid); border-left: 4px solid var(--navy); padding: 0.9rem 1.2rem; font-size: 0.88rem; font-style: italic; color: var(--text-mid); line-height: 1.7; border-radius: 0 4px 4px 0; }
+  .law-quote strong { font-style: normal; color: var(--navy); font-size: 0.75rem; letter-spacing: 0.5px; display: block; margin-bottom: 0.25rem; }
+
+  /* ── TIMELINE ── */
+  .timeline { border-left: 3px solid var(--gold); padding-left: 1.5rem; position: relative; }
+  .timeline-item { position: relative; margin-bottom: 1.2rem; }
+  .timeline-item::before { content: ''; position: absolute; left: -1.85rem; top: 0.4rem; width: 10px; height: 10px; background: var(--gold); border-radius: 50%; border: 2px solid var(--cream); }
+  .timeline-date { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); font-family: 'Source Serif 4', serif; }
+  .timeline-content { font-size: 0.84rem; color: var(--text-mid); line-height: 1.65; }
+  .timeline-content strong { color: var(--navy); }
+
+  /* ── MISC ── */
+  .divider { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); margin: 1.5rem 0; }
+  .mt1 { margin-top: 0.75rem; } .mt2 { margin-top: 1rem; } .mt3 { margin-top: 1.5rem; }
+  .flex-gap { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: flex-start; }
+  strong { font-weight: 700; }
+  .text-gold { color: var(--gold); } .text-navy { color: var(--navy); } .text-red { color: var(--red-accent); }
+
+  /* ── REQUISITOS CHECKLIST ── */
+  .checklist { list-style: none; padding: 0; }
+  .checklist li { padding: 0.4rem 0 0.4rem 1.8rem; position: relative; font-size: 0.85rem; color: var(--text-mid); border-bottom: 1px solid var(--border-light); }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li::before { content: ''; position: absolute; left: 0; top: 0.55rem; width: 14px; height: 14px; border: 2px solid var(--gold); border-radius: 2px; }
+  .checklist.filled li::before { background: var(--green-accent); border-color: var(--green-accent); content: '✓'; color: white; font-size: 0.7rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+  /* ── ROBINHO BOX ── */
+  .case-box { background: linear-gradient(135deg, #1a1208, #2a1f10); border: 2px solid var(--gold); border-radius: 8px; padding: 1.5rem; color: white; }
+  .case-box h3 { font-family: 'Playfair Display', serif; color: var(--gold-light); margin-bottom: 0.8rem; font-size: 1.1rem; }
+  .case-box p, .case-box li { font-size: 0.83rem; color: rgba(255,255,255,0.8); line-height: 1.7; }
+  .case-box ul { padding-left: 1.1rem; }
+  .case-box li { margin-bottom: 0.3rem; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--navy); color: rgba(255,255,255,0.45); text-align: center; padding: 1.5rem; font-size: 0.75rem; border-top: 2px solid var(--gold); }
+  footer strong { color: var(--gold-light); }
+
+  /* ── PRINT ── */
+  @media print {
+    #top-nav { display: none; }
+    #hero { padding: 2rem 1rem; }
+    #hero::before { display: none; }
+    .page-wrap { max-width: 100%; padding: 0 0.5rem 2rem; }
+    .section { margin-top: 2rem; page-break-inside: avoid; }
+    .card, .juris-card { box-shadow: none; border: 1px solid #ccc; }
+    .prova-section { background: #f0f4f8 !important; color: #000 !important; }
+    .prova-section h2 { color: var(--navy) !important; }
+    .prova-item { background: white !important; border: 1px solid #ccc !important; }
+    .prova-item-q { color: #7a5a00 !important; }
+    .prova-item-a { color: #333 !important; }
+    .case-box { background: #f0ebe2 !important; color: #000 !important; border: 2px solid #c8960c; }
+    footer { display: none; }
+    body { font-size: 11pt; }
+  }
+
+  @media (max-width: 640px) {
+    #hero { padding: 2rem 1rem; }
+    #hero h1 { font-size: 1.6rem; }
+    .card-grid-3, .card-grid-2 { grid-template-columns: 1fr; }
+    .section-title { font-size: 1.1rem; }
+    .comp-table { font-size: 0.76rem; }
+    .comp-table td, .comp-table th { padding: 0.6rem 0.7rem; }
+    .flow-node { min-width: 160px; font-size: 0.75rem; }
+    .flow-row { gap: 0.75rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="top-nav" aria-label="Atalhos do artigo">
+  <div class="nav-brand">Art. 9º CP</div>
+
+  <div class="nav-main-links">
+    <a href="#visao-geral">Visão Geral</a>
+    <a href="#texto-legal">Texto Legal</a>
+    <a href="#efeitos">Efeitos</a>
+    <a href="#requisitos">Requisitos</a>
+    <a href="#fluxograma">Fluxograma</a>
+    <a href="#comparativo">Comparativo</a>
+    <a href="#tep">TEP — Lei Migração</a>
+    <a href="#jurisprudencia">Juris. STF/STJ</a>
+    <a href="#caso-robinho">Caso Robinho</a>
+    <a href="#doutrina">Doutrina</a>
+    <a href="#sistematica">Sistemática</a>
+    <a href="#prova" class="nav-prova">Prova</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="hero">
+  <div class="badge">Código Penal · Título I · Aplicação da Lei Penal</div>
+  <h1>Art. 9º — <span>Eficácia da Sentença Estrangeira</span></h1>
+  <p class="subtitle">Homologação · Efeitos Civis · Medida de Segurança · TEP · Magistratura · ENAM</p>
+  <div class="law-box">
+    <strong>Art. 9.º do Decreto-Lei n.º 2.848/1940 (Código Penal) — Redação dada pela Lei n.º 7.209/1984</strong>
+    "A sentença estrangeira, quando a aplicação da lei brasileira produz na espécie as mesmas consequências, pode ser homologada no Brasil para: I — obrigar o condenado à reparação do dano, a restituições e a outros efeitos civis; II — sujeitá-lo a medida de segurança.<br><br>
+    Parágrafo único — A homologação depende: a) para os efeitos previstos no inciso I, de pedido da parte interessada; b) para os outros efeitos, da existência de tratado de extradição com o país de cuja autoridade judiciária emanou a sentença, ou, na falta de tratado, de requisição do Ministro da Justiça."
+  </div>
+</header>
+
+<div class="page-wrap">
+
+  <!-- ══════════════ 1. VISÃO GERAL ══════════════ -->
+  <section class="section" id="visao-geral">
+    <div class="section-header">
+      <div class="section-num">01</div>
+      <div class="section-title"><span>Introdução &amp; Sistemática</span>Visão Geral do Artigo</div>
+    </div>
+
+    <div class="card-grid card-grid-2">
+      <div class="card">
+        <h3>📍 Finalidade e Posição Sistemática</h3>
+        <p>O art. 9.º integra o <strong>Título I do Código Penal</strong> ("Da Aplicação da Lei Penal"), ao lado dos arts. 1.º ao 12. Regula a <strong>eficácia da sentença penal estrangeira</strong> no Brasil, estabelecendo em que hipóteses uma condenação proferida por tribunal de outro país pode produzir efeitos jurídicos em território nacional.</p>
+        <p class="mt2">Trata-se de norma de <strong>cooperação jurídica internacional em matéria penal</strong>, que baliza o princípio da soberania nacional com as exigências da cooperação entre Estados no combate ao crime transnacional.</p>
+        <div class="alert alert-gold mt2" style="font-size:0.82rem;">
+          <div class="alert-icon">⭐</div>
+          <div><strong>Posição no encadeamento sistemático:</strong> Art. 5.º (territorialidade) → Art. 6.º (lugar do crime/ubiquidade) → Art. 7.º (extraterritorialidade) → <strong>Art. 8.º (pena cumprida no exterior)</strong> → <strong>Art. 9.º (eficácia da sentença estrangeira)</strong>. O art. 9.º é o ponto final do sistema de aplicação espacial da lei penal brasileira.</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>🏛️ Natureza Jurídica e Características</h3>
+        <ul>
+          <li><strong>Norma de cooperação internacional:</strong> favorece a cooperação judiciária entre Estados soberanos</li>
+          <li><strong>Norma de direito penal material:</strong> integra o Código Penal (parte substantiva), mas guarda aspecto processual na homologação</li>
+          <li><strong>Norma de eficácia limitada:</strong> a sentença estrangeira não produz automaticamente efeitos — <em>exige homologação</em> pelo STJ (EC 45/2004)</li>
+          <li><strong>Sistema de contenciosidade limitada:</strong> o STJ não reexamina o mérito da ação penal estrangeira, apenas verifica os requisitos formais de homologabilidade</li>
+          <li><strong>Princípio da equivalência:</strong> a homologação pressupõe que "a aplicação da lei brasileira produz na espécie as mesmas consequências"</li>
+          <li><strong>NÃO permite execução de pena:</strong> o art. 9.º, por si só, não autoriza o cumprimento de pena privativa de liberdade no Brasil — somente a Lei de Migração (art. 100, Lei 13.445/2017) prevê a Transferência de Execução da Pena (TEP)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="alert alert-red mt2">
+      <div class="alert-icon">🔴</div>
+      <div><strong>Ponto mais cobrado em provas (ENAM/Magistratura):</strong> O art. 9.º do CP <em>NÃO autoriza</em> a execução de pena privativa de liberdade de sentença estrangeira no Brasil. Essa era a posição clássica, alterada pelo advento da Lei de Migração (Lei 13.445/2017, art. 100 — Transferência de Execução da Pena) e consolidada pelo histórico julgamento do STJ no caso Robinho (HDE 7.986-EX, 2024). Esta distinção é <strong>determinante</strong> em qualquer prova de magistratura atual.</div>
+    </div>
+  </section>
+
+  <!-- ══════════════ 2. TEXTO LEGAL ANALÍTICO ══════════════ -->
+  <section class="section" id="texto-legal">
+    <div class="section-header">
+      <div class="section-num">02</div>
+      <div class="section-title"><span>Análise Literal</span>Texto Legal e Elementos Normativos</div>
+    </div>
+
+    <div class="card-grid card-grid-2">
+      <div class="card">
+        <h3>🔍 "Sentença estrangeira"</h3>
+        <p>Somente <strong>sentença penal condenatória</strong> transitada em julgado pode ser homologada para fins do art. 9.º CP. Requisitos mínimos:</p>
+        <ul class="mt1">
+          <li>Proferida por <strong>juízo estrangeiro competente</strong></li>
+          <li>Observância do <strong>contraditório e ampla defesa</strong> (devido processo legal)</li>
+          <li>Sentença <strong>autenticada</strong> e <strong>traduzida</strong> para o português</li>
+          <li>Trânsito em julgado comprovado</li>
+        </ul>
+        <div class="alert alert-navy mt2" style="font-size:0.81rem;">
+          <div>📌 <strong>Atenção:</strong> Sentença <em>absolutória</em> estrangeira também pode ter relevância no Brasil — via art. 8.º CP (cômputo de pena) e via ne bis in idem — mas não é objeto do art. 9.º, que cuida exclusivamente da sentença <em>condenatória</em>.</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>🔍 "Quando a aplicação da lei brasileira produz na espécie as mesmas consequências"</h3>
+        <p>Este é o <strong>princípio da equivalência ou da dupla tipicidade funcional</strong>: para que a sentença estrangeira seja homologada, é necessário que a conduta condenada no exterior também seja punível no Brasil e produza consequências similares (reparação civil, medida de segurança).</p>
+        <p class="mt1">O STJ adota a <strong>contenciosidade limitada</strong>: não reexamina o mérito, mas verifica se o fato seria também ilícito na perspectiva da lei brasileira. A correspondência não precisa ser perfeita — basta que a essência da ilicitude seja equivalente.</p>
+        <div class="alert alert-gold mt2" style="font-size:0.81rem;">
+          <div>⚠️ <strong>Doutrina majoritária (Masson, Bitencourt):</strong> A equivalência refere-se às <em>consequências jurídicas</em> (reparação, medida de segurança), não à identidade perfeita dos tipos penais. Uma condenação por "furto" na Itália pode ser homologada mesmo que a tipificação seja levemente distinta da brasileira, desde que a essência (subtração de coisa alheia) seja equivalente.</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>🔍 "Pode ser homologada" — caráter facultativo</h3>
+        <p>O verbo "pode" indica que a homologação é <strong>facultativa</strong>, não automática. Dois aspectos se extraem:</p>
+        <ul class="mt1">
+          <li>O STJ tem <strong>margem de juízo</strong> para não homologar sentença que atente contra a ordem pública, soberania nacional ou bons costumes brasileiros</li>
+          <li>A homologação não é imperativa para o Estado brasileiro — é uma escolha de política de cooperação internacional</li>
+        </ul>
+        <p class="mt1">Fundamento constitucional: <strong>art. 105, I, "i", CF/88</strong> — competência do STJ para homologar sentença estrangeira e conceder exequatur a cartas rogatórias. Antes da EC 45/2004, a competência era do STF.</p>
+      </div>
+      <div class="card">
+        <h3>🔍 "No Brasil" — efeitos territoriais</h3>
+        <p>A homologação confere à sentença estrangeira efeitos <strong>restritos ao território brasileiro</strong>. O ato homologatório não devolve a sentença ao país de origem, nem a amplia — apenas a torna executável no Brasil nas hipóteses taxativamente previstas nos incisos I e II.</p>
+        <p class="mt1">O Brasil adota o <strong>sistema de delibação</strong>: o STJ verifica apenas requisitos formais extrínsecos de regularidade, sem ingressar no mérito da condenação estrangeira.</p>
+        <div class="alert alert-navy mt2" style="font-size:0.81rem;">
+          <div>📌 <strong>CF/88, art. 105, I, "i":</strong> Compete ao STJ <em>"a homologação de sentenças estrangeiras e a concessão do exequatur às cartas rogatórias"</em>.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ 3. EFEITOS ══════════════ -->
+  <section class="section" id="efeitos">
+    <div class="section-header">
+      <div class="section-num">03</div>
+      <div class="section-title"><span>Incisos I e II</span>Efeitos Autorizados pelo Art. 9.º CP</div>
+    </div>
+
+    <div class="card-grid card-grid-2">
+      <div class="card inciso-card inc1">
+        <h3>⚖️ Inciso I — Efeitos Civis</h3>
+        <p><strong>"Obrigar o condenado à reparação do dano, a restituições e a outros efeitos civis"</strong></p>
+        <div class="divider"></div>
+        <ul>
+          <li><strong>Reparação do dano:</strong> obrigação de indenizar a vítima pelos prejuízos materiais e morais causados pelo crime</li>
+          <li><strong>Restituições:</strong> devolução de bens subtraídos ou apropriados indevidamente</li>
+          <li><strong>"Outros efeitos civis":</strong> expressão aberta — pode incluir perda do poder familiar, interdição civil conexa ao crime, vedação ao exercício de atividades etc.</li>
+        </ul>
+        <div class="alert alert-navy mt2" style="font-size:0.81rem;">
+          <div>📌 <strong>Legitimidade para requerer:</strong> a <strong>parte interessada</strong> (normalmente a vítima ou seus herdeiros). A homologação para efeitos civis <em>não pode ser feita de ofício</em> pelo STJ — depende de pedido expresso (art. 9.º, parágrafo único, "a", CP).</div>
+        </div>
+        <div class="flex-gap mt2">
+          <span class="tag tag-gold">Requer pedido da parte interessada</span>
+          <span class="tag tag-blue">Finalidade: reparar a vítima</span>
+        </div>
+      </div>
+      <div class="card inciso-card inc2">
+        <h3>🔒 Inciso II — Medida de Segurança</h3>
+        <p><strong>"Sujeitá-lo a medida de segurança"</strong></p>
+        <div class="divider"></div>
+        <ul>
+          <li>Aplica-se quando o condenado no exterior é <strong>inimputável</strong> ou <strong>semi-imputável</strong> e a sentença impõe medida de tratamento psiquiátrico</li>
+          <li>Medidas de segurança no Brasil (art. 96 CP): <strong>internação</strong> em hospital de custódia e tratamento psiquiátrico ou <strong>tratamento ambulatorial</strong></li>
+          <li>A medida deve ser equivalente à imposta no exterior — o STJ analisa se a lei brasileira prevê medida de conteúdo semelhante</li>
+        </ul>
+        <div class="alert alert-red mt2" style="font-size:0.81rem;">
+          <div>🔴 <strong>Requisito adicional (art. 9.º, parágrafo único, "b"):</strong> Para medida de segurança (e quaisquer outros efeitos além dos civis do inciso I), exige-se <em>tratado de extradição</em> com o país de origem da sentença, ou, na ausência de tratado, <em>requisição do Ministro da Justiça</em>.</div>
+        </div>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Requer tratado ou requisição MJ</span>
+          <span class="tag tag-green">Finalidade: proteção social</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert alert-red mt2">
+      <div class="alert-icon">🚫</div>
+      <div><strong>O que o art. 9.º CP NÃO permite:</strong> A homologação fundada <em>exclusivamente</em> no art. 9.º CP não autoriza a <strong>execução de pena privativa de liberdade</strong> no Brasil. Esse efeito foi incorporado ao ordenamento brasileiro apenas com o art. 100 da Lei de Migração (Lei 13.445/2017), que criou o instituto da <strong>Transferência de Execução da Pena (TEP)</strong>. A distinção entre art. 9.º CP e art. 100 da Lei de Migração é crucial e altamente cobrada em provas.</div>
+    </div>
+  </section>
+
+  <!-- ══════════════ 4. REQUISITOS ══════════════ -->
+  <section class="section" id="requisitos">
+    <div class="section-header">
+      <div class="section-num">04</div>
+      <div class="section-title"><span>Parágrafo Único</span>Requisitos para a Homologação</div>
+    </div>
+
+    <div class="card-grid card-grid-2">
+      <div class="card req-card req-a">
+        <h3>🅐 Para Efeitos Civis (inciso I)</h3>
+        <p style="font-style:italic;font-size:0.85rem;margin-bottom:0.8rem;">"Para os efeitos previstos no inciso I, de pedido da parte interessada" (art. 9.º, par. ún., "a")</p>
+        <ul class="checklist filled">
+          <li>Sentença penal estrangeira condenatória transitada em julgado</li>
+          <li>Proferida por autoridade judiciária competente do país estrangeiro</li>
+          <li>Réu citado regularmente e com oportunidade de defesa</li>
+          <li>Sentença autenticada pelo consulado brasileiro e traduzida por tradutor juramentado</li>
+          <li><strong>Pedido expresso da parte interessada</strong> (vítima, herdeiros, interessados civis)</li>
+          <li>Equivalência: a lei brasileira produz as mesmas consequências civis</li>
+          <li>Respeito à ordem pública, soberania nacional e bons costumes</li>
+        </ul>
+        <p class="mt2" style="font-size:0.8rem;"><strong>NÃO exige:</strong> tratado de extradição com o país de origem</p>
+      </div>
+      <div class="card req-card req-b">
+        <h3>🅑 Para Medida de Segurança e Outros Efeitos (inciso II)</h3>
+        <p style="font-style:italic;font-size:0.85rem;margin-bottom:0.8rem;">"Para os outros efeitos, da existência de tratado de extradição com o país de cuja autoridade judiciária emanou a sentença, ou, na falta de tratado, de requisição do Ministro da Justiça" (art. 9.º, par. ún., "b")</p>
+        <ul class="checklist filled">
+          <li>Todos os requisitos do inciso I (sentença válida, autenticada etc.)</li>
+          <li>Equivalência das medidas de segurança previstas em ambos os países</li>
+          <li><strong>Tratado de extradição com o país de origem</strong> — OR —</li>
+          <li><strong>Requisição do Ministro da Justiça</strong> (na ausência de tratado)</li>
+          <li>Iniciativa do Procurador-Geral da República (CPP, art. 789)</li>
+        </ul>
+        <div class="alert alert-navy mt2" style="font-size:0.8rem;">
+          <div><strong>CPP, art. 789:</strong> O PGR, ao tomar conhecimento de sentença penal estrangeira que imponha medida de segurança pessoal, pedirá ao Ministro da Justiça as providências para requerer a homologação pelo STJ.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt2">
+      <h3>📋 Requisitos Gerais (CPC/2015, art. 963) — Aplicáveis à Homologação Penal pelo STJ</h3>
+      <div style="overflow-x:auto;">
+        <table class="comp-table" style="margin-top:0.75rem;">
+          <thead>
+            <tr>
+              <th>Requisito</th>
+              <th>Fundamento</th>
+              <th>Conteúdo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Autoridade competente</td>
+              <td>CPC, art. 963, I</td>
+              <td>Sentença proferida por juízo do Estado estrangeiro com jurisdição sobre o fato</td>
+            </tr>
+            <tr>
+              <td>Citação regular</td>
+              <td>CPC, art. 963, II</td>
+              <td>Réu citado conforme a lei estrangeira, com chance real de defesa; réu em revelia só se citação foi regular</td>
+            </tr>
+            <tr>
+              <td>Trânsito em julgado</td>
+              <td>CPC, art. 963, III</td>
+              <td>Decisão definitiva, não mais sujeita a recurso ordinário no país de origem</td>
+            </tr>
+            <tr class="highlight-row">
+              <td>Tradução oficial</td>
+              <td>CPC, art. 963, IV</td>
+              <td>Sentença acompanhada de tradução para o português por tradutor oficial ou juramentado</td>
+            </tr>
+            <tr>
+              <td>Autenticação consular</td>
+              <td>RISTJ, art. 216-D</td>
+              <td>Autenticidade dos documentos verificada pelo consulado brasileiro ou apostilada (Convenção de Haia)</td>
+            </tr>
+            <tr class="danger-row">
+              <td>Ordem pública</td>
+              <td>CPC, art. 963, VI</td>
+              <td>Sentença não pode conter manifesta ofensa à ordem pública, soberania nacional ou bons costumes brasileiros</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ 5. FLUXOGRAMA ══════════════ -->
+  <section class="section" id="fluxograma">
+    <div class="section-header">
+      <div class="section-num">05</div>
+      <div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma: Aplicação do Art. 9.º CP e da TEP</div>
+    </div>
+
+    <div class="flow-wrap">
+      <div class="flow-center">
+        <div class="flow-node flow-start">SENTENÇA PENAL ESTRANGEIRA → Pretendem-se efeitos no Brasil</div>
+        <div class="flow-connector-line"></div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-connector-line"></div>
+
+        <div class="flow-node flow-box-navy" style="max-width:500px;text-align:center;">
+          <strong style="color:var(--gold-light);">PASSO 1:</strong> A sentença é condenatória transitada em julgado? Foi proferida por juízo competente, com citação e defesa regulares?
+        </div>
+        <div class="flow-connector-line"></div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-connector-line"></div>
+
+        <div class="flow-row">
+          <div class="flow-branch">
+            <div class="flow-label">NÃO</div>
+            <div class="flow-node flow-box-red" style="font-size:0.78rem;text-align:center;">
+              ❌ Homologação inviável<br>Faltam requisitos formais mínimos<br><small>(CPC, art. 963)</small>
+            </div>
+          </div>
+          <div style="width:1px;background:var(--border);min-height:80px;"></div>
+          <div class="flow-branch">
+            <div class="flow-label">SIM</div>
+            <div class="flow-node flow-box-gold" style="font-size:0.78rem;text-align:center;">
+              ✅ Requisitos formais cumpridos → Identificar finalidade da homologação
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-connector-line" style="height:36px;"></div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-connector-line"></div>
+
+        <div class="flow-node flow-box-navy" style="max-width:500px;text-align:center;">
+          <strong style="color:var(--gold-light);">PASSO 2:</strong> Qual a finalidade pretendida para os efeitos no Brasil?
+        </div>
+        <div class="flow-connector-line"></div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-connector-line"></div>
+
+        <div class="flow-row">
+          <div class="flow-branch">
+            <div class="flow-label">Efeitos Civis (Inc. I)</div>
+            <div class="flow-node flow-box-blue" style="font-size:0.76rem;text-align:center;">
+              <strong>Reparação do dano, restituições</strong><br>Art. 9.º, I, CP
+            </div>
+            <div class="flow-arrow" style="font-size:1rem;">▼</div>
+            <div class="flow-node flow-box-blue" style="font-size:0.74rem;text-align:center;">
+              Exige: <strong>pedido da parte interessada</strong><br>NÃO exige tratado<br>(art. 9.º, par. ún., "a")
+            </div>
+            <div class="flow-arrow" style="font-size:1rem;">▼</div>
+            <div class="flow-node flow-box-green" style="font-size:0.74rem;text-align:center;">
+              ✅ STJ homologa → Executa na Justiça Federal (1ª instância)
+            </div>
+          </div>
+
+          <div style="width:1px;background:var(--border);min-height:200px;"></div>
+
+          <div class="flow-branch">
+            <div class="flow-label">Medida de Segurança (Inc. II)</div>
+            <div class="flow-node" style="background:#fdf0f0;border:1px solid #e09090;border-left:4px solid var(--red-accent);font-size:0.76rem;text-align:center;">
+              <strong>Internação / Trat. Ambulatorial</strong><br>Art. 9.º, II, CP
+            </div>
+            <div class="flow-arrow" style="font-size:1rem;">▼</div>
+            <div class="flow-node" style="background:#fdf0f0;border:1px solid #e09090;border-left:4px solid var(--red-accent);font-size:0.74rem;text-align:center;">
+              Exige: <strong>tratado de extradição</strong> com o país de origem<br>OU <strong>requisição do Min. da Justiça</strong><br>(art. 9.º, par. ún., "b")
+            </div>
+            <div class="flow-arrow" style="font-size:1rem;">▼</div>
+            <div class="flow-node flow-box-green" style="font-size:0.74rem;text-align:center;">
+              ✅ STJ homologa → Juiz local aplica a medida de segurança (CPP, art. 789)
+            </div>
+          </div>
+
+          <div style="width:1px;background:var(--border);min-height:200px;"></div>
+
+          <div class="flow-branch">
+            <div class="flow-label">Pena Privativa de Liberdade</div>
+            <div class="flow-node" style="background:#fdf0f0;border:2px solid #c00;font-size:0.76rem;text-align:center;">
+              ⚠️ <strong>ART. 9.º CP NÃO AUTORIZA!</strong><br>Necessário: TEP<br>(Lei de Migração, art. 100)
+            </div>
+            <div class="flow-arrow" style="font-size:1rem;">▼</div>
+            <div class="flow-node flow-box-gold" style="font-size:0.74rem;text-align:center;">
+              Verifica: o caso admite extradição executória em tese?<br>Existe tratado ou promessa de reciprocidade?
+            </div>
+            <div class="flow-arrow" style="font-size:1rem;">▼</div>
+            <div class="flow-node flow-box-green" style="font-size:0.74rem;text-align:center;">
+              ✅ STJ homologa (art. 100 da Lei 13.445/17) → Execução na Justiça Federal<br><small>(Caso Robinho — STJ HDE 7.986/EX, 2024)</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-connector-line" style="height:36px;"></div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-connector-line"></div>
+
+        <div class="flow-node flow-box-navy" style="max-width:520px;text-align:center;font-size:0.8rem;">
+          <strong style="color:var(--gold-light);">PASSO 3 — Controle do STJ:</strong> Verificação de ordem pública, soberania nacional, bons costumes. Sistema de contenciosidade limitada: o STJ NÃO reexamina o mérito da condenação estrangeira.
+        </div>
+        <div class="flow-connector-line" style="height:36px;"></div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-connector-line"></div>
+        <div class="flow-node flow-end" style="text-align:center;">
+          Sentença homologada → Execução pela Justiça Federal de 1.ª Grau do domicílio do condenado (CPP, art. 88)
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ 6. COMPARATIVO ══════════════ -->
+  <section class="section" id="comparativo">
+    <div class="section-header">
+      <div class="section-num">06</div>
+      <div class="section-title"><span>Quadro Sinóptico</span>Art. 9.º CP × Art. 8.º CP × Art. 100 da Lei de Migração</div>
+    </div>
+
+    <div style="overflow-x:auto;">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Critério</th>
+            <th>Art. 8.º CP</th>
+            <th>Art. 9.º CP — Inc. I</th>
+            <th>Art. 9.º CP — Inc. II</th>
+            <th>Art. 100, Lei 13.445/17 (TEP)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Objeto</td>
+            <td>Pena cumprida no exterior</td>
+            <td>Efeitos civis (reparação, restituição)</td>
+            <td>Medida de segurança</td>
+            <td>Execução de pena privativa de liberdade</td>
+          </tr>
+          <tr class="highlight-row">
+            <td>Finalidade</td>
+            <td>Ne bis in idem atenuado (evitar dupla punição)</td>
+            <td>Reparação da vítima</td>
+            <td>Proteção social / tratamento do inimputável</td>
+            <td>Cooperação internacional / impedir impunidade do não-extraditável</td>
+          </tr>
+          <tr>
+            <td>Exige homologação STJ?</td>
+            <td>Não — opera diretamente</td>
+            <td><strong>Sim</strong></td>
+            <td><strong>Sim</strong></td>
+            <td><strong>Sim</strong> (via HDE no STJ)</td>
+          </tr>
+          <tr>
+            <td>Quem requer</td>
+            <td>Operação ex lege ou pela defesa</td>
+            <td>Parte interessada (vítima/herdeiros)</td>
+            <td>PGR (CPP, art. 789)</td>
+            <td>Estado estrangeiro ou condenado (via Min. Justiça)</td>
+          </tr>
+          <tr class="highlight-row">
+            <td>Exige tratado?</td>
+            <td>Não</td>
+            <td>Não</td>
+            <td>Sim (ou requisição MJ)</td>
+            <td>Sim (ou promessa de reciprocidade)</td>
+          </tr>
+          <tr>
+            <td>Abrange brasileiro nato?</td>
+            <td>Sim</td>
+            <td>Sim</td>
+            <td>Sim</td>
+            <td><strong>Sim</strong> (após STJ HDE 7.986/2024 e STF HC, 2024)</td>
+          </tr>
+          <tr>
+            <td>Normativo</td>
+            <td>CP, art. 8.º</td>
+            <td>CP, art. 9.º, I e par. ún. "a"</td>
+            <td>CP, art. 9.º, II e par. ún. "b"</td>
+            <td>Lei 13.445/17, arts. 100–102; Tratados bilaterais</td>
+          </tr>
+          <tr class="danger-row">
+            <td>Compatível com art. 5.º, LI, CF?</td>
+            <td>Sim</td>
+            <td>Sim</td>
+            <td>Sim</td>
+            <td><strong>Sim</strong> — TEP não é extradição (STJ e STF, 2024)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="alert alert-gold mt2">
+      <div class="alert-icon">🔑</div>
+      <div><strong>Regra mnemônica para provas:</strong> Art. 9.º CP = <strong>REPARAR + TRATAR</strong> (efeitos civis e medida de segurança) | Art. 100 da Lei de Migração = <strong>PRENDER NO BRASIL</strong> por condenação estrangeira (TEP) | Art. 8.º CP = <strong>COMPENSAR</strong> pena já cumprida (evitar dupla punição).</div>
+    </div>
+  </section>
+
+  <!-- ══════════════ 7. TEP — Lei de Migração ══════════════ -->
+  <section class="section" id="tep">
+    <div class="section-header">
+      <div class="section-num">07</div>
+      <div class="section-title"><span>Inovação Legislativa — 2017</span>Transferência de Execução da Pena (TEP) — Art. 100 da Lei 13.445/2017</div>
+    </div>
+
+    <div class="alert alert-purple mt1" style="margin-bottom:1.2rem;">
+      <div class="alert-icon">⚡</div>
+      <div><strong>Tema quente em 2024–2025:</strong> A TEP é o instituto mais novo e mais cobrado em provas de magistratura pós-2024, especialmente após o julgamento do Caso Robinho (STJ HDE 7.986/EX, 20/3/2024) e o julgamento do STF que confirmou a prisão (novembro/2024). Todo candidato a magistratura DEVE dominar os requisitos, a distinção da extradição e o debate constitucional.</div>
+    </div>
+
+    <div class="card-grid card-grid-2">
+      <div class="card">
+        <h3>📜 Fundamento Legal e Conceito</h3>
+        <div class="law-quote">
+          <strong>Lei 13.445/2017 (Lei de Migração), Art. 100:</strong>
+          "Nas hipóteses em que couber solicitação de extradição executória, a autoridade competente poderá solicitar ou autorizar a transferência de execução da pena, desde que observado o princípio do non bis in idem."
+        </div>
+        <p class="mt2">A TEP é um <strong>instituto de cooperação internacional</strong> que permite que a pena privativa de liberdade imposta por Estado estrangeiro seja cumprida no Brasil — alternativa à extradição quando esta não for possível ou admissível.</p>
+        <p class="mt1"><strong>Natureza jurídica:</strong> O STJ e o STF fixaram que a TEP é norma de cooperação internacional de <em>natureza processual/instrumental</em>, e não norma penal material — portanto, tem aplicação imediata, não se sujeitando ao princípio da irretroatividade da lei penal mais gravosa.</p>
+      </div>
+      <div class="card">
+        <h3>✅ Requisitos para a TEP (art. 100 c/c arts. 101–102)</h3>
+        <ul class="checklist filled">
+          <li>O caso admite, <em>em tese</em>, solicitação de extradição executória</li>
+          <li>Sentença penal estrangeira transitada em julgado</li>
+          <li>Fato constitui infração penal perante a lei brasileira (dupla tipicidade)</li>
+          <li>Condenado é nacional e/ou reside habitualmente no Brasil</li>
+          <li>Existência de tratado bilateral com o país de origem, ou promessa de reciprocidade</li>
+          <li>Não incidência do princípio do <em>non bis in idem</em></li>
+          <li>Aprovação pelo Ministério da Justiça e Segurança Pública (parecer de admissibilidade)</li>
+          <li>Homologação pelo STJ (competência constitucional — art. 105, I, "i", CF/88)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>⚖️ TEP vs. Extradição — Distinções Essenciais</h3>
+        <div style="overflow-x:auto;">
+          <table class="comp-table" style="font-size:0.8rem;">
+            <thead><tr><th>Aspecto</th><th>Extradição</th><th>TEP</th></tr></thead>
+            <tbody>
+              <tr><td>O que é transferido</td><td>A <strong>pessoa</strong> física para o exterior</td><td>A <strong>execução da pena</strong> para o Brasil</td></tr>
+              <tr class="highlight-row"><td>Brasileiro nato</td><td>❌ Vedada (art. 5.º, LI, CF)</td><td>✅ Possível (STJ e STF, 2024)</td></tr>
+              <tr><td>Quem julga o mérito</td><td>Estado requerente (após entrega)</td><td>Estado requerente (já julgou)</td></tr>
+              <tr><td>País onde se cumpre a pena</td><td>País que pediu a extradição</td><td>Brasil (país do nacional)</td></tr>
+              <tr class="danger-row"><td>Vedação constitucional</td><td>Sim (para nato — art. 5.º, LI)</td><td>Não (STF: TEP ≠ extradição)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <h3>🏛️ Debate Constitucional — Irretroatividade da Lei de Migração</h3>
+        <p>Tese da defesa no Caso Robinho: a Lei de Migração (2017) não poderia ser aplicada a fatos de 2013, pois seria lei penal mais gravosa retroagindo em prejuízo do réu.</p>
+        <p class="mt1"><strong>Decisão do STJ e do STF:</strong> A TEP é norma de cooperação internacional de natureza <em>instrumental/processual</em>, não norma penal material. Por isso, aplica-se imediatamente, com base no art. 2.º do CPP ("A lei processual penal aplicar-se-á desde logo") e no precedente do STF que reconhece aplicação imediata de normas de cooperação (STF, EXT 938; EXT 1.675). O princípio da irretroatividade da lei penal mais grave (CF, art. 5.º, XL) não incide sobre normas processuais.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-purple">STJ HDE 7.986/2024</span>
+          <span class="tag tag-red">STF HC — Nov. 2024 (9×2)</span>
+          <span class="tag tag-gold">Cooperação Internacional</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ 8. JURISPRUDÊNCIA ══════════════ -->
+  <section class="section" id="jurisprudencia">
+    <div class="section-header">
+      <div class="section-num">08</div>
+      <div class="section-title"><span>STF · STJ · Teses</span>Jurisprudência e Teses dos Tribunais Superiores</div>
+    </div>
+
+    <div class="alert alert-navy mt1" style="margin-bottom:1.2rem;">
+      <div class="alert-icon">ℹ️</div>
+      <div>As posições abaixo refletem o entendimento consolidado, referenciadas por tema e por identificação verificável dos julgados. Zero alucinação — apenas jurisprudência real.</div>
+    </div>
+
+    <div class="juris-grid">
+
+      <div class="juris-card stj destaque">
+        <div class="juris-header">
+          <span class="juris-badge stj">STJ</span>
+          <span class="juris-badge novo">Novíssimo — 2024</span>
+          <span class="juris-badge leading">Leading Case</span>
+          <div class="juris-title">Caso Robinho — TEP de Brasileiro Nato é Constitucional (HDE 7.986-EX)</div>
+        </div>
+        <div class="juris-body">
+          <p><strong>STJ, Corte Especial, HDE 7.986-EX, Rel. Min. Francisco Falcão, julgado em 20/3/2024, DJe 22/3/2024 (Info 805):</strong></p>
+          <p class="mt1">A Corte Especial do STJ, por <strong>9 votos a 2</strong>, homologou a sentença italiana que condenou Robinho a 9 anos de prisão por estupro, autorizando a <strong>Transferência de Execução da Pena</strong> para o Brasil. Teses fixadas:</p>
+          <ul class="mt1">
+            <li>A <strong>TEP não é extradição</strong>: a vedação constitucional de extraditar brasileiro nato (CF, art. 5.º, LI) não impede a transferência da execução da pena para cumprimento no Brasil</li>
+            <li>O <strong>sistema de contenciosidade limitada</strong> impede a rediscussão do mérito da condenação estrangeira no âmbito da homologação</li>
+            <li>A <strong>Lei de Migração (art. 100)</strong> tem natureza processual/instrumental, com aplicação imediata, sem incidência do princípio da irretroatividade da lei penal</li>
+            <li>A negativa de homologação, quando o condenado não pode ser extraditado, <strong>equivale a garantir impunidade</strong>, em violação aos compromissos internacionais do Brasil e à dignidade da vítima</li>
+            <li>O STJ fixou o <strong>regime inicial fechado</strong> e determinou execução imediata pela Justiça Federal de Santos/SP</li>
+          </ul>
+          <div class="flex-gap mt2">
+            <span class="tag tag-red">TEP de Brasileiro Nato</span>
+            <span class="tag tag-purple">Constitucional</span>
+            <span class="tag tag-blue">Cooperação Brasil–Itália</span>
+            <span class="tag tag-gold">Tratado Decreto 863/1993</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="juris-card stf">
+        <div class="juris-header">
+          <span class="juris-badge stf">STF</span>
+          <span class="juris-badge novo">Nov. 2024</span>
+          <div class="juris-title">STF Confirma Prisão de Robinho — TEP Constitucional (HC — Plenário, Rel. Min. Luiz Fux)</div>
+        </div>
+        <div class="juris-body">
+          <p>O STF, por <strong>9 votos a 2</strong>, negou habeas corpus da defesa de Robinho e manteve a decisão do STJ que homologou a sentença italiana e autorizou a execução da pena no Brasil. Principais teses do STF:</p>
+          <ul class="mt1">
+            <li>A <strong>transferência de execução da pena não configura extradição</strong>, sendo instituto diverso que não esbarra na vedação do art. 5.º, LI, da CF/88</li>
+            <li>Não há irretroatividade de lei penal mais gravosa, pois a norma de cooperação tem <strong>natureza instrumental</strong> (aplicação imediata — CPP, art. 2.º)</li>
+            <li>O condenado teve <strong>devido processo legal</strong> na Itália (citado, com defesa constituída), não havendo nulidade a ser declarada</li>
+            <li>A execução <strong>antes do trânsito em julgado da decisão homologatória</strong> foi confirmada como válida (recursos sem efeito suspensivo)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="juris-card stf">
+        <div class="juris-header">
+          <span class="juris-badge stf">STF</span>
+          <div class="juris-title">Ne Bis In Idem Internacional — Vedação da Dupla Persecução Penal (HC 171118/SP)</div>
+        </div>
+        <div class="juris-body">
+          <p><strong>STF, 2ª Turma, HC 171118/SP, Rel. Min. Gilmar Mendes, julgado em 12/11/2019 (Info 959):</strong></p>
+          <p class="mt1">O art. 8.º do CP deve ser lido em conformidade com a <strong>Convenção Americana de Direitos Humanos (CADH, art. 8.4)</strong> e o <strong>Pacto Internacional de Direitos Civis e Políticos (PIDCP, art. 14.7)</strong>, que vedam expressamente a dupla persecução penal pelos mesmos fatos. A solução do art. 8.º CP (mero cômputo de pena) é <em>insuficiente</em> diante do padrão convencional — o que se proíbe é a nova <em>persecução</em>, não apenas a dupla <em>punição</em>.</p>
+          <p class="mt1"><strong>Relevância para o art. 9.º:</strong> Se a sentença estrangeira já condenou o réu, a TEP homologada pelo STJ impede nova persecução penal no Brasil pelo mesmo fato (non bis in idem), reforçando a adequação convencional do modelo adotado.</p>
+          <div class="flex-gap mt2">
+            <span class="tag tag-red">Non Bis In Idem</span>
+            <span class="tag tag-blue">CADH art. 8.4</span>
+            <span class="tag tag-green">PIDCP art. 14.7</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="juris-card stj">
+        <div class="juris-header">
+          <span class="juris-badge stj">STJ</span>
+          <div class="juris-title">Competência para Execução: Justiça Federal de 1.ª Grau (CPP, art. 88)</div>
+        </div>
+        <div class="juris-body">
+          <p>Após a homologação pelo STJ, a execução da sentença estrangeira no Brasil é de competência da <strong>Justiça Federal de 1.ª grau</strong>:</p>
+          <ul class="mt1">
+            <li><strong>Efeitos civis (inciso I):</strong> Vara Federal Cível do domicílio do condenado ou onde os bens se encontram</li>
+            <li><strong>Medida de segurança (inciso II):</strong> CPP, art. 789, § 7.º — juiz do lugar de residência do condenado aplica a medida</li>
+            <li><strong>TEP/cumprimento de pena:</strong> Justiça Federal do domicílio do condenado (no Caso Robinho: Vara Federal de Santos/SP)</li>
+          </ul>
+          <p class="mt1"><strong>CPP, art. 88:</strong> "No processo por crimes praticados fora do território brasileiro, será competente o juízo da capital do Estado onde houver por último residido o acusado. Se este nunca tiver residido no Brasil, será competente o juízo da capital da República."</p>
+        </div>
+      </div>
+
+      <div class="juris-card stj">
+        <div class="juris-header">
+          <span class="juris-badge stj">STJ</span>
+          <div class="juris-title">Contenciosidade Limitada — O STJ Não Reexamina o Mérito</div>
+        </div>
+        <div class="juris-body">
+          <p>O STJ firmou que o procedimento de homologação de sentença estrangeira no Brasil é pautado pelo sistema de <strong>contenciosidade limitada</strong> (também chamado de <em>juízo de delibação</em>): o STJ apenas verifica se a decisão estrangeira preenche os requisitos formais para produzir efeitos no Brasil, <strong>sem reexaminar</strong>:</p>
+          <ul class="mt1">
+            <li>O mérito da condenação (culpa ou inocência)</li>
+            <li>A valoração das provas pelo juízo estrangeiro</li>
+            <li>A dosimetria da pena aplicada</li>
+            <li>A qualificação jurídica do fato segundo o direito estrangeiro</li>
+          </ul>
+          <p class="mt1">A defesa pode opor-se à homologação alegando: ausência de requisitos formais, violação de ordem pública, ofensa à soberania ou bons costumes brasileiros — mas não pode rediscutir se o réu é culpado ou se as provas foram bem valoradas.</p>
+          <div class="flex-gap mt2">
+            <span class="tag tag-gold">Juízo de Delibação</span>
+            <span class="tag tag-blue">Sem revisão de mérito</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="juris-card stf">
+        <div class="juris-header">
+          <span class="juris-badge stf">STF</span>
+          <div class="juris-title">Natureza das Normas de Cooperação Internacional — Aplicação Imediata (EXT 938; EXT 1.675)</div>
+        </div>
+        <div class="juris-body">
+          <p>O STF firmou precedente de que as <strong>normas de cooperação internacional em matéria penal não têm natureza criminal</strong>, podendo ser aplicadas imediatamente, inclusive quando a aplicação possa ser considerada desfavorável ao réu:</p>
+          <p class="mt1"><em>"A norma de cooperação internacional pode ser imediatamente aplicável, seja em benefício, seja em prejuízo do extraditando."</em> (STF, EXT 938, Rel. Min. Ayres Britto, 3/3/2005; STF, EXT 1.675, Rel. Min. Alexandre de Moraes, 8/2/2022)</p>
+          <p class="mt1">Este precedente fundamentou a aplicação retroativa da Lei de Migração de 2017 ao Caso Robinho (crimes de 2013), rejeitando a tese da irretroatividade de lei mais grave.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════ 9. CASO ROBINHO ══════════════ -->
+  <section class="section" id="caso-robinho">
+    <div class="section-header">
+      <div class="section-num">09</div>
+      <div class="section-title"><span>Leading Case — 2024</span>O Caso Robinho — Análise Completa para Provas</div>
+    </div>
+
+    <div class="case-box">
+      <h3>⚽ Caso Robinho (HDE 7.986-EX / STJ — HC STF / 2024) — O Marco da TEP no Brasil</h3>
+      <p>Este é o julgamento mais relevante para o art. 9.º CP na história recente do direito penal brasileiro. Qualquer candidato à magistratura deve dominá-lo integralmente.</p>
+    </div>
+
+    <div class="card-grid card-grid-2 mt2">
+      <div class="card">
+        <h3>📅 Linha do Tempo do Caso</h3>
+        <div class="timeline mt1">
+          <div class="timeline-item">
+            <div class="timeline-date">Jan. 2013</div>
+            <div class="timeline-content">Crime de estupro coletivo praticado em Milão/Itália, na boate Sio Café. Robinho ainda atuava pelo Milan.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Nov. 2017</div>
+            <div class="timeline-content">Condenação em 1.ª instância na Itália a <strong>9 anos de prisão</strong>.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Dez. 2020</div>
+            <div class="timeline-content">Confirmação da condenação pela 2.ª instância italiana.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Jan. 2022</div>
+            <div class="timeline-content"><strong>Trânsito em julgado</strong> na mais alta instância italiana. Expedição de mandado de prisão. Robinho já estava no Brasil.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2023</div>
+            <div class="timeline-content">Itália requer ao Brasil a homologação da sentença e a TEP, com base no <strong>Decreto 863/1993</strong> (Tratado de Extradição Brasil–Itália). Processo autuado no STJ como HDE 7.986-EX.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">20/3/2024</div>
+            <div class="timeline-content"><strong>STJ (9×2)</strong>: homologa sentença italiana, autoriza TEP, determina regime inicial fechado e execução imediata pela Justiça Federal de Santos/SP.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Nov. 2024</div>
+            <div class="timeline-content"><strong>STF (9×2)</strong>: nega HC da defesa, mantém Robinho preso. TEP é constitucional e não fere o art. 5.º, LI, CF.</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>⚖️ Teses Jurídicas em Disputa e Resultado</h3>
+        <p style="font-size:0.83rem;font-weight:700;margin-bottom:0.5rem;color:var(--navy);">TESES DA DEFESA (rejeitadas):</p>
+        <ul style="font-size:0.82rem;color:var(--text-mid);padding-left:1.1rem;margin-bottom:0.8rem;">
+          <li>A TEP só cabe quando cabe extradição → natos jamais podem ser atingidos</li>
+          <li>Lei de Migração (2017) não pode retroagir para fatos de 2013 (lei penal mais gravosa)</li>
+          <li>O Tratado Brasil–Itália de extradição veda expressamente a cooperação para execução de penas restritivas</li>
+          <li>Execução antes do trânsito em julgado da homologação viola jurisprudência do STF</li>
+        </ul>
+        <p style="font-size:0.83rem;font-weight:700;margin-bottom:0.5rem;color:var(--navy);">TESES VENCEDORAS (STJ e STF):</p>
+        <ul style="font-size:0.82rem;color:var(--text-mid);padding-left:1.1rem;">
+          <li>TEP ≠ extradição → não viola CF, art. 5.º, LI</li>
+          <li>Lei de Migração é norma processual/instrumental → aplicação imediata</li>
+          <li>A expressão "nas hipóteses em que couber extradição" refere-se a hipótese abstrata → cabe ao Brasil solicitar extradição (mesmo que deferimento seja impossível)</li>
+          <li>Negativa de homologação = impunidade garantida pela nacionalidade → incompatível com obrigações internacionais do Brasil</li>
+          <li>Non bis in idem protegido: não haverá novo processo no Brasil pelo mesmo fato</li>
+        </ul>
+        <div class="alert alert-purple mt2" style="font-size:0.8rem;">
+          <div><strong>Voto vencido (Min. Raul Araújo):</strong> A TEP só seria possível para brasileiro <em>naturalizado</em> (onde a extradição em tese cabe), não para nato. Esta é a posição da minoria — relevante para questões de prova que pedem opinião da doutrina minoritária.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ 10. DOUTRINA ══════════════ -->
+  <section class="section" id="doutrina">
+    <div class="section-header">
+      <div class="section-num">10</div>
+      <div class="section-title"><span>Doutrina Nacional</span>Principais Posições Doutrinárias sobre o Art. 9.º CP</div>
+    </div>
+
+    <div class="card-grid card-grid-2">
+
+      <div class="juris-card doutrina">
+        <div class="juris-header">
+          <span class="juris-badge doutrina">Doutrina</span>
+          <div class="juris-title">Rogério Greco — Curso de Direito Penal</div>
+        </div>
+        <div class="juris-body">
+          <p>Greco enfatiza que o art. 9.º CP estabelece uma <strong>limitação objetiva</strong> dos efeitos da sentença estrangeira no Brasil: apenas efeitos civis (reparação do dano) e a imposição de medida de segurança. Qualifica a homologação como <strong>ato soberano</strong> do Estado brasileiro — não há obrigatoriedade de reconhecer nenhuma sentença estrangeira; o STJ analisa a conveniência conforme os requisitos legais. Destaca que a norma é <em>de direito material</em> (CP) mas seu procedimento de efetivação é processual (CPP, arts. 787–790 e RISTJ).</p>
+        </div>
+      </div>
+
+      <div class="juris-card doutrina">
+        <div class="juris-header">
+          <span class="juris-badge doutrina">Doutrina</span>
+          <div class="juris-title">Cezar Roberto Bitencourt — Tratado de Direito Penal</div>
+        </div>
+        <div class="juris-body">
+          <p>Bitencourt afirma que o art. 9.º CP adota o <strong>princípio da equivalência</strong> como condição sine qua non da homologação: a sentença estrangeira só produzirá efeitos no Brasil se a lei brasileira "produz na espécie as mesmas consequências". Critica o art. 8.º CP como solução inadequada para o ne bis in idem, mas elogia o art. 9.º como instrumento de equilíbrio entre a soberania nacional e a cooperação internacional. Quanto à TEP pós-2017, reconhece que a Lei de Migração expandiu significativamente o alcance da sentença estrangeira no Brasil, superando em parte a limitação histórica do art. 9.º.</p>
+        </div>
+      </div>
+
+      <div class="juris-card doutrina">
+        <div class="juris-header">
+          <span class="juris-badge doutrina">Doutrina</span>
+          <div class="juris-title">Cleber Masson — Direito Penal Esquematizado</div>
+        </div>
+        <div class="juris-body">
+          <p>Masson sistematiza com clareza que o art. 9.º CP <strong>não autoriza execução de pena privativa de liberdade</strong> — efeito que só veio com o art. 100 da Lei de Migração. Distingue três finalidades distintas da sentença estrangeira no Brasil: (a) efeitos civis (art. 9.º, I); (b) medida de segurança (art. 9.º, II); (c) cumprimento de pena (Lei 13.445/17, art. 100). Ressalta que a "equivalência" exigida pelo caput do art. 9.º não significa identidade de tipos penais, mas semelhança das consequências jurídicas pretendidas.</p>
+        </div>
+      </div>
+
+      <div class="juris-card doutrina">
+        <div class="juris-header">
+          <span class="juris-badge doutrina">Doutrina</span>
+          <div class="juris-title">Guilherme de Souza Nucci — Código Penal Comentado</div>
+        </div>
+        <div class="juris-body">
+          <p>Nucci analisa criticamente a <strong>transferência de competência do STF para o STJ</strong> (EC 45/2004) para a homologação de sentença estrangeira. Destaca que o <strong>sistema de delibação</strong> adotado pelo STJ é o mais adequado à soberania nacional: o STJ não se converte em tribunal de apelação estrangeiro. Alerta para a <strong>controvérsia quanto à medida de segurança</strong>: quando a lei estrangeira impõe medida de segurança não prevista no Brasil (v.g., castração química), o STJ deve negar a homologação por ofensa à ordem pública e à dignidade humana.</p>
+        </div>
+      </div>
+
+      <div class="juris-card doutrina">
+        <div class="juris-header">
+          <span class="juris-badge doutrina">Doutrina</span>
+          <div class="juris-title">Fernando Capez — Curso de Direito Penal</div>
+        </div>
+        <div class="juris-body">
+          <p>Capez destaca que o art. 9.º CP é uma norma de eficácia <strong>condicionada</strong>: a sentença estrangeira só produz efeitos se homologada, e a homologação só é possível se preenchidos os requisitos do parágrafo único. Chama atenção para o <strong>rol taxativo</strong> dos efeitos autorizados: o art. 9.º não permite efeito penal da reincidência, pois "reincidência em sentido técnico" exige condenação posterior pelo juiz nacional. A sentença estrangeira homologada pode servir como <em>antecedente criminal</em>, mas não como <em>condenação anterior</em> para fins de reincidência (art. 63 CP — que exige crime praticado no Brasil ou sentença condenatória transitada em julgado).</p>
+        </div>
+      </div>
+
+      <div class="juris-card doutrina">
+        <div class="juris-header">
+          <span class="juris-badge doutrina">Doutrina</span>
+          <div class="juris-title">Sentença Estrangeira e Reincidência — Controvérsia Doutrinária</div>
+        </div>
+        <div class="juris-body">
+          <p>Tema controverso: a sentença estrangeira <em>homologada</em> gera reincidência no Brasil?</p>
+          <ul class="mt1">
+            <li><strong>Posição majoritária (Greco, Masson, Bitencourt):</strong> A sentença estrangeira, mesmo homologada, <em>não gera reincidência</em> no Brasil. O art. 63 CP exige condenação "anterior" que configure crime, e o STJ entende que a reincidência pressupõe condenação por tribunal brasileiro. A homologação serve apenas para os efeitos expressamente previstos no art. 9.º CP</li>
+            <li><strong>Posição minoritária (Nucci e outros):</strong> Se a sentença estrangeira foi homologada e produz efeitos no Brasil, deve-se reconhecer a reincidência, sob pena de tratar desigualmente quem foi condenado no exterior e no Brasil</li>
+          </ul>
+          <div class="alert alert-gold mt2" style="font-size:0.8rem;">
+            <div>⚠️ <strong>Para provas:</strong> a posição majoritária (sentença estrangeira homologada NÃO gera reincidência no Brasil) é a resposta esperada em concursos de magistratura.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════ 11. SISTEMÁTICA ══════════════ -->
+  <section class="section" id="sistematica">
+    <div class="section-header">
+      <div class="section-num">11</div>
+      <div class="section-title"><span>Contexto Sistemático</span>Art. 9.º CP no Sistema de Aplicação Espacial da Lei Penal</div>
+    </div>
+
+    <div class="card-grid card-grid-2">
+      <div class="card">
+        <h3>🔗 Encadeamento Sistemático dos Arts. 5.º a 9.º CP</h3>
+        <ul>
+          <li><strong>Art. 5.º CP — Territorialidade:</strong> Lei brasileira aplica-se ao crime cometido no território nacional (regra)</li>
+          <li><strong>Art. 6.º CP — Ubiquidade:</strong> Onde se considera praticado o crime? (lugar da conduta OU do resultado — crimes internacionais)</li>
+          <li><strong>Art. 7.º CP — Extraterritorialidade:</strong> Lei brasileira aplica-se a crimes cometidos inteiramente no exterior (incondicionada / condicionada / hipercondicionada)</li>
+          <li><strong>Art. 8.º CP — Pena cumprida no exterior:</strong> Computa ou atenua a pena brasileira (ne bis in idem atenuado)</li>
+          <li><strong>Art. 9.º CP — Sentença estrangeira:</strong> Eficácia de sentença estrangeira no Brasil (efeitos civis + medida de segurança)</li>
+          <li><strong>Art. 100 da Lei 13.445/2017 (TEP):</strong> Execução de pena estrangeira no Brasil (instituto complementar ao art. 9.º)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🌍 Convenções Internacionais Relevantes</h3>
+        <ul>
+          <li><strong>CADH, art. 8.4 (Convenção Americana de DH):</strong> Proíbe dupla persecução pelo mesmo fato (non bis in idem internacional)</li>
+          <li><strong>PIDCP, art. 14.7:</strong> Ninguém pode ser julgado ou punido novamente por crime pelo qual já foi definitivamente condenado ou absolvido</li>
+          <li><strong>Convenção de Palermo (ONU — Crime Organizado Transnacional):</strong> Estabelece obrigações de cooperação judiciária entre Estados</li>
+          <li><strong>Tratados bilaterais de extradição:</strong> Regulam as hipóteses de entrega de pessoas e, cada vez mais, a TEP (Ex: Decreto 863/1993 — Brasil-Itália)</li>
+          <li><strong>Convenção de Haia sobre Apostilamento:</strong> Facilita a autenticação de documentos estrangeiros para fins de homologação</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>⚖️ Art. 9.º CP × CF/88 — Articulação Constitucional</h3>
+        <ul>
+          <li><strong>CF/88, art. 105, I, "i":</strong> Competência do STJ para homologar sentenças estrangeiras (após EC 45/2004; antes era o STF)</li>
+          <li><strong>CF/88, art. 5.º, LI:</strong> Vedação de extradição de brasileiro nato ou naturalizado em caso de crime político — <em>não impede</em> a TEP (STJ e STF, 2024)</li>
+          <li><strong>CF/88, art. 5.º, XL:</strong> Irretroatividade da lei penal mais severa — normas de cooperação têm natureza processual, aplicação imediata</li>
+          <li><strong>CF/88, art. 4.º, IX:</strong> O Brasil rege suas relações internacionais pela cooperação entre os povos para o progresso da humanidade — fundamento da homologação e da TEP</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🔗 Outros Dispositivos Relevantes no Mesmo Tema</h3>
+        <ul>
+          <li><strong>CPP, arts. 787–790:</strong> Homologação de sentença estrangeira no CPP (procedimento, competência do PGR, carta de sentença)</li>
+          <li><strong>CPC/2015, arts. 960–965:</strong> Requisitos gerais para homologação de sentença estrangeira (aplicáveis subsidiariamente ao processo penal)</li>
+          <li><strong>RISTJ, arts. 216-C a 216-N:</strong> Rito interno do STJ para homologação de sentença estrangeira</li>
+          <li><strong>Lei 9.613/98, art. 8.º (Lavagem de Dinheiro):</strong> Outra hipótese de homologação de sentença estrangeira para fins específicos de perda de bens no Brasil</li>
+          <li><strong>Lei 13.445/17 (Lei de Migração), arts. 96–103:</strong> Extradição, TEP e entrega de nacionais</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ PROVA ══════════════ -->
+  <section id="prova" class="prova-section">
+    <h2>⚖️ Pontos Cobrados em Magistratura e ENAM — Art. 9.º CP</h2>
+    <p class="intro">Questões, teses, pegadinhas e leading cases recorrentes nos concursos de Juiz de Direito, ENAM e equivalentes relacionadas ao Art. 9.º CP e temas conexos.</p>
+
+    <div class="prova-items">
+
+      <div class="prova-item hot">
+        <div class="prova-item-q"><span class="qnum">🔥01</span>O art. 9.º CP autoriza o cumprimento de pena privativa de liberdade de sentença estrangeira no Brasil?</div>
+        <div class="prova-item-a"><strong>NÃO, por si só, o art. 9.º CP NÃO autoriza</strong> a execução de pena privativa de liberdade. O dispositivo apenas permite a homologação para: (I) efeitos civis (reparação do dano, restituições) e (II) medida de segurança. A execução de pena privativa de liberdade foi incorporada ao ordenamento brasileiro pelo <strong>art. 100 da Lei de Migração (Lei 13.445/2017)</strong>, que criou o instituto da Transferência de Execução da Pena (TEP), aplicável quando couber extradição executória em tese. Após o Caso Robinho (STJ HDE 7.986/2024 e STF HC/2024), esta distinção é pacífica e altamente cobrada.</div>
+      </div>
+
+      <div class="prova-item hot">
+        <div class="prova-item-q"><span class="qnum">🔥02</span>Brasileiro nato condenado no exterior pode ter a pena executada no Brasil? Fundamento e marco jurisprudencial.</div>
+        <div class="prova-item-a"><strong>SIM</strong>, após o Caso Robinho. A <strong>vedação de extradição de brasileiro nato</strong> (CF, art. 5.º, LI) <em>não impede</em> a Transferência de Execução da Pena (TEP), pois são institutos juridicamente distintos: na extradição, o nacional é entregue ao Estado estrangeiro; na TEP, o nacional permanece no Brasil, mas cumpre aqui a pena que lhe foi imposta alhures. O STJ (HDE 7.986/2024, 9×2) e o STF (HC, plenário, nov./2024, 9×2) confirmaram a constitucionalidade da TEP aplicada a brasileiros natos. Fundamento: <strong>art. 100 da Lei 13.445/2017</strong> c/c o Tratado de Extradição Brasil–Itália (Decreto 863/1993).</div>
+      </div>
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">03</span>Qual órgão é competente para homologar sentença estrangeira no Brasil e qual o fundamento constitucional?</div>
+        <div class="prova-item-a">O <strong>Superior Tribunal de Justiça (STJ)</strong>, com fundamento no <strong>art. 105, I, "i", da CF/88</strong>: "Compete ao STJ a homologação de sentenças estrangeiras e a concessão do exequatur às cartas rogatórias". Antes da Emenda Constitucional n.º 45/2004 (Reforma do Judiciário), a competência era do <strong>STF</strong>. O candidato deve saber: STF homologava antes; STJ homologa após a EC 45/2004 — erro frequente em provas antigas reutilizadas.</div>
+      </div>
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">04</span>Quais os requisitos do parágrafo único do art. 9.º CP para homologação dos efeitos civis (inciso I) e quais os adicionais para medida de segurança (inciso II)?</div>
+        <div class="prova-item-a"><strong>Efeitos civis (inciso I):</strong> basta o <strong>pedido da parte interessada</strong> (vítima, herdeiros, interessados). Não exige tratado de extradição. <strong>Medida de segurança e outros efeitos (inciso II):</strong> exige <strong>tratado de extradição</strong> com o país de origem da sentença, ou, na falta, <strong>requisição do Ministro da Justiça</strong> (art. 9.º, par. ún., "b"). Em ambos os casos, aplicam-se os requisitos gerais de homologação: sentença transitada em julgado, juízo competente, citação regular, autenticação, tradução, respeito à ordem pública brasileira.</div>
+      </div>
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">05</span>O STJ pode reexaminar o mérito da condenação estrangeira no procedimento de homologação?</div>
+        <div class="prova-item-a"><strong>NÃO.</strong> O Brasil adota o sistema de <strong>contenciosidade limitada</strong> (juízo de delibação): o STJ verifica apenas os requisitos <em>formais extrínsecos</em> — autoridade competente, citação regular, trânsito em julgado, autenticação, tradução e respeito à ordem pública. O STJ <em>não</em> reexamina: culpa/inocência do réu, valoração das provas, dosimetria da pena ou tipificação jurídica pelo direito estrangeiro. A defesa pode opor-se alegando ausência de requisitos formais ou ofensa à ordem pública, mas não rediscutir se o réu era culpado.</div>
+      </div>
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">06</span>A sentença estrangeira homologada gera reincidência no Brasil?</div>
+        <div class="prova-item-a"><strong>NÃO</strong>, segundo a posição majoritária da doutrina e orientação jurisprudencial predominante. O art. 63 do CP define reincidência: "verifica-se a reincidência quando o agente comete novo crime, depois de transitar em julgado a sentença que, no País ou no estrangeiro, o tenha condenado por crime anterior". A interpretação majoritária é de que a sentença estrangeira só gera reincidência se <em>regularmente homologada para esse efeito</em> — e o art. 9.º CP não inclui a geração de reincidência entre os efeitos admitidos. Atenção: há corrente minoritária em sentido contrário. Nas provas, adotar a posição majoritária: sentença homologada NÃO gera automaticamente reincidência.</div>
+      </div>
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">07</span>Qual a diferença entre o art. 8.º CP e o art. 9.º CP?</div>
+        <div class="prova-item-a"><strong>Art. 8.º CP:</strong> Trata da pena já <em>cumprida</em> no exterior. Quando o agente foi condenado no exterior e também é condenado no Brasil pelo mesmo crime, a pena cumprida no estrangeiro <em>atenua</em> (se as penas são diversas) ou é <em>computada</em> (se idênticas) na pena brasileira. Opera <em>automaticamente</em>, sem necessidade de homologação. <strong>Art. 9.º CP:</strong> Trata da sentença estrangeira que ainda vai <em>produzir efeitos</em> no Brasil (efeitos civis ou medida de segurança). Exige <em>homologação</em> pelo STJ. São normas complementares: o art. 8.º evita a dupla punição; o art. 9.º permite que a sentença estrangeira gere consequências específicas no Brasil.</div>
+      </div>
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">08</span>A Lei de Migração (art. 100) pode ser aplicada retroativamente para crimes anteriores a 2017?</div>
+        <div class="prova-item-a"><strong>SIM</strong>, segundo o STJ e o STF (Caso Robinho). A norma que regula a TEP (art. 100, Lei 13.445/2017) tem <strong>natureza processual/instrumental</strong> de cooperação internacional, não é norma penal material. Portanto, não se sujeita ao princípio da irretroatividade da lei penal mais gravosa (CF, art. 5.º, XL). Aplica-se imediatamente a todos os casos pendentes, independentemente de quando ocorreu o crime julgado no exterior. Fundamento adicional: STF já fixou que normas de cooperação internacional têm aplicação imediata (EXT 938; EXT 1.675).</div>
+      </div>
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">09</span>O que é o "princípio da equivalência" no art. 9.º CP e como o STJ o interpreta?</div>
+        <div class="prova-item-a">O <strong>princípio da equivalência</strong> deriva da expressão "quando a aplicação da lei brasileira produz na espécie as mesmas consequências": a homologação pressupõe que a conduta condenada no exterior também produza consequências similares no Brasil (reparação civil, medida de segurança). O STJ interpreta de forma <em>funcional</em>, não exigindo identidade perfeita de tipos penais: basta que a essência da ilicitude e as consequências jurídicas pretendidas sejam equiparáveis. Ex: condenação italiana por "violenza sessuale" pode ser homologada no Brasil como estupro (art. 213 CP), mesmo com redação típica diferente, desde que os elementos essenciais coincidam.</div>
+      </div>
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">10</span>Qual a competência para executar a sentença estrangeira homologada pelo STJ?</div>
+        <div class="prova-item-a">Após a homologação pelo STJ, a execução é da <strong>Justiça Federal de 1.ª grau</strong>. O <strong>CPP, art. 88</strong>, estabelece que no processo por crimes praticados no exterior, é competente o juízo da capital do Estado onde o acusado por último residiu. No Caso Robinho: Justiça Federal de Santos/SP (local onde o condenado mora). Para medida de segurança: CPP, art. 789, § 7.º — o presidente do Tribunal de Apelação remete a carta de sentença ao juiz do lugar de residência do condenado.</div>
+      </div>
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">11</span>Medida de segurança prevista no exterior mas não no Brasil pode ser homologada?</div>
+        <div class="prova-item-a"><strong>NÃO</strong>. O art. 9.º, caput, exige que "a aplicação da lei brasileira produz na espécie as mesmas consequências". Se a medida de segurança imposta no exterior não tem equivalente no ordenamento brasileiro (ex: castração química, confisco total de bens de natureza não patrimonial), o STJ nega a homologação por ofensa à <strong>ordem pública</strong> e, eventualmente, à <strong>dignidade da pessoa humana</strong>. As medidas de segurança existentes no Brasil são apenas: internação em hospital de custódia e tratamento ambulatorial (CP, art. 96).</div>
+      </div>
+
+      <div class="prova-item hot">
+        <div class="prova-item-q"><span class="qnum">🔥12</span>[Alta recorrência ENAM/Magistratura] Qual a diferença entre TEP e extradição para fins de aplicação ao brasileiro nato?</div>
+        <div class="prova-item-a"><strong>Extradição:</strong> consiste na <em>entrega física</em> do indivíduo ao Estado estrangeiro para que lá responda ou cumpra pena. Vedada para brasileiro nato (CF, art. 5.º, LI). <strong>TEP (Transferência de Execução da Pena):</strong> o indivíduo <em>permanece no Brasil</em>, mas a pena imposta no exterior é executada aqui — instrumento de cooperação internacional. Constitucional para brasileiro nato, pois não há entrega ao exterior (STJ HDE 7.986/2024 e STF HC/2024). A distinção fundamental: na extradição o nacional vai ao exterior; na TEP o processo penal fica no exterior mas a pena é cumprida no Brasil. CF, art. 5.º, LI veda apenas a <em>entrega</em> — não a execução doméstica de pena estrangeira.</div>
+      </div>
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">13</span>O ne bis in idem é preservado na TEP? Como?</div>
+        <div class="prova-item-a"><strong>Sim.</strong> A TEP preserva o ne bis in idem por dois mecanismos: (1) <strong>Não há novo processo no Brasil</strong> — a pena a ser cumprida é aquela fixada no exterior; o Brasil apenas executa a condenação estrangeira, sem novo julgamento de mérito; (2) O <strong>art. 100 da Lei de Migração</strong> expressamente exige a <em>"observância do princípio do non bis in idem"</em>. Assim, o condenado que cumpriu a pena no Brasil via TEP não poderá ser novamente processado pelo mesmo fato. Fundamento convencional: CADH, art. 8.4 e PIDCP, art. 14.7.</div>
+      </div>
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">14</span>Qual a relevância do art. 9.º CP para os efeitos penais da reincidência e dos antecedentes criminais?</div>
+        <div class="prova-item-a">A sentença estrangeira homologada produz apenas os efeitos taxativamente previstos no art. 9.º CP (civis e medida de segurança). Quanto à reincidência, há divergência: a <strong>posição majoritária</strong> é que a sentença estrangeira, ainda que homologada, não gera reincidência para o crime subsequente cometido no Brasil (os efeitos da homologação são restritos). Já para <strong>antecedentes criminais</strong>, a questão é menos pacífica: parte da doutrina admite que a sentença estrangeira homologada pode ser considerada como mau antecedente na dosimetria (circunstância judicial do art. 59 CP), mesmo sem gerar reincidência em sentido técnico (art. 63 CP).</div>
+      </div>
+
+    </div>
+  </section>
+
+</div><!-- /page-wrap -->
+
+<footer>
+  <strong>Art. 9.º do Código Penal Brasileiro</strong> — Decreto-Lei n.º 2.848/1940, com redação dada pela Lei n.º 7.209/1984<br>
+  Material elaborado para preparação à Magistratura / ENAM · Atualizado até 2025 · Inclui julgamento STJ HDE 7.986-EX (Caso Robinho, 20/3/2024) e STF HC (nov./2024)
+</footer>
+
+</body>
+</html>

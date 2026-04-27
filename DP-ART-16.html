@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 16º CP — Arrependimento Posterior | Magistratura ENAM</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a;
+    --navy-mid: #1a2f45;
+    --navy-light: #243b55;
+    --gold: #c8960c;
+    --gold-light: #e8b84b;
+    --gold-pale: #fdf3d8;
+    --cream: #faf7f2;
+    --cream-mid: #f0ebe2;
+    --text-dark: #1a1208;
+    --text-mid: #3d3020;
+    --text-soft: #6b5c40;
+    --border: #d4c49a;
+    --border-light: #e8dcbf;
+    --red-accent: #8b1a1a;
+    --green-accent: #1a4a2e;
+    --blue-accent: #1a3a5c;
+    --purple-accent: #4a1a5c;
+    --shadow: 0 4px 24px rgba(13,27,42,0.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Source Serif 4', Georgia, serif; background: var(--cream); color: var(--text-dark); font-size: 15px; line-height: 1.75; }
+
+  /* NAV */
+  #top-nav {
+    position: sticky; top: 0; z-index: 999;
+    background: var(--navy); border-bottom: 3px solid var(--gold);
+    padding: 0 1.5rem; display: flex; align-items: center; gap: 0;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  #top-nav::-webkit-scrollbar { display: none; }
+  #top-nav .nav-brand {
+    font-family: 'Playfair Display', serif; color: var(--gold-light);
+    font-size: 0.9rem; font-weight: 700; white-space: nowrap;
+    padding: 0.85rem 1.2rem 0.85rem 0;
+    border-right: 1px solid rgba(200,150,12,0.3); margin-right: 0.5rem; letter-spacing: 0.5px;
+  }
+  #top-nav a {
+    color: rgba(255,255,255,0.75); text-decoration: none;
+    font-size: 0.72rem; font-family: 'Source Serif 4', serif;
+    font-weight: 600; letter-spacing: 0.6px; text-transform: uppercase;
+    padding: 0.85rem 0.8rem; white-space: nowrap;
+    transition: color .2s; border-bottom: 3px solid transparent; margin-bottom: -3px;
+  }
+  #top-nav a:hover { color: var(--gold-light); border-bottom-color: var(--gold); }
+
+  /* HERO */
+  #hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1e3d5c 100%);
+    color: white; padding: 3.5rem 2rem 3rem;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  #hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: repeating-linear-gradient(45deg,
+      rgba(200,150,12,0.03) 0px, rgba(200,150,12,0.03) 1px,
+      transparent 1px, transparent 40px);
+  }
+  #hero .badge {
+    display: inline-block; background: rgba(200,150,12,0.15);
+    border: 1px solid rgba(200,150,12,0.5); color: var(--gold-light);
+    font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase;
+    padding: 0.35rem 1rem; border-radius: 2px; margin-bottom: 1.2rem;
+    font-family: 'Source Serif 4', serif; font-weight: 600;
+  }
+  #hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 0.6rem; letter-spacing: -0.5px; }
+  #hero h1 span { color: var(--gold-light); }
+  #hero .subtitle { font-size: 1rem; color: rgba(255,255,255,0.65); font-style: italic; margin-bottom: 1.5rem; }
+  #hero .law-box {
+    display: inline-block; background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(200,150,12,0.4); border-left: 4px solid var(--gold);
+    color: rgba(255,255,255,0.9); font-family: 'Source Serif 4', serif;
+    font-size: 0.95rem; font-style: italic; padding: 1rem 1.5rem;
+    max-width: 820px; text-align: left; line-height: 1.8; border-radius: 0 4px 4px 0;
+  }
+  #hero .law-box strong { color: var(--gold-light); font-style: normal; display: block; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.4rem; }
+
+  /* LAYOUT */
+  .page-wrap { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+  /* SECTIONS */
+  .section { margin-top: 3.5rem; scroll-margin-top: 56px; }
+  .section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--border); }
+  .section-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--border); line-height: 1; min-width: 2.5rem; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; color: var(--navy); line-height: 1.2; }
+  .section-title span { display: block; font-size: 0.75rem; font-family: 'Source Serif 4', serif; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-style: normal; }
+
+  /* CARDS */
+  .card { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 1.4rem 1.6rem; box-shadow: var(--shadow); }
+  .card-grid { display: grid; gap: 1rem; }
+  .card-grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .card-grid-2 { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+  .card h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.6rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-light); }
+  .card p, .card li { font-size: 0.88rem; line-height: 1.7; color: var(--text-mid); }
+  .card ul { padding-left: 1.1rem; }
+  .card li { margin-bottom: 0.3rem; }
+
+  /* Type cards */
+  .type-card { border-top: 4px solid; }
+  .tc-green  { border-top-color: var(--green-accent);  } .tc-green  h3 { color: var(--green-accent);  }
+  .tc-red    { border-top-color: var(--red-accent);    } .tc-red    h3 { color: var(--red-accent);    }
+  .tc-blue   { border-top-color: var(--blue-accent);   } .tc-blue   h3 { color: var(--blue-accent);   }
+  .tc-gold   { border-top-color: var(--gold);           } .tc-gold   h3 { color: #7a5a00;              }
+  .tc-purple { border-top-color: var(--purple-accent);  } .tc-purple h3 { color: var(--purple-accent); }
+
+  /* FLOWCHART */
+  .flow-wrap { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 2rem 1.5rem; box-shadow: var(--shadow); overflow-x: auto; }
+  .flow-center { display: flex; flex-direction: column; align-items: center; gap: 0; }
+  .flow-node { border-radius: 4px; padding: 0.65rem 1.4rem; font-family: 'Source Serif 4', serif; font-size: 0.82rem; font-weight: 600; text-align: center; min-width: 220px; max-width: 540px; }
+  .flow-start   { background: var(--navy);          color: white;       border-radius: 50px; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; }
+  .flow-end-green  { background: var(--green-accent);  color: white;       border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-end-red    { background: var(--red-accent);    color: white;       border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-end-gold   { background: var(--gold);          color: var(--navy); border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-end-blue   { background: var(--blue-accent);   color: white;       border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-end-purple { background: var(--purple-accent); color: white;       border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-box-navy   { background: var(--navy-mid); color: white; border-left: 4px solid var(--gold); font-size: 0.8rem; }
+  .flow-box-green  { background: #edf7f0; border: 1px solid #7ec89a; border-left: 4px solid var(--green-accent); color: var(--text-dark); }
+  .flow-box-blue   { background: #edf2f8; border: 1px solid #8eb4d8; border-left: 4px solid var(--blue-accent);   color: var(--text-dark); }
+  .flow-box-red    { background: #fdf0f0; border: 1px solid #e09090; border-left: 4px solid var(--red-accent);    color: var(--text-dark); }
+  .flow-box-gold   { background: var(--gold-pale); border: 2px solid var(--gold); color: var(--text-dark); }
+  .flow-box-purple { background: #f3eef8; border: 1px solid #b89dd8; border-left: 4px solid var(--purple-accent); color: var(--text-dark); }
+  .flow-arrow { font-size: 1.3rem; color: var(--border); line-height: 1; margin: 0.15rem 0; }
+  .flow-row { display: flex; align-items: flex-start; gap: 1.5rem; width: 100%; justify-content: center; flex-wrap: wrap; }
+  .flow-branch { display: flex; flex-direction: column; align-items: center; gap: 0; flex: 1; min-width: 175px; }
+  .flow-label { font-size: 0.68rem; color: var(--text-soft); font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; background: var(--cream-mid); padding: 0.15rem 0.5rem; border-radius: 2px; margin: 0.15rem 0; }
+  .flow-connector-line { width: 1px; height: 28px; background: var(--border); }
+
+  /* TABLE */
+  .comp-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; background: white; box-shadow: var(--shadow); border-radius: 6px; overflow: hidden; }
+  .comp-table thead { background: var(--navy); color: white; }
+  .comp-table thead th { padding: 0.85rem 1rem; font-family: 'Source Serif 4', serif; font-weight: 600; letter-spacing: 0.5px; font-size: 0.8rem; text-align: left; }
+  .comp-table thead th:first-child { color: var(--gold-light); }
+  .comp-table tbody tr { border-bottom: 1px solid var(--border-light); }
+  .comp-table tbody tr:last-child { border-bottom: none; }
+  .comp-table tbody tr:nth-child(even) { background: var(--cream); }
+  .comp-table td { padding: 0.75rem 1rem; color: var(--text-mid); vertical-align: top; }
+  .comp-table td:first-child { font-weight: 600; color: var(--navy); font-size: 0.8rem; }
+  .comp-table .hl  td { background: var(--gold-pale) !important; }
+  .comp-table .hl2 td { background: #edf7f0 !important; }
+  .comp-table .hl3 td { background: #edf2f8 !important; }
+  .comp-table .hl4 td { background: #fdf0f0 !important; }
+  .comp-table .hl5 td { background: #f3eef8 !important; }
+
+  /* JURIS */
+  .juris-card { background: white; border: 1px solid var(--border-light); border-left: 5px solid; border-radius: 0 6px 6px 0; padding: 1.2rem 1.4rem; box-shadow: var(--shadow); }
+  .juris-card.stf { border-left-color: var(--red-accent); }
+  .juris-card.stj { border-left-color: var(--navy); }
+  .juris-card.doutrina { border-left-color: var(--gold); }
+  .juris-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
+  .juris-badge { font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 2px; font-family: 'Source Serif 4', serif; }
+  .juris-badge.stf      { background: var(--red-accent); color: white; }
+  .juris-badge.stj      { background: var(--navy);       color: white; }
+  .juris-badge.doutrina { background: var(--gold);        color: var(--navy); }
+  .juris-badge.sumula   { background: var(--green-accent);color: white; }
+  .juris-badge.tese     { background: var(--blue-accent); color: white; }
+  .juris-badge.purple   { background: var(--purple-accent);color:white; }
+  .juris-title { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700; color: var(--navy); }
+  .juris-body  { font-size: 0.84rem; color: var(--text-mid); line-height: 1.7; }
+  .juris-body em { font-style: italic; color: var(--navy); }
+  .juris-grid { display: grid; gap: 1rem; }
+
+  /* ALERTS */
+  .alert { padding: 0.9rem 1.2rem; border-radius: 4px; font-size: 0.84rem; line-height: 1.7; display: flex; gap: 0.7rem; align-items: flex-start; }
+  .alert-gold   { background: var(--gold-pale); border: 1px solid #d4aa3a; color: #5a4000; }
+  .alert-red    { background: #fdf0f0;           border: 1px solid #e09090; color: #5a0000; }
+  .alert-navy   { background: #f0f4f8;           border: 1px solid #abc;    color: var(--navy); }
+  .alert-green  { background: #edf7f0;           border: 1px solid #7ec89a; color: #1a4a2e; }
+  .alert-purple { background: #f3eef8;           border: 1px solid #b89dd8; color: var(--purple-accent); }
+  .alert-icon   { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.05rem; }
+  .alert strong { font-weight: 700; }
+
+  /* PROVA */
+  .prova-section { background: var(--navy); border-radius: 8px; padding: 2rem; color: white; margin-top: 3.5rem; scroll-margin-top: 56px; }
+  .prova-section h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--gold-light); margin-bottom: 0.5rem; }
+  .prova-section .intro { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; font-style: italic; }
+  .prova-items { display: grid; gap: 0.75rem; }
+  .prova-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(200,150,12,0.25); border-left: 4px solid var(--gold); border-radius: 0 4px 4px 0; padding: 1rem 1.2rem; }
+  .prova-item-q { font-size: 0.82rem; font-weight: 600; color: var(--gold-light); margin-bottom: 0.4rem; display: flex; align-items: flex-start; gap: 0.6rem; }
+  .prova-item-q .qnum { background: var(--gold); color: var(--navy); font-size: 0.65rem; font-weight: 700; padding: 0.1rem 0.45rem; border-radius: 2px; flex-shrink: 0; margin-top: 0.1rem; }
+  .prova-item-a { font-size: 0.82rem; color: rgba(255,255,255,0.8); line-height: 1.65; }
+  .prova-item-a strong { color: white; }
+
+  /* TAGS */
+  .tag { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; margin: 0.1rem; font-family: 'Source Serif 4', serif; }
+  .tag-blue   { background: #dce8f5; color: var(--blue-accent); }
+  .tag-green  { background: #dceee3; color: var(--green-accent); }
+  .tag-gold   { background: var(--gold-pale); color: #7a5a00; border: 1px solid #d4aa3a; }
+  .tag-red    { background: #fde8e8; color: var(--red-accent); }
+  .tag-purple { background: #ece5f5; color: var(--purple-accent); }
+
+  /* EXAMPLE BOX */
+  .example-box { background: var(--navy-mid); color: white; border-radius: 6px; padding: 1.2rem 1.4rem; font-size: 0.84rem; line-height: 1.75; }
+  .example-box .ex-title { color: var(--gold-light); font-weight: 700; font-family: 'Playfair Display', serif; font-size: 0.95rem; margin-bottom: 0.5rem; }
+  .example-box .ex-calc { background: rgba(200,150,12,0.12); border: 1px solid rgba(200,150,12,0.3); border-radius: 4px; padding: 0.7rem 1rem; margin-top: 0.7rem; font-family: 'JetBrains Mono', monospace; font-size: 0.79rem; color: var(--gold-light); white-space: pre-wrap; }
+
+  /* LAW QUOTE */
+  .law-quote { background: var(--cream-mid); border-left: 4px solid var(--navy); padding: 0.9rem 1.2rem; font-size: 0.88rem; font-style: italic; color: var(--text-mid); line-height: 1.7; border-radius: 0 4px 4px 0; }
+  .law-quote strong { font-style: normal; color: var(--navy); font-size: 0.75rem; letter-spacing: 0.5px; display: block; margin-bottom: 0.25rem; }
+
+  /* DIVIDER */
+  .divider { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); margin: 1.2rem 0; }
+
+  /* REQUISITO STEPS */
+  .req-steps { display: flex; flex-direction: column; gap: 0.6rem; }
+  .req-step { display: flex; gap: 1rem; align-items: flex-start; }
+  .req-num { background: var(--navy); color: var(--gold-light); font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1rem; min-width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem; }
+  .req-content { font-size: 0.86rem; color: var(--text-mid); line-height: 1.65; flex: 1; }
+  .req-content strong { color: var(--text-dark); }
+  .req-content .art16 { color: var(--green-accent); font-weight: 700; font-size: 0.78rem; background: #dceee3; padding: 0.1rem 0.4rem; border-radius: 2px; margin-left: 0.3rem; }
+
+  /* CRIME GRID */
+  .crime-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.8rem; }
+  .crime-item { background: white; border: 1px solid var(--border-light); border-radius: 4px; padding: 0.8rem 1rem; border-left: 3px solid; }
+  .crime-item h5 { font-family: 'Playfair Display', serif; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.3rem; }
+  .crime-item p { font-size: 0.79rem; color: var(--text-mid); line-height: 1.55; }
+  .ci-green  { border-left-color: var(--green-accent);  } .ci-green  h5 { color: var(--green-accent);  }
+  .ci-red    { border-left-color: var(--red-accent);    } .ci-red    h5 { color: var(--red-accent);    }
+  .ci-gold   { border-left-color: var(--gold);           } .ci-gold   h5 { color: #7a5a00;              }
+  .ci-blue   { border-left-color: var(--blue-accent);   } .ci-blue   h5 { color: var(--blue-accent);   }
+  .ci-purple { border-left-color: var(--purple-accent);  } .ci-purple h5 { color: var(--purple-accent); }
+
+  /* FOOTER */
+  footer { background: var(--navy); color: rgba(255,255,255,0.45); text-align: center; padding: 1.5rem; font-size: 0.75rem; border-top: 2px solid var(--gold); }
+  footer strong { color: var(--gold-light); }
+
+  /* PRINT */
+  @media print {
+    #top-nav { display: none; }
+    #hero { padding: 2rem 1rem; }
+    #hero::before { display: none; }
+    .page-wrap { max-width: 100%; padding: 0 0.5rem 2rem; }
+    .section { margin-top: 2rem; page-break-inside: avoid; }
+    .card, .juris-card, .flow-wrap, .example-box { box-shadow: none; border: 1px solid #ccc; }
+    .prova-section { background: #f0f4f8 !important; color: #000 !important; }
+    .prova-section h2 { color: #0d1b2a !important; }
+    .prova-item { background: white !important; border: 1px solid #ccc !important; }
+    .prova-item-q { color: #7a5a00 !important; }
+    .prova-item-a { color: #333 !important; }
+    .example-box { background: #f0f4f8 !important; color: #000 !important; }
+    footer { display: none; }
+    body { font-size: 11pt; }
+  }
+
+  /* MOBILE */
+  @media (max-width: 640px) {
+    #hero { padding: 2rem 1rem; }
+    #hero h1 { font-size: 1.6rem; }
+    .card-grid-3, .card-grid-2 { grid-template-columns: 1fr; }
+    .section-title { font-size: 1.1rem; }
+    .comp-table { font-size: 0.76rem; }
+    .comp-table td, .comp-table th { padding: 0.55rem 0.65rem; }
+    .flow-node { min-width: 150px; font-size: 0.74rem; }
+  }
+
+  /* MISC */
+  .mt1 { margin-top: 0.75rem; }
+  .mt2 { margin-top: 1rem; }
+  .mt3 { margin-top: 1.5rem; }
+  .flex-gap { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: flex-start; }
+  strong { font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="top-nav" aria-label="Atalhos do artigo">
+  <div class="nav-brand">Art. 16º CP</div>
+
+  <div class="nav-main-links">
+    <a href="#visao-geral">Visão Geral</a>
+    <a href="#conceito">Conceito</a>
+    <a href="#requisitos">4 Requisitos</a>
+    <a href="#sem-violencia">Sem Violência</a>
+    <a href="#reparacao">Reparação</a>
+    <a href="#momento">Momento Limite</a>
+    <a href="#voluntariedade">Voluntariedade</a>
+    <a href="#quantum">Quantum Redução</a>
+    <a href="#fluxograma">Fluxograma</a>
+    <a href="#admite">Admite / N. Admite</a>
+    <a href="#comparativo">Comparativo</a>
+    <a href="#exemplos">Exemplos</a>
+    <a href="#jurisprudencia">Juris. STF/STJ</a>
+    <a href="#doutrina">Doutrina</a>
+    <a href="#sistematica">Sistemática</a>
+    <a href="#prova" class="nav-prova">Prova</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="hero">
+  <div class="badge">Código Penal · Título II · Do Crime · Capítulo II</div>
+  <h1>Art. 16º — <span>Arrependimento Posterior</span></h1>
+  <p class="subtitle">Reparação do Dano · Restituição da Coisa · Causa de Diminuição · Dosimetria · Magistratura · ENAM</p>
+  <div class="law-box">
+    <strong>Art. 16.º do Decreto-Lei n.º 2.848/1940 (Código Penal)</strong>
+    "Nos crimes cometidos sem violência ou grave ameaça à pessoa, reparado o dano ou restituída a coisa, até o recebimento da denúncia ou da queixa, por ato voluntário do agente, a pena será reduzida de um a dois terços."
+  </div>
+</header>
+
+<div class="page-wrap">
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 1. VISÃO GERAL                            -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="visao-geral">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div class="section-title"><span>Introdução &amp; Sistemática</span>Visão Geral do Artigo</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📍 Finalidade e Posição Sistemática</h3>
+      <p>O art. 16 CP integra o <strong>Capítulo II do Título II da Parte Geral</strong> ("Das Causas que Excluem o Crime") e consagra o instituto do <strong>arrependimento posterior</strong> — uma causa geral de diminuição de pena aplicável na 3.ª fase da dosimetria trifásica. O dispositivo premia a conduta pós-delitiva do agente que, após a consumação do crime, voluntariamente repara o dano ou restitui a coisa à vítima, desde que o faça antes do recebimento da denúncia ou queixa.</p>
+      <p class="mt2">A ratio legis do art. 16 CP é dupla: (a) <strong>política criminal</strong> — incentivar o agente a minorar as consequências do crime, beneficiando a vítima; e (b) <strong>proporcionalidade</strong> — reconhecer que a conduta pós-delitiva positiva reduz o grau de culpabilidade e a necessidade da pena em sua integralidade. Ao contrário do arrependimento eficaz (art. 15, 2.ª parte), que opera ANTES do resultado, o arrependimento posterior opera DEPOIS da consumação do crime.</p>
+    </div>
+    <div class="card">
+      <h3>🏛️ Natureza Jurídica e Alcance</h3>
+      <ul>
+        <li><strong>Natureza jurídica:</strong> causa geral de diminuição de pena (3.ª fase da dosimetria — art. 68, §único, CP), de caráter obrigatório — presentes os requisitos, o juiz está obrigado a aplicar a redução</li>
+        <li><strong>Direito subjetivo do réu:</strong> preenchidos os 4 requisitos legais, o arrependimento posterior é direito subjetivo do réu — o juiz não pode negá-lo</li>
+        <li><strong>Opera após a consumação:</strong> diferencia-se do arrependimento eficaz (art. 15), que opera antes do resultado e exclui a imputação do resultado</li>
+        <li><strong>Não exclui o crime:</strong> o crime está consumado — o art. 16 apenas reduz a pena. Não confundir com causas excludentes de tipicidade, ilicitude ou culpabilidade</li>
+        <li><strong>Aplicável às leis especiais:</strong> via art. 12 CP, aplica-se subsidiariamente a crimes de leis especiais que não disponham de modo diverso</li>
+        <li><strong>Quantum:</strong> redução obrigatória de 1/3 a 2/3 — critério: extensão da reparação</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert alert-gold mt2">
+    <div class="alert-icon">⭐</div>
+    <div><strong>Fundamento Constitucional — Proporcionalidade e Política Criminal:</strong> O art. 16 CP tem fundamento nos princípios constitucionais da <strong>proporcionalidade</strong> (art. 5.º, XLVI, CF/88) e da <strong>individualização da pena</strong> (art. 5.º, XLVI, CF/88). O agente que repara o dano demonstra comportamento pós-delitivo positivo que reduz a necessidade da pena em toda a sua extensão. Além disso, o instituto tem fundamento na <strong>política criminal de proteção à vítima</strong> — promover a reparação é um objetivo do sistema penal, especialmente em crimes patrimoniais sem violência.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 2. CONCEITO E NATUREZA                    -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="conceito">
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div class="section-title"><span>Análise Dogmática</span>Conceito, Natureza e Distinções Fundamentais</div>
+  </div>
+
+  <div class="card-grid card-grid-3">
+    <div class="card type-card tc-green">
+      <h3>🟢 Arrependimento Posterior — Art. 16 CP</h3>
+      <p><strong>Fase:</strong> Após a consumação do crime.</p>
+      <p class="mt1"><strong>Consequência:</strong> Causa de <em>diminuição de pena</em> — o crime subsiste plenamente; apenas a pena é reduzida de 1/3 a 2/3.</p>
+      <p class="mt1"><strong>Condição:</strong> Reparação do dano ou restituição da coisa até o recebimento da denúncia/queixa, voluntariamente, em crime sem violência ou grave ameaça.</p>
+      <p class="mt1"><strong>Momento:</strong> Pós-consumação, pré-recebimento da denúncia.</p>
+    </div>
+    <div class="card type-card tc-blue">
+      <h3>🔵 Arrependimento Eficaz — Art. 15, 2.ª Parte</h3>
+      <p><strong>Fase:</strong> Após o início da execução, ANTES do resultado.</p>
+      <p class="mt1"><strong>Consequência:</strong> Responde apenas pelos atos praticados (ex.: lesão corporal — não pelo resultado morte que evitou). É a "ponte de prata" — não há tentativa do crime mais grave.</p>
+      <p class="mt1"><strong>Condição:</strong> O agente, por ato voluntário, impede que o resultado ocorra.</p>
+      <p class="mt1"><strong>Distinção crítica:</strong> No arrependimento eficaz, o crime não se consumou; no posterior, o crime já se consumou.</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>🟡 Atenuante — Art. 65, III, "b" CP</h3>
+      <p><strong>Fase:</strong> Após a consumação; <em>após</em> o recebimento da denúncia/queixa (mas antes da sentença).</p>
+      <p class="mt1"><strong>Consequência:</strong> Circunstância atenuante genérica (2.ª fase da dosimetria) — não tem quantum fixo de redução; apenas atenua a pena.</p>
+      <p class="mt1"><strong>Condição:</strong> Reparação do dano antes do julgamento, por espontaneidade ou em qualquer momento antes da sentença.</p>
+      <p class="mt1"><strong>Distinção:</strong> Art. 16 → até recebimento da denúncia → redução de 1/3 a 2/3. Art. 65, III, "b" → após recebimento, antes do julgamento → atenuante sem percentual fixo.</p>
+    </div>
+  </div>
+
+  <div class="alert alert-red mt2">
+    <div class="alert-icon">🔴</div>
+    <div><strong>Distinção Fundamental — Art. 16 × Art. 15 × Art. 65, III, "b" CP — O Mais Cobrado em Magistratura:</strong><br>
+    <strong>Art. 15, 2.ª parte (Arrependimento Eficaz):</strong> O agente IMPEDIU o resultado → responde pelos atos (ex.: lesão consumada) → sem tentativa do crime mais grave.<br>
+    <strong>Art. 16 (Arrependimento Posterior):</strong> Crime JÁ CONSUMADO → agente repara o dano ANTES do recebimento da denúncia → pena reduzida de 1/3 a 2/3.<br>
+    <strong>Art. 65, III, "b" (Atenuante):</strong> Crime consumado → reparação APÓS recebimento da denúncia, antes da sentença → atenuante sem percentual fixo.<br>
+    São institutos diferentes em fase, efeito e intensidade. A confusão entre eles é a pegadinha mais frequente em provas sobre estes artigos.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 3. OS 4 REQUISITOS DO ART. 16 CP          -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="requisitos">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div class="section-title"><span>Análise Literal — Alta Cobrança</span>Os 4 Requisitos Cumulativos do Art. 16 CP</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📋 Requisitos Cumulativos — Visão Geral</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.75rem;">Para a aplicação do art. 16 CP, todos os quatro requisitos devem estar presentes simultaneamente. A falta de qualquer um afasta o instituto. O candidato deve dominar cada requisito e suas controvérsias.</p>
+      <div class="req-steps">
+        <div class="req-step">
+          <div class="req-num">1</div>
+          <div class="req-content"><strong>Crime cometido sem violência ou grave ameaça à pessoa.</strong> <span class="art16">Requisito Objetivo</span> O crime deve ser daqueles que não envolvem violência física ou grave ameaça como meio de execução. Ver Seção 04.</div>
+        </div>
+        <div class="req-step">
+          <div class="req-num">2</div>
+          <div class="req-content"><strong>Reparação do dano ou restituição da coisa.</strong> <span class="art16">Requisito Objetivo</span> O agente deve efetivamente reparar o dano patrimonial ou restituir a coisa subtraída/obtida ilicitamente. Ver Seção 05.</div>
+        </div>
+        <div class="req-step">
+          <div class="req-num">3</div>
+          <div class="req-content"><strong>Até o recebimento da denúncia ou da queixa.</strong> <span class="art16">Requisito Temporal</span> A reparação deve ocorrer antes do recebimento formal da peça acusatória pelo juiz. O momento exato é o ato do juiz que recebe a denúncia/queixa. Ver Seção 06.</div>
+        </div>
+        <div class="req-step">
+          <div class="req-num">4</div>
+          <div class="req-content"><strong>Por ato voluntário do agente.</strong> <span class="art16">Requisito Subjetivo</span> A reparação deve ser voluntária — não precisa ser espontânea, mas o agente deve agir por livre vontade, sem coação irresistível. Ver Seção 07.</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>⚖️ Consequências da Ausência de Cada Requisito</h3>
+      <div style="display:flex;flex-direction:column;gap:0.5rem;margin-top:0.3rem;">
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">Sem Req. 1 (crime com violência):</strong> Art. 16 CP inaplicável. Ex.: roubo, extorsão, violência doméstica → não admitem arrependimento posterior.
+        </div>
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">Sem Req. 2 (sem reparação integral):</strong> Reparação parcial pode ensejar redução menor (1/3); reparação zero afasta o art. 16 completamente.
+        </div>
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">Sem Req. 3 (após recebimento da denúncia):</strong> Art. 16 CP não se aplica. Mas pode configurar atenuante do art. 65, III, "b" CP, se reparação antes da sentença.
+        </div>
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">Sem Req. 4 (coação/imposição):</strong> Reparação coagida (ex.: determinada pelo juiz como condição de liberdade provisória sem voluntariedade) não configura arrependimento posterior.
+        </div>
+      </div>
+      <div class="alert alert-gold mt2" style="font-size:0.81rem;">
+        <div>⭐ <strong>Direito subjetivo público:</strong> Preenchidos todos os 4 requisitos, o arrependimento posterior é <strong>direito subjetivo público do réu</strong> — o juiz é obrigado a reconhecê-lo e aplicar a redução. A omissão do juiz gera nulidade da dosimetria (STJ consolidado).</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 4. REQUISITO 1 — SEM VIOLÊNCIA           -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="sem-violencia">
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <div class="section-title"><span>Requisito 1 — Alta Cobrança</span>Crimes Cometidos "Sem Violência ou Grave Ameaça à Pessoa"</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔴 Conceito de Violência e Grave Ameaça para o Art. 16 CP</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.6rem;">O art. 16 CP exige que o crime tenha sido cometido <strong>sem violência ou grave ameaça à pessoa</strong>. Trata-se de critério objetivo que afasta crimes que ofendam a integridade física ou que constranjam mediante ameaça. Pontos essenciais:</p>
+      <div style="display:flex;flex-direction:column;gap:0.45rem;">
+        <div style="background:var(--cream-mid);border-left:3px solid var(--green-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--green-accent);">Violência contra a PESSOA (não à coisa):</strong> A violência que afasta o art. 16 CP é a <em>vis corporalis</em> dirigida contra a pessoa humana. A violência contra a coisa (ex.: arrombamento) não afasta o benefício.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--green-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--green-accent);">Grave ameaça:</strong> A ameaça deve ser grave — suficiente para incutir temor fundado na vítima. A mera ameaça leve ou bravata não afasta o benefício.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">Crimes que afastam o art. 16:</strong> Roubo (art. 157 CP — violência ou grave ameaça), extorsão (art. 158 CP), latrocínio (art. 157, §3.º CP), crimes contra a liberdade sexual, homicídio doloso, lesão corporal dolosa, violência doméstica (Lei 11.340/06).
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--blue-accent);">Crimes que admitem o art. 16:</strong> Furto (art. 155 CP), estelionato (art. 171 CP), apropriação indébita (art. 168 CP), peculato (art. 312 CP), crimes tributários, crimes contra o patrimônio sem violência.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📋 Casos Fronteiriços e Controvérsias — Alta Cobrança</h3>
+      <ul>
+        <li><strong>Roubo impróprio (art. 157, §1.º CP — violência posterior):</strong> A doutrina majoritária (Masson, Bitencourt, Greco) entende que o roubo, mesmo o impróprio, envolve violência → NÃO admite art. 16 CP. O STJ segue essa posição.</li>
+        <li><strong>Furto qualificado (art. 155, §4.º CP):</strong> A violência aqui é contra a coisa (arrombamento, escalada) — NÃO contra a pessoa → ADMITE art. 16 CP, pois a violência qualificadora é real, não pessoal.</li>
+        <li><strong>Estelionato (art. 171 CP):</strong> Crime sem violência ou grave ameaça → ADMITE art. 16 CP. Ponto consolidado no STJ.</li>
+        <li><strong>Extorsão mediante sequestro (art. 159 CP):</strong> Envolve privação de liberdade, que pode caracterizar violência → NÃO admite art. 16 CP.</li>
+        <li><strong>Crimes culposos com resultado morte ou lesão:</strong> O resultado é culposo, não há violência dolosa → ADMITE art. 16 CP segundo parte da doutrina (Masson). STJ tem posições divergentes.</li>
+        <li><strong>Violência contra a coisa:</strong> Dano ao patrimônio (art. 163 CP — crime de dano) → ADMITE art. 16 CP, pois não há violência contra a pessoa.</li>
+        <li><strong>Crimes ambientais sem violência pessoal:</strong> Via art. 12 CP, admitem art. 16 CP se não envolverem violência ou grave ameaça contra pessoas.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 5. REQUISITO 2 — REPARAÇÃO DO DANO        -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="reparacao">
+  <div class="section-header">
+    <div class="section-num">05</div>
+    <div class="section-title"><span>Requisito 2 — Análise Profunda</span>Reparação do Dano ou Restituição da Coisa</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🟢 Conceito de Reparação e Restituição</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.6rem;">O art. 16 CP refere-se a duas modalidades de conduta pós-delitiva:</p>
+      <div style="display:flex;flex-direction:column;gap:0.45rem;">
+        <div style="background:var(--cream-mid);border-left:3px solid var(--green-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--green-accent);">Reparação do dano:</strong> Ressarcimento pecuniário do prejuízo causado à vítima. O agente paga o valor equivalente ao dano sofrido. Aplica-se especialmente a crimes de estelionato, peculato, appropriação indébita e outros crimes que geram dano patrimonial mensurável.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--blue-accent);">Restituição da coisa:</strong> Devolução do bem subtraído ou obtido ilicitamente. Aplica-se especialmente ao furto — o agente devolve o objeto furtado à vítima. Se a coisa estiver deteriorada, complementa-se com ressarcimento da desvalorização.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--gold);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:#7a5a00;">Reparação por terceiro:</strong> A reparação pode ser feita por terceiro (familiar, advogado, fiador), desde que em nome do agente e com o consentimento/conhecimento deste. O STJ admite reparação por terceiro se o agente dela tem ciência e concordância.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📋 Reparação Parcial × Reparação Integral</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.6rem;">O debate mais relevante sobre o requisito da reparação é se a <strong>reparação parcial</strong> do dano é suficiente para o benefício do art. 16 CP:</p>
+      <div style="display:flex;flex-direction:column;gap:0.5rem;">
+        <div style="background:var(--gold-pale);border:1px solid var(--gold);border-radius:6px;padding:0.8rem 1rem;font-size:0.82rem;">
+          <strong style="color:#7a5a00;">Posição A — STJ Majoritário:</strong> A reparação parcial é suficiente para o benefício do art. 16 CP — o quantum de reparação influencia apenas a <em>fração de redução</em> (menor reparação → menor redução, próxima de 1/3; reparação integral → maior redução, próxima de 2/3). O STJ reconhece o art. 16 mesmo com reparação parcial.
+        </div>
+        <div style="background:#fde8e8;border:1px solid #e09090;border-radius:6px;padding:0.8rem 1rem;font-size:0.82rem;">
+          <strong style="color:var(--red-accent);">Posição B — Doutrina Minoritária (Nucci):</strong> A reparação deve ser integral para que o art. 16 CP seja aplicado. A reparação parcial configura, no máximo, a atenuante do art. 65, III, "b" CP.
+        </div>
+      </div>
+      <div class="alert alert-gold mt2" style="font-size:0.81rem;">
+        <div>⭐ <strong>Para o concurso:</strong> Adote a posição majoritária do STJ — reparação parcial admite o art. 16 CP, com redução menor (próxima de 1/3). A fração de redução é proporcional à extensão da reparação.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt2">
+    <h3>⚡ Questões Controvertidas sobre a Reparação</h3>
+    <div class="card-grid card-grid-3 mt1">
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Cheque devolvido (estelionato):</strong> No estelionato mediante cheque sem fundos (art. 171, §2.º, VI, CP), o STJ reconhece o art. 16 CP quando o agente paga o valor do cheque antes do recebimento da denúncia. Não confundir com a extinção da punibilidade pelo pagamento antes do inquérito em crimes tributários.</p>
+      </div>
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Crimes tributários e extinção da punibilidade:</strong> Nos crimes tributários (sonegação fiscal, etc.), o pagamento integral do tributo + multa pode gerar extinção da punibilidade (art. 69, Lei 11.941/09 e art. 83, §4.º, Lei 9.430/96), que é benefício maior que o art. 16 CP. O art. 16 CP só se aplica a crimes tributários quando não houver a extinção da punibilidade pelo pagamento.</p>
+      </div>
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Peculato (art. 312 CP):</strong> Crime funcional sem violência → ADMITE art. 16 CP. O servidor que desvia dinheiro público e o devolve antes do recebimento da denúncia faz jus à redução de 1/3 a 2/3. STJ admite. A devolução parcial do valor desviado pode admitir a menor redução (1/3).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 6. REQUISITO 3 — MOMENTO LIMITE           -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="momento">
+  <div class="section-header">
+    <div class="section-num">06</div>
+    <div class="section-title"><span>Requisito 3 — Critério Temporal</span>"Até o Recebimento da Denúncia ou da Queixa"</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>⏱️ O Momento Exato do Limite Temporal</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.6rem;">O art. 16 CP estabelece que a reparação deve ocorrer <strong>"até o recebimento da denúncia ou da queixa"</strong>. É o ato processual mais relevante para a aplicação do instituto. Análise precisa:</p>
+      <div style="display:flex;flex-direction:column;gap:0.45rem;">
+        <div style="background:var(--cream-mid);border-left:3px solid var(--green-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--green-accent);">ATÉ o recebimento (inclusive):</strong> A reparação antes ou no mesmo dia do recebimento da denúncia/queixa, mas antes do ato formal de recebimento, configura o art. 16 CP.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">APÓS o recebimento:</strong> A reparação após o recebimento da denúncia/queixa NÃO configura o art. 16 CP. Pode configurar a atenuante do art. 65, III, "b" CP (se antes da sentença).
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--blue-accent);">Recebimento × Oferecimento:</strong> O limite é o <em>recebimento</em> (ato do juiz) — não o <em>oferecimento</em> (ato do MP ou do ofendido). A reparação feita entre o oferecimento e o recebimento da denúncia ainda configura o art. 16 CP.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--gold);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:#7a5a00;">Ação penal privada:</strong> Para os crimes de ação penal privada, o limite é o recebimento da queixa-crime (não da denúncia). O mesmo raciocínio aplica-se.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📋 O Marco Temporal e Seus Impactos Práticos</h3>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.82rem;">
+          <thead style="background:var(--navy);color:white;">
+            <tr>
+              <th style="padding:0.5rem 0.7rem;text-align:left;">Momento da Reparação</th>
+              <th style="padding:0.5rem 0.7rem;text-align:left;">Instituto Aplicável</th>
+              <th style="padding:0.5rem 0.7rem;text-align:left;">Benefício</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#dceee3;"><td style="padding:0.5rem 0.7rem;font-weight:700;color:var(--green-accent);">Durante a execução (antes do resultado)</td><td style="padding:0.5rem 0.7rem;">Art. 15, 2.ª parte CP (Arrep. Eficaz)</td><td style="padding:0.5rem 0.7rem;font-weight:700;color:var(--green-accent);">Responde só pelos atos praticados</td></tr>
+            <tr><td style="padding:0.5rem 0.7rem;font-weight:700;">Após o resultado, antes do inquérito</td><td style="padding:0.5rem 0.7rem;">Art. 16 CP (Arrep. Posterior)</td><td style="padding:0.5rem 0.7rem;font-weight:700;color:var(--green-accent);">Redução de 1/3 a 2/3</td></tr>
+            <tr style="background:var(--cream);"><td style="padding:0.5rem 0.7rem;font-weight:700;">Após inquérito, antes do recebimento da denúncia</td><td style="padding:0.5rem 0.7rem;">Art. 16 CP (Arrep. Posterior)</td><td style="padding:0.5rem 0.7rem;font-weight:700;color:var(--green-accent);">Redução de 1/3 a 2/3</td></tr>
+            <tr style="background:#fde8e8;"><td style="padding:0.5rem 0.7rem;font-weight:700;color:var(--red-accent);">Após recebimento da denúncia, antes da sentença</td><td style="padding:0.5rem 0.7rem;">Art. 65, III, "b" CP (Atenuante)</td><td style="padding:0.5rem 0.7rem;font-weight:700;color:#7a5a00;">Atenuante (sem % fixo)</td></tr>
+            <tr style="background:#fde8e8;"><td style="padding:0.5rem 0.7rem;font-weight:700;color:var(--red-accent);">Após a sentença</td><td style="padding:0.5rem 0.7rem;">Sem benefício penal específico</td><td style="padding:0.5rem 0.7rem;font-weight:700;color:var(--red-accent);">Apenas efeitos civis</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="alert alert-navy mt2" style="font-size:0.8rem;">
+        <div>📌 <strong>Ação penal condicionada à representação:</strong> Se a vítima retira a representação antes do recebimento da denúncia, pode haver decadência da representação, extinção da punibilidade — que é benefício ainda maior que o art. 16 CP. No caso de delitos sujeitos à composição civil extintiva da punibilidade (Lei 9.099/95, art. 74), a reparação antes da proposta de composição civil pode gerar extinção da punibilidade.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 7. REQUISITO 4 — VOLUNTARIEDADE          -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="voluntariedade">
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <div class="section-title"><span>Requisito 4 — Elemento Subjetivo</span>"Por Ato Voluntário do Agente"</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🟢 Voluntariedade × Espontaneidade</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.6rem;">O art. 16 CP exige que a reparação seja <strong>voluntária</strong> — mas a lei não exige que seja <strong>espontânea</strong>. Esta distinção é essencial e frequentemente cobrada em provas:</p>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.83rem;line-height:1.85;">
+        <p><strong style="color:var(--gold-light);">Voluntário:</strong> O agente agiu por livre vontade, sem coação irresistível. Pode ter sido induzido por terceiro (advogado, familiar), por acordo em juízo, por conselho do MP — o que importa é que a escolha final foi do agente.</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.6rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Espontâneo:</strong> O agente age por iniciativa própria, sem qualquer indução externa. A espontaneidade é um plus — não exigida pelo art. 16 CP.</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.6rem 0;"></div>
+        <p style="color:var(--gold-light);font-style:italic;">Conclusão: toda espontânea é voluntária; nem toda voluntária é espontânea.</p>
+      </div>
+      <div class="alert alert-gold mt2" style="font-size:0.81rem;">
+        <div>⭐ <strong>Exemplos de reparação voluntária (não espontânea) que admitem art. 16 CP:</strong> Agente que paga o dano após orientação do advogado; agente que devolve a coisa após acordo com o MP no pré-inquérito; agente que paga após conciliação extrajudicial sugerida pela vítima.</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📋 Situações que Afastam a Voluntariedade</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">Hipóteses em que a reparação NÃO é considerada voluntária para fins do art. 16 CP:</p>
+      <ul>
+        <li><strong>Coação irresistível (vis compulsiva):</strong> Agente forçado a reparar sob ameaça de violência grave → sem voluntariedade → sem art. 16 CP</li>
+        <li><strong>Ordem judicial imperativa sem alternativa:</strong> Juiz que determina coercitivamente a reparação como condição para liberação cautelar, sem que o agente concordasse voluntariamente → debate doutrinário. STJ: se havia escolha real, ainda que constrangido pela situação processual, é voluntária.</li>
+        <li><strong>Recuperação da coisa pela polícia:</strong> A coisa foi apreendida pela autoridade policial sem qualquer ato do agente → NÃO é reparação voluntária → sem art. 16 CP</li>
+        <li><strong>Fraude na reparação:</strong> Agente que "repara" com cheque sem fundo ou por meio fraudulento → sem reparação efetiva → sem art. 16 CP</li>
+      </ul>
+      <div class="alert alert-navy mt2" style="font-size:0.8rem;">
+        <div>📌 <strong>STJ — Reparação pelo terceiro:</strong> O STJ admite que a reparação feita por terceiro (cônjuge, pai, advogado) em nome do agente e com o consentimento/conhecimento deste configure o requisito da voluntariedade do art. 16 CP. O que importa é que o agente consinta com a reparação feita em seu nome.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 8. QUANTUM DA REDUÇÃO                     -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="quantum">
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <div class="section-title"><span>Dosimetria — Alta Cobrança</span>Quantum da Redução: 1/3 a 2/3 — Critérios</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📐 Critério para a Fixação do Quantum de Redução</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.6rem;">O art. 16 CP não estabelece o critério para a fixação da fração de redução entre os extremos (1/3 e 2/3). A doutrina e o STJ consolidaram que o critério é a <strong>extensão da reparação</strong>:</p>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.83rem;line-height:1.8;">
+        <p><strong style="color:var(--gold-light);">Regra Principal — STJ Consolidado:</strong></p>
+        <p style="margin-top:0.4rem;">Quanto maior e mais integral a reparação → <strong>maior a redução</strong> (próximo de 2/3)</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.6rem 0;"></div>
+        <p>Quanto menor e mais parcial a reparação → <strong>menor a redução</strong> (próximo de 1/3)</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.6rem 0;"></div>
+        <p style="color:var(--gold-light);font-style:italic;">Reparação integral → máxima redução (2/3)<br>Reparação parcial → redução proporcional ao que foi reparado</p>
+      </div>
+      <div class="alert alert-gold mt2" style="font-size:0.81rem;">
+        <div>⭐ <strong>Para o concurso:</strong> O critério do art. 16 CP é a <em>extensão da reparação</em>; o critério do art. 14, §único (tentativa) é o <em>iter criminis percorrido</em>. São critérios distintos para causas de diminuição distintas.</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>⚖️ Arrependimento Posterior na Dosimetria Trifásica</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.6rem;">O arrependimento posterior é <strong>causa de diminuição de pena (3.ª fase)</strong> — art. 68, §único, CP. Incide sobre a pena intermediária (após agravantes e atenuantes), reduzindo-a de 1/3 a 2/3.</p>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;margin-top:0.4rem;">
+        <div style="background:var(--cream-mid);border-left:3px solid var(--navy);padding:0.45rem 0.7rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong>1.ª Fase (pena-base):</strong> Circunstâncias judiciais do art. 59 CP → pena-base fixada
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--navy);padding:0.45rem 0.7rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong>2.ª Fase (pena intermediária):</strong> Agravantes (arts. 61–62 CP) e atenuantes (arts. 65–66 CP) → se houver reparação após recebimento da denúncia → atenuante do art. 65, III, "b"
+        </div>
+        <div style="background:#dceee3;border-left:3px solid var(--green-accent);padding:0.45rem 0.7rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--green-accent);">3.ª Fase:</strong> Causas de aumento e diminuição → aqui incide o art. 16 CP → redução de 1/3 a 2/3 sobre a pena intermediária
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--gold);padding:0.45rem 0.7rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong>Cumulação:</strong> O art. 16 CP pode cumular-se com outras causas de diminuição da 3.ª fase (ex.: tentativa — art. 14, §único + arrependimento posterior — art. 16) → ambas incidem na 3.ª fase
+        </div>
+      </div>
+      <div class="alert alert-red mt2" style="font-size:0.8rem;">
+        <div>🔴 <strong>Omissão do juiz é nulidade:</strong> Se presentes todos os requisitos do art. 16 CP e o juiz não aplica a redução, a sentença é nula na parte da dosimetria por violação ao direito subjetivo do réu. O STJ tem anulado dosimetrias que ignoram o art. 16 CP quando preenchidos os requisitos.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 9. FLUXOGRAMA                             -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="fluxograma">
+  <div class="section-header">
+    <div class="section-num">09</div>
+    <div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma: Verificação e Aplicação do Art. 16 CP</div>
+  </div>
+
+  <div class="flow-wrap">
+    <div class="flow-center">
+
+      <div class="flow-node flow-start">CRIME CONSUMADO — ANALISAR CABIMENTO DO ARREPENDIMENTO POSTERIOR</div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 1 — O crime foi cometido SEM violência ou grave ameaça à PESSOA?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Verificar: a execução do crime envolveu violência física (vis corporalis) ou ameaça grave dirigida contra a pessoa humana?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">SIM — há violência ou grave ameaça</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:190px;">
+            Art. 16 CP INAPLICÁVEL<br>
+            <small>Ex.: Roubo, extorsão, lesão corporal dolosa, estupro, violência doméstica</small>
+          </div>
+          <div class="flow-connector-line" style="height:20px;"></div>
+          <div class="flow-end-red" style="font-size:0.72rem;">Sem Arrependimento Posterior</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:120px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — sem violência/grave ameaça pessoal</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;min-width:190px;">
+            Req. 1 preenchido<br>
+            <small>Ex.: Furto, estelionato, peculato, crimes tributários</small><br>
+            Prosseguir para Passo 2
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 2 — Houve reparação do dano ou restituição da coisa?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Verificar se o agente (ou terceiro em seu nome/com sua concordância) efetivamente reparou o dano patrimonial ou restituiu o bem.</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">NÃO houve qualquer reparação</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:190px;">
+            Art. 16 CP INAPLICÁVEL<br>
+            <small>Sem reparação = sem o benefício</small>
+          </div>
+          <div class="flow-connector-line" style="height:20px;"></div>
+          <div class="flow-end-red" style="font-size:0.72rem;">Sem Arrependimento Posterior</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:100px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">SIM — Reparação (total ou parcial)</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;min-width:190px;">
+            Req. 2 preenchido<br>
+            <small>Reparação integral → redução maior<br>Reparação parcial → redução menor</small><br>
+            Prosseguir para Passo 3
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 3 — A reparação ocorreu ATÉ o recebimento da denúncia/queixa?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">O momento limite é o ato do juiz que recebe formalmente a denúncia ou queixa-crime. A reparação feita entre o oferecimento e o recebimento ainda configura o art. 16 CP.</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">APÓS o recebimento da denúncia/queixa</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;min-width:190px;">
+            Art. 16 CP INAPLICÁVEL<br>
+            Mas pode ser atenuante<br>
+            <small>Art. 65, III, "b" CP — se antes da sentença</small>
+          </div>
+          <div class="flow-connector-line" style="height:20px;"></div>
+          <div class="flow-end-gold" style="font-size:0.72rem;">Atenuante — Art. 65, III, "b" CP</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">ANTES do recebimento</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;min-width:190px;">
+            Req. 3 preenchido<br>
+            Marco temporal respeitado<br>
+            Prosseguir para Passo 4
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 4 — A reparação foi voluntária?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">O agente agiu por livre vontade? (Voluntariedade ≠ Espontaneidade — não precisa ser iniciativa própria, basta não ser coagido irresistivelmente)</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — coação irresistível / recuperação forçada</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:190px;">
+            Art. 16 CP INAPLICÁVEL<br>
+            <small>Ex.: Coisa recuperada pela polícia; pagamento coercitivo sem voluntariedade real</small>
+          </div>
+          <div class="flow-connector-line" style="height:20px;"></div>
+          <div class="flow-end-red" style="font-size:0.72rem;">Sem Voluntariedade — Sem Benefício</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">SIM — ato voluntário</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;min-width:190px;">
+            Req. 4 preenchido<br>
+            Todos os 4 requisitos satisfeitos<br>
+            Prosseguir para Passo 5
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 5 — Fixar a Fração de Redução (1/3 a 2/3)</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Critério: extensão da reparação. Maior reparação → maior redução (2/3). Menor reparação → menor redução (1/3). Reparação integral → redução de 2/3.</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">Reparação integral</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.74rem;text-align:center;min-width:175px;">
+            Redução máxima<br>
+            <strong>2/3 da pena intermediária</strong><br>
+            <small>Maior benefício processual</small>
+          </div>
+        </div>
+        <div class="flow-branch">
+          <div class="flow-label">Reparação parcial</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.74rem;text-align:center;min-width:175px;">
+            Redução proporcional<br>
+            <strong>Entre 1/3 e 2/3</strong><br>
+            <small>Quanto maior a proporção → mais próximo de 2/3</small>
+          </div>
+        </div>
+        <div class="flow-branch">
+          <div class="flow-label">Reparação mínima</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.74rem;text-align:center;min-width:175px;">
+            Redução mínima<br>
+            <strong>1/3 da pena intermediária</strong><br>
+            <small>Pequena parte do dano reparada</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-end-green" style="max-width:500px;">
+        Art. 16 CP aplicado · Pena reduzida de 1/3 a 2/3 · Direito subjetivo do réu assegurado · 3.ª Fase da Dosimetria
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 10. CRIMES QUE ADMITEM / NÃO ADMITEM      -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="admite">
+  <div class="section-header">
+    <div class="section-num">10</div>
+    <div class="section-title"><span>Compatibilidade com Tipos Penais — Alta Cobrança</span>Crimes que Admitem e Não Admitem o Art. 16 CP</div>
+  </div>
+
+  <div class="alert alert-gold" style="margin-bottom:1rem;">
+    <div class="alert-icon">⭐</div>
+    <div><strong>Ponto Altamente Cobrado em Magistratura:</strong> Identificar se determinado crime admite o arrependimento posterior é frequentemente exigido em provas. O critério central é a ausência de violência ou grave ameaça à PESSOA — violência contra a coisa não afasta o benefício. A compatibilidade com o bem jurídico protegido também é relevante (crimes contra bens jurídicos intransmissíveis como a vida não admitem reparação do "dano" em sentido estrito para fins do art. 16 CP).</div>
+  </div>
+
+  <h3 style="font-family:'Playfair Display',serif;color:var(--green-accent);font-size:1.05rem;margin-bottom:0.75rem;">✅ Crimes que Admitem Arrependimento Posterior</h3>
+  <div class="crime-grid" style="margin-bottom:1.2rem;">
+    <div class="crime-item ci-green">
+      <h5>✅ Furto — Art. 155 CP</h5>
+      <p>Sem violência ou grave ameaça → ADMITE. Inclui furto qualificado (violência contra a coisa, não a pessoa). A restituição da coisa ou pagamento do equivalente configura o requisito 2.</p>
+    </div>
+    <div class="crime-item ci-green">
+      <h5>✅ Estelionato — Art. 171 CP</h5>
+      <p>Crime praticado por fraude, sem violência → ADMITE. STJ: reparação do dano decorrente de estelionato antes do recebimento da denúncia enseja redução de 1/3 a 2/3. Altamente cobrado.</p>
+    </div>
+    <div class="crime-item ci-green">
+      <h5>✅ Peculato — Art. 312 CP</h5>
+      <p>Crime funcional sem violência → ADMITE. Servidor que desvia e devolve os valores antes do recebimento da denúncia faz jus ao art. 16. STJ consolidado.</p>
+    </div>
+    <div class="crime-item ci-green">
+      <h5>✅ Apropriação Indébita — Art. 168 CP</h5>
+      <p>Sem violência → ADMITE. Agente que devolve a coisa ou ressarce o valor apropriado antes do recebimento da denúncia tem direito à redução.</p>
+    </div>
+    <div class="crime-item ci-green">
+      <h5>✅ Crimes Tributários / Sonegação Fiscal</h5>
+      <p>Sem violência → ADMITE o art. 16 CP. Mas atenção: o pagamento integral pode gerar extinção da punibilidade (lei especial), que é benefício maior. O art. 16 CP aplica-se subsidiariamente quando não há extinção.</p>
+    </div>
+    <div class="crime-item ci-green">
+      <h5>✅ Receptação — Art. 180 CP</h5>
+      <p>Crime patrimonial sem violência → ADMITE. A restituição do bem receptado ou ressarcimento do dano antes do recebimento da denúncia configura o art. 16 CP.</p>
+    </div>
+    <div class="crime-item ci-gold">
+      <h5>⚠️ Homicídio Culposo — Art. 121, §3.º CP</h5>
+      <p>Debate: crime culposo sem violência dolosa → parte da doutrina admite art. 16 CP com reparação aos herdeiros. STJ: tende a admitir. Controvérsia. Atenção: o dano (morte) é irreparável — a "reparação" é do dano patrimonial reflexo (pensão aos dependentes).</p>
+    </div>
+    <div class="crime-item ci-gold">
+      <h5>⚠️ Lesão Corporal Culposa — Art. 129, §6.º CP</h5>
+      <p>Culposa, sem violência dolosa → parte da doutrina e STJ admitem art. 16 CP. A reparação das despesas médicas e outros danos antes do recebimento da denúncia pode ensejar a redução. Debate sobre o sentido de "violência" no art. 16 (dolosa × culposa).</p>
+    </div>
+    <div class="crime-item ci-blue">
+      <h5>✅ Dano — Art. 163 CP</h5>
+      <p>Crime contra o patrimônio sem violência pessoal → ADMITE. A reparação do dano material à coisa destruída ou deteriorada configura o requisito.</p>
+    </div>
+  </div>
+
+  <h3 style="font-family:'Playfair Display',serif;color:var(--red-accent);font-size:1.05rem;margin-bottom:0.75rem;">❌ Crimes que NÃO Admitem Arrependimento Posterior</h3>
+  <div class="crime-grid">
+    <div class="crime-item ci-red">
+      <h5>❌ Roubo — Art. 157 CP</h5>
+      <p>Violência ou grave ameaça à pessoa é elemento constitutivo → NÃO admite art. 16 CP. Inclui roubo impróprio (art. 157, §1.º). STJ consolidado.</p>
+    </div>
+    <div class="crime-item ci-red">
+      <h5>❌ Latrocínio — Art. 157, §3.º CP</h5>
+      <p>Violência que resulta em lesão grave ou morte → NÃO admite. Além da violência, o bem jurídico vida é intransmissível.</p>
+    </div>
+    <div class="crime-item ci-red">
+      <h5>❌ Extorsão — Art. 158 CP</h5>
+      <p>Grave ameaça é elemento do tipo → NÃO admite art. 16 CP. Inclui extorsão mediante sequestro (art. 159 CP).</p>
+    </div>
+    <div class="crime-item ci-red">
+      <h5>❌ Crimes Sexuais — Arts. 213 e ss. CP</h5>
+      <p>Violência ou grave ameaça são elementares dos crimes sexuais violentos → NÃO admitem. Além disso, o bem jurídico (dignidade sexual) não é patrimonialmente reparável para fins do art. 16.</p>
+    </div>
+    <div class="crime-item ci-red">
+      <h5>❌ Homicídio Doloso — Art. 121, caput e §§ CP</h5>
+      <p>Violência contra a pessoa é elementar → NÃO admite art. 16 CP. Além disso, o bem jurídico vida é irrestaurável. STJ consolidado.</p>
+    </div>
+    <div class="crime-item ci-red">
+      <h5>❌ Lesão Corporal Dolosa — Art. 129 CP</h5>
+      <p>Violência física intencional → NÃO admite art. 16 CP. Reparação das despesas médicas pode ser circunstância judicial favorável (art. 59 CP) ou atenuante (art. 65, III, "b"), mas não arrependimento posterior.</p>
+    </div>
+    <div class="crime-item ci-red">
+      <h5>❌ Violência Doméstica — Lei 11.340/06</h5>
+      <p>Crimes cometidos com violência ou grave ameaça em contexto doméstico → NÃO admitem art. 16 CP. STJ e STF consolidados.</p>
+    </div>
+    <div class="crime-item ci-red">
+      <h5>❌ Tráfico de Drogas — Art. 33 Lei 11.343/06</h5>
+      <p>Embora sem violência física, o tráfico não gera dano patrimonial à vítima identificada para fins de reparação específica → NÃO se aplica art. 16 CP em regra. O bem jurídico tutelado (saúde pública) é difuso, não individualmente reparável.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 11. QUADRO COMPARATIVO                    -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="comparativo">
+  <div class="section-header">
+    <div class="section-num">11</div>
+    <div class="section-title"><span>Quadro Sinóptico</span>Art. 16 × Art. 15, 2.ª Parte × Art. 65, III, "b" × Perdão Judicial</div>
+  </div>
+
+  <div style="overflow-x:auto;">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Critério</th>
+          <th>Art. 16 — Arrependimento Posterior</th>
+          <th>Art. 15, 2.ª Parte — Arrependimento Eficaz</th>
+          <th>Art. 65, III, "b" — Atenuante</th>
+          <th>Perdão Judicial (quando cabível)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hl">
+          <td>Fase do crime</td>
+          <td>Crime JÁ CONSUMADO</td>
+          <td>Execução iniciada; resultado AINDA NÃO OCORRIDO</td>
+          <td>Crime JÁ CONSUMADO</td>
+          <td>Crime consumado ou tentado (depende do tipo)</td>
+        </tr>
+        <tr>
+          <td>Conduta do agente</td>
+          <td>Repara o dano ou restitui a coisa</td>
+          <td>Impede que o resultado ocorra</td>
+          <td>Repara o dano voluntariamente antes do julgamento</td>
+          <td>Depende do tipo (ex.: homicídio culposo — consequências atingem agente)</td>
+        </tr>
+        <tr class="hl2">
+          <td>Marco temporal</td>
+          <td>Até o recebimento da denúncia/queixa</td>
+          <td>Antes do resultado (durante a execução)</td>
+          <td>Após recebimento da denúncia, antes da sentença</td>
+          <td>Variável — determinado pelo tipo penal</td>
+        </tr>
+        <tr>
+          <td>Consequência</td>
+          <td>Redução de 1/3 a 2/3 da pena (3.ª fase)</td>
+          <td>Responde só pelos atos (sem o resultado evitado)</td>
+          <td>Atenuante genérica (2.ª fase — sem % fixo)</td>
+          <td>Extinção da punibilidade</td>
+        </tr>
+        <tr class="hl3">
+          <td>Natureza jurídica</td>
+          <td>Causa de diminuição de pena (obrigatória)</td>
+          <td>Exclusão do resultado típico (obrigatória)</td>
+          <td>Circunstância atenuante (obrigatória)</td>
+          <td>Causa extintiva da punibilidade</td>
+        </tr>
+        <tr>
+          <td>Crimes que admitem</td>
+          <td>Sem violência/grave ameaça à pessoa</td>
+          <td>Todos os crimes dolosos (com resultado evitável)</td>
+          <td>Qualquer crime (inclusive com violência)</td>
+          <td>Tipicamente: homicídio culposo, lesão culposa, aborto culposo etc.</td>
+        </tr>
+        <tr class="hl4">
+          <td>Voluntariedade</td>
+          <td>Voluntária (não precisa ser espontânea)</td>
+          <td>Voluntária (fórmula de Frank: "podia, não quis")</td>
+          <td>Espontânea ou voluntária (lei não exige espontaneidade explícita)</td>
+          <td>Não é relevante — decorre de circunstâncias objetivas</td>
+        </tr>
+        <tr>
+          <td>Cumulação com outros</td>
+          <td>Pode cumular com tentativa (art. 14, §único) se o crime era tentado e depois o bem restituído. Mas tentativa e consumação são excludentes — art. 16 pressupõe consumação.</td>
+          <td>Exclui a tentativa do resultado evitado</td>
+          <td>Cumulável com art. 16 CP (atenuante e causa de diminuição são fases distintas)</td>
+          <td>Extingue a punibilidade — afasta todas as outras consequências penais</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="alert alert-red mt2">
+    <div class="alert-icon">🔴</div>
+    <div><strong>Resumo mnemônico — A Linha do Tempo da Conduta Pós-Delitiva Positiva:</strong><br>
+    1. Durante execução + impede resultado → <strong>Art. 15 (Arrep. Eficaz)</strong> → exclui resultado típico → "ponte de prata"<br>
+    2. Após consumação + até recebimento denúncia + repara → <strong>Art. 16 (Arrep. Posterior)</strong> → reduz pena de 1/3 a 2/3<br>
+    3. Após recebimento + antes da sentença + repara → <strong>Art. 65, III, "b" (Atenuante)</strong> → atenua pena (sem % fixo)<br>
+    4. Após consumação + circunstâncias objetivas específicas → <strong>Perdão Judicial</strong> → extingue punibilidade</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 12. EXEMPLOS PRÁTICOS                     -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="exemplos">
+  <div class="section-header">
+    <div class="section-num">12</div>
+    <div class="section-title"><span>Casos Concretos Resolvidos</span>Exemplos Práticos do Art. 16 CP</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 1 — Estelionato com Reparação Integral (Máxima Redução)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A pratica estelionato (art. 171 CP) contra B, obtendo R$ 50.000,00 de forma fraudulenta. Antes do recebimento da denúncia, A devolve integralmente os R$ 50.000,00 a B, voluntariamente.</p>
+      <div class="ex-calc">ANÁLISE — Art. 16 CP:
+
+Req. 1: Crime sem violência ou grave ameaça? SIM → estelionato ✅
+Req. 2: Reparação do dano? SIM → R$ 50.000,00 devolvidos (integral) ✅
+Req. 3: Antes do recebimento da denúncia? SIM ✅
+Req. 4: Ato voluntário? SIM ✅
+
+TODOS OS 4 REQUISITOS PREENCHIDOS
+
+Art. 16 CP aplicável → REDUÇÃO de 1/3 a 2/3
+Critério: extensão da reparação
+→ Reparação INTEGRAL → redução MÁXIMA = 2/3
+
+DOSIMETRIA EXEMPLO:
+Pena-base: 2 anos de reclusão (mínimo do art. 171)
+2.ª fase: sem agravantes/atenuantes → 2 anos
+3.ª fase: Art. 16 CP → redução de 2/3
+
+2 anos − 2/3 = 2 anos − 16 meses = 8 meses de reclusão ✅
+
+Obs.: a reparação do dano por estelionato não extingue a 
+punibilidade (diferente dos crimes tributários).
+O crime permanece — apenas a pena é reduzida.</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 2 — Furto com Restituição Parcial (Redução Proporcional)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A furta (art. 155 CP) um veículo avaliado em R$ 60.000,00. Antes do recebimento da denúncia, A devolve o veículo, que foi danificado e agora vale R$ 40.000,00 (prejuízo de R$ 20.000,00 não reparado).</p>
+      <div class="ex-calc">ANÁLISE — Art. 16 CP:
+
+Req. 1: Furto → sem violência pessoal ✅
+Req. 2: Restituição da coisa? SIM — mas PARCIAL:
+   Veículo devolvido: R$ 40.000,00 (66,7% do valor)
+   Prejuízo residual: R$ 20.000,00 (33,3% não reparado) ✅ (parcial)
+Req. 3: Antes do recebimento da denúncia ✅
+Req. 4: Voluntário ✅
+
+Art. 16 CP APLICÁVEL → redução proporcional
+Reparação de ~67% do dano → redução próxima de 1/3 + proporção
+
+CRITÉRIO STJ: extensão da reparação
+→ Reparação parcial (~67%) → redução de aproximadamente 1/2 (meio-termo)
+  Ex.: pena intermediária de 1 ano → redução de 6 meses → 6 meses
+
+Obs.: se A também pagasse os R$ 20.000,00 de indenização 
+pelos danos → reparação integral → redução máxima de 2/3 ✅</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 3 — Reparação APÓS o Recebimento da Denúncia (Apenas Atenuante)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A pratica apropriação indébita (art. 168 CP). A denúncia é recebida pelo juiz em 01/03. Em 15/03, A devolve integralmente o bem apropriado à vítima.</p>
+      <div class="ex-calc">ANÁLISE — Art. 16 CP:
+
+Req. 1: Sem violência ✅ (apropriação indébita)
+Req. 2: Reparação integral ✅
+Req. 3: ATÉ o recebimento da denúncia? 
+   → Denúncia recebida em 01/03
+   → Reparação em 15/03 (APÓS o recebimento)
+   → ❌ REQUISITO 3 NÃO PREENCHIDO
+
+Art. 16 CP → INAPLICÁVEL
+
+CONSEQUÊNCIA:
+→ A reparação pode configurar ATENUANTE genérica
+→ Art. 65, III, "b" CP: "ter o agente, antes do julgamento, 
+   reparado o dano por ato voluntário"
+→ Incide na 2.ª fase da dosimetria (circunstâncias atenuantes)
+→ Sem percentual mínimo ou máximo fixo — atenua a pena
+→ Conforme súmula 231 STJ: atenuante não pode reduzir
+   pena abaixo do mínimo legal
+
+Moral: o mesmo ato (reparação) tem consequências MUITO 
+diferentes se praticado antes ou após o recebimento 
+da denúncia. ✅</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 4 — Peculato + Art. 16 CP + Dosimetria Completa</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">Servidor público pratica peculato-desvio (art. 312, §1.º CP), desviando R$ 30.000,00 dos cofres públicos. Antes do recebimento da denúncia, devolve R$ 30.000,00 integralmente.</p>
+      <div class="ex-calc">ANÁLISE — Art. 16 CP:
+
+Req. 1: Peculato — sem violência à pessoa ✅
+Req. 2: Reparação integral (R$ 30.000,00) ✅
+Req. 3: Antes do recebimento da denúncia ✅
+Req. 4: Voluntário ✅ → Art. 16 CP APLICÁVEL
+
+DOSIMETRIA (art. 312 CP — pena: reclusão 2 a 12 anos):
+
+1.ª FASE: Pena-base
+→ Circunstâncias judiciais neutras → pena-base: 2 anos
+
+2.ª FASE: Agravantes e atenuantes
+→ Reincidente em crime patrimonial: agrava (art. 61, I)
+→ 2 anos + fração → ex.: 2 anos e 6 meses
+
+3.ª FASE: Causas de diminuição
+→ Art. 16 CP: reparação integral → redução de 2/3
+→ 2 anos e 6 meses = 30 meses
+→ 30 meses − 2/3 = 30 − 20 = 10 meses de reclusão
+
+Pena definitiva: 10 meses de reclusão
+
+Obs.: o servidor pode pleitear substituição por PRD
+(art. 44 CP) se pena ≤ 4 anos e sem violência. ✅</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 13. JURISPRUDÊNCIA STF/STJ                -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="jurisprudencia">
+  <div class="section-header">
+    <div class="section-num">13</div>
+    <div class="section-title"><span>STF · STJ · Teses · Súmulas</span>Jurisprudência e Posições dos Tribunais Superiores</div>
+  </div>
+
+  <div class="alert alert-navy mt1" style="margin-bottom:1.2rem;">
+    <div class="alert-icon">ℹ️</div>
+    <div>As posições abaixo refletem entendimentos consolidados do STF e STJ sobre o art. 16 CP. São referenciadas por tema e diploma legal para garantia de <strong>zero alucinação</strong>. O art. 16 CP é um dos dispositivos mais frequentemente invocados em recursos especiais de dosimetria, especialmente em crimes patrimoniais.</div>
+  </div>
+
+  <div class="juris-grid">
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Arrependimento Posterior é Direito Subjetivo do Réu — Obrigatoriedade da Redução quando Preenchidos os Requisitos</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ firma de forma consolidada que o arrependimento posterior (art. 16 CP) é <strong>direito subjetivo público do réu</strong> — não mera faculdade do juiz. Presentes os 4 requisitos legais (crime sem violência pessoal + reparação + antes do recebimento da denúncia + voluntariedade), o magistrado é <strong>obrigado</strong> a reconhecer o benefício e aplicar a redução de pena de 1/3 a 2/3. A ausência de fundamentação para negar o art. 16 CP quando preenchidos os requisitos gera nulidade da dosimetria.</p>
+        <p class="mt1">Nos recursos especiais que discutem dosimetria, o STJ analisa sistematicamente se o art. 16 CP foi ou não reconhecido, e qual foi o critério adotado para a fixação da fração de redução (a extensão da reparação). Dosimetrias que negam o art. 16 sem fundamentação são frequentemente anuladas.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Direito Subjetivo do Réu</span>
+          <span class="tag tag-gold">Obrigatoriedade — 4 Requisitos Preenchidos</span>
+          <span class="tag tag-blue">Nulidade da Dosimetria</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Critério da Extensão da Reparação para o Quantum da Redução (1/3 a 2/3)</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ consolidou o critério da <strong>extensão da reparação</strong> para fixação da fração de redução no art. 16 CP: quanto maior e mais integral a reparação, maior a redução (próxima de 2/3); quanto menor e mais parcial, menor a redução (próxima de 1/3). Reparação integral → redução de 2/3 (máxima). Reparação parcial → redução proporcional ao montante reparado.</p>
+        <p class="mt1">O STJ exige que o juiz fundamente o quantum da redução com referência explícita à extensão da reparação. A fixação do quantum de redução sem fundamentação (ou com fundamentação que não examine a extensão da reparação) configura constrangimento ilegal, sujeito a correção por habeas corpus ou recurso especial.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Extensão da Reparação = Critério do Quantum</span>
+          <span class="tag tag-gold">Reparação Integral → 2/3</span>
+          <span class="tag tag-blue">Reparação Parcial → 1/3 proporcional</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Reparação Parcial Admite o Art. 16 CP</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ firmou que a <strong>reparação parcial do dano</strong> é suficiente para a incidência do art. 16 CP — não é exigida a reparação integral como condição para o benefício. O que varia, conforme a extensão da reparação, é a fração de redução: reparação parcial → redução menor (próxima de 1/3); reparação integral → redução maior (próxima de 2/3).</p>
+        <p class="mt1">Essa posição é relevante especialmente em crimes de estelionato e peculato, onde o montante desviado pode ser elevado e o agente consegue reparar apenas parcialmente antes do recebimento da denúncia. O STJ não exige que a reparação seja integral para reconhecer o art. 16 CP — exige apenas que alguma reparação efetiva tenha ocorrido dentro do prazo legal.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Reparação Parcial — Art. 16 Admitido</span>
+          <span class="tag tag-gold">Quantum Menor (1/3) para Reparação Parcial</span>
+          <span class="tag tag-blue">Doutrina Minoritária Diverge</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Reparação por Terceiro (com Conhecimento do Agente) Admite o Art. 16 CP</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ reconhece que a reparação do dano feita por <strong>terceiro em nome do agente</strong> (com o conhecimento e concordância deste) configura o requisito do art. 16 CP. A reparação por familiares, advogado ou fiador, quando realizada em nome do réu e com seu conhecimento, preenche o requisito da voluntariedade — que é do agente, não do executor material do pagamento.</p>
+        <p class="mt1">O que importa, segundo o STJ, é que a reparação seja atribuível ao réu — que ele tenha consentido e sido beneficiado pela conduta de quem reparou. A impossibilidade financeira do agente de reparar diretamente não impede o benefício se terceiro o faz em seu nome.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Reparação por Terceiro — Admitida</span>
+          <span class="tag tag-gold">Voluntariedade do Réu Configurada</span>
+          <span class="tag tag-blue">Conhecimento e Concordância do Agente</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Roubo — Inaplicabilidade do Art. 16 CP (Súmula 231 × Art. 16)</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ é uníssono em reconhecer que o crime de roubo (art. 157 CP) — em qualquer de suas modalidades — <strong>não admite o arrependimento posterior</strong> do art. 16 CP, pois a violência ou grave ameaça à pessoa é elementar do tipo. Mesmo que o agente restitua integralmente os bens roubados antes do recebimento da denúncia, o art. 16 CP não se aplica.</p>
+        <p class="mt1">Nesse caso, a restituição da coisa pode ser valorada como circunstância judicial favorável (art. 59 CP) ou, se após o recebimento da denúncia, como atenuante genérica (art. 65, III, "b" CP). Mas o benefício da redução de 1/3 a 2/3 do art. 16 CP é vedado. O STJ rejeita habeas corpus que pretenda aplicar o art. 16 CP ao roubo, mesmo diante de restituição integral dos bens.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Roubo — Art. 16 Inaplicável</span>
+          <span class="tag tag-gold">Violência/Grave Ameaça = Elementar do Tipo</span>
+          <span class="tag tag-blue">STJ Consolidado — Sem Exceções</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Art. 16 CP e Peculato — Admissibilidade e Aplicação</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ reconhece a plena aplicabilidade do art. 16 CP ao crime de peculato (art. 312 CP) quando o servidor público devolve os valores desviados ou apropriadoss antes do recebimento da denúncia. O peculato é crime funcional sem violência à pessoa — preenche o requisito 1 do art. 16 CP.</p>
+        <p class="mt1">Importante: a devolução dos valores no peculato não extingue a punibilidade (diferente do que ocorre com crimes tributários, onde o pagamento pode extinguir a punibilidade por lei especial). Portanto, o peculato admite o art. 16 CP mas não extingue a punibilidade pela reparação. A devolução integral dos valores gera redução de 2/3 da pena; a devolução parcial, redução proporcional. Esta é uma distinção importante: peculato × sonegação fiscal no que tange aos efeitos da reparação.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Peculato — Art. 16 Aplicável</span>
+          <span class="tag tag-gold">Sem Extinção da Punibilidade pela Reparação</span>
+          <span class="tag tag-blue">Redução Proporcional ao Montante Devolvido</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Art. 16 CP e Princípio da Proporcionalidade — Fundamento Constitucional do Instituto</div>
+      </div>
+      <div class="juris-body">
+        <p>O STF reconhece o arrependimento posterior (art. 16 CP) como instrumento de concretização do princípio da <strong>proporcionalidade</strong> na dosimetria penal (art. 5.º, XLVI, CF/88) e de promoção da <strong>política criminal de proteção à vítima</strong>. O agente que repara o dano demonstra comportamento pós-delitivo positivo que reduz a necessidade da pena em toda a sua extensão — a proporcionalidade exige que a pena seja adequada às circunstâncias concretas do crime, incluindo a conduta posterior do agente.</p>
+        <p class="mt1">O STF também reconhece que a omissão do juiz em aplicar o art. 16 CP quando presentes os requisitos pode configurar constrangimento ilegal, corrigível por habeas corpus, por violar o direito subjetivo do réu à redução de pena legalmente prevista.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Proporcionalidade — Art. 5.º, XLVI, CF/88</span>
+          <span class="tag tag-gold">Proteção à Vítima</span>
+          <span class="tag tag-blue">HC — Omissão do Juiz</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Arrependimento Posterior nos Crimes Tributários × Extinção da Punibilidade</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ distingue o arrependimento posterior do art. 16 CP do regime especial dos crimes tributários: nos crimes tributários (sonegação fiscal — Lei 8.137/90; crimes previdenciários — Lei 9.983/00), o pagamento integral do débito tributário com juros e multa <strong>extingue a punibilidade</strong> (art. 69 da Lei 11.941/09 e legislação correlata) — benefício muito maior que o art. 16 CP. O art. 16 CP só se aplica subsidiariamente quando o pagamento for parcial (não extinguindo a punibilidade) ou quando não houver a extinção pela lei especial.</p>
+        <p class="mt1">Ponto de prova: em crimes tributários, o pagamento integral antes do recebimento da denúncia → extinção da punibilidade (art. 69 Lei 11.941/09). O pagamento parcial antes do recebimento da denúncia → pode configurar o art. 16 CP com redução proporcional. O pagamento após o recebimento da denúncia e antes do trânsito em julgado → em alguns casos, redução da pena pela lei especial tributária.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Crimes Tributários — Extinção da Punibilidade</span>
+          <span class="tag tag-gold">Art. 69 Lei 11.941/09</span>
+          <span class="tag tag-blue">Art. 16 CP — Aplicação Subsidiária</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 14. DOUTRINA                              -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="doutrina">
+  <div class="section-header">
+    <div class="section-num">14</div>
+    <div class="section-title"><span>Doutrina Nacional</span>Principais Posições Doutrinárias</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cleber Masson — Direito Penal Esquematizado</div>
+      </div>
+      <div class="juris-body">
+        <p>Masson apresenta o art. 16 CP como a "ponte de ouro tardia" do sistema penal — em referência à "ponte de ouro" de Von Liszt do arrependimento eficaz. Sistematiza os 4 requisitos com clareza exemplar. Destaca que o arrependimento posterior é causa obrigatória de diminuição (não facultativa) e que o critério do quantum é a extensão da reparação. Admite reparação parcial como suficiente para o benefício. Quanto à reparação por terceiro, Masson a admite desde que com conhecimento e concordância do réu. Analisa detalhadamente os crimes que admitem e os que não admitem o art. 16 CP, com especial atenção aos crimes culposos — para ele, crimes culposos sem violência dolosa admitem o art. 16 CP, pois o resultado culposo não implica "violência" no sentido do art. 16. Quanto aos crimes tributários, destaca a preferência pela extinção da punibilidade pelo pagamento sobre o art. 16 CP.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cezar Roberto Bitencourt — Tratado de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Bitencourt analisa o art. 16 CP como instrumento de política criminal que serve a três objetivos simultâneos: (a) incentiva a reparação do dano à vítima; (b) reduce a necessidade de pena plena (menor culpabilidade do agente arrependido); e (c) desafoga o sistema de justiça criminal, estimulando acordos pré-processuais. Defende que a reparação deve ser efetiva — não apenas formal. Quanto ao critério do quantum, Bitencourt adota o mesmo critério do STJ (extensão da reparação). Analisa com rigor a voluntariedade, distinguindo a mera resignação (insuficiente) da real escolha volitiva (suficiente). Quanto à reparação parcial, Bitencourt é mais exigente que o STJ — prefere a posição de que a reparação deve ser substancial para que o art. 16 CP seja aplicado, embora reconheça que a jurisprudência majoritária admita reparação parcial.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Rogério Greco — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Greco enfatiza o fundamento constitucional do art. 16 CP no princípio da proporcionalidade: a conduta pós-delitiva positiva do agente diminui a necessidade e a intensidade da pena — não seria proporcional punir da mesma forma quem reparou o dano e quem não reparou. Analisa com detalhamento a distinção entre arrependimento posterior (art. 16), arrependimento eficaz (art. 15) e atenuante (art. 65, III, "b"), apontando que a confusão entre esses institutos é o erro mais cobrado em concursos. Quanto à reparação por terceiro, Greco a admite com as mesmas ressalvas do STJ. Dedica atenção especial à questão dos crimes culposos: para Greco, a lesão culposa (art. 129, §6.º CP) admite o art. 16 CP porque a "violência" a que se refere o art. 16 é a violência dolosa, elemento constitutivo do tipo que reflete maior gravidade do agente.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Guilherme de Souza Nucci — Código Penal Comentado</div>
+      </div>
+      <div class="juris-body">
+        <p>Nucci comenta o art. 16 CP com foco forense. Diverge da maioria doutrinária em um ponto relevante: para ele, a reparação deve ser <em>integral</em> para que o art. 16 CP seja aplicado — a reparação parcial não preencheria o requisito 2. Para Nucci, a reparação parcial configura, no máximo, a atenuante do art. 65, III, "b" CP. Esta é a posição mais restritiva sobre o tema. Analisa detalhadamente o que seria "reparação do dano" em cada tipo de crime: em crimes formais (ex.: extorsão), o dano é o constrangimento sofrido — o que praticamente impossibilita a reparação do "dano" no sentido estrito. Confirma a inaplicabilidade do art. 16 CP ao roubo e à extorsão, mesmo quando há restituição da coisa. Quanto ao quantum, adota o critério STJ (extensão da reparação).</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Fernando Capez — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Capez apresenta o art. 16 CP de forma didática e voltada a concursos. Sistematiza os 4 requisitos com exemplos práticos. Destaca a diferença entre "voluntário" (basta livre vontade) e "espontâneo" (iniciativa própria) — o art. 16 só exige voluntariedade. Analisa a distinção com o art. 15 (arrependimento eficaz) e com a atenuante do art. 65, III, "b" CP por meio de um critério temporal: a localização da reparação na linha do tempo do processo determina qual benefício se aplica. Quanto aos crimes que admitem o art. 16, Capez adota posição conservadora: apenas crimes sem violência pessoal dolosa, em interpretação estrita do art. 16 CP. Para crimes culposos, a questão é mais complexa — Capez entende que o resultado culposo não equivale à "violência" vedada pelo art. 16 CP, portanto os crimes culposos com resultado lesão/morte podem admitir o benefício.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Controvérsia: Reparação Parcial Admite o Art. 16 CP?</div>
+      </div>
+      <div class="juris-body">
+        <p>A maior controvérsia doutrinária sobre o art. 16 CP é se a reparação parcial do dano é suficiente para o benefício:</p>
+        <ul class="mt1">
+          <li><strong>Posição A — Admite (STJ majoritário, Masson, Greco, Bitencourt com ressalvas):</strong> A reparação parcial é suficiente para o art. 16 CP — o quantum de redução é proporcional à extensão da reparação. Reparação mínima → redução de 1/3; reparação integral → redução de 2/3.</li>
+          <li><strong>Posição B — Não admite (Nucci):</strong> A reparação deve ser integral. A reparação parcial apenas configura a atenuante do art. 65, III, "b" CP — não o art. 16 CP.</li>
+          <li><strong>Conclusão para concurso:</strong> Adote a Posição A (STJ majoritário). Em questão que apresente as duas posições, indique que a posição do STJ é a da reparação parcial, mas mencione a divergência doutrinária de Nucci.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 15. SISTEMÁTICA                           -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="sistematica">
+  <div class="section-header">
+    <div class="section-num">15</div>
+    <div class="section-title"><span>Conexões Sistemáticas</span>Art. 16 CP na Sistemática do Código Penal</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔗 Artigos Diretamente Conectados ao Art. 16 CP</h3>
+      <ul>
+        <li><strong>Art. 14 CP (Tentativa):</strong> O art. 16 pressupõe crime consumado — não há arrependimento posterior em crime tentado. Na tentativa, o instituto é o arrependimento eficaz (art. 15, 2.ª parte, se o resultado foi evitado) ou simplesmente tentativa (art. 14, II)</li>
+        <li><strong>Art. 15, 2.ª parte CP (Arrependimento Eficaz):</strong> Antecessor temporal do art. 16 — opera antes do resultado; o art. 16 opera após o resultado. São complementares na linha do tempo do crime</li>
+        <li><strong>Art. 59 CP (Circunstâncias Judiciais):</strong> A conduta pós-delitiva do agente (incluindo a reparação) pode ser valorada na 1.ª fase da dosimetria como circunstância judicial favorável (comportamento posterior ao crime — art. 59, in fine). Mas não se confunde com o art. 16</li>
+        <li><strong>Art. 65, III, "b" CP (Atenuante):</strong> Instituto que operaciona a reparação pós-recebimento da denúncia — complementar e sucessivo ao art. 16 CP no tempo</li>
+        <li><strong>Art. 68 CP (Dosimetria — Causas de Diminuição):</strong> O art. 16 incide na 3.ª fase da dosimetria, junto com outras causas de diminuição</li>
+        <li><strong>Art. 74 CP (Composição Civil — Lei 9.099/95):</strong> Para crimes de menor potencial ofensivo, a composição civil dos danos extingue a punibilidade (art. 74 Lei 9.099/95), benefício maior que o art. 16 CP. O art. 16 aplica-se subsidiariamente quando não há composição civil extintiva</li>
+        <li><strong>Art. 107 CP (Extinção da Punibilidade):</strong> Não inclui o art. 16 (que apenas reduz a pena). Distinguir: extinção da punibilidade × redução de pena</li>
+        <li><strong>Art. 12 CP (Subsidiariedade):</strong> O art. 16 CP aplica-se às leis especiais (Lei de Drogas, Lei Ambiental etc.) via art. 12 CP, salvo disposição em contrário</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📋 Art. 16 CP × Composição Civil (Lei 9.099/95)</h3>
+      <div class="law-quote">
+        <strong>Art. 74 da Lei 9.099/95:</strong>
+        "A composição dos danos civis será reduzida a escrito e, homologada pelo Juiz mediante sentença irrecorrível, terá eficácia de título a ser executado no juízo civil competente. Parágrafo único. Tratando-se de ação penal de iniciativa privada ou de ação penal pública condicionada à representação, o acordo homologado acarreta a renúncia ao direito de queixa ou representação."
+      </div>
+      <p class="mt2" style="font-size:0.85rem;color:var(--text-mid);">Para crimes de menor potencial ofensivo (pena máxima ≤ 2 anos — art. 61 Lei 9.099/95): a composição civil homologada pelo juiz extingue a punibilidade nos crimes de ação penal privada e pública condicionada (renúncia à queixa/representação). Benefício maior que o art. 16 CP → o art. 16 fica residual para esses crimes.</p>
+      <div class="alert alert-gold mt2" style="font-size:0.8rem;">
+        <div>⭐ <strong>Hierarquia dos Benefícios pela Reparação:</strong> (1) Extinção da punibilidade pelo pagamento (crimes tributários, composição civil — Lei 9.099/95) → maior benefício. (2) Arrependimento posterior — art. 16 CP → redução de 1/3 a 2/3 da pena. (3) Atenuante — art. 65, III, "b" → atenua pena sem % fixo. Quanto mais cedo a reparação, maior o benefício.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-3 mt2">
+    <div class="card">
+      <h3>⚡ Art. 16 CP e a Lei Maria da Penha</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">Crimes cometidos com violência doméstica e familiar contra a mulher, quando envolvem violência ou grave ameaça à pessoa, não admitem o art. 16 CP — a violência afasta o requisito 1. Mas o STJ tem posição relevante sobre:</p>
+      <ul class="mt1" style="font-size:0.84rem;">
+        <li><strong>Crime de dano doloso em contexto doméstico:</strong> Sem violência pessoal → debate sobre se o art. 16 CP é aplicável</li>
+        <li><strong>Composição civil:</strong> o art. 17 da Lei Maria da Penha proíbe substituição por prestação pecuniária e multa, mas não afasta necessariamente o art. 16 CP quando os requisitos estão presentes</li>
+        <li><strong>STJ:</strong> em regra, nos crimes praticados com violência ou grave ameaça em contexto doméstico → sem art. 16 CP</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🔄 Resumo Mnemônico para Prova</h3>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.82rem;line-height:1.85;">
+        <p><strong style="color:var(--gold-light);">Art. 16 CP — 4 Requisitos:</strong><br>
+        1️⃣ Sem violência/grave ameaça PESSOAL<br>
+        2️⃣ Reparação do dano ou restituição<br>
+        3️⃣ ATÉ recebimento da denúncia/queixa<br>
+        4️⃣ Ato voluntário</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.5rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Quantum (3.ª fase):</strong><br>
+        Critério: extensão da reparação<br>
+        Integral → 2/3 (máximo)<br>
+        Parcial → proporcional → 1/3 a 2/3</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.5rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Linha do tempo:</strong><br>
+        Art. 15 → antes do resultado<br>
+        Art. 16 → após consumação, antes denúncia<br>
+        Art. 65, III, "b" → após denúncia, antes sentença</p>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📅 Art. 16 CP e Execução Penal</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">O arrependimento posterior impacta a execução penal:</p>
+      <ul class="mt1" style="font-size:0.84rem;">
+        <li><strong>Pena definitiva menor:</strong> a redução de 1/3 a 2/3 reduz a pena definitiva — o cálculo da progressão de regime, do livramento condicional e da remição é feito sobre a pena definitiva já reduzida</li>
+        <li><strong>Substituição por PRD:</strong> com pena definitiva reduzida (ex.: de 2 anos para 8 meses), pode ser viável a substituição por PRD (art. 44 CP — pena ≤ 4 anos)</li>
+        <li><strong>Sursis:</strong> pena definitiva ≤ 2 anos após a redução → pode ensejar sursis (art. 77 CP)</li>
+        <li><strong>Não afasta a reincidência:</strong> a condenação com art. 16 CP gera reincidência (art. 64 CP) se novo crime nos 5 anos seguintes ao cumprimento</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- PROVA / ENAM                              -->
+<!-- ══════════════════════════════════════════ -->
+<section id="prova" class="prova-section">
+  <h2>⚖️ Pontos Cobrados em Magistratura e ENAM</h2>
+  <p class="intro">Questões, teses e pegadinhas recorrentes nos concursos de Juiz de Direito, ENAM e equivalentes relacionadas ao Art. 16 CP.</p>
+
+  <div class="prova-items">
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">01</span>Quais são os 4 requisitos cumulativos do arrependimento posterior (art. 16 CP)?</div>
+      <div class="prova-item-a"><strong>(1) Crime cometido sem violência ou grave ameaça à pessoa:</strong> o crime deve ter sido executado sem violência física (vis corporalis) ou grave ameaça dirigida contra pessoa humana; violência contra a coisa não afasta o benefício. <strong>(2) Reparação do dano ou restituição da coisa:</strong> o agente deve efetivamente ressarcir o prejuízo patrimonial ou devolver o bem; pode ser parcial (STJ majoritário). <strong>(3) Até o recebimento da denúncia ou queixa:</strong> a reparação deve ocorrer antes do ato processual do juiz que recebe formalmente a peça acusatória; entre o oferecimento e o recebimento ainda configura o art. 16. <strong>(4) Por ato voluntário:</strong> a reparação deve decorrer de livre vontade do agente (não exige espontaneidade; admite indução por terceiro). Todos são cumulativos — a falta de qualquer um afasta o benefício.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">02</span>Qual a diferença entre arrependimento posterior (art. 16 CP), arrependimento eficaz (art. 15, 2.ª parte) e a atenuante do art. 65, III, "b" CP?</div>
+      <div class="prova-item-a"><strong>Arrependimento eficaz (art. 15, 2.ª parte):</strong> o agente impede o resultado durante a execução (antes da consumação), por ato voluntário → responde apenas pelos atos já praticados; não há tentativa do crime mais grave. <strong>Arrependimento posterior (art. 16 CP):</strong> o crime JÁ SE CONSUMOU → o agente repara o dano ou restitui a coisa ANTES do recebimento da denúncia → pena reduzida de 1/3 a 2/3 (causa de diminuição, 3.ª fase). <strong>Atenuante do art. 65, III, "b" CP:</strong> o crime consumado → reparação APÓS o recebimento da denúncia, antes da sentença → circunstância atenuante (2.ª fase), sem percentual fixo de redução. A linha do tempo: arrep. eficaz → antes do resultado; art. 16 → após consumação, antes da denúncia; art. 65 → após denúncia, antes da sentença.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">03</span>O crime de roubo admite o arrependimento posterior do art. 16 CP?</div>
+      <div class="prova-item-a"><strong>Não.</strong> O roubo (art. 157 CP) não admite o art. 16 CP porque a <strong>violência ou grave ameaça à pessoa é elemento constitutivo do tipo</strong> — o crime é cometido com violência pessoal, afastando o requisito 1 do art. 16 CP. Mesmo que o agente restitua integralmente os bens roubados antes do recebimento da denúncia, o art. 16 CP não se aplica. O STJ é unânime nesse sentido. A restituição dos bens pode ser valorada como circunstância judicial favorável (art. 59 CP — comportamento do agente após o crime) ou, se após o recebimento da denúncia, como atenuante genérica do art. 65, III, "b" CP. Mas a redução de 1/3 a 2/3 do art. 16 CP é vedada para o roubo.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">04</span>Qual o critério para fixação do quantum de redução no art. 16 CP (1/3 a 2/3)?</div>
+      <div class="prova-item-a">O critério, consolidado pelo STJ, é a <strong>extensão da reparação</strong>: quanto maior e mais integral a reparação do dano (ou a restituição da coisa), maior a redução de pena (próxima de 2/3); quanto menor e mais parcial a reparação, menor a redução (próxima de 1/3). Reparação integral → redução máxima de 2/3. Reparação parcial → redução proporcional ao montante reparado. O juiz deve fundamentar o quantum da redução com referência explícita à extensão da reparação — ausência de fundamentação pode gerar nulidade da dosimetria. Este critério é distinto do art. 14, §único (tentativa), cujo critério é o iter criminis percorrido.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">05</span>A reparação parcial do dano é suficiente para o art. 16 CP?</div>
+      <div class="prova-item-a"><strong>Sim, segundo a posição majoritária do STJ.</strong> A reparação parcial é suficiente para a incidência do art. 16 CP — o que varia é a fração de redução: reparação parcial → redução menor (próxima de 1/3); reparação integral → redução maior (2/3). <strong>Posição minoritária (Nucci):</strong> a reparação deve ser integral para o art. 16 CP; a parcial configura no máximo a atenuante do art. 65, III, "b" CP. <strong>Para o concurso:</strong> adote a posição do STJ (reparação parcial admite o art. 16 CP, com quantum proporcional). Mencione a divergência de Nucci se a questão for dissertativa.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">06</span>O "voluntário" do art. 16 CP exige espontaneidade do agente?</div>
+      <div class="prova-item-a"><strong>Não.</strong> O art. 16 CP exige que a reparação seja <strong>voluntária</strong> — não exige <strong>espontaneidade</strong>. Voluntário significa que o agente agiu por livre vontade, sem coação irresistível. Espontâneo seria a iniciativa própria, sem qualquer indução externa. A reparação induzida por advogado, por familiar, ou resultante de acordo extrajudicial negociado com o MP é voluntária — e configura o art. 16 CP. O que afasta a voluntariedade é a coação irresistível (coação física ou moral absoluta) ou a recuperação forçada da coisa pela autoridade policial sem ato algum do agente.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">07</span>O furto qualificado (art. 155, §4.º CP) admite o art. 16 CP? E o roubo impróprio?</div>
+      <div class="prova-item-a"><strong>Furto qualificado — ADMITE.</strong> As qualificadoras do furto (§4.º CP — destruição/rompimento de obstáculo, abuso de confiança, escalada, destreza, emprego de chave falsa, concurso de pessoas) envolvem violência contra a COISA — não contra a pessoa. O art. 16 CP veda a violência ou grave ameaça à PESSOA, e não à coisa. Portanto, o furto qualificado, ainda que qualificado por arrombamento, admite o art. 16 CP. <strong>Roubo impróprio — NÃO ADMITE.</strong> O roubo impróprio (art. 157, §1.º CP) ocorre quando, após a subtração, o agente emprega violência ou ameaça para assegurar a impunidade ou detenção da coisa. Há violência pessoal → art. 16 CP inaplicável. STJ consolidado.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">08</span>A reparação do dano feita por terceiro (pai, advogado) em nome do réu configura arrependimento posterior?</div>
+      <div class="prova-item-a"><strong>Sim, segundo o STJ.</strong> A reparação do dano feita por terceiro (familiar, advogado, fiador) em nome do réu e com o <strong>conhecimento e concordância</strong> do agente configura o art. 16 CP. O requisito da voluntariedade é do agente — não de quem executa materialmente o pagamento. O réu que consente com a reparação feita em seu nome preenchem o requisito 4 do art. 16 CP. O que importa é que a reparação seja atribuível ao réu, não quem a realizou materialmente. Essa posição do STJ é relevante especialmente em casos de réus presos preventivamente ou com poucos recursos para efetuar pagamento direto.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">09</span>O peculato admite o art. 16 CP? O pagamento extingue a punibilidade?</div>
+      <div class="prova-item-a"><strong>O peculato admite o art. 16 CP</strong> — é crime funcional sem violência ou grave ameaça à pessoa, preenchendo o requisito 1. A devolução dos valores desviados antes do recebimento da denúncia, voluntariamente, configura o art. 16 CP → redução de 1/3 a 2/3 (proporcional ao montante devolvido). <strong>A reparação NÃO extingue a punibilidade</strong> no peculato — diferentemente dos crimes tributários, onde o pagamento integral pode extinguir a punibilidade por lei especial (art. 69 Lei 11.941/09). Para o peculato, o benefício máximo pela reparação é a redução de 2/3 pelo art. 16 CP, não a extinção da punibilidade. STJ consolidado nesse sentido. É uma distinção importante para provas de magistratura.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">10</span>[ENAM — alta recorrência] A reparou o dano do estelionato praticado contra B. Identifique o instituto aplicável em cada cenário: (a) reparação 3 dias após o crime, antes do inquérito; (b) reparação após a denúncia e antes da sentença; (c) reparação após a sentença condenatória.</div>
+      <div class="prova-item-a"><strong>(a) Reparação 3 dias após o crime, antes do inquérito (e antes do recebimento da denúncia):</strong> Todos os requisitos do art. 16 CP preenchidos (estelionato sem violência + reparação + antes da denúncia + voluntário) → <strong>Arrependimento Posterior — art. 16 CP</strong> → pena reduzida de 1/3 a 2/3 na 3.ª fase da dosimetria (integral = 2/3; parcial = proporcional). <strong>(b) Reparação após o recebimento da denúncia, antes da sentença:</strong> Req. 3 do art. 16 CP não preenchido → art. 16 inaplicável. Mas configura <strong>Atenuante — art. 65, III, "b" CP</strong> → atenua a pena na 2.ª fase da dosimetria (sem percentual mínimo/máximo fixo — STJ: não pode reduzir abaixo do mínimo legal). <strong>(c) Reparação após a sentença condenatória:</strong> Sem benefício penal específico (nem art. 16 nem atenuante). Efeitos apenas civis (satisfação do crédito da vítima). Não há instituto penal que reduza a pena definitiva pela reparação após o trânsito em julgado.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">11</span>O arrependimento posterior é faculdade ou obrigação do juiz quando preenchidos os requisitos?</div>
+      <div class="prova-item-a"><strong>Obrigação.</strong> O arrependimento posterior (art. 16 CP) é <strong>direito subjetivo público do réu</strong> — presentes os 4 requisitos legais, o juiz é obrigado a reconhecê-lo e aplicar a redução de pena de 1/3 a 2/3. Não se trata de mera faculdade judicial. O STJ tem anulado dosimetrias que negam o art. 16 CP quando todos os requisitos estão preenchidos, por violação ao direito subjetivo do réu e ao princípio da proporcionalidade. A omissão injustificada do juiz pode ser corrigida por habeas corpus (que reconhece a ilegalidade da dosimetria) ou por recurso especial.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">12</span>O crime de estelionato mediante cheque sem fundos (art. 171, §2.º, VI, CP) admite o art. 16 CP com o pagamento do cheque?</div>
+      <div class="prova-item-a"><strong>Sim.</strong> O estelionato, inclusive na modalidade mediante cheque sem fundos (art. 171, §2.º, VI, CP), é crime praticado por fraude, sem violência ou grave ameaça à pessoa — preenche o requisito 1 do art. 16 CP. O pagamento do valor do cheque (reparação do dano) antes do recebimento da denúncia, voluntariamente, configura o arrependimento posterior → redução de 1/3 a 2/3. O STJ confirma. <strong>Atenção:</strong> o pagamento do cheque NÃO extingue a punibilidade do estelionato (diferente de crimes tributários). O crime de estelionato mediante cheque sem fundos não se equipara aos crimes tributários para fins de extinção da punibilidade pelo pagamento — a reparação gera apenas a redução do art. 16 CP.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">13</span>[ENAM — questão integrada] Réu primário, condenado por furto simples (art. 155, caput, CP). Pena-base: 1 ano. Sem agravantes/atenuantes. Antes do recebimento da denúncia, devolveu o bem furtado integralmente. Calcule a pena definitiva e identifique o instituto aplicado.</div>
+      <div class="prova-item-a"><strong>Instituto:</strong> Arrependimento Posterior — art. 16 CP. Todos os requisitos preenchidos: furto (sem violência pessoal) + restituição integral + antes da denúncia + voluntário. <strong>Dosimetria:</strong> 1.ª fase: pena-base = 1 ano (circunstâncias neutras). 2.ª fase: sem agravantes/atenuantes = 1 ano. 3.ª fase: art. 16 CP — reparação integral → redução de 2/3. 1 ano − 2/3 = 1 ano − 8 meses = <strong>4 meses de reclusão</strong>. <strong>Execução:</strong> pena de 4 meses → possível substituição por PRD (pena ≤ 4 anos, sem violência) ou sursis (pena ≤ 2 anos). Com 4 meses de reclusão: cabível substituição por PRD (prestação de serviços à comunidade, por exemplo) → o art. 16 CP, ao reduzir a pena, pode viabilizar benefícios que não seriam possíveis com a pena integral de 1 ano.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">14</span>O art. 16 CP aplica-se às leis penais especiais? Dê dois exemplos.</div>
+      <div class="prova-item-a"><strong>Sim.</strong> O art. 16 CP aplica-se às leis penais especiais por força do art. 12 CP (subsidiariedade das regras gerais do CP), salvo quando a lei especial dispõe de modo diverso. Dois exemplos: <strong>1. Crimes Ambientais (Lei 9.605/98):</strong> crimes ambientais sem violência pessoal (ex.: poluição — art. 54; dano a Unidade de Conservação — art. 40) admitem o art. 16 CP. A reparação do dano ambiental antes do recebimento da denúncia pode configurar arrependimento posterior, reduzindo a pena de 1/3 a 2/3. <strong>2. Crimes Tributários (Lei 8.137/90):</strong> a sonegação fiscal, sem violência pessoal, admite o art. 16 CP subsidiariamente. Mas o pagamento integral do tributo antes do recebimento da denúncia pode gerar extinção da punibilidade pela lei especial (art. 69 Lei 11.941/09) — benefício maior. O art. 16 aplica-se quando o pagamento é parcial (sem extinguir a punibilidade).</div>
+    </div>
+
+  </div>
+</section>
+
+</div><!-- /page-wrap -->
+
+<footer>
+  <strong>Art. 16.º do Código Penal Brasileiro</strong> — Decreto-Lei n.º 2.848/1940<br>
+  Material elaborado para preparação à Magistratura / ENAM · Doutrina e jurisprudência consolidadas · Atualizado 2025
+</footer>
+
+</body>
+</html>

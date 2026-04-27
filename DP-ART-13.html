@@ -1,0 +1,1642 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 13º CP — Relação de Causalidade | Magistratura ENAM</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a;
+    --navy-mid: #1a2f45;
+    --navy-light: #243b55;
+    --gold: #c8960c;
+    --gold-light: #e8b84b;
+    --gold-pale: #fdf3d8;
+    --cream: #faf7f2;
+    --cream-mid: #f0ebe2;
+    --text-dark: #1a1208;
+    --text-mid: #3d3020;
+    --text-soft: #6b5c40;
+    --border: #d4c49a;
+    --border-light: #e8dcbf;
+    --red-accent: #8b1a1a;
+    --green-accent: #1a4a2e;
+    --blue-accent: #1a3a5c;
+    --purple-accent: #4a1a5c;
+    --shadow: 0 4px 24px rgba(13,27,42,0.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Source Serif 4', Georgia, serif; background: var(--cream); color: var(--text-dark); font-size: 15px; line-height: 1.75; }
+
+  /* NAV */
+  #top-nav {
+    position: sticky; top: 0; z-index: 999;
+    background: var(--navy); border-bottom: 3px solid var(--gold);
+    padding: 0 1.5rem; display: flex; align-items: center; gap: 0;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  #top-nav::-webkit-scrollbar { display: none; }
+  #top-nav .nav-brand {
+    font-family: 'Playfair Display', serif; color: var(--gold-light);
+    font-size: 0.9rem; font-weight: 700; white-space: nowrap;
+    padding: 0.85rem 1.2rem 0.85rem 0;
+    border-right: 1px solid rgba(200,150,12,0.3); margin-right: 0.5rem; letter-spacing: 0.5px;
+  }
+  #top-nav a {
+    color: rgba(255,255,255,0.75); text-decoration: none;
+    font-size: 0.72rem; font-family: 'Source Serif 4', serif;
+    font-weight: 600; letter-spacing: 0.6px; text-transform: uppercase;
+    padding: 0.85rem 0.8rem; white-space: nowrap;
+    transition: color .2s; border-bottom: 3px solid transparent; margin-bottom: -3px;
+  }
+  #top-nav a:hover { color: var(--gold-light); border-bottom-color: var(--gold); }
+
+  /* HERO */
+  #hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1e3d5c 100%);
+    color: white; padding: 3.5rem 2rem 3rem;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  #hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: repeating-linear-gradient(45deg,
+      rgba(200,150,12,0.03) 0px, rgba(200,150,12,0.03) 1px,
+      transparent 1px, transparent 40px);
+  }
+  #hero .badge {
+    display: inline-block; background: rgba(200,150,12,0.15);
+    border: 1px solid rgba(200,150,12,0.5); color: var(--gold-light);
+    font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase;
+    padding: 0.35rem 1rem; border-radius: 2px; margin-bottom: 1.2rem;
+    font-family: 'Source Serif 4', serif; font-weight: 600;
+  }
+  #hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 0.6rem; letter-spacing: -0.5px; }
+  #hero h1 span { color: var(--gold-light); }
+  #hero .subtitle { font-size: 1rem; color: rgba(255,255,255,0.65); font-style: italic; margin-bottom: 1.5rem; }
+  #hero .law-box {
+    display: inline-block; background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(200,150,12,0.4); border-left: 4px solid var(--gold);
+    color: rgba(255,255,255,0.9); font-family: 'Source Serif 4', serif;
+    font-size: 0.91rem; font-style: italic; padding: 1rem 1.5rem;
+    max-width: 860px; text-align: left; line-height: 1.8; border-radius: 0 4px 4px 0;
+  }
+  #hero .law-box strong { color: var(--gold-light); font-style: normal; display: block; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.4rem; }
+
+  /* LAYOUT */
+  .page-wrap { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+  /* SECTIONS */
+  .section { margin-top: 3.5rem; scroll-margin-top: 56px; }
+  .section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--border); }
+  .section-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--border); line-height: 1; min-width: 2.5rem; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; color: var(--navy); line-height: 1.2; }
+  .section-title span { display: block; font-size: 0.75rem; font-family: 'Source Serif 4', serif; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-style: normal; }
+
+  /* CARDS */
+  .card { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 1.4rem 1.6rem; box-shadow: var(--shadow); }
+  .card-grid { display: grid; gap: 1rem; }
+  .card-grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .card-grid-2 { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+  .card h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.6rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-light); }
+  .card p, .card li { font-size: 0.88rem; line-height: 1.7; color: var(--text-mid); }
+  .card ul { padding-left: 1.1rem; }
+  .card li { margin-bottom: 0.3rem; }
+
+  /* Type cards */
+  .type-card { border-top: 4px solid; }
+  .tc-green { border-top-color: var(--green-accent); } .tc-green h3 { color: var(--green-accent); }
+  .tc-red   { border-top-color: var(--red-accent);   } .tc-red   h3 { color: var(--red-accent);   }
+  .tc-blue  { border-top-color: var(--blue-accent);  } .tc-blue  h3 { color: var(--blue-accent);  }
+  .tc-gold  { border-top-color: var(--gold);          } .tc-gold  h3 { color: #7a5a00;              }
+  .tc-purple{ border-top-color: var(--purple-accent); } .tc-purple h3 { color: var(--purple-accent);}
+
+  /* FLOWCHART */
+  .flow-wrap { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 2rem 1.5rem; box-shadow: var(--shadow); overflow-x: auto; }
+  .flow-center { display: flex; flex-direction: column; align-items: center; gap: 0; }
+  .flow-node { border-radius: 4px; padding: 0.65rem 1.4rem; font-family: 'Source Serif 4', serif; font-size: 0.82rem; font-weight: 600; text-align: center; min-width: 220px; max-width: 540px; }
+  .flow-start  { background: var(--navy); color: white; border-radius: 50px; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; }
+  .flow-end-green  { background: var(--green-accent);  color: white;       border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-end-red    { background: var(--red-accent);    color: white;       border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-end-gold   { background: var(--gold);          color: var(--navy); border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-end-blue   { background: var(--blue-accent);   color: white;       border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-end-purple { background: var(--purple-accent); color: white;       border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-box-navy   { background: var(--navy-mid); color: white; border-left: 4px solid var(--gold); font-size: 0.8rem; }
+  .flow-box-green  { background: #edf7f0; border: 1px solid #7ec89a; border-left: 4px solid var(--green-accent); color: var(--text-dark); }
+  .flow-box-blue   { background: #edf2f8; border: 1px solid #8eb4d8; border-left: 4px solid var(--blue-accent);   color: var(--text-dark); }
+  .flow-box-red    { background: #fdf0f0; border: 1px solid #e09090; border-left: 4px solid var(--red-accent);    color: var(--text-dark); }
+  .flow-box-gold   { background: var(--gold-pale); border: 2px solid var(--gold); color: var(--text-dark); }
+  .flow-box-purple { background: #f3eef8; border: 1px solid #b89dd8; border-left: 4px solid var(--purple-accent); color: var(--text-dark); }
+  .flow-arrow { font-size: 1.3rem; color: var(--border); line-height: 1; margin: 0.15rem 0; }
+  .flow-row { display: flex; align-items: flex-start; gap: 1.5rem; width: 100%; justify-content: center; flex-wrap: wrap; }
+  .flow-branch { display: flex; flex-direction: column; align-items: center; gap: 0; flex: 1; min-width: 175px; }
+  .flow-label { font-size: 0.68rem; color: var(--text-soft); font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; background: var(--cream-mid); padding: 0.15rem 0.5rem; border-radius: 2px; margin: 0.15rem 0; }
+  .flow-connector-line { width: 1px; height: 28px; background: var(--border); }
+
+  /* TABLE */
+  .comp-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; background: white; box-shadow: var(--shadow); border-radius: 6px; overflow: hidden; }
+  .comp-table thead { background: var(--navy); color: white; }
+  .comp-table thead th { padding: 0.85rem 1rem; font-family: 'Source Serif 4', serif; font-weight: 600; letter-spacing: 0.5px; font-size: 0.8rem; text-align: left; }
+  .comp-table thead th:first-child { color: var(--gold-light); }
+  .comp-table tbody tr { border-bottom: 1px solid var(--border-light); }
+  .comp-table tbody tr:last-child { border-bottom: none; }
+  .comp-table tbody tr:nth-child(even) { background: var(--cream); }
+  .comp-table td { padding: 0.75rem 1rem; color: var(--text-mid); vertical-align: top; }
+  .comp-table td:first-child { font-weight: 600; color: var(--navy); font-size: 0.8rem; }
+  .comp-table .hl  td { background: var(--gold-pale) !important; }
+  .comp-table .hl2 td { background: #edf7f0 !important; }
+  .comp-table .hl3 td { background: #edf2f8 !important; }
+  .comp-table .hl4 td { background: #fdf0f0 !important; }
+  .comp-table .hl5 td { background: #f3eef8 !important; }
+
+  /* JURIS */
+  .juris-card { background: white; border: 1px solid var(--border-light); border-left: 5px solid; border-radius: 0 6px 6px 0; padding: 1.2rem 1.4rem; box-shadow: var(--shadow); }
+  .juris-card.stf { border-left-color: var(--red-accent); }
+  .juris-card.stj { border-left-color: var(--navy); }
+  .juris-card.doutrina { border-left-color: var(--gold); }
+  .juris-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
+  .juris-badge { font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 2px; font-family: 'Source Serif 4', serif; }
+  .juris-badge.stf      { background: var(--red-accent); color: white; }
+  .juris-badge.stj      { background: var(--navy);       color: white; }
+  .juris-badge.doutrina { background: var(--gold);        color: var(--navy); }
+  .juris-badge.sumula   { background: var(--green-accent);color: white; }
+  .juris-badge.tese     { background: var(--blue-accent); color: white; }
+  .juris-badge.purple   { background: var(--purple-accent);color:white; }
+  .juris-title { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700; color: var(--navy); }
+  .juris-body  { font-size: 0.84rem; color: var(--text-mid); line-height: 1.7; }
+  .juris-body em { font-style: italic; color: var(--navy); }
+  .juris-grid { display: grid; gap: 1rem; }
+
+  /* ALERTS */
+  .alert { padding: 0.9rem 1.2rem; border-radius: 4px; font-size: 0.84rem; line-height: 1.7; display: flex; gap: 0.7rem; align-items: flex-start; }
+  .alert-gold   { background: var(--gold-pale); border: 1px solid #d4aa3a; color: #5a4000; }
+  .alert-red    { background: #fdf0f0;           border: 1px solid #e09090; color: #5a0000; }
+  .alert-navy   { background: #f0f4f8;           border: 1px solid #abc;    color: var(--navy); }
+  .alert-green  { background: #edf7f0;           border: 1px solid #7ec89a; color: #1a4a2e; }
+  .alert-purple { background: #f3eef8;           border: 1px solid #b89dd8; color: var(--purple-accent); }
+  .alert-icon   { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.05rem; }
+  .alert strong { font-weight: 700; }
+
+  /* PROVA */
+  .prova-section { background: var(--navy); border-radius: 8px; padding: 2rem; color: white; margin-top: 3.5rem; scroll-margin-top: 56px; }
+  .prova-section h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--gold-light); margin-bottom: 0.5rem; }
+  .prova-section .intro { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; font-style: italic; }
+  .prova-items { display: grid; gap: 0.75rem; }
+  .prova-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(200,150,12,0.25); border-left: 4px solid var(--gold); border-radius: 0 4px 4px 0; padding: 1rem 1.2rem; }
+  .prova-item-q { font-size: 0.82rem; font-weight: 600; color: var(--gold-light); margin-bottom: 0.4rem; display: flex; align-items: flex-start; gap: 0.6rem; }
+  .prova-item-q .qnum { background: var(--gold); color: var(--navy); font-size: 0.65rem; font-weight: 700; padding: 0.1rem 0.45rem; border-radius: 2px; flex-shrink: 0; margin-top: 0.1rem; }
+  .prova-item-a { font-size: 0.82rem; color: rgba(255,255,255,0.8); line-height: 1.65; }
+  .prova-item-a strong { color: white; }
+
+  /* TAGS */
+  .tag { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; margin: 0.1rem; font-family: 'Source Serif 4', serif; }
+  .tag-blue   { background: #dce8f5; color: var(--blue-accent); }
+  .tag-green  { background: #dceee3; color: var(--green-accent); }
+  .tag-gold   { background: var(--gold-pale); color: #7a5a00; border: 1px solid #d4aa3a; }
+  .tag-red    { background: #fde8e8; color: var(--red-accent); }
+  .tag-purple { background: #ece5f5; color: var(--purple-accent); }
+
+  /* EXAMPLE BOX */
+  .example-box { background: var(--navy-mid); color: white; border-radius: 6px; padding: 1.2rem 1.4rem; font-size: 0.84rem; line-height: 1.75; }
+  .example-box .ex-title { color: var(--gold-light); font-weight: 700; font-family: 'Playfair Display', serif; font-size: 0.95rem; margin-bottom: 0.5rem; }
+  .example-box .ex-calc { background: rgba(200,150,12,0.12); border: 1px solid rgba(200,150,12,0.3); border-radius: 4px; padding: 0.7rem 1rem; margin-top: 0.7rem; font-family: 'JetBrains Mono', monospace; font-size: 0.79rem; color: var(--gold-light); white-space: pre-wrap; }
+
+  /* LAW QUOTE */
+  .law-quote { background: var(--cream-mid); border-left: 4px solid var(--navy); padding: 0.9rem 1.2rem; font-size: 0.88rem; font-style: italic; color: var(--text-mid); line-height: 1.7; border-radius: 0 4px 4px 0; }
+  .law-quote strong { font-style: normal; color: var(--navy); font-size: 0.75rem; letter-spacing: 0.5px; display: block; margin-bottom: 0.25rem; }
+
+  /* DIVIDER */
+  .divider { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); margin: 1.2rem 0; }
+
+  /* TEORIA GRID */
+  .teoria-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.85rem; }
+  .teoria-card { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 1rem 1.2rem; box-shadow: var(--shadow); border-top: 3px solid; }
+  .teoria-card h4 { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+  .teoria-card p, .teoria-card li { font-size: 0.82rem; color: var(--text-mid); line-height: 1.6; }
+  .teoria-card ul { padding-left: 1rem; }
+  .t-red    { border-top-color: var(--red-accent);    } .t-red    h4 { color: var(--red-accent);    }
+  .t-blue   { border-top-color: var(--blue-accent);   } .t-blue   h4 { color: var(--blue-accent);   }
+  .t-green  { border-top-color: var(--green-accent);  } .t-green  h4 { color: var(--green-accent);  }
+  .t-gold   { border-top-color: var(--gold);           } .t-gold   h4 { color: #7a5a00;               }
+  .t-purple { border-top-color: var(--purple-accent);  } .t-purple h4 { color: var(--purple-accent);  }
+  .t-adot   { border: 2px solid var(--gold); background: var(--gold-pale); grid-column: 1/-1; } .t-adot h4 { color: #7a5a00; }
+
+  /* CONCAUSA VISUAL */
+  .concausa-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+  .cc-box { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 1rem 1.2rem; box-shadow: var(--shadow); }
+  .cc-box h4 { font-family: 'Playfair Display', serif; font-size: 0.92rem; font-weight: 700; margin-bottom: 0.5rem; padding-bottom: 0.4rem; border-bottom: 2px solid; }
+  .cc-box p, .cc-box li { font-size: 0.81rem; color: var(--text-mid); line-height: 1.6; }
+  .cc-box ul { padding-left: 1rem; margin-top: 0.4rem; }
+  .cc-box li { margin-bottom: 0.25rem; }
+  .cc-abs-pre  h4 { border-color: var(--red-accent);    color: var(--red-accent);    }
+  .cc-abs-con  h4 { border-color: var(--red-accent);    color: var(--red-accent);    }
+  .cc-abs-sup  h4 { border-color: var(--red-accent);    color: var(--red-accent);    }
+  .cc-rel-pre  h4 { border-color: var(--blue-accent);   color: var(--blue-accent);   }
+  .cc-rel-con  h4 { border-color: var(--blue-accent);   color: var(--blue-accent);   }
+  .cc-rel-sup  h4 { border-color: var(--green-accent);  color: var(--green-accent);  }
+  .badge-imp   { display:inline-block; background:#fde8e8; color:var(--red-accent);   font-size:0.65rem; font-weight:700; padding:0.1rem 0.4rem; border-radius:2px; margin-bottom:0.35rem; }
+  .badge-imp-p { display:inline-block; background:#dce8f5; color:var(--blue-accent);  font-size:0.65rem; font-weight:700; padding:0.1rem 0.4rem; border-radius:2px; margin-bottom:0.35rem; }
+  .badge-ok    { display:inline-block; background:#dceee3; color:var(--green-accent); font-size:0.65rem; font-weight:700; padding:0.1rem 0.4rem; border-radius:2px; margin-bottom:0.35rem; }
+
+  /* GARANTIDOR */
+  .gar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.85rem; }
+  .gar-card { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 1rem 1.2rem; border-left: 4px solid; box-shadow: var(--shadow); }
+  .gar-card h4 { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.35rem; }
+  .gar-card p, .gar-card li { font-size: 0.82rem; color: var(--text-mid); line-height: 1.6; }
+  .gar-card ul { padding-left: 1rem; margin-top: 0.3rem; }
+  .gar-card li { margin-bottom: 0.25rem; }
+  .gar-a { border-left-color: var(--red-accent);   } .gar-a h4 { color: var(--red-accent);   }
+  .gar-b { border-left-color: var(--blue-accent);  } .gar-b h4 { color: var(--blue-accent);  }
+  .gar-c { border-left-color: var(--green-accent); } .gar-c h4 { color: var(--green-accent); }
+
+  /* FOOTER */
+  footer { background: var(--navy); color: rgba(255,255,255,0.45); text-align: center; padding: 1.5rem; font-size: 0.75rem; border-top: 2px solid var(--gold); }
+  footer strong { color: var(--gold-light); }
+
+  /* PRINT */
+  @media print {
+    #top-nav { display: none; }
+    #hero { padding: 2rem 1rem; }
+    #hero::before { display: none; }
+    .page-wrap { max-width: 100%; padding: 0 0.5rem 2rem; }
+    .section { margin-top: 2rem; page-break-inside: avoid; }
+    .card, .juris-card, .flow-wrap, .example-box { box-shadow: none; border: 1px solid #ccc; }
+    .prova-section { background: #f0f4f8 !important; color: #000 !important; }
+    .prova-section h2 { color: #0d1b2a !important; }
+    .prova-item { background: white !important; border: 1px solid #ccc !important; }
+    .prova-item-q { color: #7a5a00 !important; }
+    .prova-item-a { color: #333 !important; }
+    .example-box { background: #f0f4f8 !important; color: #000 !important; }
+    footer { display: none; }
+    body { font-size: 11pt; }
+  }
+
+  /* MOBILE */
+  @media (max-width: 640px) {
+    #hero { padding: 2rem 1rem; }
+    #hero h1 { font-size: 1.6rem; }
+    .card-grid-3, .card-grid-2 { grid-template-columns: 1fr; }
+    .section-title { font-size: 1.1rem; }
+    .comp-table { font-size: 0.76rem; }
+    .comp-table td, .comp-table th { padding: 0.55rem 0.65rem; }
+    .flow-node { min-width: 150px; font-size: 0.74rem; }
+  }
+
+  /* MISC */
+  .mt1 { margin-top: 0.75rem; }
+  .mt2 { margin-top: 1rem; }
+  .mt3 { margin-top: 1.5rem; }
+  .flex-gap { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: flex-start; }
+  strong { font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="top-nav" aria-label="Atalhos do artigo">
+  <div class="nav-brand">Art. 13º CP</div>
+
+  <div class="nav-main-links">
+    <a href="#visao-geral">Visão Geral</a>
+    <a href="#caput">Caput — Causalidade</a>
+    <a href="#teorias">Teorias Causais</a>
+    <a href="#concausas">Concausas</a>
+    <a href="#par1">§1.º Superv. Indep.</a>
+    <a href="#par2">§2.º Omissão</a>
+    <a href="#garantidor">Posição Garantidor</a>
+    <a href="#imputacao">Imputação Objetiva</a>
+    <a href="#fluxograma">Fluxograma</a>
+    <a href="#comparativo">Comparativo</a>
+    <a href="#exemplos">Exemplos</a>
+    <a href="#jurisprudencia">Juris. STF/STJ</a>
+    <a href="#doutrina">Doutrina</a>
+    <a href="#sistematica">Sistemática</a>
+    <a href="#prova" class="nav-prova">Prova</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="hero">
+  <div class="badge">Código Penal · Título II · Do Crime · Capítulo I</div>
+  <h1>Art. 13º — <span>Relação de Causalidade</span></h1>
+  <p class="subtitle">Nexo Causal · Teoria da Equivalência · Concausas · Omissão · Garantidor · Imputação Objetiva · Magistratura · ENAM</p>
+  <div class="law-box">
+    <strong>Art. 13.º do Decreto-Lei n.º 2.848/1940 (Código Penal)</strong>
+    "O resultado, de que depende a existência do crime, somente é imputável a quem lhe deu causa. Considera-se causa a ação ou omissão sem a qual o resultado não teria ocorrido.<br>
+    <span style="font-style:normal;color:rgba(255,255,255,0.55);font-size:0.78rem;">§ 1.º</span> A superveniência de causa relativamente independente exclui a imputação quando, por si só, produziu o resultado; os fatos anteriores, entretanto, imputam-se a quem os praticou.<br>
+    <span style="font-style:normal;color:rgba(255,255,255,0.55);font-size:0.78rem;">§ 2.º</span> A omissão é penalmente relevante quando o omitente devia e podia agir para evitar o resultado. O dever de agir incumbe a quem:<br>
+    &nbsp;&nbsp;<span style="color:var(--gold-light);font-style:normal;">a)</span> tenha por lei obrigação de cuidado, proteção ou vigilância;<br>
+    &nbsp;&nbsp;<span style="color:var(--gold-light);font-style:normal;">b)</span> de outra forma, assumiu a responsabilidade de impedir o resultado;<br>
+    &nbsp;&nbsp;<span style="color:var(--gold-light);font-style:normal;">c)</span> com seu comportamento anterior, criou o risco da ocorrência do resultado."
+  </div>
+</header>
+
+<div class="page-wrap">
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 1. VISÃO GERAL                            -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="visao-geral">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div class="section-title"><span>Introdução &amp; Estrutura</span>Visão Geral do Artigo</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📍 Finalidade e Posição Sistemática</h3>
+      <p>O art. 13 CP integra o <strong>Capítulo I do Título II da Parte Geral</strong> ("Da Relação de Causalidade") e é o dispositivo mais fundamental da teoria do crime no ordenamento penal brasileiro. Ele delimita <strong>quem pode ser responsabilizado por um resultado típico</strong>, respondendo à pergunta essencial: qual conduta, entre todas que precederam o resultado, é juridicamente relevante para fins penais?</p>
+      <p class="mt2">O artigo possui <strong>três núcleos normativos</strong>: (1) o caput, que consagra a teoria da equivalência das condições e define o nexo causal; (2) o §1.º, que regula as causas supervenientes relativamente independentes e seu efeito sobre a imputação; e (3) o §2.º, que disciplina a omissão penalmente relevante e os deveres de garantidor — tornando a omissão equivalente à ação.</p>
+    </div>
+    <div class="card">
+      <h3>🏛️ Estrutura do Art. 13 CP e Conceitos-Chave</h3>
+      <ul>
+        <li><strong>Caput, 1.ª parte:</strong> princípio da causalidade — só é imputável quem deu causa ao resultado</li>
+        <li><strong>Caput, 2.ª parte:</strong> teoria da <em>conditio sine qua non</em> (equivalência das condições) — causa = ação/omissão sem a qual o resultado não teria ocorrido</li>
+        <li><strong>§1.º:</strong> exceção à equivalência — causa superveniente relativamente independente que por si só produziu o resultado → interrompe o nexo causal</li>
+        <li><strong>§2.º, caput:</strong> omissão penalmente relevante — quando havia dever E possibilidade de agir</li>
+        <li><strong>§2.º, "a":</strong> dever legal (garantidor por lei)</li>
+        <li><strong>§2.º, "b":</strong> dever assumido voluntariamente (garantidor por assunção)</li>
+        <li><strong>§2.º, "c":</strong> dever decorrente de conduta anterior criadora de risco (garantidor por ingerência)</li>
+        <li><strong>Teoria moderna correlata:</strong> Imputação Objetiva (Roxin/Jakobs) — complementa a teoria causal</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-3 mt2">
+    <div class="card type-card tc-green">
+      <h3>🟢 Caput — Nexo Causal</h3>
+      <p>Consagra a <em>conditio sine qua non</em>: causa é toda ação ou omissão sem a qual o resultado não teria ocorrido. Utiliza o <strong>processo hipotético de eliminação de Thyrén</strong>: suprime mentalmente a conduta — se o resultado desaparece, há nexo causal; se persiste, não há nexo.</p>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>🔴 §1.º — Causa Superveniente</h3>
+      <p>Exceção ao caput: quando a causa superveniente é relativamente independente e <strong>por si só produziu o resultado</strong>, rompe o nexo causal dos fatos anteriores. Os fatos anteriores continuam imputáveis ao agente — mas apenas até onde chegaram (tentativa, lesão etc.).</p>
+    </div>
+    <div class="card type-card tc-blue">
+      <h3>🔵 §2.º — Omissão Relevante</h3>
+      <p>A omissão só gera responsabilidade penal quando o omitente: (a) <em>devia</em> agir (dever jurídico de garantidor) E (b) <em>podia</em> agir (capacidade concreta de evitar o resultado). Sem qualquer desses requisitos, a omissão é penalmente irrelevante.</p>
+    </div>
+  </div>
+
+  <div class="alert alert-gold mt2">
+    <div class="alert-icon">⭐</div>
+    <div><strong>Fundamento Constitucional — Responsabilidade Penal Subjetiva e Princípio da Culpabilidade:</strong> O art. 13 CP tem assento constitucional no princípio da culpabilidade (derivado da dignidade da pessoa humana — art. 1.º, III, CF/88) e no princípio da individualização da pena (art. 5.º, XLVI, CF/88). Ao exigir nexo causal entre a conduta e o resultado, o CP proíbe a responsabilidade penal objetiva — vedando que alguém seja punido por resultado que não causou. O STF e o STJ reafirmam sistematicamente: <strong>não há responsabilidade penal objetiva no Brasil</strong>.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 2. CAPUT — TEORIA DA EQUIVALÊNCIA         -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="caput">
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div class="section-title"><span>Art. 13, Caput — Análise Profunda</span>Teoria da Equivalência das Condições (Conditio Sine Qua Non)</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🟢 Conceito de Causa — "Conditio Sine Qua Non"</h3>
+      <p style="margin-bottom:0.6rem;">O caput do art. 13 CP define causa como <strong>toda ação ou omissão sem a qual o resultado não teria ocorrido</strong>. Esta é a teoria da equivalência das condições, ou <em>conditio sine qua non</em>: todas as condições que, somadas, produziram o resultado são equivalentes entre si — nenhuma tem valor causal superior às demais.</p>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.83rem;line-height:1.8;">
+        <strong style="color:var(--gold-light);">Processo Hipotético de Eliminação de Thyrén:</strong>
+        <p style="margin-top:0.4rem;">1. Identifique a conduta do agente</p>
+        <p>2. <em>Elimine mentalmente</em> essa conduta do cenário fático</p>
+        <p>3. <strong>Se o resultado desaparece</strong> → a conduta <em>É CAUSA</em> do resultado (há nexo causal)</p>
+        <p>4. <strong>Se o resultado persiste</strong> → a conduta <em>NÃO É CAUSA</em> do resultado (sem nexo causal)</p>
+      </div>
+      <div class="alert alert-gold mt2" style="font-size:0.81rem;">
+        <div>⭐ <strong>Limitação da Teoria:</strong> A teoria da equivalência, sozinha, leva ao regressus ad infinitum — todo antecedente causal seria causa do resultado (quem fabricou a arma seria causa do homicídio?). Por isso, a teoria da equivalência é <strong>limitada pelo dolo e pela culpa</strong>: além do nexo causal, exige-se que o agente tenha agido com dolo ou culpa em relação ao resultado.</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📋 Elementos do Nexo Causal — O Que a Lei Exige</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">Para imputar o resultado a um agente, o art. 13 CP exige a conjugação de <strong>quatro elementos</strong>:</p>
+      <div style="display:flex;flex-direction:column;gap:0.45rem;margin-top:0.5rem;">
+        <div style="background:var(--cream-mid);border-left:3px solid var(--green-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--green-accent);">1. Conduta (ação ou omissão):</strong> comportamento humano voluntário — base sobre a qual incide a análise causal
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--blue-accent);">2. Resultado naturalístico:</strong> modificação no mundo exterior exigida pelo tipo penal (apenas nos crimes materiais — formais e de mera conduta dispensam resultado para consumação, mas o nexo ainda une conduta e evento)
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">3. Nexo causal:</strong> relação de causalidade entre conduta e resultado — testada pelo processo hipotético de Thyrén (conditio sine qua non)
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--gold);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:#7a5a00;">4. Tipicidade (dolo ou culpa):</strong> limitador da teoria causal — sem dolo ou culpa, o nexo causal físico não gera imputação penal (proibição da responsabilidade objetiva)
+        </div>
+      </div>
+      <div class="alert alert-navy mt2" style="font-size:0.8rem;">
+        <div>📌 <strong>Crimes Formais e de Mera Conduta:</strong> Nesses tipos, o resultado naturalístico é dispensável para a consumação — mas a conduta ainda deve estar ligada à descrição típica. O nexo causal, aqui, une a conduta ao resultado jurídico (lesão ou perigo ao bem jurídico), não necessariamente a um resultado naturalístico.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 3. TEORIAS CAUSAIS                        -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="teorias">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div class="section-title"><span>Dogmática Penal — Alta Cobrança</span>Teorias sobre o Nexo Causal</div>
+  </div>
+
+  <div class="teoria-grid">
+    <div class="teoria-card t-red">
+      <h4>🔴 Teoria da Equivalência das Condições</h4>
+      <ul>
+        <li><strong>Fórmula:</strong> <em>conditio sine qua non</em> — causa = toda condição sem a qual o resultado não teria ocorrido</li>
+        <li><strong>Método:</strong> processo hipotético de eliminação (Thyrén)</li>
+        <li><strong>Vantagem:</strong> simples e objetiva; fácil aplicação prática</li>
+        <li><strong>Problema:</strong> regressus ad infinitum; amplíssima — tudo é causa do resultado; limitada pelo dolo e culpa para evitar absurdos</li>
+        <li><strong>Origem:</strong> Von Buri (1873); Glaser</li>
+        <li style="color:var(--green-accent);font-weight:700;">✅ ADOTADA pelo CP brasileiro — art. 13, caput</li>
+      </ul>
+    </div>
+
+    <div class="teoria-card t-blue">
+      <h4>🔵 Teoria da Causalidade Adequada</h4>
+      <ul>
+        <li><strong>Fórmula:</strong> causa = condição que é <em>adequada</em> para produzir o resultado, segundo a experiência geral (<em>ex ante</em>)</li>
+        <li><strong>Método:</strong> prognose póstuma objetiva — julgamento a partir do que um observador médio, no lugar do agente no momento da ação, consideraria previsível como apto a produzir o resultado</li>
+        <li><strong>Vantagem:</strong> evita o regressus infinito; seleciona causas relevantes</li>
+        <li><strong>Problema:</strong> subjetividade na determinação do que é "adequado"; insuficiência dogmática</li>
+        <li><strong>Origem:</strong> Von Kries (1888)</li>
+        <li style="color:var(--text-soft);">⚠️ Não adotada como teoria principal no CP — mas influencia a imputação objetiva</li>
+      </ul>
+    </div>
+
+    <div class="teoria-card t-green">
+      <h4>🟢 Teoria da Relevância Jurídica</h4>
+      <ul>
+        <li><strong>Fórmula:</strong> causa = condição que é <em>juridicamente relevante</em> para o resultado típico; distingue causa (fática) de imputação (normativa)</li>
+        <li><strong>Método:</strong> verificação da conditio sine qua non + análise da relevância jurídica segundo o tipo penal</li>
+        <li><strong>Vantagem:</strong> incorpora o tipo penal na análise causal; mais refinada que a equivalência pura</li>
+        <li><strong>Origem:</strong> Mezger</li>
+        <li style="color:var(--text-soft);">⚠️ Não adotada pelo CP — mas precursora da imputação objetiva</li>
+      </ul>
+    </div>
+
+    <div class="teoria-card t-purple">
+      <h4>🟣 Teoria da Imputação Objetiva (Roxin/Jakobs)</h4>
+      <ul>
+        <li><strong>Fórmula:</strong> além do nexo causal, o resultado só é imputável ao agente se: (1) houve criação de um risco juridicamente proibido; (2) o resultado foi realização desse risco; e (3) o resultado está no âmbito de proteção da norma</li>
+        <li><strong>Critérios de exclusão:</strong> (a) diminuição do risco; (b) risco permitido; (c) ausência de criação de risco; (d) resultado fora do âmbito de proteção da norma</li>
+        <li><strong>Origem:</strong> Roxin (1970); desenvolvida por Jakobs, Schünemann</li>
+        <li><strong>No Brasil:</strong> não expressamente adotada no CP, mas reconhecida pela doutrina majoritária (Masson, Greco, Bitencourt) e aplicada pelo STJ em casos específicos</li>
+        <li style="color:var(--gold);font-weight:700;">⭐ Relevante para provas de magistratura de alto nível</li>
+      </ul>
+    </div>
+
+    <div class="teoria-card t-adot">
+      <h4>⭐ Posição do CP Brasileiro e para o Concurso</h4>
+      <p style="font-size:0.83rem;color:var(--text-mid);">O CP brasileiro adota expressamente a <strong>teoria da equivalência das condições</strong> (caput do art. 13 — <em>conditio sine qua non</em>), <strong>limitada pelo dolo e pela culpa</strong>. O §1.º do art. 13 é uma exceção pontual à teoria da equivalência, prevista expressamente pelo legislador. A <strong>teoria da imputação objetiva</strong> de Roxin não foi incorporada ao texto legal, mas é reconhecida pela doutrina majoritária brasileira como elemento complementar para casos complexos — especialmente na exclusão da imputação por risco permitido e resultado fora do âmbito de proteção da norma. <strong>Para concursos de magistratura:</strong> adote a teoria da equivalência como posição expressa do CP (art. 13, caput), mencione a limitação pelo dolo/culpa, apresente a imputação objetiva como critério doutrinário complementar não expressamente codificado.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 4. CONCAUSAS                              -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="concausas">
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <div class="section-title"><span>Causas Independentes — Alta Cobrança</span>Concausas: Causas Absolutamente e Relativamente Independentes</div>
+  </div>
+
+  <div class="alert alert-navy" style="margin-bottom:1rem;">
+    <div class="alert-icon">ℹ️</div>
+    <div><strong>O que são concausas?</strong> Concausas são causas que contribuem para o resultado juntamente com a conduta do agente. Podem ser <em>absolutamente independentes</em> (não têm qualquer relação com a conduta do agente) ou <em>relativamente independentes</em> (têm alguma relação com a conduta, mas não são determinadas por ela). A classificação das concausas em preexistentes, concomitantes e supervenientes é o ponto mais cobrado em provas de magistratura sobre o art. 13 CP.</div>
+  </div>
+
+  <h3 style="font-family:'Playfair Display',serif;color:var(--red-accent);font-size:1.05rem;margin-bottom:0.75rem;">🔴 Causas Absolutamente Independentes — Excluem o Nexo Causal (Agente responde apenas pelos atos praticados)</h3>
+  <div class="concausa-grid">
+    <div class="cc-box cc-abs-pre">
+      <h4>Preexistente Absoluta</h4>
+      <span class="badge-imp">EXCLUI O NEXO CAUSAL</span>
+      <p><strong>Conceito:</strong> A causa já existia antes da conduta do agente e, por si só, produziu o resultado, sem qualquer relação com a conduta.</p>
+      <ul>
+        <li><strong>Exemplo clássico:</strong> A envenena B antes de C efetuar disparos. B morre pelo veneno, não pelos tiros.</li>
+        <li>C (que atirou) não responde pelo homicídio consumado — responde apenas por tentativa de homicídio</li>
+        <li>A (que envenenou) responde pelo homicídio consumado</li>
+        <li><strong>Método de Thyrén:</strong> eliminando a conduta de C, o resultado (morte por veneno) persiste → C não causou a morte</li>
+      </ul>
+    </div>
+    <div class="cc-box cc-abs-con">
+      <h4>Concomitante Absoluta</h4>
+      <span class="badge-imp">EXCLUI O NEXO CAUSAL</span>
+      <p><strong>Conceito:</strong> A causa ocorre simultaneamente à conduta do agente, mas de forma completamente independente, e por si só produziu o resultado.</p>
+      <ul>
+        <li><strong>Exemplo:</strong> A atira em B no exato momento em que B sofre um infarto fulminante. B morre pelo infarto, não pelo disparo.</li>
+        <li>A não responde pelo homicídio consumado — responde por tentativa de homicídio</li>
+        <li><strong>Raridade prática:</strong> concausa concomitante absolutamente independente é rara, mas teoricamente relevante</li>
+      </ul>
+    </div>
+    <div class="cc-box cc-abs-sup">
+      <h4>Superveniente Absoluta</h4>
+      <span class="badge-imp">EXCLUI O NEXO CAUSAL</span>
+      <p><strong>Conceito:</strong> A causa surge após a conduta do agente, de forma completamente independente, e por si só produziu o resultado.</p>
+      <ul>
+        <li><strong>Exemplo:</strong> A atira em B e o acerta gravemente. No hospital, um incêndio (sem relação com o disparo) mata B antes que ele falecesse pelos ferimentos.</li>
+        <li>A responde por tentativa de homicídio (ou lesão corporal grave) — não pelo homicídio consumado</li>
+        <li><strong>Atenção:</strong> se o incêndio fosse consequência dos ferimentos (ex.: curto-circuito no respirador hospitalar em razão dos ferimentos), seria causa relativamente independente — não absoluta</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 style="font-family:'Playfair Display',serif;color:var(--blue-accent);font-size:1.05rem;margin:1.2rem 0 0.75rem;">🔵 Causas Relativamente Independentes — Regra: Mantém o Nexo; Exceção (§1.º): Exclui se superveniente por si só produz o resultado</h3>
+  <div class="concausa-grid">
+    <div class="cc-box cc-rel-pre">
+      <h4>Preexistente Relativa</h4>
+      <span class="badge-imp-p">MANTÉM O NEXO CAUSAL</span>
+      <p><strong>Conceito:</strong> Condição preexistente na vítima que contribui para o resultado, mas que se relaciona com a conduta do agente.</p>
+      <ul>
+        <li><strong>Exemplo clássico — Hemofilia:</strong> A desfere golpe leve em B, que tem hemofilia. B morre por hemorragia incontrolável. A responde pelo <strong>homicídio consumado</strong></li>
+        <li><strong>Regra aplicável:</strong> teoria da <em>actio libera</em> e do "princípio do resultado concreto" — o agente responde pelo resultado efetivamente produzido, incluindo as condições pessoais da vítima</li>
+        <li><strong>Princípio:</strong> <em>"quem atira no que está, e não no que acha que está"</em> — o agente assume os riscos das condições especiais da vítima</li>
+        <li>Causa preexistente relativa NUNCA rompe o nexo causal</li>
+      </ul>
+    </div>
+    <div class="cc-box cc-rel-con">
+      <h4>Concomitante Relativa</h4>
+      <span class="badge-imp-p">MANTÉM O NEXO CAUSAL</span>
+      <p><strong>Conceito:</strong> Causa que ocorre ao mesmo tempo que a conduta do agente e tem relação com ela, contribuindo para o resultado.</p>
+      <ul>
+        <li><strong>Exemplo:</strong> A atira em B. Simultaneamente, B sofre parada cardíaca em razão do susto/dor dos ferimentos. B morre pela conjugação do disparo + parada cardíaca</li>
+        <li>A responde pelo <strong>homicídio consumado</strong> — a parada cardíaca foi desencadeada pela conduta de A</li>
+        <li>Causa concomitante relativa NUNCA rompe o nexo causal</li>
+        <li><strong>Diferença da concomitante absoluta:</strong> na relativa, há nexo entre a causa concomitante e a conduta do agente</li>
+      </ul>
+    </div>
+    <div class="cc-box cc-rel-sup">
+      <h4>Superveniente Relativa — Art. 13, §1.º</h4>
+      <span class="badge-ok">§1.º — REGRA ESPECIAL</span>
+      <p><strong>Conceito:</strong> Causa que surge DEPOIS da conduta do agente, com alguma relação com ela. É o único caso regulado expressamente pelo §1.º CP.</p>
+      <ul>
+        <li><strong>Regra geral (pela equivalência):</strong> manteria o nexo causal</li>
+        <li><strong>Exceção do §1.º:</strong> se a causa superveniente relativamente independente produziu <em>por si só</em> o resultado → exclui a imputação do homicídio consumado; mantém imputação pelos atos anteriores</li>
+        <li><strong>Exemplo — STJ:</strong> A atira em B; no transporte hospitalar, a ambulância capota e B morre no acidente. A responde por tentativa de homicídio (não pelo homicídio consumado)</li>
+        <li><strong>Exemplo — mesmo nexo:</strong> A atira em B; no hospital, B contrai infecção hospitalar (típica de curativos de ferimentos de bala) e morre. A responde pelo <strong>homicídio consumado</strong> — a infecção está dentro do desdobramento normal da conduta de A</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert alert-red mt2">
+    <div class="alert-icon">🔴</div>
+    <div><strong>Critério do STJ e da Doutrina para o §1.º — "Desdobramento Normal vs. Causa Nova":</strong> A causa superveniente relativamente independente que <em>por si só</em> produz o resultado (rompendo o nexo — §1.º CP) é aquela que representa um <strong>novo encadeamento causal</strong>, não mero desdobramento normal (previsível) da conduta do agente. O critério é a <em>previsibilidade objetiva</em>: a infecção hospitalar decorrente de ferimento a bala É desdobramento normal → nexo mantido. A ambulância que capota, um incêndio no hospital NÃO são desdobramentos normais → §1.º exclui imputação pelo resultado final. Este é o ponto mais cobrado em provas sobre o art. 13 CP.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 5. §1.º CAUSA SUPERVENIENTE              -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="par1">
+  <div class="section-header">
+    <div class="section-num">05</div>
+    <div class="section-title"><span>Art. 13, §1.º — Análise Completa</span>Superveniência de Causa Relativamente Independente</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📋 Requisitos do §1.º CP</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">Para que o §1.º do art. 13 CP produza a exclusão da imputação pelo resultado final, devem estar presentes <strong>três requisitos cumulativos</strong>:</p>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;margin-top:0.5rem;">
+        <div style="background:var(--cream-mid);border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">1. Superveniente:</strong> a causa deve surgir DEPOIS da conduta do agente — não antes (preexistente) nem simultaneamente (concomitante)
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--blue-accent);">2. Relativamente independente:</strong> a causa tem alguma relação com a conduta do agente (não é absolutamente independente — se fosse, a teoria da equivalência já excluiria o nexo sem precisar do §1.º)
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--green-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--green-accent);">3. Por si só produziu o resultado:</strong> a causa superveniente deve ser suficiente, por ela mesma, para produzir o resultado — constitui um novo e autônomo encadeamento causal
+        </div>
+      </div>
+      <div class="alert alert-gold mt2" style="font-size:0.81rem;">
+        <div>⭐ <strong>Consequência do §1.º:</strong> O agente responde pelos <em>fatos anteriores</em> que praticou (ex.: tentativa de homicídio, ou lesão corporal consumada — conforme o caso) — mas NÃO responde pelo resultado final (morte) que foi produzido pela causa superveniente independente.</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>⚖️ §1.º × Teoria da Imputação Objetiva — Convergência</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">O §1.º do art. 13 CP pode ser interpretado como uma positivação parcial da teoria da imputação objetiva de Roxin: a causa superveniente que "por si só produziu o resultado" representa um <strong>risco novo e autônomo</strong>, não criado pela conduta do agente — que não pode ser imputado a ele.</p>
+      <div class="divider"></div>
+      <p style="font-size:0.85rem;color:var(--text-mid);">Doutrina (Greco, Masson): o §1.º é uma exceção legislativa expressa à teoria da equivalência, funcionando como limitador normativo da causalidade — semelhante ao que a teoria da imputação objetiva faz de forma mais sistemática e abrangente.</p>
+      <div class="divider"></div>
+      <ul style="font-size:0.83rem;">
+        <li><strong>Casos em que o §1.º NÃO se aplica (desdobramento normal):</strong> infecção hospitalar decorrente de ferimento, embolia pulmonar pós-operatória decorrente de cirurgia provocada pelos ferimentos, choque anafilático ao anestésico necessário para cirurgia dos ferimentos</li>
+        <li><strong>Casos em que o §1.º SE aplica (nova causa):</strong> acidente da ambulância; incêndio no hospital sem relação com os ferimentos; erro médico grosseiro autônomo (STJ — debate específico)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card mt2">
+    <h3>⚡ Debate: Erro Médico e o §1.º CP — Alta Cobrança</h3>
+    <div class="card-grid card-grid-3 mt1">
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Posição 1 (STJ majoritário):</strong> O erro médico <em>grave e autônomo</em> (ex.: médico aplica medicamento errado por negligência extrema, não relacionado ao tratamento dos ferimentos) pode ser considerado causa superveniente relativamente independente que por si só produz o resultado → §1.º CP → agente original responde por tentativa, não por homicídio consumado.</p>
+      </div>
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Posição 2 (Doutrina majoritária — Greco, Masson):</strong> O erro médico, ainda que grave, é desdobramento previsível do quadro criado pelo agente — que leva a vítima a precisar de cirurgia e fica sujeita aos riscos médicos. Apenas o erro médico <em>doloso</em> (médico intencionalmente mata a vítima) constituiria causa superveniente por si só → §1.º CP.</p>
+      </div>
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Posição 3 (Nucci, Bitencourt):</strong> Distingue: erro médico oriundo da cirurgia necessária para os ferimentos = desdobramento normal (mantém nexo). Erro médico em cirurgia absolutamente não relacionada aos ferimentos = causa nova (§1.º exclui imputação pelo resultado).</p>
+        <div class="alert alert-gold mt1" style="font-size:0.78rem;"><div>⭐ Para prova: mencione as posições, adote a majoritária do STJ (erro médico grave autônomo → §1.º CP) mas registre a controvérsia doutrinária.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 6. §2.º OMISSÃO PENALMENTE RELEVANTE     -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="par2">
+  <div class="section-header">
+    <div class="section-num">06</div>
+    <div class="section-title"><span>Art. 13, §2.º — Crimes Omissivos Impróprios</span>Omissão Penalmente Relevante</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔵 Conceito e Estrutura da Omissão Penalmente Relevante</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.6rem;">O §2.º do art. 13 CP regula os <strong>crimes omissivos impróprios</strong> (comissivos por omissão). A omissão por si só é fato causalmente neutro — não altera o mundo fático. Portanto, a responsabilização pela omissão exige um elemento normativo extra: o <strong>dever jurídico de agir</strong> (posição de garantidor).</p>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.83rem;line-height:1.85;">
+        <strong style="color:var(--gold-light);">Dois requisitos cumulativos (§2.º, caput):</strong>
+        <p style="margin-top:0.4rem;">1. <strong>DEVIA agir</strong> → dever jurídico de garantidor (posição de garantidor — art. 13, §2.º, "a", "b" ou "c")</p>
+        <p>2. <strong>PODIA agir</strong> → capacidade concreta de evitar o resultado no caso específico</p>
+        <p style="margin-top:0.4rem;color:var(--gold-light);font-style:italic;">Sem AMBOS: omissão é penalmente irrelevante</p>
+        <p>A omissão → equivalente à ação → crime omissivo impróprio = crime de resultado</p>
+      </div>
+      <div class="alert alert-red mt2" style="font-size:0.81rem;">
+        <div>🔴 <strong>Omissivos Próprios × Impróprios:</strong> Crimes omissivos <em>próprios</em> (ex.: omissão de socorro — art. 135 CP) são tipificados diretamente pela omissão, sem exigir posição de garantidor — o tipo penal descreve a omissão. Crimes omissivos <em>impróprios</em> (ou comissivos por omissão) decorrem do art. 13, §2.º CP: o agente ocupa posição de garantidor e, ao omitir-se, equivale ao agente que pratica a ação criminosa.</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📋 Distinção entre Omissão Própria e Imprópria</h3>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.82rem;">
+          <thead style="background:var(--navy);color:white;">
+            <tr>
+              <th style="padding:0.5rem 0.7rem;text-align:left;">Critério</th>
+              <th style="padding:0.5rem 0.7rem;text-align:left;">Omissão Própria</th>
+              <th style="padding:0.5rem 0.7rem;text-align:left;">Omissão Imprópria (Art. 13, §2.º)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:0.5rem 0.7rem;font-weight:700;">Tipificação</td><td style="padding:0.5rem 0.7rem;">Tipo penal específico descrevendo a omissão</td><td style="padding:0.5rem 0.7rem;">Cláusula geral do art. 13, §2.º CP</td></tr>
+            <tr style="background:var(--cream);"><td style="padding:0.5rem 0.7rem;font-weight:700;">Garantidor</td><td style="padding:0.5rem 0.7rem;">Não exigido — qualquer pessoa pode ser sujeito ativo</td><td style="padding:0.5rem 0.7rem;">Exigido — somente o garantidor (posição especial)</td></tr>
+            <tr><td style="padding:0.5rem 0.7rem;font-weight:700;">Resultado</td><td style="padding:0.5rem 0.7rem;">Dispensa resultado naturalístico (crime de mera conduta)</td><td style="padding:0.5rem 0.7rem;">Exige resultado que o omitente deveria ter evitado</td></tr>
+            <tr style="background:var(--cream);"><td style="padding:0.5rem 0.7rem;font-weight:700;">Exemplos</td><td style="padding:0.5rem 0.7rem;">Omissão de socorro (art. 135); omissão de notificação de doença (legislação sanitária)</td><td style="padding:0.5rem 0.7rem;">Mãe que não alimenta filho (homicídio por omissão); salva-vidas que não socorre banhista</td></tr>
+            <tr><td style="padding:0.5rem 0.7rem;font-weight:700;">Nexo causal</td><td style="padding:0.5rem 0.7rem;">Normativo — não há causalidade física; a lei cria o vínculo</td><td style="padding:0.5rem 0.7rem;">Também normativo — equiparação da omissão à ação pelo §2.º</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 7. POSIÇÃO DE GARANTIDOR                  -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="garantidor">
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <div class="section-title"><span>Art. 13, §2.º, "a", "b", "c" — Alta Cobrança</span>Posições de Garantidor (Fontes do Dever de Agir)</div>
+  </div>
+
+  <div class="alert alert-gold" style="margin-bottom:1rem;">
+    <div class="alert-icon">⭐</div>
+    <div><strong>Ponto Altamente Cobrado em Magistratura:</strong> As três alíneas do art. 13, §2.º CP definem as fontes do dever de agir — as "posições de garantidor". O candidato deve dominar não apenas o texto legal de cada alínea, mas também os exemplos, as fronteiras e as controvérsias doutrinárias e jurisprudenciais de cada uma. Este é um dos temas mais recorrentes em questões dissertativas e objetivas de concurso para juiz.</div>
+  </div>
+
+  <div class="gar-grid">
+    <div class="gar-card gar-a">
+      <h4>🔴 Alínea "a" — Dever Legal (Garantidor por Lei)</h4>
+      <p style="font-size:0.82rem;color:var(--text-soft);margin-bottom:0.4rem;font-style:italic;">"Tenha por lei obrigação de cuidado, proteção ou vigilância"</p>
+      <p><strong>Conceito:</strong> O dever de agir decorre de norma jurídica expressa — lei em sentido amplo (lei, regulamento, decreto). É a forma mais clara e objetiva de garantidor.</p>
+      <ul>
+        <li><strong>Exemplos clássicos:</strong></li>
+        <li>Pais em relação a filhos menores (ECA + Código Civil — dever de guarda e sustento)</li>
+        <li>Cônjuges entre si (dever de assistência — Código Civil, art. 1.566)</li>
+        <li>Bombeiros em serviço — dever legal de salvar pessoas em perigo</li>
+        <li>Policiais em serviço — dever legal de proteger a integridade física</li>
+        <li>Médicos de plantão em emergência pública — dever legal de atendimento</li>
+        <li>Motoristas de veículos — dever de não expor terceiros a perigo (CTB)</li>
+        <li><strong>Atenção:</strong> o dever deve ser jurídico (não apenas moral ou social); dever moral não configura garantidor por lei</li>
+      </ul>
+    </div>
+    <div class="gar-card gar-b">
+      <h4>🔵 Alínea "b" — Assunção Voluntária (Garantidor por Assunção)</h4>
+      <p style="font-size:0.82rem;color:var(--text-soft);margin-bottom:0.4rem;font-style:italic;">"De outra forma, assumiu a responsabilidade de impedir o resultado"</p>
+      <p><strong>Conceito:</strong> O dever de agir não decorre de lei, mas de conduta voluntária do agente que se comprometeu a proteger determinado bem jurídico ou determinada pessoa.</p>
+      <ul>
+        <li><strong>Exemplos clássicos:</strong></li>
+        <li>Babá contratada para cuidar de criança — assumiu responsabilidade de vigilância</li>
+        <li>Guia de montanha que conduz turistas — assumiu responsabilidade pela segurança do grupo</li>
+        <li>Salva-vidas de clube privado — assumiu responsabilidade de salvar banhistas</li>
+        <li>Médico particular que aceitou atender o paciente — assumiu responsabilidade de cuidado</li>
+        <li>Pessoa que se voluntaria para acompanhar idoso portador de demência</li>
+        <li><strong>Requisito:</strong> a assunção deve ser efetiva e concreta — não meramente declaratória; deve ter criado confiança e levado a vítima a dispensar outras proteções</li>
+      </ul>
+    </div>
+    <div class="gar-card gar-c">
+      <h4>🟢 Alínea "c" — Ingerência (Garantidor por Comportamento Anterior)</h4>
+      <p style="font-size:0.82rem;color:var(--text-soft);margin-bottom:0.4rem;font-style:italic;">"Com seu comportamento anterior, criou o risco da ocorrência do resultado"</p>
+      <p><strong>Conceito:</strong> O dever de agir surge porque o próprio agente, com sua conduta anterior (lícita ou ilícita), criou o risco que ameaça o bem jurídico. A ingerência é a fonte mais complexa e controvertida de garantidor.</p>
+      <ul>
+        <li><strong>Exemplos clássicos:</strong></li>
+        <li>Agente que empurra colega na beira do rio (criou risco de afogamento) → deve salvar</li>
+        <li>Motorista que atropela pedestre por culpa → deve socorrer (além da obrigação do art. 135 CP)</li>
+        <li>Agente que acende fogueira em floresta (criou risco de incêndio) → deve agir para controlar</li>
+        <li><strong>Controvérsia:</strong> se a conduta anterior foi dolosa, o dever de ingerência é discutido — a maioria da doutrina (Masson, Greco) entende que mesmo atos dolosos anteriores criam posição de garantidor por ingerência, ampliando a responsabilidade penal</li>
+        <li><strong>Limitação:</strong> o risco criado deve ser <em>juridicamente proibido e relevante</em> — não qualquer conduta que remotamente contribua para situação de perigo</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card mt2">
+    <h3>⚡ Fronteiras e Controvérsias na Posição de Garantidor</h3>
+    <div class="card-grid card-grid-2 mt1">
+      <div>
+        <p style="font-size:0.85rem;color:var(--text-mid);"><strong style="color:var(--navy);">Dever moral × Dever jurídico:</strong> A obrigação de garantidor deve ser jurídica — não puramente moral. O vizinho que vê um desconhecido se afogando não é garantidor (sem lei, assunção ou ingerência) — sua omissão pode configurar omissão de socorro (art. 135 CP), mas não homicídio por omissão. O irmão adulto que vê o irmão menor se afogando sem qualquer relação de guarda → mesma situação (dever moral, não jurídico).</p>
+      </div>
+      <div>
+        <p style="font-size:0.85rem;color:var(--text-mid);"><strong style="color:var(--navy);">Garantidor e impossibilidade de agir:</strong> Mesmo o garantidor (posição das alíneas "a", "b" ou "c") só responde se PODIA agir concretamente — se havia capacidade real de evitar o resultado no caso concreto. O pai que não sabe nadar e não pode salvar o filho que se afoga sem colocar terceiros em risco imediato: há o dever (alínea "a"), mas não a possibilidade → sem responsabilidade pelo resultado morte. Continua com dever de buscar socorro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 8. IMPUTAÇÃO OBJETIVA                     -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="imputacao">
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <div class="section-title"><span>Teoria Complementar — Alto Nível</span>Imputação Objetiva: Critérios de Exclusão da Imputação</div>
+  </div>
+
+  <div class="alert alert-navy" style="margin-bottom:1rem;">
+    <div class="alert-icon">ℹ️</div>
+    <div>A teoria da imputação objetiva (Roxin, 1970) não foi incorporada ao texto do CP de 1940, mas é amplamente reconhecida pela doutrina e crescentemente aplicada pelo STJ. Ela serve como filtro normativo adicional ao nexo causal físico — excluindo a imputação em casos onde, embora haja nexo causal, a responsabilização seria injusta ou contrária aos fins do direito penal. Sua compreensão é essencial para provas de magistratura de alto nível e para questões dissertativas.</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📐 Critérios da Imputação Objetiva (Roxin)</h3>
+      <p style="font-size:0.84rem;color:var(--text-mid);margin-bottom:0.6rem;">A imputação objetiva exige, além do nexo causal, três verificações:</p>
+      <div style="display:flex;flex-direction:column;gap:0.55rem;">
+        <div style="background:var(--cream-mid);border-left:3px solid var(--red-accent);padding:0.55rem 0.85rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">1. Criação de risco juridicamente proibido:</strong> o agente deve ter criado ou aumentado um risco não permitido pelo direito. Se o risco criado é permitido (ex.: conduzir veículo dentro dos limites legais), não há imputação objetiva mesmo com resultado.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);padding:0.55rem 0.85rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--blue-accent);">2. Realização do risco no resultado:</strong> o resultado deve ser a concretização exatamente do risco proibido criado pelo agente. Se o resultado deriva de outro risco (causalidade alternativa ou desviante), não há imputação.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--green-accent);padding:0.55rem 0.85rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--green-accent);">3. Resultado no âmbito de proteção da norma:</strong> o resultado deve estar no âmbito dos riscos que a norma violada buscava prevenir. Se o resultado, ainda que causado pelo agente, não é o que a norma visava proteger, não há imputação.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📋 Causas de Exclusão da Imputação Objetiva (Roxin)</h3>
+      <div style="display:flex;flex-direction:column;gap:0.45rem;margin-top:0.3rem;">
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);padding:0.45rem 0.7rem;font-size:0.81rem;border-radius:0 4px 4px 0;">
+          <strong>Diminuição do risco:</strong> agente altera o curso causal para reduzir risco já existente. Ex.: A desvia carro que ia atropelar B, causando lesão menor → sem imputação pela lesão (reduziu risco maior).
+        </div>
+        <div style="background:#edf2f8;border-left:3px solid var(--blue-accent);padding:0.45rem 0.7rem;font-size:0.81rem;border-radius:0 4px 4px 0;">
+          <strong>Risco permitido:</strong> a conduta se insere dentro dos riscos socialmente aceitos. Ex.: cirurgião que realiza operação de alto risco com técnica correta → sem imputação pelo resultado morte decorrente do risco inerente.
+        </div>
+        <div style="background:#edf7f0;border-left:3px solid var(--green-accent);padding:0.45rem 0.7rem;font-size:0.81rem;border-radius:0 4px 4px 0;">
+          <strong>Ausência de criação de risco:</strong> a conduta não criou risco novo ou relevante. Ex.: sobrinho que incentiva tio rico a viajar esperando que morra em acidente → sem imputação (risco já existente na viagem).
+        </div>
+        <div style="background:var(--gold-pale);border-left:3px solid var(--gold);padding:0.45rem 0.7rem;font-size:0.81rem;border-radius:0 4px 4px 0;">
+          <strong>Resultado fora do âmbito de proteção da norma:</strong> Ex.: A atropela B com culpa; B, em recuperação, deprime-se e suicida-se → A não responde pelo suicídio de B (suicídio fora do âmbito de proteção das normas de trânsito).
+        </div>
+        <div style="background:#f3eef8;border-left:3px solid var(--purple-accent);padding:0.45rem 0.7rem;font-size:0.81rem;border-radius:0 4px 4px 0;">
+          <strong>Autocolocação em risco (autoposta):</strong> vítima assume conscientemente o risco com plena liberdade. Ex.: passageiro que insiste em andar de moto sem capacete → sem imputação para lesão decorrente da queda em que o capacete teria protegido (STJ — debate).
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt2">
+    <h3>🔗 Imputação Objetiva na Jurisprudência Brasileira</h3>
+    <div class="card-grid card-grid-3 mt1">
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">STJ — Aplicação crescente:</strong> O STJ vem aplicando critérios da imputação objetiva, especialmente o "risco permitido" e o "âmbito de proteção da norma", sem nomear expressamente a teoria. Em crimes culposos de trânsito, o STJ analisa se a conduta criou risco proibido além do inerente ao tráfego. Em casos de transmissão de doenças, analisa se o resultado está no âmbito de proteção da norma.</p>
+      </div>
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Caso clássico — "racha":</strong> No crime de racha (art. 308 CTB), o STJ analisa se a morte do participante (que consentiu no risco) é imputável ao outro participante. Conflito entre imputação objetiva (autoposta em risco: excludente) e teoria da cumplicidade (coautor do racha responde). STJ: responsabiliza todos os participantes — o consentimento da vítima que também é coautora não exclui a imputação.</p>
+      </div>
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Transmissão de HIV:</strong> STJ reconhece que a transmissão dolosa de HIV pode configurar lesão corporal gravíssima ou tentativa de homicídio, conforme o dolo. A imputação objetiva é usada para distinguir os casos em que houve efetiva criação de risco proibido (relação sem preservativo com conhecimento da soropositividade) dos casos de risco permitido (relação com preservativo).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 9. FLUXOGRAMA                             -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="fluxograma">
+  <div class="section-header">
+    <div class="section-num">09</div>
+    <div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma: Análise da Relação de Causalidade — Art. 13 CP</div>
+  </div>
+
+  <div class="flow-wrap">
+    <div class="flow-center">
+
+      <div class="flow-node flow-start">RESULTADO TÍPICO OCORREU — IDENTIFICAR O RESPONSÁVEL</div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 1 — A conduta analisada é AÇÃO ou OMISSÃO?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Identificar a natureza da conduta para aplicar o caminho correto do art. 13 CP</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">AÇÃO (conduta ativa)</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Aplicar art. 13, caput<br>
+            <strong>Teoria da Equivalência</strong><br>
+            <small>Processo hipotético de Thyrén<br>Prosseguir para Passo 2</small>
+          </div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">OMISSÃO (conduta passiva)</div>
+          <div class="flow-node flow-box-blue" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Verificar art. 13, §2.º<br>
+            <strong>É crime omissivo?</strong><br>
+            <small>Próprio → tipo específico<br>Impróprio → §2.º<br>Prosseguir para Passo 6</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 2 [AÇÃO] — Aplicar o Processo Hipotético de Eliminação (Thyrén)</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Elimine mentalmente a conduta do agente: o resultado desaparece? (art. 13, caput — conditio sine qua non)</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">Resultado PERSISTE sem a conduta</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Conduta NÃO é causa<br>
+            <strong>SEM NEXO CAUSAL</strong><br>
+            <small>Agente não responde pelo resultado<br>(pode responder por outro crime)</small>
+          </div>
+          <div class="flow-connector-line" style="height:20px;"></div>
+          <div class="flow-end-gold" style="font-size:0.72rem;">Atipicidade por ausência de nexo</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:120px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">Resultado DESAPARECE sem a conduta</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Conduta É CAUSA do resultado<br>
+            <strong>NEXO CAUSAL PRESENTE</strong><br>
+            <small>Prosseguir para Passo 3<br>(verificar concausas)</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 3 — Existe CONCAUSA? Identificar o tipo</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Outra condição contribuiu para o resultado? É absolutamente ou relativamente independente?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">Sem concausa</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.74rem;text-align:center;min-width:155px;">
+            Nexo simples confirmado<br>Prosseguir para Passo 5<br>(dolo/culpa)
+          </div>
+        </div>
+        <div class="flow-branch">
+          <div class="flow-label">Absolutamente independente</div>
+          <div class="flow-node flow-box-red" style="font-size:0.74rem;text-align:center;min-width:155px;">
+            Rompe nexo causal<br>Agente responde apenas<br>pelos atos praticados<br><small>(tentativa/lesão)</small>
+          </div>
+        </div>
+        <div class="flow-branch">
+          <div class="flow-label">Relativamente independente</div>
+          <div class="flow-node flow-box-blue" style="font-size:0.74rem;text-align:center;min-width:155px;">
+            Verificar se é preexistente,<br>concomitante ou superveniente<br><small>Passo 4 se superveniente</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 4 — Causa Superveniente Relativa: Aplica o §1.º?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">A causa superveniente, relativamente independente, POR SI SÓ produziu o resultado? Ou é mero desdobramento normal da conduta do agente?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">Por si só produziu (§1.º)</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.74rem;text-align:center;min-width:175px;">
+            §1.º exclui imputação do resultado<br>Agente responde pelos fatos anteriores<br><small>Ex.: tentativa de homicídio</small>
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-gold" style="font-size:0.72rem;">Responsabilidade pelos fatos anteriores</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">Desdobramento normal (mantém nexo)</div>
+          <div class="flow-node flow-box-red" style="font-size:0.74rem;text-align:center;min-width:175px;">
+            Nexo causal mantido<br>Agente responde pelo resultado<br><small>Ex.: homicídio consumado</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 5 — Verificar Dolo ou Culpa (Limitação da Equivalência)</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Nexo causal confirmado. O agente agiu com dolo ou culpa em relação ao resultado? (Proibição da responsabilidade objetiva)</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">SEM dolo ou culpa</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.74rem;text-align:center;min-width:175px;">
+            Responsabilidade objetiva<br>vedada no Brasil<br>Fato atípico (sem culpabilidade)
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-gold" style="font-size:0.72rem;">Responsabilidade objetiva — Vedada</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:100px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">COM dolo ou culpa</div>
+          <div class="flow-node flow-box-green" style="font-size:0.74rem;text-align:center;min-width:175px;">
+            <strong>NEXO CAUSAL + TIPICIDADE</strong><br>
+            Imputação do resultado confirmada<br>Prosseguir para análise completa do tipo
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-green" style="font-size:0.72rem;">Nexo causal e imputação confirmados</div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 6 [OMISSÃO] — O Omitente É Garantidor? (Art. 13, §2.º)</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Verificar as três fontes: "a" = dever legal; "b" = assunção voluntária; "c" = ingerência (comportamento anterior criou o risco)</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">NÃO é garantidor</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.74rem;text-align:center;min-width:175px;">
+            Omissão irrelevante para o resultado<br>Verificar omissão própria<br><small>(art. 135 CP — omissão de socorro)</small>
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-blue" style="font-size:0.72rem;">Omissão de socorro (se aplicável)</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">É GARANTIDOR ("a", "b" ou "c")</div>
+          <div class="flow-node flow-box-blue" style="font-size:0.74rem;text-align:center;min-width:175px;">
+            Verificar: PODIA agir?<br>Capacidade concreta de evitar resultado?
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">NÃO PODIA agir</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.74rem;text-align:center;min-width:175px;">
+            Impossibilidade exclui responsabilidade<br>Sem imputação pelo resultado<br><small>Pode haver outros crimes</small>
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-gold" style="font-size:0.72rem;">Impossibilidade — Sem imputação</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:100px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">PODIA agir e não agiu</div>
+          <div class="flow-node flow-box-green" style="font-size:0.74rem;text-align:center;min-width:175px;">
+            <strong>OMISSÃO PENALMENTE RELEVANTE</strong><br>
+            Equipara-se à ação<br>Imputação do resultado
+          </div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-green" style="font-size:0.72rem;">Crime omissivo impróprio consumado</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 10. COMPARATIVO                           -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="comparativo">
+  <div class="section-header">
+    <div class="section-num">10</div>
+    <div class="section-title"><span>Quadro Sinóptico</span>Concausas — Resumo das Consequências Jurídicas</div>
+  </div>
+
+  <div style="overflow-x:auto;">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Tipo de Concausa</th>
+          <th>Definição Essencial</th>
+          <th>Rompe Nexo Causal?</th>
+          <th>Consequência para o Agente</th>
+          <th>Base Legal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hl4">
+          <td>Absolutamente Independente Preexistente</td>
+          <td>Causa anterior, sem relação com a conduta, por si só produz o resultado</td>
+          <td><strong style="color:var(--red-accent);">✅ SIM</strong></td>
+          <td>Responde pelos atos (ex.: tentativa, lesão), NÃO pelo resultado final</td>
+          <td>Art. 13, caput (Thyrén)</td>
+        </tr>
+        <tr>
+          <td>Absolutamente Independente Concomitante</td>
+          <td>Causa simultânea, sem relação com a conduta, por si só produz o resultado</td>
+          <td><strong style="color:var(--red-accent);">✅ SIM</strong></td>
+          <td>Responde pelos atos (ex.: tentativa), NÃO pelo resultado final</td>
+          <td>Art. 13, caput (Thyrén)</td>
+        </tr>
+        <tr class="hl4">
+          <td>Absolutamente Independente Superveniente</td>
+          <td>Causa posterior, sem relação com a conduta, por si só produz o resultado</td>
+          <td><strong style="color:var(--red-accent);">✅ SIM</strong></td>
+          <td>Responde pelos atos (ex.: tentativa), NÃO pelo resultado final</td>
+          <td>Art. 13, caput (Thyrén)</td>
+        </tr>
+        <tr class="hl3">
+          <td>Relativamente Independente Preexistente</td>
+          <td>Condição especial da vítima anterior à conduta, com relação com ela (ex.: hemofilia)</td>
+          <td><strong style="color:var(--green-accent);">❌ NÃO</strong></td>
+          <td>Responde pelo <strong>resultado final</strong> (homicídio consumado)</td>
+          <td>Art. 13, caput</td>
+        </tr>
+        <tr>
+          <td>Relativamente Independente Concomitante</td>
+          <td>Causa simultânea com relação à conduta (ex.: infarto desencadeado pelos ferimentos)</td>
+          <td><strong style="color:var(--green-accent);">❌ NÃO</strong></td>
+          <td>Responde pelo <strong>resultado final</strong> (homicídio consumado)</td>
+          <td>Art. 13, caput</td>
+        </tr>
+        <tr class="hl2">
+          <td>Relat. Independente Superveniente — Desdobramento Normal</td>
+          <td>Causa posterior com relação à conduta que é previsível/esperada (ex.: infecção hospitalar por ferimento)</td>
+          <td><strong style="color:var(--green-accent);">❌ NÃO</strong></td>
+          <td>Responde pelo <strong>resultado final</strong> (homicídio consumado)</td>
+          <td>Art. 13, caput + §1.º, a contrario</td>
+        </tr>
+        <tr class="hl">
+          <td>Relat. Independente Superveniente — Por Si Só Produziu</td>
+          <td>Causa posterior com alguma relação à conduta mas que constitui novo encadeamento causal (ex.: ambulância capota)</td>
+          <td><strong style="color:var(--red-accent);">✅ SIM (§1.º)</strong></td>
+          <td>Responde pelos <strong>fatos anteriores</strong> (tentativa/lesão), NÃO pelo resultado final</td>
+          <td>Art. 13, §1.º CP — regra expressa</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="alert alert-red mt2">
+    <div class="alert-icon">🔴</div>
+    <div><strong>Resumo Mnemônico para o Exame:</strong> <strong>Absolutamente independente</strong> (qualquer momento — pre/con/super) → SEMPRE rompe nexo → responde pelos atos. <strong>Relativamente independente preexistente e concomitante</strong> → NUNCA rompe nexo → responde pelo resultado final. <strong>Relativamente independente superveniente</strong> → DEPENDE: se "por si só" produziu o resultado (§1.º) → rompe nexo; se é desdobramento normal → mantém nexo → responde pelo resultado. O §1.º só trata da superveniente relativamente independente — é a única exceção expressamente prevista.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 11. EXEMPLOS PRÁTICOS                     -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="exemplos">
+  <div class="section-header">
+    <div class="section-num">11</div>
+    <div class="section-title"><span>Casos Concretos Resolvidos</span>Exemplos Práticos do Art. 13 CP</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 1 — Hemofilia (Causa Preexistente Relativa)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A agride B com um soco, causando um corte leve. B é hemofílico (condição que A desconhecia). B morre de hemorragia.</p>
+      <div class="ex-calc">ANÁLISE — Art. 13, caput CP:
+
+Conduta: soco que causou corte (ação de A)
+Causa preexistente relativa: hemofilia de B (anterior à conduta, mas relacionada)
+
+Método de Thyrén:
+Elimina-se o soco → B não morre → SIM, há nexo causal
+
+Tipo de concausa: RELATIVAMENTE INDEPENDENTE PREEXISTENTE
+→ NÃO rompe o nexo causal (regra geral do art. 13, caput)
+
+RESULTADO: A responde pelo homicídio consumado (art. 121 CP)
+Princípio: "quem golpeia o que está, responde pelo resultado concreto"
+O desconhecimento da hemofilia influi na análise do DOLO (homicídio doloso ou lesão corporal seguida de morte?) — não no nexo causal
+
+SE A tinha dolo de matar → homicídio doloso consumado (art. 121 CP)
+SE A tinha apenas dolo de lesionar → lesão corporal seguida de morte (art. 129, §3.º CP) — resultado agravador culposo ✅</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 2 — Ambulância Capota (§1.º — Superveniente por Si Só)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A atira em B com intenção de matar. B é ferido e colocado em ambulância. No percurso, a ambulância capota por acidente de trânsito e B morre no acidente, não pelos ferimentos.</p>
+      <div class="ex-calc">ANÁLISE — Art. 13, §1.º CP:
+
+Conduta: disparo de arma de fogo (ação de A)
+Causa superveniente relativamente independente: capotamento da ambulância
+→ Tem relação com a conduta de A? SIM (B só estava na ambulância por causa dos tiros)
+→ Por si só produziu o resultado? SIM (B não morreria dos ferimentos; morreu do capotamento)
+
+§1.º CP: "superveniência de causa relativamente independente exclui a imputação quando, por si só, produziu o resultado"
+
+RESULTADO: A NÃO responde pelo homicídio consumado
+A responde pelos FATOS ANTERIORES que praticou:
+→ Tentativa de homicídio (art. 121 c/c art. 14, II, CP)
+Pena: 6 a 20 anos → reduzida de 1/3 a 2/3
+
+Motorista da ambulância: verifica-se dolo ou culpa pelo acidente
+→ Se culposo: homicídio culposo (art. 121, §3.º CP) ✅</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 3 — Infecção Hospitalar (Desdobramento Normal — Mantém Nexo)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A atira em B com intenção de matar. B é internado. B contrai infecção hospitalar (sepse) decorrente do ferimento a bala e morre pela infecção.</p>
+      <div class="ex-calc">ANÁLISE — Art. 13, caput e §1.º CP:
+
+Conduta: disparo de arma de fogo (ação de A)
+Causa superveniente relativamente independente: infecção hospitalar/sepse
+→ Tem relação com a conduta de A? SIM (B só foi internado por causa dos tiros)
+→ Por si só produziu o resultado? Análise crucial:
+
+DESDOBRAMENTO NORMAL ou CAUSA NOVA?
+→ Infecção hospitalar em ferimento de bala = desdobramento previsível/esperado
+→ Não constitui evento novo e imprevisível fora do encadeamento causal
+→ NÃO se aplica o §1.º CP
+
+RESULTADO: A responde pelo HOMICÍDIO CONSUMADO (art. 121 CP)
+O nexo causal é mantido porque a infecção é consequência esperada (desdobramento normal) da conduta de A
+
+CONTRASTE: se o hospital incendiasse e B morresse no incêndio → causa superveniente absolutamente independente → rompe nexo → A: tentativa de homicídio ✅</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 4 — Omissão Imprópria do Garantidor (Art. 13, §2.º)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A (mãe) deliberadamente se recusa a alimentar B (filho recém-nascido). B morre de desnutrição.</p>
+      <div class="ex-calc">ANÁLISE — Art. 13, §2.º CP:
+
+Conduta: omissão (não alimentar o filho)
+Tipo de omissão: crimes omissivos IMPRÓPRIOS
+
+Requisito 1 — DEVIA agir (dever jurídico)?
+→ Alínea "a": lei impõe dever de cuidado, proteção e vigilância
+→ ECA (art. 22) + Código Civil (art. 1.634) + art. 1.566, IV, CC
+→ SIM — garantidor por lei
+
+Requisito 2 — PODIA agir?
+→ A tinha plena capacidade de alimentar o filho
+→ Não havia impedimento concreto
+→ SIM — podia agir
+
+Art. 13, §2.º: "A omissão é penalmente relevante quando o omitente devia e podia agir para evitar o resultado"
+
+A omissão EQUIVALE à ação → A responde por:
+→ HOMICÍDIO DOLOSO por omissão (art. 121 CP)
+→ Se dolo direto de matar: homicídio simples ou qualificado (motivo fútil?)
+→ Qualificadora possível: art. 121, §2.º, IV (emprego de meio que resulte em sofrimento) ✅</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 12. JURISPRUDÊNCIA STF/STJ                -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="jurisprudencia">
+  <div class="section-header">
+    <div class="section-num">12</div>
+    <div class="section-title"><span>STF · STJ · Teses Consolidadas</span>Jurisprudência e Posições dos Tribunais Superiores</div>
+  </div>
+
+  <div class="alert alert-navy mt1" style="margin-bottom:1.2rem;">
+    <div class="alert-icon">ℹ️</div>
+    <div>As posições abaixo refletem entendimentos consolidados do STF e STJ sobre relação de causalidade (art. 13 CP). São referenciadas por tema para garantia de <strong>zero alucinação</strong>. O art. 13 CP tem vasta aplicação jurisprudencial, especialmente em homicídios, lesões corporais, crimes omissivos e situações de concausas.</div>
+  </div>
+
+  <div class="juris-grid">
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Causa Superveniente Relativamente Independente — Critério do "Desdobramento Normal" para o §1.º CP</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ consolidou o critério do <strong>"desdobramento normal" (ou "desdobramento causal esperado")</strong> para distinguir quando a causa superveniente relativamente independente rompe o nexo causal (§1.º CP) ou o mantém. O tribunal examina se a causa superveniente representa um encadeamento previsível e esperado da conduta do agente — se sim, não é "por si só" produtora do resultado (nexo mantido); se representa um evento novo e imprevisível fora do curso causal normal, aplica-se o §1.º (imputação excluída).</p>
+        <p class="mt1">Infecção hospitalar decorrente de ferimento: desdobramento normal → nexo mantido → agente responde pelo homicídio consumado. Acidente da ambulância: evento novo e imprevisível → §1.º → agente responde por tentativa. Este é o critério mais cobrado em provas sobre o art. 13 CP.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Art. 13, §1.º CP</span>
+          <span class="tag tag-gold">Desdobramento Normal</span>
+          <span class="tag tag-blue">Causa Superveniente Relativa</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Vedação da Responsabilidade Penal Objetiva — Nexo Causal Limitado pelo Dolo e pela Culpa</div>
+      </div>
+      <div class="juris-body">
+        <p>O STF reafirma sistematicamente que o nexo causal físico (art. 13, caput, CP) não é suficiente, por si só, para a imputação penal — é imprescindível que o agente tenha agido com <strong>dolo ou culpa</strong> em relação ao resultado. A responsabilidade penal objetiva (pelo simples nexo causal, sem dolo ou culpa) é inconstitucional por violar o princípio da culpabilidade (art. 1.º, III, CF/88 — dignidade da pessoa humana) e o princípio da individualização da pena (art. 5.º, XLVI, CF/88).</p>
+        <p class="mt1">O STF aplica esse entendimento especialmente em casos de empresas e grupos criminosos: o mero pertencimento a uma organização ou a posição hierárquica não implica responsabilidade penal objetiva pelo resultado — é necessária a prova da conduta (ação ou omissão) e do dolo ou culpa de cada agente.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Responsabilidade Objetiva — Vedada</span>
+          <span class="tag tag-gold">Princípio da Culpabilidade</span>
+          <span class="tag tag-blue">Art. 1.º, III, CF/88</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Garantidor por Ingerência (§2.º, "c") — Responsabilidade do Criador do Risco</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ reconhece a responsabilidade do garantidor por ingerência (art. 13, §2.º, "c") — aquele que, com seu comportamento anterior, criou o risco da ocorrência do resultado. O tribunal tem aplicado essa posição especialmente em casos de: (a) motoristas que causam acidente e abandonam a vítima; (b) agentes que iniciam situação de risco para terceiros e não tomam providências para evitar o resultado; e (c) pais/tutores que criam situação de perigo para os filhos.</p>
+        <p class="mt1">Ponto relevante: o STJ distingue a responsabilidade por ingerência da omissão de socorro (art. 135 CP). O garantidor por ingerência responde pelo resultado (homicídio, lesão) — não apenas pela omissão de socorro. Quem não é garantidor pode responder apenas por omissão de socorro se não socorrer a vítima.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Garantidor por Ingerência — §2.º, "c"</span>
+          <span class="tag tag-gold">Comportamento Anterior Criador de Risco</span>
+          <span class="tag tag-blue">Omissão Imprópria</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Omissão de Garantidor por Lei — Pais em Relação a Filhos (§2.º, "a")</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ firma que os pais são garantidores de seus filhos menores por força de lei (art. 13, §2.º, "a" CP c/c ECA e Código Civil), respondendo por crimes omissivos impróprios quando, podendo agir, omitem-se e o resultado lesivo ocorre. A jurisprudência é extensa em casos de: maus-tratos seguidos de morte (art. 136 + §3.º CP ou homicídio doloso por omissão), abandono de incapaz (art. 133 CP) e descumprimento do dever de vigilância.</p>
+        <p class="mt1">O STJ exige que se prove não apenas o dever (garantidor por lei) mas também a possibilidade concreta de agir e o nexo causal normativo entre a omissão e o resultado. A mera relação de parentesco não é suficiente se o pai estava impossibilitado de agir (ex.: enfermo, preso em outro lugar) — nesse caso, não há responsabilidade pelo resultado.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Pais — Garantidor por Lei</span>
+          <span class="tag tag-gold">Art. 13, §2.º, "a" CP</span>
+          <span class="tag tag-blue">ECA + Código Civil</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Transmissão de HIV — Nexo Causal e Imputação Objetiva</div>
+      </div>
+      <div class="juris-body">
+        <p>O STF e o STJ convergem no reconhecimento de que a transmissão dolosa de HIV configura crime, embora haja debate sobre o tipo. O nexo causal (art. 13, caput, CP) é verificado: a relação sexual sem proteção com conhecimento da soropositividade é causa da transmissão. Para a imputação, exige-se o elemento subjetivo: dolo de transmitir (lesão corporal gravíssima — art. 129, §2.º, II, CP — ou tentativa de homicídio, conforme o dolo).</p>
+        <p class="mt1">A imputação objetiva é usada pelos tribunais para filtrar os casos: relação sexual com preservativo, uso correto → risco permitido (não há criação de risco proibido relevante). Relação sem preservativo com conhecimento da soropositividade e sem aviso ao parceiro → criação de risco juridicamente proibido → imputação. Esse raciocínio é próximo do critério da imputação objetiva de Roxin, mesmo sem nominá-la.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Transmissão de HIV — Nexo Causal</span>
+          <span class="tag tag-gold">Risco Proibido — Imputação Objetiva</span>
+          <span class="tag tag-blue">Lesão Corporal Gravíssima × Homicídio Tentado</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Erro Médico e §1.º CP — Causa Superveniente Relativamente Independente</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ trata o erro médico como questão de concausa: o erro médico decorrente da cirurgia necessária para tratar ferimentos causados pelo agente não rompe o nexo causal (desdobramento normal). O agente continua respondendo pelo resultado homicídio. Entretanto, o erro médico <em>grosseiro e autônomo</em> — especialmente aquele que não guarda relação direta com o tratamento dos ferimentos — pode ser analisado como causa superveniente relativamente independente que "por si só produziu o resultado" (§1.º CP).</p>
+        <p class="mt1">O STJ não firmou posição absolutamente uniforme sobre o erro médico: há decisões em ambos os sentidos. A posição predominante é que o erro médico culposo, ainda que grave, não rompe o nexo causal se relacionado ao tratamento dos ferimentos. O erro médico doloso (médico que intencionalmente mata a vítima) constitui causa superveniente que por si só produz o resultado → §1.º CP → agente original responde por tentativa.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Erro Médico — §1.º CP</span>
+          <span class="tag tag-gold">Desdobramento Normal × Causa Nova</span>
+          <span class="tag tag-blue">Concausa Superveniente Relativa</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Imputação Objetiva nos Crimes de Trânsito — Risco Permitido e Âmbito de Proteção da Norma</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ aplica critérios da teoria da imputação objetiva (sem nominá-la) em crimes de trânsito: analisa se o condutor criou risco proibido (excesso de velocidade, dirigir embriagado, manobras perigosas) ou se se situava dentro do risco permitido (condução normal dentro dos limites). Somente a criação de risco proibido justifica a imputação do resultado morte ou lesão a título culposo.</p>
+        <p class="mt1">No contexto do "racha" (art. 308 CTB), o STJ firma que todos os participantes respondem pelos resultados decorrentes — inclusive a morte do outro participante — porque todos criaram o risco proibido conjuntamente. O consentimento do co-participante não exclui a imputação, pois o bem jurídico vida é indisponível. Esta é aplicação implícita da teoria da imputação objetiva com rejeição da "autoposta em risco" no âmbito de bens indisponíveis.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Crimes de Trânsito — Imputação Objetiva</span>
+          <span class="tag tag-gold">Risco Permitido × Proibido</span>
+          <span class="tag tag-blue">Racha — Art. 308 CTB</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 13. DOUTRINA                              -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="doutrina">
+  <div class="section-header">
+    <div class="section-num">13</div>
+    <div class="section-title"><span>Doutrina Nacional</span>Principais Posições Doutrinárias</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cleber Masson — Direito Penal Esquematizado</div>
+      </div>
+      <div class="juris-body">
+        <p>Masson apresenta o art. 13 CP com foco sistemático e voltado a concursos. Adota integralmente a teoria da equivalência das condições como posição do CP, com limitação pelo dolo e culpa. Sistematiza as concausas com clareza exemplar, enfatizando: (a) causas absolutamente independentes sempre rompem o nexo; (b) causas relativamente independentes preexistentes e concomitantes nunca rompem; (c) somente a superveniente relativamente independente que "por si só" produz o resultado rompe (§1.º CP). Quanto à imputação objetiva, Masson a reconhece como teoria complementar relevante mas não expressamente adotada — e a aplica para casos como diminuição do risco e risco permitido. Quanto ao garantidor (§2.º), Masson é detalhado na alínea "c" (ingerência), admitindo que tanto atos lícitos quanto ilícitos anteriores podem criar a posição de garantidor.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cezar Roberto Bitencourt — Tratado de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Bitencourt aprofunda a crítica à teoria da equivalência, destacando seu principal problema: o regressus ad infinitum. Defende que a limitação pelo dolo e pela culpa é insuficiente em casos complexos, razão pela qual a teoria da imputação objetiva de Roxin é imprescindível para o direito penal moderno — embora não seja a teoria adotada no texto do CP de 1940. Bitencourt analisa o §1.º CP com rigor, adotando o critério do "desdobramento normal" para distinguir quando a causa superveniente por si só produz o resultado. Quanto ao §2.º, Bitencourt é minucioso nas três alíneas, criticando a doutrina que amplia excessivamente a alínea "c" (ingerência) — para ele, o risco criado pelo comportamento anterior deve ser juridicamente relevante e proibido, não qualquer conduta que contribua remotamente para o perigo.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Rogério Greco — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Greco analisa o art. 13 CP sob a perspectiva constitucional: o nexo causal é exigência do princípio da responsabilidade pessoal e da culpabilidade (art. 1.º, III, CF/88), que proíbe a responsabilidade penal objetiva. Apoia fortemente a teoria da imputação objetiva como complemento à equivalência, destacando que muitos casos de responsabilidade indevida no Brasil decorrem da ausência de aplicação dos critérios de Roxin (risco permitido, âmbito de proteção da norma). Analisa o §2.º CP com destaque para a alínea "b" (assunção voluntária): defende que a assunção de responsabilidade deve ser efetiva — o mero "dever social" (vizinho prestativo) não configura garantidor. É a posição majoritária. Quanto à ingerência (alínea "c"), Greco admite sua configuração tanto por atos lícitos quanto ilícitos.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Guilherme de Souza Nucci — Código Penal Comentado</div>
+      </div>
+      <div class="juris-body">
+        <p>Nucci comenta o art. 13 CP com foco forense, destacando a aplicação prática pelo juiz. Enfatiza que o processo hipotético de eliminação de Thyrén é ferramenta simples e eficaz para a análise causal na sentença penal — mas deve ser sempre complementado pela análise do dolo e da culpa. Quanto às concausas, Nucci é didático na distinção entre absolutamente e relativamente independentes, com exemplos práticos de jurisprudência. Destaca que o §1.º CP é a exceção mais importante ao princípio da equivalência — e que o juiz deve aplicá-lo com cuidado: sua aplicação indevida (considerar como nova causa o que é desdobramento normal) pode resultar em impunidade. Quanto ao §2.º, Nucci reforça que o dever de agir é jurídico — dever moral não configura garantidor.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Controvérsia: Imputação Objetiva foi Adotada pelo CP Brasileiro?</div>
+      </div>
+      <div class="juris-body">
+        <p>Debate central na doutrina brasileira:</p>
+        <ul class="mt1">
+          <li><strong>Posição A — Não adotada expressamente (Masson, Nucci, Greco majoritários):</strong> O CP de 1940 adota a teoria da equivalência (art. 13, caput). A imputação objetiva é teoria doutrinária complementar não positivada. Aplica-se como critério hermenêutico, mas não como norma legal expressa.</li>
+          <li><strong>Posição B — Adotada implicitamente (Bitencourt, Cirino dos Santos):</strong> O §1.º do art. 13 CP é, em essência, uma positivação parcial da imputação objetiva — ao excluir a imputação quando a causa superveniente por si só produz o resultado, o legislador adotou implicitamente o critério de que o risco deve ser realização da conduta do agente.</li>
+          <li><strong>Posição C — STJ (prática):</strong> O STJ aplica critérios da imputação objetiva sem nominá-la, especialmente o risco permitido e o âmbito de proteção da norma, em crimes culposos e de trânsito.</li>
+          <li><strong>Conclusão para concurso:</strong> Adote a Posição A (majoritária), mencionando que o §1.º pode ser visto como positivação parcial. Apresente a imputação objetiva como filtro normativo complementar relevante.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Fernando Capez — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Capez apresenta o art. 13 CP de forma mais didática e simplificada, voltada para concursos públicos em geral. Destaca a importância prática das concausas: as absolutamente independentes (pre/con/super) sempre rompem o nexo e fazem o agente responder apenas pelos atos praticados. As relativamente independentes preexistentes e concomitantes nunca rompem. Apenas a superveniente relativamente independente tem tratamento específico (§1.º) que, por si só, pode romper o nexo. Capez é claro ao delimitar as hipóteses de garantidor: enfatiza que a alínea "a" exige lei em sentido amplo (não moral); a alínea "b" exige assunção efetiva (não promessa informal); e a alínea "c" exige comportamento anterior relevante que tenha efetivamente criado o risco (não qualquer conduta antecedente).</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 14. SISTEMÁTICA                          -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="sistematica">
+  <div class="section-header">
+    <div class="section-num">14</div>
+    <div class="section-title"><span>Conexões Sistemáticas</span>Art. 13 CP na Sistemática do Código Penal</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔗 Artigos Diretamente Conectados ao Art. 13 CP</h3>
+      <ul>
+        <li><strong>Art. 14 CP (Consumação e Tentativa):</strong> o nexo causal é pressuposto da consumação (art. 14, I) — sem nexo, sem consumação; na tentativa (art. 14, II), o nexo causal iniciou mas o resultado não ocorreu</li>
+        <li><strong>Art. 15 CP (Desistência e Arrependimento):</strong> o rompimento do nexo causal por vontade do agente (arrependimento eficaz) exclui o resultado típico — relação direta com a análise causal do art. 13</li>
+        <li><strong>Art. 17 CP (Crime Impossível):</strong> quando o objeto é absolutamente impróprio ou o meio é absolutamente ineficaz, não há nexo causal possível — crime impossível</li>
+        <li><strong>Art. 18 CP (Dolo e Culpa):</strong> limitador da teoria da equivalência — o nexo causal deve ser acompanhado de dolo ou culpa para gerar imputação penal (proibição da responsabilidade objetiva)</li>
+        <li><strong>Art. 19 CP (Resultado Agravador):</strong> "pelo resultado que agrava especialmente a pena, só responde o agente que o houver causado ao menos culposamente" — correlação direta com o nexo causal do art. 13 nos crimes qualificados pelo resultado</li>
+        <li><strong>Art. 29 CP (Concurso de Pessoas):</strong> o coautor e o partícipe devem ter contribuído causalmente para o resultado — nexo de causalidade entre a participação e o crime</li>
+        <li><strong>Art. 135 CP (Omissão de Socorro):</strong> crime omissivo próprio — alternativa quando o omitente não é garantidor; se for garantidor (art. 13, §2.º), responde pelo resultado, não apenas pela omissão de socorro</li>
+        <li><strong>Art. 121 CP (Homicídio):</strong> principal tipo penal onde as questões de nexo causal e concausas são analisadas na prática forense</li>
+        <li><strong>Art. 129, §3.º CP (Lesão corporal seguida de morte):</strong> exemplo paradigmático de crime preterdoloso — nexo causal entre lesão (dolosa) e morte (culposa)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📋 Art. 13 CP × Art. 19 CP — Responsabilidade pelo Resultado Agravador</h3>
+      <div class="law-quote">
+        <strong>Art. 19 CP — Agravação pelo Resultado:</strong>
+        "Pelo resultado que agrava especialmente a pena, só responde o agente que o houver causado ao menos culposamente."
+      </div>
+      <p class="mt2" style="font-size:0.85rem;color:var(--text-mid);">O art. 19 CP é a vedação expressa da responsabilidade penal objetiva para resultados agravadores: o agente só responde pelo resultado agravador se, além do nexo causal (art. 13 CP), existir ao menos culpa em relação a esse resultado. Ex.: lesão corporal seguida de morte (art. 129, §3.º CP) — o agente só responde pela morte se tinha previsibilidade dela (culpa); não basta o nexo causal puro.</p>
+      <div class="alert alert-red mt2" style="font-size:0.8rem;">
+        <div>🔴 <strong>Hemofilia e art. 19 CP:</strong> No caso da vítima hemofílica — se o agente só quis lesionar e a morte foi causalmente produzida (art. 13 CP) mas era completamente imprevisível dado que A desconhecia a hemofilia → art. 19 CP: sem culpa em relação à morte → responsabilidade objetiva vedada → agente responde por lesão corporal (sem o agravador da morte).</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-3 mt2">
+    <div class="card">
+      <h3>⚡ Art. 13 CP e o Processo Penal</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">No processo penal, a análise do nexo causal é central em várias fases:</p>
+      <ul class="mt1" style="font-size:0.84rem;">
+        <li><strong>Inquérito policial:</strong> laudo de exame de corpo de delito e laudo necroscópico estabelecem a causa da morte — base para a análise do nexo causal</li>
+        <li><strong>Denúncia:</strong> MP deve descrever a conduta e o nexo causal com o resultado</li>
+        <li><strong>Pronúncia (Júri):</strong> o juiz analisa nexo causal para pronúncia em homicídio doloso</li>
+        <li><strong>Sentença:</strong> o juiz ou o Júri decide sobre a imputação do resultado, inclusive aplicando o §1.º quando cabível</li>
+        <li><strong>Habeas corpus:</strong> STJ e STF revisam nexo causal para controlar imputação indevida</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🔄 Resumo Mnemônico para Prova</h3>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.82rem;line-height:1.85;">
+        <p><strong style="color:var(--gold-light);">Art. 13, caput → Equivalência</strong><br>
+        ✅ Conditio sine qua non<br>
+        ✅ Método hipotético de Thyrén<br>
+        ✅ Limitado por dolo/culpa</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.5rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Art. 13, §1.º → Exceção (Superveniente)</strong><br>
+        🔴 Por si só → rompe nexo → resp. atos anteriores<br>
+        🟢 Desdobramento normal → mantém nexo</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.5rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Art. 13, §2.º → Garantidor (Omissão)</strong><br>
+        "a" = Dever legal (pais, policiais, bombeiros)<br>
+        "b" = Assunção voluntária (babá, guia, salva-vidas)<br>
+        "c" = Ingerência (criou o risco anteriormente)<br>
+        Devia E Podia → omissão imprópria</p>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📅 Art. 13 CP e Crimes Ambientais</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">O art. 13, §2.º CP tem crescente aplicação em crimes ambientais, especialmente quanto à posição de garantidor:</p>
+      <ul class="mt1" style="font-size:0.84rem;">
+        <li><strong>Diretor de empresa:</strong> pode ser garantidor por lei (legislação ambiental impõe deveres ao gestor) + por assunção (assumiu gestão ambiental)</li>
+        <li><strong>Ingerência:</strong> empresa que emite poluente cria risco → responsável por evitar os danos decorrentes</li>
+        <li><strong>STJ:</strong> analisa nexo causal entre omissão do gestor e dano ambiental para imputar resultado</li>
+        <li><strong>Pessoa jurídica:</strong> responsabilidade penal autônoma em crimes ambientais (art. 3.º Lei 9.605/98) — não é responsabilidade objetiva; exige nexo causal e elemento subjetivo da PJ</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- PROVA / ENAM                              -->
+<!-- ══════════════════════════════════════════ -->
+<section id="prova" class="prova-section">
+  <h2>⚖️ Pontos Cobrados em Magistratura e ENAM</h2>
+  <p class="intro">Questões, teses e pegadinhas recorrentes nos concursos de Juiz de Direito, ENAM e equivalentes relacionadas ao Art. 13 CP.</p>
+
+  <div class="prova-items">
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">01</span>Qual a teoria causal adotada pelo Código Penal brasileiro? Explique o método de aplicação.</div>
+      <div class="prova-item-a">O CP brasileiro adota a <strong>teoria da equivalência das condições</strong> (<em>conditio sine qua non</em>), prevista no art. 13, caput: "Considera-se causa a ação ou omissão sem a qual o resultado não teria ocorrido." O método de aplicação é o <strong>processo hipotético de eliminação de Thyrén</strong>: elimina-se mentalmente a conduta do agente do cenário fático — se o resultado desaparece, há nexo causal; se o resultado persiste, não há nexo. A teoria é <strong>limitada pelo dolo e pela culpa</strong> para evitar o <em>regressus ad infinitum</em> (ex.: o fabricante da arma não responde pelo homicídio praticado com ela, pois não agiu com dolo ou culpa em relação ao resultado específico).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">02</span>Qual a diferença entre causa absolutamente independente e causa relativamente independente? Qual o efeito de cada uma sobre o nexo causal?</div>
+      <div class="prova-item-a"><strong>Causa absolutamente independente:</strong> não tem qualquer relação com a conduta do agente — existe e produz o resultado de forma completamente autônoma. Sempre rompe o nexo causal: pelo processo hipotético de Thyrén, eliminando a conduta do agente, o resultado persiste (produzido pela causa independente) → o agente não causou o resultado → responde apenas pelos atos praticados (ex.: tentativa, lesão). <strong>Causa relativamente independente:</strong> tem alguma relação com a conduta do agente. A regra é a manutenção do nexo — o agente responde pelo resultado final. A exceção é a causa superveniente relativamente independente que "por si só" produziu o resultado (art. 13, §1.º CP) — nesse caso, o nexo é rompido e o agente responde pelos fatos anteriores.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">03</span>O que estabelece o §1.º do art. 13 CP? Qual o critério para sua aplicação?</div>
+      <div class="prova-item-a">O §1.º do art. 13 CP estabelece que <strong>a superveniência de causa relativamente independente exclui a imputação quando, por si só, produziu o resultado</strong>; os fatos anteriores, entretanto, imputam-se a quem os praticou. O critério para aplicação é distinguir se a causa superveniente representa um <strong>desdobramento normal</strong> (previsível) da conduta do agente ou um <strong>novo encadeamento causal</strong>. Se for desdobramento normal: nexo mantido, agente responde pelo resultado final. Se for nova causa autônoma e imprevisível: §1.º se aplica, agente responde pelos fatos anteriores. Exemplo: infecção hospitalar = desdobramento normal → homicídio consumado. Ambulância que capota = causa nova → tentativa de homicídio.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">04</span>A. deu uma facada leve em B. B, hemofílico, morreu por hemorragia. A sabia da hemofilia? Quais as consequências se sabia e se não sabia?</div>
+      <div class="prova-item-a">A hemofilia é causa <strong>preexistente relativamente independente</strong> — nunca rompe o nexo causal (art. 13, caput). A sempre responde pelo resultado (morte). A diferença está no <strong>elemento subjetivo</strong>: <strong>SE A SABIA da hemofilia e quis matar:</strong> homicídio doloso consumado (art. 121 CP) — a hemofilia pode caracterizar "emprego de meio que resulte em sofrimento" (qualificadora?). <strong>SE A NÃO SABIA da hemofilia e apenas quis lesionar:</strong> a morte era imprevisível → não há culpa em relação ao resultado morte (art. 19 CP veda responsabilidade objetiva) → A responde por lesão corporal dolosa (art. 129 CP), não por homicídio. O nexo causal existe, mas sem dolo ou culpa quanto à morte, não há imputação do resultado letal.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">05</span>Quais são as três fontes do dever de agir do garantidor (art. 13, §2.º, "a", "b" e "c")? Dê exemplos de cada uma.</div>
+      <div class="prova-item-a"><strong>Alínea "a" — Dever legal:</strong> o dever decorre de norma jurídica. Exemplos: pais em relação a filhos menores (ECA + Código Civil), cônjuges entre si, bombeiro em serviço, policial em serviço, médico de plantão em emergência pública. <strong>Alínea "b" — Assunção voluntária:</strong> o dever decorre de compromisso voluntário assumido. Exemplos: babá contratada para cuidar de criança, guia de montanha que conduz grupo de turistas, salva-vidas de clube privado, médico particular que aceitou atender paciente. <strong>Alínea "c" — Ingerência:</strong> o dever decorre de comportamento anterior do próprio agente que criou o risco. Exemplos: motorista que atropola pedestre (culpa) e tem dever de socorrê-lo como garantidor; agente que empurra colega na beira do rio (criou o risco de afogamento) e tem dever de salvar; quem acendeu fogueira em mata e tem dever de controlar o incêndio.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">06</span>O que é a teoria da imputação objetiva? O CP a adotou? Qual sua utilidade prática?</div>
+      <div class="prova-item-a">A <strong>teoria da imputação objetiva</strong> (Roxin, 1970) acrescenta ao nexo causal físico três critérios normativos para a imputação: (1) criação de risco juridicamente proibido; (2) realização desse risco no resultado; (3) resultado dentro do âmbito de proteção da norma. O CP de 1940 <strong>não a adotou expressamente</strong> — adota a teoria da equivalência (art. 13, caput). A doutrina majoritária brasileira (Masson, Greco, Bitencourt) reconhece a imputação objetiva como critério complementar relevante mas não codificado. O STJ aplica seus critérios implicitamente. <strong>Utilidade prática:</strong> exclui imputações injustas como: (a) quem vende faca não responde pela facada; (b) motorista que respeita todas as leis e causa acidente imprevisível: risco permitido → sem imputação; (c) resultado fora do âmbito de proteção da norma (ex.: suicídio após acidente causado por outrem).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">07</span>Qual a diferença entre crime omissivo próprio e crime omissivo impróprio? O art. 13 regula qual deles?</div>
+      <div class="prova-item-a"><strong>Crime omissivo próprio:</strong> o tipo penal descreve diretamente a omissão — qualquer pessoa pode ser sujeito ativo, sem exigir posição especial de garantidor. Ex.: omissão de socorro (art. 135 CP). A omissão é a própria conduta típica. <strong>Crime omissivo impróprio (comissivo por omissão):</strong> não há tipo penal específico descrevendo a omissão — ela equivale à ação delitiva porque o agente ocupa posição de garantidor (art. 13, §2.º CP). Ex.: mãe que não alimenta filho → homicídio por omissão. O art. 13, §2.º CP regula os <strong>crimes omissivos impróprios</strong> — estabelece quando a omissão se equipara à ação para fins de imputação do resultado. Ponto de prova: garantidor que se omite responde pelo resultado (homicídio, lesão etc.) — não apenas por omissão de socorro.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">08</span>[ENAM — alta recorrência] A atira em B com intenção de matar. No hospital, um médico aplica o medicamento errado e B morre. A responde pelo homicídio consumado?</div>
+      <div class="prova-item-a">Depende da natureza do erro médico e da análise como concausa superveniente relativamente independente (art. 13, §1.º CP). <strong>Erro médico culposo relacionado ao tratamento dos ferimentos:</strong> desdobramento normal → nexo mantido → A responde pelo <strong>homicídio consumado</strong>. <strong>Erro médico grosseiro e autônomo</strong> (ex.: médico aplica veneno deliberadamente — dolo; ou aplica tratamento completamente equivocado sem relação com os ferimentos de bala): nova causa → §1.º CP → A responde por <strong>tentativa de homicídio</strong>. O critério do STJ (majoritário) é o "desdobramento normal": erro médico culposo no tratamento dos ferimentos → desdobramento previsível → nexo mantido → homicídio consumado. O médico culposo responde separadamente por homicídio culposo (art. 121, §3.º CP). O médico doloso (que intencionalmente mata) → causa nova → §1.º CP → A: tentativa; médico: homicídio doloso.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">09</span>A responsabilidade penal objetiva é admitida no Brasil? Qual o papel do art. 13 CP nessa vedação?</div>
+      <div class="prova-item-a"><strong>Não.</strong> A responsabilidade penal objetiva (pelo simples nexo causal, sem dolo ou culpa) é vedada no Brasil. O fundamento é constitucional: princípio da culpabilidade (derivado da dignidade da pessoa humana — art. 1.º, III, CF/88) e da individualização da pena (art. 5.º, XLVI, CF/88). O papel do art. 13 CP nessa vedação é central: o artigo consagra a teoria da equivalência, mas ela é <strong>limitada pelo dolo e pela culpa</strong> — sem esses elementos subjetivos, o nexo causal físico puro não gera imputação penal. Além disso, o art. 19 CP reforça: "pelo resultado que agrava especialmente a pena, só responde o agente que o houver causado ao menos culposamente." STF e STJ rejeitam sistematicamente condenações baseadas apenas no nexo causal, sem prova do elemento subjetivo.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">10</span>O pai que não sabe nadar e não age para salvar o filho que se afoga comete homicídio por omissão?</div>
+      <div class="prova-item-a"><strong>Análise pelo art. 13, §2.º CP:</strong> Devia agir? SIM — o pai é garantidor por lei (alínea "a": ECA + Código Civil — dever de cuidado e proteção). Podia agir? Aqui reside a resposta: <strong>se o pai não sabe nadar e o resgate direto seria impossível sem colocar sua vida em risco desproporcionalmente</strong> → não podia agir para evitar diretamente a morte. Sem a capacidade de agir, não há responsabilidade pelo resultado morte. O pai, porém, tinha o dever de buscar socorro (chamar terceiros, acionar bombeiros) → se não o fez: pode responder por <strong>omissão de socorro (art. 135 CP)</strong>, crime omissivo próprio que não exige posição de garantidor para qualquer pessoa. <strong>Conclusão:</strong> sem capacidade de agir no resgate direto, o pai não comete homicídio por omissão — mas pode responder por omissão de socorro pela inação total (não chamar socorro).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">11</span>Explique a ingerência (art. 13, §2.º, "c") com exemplo e diga se atos dolosos anteriores também criam a posição de garantidor.</div>
+      <div class="prova-item-a">A <strong>ingerência</strong> (art. 13, §2.º, "c") é a posição de garantidor criada pelo próprio comportamento anterior do agente que gerou o risco. <strong>Exemplo clássico:</strong> A, ao tentar "pregar uma peça" em B, o empurra na beira de um lago. B cai e começa a se afogar. A torna-se garantidor por ingerência → deve agir para salvar B; se não age e B morre → homicídio por omissão. <strong>Atos dolosos anteriores:</strong> a maioria da doutrina (Masson, Greco) e o STJ entendem que <strong>sim</strong> — tanto atos lícitos (empurrar brincando) quanto atos ilícitos (empurrar dolosamente) criam a posição de garantidor por ingerência. Consequência: o agente que agiu dolosamente e depois omite para o resultado ocorrer pode ter sua responsabilidade ampliada. Bitencourt requer que o risco criado seja juridicamente relevante e proibido, o que limitaria a alínea "c" a condutas pelo menos culposas.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">12</span>[ENAM — questão integrada] A, guarda-vidas de clube aquático, vê B (banhista) se afogando mas deliberadamente não age porque odeia B. B morre. Qual o crime praticado por A? Fundamente com base no art. 13 CP.</div>
+      <div class="prova-item-a"><strong>Análise completa via art. 13, §2.º CP:</strong> A omissão de A é penalmente relevante porque: (1) <strong>DEVIA agir:</strong> A é garantidor por assunção voluntária [alínea "b"] — contratado como guarda-vidas, assumiu a responsabilidade de impedir afogamentos. Também pode ser garantidor por lei [alínea "a"] se houver regulamentação legal dos deveres do salva-vidas. (2) <strong>PODIA agir:</strong> A era guarda-vidas qualificado, estava de serviço, B estava em área visível — capacidade concreta de salvar. Conclusão: omissão imprópria — equivale à ação. A responde por <strong>homicídio doloso por omissão</strong> (art. 121 CP) — com dolo direto (deliberadamente não agiu com intenção de que B morresse) ou dolo eventual (assumiu o risco da morte). Possível qualificadora: motivo torpe (art. 121, §2.º, I — ódio à vítima). Pena: reclusão de 12 a 30 anos (homicídio qualificado). Se A tivesse agido por negligência (sem ver B ou por distração): homicídio culposo (art. 121, §3.º CP).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">13</span>O §1.º do art. 13 CP aplica-se às concausas preexistentes e concomitantes absolutamente independentes?</div>
+      <div class="prova-item-a"><strong>Não.</strong> O §1.º do art. 13 CP aplica-se <strong>exclusivamente</strong> às causas <em>supervenientes</em> (posteriores) e <em>relativamente</em> independentes. As causas absolutamente independentes (preexistentes, concomitantes ou supervenientes) já têm o nexo causal excluído pelo próprio caput do art. 13 CP pelo processo hipotético de eliminação de Thyrén: eliminada a conduta do agente, o resultado persiste (pois a causa independente já o produz) → sem nexo causal → sem imputação do resultado. O §1.º foi necessário apenas para a superveniente relativamente independente, porque esta tem alguma relação com a conduta do agente — sem o §1.º, pela teoria da equivalência, o nexo causal seria mantido. O §1.º é, portanto, exceção expressa à teoria da equivalência, aplicável somente à concausa superveniente relativamente independente.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">14</span>Diferencie, com base no art. 13, §2.º CP, os três tipos de garantidor (alínea "a", "b" e "c") e diga em qual deles o dever é mais difícil de delimitar e por quê.</div>
+      <div class="prova-item-a"><strong>Alínea "a" (dever legal):</strong> mais claro e objetivo — exige norma jurídica expressa. Exemplos: pais (ECA, CC), cônjuges (CC art. 1.566), bombeiros, policiais em serviço. <strong>Alínea "b" (assunção voluntária):</strong> exige comprometimento efetivo, concreto e que tenha criado confiança na vítima. Exemplos: babá, guia de montanha, médico que aceitou atender. O dever não nasce de promessa informal — exige assunção real. <strong>Alínea "c" (ingerência):</strong> é a mais difícil de delimitar. O risco criado deve ser: (i) juridicamente relevante (não qualquer conduta remota que contribua para o perigo); (ii) proibido ou pelo menos juridicamente relevante; e (iii) causa próxima do perigo atual. A doutrina divide-se: Masson e Greco admitem ingerência por atos lícitos e ilícitos; Bitencourt exige conduta criadora de risco juridicamente relevante. A alínea "c" é a mais controversa porque amplia significativamente a responsabilização penal por omissão — risco de elasticidade excessiva.</div>
+    </div>
+
+  </div>
+</section>
+
+</div><!-- /page-wrap -->
+
+<footer>
+  <strong>Art. 13.º do Código Penal Brasileiro</strong> — Decreto-Lei n.º 2.848/1940<br>
+  Material elaborado para preparação à Magistratura / ENAM · Doutrina e jurisprudência consolidadas · Atualizado 2025
+</footer>
+
+</body>
+</html>

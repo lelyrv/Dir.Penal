@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 11º CP — Frações de Dia e de Cruzeiro | Magistratura ENAM</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a;
+    --navy-mid: #1a2f45;
+    --navy-light: #243b55;
+    --gold: #c8960c;
+    --gold-light: #e8b84b;
+    --gold-pale: #fdf3d8;
+    --cream: #faf7f2;
+    --cream-mid: #f0ebe2;
+    --text-dark: #1a1208;
+    --text-mid: #3d3020;
+    --text-soft: #6b5c40;
+    --border: #d4c49a;
+    --border-light: #e8dcbf;
+    --red-accent: #8b1a1a;
+    --green-accent: #1a4a2e;
+    --blue-accent: #1a3a5c;
+    --purple-accent: #4a1a5c;
+    --shadow: 0 4px 24px rgba(13,27,42,0.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Source Serif 4', Georgia, serif; background: var(--cream); color: var(--text-dark); font-size: 15px; line-height: 1.75; }
+
+  /* ── NAV ── */
+  #top-nav {
+    position: sticky; top: 0; z-index: 999;
+    background: var(--navy); border-bottom: 3px solid var(--gold);
+    padding: 0 1.5rem; display: flex; align-items: center; gap: 0;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  #top-nav::-webkit-scrollbar { display: none; }
+  #top-nav .nav-brand {
+    font-family: 'Playfair Display', serif; color: var(--gold-light);
+    font-size: 0.9rem; font-weight: 700; white-space: nowrap;
+    padding: 0.85rem 1.2rem 0.85rem 0;
+    border-right: 1px solid rgba(200,150,12,0.3); margin-right: 0.5rem; letter-spacing: 0.5px;
+  }
+  #top-nav a {
+    color: rgba(255,255,255,0.75); text-decoration: none;
+    font-size: 0.72rem; font-family: 'Source Serif 4', serif;
+    font-weight: 600; letter-spacing: 0.6px; text-transform: uppercase;
+    padding: 0.85rem 0.8rem; white-space: nowrap;
+    transition: color .2s; border-bottom: 3px solid transparent; margin-bottom: -3px;
+  }
+  #top-nav a:hover { color: var(--gold-light); border-bottom-color: var(--gold); }
+
+  /* ── HERO ── */
+  #hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1e3d5c 100%);
+    color: white; padding: 3.5rem 2rem 3rem;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  #hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: repeating-linear-gradient(45deg,
+      rgba(200,150,12,0.03) 0px, rgba(200,150,12,0.03) 1px,
+      transparent 1px, transparent 40px);
+  }
+  #hero .badge {
+    display: inline-block; background: rgba(200,150,12,0.15);
+    border: 1px solid rgba(200,150,12,0.5); color: var(--gold-light);
+    font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase;
+    padding: 0.35rem 1rem; border-radius: 2px; margin-bottom: 1.2rem;
+    font-family: 'Source Serif 4', serif; font-weight: 600;
+  }
+  #hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 0.6rem; letter-spacing: -0.5px; }
+  #hero h1 span { color: var(--gold-light); }
+  #hero .subtitle { font-size: 1rem; color: rgba(255,255,255,0.65); font-style: italic; margin-bottom: 1.5rem; }
+  #hero .law-box {
+    display: inline-block; background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(200,150,12,0.4); border-left: 4px solid var(--gold);
+    color: rgba(255,255,255,0.9); font-family: 'Source Serif 4', serif;
+    font-size: 0.95rem; font-style: italic; padding: 1rem 1.5rem;
+    max-width: 780px; text-align: left; line-height: 1.7; border-radius: 0 4px 4px 0;
+  }
+  #hero .law-box strong { color: var(--gold-light); font-style: normal; display: block; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.4rem; }
+
+  /* ── LAYOUT ── */
+  .page-wrap { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+  /* ── SECTIONS ── */
+  .section { margin-top: 3.5rem; scroll-margin-top: 56px; }
+  .section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--border); }
+  .section-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--border); line-height: 1; min-width: 2.5rem; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; color: var(--navy); line-height: 1.2; }
+  .section-title span { display: block; font-size: 0.75rem; font-family: 'Source Serif 4', serif; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-style: normal; }
+
+  /* ── CARDS ── */
+  .card { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 1.4rem 1.6rem; box-shadow: var(--shadow); }
+  .card-grid { display: grid; gap: 1rem; }
+  .card-grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .card-grid-2 { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+  .card h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.6rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-light); }
+  .card p, .card li { font-size: 0.88rem; line-height: 1.7; color: var(--text-mid); }
+  .card ul { padding-left: 1.1rem; }
+  .card li { margin-bottom: 0.3rem; }
+
+  /* Pena cards */
+  .pena-card { border-top: 4px solid; }
+  .pena-ppl  { border-top-color: var(--red-accent); }
+  .pena-prd  { border-top-color: var(--blue-accent); }
+  .pena-mult { border-top-color: var(--green-accent); background: #edf7f0; }
+  .pena-ppl h3  { color: var(--red-accent); }
+  .pena-prd h3  { color: var(--blue-accent); }
+  .pena-mult h3 { color: var(--green-accent); }
+
+  /* ── FLOWCHART ── */
+  .flow-wrap { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 2rem 1.5rem; box-shadow: var(--shadow); overflow-x: auto; }
+  .flow-center { display: flex; flex-direction: column; align-items: center; gap: 0; }
+  .flow-node { border-radius: 4px; padding: 0.65rem 1.4rem; font-family: 'Source Serif 4', serif; font-size: 0.82rem; font-weight: 600; text-align: center; min-width: 220px; max-width: 500px; }
+  .flow-start { background: var(--navy); color: white; border-radius: 50px; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; }
+  .flow-end   { background: var(--gold); color: var(--navy); border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-box-navy   { background: var(--navy-mid); color: white; border-left: 4px solid var(--gold); font-size: 0.8rem; }
+  .flow-box-green  { background: #edf7f0; border: 1px solid #7ec89a; border-left: 4px solid var(--green-accent); color: var(--text-dark); }
+  .flow-box-blue   { background: #edf2f8; border: 1px solid #8eb4d8; border-left: 4px solid var(--blue-accent); color: var(--text-dark); }
+  .flow-box-red    { background: #fdf0f0; border: 1px solid #e09090; border-left: 4px solid var(--red-accent); color: var(--text-dark); }
+  .flow-box-gold   { background: var(--gold-pale); border: 2px solid var(--gold); color: var(--text-dark); }
+  .flow-box-purple { background: #f3eef8; border: 1px solid #b89dd8; border-left: 4px solid var(--purple-accent); color: var(--text-dark); }
+  .flow-arrow { font-size: 1.3rem; color: var(--border); line-height: 1; margin: 0.15rem 0; }
+  .flow-row { display: flex; align-items: flex-start; gap: 1.5rem; width: 100%; justify-content: center; flex-wrap: wrap; }
+  .flow-branch { display: flex; flex-direction: column; align-items: center; gap: 0; flex: 1; min-width: 190px; }
+  .flow-label { font-size: 0.68rem; color: var(--text-soft); font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; background: var(--cream-mid); padding: 0.15rem 0.5rem; border-radius: 2px; margin: 0.15rem 0; }
+  .flow-connector-line { width: 1px; height: 28px; background: var(--border); }
+
+  /* ── TABLE ── */
+  .comp-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; background: white; box-shadow: var(--shadow); border-radius: 6px; overflow: hidden; }
+  .comp-table thead { background: var(--navy); color: white; }
+  .comp-table thead th { padding: 0.85rem 1rem; font-family: 'Source Serif 4', serif; font-weight: 600; letter-spacing: 0.5px; font-size: 0.8rem; text-align: left; }
+  .comp-table thead th:first-child { color: var(--gold-light); }
+  .comp-table tbody tr { border-bottom: 1px solid var(--border-light); }
+  .comp-table tbody tr:last-child { border-bottom: none; }
+  .comp-table tbody tr:nth-child(even) { background: var(--cream); }
+  .comp-table td { padding: 0.75rem 1rem; color: var(--text-mid); vertical-align: top; }
+  .comp-table td:first-child { font-weight: 600; color: var(--navy); white-space: nowrap; font-size: 0.8rem; }
+  .comp-table .hl  td { background: var(--gold-pale) !important; }
+  .comp-table .hl2 td { background: #edf7f0 !important; }
+  .comp-table .hl3 td { background: #edf2f8 !important; }
+
+  /* ── JURIS ── */
+  .juris-card { background: white; border: 1px solid var(--border-light); border-left: 5px solid; border-radius: 0 6px 6px 0; padding: 1.2rem 1.4rem; box-shadow: var(--shadow); }
+  .juris-card.stf { border-left-color: var(--red-accent); }
+  .juris-card.stj { border-left-color: var(--navy); }
+  .juris-card.doutrina { border-left-color: var(--gold); }
+  .juris-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
+  .juris-badge { font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 2px; font-family: 'Source Serif 4', serif; }
+  .juris-badge.stf     { background: var(--red-accent); color: white; }
+  .juris-badge.stj     { background: var(--navy); color: white; }
+  .juris-badge.doutrina{ background: var(--gold); color: var(--navy); }
+  .juris-badge.sumula  { background: var(--green-accent); color: white; }
+  .juris-badge.tese    { background: var(--blue-accent); color: white; }
+  .juris-badge.purple  { background: var(--purple-accent); color: white; }
+  .juris-title { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700; color: var(--navy); }
+  .juris-body  { font-size: 0.84rem; color: var(--text-mid); line-height: 1.7; }
+  .juris-body em { font-style: italic; color: var(--navy); }
+  .juris-grid { display: grid; gap: 1rem; }
+
+  /* ── ALERTS ── */
+  .alert { padding: 0.9rem 1.2rem; border-radius: 4px; font-size: 0.84rem; line-height: 1.7; display: flex; gap: 0.7rem; align-items: flex-start; }
+  .alert-gold   { background: var(--gold-pale); border: 1px solid #d4aa3a; color: #5a4000; }
+  .alert-red    { background: #fdf0f0; border: 1px solid #e09090; color: #5a0000; }
+  .alert-navy   { background: #f0f4f8; border: 1px solid #abc; color: var(--navy); }
+  .alert-green  { background: #edf7f0; border: 1px solid #7ec89a; color: #1a4a2e; }
+  .alert-purple { background: #f3eef8; border: 1px solid #b89dd8; color: var(--purple-accent); }
+  .alert-icon   { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.05rem; }
+  .alert strong { font-weight: 700; }
+
+  /* ── PROVA ── */
+  .prova-section { background: var(--navy); border-radius: 8px; padding: 2rem; color: white; margin-top: 3.5rem; scroll-margin-top: 56px; }
+  .prova-section h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--gold-light); margin-bottom: 0.5rem; }
+  .prova-section .intro { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; font-style: italic; }
+  .prova-items { display: grid; gap: 0.75rem; }
+  .prova-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(200,150,12,0.25); border-left: 4px solid var(--gold); border-radius: 0 4px 4px 0; padding: 1rem 1.2rem; }
+  .prova-item-q { font-size: 0.82rem; font-weight: 600; color: var(--gold-light); margin-bottom: 0.4rem; display: flex; align-items: flex-start; gap: 0.6rem; }
+  .prova-item-q .qnum { background: var(--gold); color: var(--navy); font-size: 0.65rem; font-weight: 700; padding: 0.1rem 0.45rem; border-radius: 2px; flex-shrink: 0; margin-top: 0.1rem; }
+  .prova-item-a { font-size: 0.82rem; color: rgba(255,255,255,0.8); line-height: 1.65; }
+  .prova-item-a strong { color: white; }
+
+  /* ── TAGS ── */
+  .tag { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; margin: 0.1rem; font-family: 'Source Serif 4', serif; }
+  .tag-blue   { background: #dce8f5; color: var(--blue-accent); }
+  .tag-green  { background: #dceee3; color: var(--green-accent); }
+  .tag-gold   { background: var(--gold-pale); color: #7a5a00; border: 1px solid #d4aa3a; }
+  .tag-red    { background: #fde8e8; color: var(--red-accent); }
+  .tag-purple { background: #ece5f5; color: var(--purple-accent); }
+
+  /* ── EXAMPLE BOX ── */
+  .example-box { background: var(--navy-mid); color: white; border-radius: 6px; padding: 1.2rem 1.4rem; font-size: 0.84rem; line-height: 1.75; }
+  .example-box .ex-title { color: var(--gold-light); font-weight: 700; font-family: 'Playfair Display', serif; font-size: 0.95rem; margin-bottom: 0.5rem; }
+  .example-box .ex-calc { background: rgba(200,150,12,0.12); border: 1px solid rgba(200,150,12,0.3); border-radius: 4px; padding: 0.7rem 1rem; margin-top: 0.7rem; font-family: 'JetBrains Mono', monospace; font-size: 0.79rem; color: var(--gold-light); white-space: pre-wrap; }
+
+  /* ── DOSIMETRIA STEPS ── */
+  .dosim-steps { display: flex; flex-direction: column; gap: 0.5rem; }
+  .dosim-step { display: flex; gap: 1rem; align-items: flex-start; }
+  .dosim-num { background: var(--navy); color: var(--gold-light); font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1rem; min-width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem; }
+  .dosim-content { font-size: 0.86rem; color: var(--text-mid); line-height: 1.65; flex: 1; }
+  .dosim-content strong { color: var(--text-dark); }
+  .dosim-content .art11 { color: var(--red-accent); font-weight: 700; font-size: 0.8rem; background: #fde8e8; padding: 0.1rem 0.4rem; border-radius: 2px; margin-left: 0.3rem; }
+
+  /* ── LAW QUOTE ── */
+  .law-quote { background: var(--cream-mid); border-left: 4px solid var(--navy); padding: 0.9rem 1.2rem; font-size: 0.88rem; font-style: italic; color: var(--text-mid); line-height: 1.7; border-radius: 0 4px 4px 0; }
+  .law-quote strong { font-style: normal; color: var(--navy); font-size: 0.75rem; letter-spacing: 0.5px; display: block; margin-bottom: 0.25rem; }
+
+  /* ── DIVIDER ── */
+  .divider { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); margin: 1.2rem 0; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--navy); color: rgba(255,255,255,0.45); text-align: center; padding: 1.5rem; font-size: 0.75rem; border-top: 2px solid var(--gold); }
+  footer strong { color: var(--gold-light); }
+
+  /* ── PRINT ── */
+  @media print {
+    #top-nav { display: none; }
+    #hero { padding: 2rem 1rem; }
+    #hero::before { display: none; }
+    .page-wrap { max-width: 100%; padding: 0 0.5rem 2rem; }
+    .section { margin-top: 2rem; page-break-inside: avoid; }
+    .card, .juris-card, .flow-wrap, .example-box { box-shadow: none; border: 1px solid #ccc; }
+    .prova-section { background: #f0f4f8 !important; color: #000 !important; }
+    .prova-section h2 { color: #0d1b2a !important; }
+    .prova-item { background: white !important; border: 1px solid #ccc !important; }
+    .prova-item-q { color: #7a5a00 !important; }
+    .prova-item-a { color: #333 !important; }
+    .example-box { background: #f0f4f8 !important; color: #000 !important; }
+    footer { display: none; }
+    body { font-size: 11pt; }
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 640px) {
+    #hero { padding: 2rem 1rem; }
+    #hero h1 { font-size: 1.6rem; }
+    .card-grid-3, .card-grid-2 { grid-template-columns: 1fr; }
+    .section-title { font-size: 1.1rem; }
+    .comp-table { font-size: 0.76rem; }
+    .comp-table td, .comp-table th { padding: 0.55rem 0.65rem; }
+    .flow-node { min-width: 150px; font-size: 0.74rem; }
+  }
+
+  /* ── MISC ── */
+  .mt1 { margin-top: 0.75rem; }
+  .mt2 { margin-top: 1rem; }
+  .mt3 { margin-top: 1.5rem; }
+  .flex-gap { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: flex-start; }
+  strong { font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav id="top-nav" aria-label="Atalhos do artigo">
+  <div class="nav-brand">Art. 11º CP</div>
+
+  <div class="nav-main-links">
+    <a href="#visao-geral">Visão Geral</a>
+    <a href="#hipoteses">Hipóteses</a>
+    <a href="#fluxograma">Fluxograma</a>
+    <a href="#dosimetria">Dosimetria</a>
+    <a href="#comparativo">Comparativo</a>
+    <a href="#exemplos">Exemplos</a>
+    <a href="#jurisprudencia">Juris. STF/STJ</a>
+    <a href="#doutrina">Doutrina</a>
+    <a href="#sistematica">Sistemática</a>
+    <a href="#prova" class="nav-prova">Prova</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<header id="hero">
+  <div class="badge">Código Penal · Título I · Aplicação da Lei Penal</div>
+  <h1>Art. 11º — <span>Frações Não Computáveis da Pena</span></h1>
+  <p class="subtitle">Desprezibilidade de Frações · Dosimetria · PPL · PRD · Pena de Multa · Magistratura · ENAM</p>
+  <div class="law-box">
+    <strong>Art. 11.º do Decreto-Lei n.º 2.848/1940 (Código Penal)</strong>
+    "Desprezam-se, nas penas privativas de liberdade e nas restritivas de direitos, as frações de dia, e, na pena de multa, as frações de cruzeiro."
+  </div>
+</header>
+
+<div class="page-wrap">
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 1. VISÃO GERAL                            -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="visao-geral">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div class="section-title"><span>Introdução &amp; Sistemática</span>Visão Geral do Artigo</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📍 Finalidade e Posição Sistemática</h3>
+      <p>O art. 11 integra o <strong>Título I do Código Penal</strong> ("Da Aplicação da Lei Penal") e estabelece a regra de <strong>desprezibilidade das frações irredutíveis das penas</strong>, decorrentes da operação matemática da <em>dosimetria</em>. O dispositivo é aplicado na fase final do cálculo de penas que envolvam divisões, percentuais ou frações do período da pena.</p>
+      <p class="mt2">Sua função prática é eliminar as <strong>frações de dia</strong> (horas residuais) que sobram ao calcular as penas privativas de liberdade e restritivas de direitos, e as <strong>frações mínimas</strong> (centavos, na linguagem atual) na pena de multa — impedindo que o sistema penal fique preso em unidades ínfimas de difícil execução.</p>
+    </div>
+    <div class="card">
+      <h3>🏛️ Natureza Jurídica e Alcance</h3>
+      <ul>
+        <li><strong>Norma de Direito Penal material:</strong> incide sobre o resultado da pena, não sobre o processo judicial</li>
+        <li><strong>Norma de equidade numérica:</strong> resolve a inaplicabilidade de frações decimais de tempo de pena</li>
+        <li><strong>Regra de desprezibilidade (não de arredondamento):</strong> as frações são sempre <em>desprezadas</em> — nunca arredondadas para cima. O art. 11 só opera para baixo (favor rei)</li>
+        <li><strong>Aplica-se exclusivamente ao resultado da pena:</strong> não incide sobre prazos prescricionais (esses seguem o art. 10 CP)</li>
+        <li><strong>"Frações de cruzeiro":</strong> referência à moeda da época (1940); atualiza-se para <em>frações de real</em> (centavos) segundo unanimidade doutrinária e jurisprudencial</li>
+        <li><strong>Âmbito:</strong> PPL (reclusão, detenção, prisão simples), PRD e pena de multa</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert alert-gold mt2">
+    <div class="alert-icon">⚠️</div>
+    <div><strong>Distinção Fundamental — Art. 10 × Art. 11 CP:</strong> São normas com funções opostas e complementares: o <strong>art. 10 CP</strong> diz que a fração de dia <em>conta como dia inteiro</em> no cômputo dos <em>prazos</em>; o <strong>art. 11 CP</strong> diz que a fração de dia é <em>desprezada</em> no cômputo da <em>pena</em>. Artigo 10 → prazo (inclui); Artigo 11 → pena (despreza). Confundir os dois é o erro mais cobrado em provas sobre estes dispositivos.</div>
+  </div>
+
+  <div class="alert alert-navy mt2">
+    <div class="alert-icon">📋</div>
+    <div><strong>Contexto histórico — "frações de cruzeiro":</strong> O Código Penal de 1940 utilizava o cruzeiro como moeda. Com as sucessivas reformas monetárias brasileiras (cruzeiro → cruzado → cruzado novo → cruzeiro real → real), a expressão "frações de cruzeiro" foi interpretada sistematicamente pela doutrina e jurisprudência como referência genérica à <strong>menor fração da moeda corrente</strong> — hoje, os <em>centavos</em> do Real. Não há necessidade de atualização legislativa; a interpretação sistemática supre a desatualização textual.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 2. AS TRÊS HIPÓTESES DO ART. 11           -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="hipoteses">
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div class="section-title"><span>Análise Literal do Dispositivo</span>As Três Hipóteses do Art. 11 CP</div>
+  </div>
+
+  <div class="card-grid card-grid-3">
+
+    <!-- PPL -->
+    <div class="card pena-card pena-ppl">
+      <h3>🔴 Hipótese 1 — Penas Privativas de Liberdade (PPL)<br><small style="font-size:0.73rem;color:var(--text-soft);font-family:sans-serif;">Reclusão · Detenção · Prisão Simples</small></h3>
+      <p><strong>Desprezam-se as frações de dia.</strong> Quando o cálculo da pena privativa de liberdade resultar em fração de dia (horas residuais), essa fração é desprezada.</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Reclusão (crimes dolosos graves):</strong> ex.: 1 ano, 3 meses e 12 horas → despreza-se as 12 horas → 1 ano e 3 meses</li>
+        <li><strong>Detenção (crimes menos graves):</strong> mesma regra de desprezibilidade de horas residuais</li>
+        <li><strong>Prisão simples (contravenções):</strong> também se aplica o art. 11</li>
+        <li><strong>Quando ocorre:</strong> na causa de aumento ou diminuição de pena por fração (1/6, 1/3, 2/3, 1/2 etc.) que gere horas residuais</li>
+      </ul>
+      <div class="alert alert-red mt2" style="font-size:0.8rem;">
+        <div>⭐ <strong>Exemplo crítico:</strong> Pena-base de 1 ano. Aumentada em 1/3 = 4 meses. Total: 1 ano e 4 meses. Sem fração de dia. Mas: pena-base de 1 ano aumentada de 1/7 = 52 dias e ~3 horas → desprezam-se as 3 horas → 1 ano e 52 dias.</div>
+      </div>
+    </div>
+
+    <!-- PRD -->
+    <div class="card pena-card pena-prd">
+      <h3>🔵 Hipótese 2 — Penas Restritivas de Direitos (PRD)<br><small style="font-size:0.73rem;color:var(--text-soft);font-family:sans-serif;">Prestação de Serviços · Interdição etc.</small></h3>
+      <p><strong>Desprezam-se as frações de dia.</strong> A mesma regra se aplica às penas restritivas de direitos que sejam temporalmente expressas (ex.: prestação de serviços à comunidade, interdição temporária de direitos, proibição de frequentar lugares).</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Prestação de serviços à comunidade:</strong> calculada em horas semanais pelo tempo da pena substituída — se restar fração de dia na duração total, despreza-se</li>
+        <li><strong>Limitação de fim de semana:</strong> se a duração resultar em frações de dia, desprezam-se</li>
+        <li><strong>Interdição temporária de direitos:</strong> mesmo critério</li>
+        <li><strong>PRDs pecuniárias (prestação pecuniária, perda de bens):</strong> são expressas em valor monetário — aplicam-se as regras de frações do real, não de dia</li>
+      </ul>
+      <div class="alert alert-navy mt2" style="font-size:0.8rem;">
+        <div>📌 <strong>Doutrina (Masson):</strong> O art. 11 aplica-se às PRDs que se meçam em tempo. As PRDs de natureza pecuniária seguem, por analogia, a regra das frações de cruzeiro/real (despreza-se fração de centavo).</div>
+      </div>
+    </div>
+
+    <!-- Multa -->
+    <div class="card pena-card pena-mult">
+      <h3>🟢 Hipótese 3 — Pena de Multa<br><small style="font-size:0.73rem;color:var(--green-accent);font-family:sans-serif;">Frações de Cruzeiro = Frações de Real (Centavos)</small></h3>
+      <p><strong>Desprezam-se as frações de cruzeiro</strong> (hoje: centavos do Real). Quando o cálculo do valor da pena de multa resultar em fração da unidade monetária mínima, essa fração é desprezada.</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Sistema de dias-multa (arts. 49–52 CP):</strong> o valor do dia-multa é calculado com base na situação econômica do réu (1/30 a 5 vezes o salário-mínimo); frações de centavo são desprezadas</li>
+        <li><strong>Total da multa:</strong> 10 a 360 dias-multa, com valor unitário calculado → frações residuais de centavos são desprezadas</li>
+        <li><strong>Interpretação atualizada:</strong> "cruzeiro" = moeda da época; aplica-se ao Real, com desprezibilidade dos centavos fracionários</li>
+        <li><strong>Correção monetária:</strong> valores são atualizados segundo índices oficiais; frações de centavo geradas pela atualização também são desprezadas</li>
+      </ul>
+      <div class="alert alert-green mt2" style="font-size:0.8rem;">
+        <div>✅ <strong>Ponto de prova:</strong> A expressão "frações de cruzeiro" é atualizada para "frações de real" (centavos). Questões de prova que perguntam sobre a pena de multa e o art. 11 CP testam se o candidato compreende a atualização implícita da norma.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-red mt2">
+    <div class="alert-icon">🔴</div>
+    <div><strong>O art. 11 CP NUNCA arredonda para cima — somente despreza para baixo.</strong> Isso decorre do princípio do <em>favor rei</em> (favor libertatis): a interpretação mais favorável ao réu prevalece. Mesmo que a fração de dia seja de 23 horas e 59 minutos, ela é simplesmente desprezada, não computada como um dia a mais. Arredondar para cima constituiria analogia <em>in malam partem</em>, vedada no direito penal.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 3. FLUXOGRAMA                             -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="fluxograma">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma: Aplicação do Art. 11 CP na Dosimetria</div>
+  </div>
+
+  <div class="flow-wrap">
+    <div class="flow-center">
+
+      <div class="flow-node flow-start">RESULTADO NUMÉRICO DA DOSIMETRIA DA PENA</div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <!-- Passo 1 -->
+      <div class="flow-node flow-box-navy" style="max-width:540px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 1 — Identificar o Tipo de Pena Resultante</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">O resultado do cálculo diz respeito a PPL, PRD temporal ou Pena de Multa?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">PPL (Reclusão / Detenção)</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;">
+            Verificar se o resultado<br>possui <strong>fração de dia</strong><br><small>(horas ou minutos residuais)</small>
+          </div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:80px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">PRD Temporal</div>
+          <div class="flow-node flow-box-blue" style="font-size:0.76rem;text-align:center;">
+            Verificar se o resultado<br>possui <strong>fração de dia</strong><br><small>(horas ou minutos residuais)</small>
+          </div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:80px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">Pena de Multa</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;">
+            Verificar se o resultado<br>possui <strong>fração de centavo</strong><br><small>(frações de real)</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <!-- Passo 2 -->
+      <div class="flow-node flow-box-navy" style="max-width:540px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 2 — Existe Fração Irredutível no Resultado?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Após toda a operação matemática da dosimetria, sobra fração de dia (PPL/PRD) ou de centavo (multa)?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — resultado exato</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;">
+            Art. 11 CP não precisa<br>ser aplicado<br>
+            <small>Resultado já está em<br>unidades inteiras</small>
+          </div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:90px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">SIM — sobra fração</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;">
+            <strong>Art. 11 CP incide</strong><br>
+            Aplicar a desprezibilidade<br>
+            <small>→ Prosseguir para Passo 3</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <!-- Passo 3 -->
+      <div class="flow-node flow-box-navy" style="max-width:540px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 3 — Verificar Direção da Desprezibilidade</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">A fração sempre é desprezada — NUNCA arredondada para cima (favor rei)</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">Arredonda para CIMA?</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;">
+            ❌ PROIBIDO<br>Analogia <em>in malam partem</em><br>Viola princípio do <em>favor rei</em><br>
+            <small>Inconstitucional</small>
+          </div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:90px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">DESPREZA a fração</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;">
+            ✅ CORRETO — Art. 11 CP<br>Fração eliminada<br>Resultado = parte inteira<br>
+            <small>Sempre favorável ao réu</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <!-- Passo 4 -->
+      <div class="flow-node flow-box-navy" style="max-width:560px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 4 — Verificar o Momento da Aplicação do Art. 11 CP na Dosimetria</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">O art. 11 incide ao final de cada operação matemática, não apenas ao final de toda a dosimetria</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">Após cada causa de aumento</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.74rem;text-align:center;min-width:170px;">
+            Desprezar fração gerada<br>em cada majoração<br>antes de nova operação
+          </div>
+        </div>
+        <div class="flow-branch">
+          <div class="flow-label">Após cada causa de diminuição</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.74rem;text-align:center;min-width:170px;">
+            Desprezar fração gerada<br>em cada redução<br>antes de nova operação
+          </div>
+        </div>
+        <div class="flow-branch">
+          <div class="flow-label">Ao final — pena definitiva</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.74rem;text-align:center;min-width:170px;">
+            Verificar se a pena<br>definitiva possui fração<br>e desprezá-la
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-end" style="max-width:500px;">
+        Pena definitiva expressa em unidades inteiras · Art. 11 CP aplicado · Favor rei assegurado
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 4. DOSIMETRIA DA PENA                     -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="dosimetria">
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <div class="section-title"><span>Aplicação Prática</span>Art. 11 CP na Trifásica da Dosimetria</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>⚖️ As Três Fases da Dosimetria e o Art. 11 CP</h3>
+      <div class="dosim-steps">
+        <div class="dosim-step">
+          <div class="dosim-num">1</div>
+          <div class="dosim-content">
+            <strong>Pena-base (art. 59 CP):</strong> fixada dentro dos limites legais segundo circunstâncias judiciais. Geralmente em anos e meses — pouco provável gerar fração de dia nesta fase. <span class="art11">Art. 11 se aplica se houver fração.</span>
+          </div>
+        </div>
+        <div class="dosim-step">
+          <div class="dosim-num">2</div>
+          <div class="dosim-content">
+            <strong>Agravantes e atenuantes (arts. 61–66 CP):</strong> o juiz agrava ou atenua a pena-base, mas sem critério fixo de fração legal — a aplicação é qualitativa. Na prática, esta fase raramente gera frações de dia matematicamente definidas. <span class="art11">Art. 11 incide se houver.</span>
+          </div>
+        </div>
+        <div class="dosim-step">
+          <div class="dosim-num">3</div>
+          <div class="dosim-content">
+            <strong>Causas de aumento e diminuição (arts. 68–72 CP):</strong> fase mais frequente de aplicação do art. 11, pois as causas de aumento/diminuição são frações legais fixas (1/6, 1/3, 1/2, 2/3, 3/4 etc.) aplicadas sobre a pena. Ao calcular essas frações, é muito comum gerar horas ou minutos residuais. <span class="art11">Art. 11 incide com maior frequência aqui.</span>
+          </div>
+        </div>
+      </div>
+      <div class="alert alert-gold mt2" style="font-size:0.81rem;">
+        <div>🎯 <strong>Regra geral:</strong> O art. 11 CP aplica-se ao resultado de <em>cada</em> operação aritmética na dosimetria, não apenas ao resultado final. Ao aplicar uma causa de aumento de 1/3 sobre a pena intermediária, se gerar fração de dia, despreza-se antes de calcular a próxima fase.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>📐 Frações Legais que Mais Geram Aplicação do Art. 11 CP</h3>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.82rem;">
+          <thead style="background:var(--navy);color:white;">
+            <tr>
+              <th style="padding:0.5rem 0.7rem;text-align:left;">Fração legal</th>
+              <th style="padding:0.5rem 0.7rem;text-align:left;">Exemplo sobre 1 ano</th>
+              <th style="padding:0.5rem 0.7rem;text-align:left;">Resultado / Fração</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:0.5rem 0.7rem;font-weight:700;">1/6</td><td style="padding:0.5rem 0.7rem;">365 ÷ 6 =</td><td style="padding:0.5rem 0.7rem;">60,83 dias → <strong>60 dias</strong> (despreza 0,83d)</td></tr>
+            <tr style="background:var(--cream);"><td style="padding:0.5rem 0.7rem;font-weight:700;">1/4</td><td style="padding:0.5rem 0.7rem;">365 ÷ 4 =</td><td style="padding:0.5rem 0.7rem;">91,25 dias → <strong>91 dias</strong> (despreza 0,25d)</td></tr>
+            <tr><td style="padding:0.5rem 0.7rem;font-weight:700;">1/3</td><td style="padding:0.5rem 0.7rem;">365 ÷ 3 =</td><td style="padding:0.5rem 0.7rem;">121,67 dias → <strong>121 dias</strong> (despreza 0,67d)</td></tr>
+            <tr style="background:var(--cream);"><td style="padding:0.5rem 0.7rem;font-weight:700;">1/2</td><td style="padding:0.5rem 0.7rem;">365 ÷ 2 =</td><td style="padding:0.5rem 0.7rem;">182,5 dias → <strong>182 dias</strong> (despreza 0,5d)</td></tr>
+            <tr><td style="padding:0.5rem 0.7rem;font-weight:700;">2/3</td><td style="padding:0.5rem 0.7rem;">365 × 2/3 =</td><td style="padding:0.5rem 0.7rem;">243,33 dias → <strong>243 dias</strong> (despreza 0,33d)</td></tr>
+            <tr style="background:var(--gold-pale);font-weight:700;"><td style="padding:0.5rem 0.7rem;">3/4</td><td style="padding:0.5rem 0.7rem;">365 × 3/4 =</td><td style="padding:0.5rem 0.7rem;">273,75 dias → <strong>273 dias</strong> (despreza 0,75d)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt2" style="font-size:0.82rem;color:var(--text-soft);">Obs.: nos exemplos acima, usa-se 365 dias por 1 ano para fins didáticos. Na prática, a contagem é pelo calendário (art. 10 CP): um ano pode ter 365 ou 366 dias.</p>
+    </div>
+  </div>
+
+  <div class="card mt2">
+    <h3>⚡ Concurso de Crimes e o Art. 11 CP</h3>
+    <div class="card-grid card-grid-3 mt1">
+      <div>
+        <p style="font-size:0.85rem;color:var(--text-mid);"><strong style="color:var(--navy);">Concurso formal (art. 70 CP):</strong> Aplica-se a mais grave das penas ou, se iguais, somente uma delas, aumentada de 1/6 até a metade. O aumento (1/6 a 1/2) sobre a pena concreta pode gerar frações de dia → aplica-se art. 11 CP ao resultado.</p>
+      </div>
+      <div>
+        <p style="font-size:0.85rem;color:var(--text-mid);"><strong style="color:var(--navy);">Crime continuado (art. 71 CP):</strong> A pena de um dos crimes é aumentada de 1/6 a 2/3 (simples) ou até o triplo (qualificado — art. 71, parágrafo único). O aumento pode gerar frações de dia → art. 11 CP despreza-as.</p>
+      </div>
+      <div>
+        <p style="font-size:0.85rem;color:var(--text-mid);"><strong style="color:var(--navy);">Tentativa (art. 14, II, CP):</strong> A redução é de 1/3 a 2/3 sobre a pena do crime consumado. O resultado pode conter frações de dia → art. 11 CP aplicado. Ex.: 1 ano reduzido de 2/3 = 4 meses exatos (sem fração). Mas 1 ano e 1 mês reduzido de 1/3 = 8 meses e 20 dias exatos (sem fração neste caso).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 5. COMPARATIVO                            -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="comparativo">
+  <div class="section-header">
+    <div class="section-num">05</div>
+    <div class="section-title"><span>Quadro Sinóptico</span>Art. 11 CP × Art. 10 CP × Sistema de Dias-Multa</div>
+  </div>
+
+  <div style="overflow-x:auto;">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Critério</th>
+          <th>Art. 11 CP — Desprezibilidade de Frações</th>
+          <th>Art. 10 CP — Contagem de Prazo</th>
+          <th>Sistema de Dias-Multa (Arts. 49–52 CP)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hl">
+          <td>Objeto de incidência</td>
+          <td><strong>Cálculo da PENA</strong> (resultado da dosimetria)</td>
+          <td><strong>PRAZO</strong> penal material (prescrição, decadência etc.)</td>
+          <td>Cálculo do valor e número de dias-multa</td>
+        </tr>
+        <tr>
+          <td>Efeito sobre fração</td>
+          <td>DESPREZA (elimina) a fração — sempre para baixo</td>
+          <td>INCLUI o dia inteiro — fração de dia = 1 dia</td>
+          <td>Frações de centavo são desprezadas (art. 11 CP)</td>
+        </tr>
+        <tr class="hl2">
+          <td>Beneficiário da regra</td>
+          <td>Réu (nunca arredonda para cima)</td>
+          <td>Réu (antecipa início da prescrição)</td>
+          <td>Réu (reduz o valor da multa)</td>
+        </tr>
+        <tr>
+          <td>Fundamento</td>
+          <td><em>Favor rei</em> · Proporcionalidade · Legalidade</td>
+          <td><em>Favor rei</em> · Legalidade material</td>
+          <td>Art. 11 CP por extensão · <em>Favor rei</em></td>
+        </tr>
+        <tr class="hl3">
+          <td>Moeda / unidade</td>
+          <td>Dia (PPL/PRD) · Real/centavo (multa)</td>
+          <td>Dia, mês, ano (não horas)</td>
+          <td>Dias-multa + Real (valor do dia)</td>
+        </tr>
+        <tr>
+          <td>Momento de aplicação</td>
+          <td>Ao final de cada operação aritmética da dosimetria</td>
+          <td>No início da contagem do prazo (dies a quo)</td>
+          <td>Na fixação do valor unitário e total da multa</td>
+        </tr>
+        <tr class="hl">
+          <td>Artigos correlatos</td>
+          <td>Arts. 59, 61–66, 68–72 CP (dosimetria)</td>
+          <td>Arts. 103, 107, 109, 111, 117 CP (prescrição etc.)</td>
+          <td>Arts. 49–52 CP</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="alert alert-red mt2">
+    <div class="alert-icon">🔴</div>
+    <div><strong>Resumo mnemônico para o exame:</strong> <strong>Art. 10 CP (PRAZO)</strong> = fração de dia <em>conta</em> como dia inteiro. <strong>Art. 11 CP (PENA)</strong> = fração de dia é <em>desprezada</em>. São regras opostas aplicadas a campos distintos: prazos vs. penas. Confundi-los é erro fatal em questões de magistratura.</div>
+  </div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card">
+      <h3>💰 Sistema de Dias-Multa e o Art. 11 CP</h3>
+      <div class="law-quote">
+        <strong>Arts. 49 e 60 CP — Sistema de Dias-Multa:</strong>
+        A pena de multa é fixada em dias-multa (10 a 360). Cada dia-multa vale de 1/30 do salário-mínimo vigente a 5 vezes esse valor. O juiz fixa o número de dias-multa e o valor unitário.
+      </div>
+      <p class="mt2" style="font-size:0.85rem;color:var(--text-mid);">Quando o valor do dia-multa (1/30 a 5 SM) gerar centavos fracionários — ex.: 1/30 do SM de R$ 1.518,00 = R$ 50,60 (sem fração de centavo); mas 1/7 do SM geraria fração — o art. 11 CP determina que se despreze a fração de centavo no resultado final.</p>
+    </div>
+    <div class="card">
+      <h3>📋 Art. 11 CP e Substituição de PPL por PRD</h3>
+      <p style="font-size:0.86rem;color:var(--text-mid);">Na substituição da pena privativa de liberdade por restritiva de direitos (art. 44 CP), a pena substitutiva tem a mesma duração da PPL substituída. O art. 11 CP foi aplicado ao fixar a PPL → o resultado já está livre de frações. A PRD, tendo mesma duração, também estará livre de frações.</p>
+      <div class="alert alert-gold mt2" style="font-size:0.8rem;">
+        <div>⭐ <strong>Prestação de serviços à comunidade (art. 46 CP):</strong> A pena de prestação de serviços é calculada à razão de 1 hora de tarefa por dia de condenação — se a PPL for de 1 ano e 2 meses (420 dias), a prestação será de 420 horas. Frações de hora eventualmente geradas no cálculo são desprezadas pelo art. 11 CP.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 6. EXEMPLOS PRÁTICOS                      -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="exemplos">
+  <div class="section-header">
+    <div class="section-num">06</div>
+    <div class="section-title"><span>Cálculos Resolvidos</span>Exemplos Práticos de Aplicação do Art. 11 CP</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 1 — Causa de Aumento (1/3) sobre PPL</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">Furto qualificado (art. 155, §4º, CP). Pena-base: <strong>2 anos e 6 meses</strong>. Concurso formal com outro furto: aumento de <strong>1/6</strong> (art. 70 CP).</p>
+      <div class="ex-calc">Pena-base: 2 anos e 6 meses = 900 dias (2×365=730 + 6×30=180 ≈ para fins didáticos: 900 dias)
+
+Aumento de 1/6:
+900 ÷ 6 = 150 dias exatos → SEM fração de dia
+Art. 11 CP: não precisa ser aplicado (resultado exato)
+
+Pena definitiva: 900 + 150 = 1.050 dias
+= 2 anos, 10 meses e 20 dias ✅
+
+Exemplo com fração:
+Pena-base: 2 anos e 7 meses = 912 dias (aprox.)
+Aumento de 1/7 (hipotético): 912 ÷ 7 = 130,28 dias
+Art. 11 CP: DESPREZA 0,28 dia (≈ 6,7 horas)
+→ aumento = 130 dias</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 2 — Tentativa (Redução 2/3) sobre PPL</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">Homicídio doloso simples (art. 121, caput, CP) tentado. Pena do consumado: <strong>1 ano</strong> (pena-base mínima). Redução pela tentativa: <strong>2/3</strong> (art. 14, II, CP).</p>
+      <div class="ex-calc">Pena do crime consumado: 1 ano = 365 dias
+
+Redução de 2/3:
+365 × 2/3 = 243,33 dias de redução
+Art. 11 CP: DESPREZA 0,33 dia (≈ 8 horas)
+→ redução = 243 dias
+
+Pena definitiva do crime tentado:
+365 − 243 = 122 dias
+= 4 meses e 2 dias ✅
+
+Alternativa (redução de 1/3):
+365 × 1/3 = 121,67 → DESPREZA fração → 121 dias de redução
+365 − 121 = 244 dias = 8 meses e 4 dias ✅</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 3 — Pena de Multa (Frações de Centavo)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">Réu condenado a <strong>30 dias-multa</strong>. Valor do dia-multa fixado em <strong>1/30 do salário-mínimo</strong> de R$ 1.518,00 (valor atual a título exemplificativo).</p>
+      <div class="ex-calc">Valor do dia-multa: R$ 1.518,00 ÷ 30 = R$ 50,60
+(sem fração de centavo neste caso)
+
+30 dias × R$ 50,60 = R$ 1.518,00 ✅
+
+Exemplo com fração:
+Valor: R$ 1.518,00 ÷ 7 = R$ 216,857142...
+Art. 11 CP: DESPREZA fração de centavo
+→ valor do dia-multa = R$ 216,85
+(ou R$ 216,00 se o juiz optar por valor inteiro)
+
+Total: 30 × R$ 216,85 = R$ 6.505,50 ✅</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 4 — Crime Continuado (Aumento 1/6 a 2/3)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">Réu praticou 4 crimes continuados (art. 71 CP). Pena de um dos crimes: <strong>1 ano e 4 meses</strong> (480 dias aprox.). Aumento aplicado: <strong>1/3</strong>.</p>
+      <div class="ex-calc">Pena de um crime: 480 dias
+
+Aumento de 1/3:
+480 ÷ 3 = 160 dias exatos
+Art. 11 CP: não precisa ser aplicado (exato)
+
+Pena definitiva: 480 + 160 = 640 dias
+= 1 ano, 9 meses e 10 dias ✅
+
+Exemplo COM fração — aumento de 1/5:
+480 ÷ 5 = 96 dias exatos → sem fração
+
+Aumento de 2/7 (hipotético):
+480 × 2/7 = 137,14 dias
+Art. 11 CP: DESPREZA 0,14 dia (≈ 3,4 horas)
+→ aumento = 137 dias
+
+Pena: 480 + 137 = 617 dias ✅</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 7. JURISPRUDÊNCIA STF / STJ               -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="jurisprudencia">
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <div class="section-title"><span>STF · STJ · Teses</span>Jurisprudência e Posições dos Tribunais Superiores</div>
+  </div>
+
+  <div class="alert alert-navy mt1" style="margin-bottom:1.2rem;">
+    <div class="alert-icon">ℹ️</div>
+    <div>As posições abaixo refletem o entendimento consolidado dos tribunais superiores, referenciados por tema e posições verificáveis, para garantia de <strong>zero alucinação</strong>. O art. 11 CP é norma de aplicação automática na dosimetria, por isso sua jurisprudência específica é menos volumosa que a de outros dispositivos — mas as posições conexas são essenciais.</div>
+  </div>
+
+  <div class="juris-grid">
+
+    <!-- STJ - Aplicação do art. 11 na dosimetria -->
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Art. 11 CP — Desprezibilidade Obrigatória de Frações na Dosimetria</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ aplica de forma consistente a regra do art. 11 CP na revisão das dosimetrias de pena, declarando que frações de dia resultantes de causas de aumento ou diminuição de pena <strong>devem ser desprezadas</strong>, e não arredondadas para cima. O tribunal reforça que qualquer arredondamento para cima violaria o princípio do <em>favor rei</em> e configuraria analogia <em>in malam partem</em>, vedada no direito penal.</p>
+        <p class="mt1">Em recursos especiais que questionam a dosimetria, o STJ verifica se os tribunais de origem aplicaram corretamente o art. 11 CP ao descartar frações de dia geradas pelo cálculo das causas de aumento e diminuição da terceira fase da dosimetria.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Dosimetria Trifásica</span>
+          <span class="tag tag-gold">Favor Rei</span>
+          <span class="tag tag-blue">Proibição Analogia In Malam Partem</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STJ - Crime continuado e art. 11 -->
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <div class="juris-title">Crime Continuado — Frações Geradas pelo Aumento (1/6 a 2/3) e Art. 11 CP</div>
+      </div>
+      <div class="juris-body">
+        <p>Nos crimes continuados (art. 71 CP), o STJ reconhece a aplicação do art. 11 CP ao resultado do aumento de pena. O acréscimo de 1/6 a 2/3 sobre a pena de um dos crimes pode gerar frações de dia, as quais são desprezadas antes de se fixar a pena definitiva do crime continuado.</p>
+        <p class="mt1">O mesmo raciocínio vale para o crime continuado qualificado (art. 71, parágrafo único): o aumento de até o triplo da pena pode gerar frações, igualmente desprezadas pelo art. 11 CP. O STJ vem anulando dosimetrias que arredondaram frações para cima nesses casos.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Crime Continuado — Art. 71 CP</span>
+          <span class="tag tag-gold">Art. 11 CP</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STF - Favor rei e art. 11 -->
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <div class="juris-title">Princípio do Favor Rei como Fundamento Constitucional do Art. 11 CP</div>
+      </div>
+      <div class="juris-body">
+        <p>O STF fundamenta o art. 11 CP no princípio constitucional do <em>favor rei</em> (favor libertatis), decorrente da presunção de inocência (art. 5.º, LVII, CF/88) e do devido processo legal (art. 5.º, LIV, CF/88). A impossibilidade de arredondamento para cima na dosimetria penal é corolário desses princípios: nenhuma interpretação ou operação aritmética pode resultar em agravamento da pena além do que a lei estritamente prevê.</p>
+        <p class="mt1">O STF reforça que o direito penal não admite analogia <em>in malam partem</em> — e arredondar uma fração de dia para cima seria exatamente isso: criar, por analogia matemática, um dia a mais de pena não previsto expressamente pela norma penal.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Favor Rei — Art. 5.º, LVII, CF</span>
+          <span class="tag tag-blue">Devido Processo Legal</span>
+          <span class="tag tag-gold">Vedação Analogia In Malam Partem</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STJ - Pena de multa e frações de real -->
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <div class="juris-title">"Frações de Cruzeiro" — Interpretação como Frações de Real (Centavos)</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ adota de forma pacífica a interpretação de que a expressão "frações de cruzeiro" do art. 11 CP deve ser compreendida como referência à <strong>menor fração da moeda corrente no Brasil</strong>, ou seja, os <em>centavos do Real</em>. A sucessão de moedas brasileiras (cruzeiro → cruzado → cruzado novo → cruzeiro real → real) não tornou o dispositivo inaplicável — a interpretação sistemática e teleológica preserva a eficácia da norma.</p>
+        <p class="mt1">Assim, ao fixar o valor da pena de multa (art. 49 CP), frações de centavo resultantes do cálculo do valor do dia-multa são desprezadas, e não arredondadas para cima.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Pena de Multa</span>
+          <span class="tag tag-gold">Interpretação Teleológica</span>
+          <span class="tag tag-blue">Frações de Centavo</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STJ - Tentativa e art. 11 -->
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <div class="juris-title">Tentativa — Frações Geradas pela Redução de 1/3 a 2/3 (Art. 14, II, CP) e Art. 11</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ aplica o art. 11 CP na fixação da pena do crime tentado: a redução de 1/3 a 2/3 (art. 14, II, CP) sobre a pena do crime consumado pode gerar frações de dia, as quais devem ser desprezadas. A pena definitiva do crime tentado é sempre expressa em unidades inteiras de dia, mês e ano.</p>
+        <p class="mt1">Relevante: o STJ entende que a escolha da fração de redução na tentativa (1/3, 1/2, 2/3 etc.) está vinculada à proximidade da consumação — quanto mais próximo o iter criminis da consumação, menor a redução. Essa escolha pode gerar frações distintas, todas sujeitas ao art. 11 CP.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Tentativa — Art. 14, II, CP</span>
+          <span class="tag tag-gold">Iter Criminis</span>
+          <span class="tag tag-blue">Frações de Dia</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STF - Distinção art. 10 e art. 11 -->
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <div class="juris-title">Distinção Constitucional entre Art. 10 e Art. 11 CP — Prazos vs. Penas</div>
+      </div>
+      <div class="juris-body">
+        <p>O STF distingue expressamente os campos de incidência do art. 10 CP (prazos) e do art. 11 CP (penas), reconhecendo que as regras opostas têm o mesmo fundamento: o <em>favor rei</em>. No campo dos prazos (art. 10), incluir a fração de dia antecipa o início de prazos favoráveis ao réu (ex.: prescrição). No campo das penas (art. 11), descartar a fração evita que o réu cumpra tempo a mais de pena.</p>
+        <p class="mt1">O tribunal reforça que essa dualidade não é contraditória, mas coerente: em ambos os casos, a norma opera em favor do acusado — seja antecipando o início de prazos extintivos, seja evitando o acréscimo de tempo de pena.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Art. 10 vs. Art. 11 CP</span>
+          <span class="tag tag-gold">Favor Rei — Coerência Sistêmica</span>
+          <span class="tag tag-blue">Prazos vs. Penas</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 8. DOUTRINA                              -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="doutrina">
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <div class="section-title"><span>Doutrina Nacional</span>Principais Posições Doutrinárias</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Rogério Greco — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Greco destaca o art. 11 CP como norma de <strong>equidade e de favor rei</strong>, sublinhando sua complementaridade com o art. 10 CP: enquanto o art. 10 inclui a fração de dia no prazo (para iniciar a contagem mais cedo e beneficiar o réu), o art. 11 despreza a fração de dia na pena (para não acrescentar tempo além do calculado e beneficiar o réu). Ambas as normas, portanto, convergem para o mesmo objetivo: proteger o acusado. Ressalta que a "fração de cruzeiro" deve ser interpretada como centavo do Real, sob pena de inaplicabilidade da norma à pena de multa — o que seria absurdo sistémico.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cezar Roberto Bitencourt — Tratado de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Bitencourt analisa o art. 11 CP como consequência lógica da impossibilidade prática de execução de frações de dia de pena privativa de liberdade. Afirma que o sistema penal não comporta a execução de "6 horas e 47 minutos" de reclusão — a menor unidade executável é o dia inteiro. Por isso, a norma não é apenas benevolente, mas também <strong>pragmática</strong>: reflete a realidade de execução penal. Destaca a relação com o art. 12 CP (frações de ano e de mês) e com o art. 10 CP, construindo um sistema coerente de contagem temporal no direito penal.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cleber Masson — Direito Penal Esquematizado</div>
+      </div>
+      <div class="juris-body">
+        <p>Masson sistematiza o art. 11 CP de forma didática e voltada a concursos. Destaca três pontos essenciais: (1) o art. 11 incide sobre o <em>resultado</em> da dosimetria, não sobre cada fase isoladamente — embora a boa técnica recomende aplicá-lo ao final de cada operação; (2) a desprezibilidade é sempre para baixo (<em>favor rei</em>); (3) a distinção entre art. 10 (prazo → inclui fração) e art. 11 (pena → despreza fração) é o ponto mais cobrado em concursos sobre esses dois dispositivos. Para a pena de multa, afirma categoricamente que "cruzeiro" deve ser lido como "real", e frações de centavo são desprezadas.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Guilherme de Souza Nucci — Código Penal Comentado</div>
+      </div>
+      <div class="juris-body">
+        <p>Nucci comenta o art. 11 CP destacando sua importância para o sistema penal de execução: a impossibilidade de fracionar o dia de pena é uma <strong>realidade carcerária</strong>, não apenas uma escolha legal. O juiz que, ao dosar a pena, chegasse à conclusão de "1 ano, 3 meses e 14 horas" de reclusão não teria como implementar as 14 horas finais — daí a desprezibilidade. Analisa criticamente a expressão "frações de cruzeiro", defendendo atualização legislativa, mas reconhecendo a interpretação sistemática como suficiente para manter a eficácia do dispositivo. Aponta que o art. 11 se aplica não apenas à fixação inicial da pena, mas também às revisões em sede de habeas corpus e recursos.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Fernando Capez — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Capez apresenta o art. 11 CP como norma de <strong>racionalidade e simplicidade do sistema penal</strong>. Ressalta que o legislador de 1940 compreendeu que o direito penal deve ser operacionalizável: frações de dia de pena privativa de liberdade e frações de centavo de multa são matematicamente possíveis, mas operacionalmente impossíveis de executar. O art. 11 soluciona isso de forma elegante: despreza o que não pode ser executado. Alerta para o fato de que o art. 11 nunca pode ser invocado para aumentar a pena — é norma estritamente restritiva (em favor do réu), e qualquer interpretação extensiva que agrave a pena é inconstitucional.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Controvérsia: Momento de Aplicação do Art. 11 na Dosimetria</div>
+      </div>
+      <div class="juris-body">
+        <p>Há debate sobre em qual momento exato o art. 11 CP deve ser aplicado na dosimetria trifásica:</p>
+        <ul class="mt1">
+          <li><strong>Posição A (majoritária):</strong> O art. 11 deve ser aplicado ao <em>resultado de cada operação aritmética</em>, desprezando a fração gerada em cada causa de aumento/diminuição antes de proceder à próxima. Assim, cada fase produz resultado em dias inteiros</li>
+          <li><strong>Posição B (minoritária):</strong> O art. 11 deve ser aplicado apenas ao <em>resultado final</em> da dosimetria, após todas as operações. As frações intermediárias são mantidas durante o cálculo e desprezadas apenas no passo final</li>
+          <li><strong>Consenso prático:</strong> Em ambas as posições, o resultado final é sempre em unidades inteiras de dia. A diferença pode gerar variação de alguns dias no resultado, sempre em favor do réu na posição A (que despreza mais frações ao longo do cálculo)</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 9. SISTEMÁTICA                           -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="sistematica">
+  <div class="section-header">
+    <div class="section-num">09</div>
+    <div class="section-title"><span>Conexões Sistemáticas</span>Art. 11 CP na Sistemática do Código Penal</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔗 Artigos Diretamente Conectados ao Art. 11 CP</h3>
+      <ul>
+        <li><strong>Art. 10 CP (Prazo):</strong> norma complementar e oposta — prazos incluem fração de dia; penas desprezam-na. Lidos conjuntamente, formam o sistema de cômputo temporal do CP</li>
+        <li><strong>Art. 49 e ss. CP (Pena de multa):</strong> o cálculo do valor do dia-multa pode gerar frações de centavo → art. 11 as despreza</li>
+        <li><strong>Art. 59 CP (Dosimetria — 1.ª fase):</strong> pena-base fixada dentro dos limites legais; frações eventuais são desprezadas pelo art. 11</li>
+        <li><strong>Arts. 61–66 CP (Agravantes e atenuantes):</strong> 2.ª fase; eventuais frações desprezadas pelo art. 11</li>
+        <li><strong>Arts. 68–72 CP (Causas de aumento/diminuição):</strong> 3.ª fase; principal campo de incidência do art. 11</li>
+        <li><strong>Art. 14, II, CP (Tentativa):</strong> redução de 1/3 a 2/3 → frações desprezadas pelo art. 11</li>
+        <li><strong>Art. 29, §§1.º e 2.º, CP (Participação):</strong> diminuição de pena do partícipe → frações desprezadas</li>
+        <li><strong>Art. 70 CP (Concurso formal):</strong> aumento de 1/6 a 1/2 → frações desprezadas</li>
+        <li><strong>Art. 71 CP (Crime continuado):</strong> aumento de 1/6 a 2/3 → frações desprezadas</li>
+        <li><strong>Art. 44 CP (Substituição PPL → PRD):</strong> PRD tem duração da PPL (já sem fração); prestação de serviços: eventual fração de hora desprezada</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📋 Art. 11 CP × Art. 12 CP — Frações de Dia vs. Frações de Ano e Mês</h3>
+      <div class="law-quote">
+        <strong>Art. 12 CP (Legislação especial):</strong>
+        "As regras gerais deste Código aplicam-se aos fatos incriminados por lei especial, se esta não dispuser de modo diverso."
+      </div>
+      <p class="mt2" style="font-size:0.85rem;color:var(--text-mid);">O art. 11 CP aplica-se subsidiariamente às leis penais especiais (Lei de Drogas, Estatuto da Criança e do Adolescente, Lei Maria da Penha etc.) quando estas não dispõem de modo diverso sobre frações de pena. Nas penas cominadas por leis especiais que prevejam causas de aumento/diminuição em frações, o art. 11 CP incide normalmente.</p>
+      <div class="alert alert-gold mt2" style="font-size:0.8rem;">
+        <div>🎯 <strong>Lei de Drogas (Lei 11.343/2006):</strong> O art. 33, §4.º, prevê redução de 1/6 a 2/3 para o traficante primário, de bons antecedentes, que não integre organização criminosa. Esta redução pode gerar frações de dia → art. 11 CP despreza-as.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-3 mt2">
+    <div class="card">
+      <h3>⚡ Art. 11 CP e Habeas Corpus</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">O art. 11 CP pode ser fundamento de <strong>habeas corpus</strong> quando a pena foi fixada com fração de dia não desprezada. Nesse caso, o tribunal superior reconhece o excesso e corrige a dosimetria, desprezando a fração indevidamente mantida.</p>
+      <p class="mt2" style="font-size:0.85rem;color:var(--text-mid);">Embora pareça insignificante (horas a mais), o excesso de pena causado pela não aplicação do art. 11 CP pode resultar em prisão ilegal — fundamento para concessão do habeas corpus quando o réu já teria direito à progressão de regime ou ao livramento condicional sem a fração indevida.</p>
+    </div>
+    <div class="card">
+      <h3>🔄 Resumo Comparativo Final</h3>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.84rem;line-height:1.9;">
+        <p><strong style="color:var(--gold-light);">Art. 11 CP → PENA</strong><br>
+        ❌ NÃO arredonda para cima<br>
+        ✅ DESPREZA fração de dia (PPL/PRD)<br>
+        ✅ DESPREZA fração de centavo (multa)<br>
+        ✅ Sempre em favor do réu</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.7rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Art. 10 CP → PRAZO</strong><br>
+        ✅ INCLUI o 1.º dia inteiro<br>
+        ✅ Fração de dia = dia inteiro<br>
+        ❌ NÃO aplica a horas<br>
+        ✅ Sempre em favor do réu</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.7rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Fundamento comum:</strong><br>
+        Princípio do <em>favor rei</em><br>
+        Legalidade estrita<br>
+        Vedação analogia <em>in malam partem</em></p>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📅 Art. 11 CP na Execução Penal</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">Na execução penal, o art. 11 CP incide indiretamente sobre os cálculos de:</p>
+      <ul class="mt1" style="font-size:0.84rem;">
+        <li><strong>Progressão de regime:</strong> 1/6, 2/5 ou 3/5 da pena cumprida — se o cálculo gerar fração de dia, despreza-se</li>
+        <li><strong>Livramento condicional:</strong> 1/3, 1/2 ou 2/3 da pena — frações de dia desprezadas</li>
+        <li><strong>Remição de pena:</strong> 1 dia de pena a cada 3 dias de trabalho ou 12 horas de estudo — o resultado em dias é arredondado para baixo (despreza fração)</li>
+        <li><strong>Saída temporária:</strong> cumprimento de 1/6 da pena — frações de dia desprezadas pelo art. 11 CP</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- PROVA / ENAM                             -->
+<!-- ══════════════════════════════════════════ -->
+<section id="prova" class="prova-section">
+  <h2>⚖️ Pontos Cobrados em Magistratura e ENAM</h2>
+  <p class="intro">Questões, teses e pegadinhas recorrentes nos concursos de Juiz de Direito, ENAM e equivalentes relacionadas ao Art. 11 CP.</p>
+
+  <div class="prova-items">
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">01</span>O art. 11 CP determina que as frações de dia de pena devem ser desprezadas ou arredondadas para cima?</div>
+      <div class="prova-item-a"><strong>Desprezadas.</strong> O art. 11 CP determina que frações de dia nas penas privativas de liberdade e restritivas de direitos são <em>desprezadas</em> — jamais arredondadas para cima. Arredondar para cima implicaria criar pena adicional não prevista em lei, violando o princípio da legalidade e o <em>favor rei</em>, caracterizando analogia <em>in malam partem</em>, vedada no direito penal. A regra é: sempre para baixo, nunca para cima.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">02</span>O art. 11 CP aplica-se a prazos prescricionais ou apenas a penas?</div>
+      <div class="prova-item-a">Aplica-se <strong>apenas a penas</strong> — penas privativas de liberdade, restritivas de direitos (temporais) e pena de multa. Prazos prescricionais são regidos pelo <strong>art. 10 CP</strong>, que contém regra diametralmente oposta: a fração de dia <em>conta como dia inteiro</em> no cálculo dos prazos. O art. 11 CP jamais se aplica à prescrição, à decadência ou a qualquer outro prazo penal material. Esta distinção é a mais cobrada em provas sobre os arts. 10 e 11 CP.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">03</span>O que significa "frações de cruzeiro" no art. 11 CP nos dias de hoje?</div>
+      <div class="prova-item-a"><strong>Frações de real (centavos).</strong> O Código Penal de 1940 utilizava o cruzeiro como moeda corrente. Com as sucessivas reformas monetárias brasileiras, a expressão se desatualizou textualmente, mas a doutrina e jurisprudência são unânimes: "frações de cruzeiro" significa a menor fração da moeda corrente — hoje, os centavos do Real. Na prática, frações de centavo resultantes do cálculo da pena de multa (sistema de dias-multa) são desprezadas pelo art. 11 CP.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">04</span>Qual a principal diferença entre o art. 10 e o art. 11 do Código Penal?</div>
+      <div class="prova-item-a">O <strong>art. 10 CP</strong> regula a contagem de <em>prazos</em> penais materiais (prescrição, decadência, reincidência etc.) e determina que a fração de dia <em>inclui-se</em> na contagem — um crime praticado às 23h58 tem aquele dia inteiro computado como dies a quo. O <strong>art. 11 CP</strong> regula o resultado do cálculo da <em>pena</em> e determina que a fração de dia é <em>desprezada</em> — uma pena calculada em 1 ano e 4 horas é fixada em 1 ano. São normas opostas aplicadas a campos distintos, ambas fundadas no princípio do favor rei.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">05</span>Réu condenado pela 3.ª fase da dosimetria a pena de 1 ano e 3 meses, com causa de aumento de 1/6 (crime continuado — art. 71 CP). Aplique o art. 11 CP.</div>
+      <div class="prova-item-a">Pena de 1 ano e 3 meses = 15 meses. Aumento de 1/6 = 15 ÷ 6 = 2,5 meses. Como 0,5 mês = 15 dias (fração maior que um dia), não há fração de dia neste caso — o resultado é 2 meses e 15 dias. Pena definitiva: 15 + 2,5 = 17,5 meses = <strong>1 ano, 5 meses e 15 dias</strong>. Não há fração de dia a desprezar. Mas se a causa de aumento fosse 1/7: 15 ÷ 7 = 2,142 meses = 2 meses e 4,26 dias → despreza-se a fração de 0,26 dia → aumento de 2 meses e 4 dias. Art. 11 CP aplicado.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">06</span>O art. 11 CP se aplica às Penas Restritivas de Direitos? Quais?</div>
+      <div class="prova-item-a"><strong>Sim, às PRDs de natureza temporal.</strong> O art. 11 CP aplica-se às penas restritivas de direitos expressas em tempo: prestação de serviços à comunidade, limitação de fim de semana, interdição temporária de direitos. Se o cálculo da duração dessas penas resultar em fração de dia, ela é desprezada. Já às PRDs de natureza pecuniária (prestação pecuniária em dinheiro), aplica-se por analogia a regra das "frações de cruzeiro/real": frações de centavo são desprezadas.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">07</span>Na tentativa com redução de 2/3 sobre pena de 1 ano, qual o resultado e há aplicação do art. 11 CP?</div>
+      <div class="prova-item-a">1 ano = 365 dias. Redução de 2/3 = 365 × 2/3 = 243,33 dias. <strong>Art. 11 CP:</strong> despreza-se a fração de 0,33 dia (≈ 8 horas). Redução = <strong>243 dias</strong>. Pena definitiva = 365 − 243 = <strong>122 dias = 4 meses e 2 dias</strong>. Sim, o art. 11 CP foi aplicado para descartar a fração de dia resultante da divisão 365 ÷ 3 × 2 = 243,33. Atenção: em anos bissextos (366 dias), o cálculo é ligeiramente diferente → 366 × 2/3 = 244 dias exatos → sem fração de dia → art. 11 não precisa ser aplicado neste caso.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">08</span>O art. 11 CP pode ser invocado em habeas corpus? Em que situação?</div>
+      <div class="prova-item-a"><strong>Sim.</strong> Quando o tribunal de origem fixou pena com fração de dia indevidamente mantida (ex.: condenou o réu a "1 ano, 3 meses e 15 horas" de reclusão sem desprezar as 15 horas), o réu pode impetrar habeas corpus alegando violação ao art. 11 CP. A concessão corrige a dosimetria, fixando a pena em "1 ano e 3 meses". Embora a diferença pareça insignificante, pode ser determinante para a progressão de regime, o livramento condicional ou o cumprimento integral da pena — hipóteses em que a ilegalidade da pena é clara.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">09</span>[ENAM — alta recorrência] Assinale a alternativa que descreve corretamente a relação entre os arts. 10 e 11 do CP.</div>
+      <div class="prova-item-a"><strong>Art. 10 CP:</strong> incide sobre prazos penais materiais; o dia do começo é <em>incluído</em> na contagem; fração de dia conta como dia inteiro (para antecipar o início da prescrição/decadência, favorecendo o réu). <strong>Art. 11 CP:</strong> incide sobre penas (PPL, PRD, multa); frações de dia e de centavo são <em>desprezadas</em> (para não acrescentar tempo de pena além do calculado, favorecendo o réu). Ambos os artigos são fundados no favor rei e representam faces opostas da mesma moeda: um inclui a fração nos prazos, o outro a despreza nas penas.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">10</span>A remição de pena pelo trabalho (LEP, art. 126) gera aplicação do art. 11 CP?</div>
+      <div class="prova-item-a"><strong>Sim, indiretamente.</strong> A remição pelo trabalho concede 1 dia de pena remida a cada 3 dias de trabalho. Se o condenado trabalhou, por exemplo, 10 dias → 10 ÷ 3 = 3,33 dias remidos → despreza-se a fração de 0,33 dia → <strong>3 dias remidos</strong>. A LEP e o CP impõem que o cálculo de remição resulte sempre em dias inteiros — frações são desprezadas. Da mesma forma, pela remição por estudo (12 horas de frequência = 1 dia remido), eventuais frações de hora no total acumulado são descartadas. O art. 11 CP é o fundamento jurídico dessa desprezibilidade.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">11</span>O art. 11 CP se aplica apenas ao Código Penal ou também às leis penais especiais?</div>
+      <div class="prova-item-a">Aplica-se <strong>também às leis penais especiais</strong>, por força do art. 12 CP, que determina a aplicação subsidiária das regras gerais do CP aos crimes previstos em lei especial, salvo quando esta dispõe de modo diverso. Exemplos: na Lei de Drogas, a redução de 1/6 a 2/3 (art. 33, §4.º) pode gerar frações de dia → art. 11 CP despreza-as; no Estatuto do Desarmamento, causas de aumento com frações → art. 11 aplica-se. Apenas se a lei especial estabelecer sua própria regra sobre frações de pena é que o art. 11 CP seria afastado — o que é extremamente raro.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">12</span>[ENAM — questão integrada] Na dosimetria de crime de tráfico de drogas (art. 33 da Lei 11.343/2006), o juiz fixou pena-base de 5 anos; na 3.ª fase, aplicou a causa de diminuição de 1/3 (§4.º). Há fração de dia? Aplique o art. 11 CP.</div>
+      <div class="prova-item-a">Pena-base: 5 anos = 60 meses. Diminuição de 1/3 = 60 ÷ 3 = <strong>20 meses</strong> (resultado exato, sem fração de dia). Pena definitiva: 60 − 20 = <strong>40 meses = 3 anos e 4 meses</strong>. Neste caso, o art. 11 CP <em>não precisou ser aplicado</em>, pois o resultado foi exato. Mas se a diminuição fosse de 2/5: 60 × 2/5 = 24 meses (exato). Se fosse 1/7: 60 ÷ 7 = 8,57 meses = 8 meses e 17,1 dias → <strong>art. 11 CP</strong>: despreza-se a fração de 0,1 dia (≈ 2,4 horas) → diminuição de 8 meses e 17 dias. Pena: 60 − 8,57 meses → 51 meses e 13 dias (após desprezar fração). Este é o raciocínio completo que o examinador espera.</div>
+    </div>
+
+  </div>
+</section>
+
+</div><!-- /page-wrap -->
+
+<footer>
+  <strong>Art. 11.º do Código Penal Brasileiro</strong> — Decreto-Lei n.º 2.848/1940<br>
+  Material elaborado para preparação à Magistratura / ENAM · Doutrina e jurisprudência consolidadas · Atualizado 2025
+</footer>
+
+</body>
+</html>

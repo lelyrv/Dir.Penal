@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 14º CP — Crime Consumado e Tentativa | Magistratura ENAM</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a;
+    --navy-mid: #1a2f45;
+    --navy-light: #243b55;
+    --gold: #c8960c;
+    --gold-light: #e8b84b;
+    --gold-pale: #fdf3d8;
+    --cream: #faf7f2;
+    --cream-mid: #f0ebe2;
+    --text-dark: #1a1208;
+    --text-mid: #3d3020;
+    --text-soft: #6b5c40;
+    --border: #d4c49a;
+    --border-light: #e8dcbf;
+    --red-accent: #8b1a1a;
+    --green-accent: #1a4a2e;
+    --blue-accent: #1a3a5c;
+    --purple-accent: #4a1a5c;
+    --shadow: 0 4px 24px rgba(13,27,42,0.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Source Serif 4', Georgia, serif; background: var(--cream); color: var(--text-dark); font-size: 15px; line-height: 1.75; }
+
+  /* ── NAV ── */
+  #top-nav {
+    position: sticky; top: 0; z-index: 999;
+    background: var(--navy); border-bottom: 3px solid var(--gold);
+    padding: 0 1.5rem; display: flex; align-items: center; gap: 0;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  #top-nav::-webkit-scrollbar { display: none; }
+  #top-nav .nav-brand {
+    font-family: 'Playfair Display', serif; color: var(--gold-light);
+    font-size: 0.9rem; font-weight: 700; white-space: nowrap;
+    padding: 0.85rem 1.2rem 0.85rem 0;
+    border-right: 1px solid rgba(200,150,12,0.3); margin-right: 0.5rem; letter-spacing: 0.5px;
+  }
+  #top-nav a {
+    color: rgba(255,255,255,0.75); text-decoration: none;
+    font-size: 0.72rem; font-family: 'Source Serif 4', serif;
+    font-weight: 600; letter-spacing: 0.6px; text-transform: uppercase;
+    padding: 0.85rem 0.8rem; white-space: nowrap;
+    transition: color .2s; border-bottom: 3px solid transparent; margin-bottom: -3px;
+  }
+  #top-nav a:hover { color: var(--gold-light); border-bottom-color: var(--gold); }
+
+  /* ── HERO ── */
+  #hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1e3d5c 100%);
+    color: white; padding: 3.5rem 2rem 3rem;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  #hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: repeating-linear-gradient(45deg,
+      rgba(200,150,12,0.03) 0px, rgba(200,150,12,0.03) 1px,
+      transparent 1px, transparent 40px);
+  }
+  #hero .badge {
+    display: inline-block; background: rgba(200,150,12,0.15);
+    border: 1px solid rgba(200,150,12,0.5); color: var(--gold-light);
+    font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase;
+    padding: 0.35rem 1rem; border-radius: 2px; margin-bottom: 1.2rem;
+    font-family: 'Source Serif 4', serif; font-weight: 600;
+  }
+  #hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 0.6rem; letter-spacing: -0.5px; }
+  #hero h1 span { color: var(--gold-light); }
+  #hero .subtitle { font-size: 1rem; color: rgba(255,255,255,0.65); font-style: italic; margin-bottom: 1.5rem; }
+  #hero .law-box {
+    display: inline-block; background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(200,150,12,0.4); border-left: 4px solid var(--gold);
+    color: rgba(255,255,255,0.9); font-family: 'Source Serif 4', serif;
+    font-size: 0.93rem; font-style: italic; padding: 1rem 1.5rem;
+    max-width: 820px; text-align: left; line-height: 1.75; border-radius: 0 4px 4px 0;
+  }
+  #hero .law-box strong { color: var(--gold-light); font-style: normal; display: block; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.4rem; }
+
+  /* ── LAYOUT ── */
+  .page-wrap { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+  /* ── SECTIONS ── */
+  .section { margin-top: 3.5rem; scroll-margin-top: 56px; }
+  .section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--border); }
+  .section-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--border); line-height: 1; min-width: 2.5rem; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; color: var(--navy); line-height: 1.2; }
+  .section-title span { display: block; font-size: 0.75rem; font-family: 'Source Serif 4', serif; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-style: normal; }
+
+  /* ── CARDS ── */
+  .card { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 1.4rem 1.6rem; box-shadow: var(--shadow); }
+  .card-grid { display: grid; gap: 1rem; }
+  .card-grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .card-grid-2 { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+  .card h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.6rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-light); }
+  .card p, .card li { font-size: 0.88rem; line-height: 1.7; color: var(--text-mid); }
+  .card ul { padding-left: 1.1rem; }
+  .card li { margin-bottom: 0.3rem; }
+
+  /* Type cards */
+  .type-card { border-top: 4px solid; }
+  .type-cons  { border-top-color: var(--green-accent); }
+  .type-tent  { border-top-color: var(--red-accent); }
+  .type-imp   { border-top-color: var(--blue-accent); }
+  .type-aten  { border-top-color: var(--purple-accent); }
+  .type-cons h3  { color: var(--green-accent); }
+  .type-tent h3  { color: var(--red-accent); }
+  .type-imp h3   { color: var(--blue-accent); }
+  .type-aten h3  { color: var(--purple-accent); }
+
+  /* ── ITER CRIMINIS ── */
+  .iter-wrap { display: flex; align-items: stretch; gap: 0; overflow-x: auto; background: white; border: 1px solid var(--border-light); border-radius: 6px; box-shadow: var(--shadow); padding: 1.5rem; }
+  .iter-step { flex: 1; min-width: 160px; display: flex; flex-direction: column; align-items: center; position: relative; }
+  .iter-step:not(:last-child)::after {
+    content: '▶'; position: absolute; right: -0.6rem; top: 50%; transform: translateY(-50%);
+    color: var(--gold); font-size: 1.2rem; z-index: 2;
+  }
+  .iter-num { width: 2.4rem; height: 2.4rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.1rem; margin-bottom: 0.5rem; flex-shrink: 0; }
+  .iter-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 0.9rem; text-align: center; margin-bottom: 0.3rem; }
+  .iter-sub { font-size: 0.74rem; color: var(--text-soft); text-align: center; line-height: 1.45; }
+  .iter-status { font-size: 0.65rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; margin-top: 0.4rem; }
+  .iter-cog  .iter-num { background: #e8eaf2; color: var(--navy); }
+  .iter-prep .iter-num { background: #fdf3d8; color: #7a5a00; }
+  .iter-exec .iter-num { background: #fde8e8; color: var(--red-accent); }
+  .iter-cons .iter-num { background: #dceee3; color: var(--green-accent); }
+  .iter-cog  .iter-title { color: var(--navy); }
+  .iter-prep .iter-title { color: #7a5a00; }
+  .iter-exec .iter-title { color: var(--red-accent); }
+  .iter-cons .iter-title { color: var(--green-accent); }
+  .s-impunivel { background: #e8eaf2; color: var(--navy); }
+  .s-regra    { background: #fdf3d8; color: #7a5a00; }
+  .s-punivel  { background: #fde8e8; color: var(--red-accent); }
+  .s-plena    { background: #dceee3; color: var(--green-accent); }
+
+  /* ── FLOWCHART ── */
+  .flow-wrap { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 2rem 1.5rem; box-shadow: var(--shadow); overflow-x: auto; }
+  .flow-center { display: flex; flex-direction: column; align-items: center; gap: 0; }
+  .flow-node { border-radius: 4px; padding: 0.65rem 1.4rem; font-family: 'Source Serif 4', serif; font-size: 0.82rem; font-weight: 600; text-align: center; min-width: 220px; max-width: 520px; }
+  .flow-start { background: var(--navy); color: white; border-radius: 50px; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; }
+  .flow-end-green { background: var(--green-accent); color: white; border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-end-red   { background: var(--red-accent); color: white; border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-end-gold  { background: var(--gold); color: var(--navy); border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-end-blue  { background: var(--blue-accent); color: white; border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-end-purple{ background: var(--purple-accent); color: white; border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-box-navy   { background: var(--navy-mid); color: white; border-left: 4px solid var(--gold); font-size: 0.8rem; }
+  .flow-box-green  { background: #edf7f0; border: 1px solid #7ec89a; border-left: 4px solid var(--green-accent); color: var(--text-dark); }
+  .flow-box-blue   { background: #edf2f8; border: 1px solid #8eb4d8; border-left: 4px solid var(--blue-accent); color: var(--text-dark); }
+  .flow-box-red    { background: #fdf0f0; border: 1px solid #e09090; border-left: 4px solid var(--red-accent); color: var(--text-dark); }
+  .flow-box-gold   { background: var(--gold-pale); border: 2px solid var(--gold); color: var(--text-dark); }
+  .flow-box-purple { background: #f3eef8; border: 1px solid #b89dd8; border-left: 4px solid var(--purple-accent); color: var(--text-dark); }
+  .flow-arrow { font-size: 1.3rem; color: var(--border); line-height: 1; margin: 0.15rem 0; }
+  .flow-row { display: flex; align-items: flex-start; gap: 1.5rem; width: 100%; justify-content: center; flex-wrap: wrap; }
+  .flow-branch { display: flex; flex-direction: column; align-items: center; gap: 0; flex: 1; min-width: 175px; }
+  .flow-label { font-size: 0.68rem; color: var(--text-soft); font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; background: var(--cream-mid); padding: 0.15rem 0.5rem; border-radius: 2px; margin: 0.15rem 0; }
+  .flow-connector-line { width: 1px; height: 28px; background: var(--border); }
+  .flow-h-line { height: 1px; background: var(--border); align-self: center; }
+
+  /* ── TABLE ── */
+  .comp-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; background: white; box-shadow: var(--shadow); border-radius: 6px; overflow: hidden; }
+  .comp-table thead { background: var(--navy); color: white; }
+  .comp-table thead th { padding: 0.85rem 1rem; font-family: 'Source Serif 4', serif; font-weight: 600; letter-spacing: 0.5px; font-size: 0.8rem; text-align: left; }
+  .comp-table thead th:first-child { color: var(--gold-light); }
+  .comp-table tbody tr { border-bottom: 1px solid var(--border-light); }
+  .comp-table tbody tr:last-child { border-bottom: none; }
+  .comp-table tbody tr:nth-child(even) { background: var(--cream); }
+  .comp-table td { padding: 0.75rem 1rem; color: var(--text-mid); vertical-align: top; }
+  .comp-table td:first-child { font-weight: 600; color: var(--navy); white-space: nowrap; font-size: 0.8rem; }
+  .comp-table .hl  td { background: var(--gold-pale) !important; }
+  .comp-table .hl2 td { background: #edf7f0 !important; }
+  .comp-table .hl3 td { background: #edf2f8 !important; }
+  .comp-table .hl4 td { background: #fdf0f0 !important; }
+  .comp-table .hl5 td { background: #f3eef8 !important; }
+
+  /* ── JURIS ── */
+  .juris-card { background: white; border: 1px solid var(--border-light); border-left: 5px solid; border-radius: 0 6px 6px 0; padding: 1.2rem 1.4rem; box-shadow: var(--shadow); }
+  .juris-card.stf { border-left-color: var(--red-accent); }
+  .juris-card.stj { border-left-color: var(--navy); }
+  .juris-card.doutrina { border-left-color: var(--gold); }
+  .juris-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
+  .juris-badge { font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 2px; font-family: 'Source Serif 4', serif; }
+  .juris-badge.stf     { background: var(--red-accent); color: white; }
+  .juris-badge.stj     { background: var(--navy); color: white; }
+  .juris-badge.doutrina{ background: var(--gold); color: var(--navy); }
+  .juris-badge.sumula  { background: var(--green-accent); color: white; }
+  .juris-badge.tese    { background: var(--blue-accent); color: white; }
+  .juris-badge.purple  { background: var(--purple-accent); color: white; }
+  .juris-title { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700; color: var(--navy); }
+  .juris-body  { font-size: 0.84rem; color: var(--text-mid); line-height: 1.7; }
+  .juris-body em { font-style: italic; color: var(--navy); }
+  .juris-grid { display: grid; gap: 1rem; }
+
+  /* ── ALERTS ── */
+  .alert { padding: 0.9rem 1.2rem; border-radius: 4px; font-size: 0.84rem; line-height: 1.7; display: flex; gap: 0.7rem; align-items: flex-start; }
+  .alert-gold   { background: var(--gold-pale); border: 1px solid #d4aa3a; color: #5a4000; }
+  .alert-red    { background: #fdf0f0; border: 1px solid #e09090; color: #5a0000; }
+  .alert-navy   { background: #f0f4f8; border: 1px solid #abc; color: var(--navy); }
+  .alert-green  { background: #edf7f0; border: 1px solid #7ec89a; color: #1a4a2e; }
+  .alert-purple { background: #f3eef8; border: 1px solid #b89dd8; color: var(--purple-accent); }
+  .alert-icon   { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.05rem; }
+  .alert strong { font-weight: 700; }
+
+  /* ── PROVA ── */
+  .prova-section { background: var(--navy); border-radius: 8px; padding: 2rem; color: white; margin-top: 3.5rem; scroll-margin-top: 56px; }
+  .prova-section h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--gold-light); margin-bottom: 0.5rem; }
+  .prova-section .intro { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; font-style: italic; }
+  .prova-items { display: grid; gap: 0.75rem; }
+  .prova-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(200,150,12,0.25); border-left: 4px solid var(--gold); border-radius: 0 4px 4px 0; padding: 1rem 1.2rem; }
+  .prova-item-q { font-size: 0.82rem; font-weight: 600; color: var(--gold-light); margin-bottom: 0.4rem; display: flex; align-items: flex-start; gap: 0.6rem; }
+  .prova-item-q .qnum { background: var(--gold); color: var(--navy); font-size: 0.65rem; font-weight: 700; padding: 0.1rem 0.45rem; border-radius: 2px; flex-shrink: 0; margin-top: 0.1rem; }
+  .prova-item-a { font-size: 0.82rem; color: rgba(255,255,255,0.8); line-height: 1.65; }
+  .prova-item-a strong { color: white; }
+
+  /* ── TAGS ── */
+  .tag { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; margin: 0.1rem; font-family: 'Source Serif 4', serif; }
+  .tag-blue   { background: #dce8f5; color: var(--blue-accent); }
+  .tag-green  { background: #dceee3; color: var(--green-accent); }
+  .tag-gold   { background: var(--gold-pale); color: #7a5a00; border: 1px solid #d4aa3a; }
+  .tag-red    { background: #fde8e8; color: var(--red-accent); }
+  .tag-purple { background: #ece5f5; color: var(--purple-accent); }
+
+  /* ── EXAMPLE BOX ── */
+  .example-box { background: var(--navy-mid); color: white; border-radius: 6px; padding: 1.2rem 1.4rem; font-size: 0.84rem; line-height: 1.75; }
+  .example-box .ex-title { color: var(--gold-light); font-weight: 700; font-family: 'Playfair Display', serif; font-size: 0.95rem; margin-bottom: 0.5rem; }
+  .example-box .ex-calc { background: rgba(200,150,12,0.12); border: 1px solid rgba(200,150,12,0.3); border-radius: 4px; padding: 0.7rem 1rem; margin-top: 0.7rem; font-family: 'JetBrains Mono', monospace; font-size: 0.79rem; color: var(--gold-light); white-space: pre-wrap; }
+
+  /* ── LAW QUOTE ── */
+  .law-quote { background: var(--cream-mid); border-left: 4px solid var(--navy); padding: 0.9rem 1.2rem; font-size: 0.88rem; font-style: italic; color: var(--text-mid); line-height: 1.7; border-radius: 0 4px 4px 0; }
+  .law-quote strong { font-style: normal; color: var(--navy); font-size: 0.75rem; letter-spacing: 0.5px; display: block; margin-bottom: 0.25rem; }
+
+  /* ── DIVIDER ── */
+  .divider { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); margin: 1.2rem 0; }
+
+  /* ── TEORIA CARDS ── */
+  .teoria-card { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 1rem 1.2rem; box-shadow: var(--shadow); border-top: 3px solid; }
+  .teoria-card h4 { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
+  .teoria-card p, .teoria-card li { font-size: 0.82rem; color: var(--text-mid); line-height: 1.6; }
+  .teoria-card ul { padding-left: 1rem; }
+  .tc-1 { border-top-color: var(--red-accent); } .tc-1 h4 { color: var(--red-accent); }
+  .tc-2 { border-top-color: var(--green-accent); } .tc-2 h4 { color: var(--green-accent); }
+  .tc-3 { border-top-color: var(--blue-accent); } .tc-3 h4 { color: var(--blue-accent); }
+  .tc-4 { border-top-color: var(--gold); } .tc-4 h4 { color: #7a5a00; }
+  .tc-adot { border: 2px solid var(--gold); background: var(--gold-pale); } .tc-adot h4 { color: #7a5a00; }
+
+  /* ── CRIME GRID ── */
+  .crime-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.8rem; }
+  .crime-item { background: white; border: 1px solid var(--border-light); border-radius: 4px; padding: 0.8rem 1rem; border-left: 3px solid; }
+  .crime-item h5 { font-family: 'Playfair Display', serif; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.3rem; }
+  .crime-item p { font-size: 0.79rem; color: var(--text-mid); line-height: 1.55; }
+  .ci-red { border-left-color: var(--red-accent); } .ci-red h5 { color: var(--red-accent); }
+  .ci-blue { border-left-color: var(--blue-accent); } .ci-blue h5 { color: var(--blue-accent); }
+  .ci-green { border-left-color: var(--green-accent); } .ci-green h5 { color: var(--green-accent); }
+  .ci-gold { border-left-color: var(--gold); } .ci-gold h5 { color: #7a5a00; }
+  .ci-purple { border-left-color: var(--purple-accent); } .ci-purple h5 { color: var(--purple-accent); }
+  .ci-navy { border-left-color: var(--navy); } .ci-navy h5 { color: var(--navy); }
+
+  /* ── FOOTER ── */
+  footer { background: var(--navy); color: rgba(255,255,255,0.45); text-align: center; padding: 1.5rem; font-size: 0.75rem; border-top: 2px solid var(--gold); }
+  footer strong { color: var(--gold-light); }
+
+  /* ── PRINT ── */
+  @media print {
+    #top-nav { display: none; }
+    #hero { padding: 2rem 1rem; }
+    #hero::before { display: none; }
+    .page-wrap { max-width: 100%; padding: 0 0.5rem 2rem; }
+    .section { margin-top: 2rem; page-break-inside: avoid; }
+    .card, .juris-card, .flow-wrap, .example-box { box-shadow: none; border: 1px solid #ccc; }
+    .prova-section { background: #f0f4f8 !important; color: #000 !important; }
+    .prova-section h2 { color: #0d1b2a !important; }
+    .prova-item { background: white !important; border: 1px solid #ccc !important; }
+    .prova-item-q { color: #7a5a00 !important; }
+    .prova-item-a { color: #333 !important; }
+    .example-box { background: #f0f4f8 !important; color: #000 !important; }
+    footer { display: none; }
+    body { font-size: 11pt; }
+    .iter-wrap { flex-wrap: wrap; }
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 640px) {
+    #hero { padding: 2rem 1rem; }
+    #hero h1 { font-size: 1.6rem; }
+    .card-grid-3, .card-grid-2 { grid-template-columns: 1fr; }
+    .section-title { font-size: 1.1rem; }
+    .comp-table { font-size: 0.76rem; }
+    .comp-table td, .comp-table th { padding: 0.55rem 0.65rem; }
+    .flow-node { min-width: 150px; font-size: 0.74rem; }
+    .iter-wrap { flex-wrap: wrap; gap: 1.2rem; }
+    .iter-step:not(:last-child)::after { display: none; }
+  }
+
+  /* ── MISC ── */
+  .mt1 { margin-top: 0.75rem; }
+  .mt2 { margin-top: 1rem; }
+  .mt3 { margin-top: 1.5rem; }
+  .flex-gap { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: flex-start; }
+  strong { font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav id="top-nav" aria-label="Atalhos do artigo">
+  <div class="nav-brand">Art. 14º CP</div>
+
+  <div class="nav-main-links">
+    <a href="#visao-geral">Visão Geral</a>
+    <a href="#consumado">Consumado</a>
+    <a href="#iter">Iter Criminis</a>
+    <a href="#tentativa">Tentativa</a>
+    <a href="#especies">Espécies</a>
+    <a href="#teorias">Teorias</a>
+    <a href="#fluxograma">Fluxograma</a>
+    <a href="#inadmite">Sem Tentativa</a>
+    <a href="#punicao">Punição §ún.</a>
+    <a href="#comparativo">Comparativo</a>
+    <a href="#jurisprudencia">Juris. STF/STJ</a>
+    <a href="#doutrina">Doutrina</a>
+    <a href="#sistematica">Sistemática</a>
+    <a href="#prova" class="nav-prova">Prova</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<header id="hero">
+  <div class="badge">Código Penal · Título II · Do Crime</div>
+  <h1>Art. 14º — <span>Crime Consumado e Tentativa</span></h1>
+  <p class="subtitle">Iter Criminis · Tentativa Perfeita e Imperfeita · Crimes de Atentado · Dosimetria · Magistratura · ENAM</p>
+  <div class="law-box">
+    <strong>Art. 14.º do Decreto-Lei n.º 2.848/1940 (Código Penal)</strong>
+    "Diz-se o crime:<br>
+    I — <em>consumado</em>, quando nele se reúnem todos os elementos de sua definição legal;<br>
+    II — <em>tentado</em>, quando, iniciada a execução, não se consuma por circunstâncias alheias à vontade do agente.<br>
+    <span style="font-style:normal;color:rgba(255,255,255,0.5);font-size:0.8rem;">Parágrafo único.</span> Salvo disposição em contrário, pune-se a tentativa com a pena correspondente ao crime consumado, diminuída de um a dois terços."
+  </div>
+</header>
+
+<div class="page-wrap">
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 1. VISÃO GERAL                            -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="visao-geral">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div class="section-title"><span>Introdução &amp; Sistemática</span>Visão Geral do Artigo</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📍 Finalidade e Posição Sistemática</h3>
+      <p>O art. 14 CP integra o <strong>Título II ("Do Crime")</strong> da Parte Geral do Código Penal, estando inserido no Capítulo I ("Da Relação de Causalidade"). É um dos artigos mais importantes e mais cobrados em concursos para magistratura: define as duas formas de realização do crime em relação ao resultado típico — o <strong>crime consumado</strong> e o <strong>crime tentado</strong>.</p>
+      <p class="mt2">O dispositivo adota a teoria <strong>objetiva da tentativa</strong> (art. 14, II: atos executórios concretos + não consumação + motivo alheio à vontade do agente), em oposição à teoria subjetiva, que puniria qualquer manifestação externa da resolução criminosa. Junto com os arts. 15 (desistência voluntária e arrependimento eficaz) e 17 (crime impossível), o art. 14 forma o núcleo dogmático do <em>iter criminis</em> no CP brasileiro.</p>
+    </div>
+    <div class="card">
+      <h3>🏛️ Estrutura e Teorias sobre a Punição da Tentativa</h3>
+      <ul>
+        <li><strong>Inciso I (crime consumado):</strong> reunião de todos os elementos da definição legal do tipo — tipo objetivo + tipo subjetivo integralmente realizados</li>
+        <li><strong>Inciso II (crime tentado):</strong> início da execução + não consumação + circunstâncias alheias à vontade do agente</li>
+        <li><strong>Parágrafo único (punição):</strong> redução de 1/3 a 2/3 sobre a pena do crime consumado, salvo disposição em contrário</li>
+        <li><strong>Teoria adotada no §único — Objetiva Temperada:</strong> a pena é reduzida (não idêntica à do consumado), reconhecendo que a tentativa tem menor danosidade; mas pune-se objetivamente, sem exigir perigo concreto específico como a teoria objetiva pura exigiria</li>
+        <li><strong>Teoria subjetiva:</strong> pena igual ao consumado — adotada em casos excepcionais pelo CP (crimes de atentado — "salvo disposição em contrário")</li>
+        <li><strong>Natureza jurídica da tentativa:</strong> causa geral de diminuição de pena (3.ª fase da dosimetria)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-3 mt2">
+    <div class="card type-card type-cons">
+      <h3>🟢 Crime Consumado — Inc. I</h3>
+      <p>Todos os elementos do tipo penal se realizam integralmente. O resultado naturalístico ocorre (crimes materiais) ou a conduta se completa (crimes formais e de mera conduta). É a forma plena de realização do delito — sem qualquer redução de pena.</p>
+    </div>
+    <div class="card type-card type-tent">
+      <h3>🔴 Crime Tentado — Inc. II</h3>
+      <p>A execução é iniciada, mas o resultado típico não se consuma por <em>circunstâncias alheias</em> à vontade do agente. Pena reduzida de 1/3 a 2/3. É a forma incompleta de realização do delito — o tipo subjetivo (dolo) existe integralmente, mas o tipo objetivo realiza-se apenas em parte.</p>
+    </div>
+    <div class="card type-card type-aten">
+      <h3>🟣 Crime de Atentado</h3>
+      <p>Casos excepcionais em que a lei equipara a tentativa ao consumado — "salvo disposição em contrário" (§único, in fine). Exemplos: art. 352 CP (evasão mediante violência); arts. 309, 311 do CPM. Não há redução de pena. É a adoção da <em>teoria subjetiva</em> para casos específicos.</p>
+    </div>
+  </div>
+
+  <div class="alert alert-gold mt2">
+    <div class="alert-icon">⭐</div>
+    <div><strong>Fundamento Constitucional — Proporcionalidade e Ofensividade:</strong> A diferenciação entre crime consumado e tentado, com consequente redução de pena na tentativa, tem fundamento constitucional nos princípios da <strong>proporcionalidade</strong> (art. 5.º, XLVI, CF/88) e da <strong>ofensividade</strong> (derivado do Estado Democrático de Direito, art. 1.º CF/88). A tentativa lesa em menor grau o bem jurídico — há exposição a perigo, mas o dano final não ocorre —, justificando a redução da pena. Os crimes de atentado constituem exceção justificada pela extrema reprovabilidade da conduta.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 2. CRIME CONSUMADO                        -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="consumado">
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div class="section-title"><span>Art. 14, I — Análise Completa</span>Crime Consumado: "Todos os Elementos de Sua Definição Legal"</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🟢 Conceito e Momento da Consumação por Espécie de Crime</h3>
+      <p style="margin-bottom:0.7rem;">O crime consuma-se quando o tipo penal é <strong>integralmente realizado</strong> — quando a conduta do agente reúne, no plano fático, todos os elementos descritos no tipo legal (objetivos, subjetivos e normativos). O momento da consumação varia conforme a estrutura do tipo:</p>
+      <div style="display:flex;flex-direction:column;gap:0.5rem;">
+        <div style="background:var(--cream-mid);border-left:3px solid var(--green-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--green-accent);">Crimes Materiais:</strong> consumam-se com a produção do resultado naturalístico previsto no tipo (ex.: homicídio — com a morte; furto — com a inversão da posse).
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--blue-accent);">Crimes Formais:</strong> consumam-se com a prática da conduta, independentemente da ocorrência do resultado naturalístico (ex.: extorsão — com a exigência, não com o pagamento; ameaça — com o recebimento da mensagem).
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">Crimes de Mera Conduta:</strong> consumam-se com a simples prática da conduta descrita — não há resultado naturalístico relevante (ex.: violação de domicílio — com a entrada ou permanência).
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--purple-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--purple-accent);">Crimes Permanentes:</strong> consumam-se com a ação inicial, mas a consumação se prolonga no tempo (ex.: sequestro — dura enquanto a privação de liberdade perdurar).
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--gold);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:#7a5a00;">Crimes Habituais:</strong> consumam-se com a reiteração de atos que, isoladamente, são atípicos (ex.: exercício ilegal da medicina — com a prática habitual).
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📋 Consumação × Exaurimento</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">Distinção essencial e cobrada em provas: o crime consuma-se com a realização do tipo; o <strong>exaurimento</strong> (também chamado de pós-fato) é o desdobramento ulterior da conduta após a consumação, o qual pode (ou não) influenciar a pena.</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Extorsão:</strong> consuma-se com a exigência (crime formal); o recebimento da vantagem ilícita é mero exaurimento — mas influencia na dosimetria (art. 59 CP)</li>
+        <li><strong>Corrupção passiva:</strong> consuma-se com a solicitação ou aceitação da vantagem; o efetivo recebimento é exaurimento</li>
+        <li><strong>Importância para prescrição:</strong> a prescrição conta-se a partir da consumação, não do exaurimento (art. 111, I, CP)</li>
+        <li><strong>Importância para flagrante:</strong> em crimes permanentes, o flagrante pode ocorrer durante toda a consumação (art. 303 CPP)</li>
+        <li><strong>Importância para a tentativa:</strong> a tentativa só é possível nos crimes materiais e formais ANTES da consumação — após a consumação, não há tentativa</li>
+      </ul>
+      <div class="alert alert-navy mt2" style="font-size:0.8rem;">
+        <div>📌 <strong>Pegadinha clássica:</strong> A tentativa pressupõe que o crime NÃO SE CONSUMOU. Se houve consumação, ainda que o agente não tenha obtido o proveito pretendido (exaurimento), o crime é consumado — não tentado.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-red mt2">
+    <div class="alert-icon">🔴</div>
+    <div><strong>STJ — Súmula 582 (2016): Consumação do Roubo pela Teoria da Apprehensio/Amotio:</strong> "Consuma-se o crime de roubo com a inversão da posse do bem mediante emprego de violência ou grave ameaça, ainda que por breve tempo e em seguida à perseguição imediata ao agente e recuperação da coisa roubada, sendo prescindível a posse mansa e pacífica ou desvigiada." → O STJ adota a teoria da <em>apprehensio</em> (ou <em>amotio</em>): basta a inversão da posse, ainda que momentânea. Aplica-se igualmente ao furto. A teoria da <em>ablatio</em> (que exige o transporte para local seguro) foi rejeitada.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 3. ITER CRIMINIS                          -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="iter">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div class="section-title"><span>Caminho do Crime — Fases</span>Iter Criminis</div>
+  </div>
+
+  <!-- ITER STEPS -->
+  <div class="iter-wrap">
+    <div class="iter-step iter-cog">
+      <div class="iter-num">1</div>
+      <div class="iter-title">Cogitação</div>
+      <div class="iter-sub">Fase interna. O agente apenas pensa, planeja, idealiza o crime na mente. Não há exteriorização da conduta.</div>
+      <span class="iter-status s-impunivel">SEMPRE IMPUNÍVEL</span>
+    </div>
+    <div class="iter-step iter-prep">
+      <div class="iter-num">2</div>
+      <div class="iter-title">Preparação (Atos Preparatórios)</div>
+      <div class="iter-sub">O agente adquire meios ou instrumentos para o crime, cria condições para a execução. Ainda não ataca o bem jurídico.</div>
+      <span class="iter-status s-regra">REGRA: IMPUNÍVEL<br><small>Exceções: arts. 253, 291, 288 CP</small></span>
+    </div>
+    <div class="iter-step iter-exec">
+      <div class="iter-num">3</div>
+      <div class="iter-title">Execução (Atos Executórios)</div>
+      <div class="iter-sub">O agente inicia o ataque ao bem jurídico. A partir daqui surge a tentativa (art. 14, II, CP) se o crime não se consumar.</div>
+      <span class="iter-status s-punivel">PUNÍVEL — ART. 14, II</span>
+    </div>
+    <div class="iter-step iter-cons">
+      <div class="iter-num">4</div>
+      <div class="iter-title">Consumação</div>
+      <div class="iter-sub">Todos os elementos do tipo penal se realizam (art. 14, I, CP). Resultado típico ocorre ou conduta se completa.</div>
+      <span class="iter-status s-plena">PENA PLENA — ART. 14, I</span>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card">
+      <h3>⚖️ Distinção: Atos Preparatórios × Atos Executórios</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">A distinção entre atos preparatórios (impuníveis como tentativa) e atos executórios (puníveis) é <strong>o ponto mais difícil e mais cobrado em concursos sobre o art. 14 CP</strong>. O critério varia conforme a teoria adotada (ver Seção 06).</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Ato preparatório:</strong> aquele que cria condições para o crime sem ainda atacar o bem jurídico — ex.: adquirir a arma para o homicídio; pesquisar a rotina da vítima; alugar o automóvel para o roubo</li>
+        <li><strong>Ato executório:</strong> aquele que representa o início do ataque ao bem jurídico protegido pelo tipo penal — ex.: sacar a arma e apontar para a vítima; forçar a porta da casa para furtar</li>
+        <li><strong>Critério doutrinário majoritário — Teoria Objetivo-Material:</strong> ato executório é o que representa um ataque imediato ao bem jurídico, incluindo os atos imediatamente anteriores ao verbo núcleo do tipo segundo o plano do agente</li>
+        <li><strong>Exemplo difícil:</strong> o "apertar da campainha" na casa da vítima para um homicídio — preparatório (critério objetivo-formal) ou executório (objetivo-material)? Pelo objetivo-formal: preparatório; pelo objetivo-material (ou objetivo-individual): pode ser executório se era o ato imediatamente anterior ao ataque</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>⚡ Exceções: Atos Preparatórios Autônomamente Tipificados</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">O legislador, em alguns casos, criminaliza os atos preparatórios de forma autônoma — elevando-os à categoria de crime independente. Nesses casos, o ato preparatório não é tentativa, mas crime consumado autônomo:</p>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;margin-top:0.5rem;">
+        <div style="background:var(--cream-mid);border-left:3px solid var(--red-accent);padding:0.45rem 0.7rem;font-size:0.8rem;border-radius:0 4px 4px 0;">
+          <strong>Art. 253 CP:</strong> Fabricação, fornecimento, aquisição, posse ou transporte ilegal de engenhos explosivos ou gás tóxico/asfixiante — ato preparatório de crimes mais graves, tipificado autonomamente
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--red-accent);padding:0.45rem 0.7rem;font-size:0.8rem;border-radius:0 4px 4px 0;">
+          <strong>Art. 291 CP:</strong> Fabricação, fornecimento ou posse de instrumento para falsificação de moeda — preparatório de falsificação, tipificado autonomamente
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--red-accent);padding:0.45rem 0.7rem;font-size:0.8rem;border-radius:0 4px 4px 0;">
+          <strong>Art. 288 CP:</strong> Associação criminosa (antigo quadrilha) — preparar-se coletivamente para crimes é crime autônomo
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);padding:0.45rem 0.7rem;font-size:0.8rem;border-radius:0 4px 4px 0;">
+          <strong>Lei 11.343/2006, art. 33, §1.º:</strong> Preparação, produção e guarda de insumos para drogas — atos preparatórios tipificados autonomamente
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--gold);padding:0.45rem 0.7rem;font-size:0.8rem;border-radius:0 4px 4px 0;">
+          <strong>Consequência:</strong> nesses casos, o agente responde pelo crime autônomo (consumado), não por tentativa do crime-fim
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 4. TENTATIVA — ELEMENTOS                  -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="tentativa">
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <div class="section-title"><span>Art. 14, II — Análise Profunda</span>Tentativa: Conceito, Elementos e Fundamento</div>
+  </div>
+
+  <div class="card-grid card-grid-3">
+    <div class="card type-card type-tent">
+      <h3>🔴 Elemento 1 — Início da Execução</h3>
+      <p><em>"Quando, iniciada a execução…"</em></p>
+      <div class="divider"></div>
+      <p>O agente deve ter praticado pelo menos um <strong>ato executório</strong> — uma conduta que represente o início do ataque ao bem jurídico tutelado pelo tipo penal. A mera cogitação e os atos preparatórios não caracterizam tentativa.</p>
+      <ul class="mt1">
+        <li>O ato executório pode ser <strong>unisubsistente</strong> (um único ato) ou <strong>plurisubsistente</strong> (vários atos que compõem a execução)</li>
+        <li>A definição do que é "início da execução" varia conforme a teoria adotada (objetivo-formal, objetivo-material, objetivo-individual)</li>
+        <li>Não há tentativa sem ao menos um ato executório concreto e idôneo — ato que, em condições normais, seria adequado para produzir o resultado típico</li>
+      </ul>
+    </div>
+    <div class="card type-card type-tent">
+      <h3>🔴 Elemento 2 — Não Consumação</h3>
+      <p><em>"…não se consuma…"</em></p>
+      <div class="divider"></div>
+      <p>O resultado típico (nos crimes materiais) ou a conduta completa (nos crimes formais e de mera conduta) <strong>não se realiza integralmente</strong>. O tipo penal permanece incompleto no plano fático.</p>
+      <ul class="mt1">
+        <li>Nos <strong>crimes materiais:</strong> o resultado naturalístico não ocorre (ex.: a vítima não morre no homicídio tentado)</li>
+        <li>Nos <strong>crimes formais:</strong> a conduta típica não se completa (ex.: o núcleo do tipo não é integralmente realizado)</li>
+        <li>Se o resultado ocorrer, o crime estará consumado — não há "consumação parcial" compatível com tentativa</li>
+        <li><strong>Elemento negativo:</strong> a não consumação é condição necessária para a tentativa. Uma vez consumado, não há mais espaço para tentativa</li>
+      </ul>
+    </div>
+    <div class="card type-card type-tent">
+      <h3>🔴 Elemento 3 — Circunstâncias Alheias à Vontade</h3>
+      <p><em>"…por circunstâncias alheias à vontade do agente."</em></p>
+      <div class="divider"></div>
+      <p>A não consumação deve decorrer de <strong>fator externo à vontade do agente</strong> — intervenção de terceiros, resistência da vítima, falha dos meios, fuga da vítima, intervenção policial etc. Este elemento distingue a <strong>tentativa</strong> da <strong>desistência voluntária</strong> e do <strong>arrependimento eficaz</strong> (art. 15 CP).</p>
+      <ul class="mt1">
+        <li>Se o agente <em>não quis</em> a consumação: art. 15 CP (desistência voluntária — se interrompeu os atos; arrependimento eficaz — se evitou o resultado)</li>
+        <li>Se o agente <em>não pôde</em> consumar (por força externa): art. 14, II, CP (tentativa)</li>
+        <li><strong>Fórmula de Frank:</strong> "Posso, mas não quero" = desistência voluntária (art. 15). "Quero, mas não posso" = tentativa (art. 14, II).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card mt2">
+    <h3>🎯 Elemento Subjetivo na Tentativa — O Dolo e a Culpa</h3>
+    <div class="card-grid card-grid-2 mt1">
+      <div>
+        <p style="font-size:0.85rem;color:var(--text-mid);"><strong style="color:var(--navy);">Tentativa dolosa (regra):</strong> O agente age com <em>dolo de consumação</em> — tem a intenção de realizar o tipo penal por completo, mas não consegue. O dolo da tentativa é idêntico ao do crime consumado — não há "dolo de tentativa". O agente quer o resultado (dolo direto) ou o aceita (dolo eventual). O tipo subjetivo (dolo) está completo; apenas o tipo objetivo fica incompleto.</p>
+        <div class="alert alert-red mt1" style="font-size:0.8rem;">
+          <div>🔴 <strong>Ponto crítico:</strong> Para a tentativa de homicídio, é indispensável o <strong>animus necandi</strong> (dolo de matar). Sem esse elemento subjetivo, o crime tentado pode ser outro (ex.: lesão corporal). STJ: distingue homicídio doloso tentado de lesão corporal consumada pelo dolo demonstrado.</div>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:0.85rem;color:var(--text-mid);"><strong style="color:var(--navy);">Tentativa culposa — regra geral da impossibilidade:</strong> Em regra, os crimes culposos <strong>não admitem tentativa</strong>, pois o agente não quer o resultado — logo, não pode "tentar" o que não pretende. A tentativa pressupõe <em>dolo de consumação</em>, incompatível com a culpa.</p>
+        <p class="mt1" style="font-size:0.85rem;color:var(--text-mid);"><strong>Exceção discutida — culpa imprópria (culpa com representação):</strong> Parte da doutrina (Masson, Bitencourt) admite tentativa na chamada <em>culpa imprópria</em> (descriminante putativa culposa — art. 20, §1.º, CP): o agente age com dolo, mas a situação é tratada como culpa. Posição minoritária. Greco rejeita.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 5. ESPÉCIES DE TENTATIVA                  -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="especies">
+  <div class="section-header">
+    <div class="section-num">05</div>
+    <div class="section-title"><span>Classificações Doutrinárias</span>Espécies e Modalidades de Tentativa</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📊 Classificação Quanto à Completude dos Atos Executórios</h3>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;margin-top:0.6rem;">
+        <div style="background:var(--gold-pale);border:1px solid var(--gold);border-radius:6px;padding:0.9rem 1rem;">
+          <strong style="color:#7a5a00;font-family:'Playfair Display',serif;font-size:0.95rem;">Tentativa Imperfeita (Inacabada)</strong>
+          <p style="font-size:0.82rem;color:var(--text-mid);margin-top:0.3rem;">O agente é <em>interrompido antes de esgotar</em> os atos executórios que pretendia praticar. Os atos executórios não se completam. Ex.: atirador que é detido após o 1.º disparo, tendo planejado efetuar 3 disparos.</p>
+          <p style="font-size:0.79rem;color:var(--text-soft);margin-top:0.2rem;">→ Normalmente admite maior redução de pena (maior distância da consumação)</p>
+        </div>
+        <div style="background:#fde8e8;border:1px solid #e09090;border-radius:6px;padding:0.9rem 1rem;">
+          <strong style="color:var(--red-accent);font-family:'Playfair Display',serif;font-size:0.95rem;">Tentativa Perfeita (Acabada / Crime Falho)</strong>
+          <p style="font-size:0.82rem;color:var(--text-mid);margin-top:0.3rem;">O agente <em>esgota todos os atos executórios</em> que pretendia praticar, mas o resultado não ocorre. Ex.: atirador que efetua todos os disparos planejados, mas a vítima sobrevive após cirurgia.</p>
+          <p style="font-size:0.79rem;color:var(--text-soft);margin-top:0.2rem;">→ Normalmente admite menor redução de pena (maior proximidade da consumação)</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📊 Classificação Quanto ao Contato com a Vítima</h3>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;margin-top:0.6rem;">
+        <div style="background:#edf7f0;border:1px solid #7ec89a;border-radius:6px;padding:0.9rem 1rem;">
+          <strong style="color:var(--green-accent);font-family:'Playfair Display',serif;font-size:0.95rem;">Tentativa Branca (Incruenta)</strong>
+          <p style="font-size:0.82rem;color:var(--text-mid);margin-top:0.3rem;">A vítima <em>não é atingida</em> — os atos executórios não chegam a causar qualquer lesão ao bem jurídico imediato (pessoa, coisa). Ex.: todos os disparos erram o alvo.</p>
+          <p style="font-size:0.79rem;color:var(--text-soft);margin-top:0.2rem;">→ Maior distância da consumação → maior redução de pena (2/3, em regra)</p>
+        </div>
+        <div style="background:#fdf0f0;border:1px solid #e09090;border-radius:6px;padding:0.9rem 1rem;">
+          <strong style="color:var(--red-accent);font-family:'Playfair Display',serif;font-size:0.95rem;">Tentativa Cruenta (Vermelha)</strong>
+          <p style="font-size:0.82rem;color:var(--text-mid);margin-top:0.3rem;">A vítima <em>é atingida</em> — os atos executórios causam lesão ao bem jurídico imediato, mas o resultado morte (ou outro pretendido) não ocorre. Ex.: tiro que acerta a vítima, mas não a mata.</p>
+          <p style="font-size:0.79rem;color:var(--text-soft);margin-top:0.2rem;">→ Menor distância da consumação → menor redução de pena (1/3, em regra)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card">
+      <h3>🔗 Relação entre as Classificações e a Redução de Pena</h3>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.82rem;">
+          <thead style="background:var(--navy);color:white;">
+            <tr>
+              <th style="padding:0.5rem 0.7rem;text-align:left;">Tipo de Tentativa</th>
+              <th style="padding:0.5rem 0.7rem;text-align:left;">Iter percorrido</th>
+              <th style="padding:0.5rem 0.7rem;text-align:left;">Redução (regra)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:0.5rem 0.7rem;font-weight:700;">Branca + Imperfeita</td><td style="padding:0.5rem 0.7rem;">Mínimo</td><td style="padding:0.5rem 0.7rem;font-weight:700;color:var(--green-accent);">Maior: próximo de 2/3</td></tr>
+            <tr style="background:var(--cream);"><td style="padding:0.5rem 0.7rem;font-weight:700;">Branca + Perfeita</td><td style="padding:0.5rem 0.7rem;">Médio</td><td style="padding:0.5rem 0.7rem;font-weight:700;color:#7a5a00;">Médio-alto</td></tr>
+            <tr><td style="padding:0.5rem 0.7rem;font-weight:700;">Cruenta + Imperfeita</td><td style="padding:0.5rem 0.7rem;">Médio</td><td style="padding:0.5rem 0.7rem;font-weight:700;color:#7a5a00;">Médio-baixo</td></tr>
+            <tr style="background:var(--gold-pale);"><td style="padding:0.5rem 0.7rem;font-weight:700;">Cruenta + Perfeita</td><td style="padding:0.5rem 0.7rem;">Máximo</td><td style="padding:0.5rem 0.7rem;font-weight:700;color:var(--red-accent);">Menor: próximo de 1/3</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt2" style="font-size:0.8rem;color:var(--text-soft);">Atenção: a tabela representa tendências jurisprudenciais, não regras absolutas. O STJ e os tribunais analisam o caso concreto pelo iter criminis percorrido.</p>
+    </div>
+    <div class="card">
+      <h3>🟣 Tentativa e Dolo Eventual</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">O CP admite tentativa tanto com <strong>dolo direto</strong> quanto com <strong>dolo eventual</strong> — em qualquer caso, o agente age dolosamente e as circunstâncias externas impedem a consumação. O dolo eventual (assunção do risco de produzir o resultado) é compatível com a tentativa: o agente que assume o risco de matar e não mata é condenado por tentativa com dolo eventual.</p>
+      <div class="alert alert-navy mt2" style="font-size:0.8rem;">
+        <div>📌 <strong>Exemplo cobrado em provas:</strong> Condutor embriagado que avança sinal vermelho em alta velocidade em cruzamento movimentado (dolo eventual de matar) → se não há vítima: ato preparatório?; se há tentativa de morte mas a vítima escapa: tentativa de homicídio com dolo eventual. STJ e STF reconhecem o dolo eventual no homicídio de trânsito e, consequentemente, a tentativa com dolo eventual.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 6. TEORIAS SOBRE INÍCIO DA EXECUÇÃO       -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="teorias">
+  <div class="section-header">
+    <div class="section-num">06</div>
+    <div class="section-title"><span>Dogmática Penal — Alta Cobrança</span>Teorias sobre o Início dos Atos Executórios</div>
+  </div>
+
+  <div class="alert alert-navy" style="margin-bottom:1rem;">
+    <div class="alert-icon">ℹ️</div>
+    <div>A definição do momento em que os atos preparatórios passam a ser atos executórios é o <strong>problema central da tentativa</strong>. Diversas teorias foram desenvolvidas para responder essa questão. O CP brasileiro não define expressamente o que são "atos executórios" — a delimitação é doutrinária e jurisprudencial.</div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0.85rem;">
+
+    <div class="teoria-card tc-1">
+      <h4>Teoria Subjetiva</h4>
+      <ul>
+        <li><strong>Critério:</strong> Tentativa começa quando a resolução criminosa se manifesta externamente, de qualquer forma</li>
+        <li><strong>Consequência:</strong> qualquer ato externo revelador do dolo constitui início de execução</li>
+        <li><strong>Problema:</strong> viola a legalidade e o princípio da ofensividade — pune-se a intenção, não o ato</li>
+        <li><strong>Origem:</strong> Feuerbach; influência nos códigos do séc. XIX</li>
+        <li style="color:var(--red-accent);font-weight:700;">❌ Não adotada pelo CP brasileiro</li>
+      </ul>
+    </div>
+
+    <div class="teoria-card tc-2">
+      <h4>Teoria Objetivo-Formal (Clássica)</h4>
+      <ul>
+        <li><strong>Critério:</strong> Execução começa quando o agente pratica o verbo núcleo do tipo — ou seja, quando a conduta típica começa</li>
+        <li><strong>Exemplo:</strong> No homicídio (matar), a execução começa quando o agente realiza ato de "matar" (ex.: dispara a arma); a compra da arma é preparação</li>
+        <li><strong>Problema:</strong> muito restritiva — exclui da tentativa atos que claramente representam ataque ao bem jurídico mas que precedem o verbo nuclear</li>
+        <li><strong>Adotada por:</strong> Beling, von Liszt (clássicos)</li>
+        <li style="color:var(--text-soft);">⚠️ Minoritária na doutrina atual</li>
+      </ul>
+    </div>
+
+    <div class="teoria-card tc-3">
+      <h4>Teoria Objetivo-Material (Frank)</h4>
+      <ul>
+        <li><strong>Critério:</strong> Execução começa quando o bem jurídico entra em perigo imediato, incluindo os atos que, segundo a representação do plano do autor, são imediatamente anteriores ao verbo núcleo do tipo</li>
+        <li><strong>Exemplo:</strong> escalar o muro da casa para furtar já é ato executório (mesmo sem praticar o verbo "subtrair"), pois é imediatamente anterior à subtração</li>
+        <li><strong>Vantagem:</strong> mais ampla e realista — capta melhor o início do ataque ao bem jurídico</li>
+        <li><strong>Adotada por:</strong> maioria da doutrina brasileira: Masson, Bitencourt, Greco, Nucci, Capez</li>
+        <li style="color:var(--green-accent);font-weight:700;">✅ Majoritária no Brasil</li>
+      </ul>
+    </div>
+
+    <div class="teoria-card tc-4">
+      <h4>Teoria Objetivo-Individual (Welzel/Roxin)</h4>
+      <ul>
+        <li><strong>Critério:</strong> Combina o plano concreto do autor com a perspectiva objetiva — ato executório é aquele que, segundo o plano específico do agente, representa o início imediato da realização do tipo</li>
+        <li><strong>Diferença da objetivo-material:</strong> considera o plano individual do agente para delimitar o "imediatamente anterior" — personaliza a análise</li>
+        <li><strong>Exemplo:</strong> se o plano do agente era entrar pela porta dos fundos, o ato de contornar a casa já pode ser executório</li>
+        <li><strong>Adotada por:</strong> alguns autores modernos; confundida com a objetivo-material por parte da doutrina nacional</li>
+        <li style="color:var(--text-soft);">⚠️ Relevante para concursos de alto nível</li>
+      </ul>
+    </div>
+
+    <div class="teoria-card tc-adot" style="grid-column: 1/-1;">
+      <h4>⭐ Teoria Adotada pelo Direito Brasileiro — Objetivo-Material (Posição para o Concurso)</h4>
+      <p style="font-size:0.83rem;color:var(--text-mid);">O CP brasileiro não adota expressamente nenhuma teoria — usa a expressão genérica "iniciada a execução" (art. 14, II). A <strong>doutrina majoritária brasileira</strong> (Masson, Bitencourt, Greco, Nucci, Capez) adota a <strong>teoria objetivo-material</strong>, que considera ato executório aquele que representa o início do ataque ao bem jurídico, incluindo os atos imediatamente anteriores ao verbo núcleo do tipo segundo o plano do agente. O STJ aplica esse critério em suas decisões sobre distinção entre atos preparatórios e executórios. <strong>Para o concurso de magistratura:</strong> adote a teoria objetivo-material como posição do CP brasileiro; mencione a objetivo-formal como posição clássica minoritária; e cite Welzel/Roxin se a questão exigir aprofundamento doutrinário.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 7. FLUXOGRAMA                             -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="fluxograma">
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma: Iter Criminis e Aplicação do Art. 14 CP</div>
+  </div>
+
+  <div class="flow-wrap">
+    <div class="flow-center">
+
+      <div class="flow-node flow-start">CONDUTA PRATICADA PELO AGENTE — ANÁLISE DO ITER CRIMINIS</div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:560px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 1 — O agente chegou à fase de execução?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">O ato praticado representa início de ataque ao bem jurídico (teoria objetivo-material) ou ainda é cogitação/preparação?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">COGITAÇÃO ou PREPARAÇÃO</div>
+          <div class="flow-node flow-box-blue" style="font-size:0.76rem;text-align:center;min-width:180px;">
+            Fase interna ou preparatória<br>
+            <strong>IMPUNÍVEL como tentativa</strong><br>
+            <small>Salvo se ato preparatório for<br>tipo autônomo (arts. 253, 291, 288 CP)</small>
+          </div>
+          <div class="flow-connector-line" style="height:20px;"></div>
+          <div class="flow-end-blue" style="font-size:0.72rem;">Atipicidade / Crime autônomo preparatório</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:130px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">ATO EXECUTÓRIO iniciado</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:180px;">
+            Ato que representa ataque<br>ao bem jurídico protegido<br>
+            <strong>Prosseguir para Passo 2</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:560px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 2 — O tipo penal SE CONSUMOU?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Todos os elementos da definição legal do crime se realizaram? (Art. 14, I CP)</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">SIM — tipo realizado integralmente</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;min-width:190px;">
+            <strong>CRIME CONSUMADO</strong><br>
+            Art. 14, I, CP<br>
+            <small>Pena plena — sem redução<br>Identificar exaurimento (irrelevante para tipo)</small>
+          </div>
+          <div class="flow-connector-line" style="height:20px;"></div>
+          <div class="flow-end-green" style="font-size:0.72rem;">Consumação — Art. 14, I CP</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:130px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — tipo incompleto</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:190px;">
+            Tipo não se consumou<br>
+            <strong>Prosseguir para Passo 3</strong><br>
+            <small>Identificar razão da não consumação</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:560px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 3 — A não consumação se deve à VONTADE do agente ou a CIRCUNSTÂNCIAS ALHEIAS?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Fórmula de Frank: "Posso, mas não quis" = art. 15. "Quis, mas não pude" = art. 14, II.</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">VONTADE do próprio agente</div>
+          <div class="flow-node flow-box-purple" style="font-size:0.76rem;text-align:center;min-width:190px;">
+            O agente QUIS não consumar<br>
+            <strong>Verificar Art. 15 CP</strong><br>
+            <small>Desistência voluntária<br>(interrompeu atos)<br>ou Arrependimento eficaz<br>(impediu resultado)</small>
+          </div>
+          <div class="flow-connector-line" style="height:20px;"></div>
+          <div class="flow-end-purple" style="font-size:0.72rem;">Art. 15 CP — Ponte de Ouro</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:150px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">CIRCUNSTÂNCIAS ALHEIAS</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:190px;">
+            O agente NÃO PÔDE consumar<br>
+            Fator externo impediu<br>
+            <strong>CRIME TENTADO — Art. 14, II, CP</strong><br>
+            <small>Prosseguir para Passo 4</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:560px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 4 — O crime ADMITE tentativa?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Verificar se o tipo penal é compatível com a tentativa (crimes culposos, omissivos próprios, habituais, unissubsistentes, contravenções — não admitem)</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">NÃO admite tentativa</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;min-width:190px;">
+            Crime não admite tentativa<br>
+            → Analisar outro tipo (lesão corporal, etc.)<br>
+            → Ou atipicidade da conduta<br>
+            <small>Contravenções → art. 4.º LCP</small>
+          </div>
+          <div class="flow-connector-line" style="height:20px;"></div>
+          <div class="flow-end-gold" style="font-size:0.72rem;">Atipicidade / Crime diverso consumado</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:130px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">SIM — admite tentativa</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:190px;">
+            <strong>TENTATIVA — Art. 14, II, CP</strong><br>
+            Prosseguir para dosimetria<br>
+            <small>Passo 5: calcular redução</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-box-navy" style="max-width:560px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 5 — Verificar se é Crime de Atentado (§único, in fine)</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">A lei especial equipara tentativa ao consumado ("salvo disposição em contrário")? → Sem redução. Ou aplica-se regra geral → redução de 1/3 a 2/3.</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">CRIME DE ATENTADO</div>
+          <div class="flow-node flow-box-purple" style="font-size:0.76rem;text-align:center;min-width:180px;">
+            Tentativa = pena do consumado<br>
+            <strong>Sem redução</strong><br>
+            <small>Ex.: art. 352 CP; CPM arts. 309, 311</small>
+          </div>
+          <div class="flow-connector-line" style="height:20px;"></div>
+          <div class="flow-end-purple" style="font-size:0.72rem;">Tentativa = Consumado (sem redução)</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">REGRA GERAL</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:180px;">
+            <strong>Redução de 1/3 a 2/3</strong><br>
+            Critério: iter criminis percorrido<br>
+            Menor iter → maior redução<br>
+            Maior iter → menor redução
+          </div>
+          <div class="flow-connector-line" style="height:20px;"></div>
+          <div class="flow-end-red" style="font-size:0.72rem;">Tentativa — Pena reduzida de 1/3 a 2/3</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 8. CRIMES SEM TENTATIVA                   -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="inadmite">
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <div class="section-title"><span>Compatibilidade Típica — Alta Cobrança</span>Crimes que NÃO Admitem Tentativa</div>
+  </div>
+
+  <div class="alert alert-gold" style="margin-bottom:1rem;">
+    <div class="alert-icon">⭐</div>
+    <div><strong>Ponto altamente cobrado em magistratura:</strong> A incompatibilidade entre certos tipos penais e o instituto da tentativa é tema recorrente em provas. A tentativa pressupõe: (a) conduta dolosa; (b) atos executórios que possam ser fracionados (plurissubsistência); (c) resultado não ocorrido; (d) tipo compatível com a interrupção da execução. Quando qualquer um desses pressupostos falta estruturalmente ao tipo, a tentativa é inadmissível.</div>
+  </div>
+
+  <div class="crime-grid">
+
+    <div class="crime-item ci-red">
+      <h5>🔴 Crimes Culposos</h5>
+      <p>O agente não quer o resultado — logo, não pode "tentar" alcançar aquilo que não pretende. A tentativa exige dolo de consumação. <strong>Exceção controversa:</strong> culpa imprópria (descriminante putativa culposa — art. 20, §1.º, CP): posição minoritária admite tentativa.</p>
+    </div>
+
+    <div class="crime-item ci-red">
+      <h5>🔴 Crimes Preterdolosos</h5>
+      <p>Dolo no antecedente + culpa no consequente (ex.: lesão corporal seguida de morte — art. 129, §3.º). O resultado agravador é culposo — não admite tentativa quanto ao resultado além do dolo. Admite tentativa quanto à lesão dolosa (na parte antecedente).</p>
+    </div>
+
+    <div class="crime-item ci-red">
+      <h5>🔴 Crimes Omissivos Próprios</h5>
+      <p>Crimes de mera conduta omissiva (ex.: omissão de socorro — art. 135 CP). O agente ou omite (crime consumado) ou age (atipicidade). Não há fracionamento dos atos omissivos que permita "tentar" omitir — a omissão é um/zero. <strong>Maioria doutrinária e STJ.</strong></p>
+    </div>
+
+    <div class="crime-item ci-blue">
+      <h5>🔵 Crimes Habituais</h5>
+      <p>Só se consumam com a reiteração de atos (ex.: exercício ilegal da medicina — art. 282 CP; curandeirismo — art. 284 CP). Um único ato não configura o tipo. Não há tentativa porque o ato isolado é atípico — a reiteração é elementar do tipo, não circunstância.</p>
+    </div>
+
+    <div class="crime-item ci-blue">
+      <h5>🔵 Crimes Unissubsistentes</h5>
+      <p>Realizados por um único ato insuscetível de fracionamento. Se o ato é praticado, o crime se consuma; se não praticado, não há início de execução. Ex.: alguns crimes de palavra (injúria verbal em face da vítima presente). Não há ato executório "incompleto".</p>
+    </div>
+
+    <div class="crime-item ci-gold">
+      <h5>🟡 Contravenções Penais</h5>
+      <p>Por força do art. 4.º da Lei das Contravenções Penais (Dec.-Lei 3.688/41): <em>"Não é punível a tentativa de contravenção."</em> Norma especial que afasta o art. 14, II, CP (art. 12 CP — cláusula de exceção). É o exemplo mais clássico da cláusula "salvo disposição em contrário" do §único do art. 14.</p>
+    </div>
+
+    <div class="crime-item ci-gold">
+      <h5>🟡 Crimes de Atentado/Empreendimento</h5>
+      <p>A tentativa é expressamente equiparada ao consumado. Ex.: art. 352 CP (evasão mediante violência — "…usando de violência contra a pessoa, recapturar-se ou evadir-se…": tentativa = mesmo pena). CPM arts. 309, 311. Não há "tentativa" diferenciada porque a lei iguala os tratamentos.</p>
+    </div>
+
+    <div class="crime-item ci-green">
+      <h5>🟢 Crimes que Exigem Dolo Específico × Resultado</h5>
+      <p>Em crimes qualificados pelo resultado (ex.: latrocínio — art. 157, §3.º), STF Súmula 610: "Há crime de latrocínio quando o homicídio se consuma, ainda que não realize o agente a subtração de bens da vítima." → latrocínio consumado mesmo sem subtração, se houver morte.</p>
+    </div>
+
+    <div class="crime-item ci-purple">
+      <h5>🟣 Crimes de Mera Conduta — Debate</h5>
+      <p>Embora controverso, parte da doutrina (Masson) admite tentativa em crimes de mera conduta plurissubsistentes (ex.: violação de domicílio pelo exterior da casa antes de entrar). Posição minoritária. A maioria (Bitencourt, Greco) nega em razão da estrutura do tipo.</p>
+    </div>
+
+    <div class="crime-item ci-navy">
+      <h5>🔷 Omissivos Impróprios — Debate</h5>
+      <p>Crimes comissivos por omissão (art. 13, §2.º, CP). Parte da doutrina admite tentativa: o garantidor que deveria agir e não age, mas outro intervém impedindo o resultado. Masson e Greco: admitem. Bitencourt: nega quanto aos omissivos, mesmo impróprios.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 9. PUNIÇÃO DA TENTATIVA                   -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="punicao">
+  <div class="section-header">
+    <div class="section-num">09</div>
+    <div class="section-title"><span>§ Único — Causa de Diminuição</span>Punição da Tentativa: Critérios e Dosimetria</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📐 Critério para Fixação da Redução (1/3 a 2/3)</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.6rem;">O parágrafo único do art. 14 CP não estabelece o critério para escolha da fração de redução entre os extremos (mínimo de 1/3 e máximo de 2/3). A doutrina e o STJ consolidaram o entendimento de que o critério é o <strong>iter criminis percorrido</strong>:</p>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.83rem;line-height:1.8;">
+        <p><strong style="color:var(--gold-light);">Regra Principal — STJ Consolidado:</strong></p>
+        <p>Quanto mais o agente percorreu o <em>iter criminis</em> em direção à consumação (quanto mais próximo estava de consumar o crime), <strong>menor</strong> a redução aplicável (mais próximo de 1/3).</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.6rem 0;"></div>
+        <p>Quanto menos o agente percorreu (quanto mais distante estava da consumação), <strong>maior</strong> a redução (mais próximo de 2/3).</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.6rem 0;"></div>
+        <p style="color:var(--gold-light);font-style:italic;">"Tentativa branca = maior redução / Tentativa cruenta perfeita = menor redução"</p>
+      </div>
+    </div>
+    <div class="card">
+      <h3>⚖️ A Tentativa na Dosimetria — 3.ª Fase</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.6rem;">A tentativa é <strong>causa geral de diminuição de pena</strong> (3.ª fase da dosimetria trifásica — art. 68, §único, CP). Incide sobre a pena intermediária (após agravantes e atenuantes), reduzindo-a de 1/3 a 2/3.</p>
+      <ul>
+        <li><strong>Base de cálculo:</strong> pena prevista para o crime consumado (pena máxima do tipo) — não a pena-base do caso concreto. Após a redução, o resultado é a pena máxima da tentativa</li>
+        <li><strong>Mínimo e máximo da tentativa:</strong> o limite legal de pena da tentativa é calculado sobre os limites do tipo consumado. Ex.: homicídio simples tentado: de 6 a 20 anos → redução de 1/3 a 2/3 → de 2 a 13 anos e 4 meses</li>
+        <li><strong>Prescrição da tentativa:</strong> usa-se a pena máxima in abstrato do crime tentado (já reduzida de 1/3 a 2/3) para calcular o prazo prescricional (art. 109 CP c/c art. 14, §único, CP)</li>
+        <li><strong>Posição majoritária (STJ):</strong> a redução aplica-se sobre a pena intermediária da dosimetria, não sobre a pena-base isoladamente</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card mt2">
+    <h3>📋 "Salvo Disposição em Contrário" — Crimes de Atentado e Contravenções</h3>
+    <div class="card-grid card-grid-2 mt1">
+      <div>
+        <p style="font-size:0.85rem;color:var(--text-mid);"><strong style="color:var(--navy);">Crimes de Atentado/Empreendimento:</strong> São crimes em que a lei equipara expressamente a tentativa ao crime consumado, afastando a redução do §único. O legislador, nesses casos, adota a <strong>teoria subjetiva da tentativa</strong> (pune-se pelo dolo, não pelo resultado). Exemplos:</p>
+        <ul class="mt1" style="font-size:0.83rem;">
+          <li><strong>Art. 352 CP</strong> — Evasão mediante violência contra a pessoa: a simples tentativa já é descrita no tipo ("recapturar-se ou evadir-se… usando de violência")</li>
+          <li><strong>Crimes contra a soberania nacional (arts. 7–10 Lei 7.170/83):</strong> algumas figuras equiparam tentativa ao consumado</li>
+          <li><strong>CPM arts. 309, 311:</strong> motim e revolta militar — tentativa = pena do consumado</li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-size:0.85rem;color:var(--text-mid);"><strong style="color:var(--navy);">Contravenções Penais (Art. 4.º LCP):</strong> A tentativa é <em>impunível</em> — não há redução, há ausência de punição. É o extremo oposto dos crimes de atentado: nesses, tentativa = consumado (teoria subjetiva); nas contravenções, tentativa = atipicidade.</p>
+        <p class="mt1" style="font-size:0.85rem;color:var(--text-mid);">A expressão "salvo disposição em contrário" do §único do art. 14 CP abrange tanto os casos em que a lei equipara tentativa ao consumado (sem redução) quanto os casos em que a tentativa não é punível (como as contravenções).</p>
+        <div class="alert alert-gold mt2" style="font-size:0.8rem;">
+          <div>⭐ <strong>Resumo para prova:</strong> §único do art. 14 CP: "salvo disposição em contrário" = (a) crimes de atentado [sem redução — tentativa = consumado] + (b) contravenções penais [tentativa impunível — art. 4.º LCP].</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="example-box">
+      <div class="ex-title">📌 Dosimetria — Tentativa de Homicídio Simples</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">Réu tenta matar a vítima com 3 disparos. Todos erram o alvo (tentativa branca + perfeita). Pena-base fixada no mínimo.</p>
+      <div class="ex-calc">Art. 121, caput, CP: pena de 6 a 20 anos
+
+Pena-base: 6 anos (mínimo — circunstâncias neutras)
+2.ª fase: sem agravantes/atenuantes → 6 anos
+3.ª fase: tentativa (art. 14, §único, CP)
+
+Iter percorrido: todos os disparos efetuados (perfeita)
+mas nenhum atingiu a vítima (branca)
+→ Redução de 2/3 (maior — vítima não atingida)
+
+Cálculo: 6 anos − 2/3 = 6 − 4 = 2 anos
+Pena definitiva: 2 anos de reclusão ✅
+
+Se cruenta + perfeita (atingiu mas não matou):
+→ Redução menor: 1/3
+Cálculo: 6 anos − 1/3 = 6 − 2 = 4 anos ✅
+
+Prescrição do homicídio tentado (branco):
+Pena máx. in abstrato da tentativa (base mínima → 2 anos):
+→ Mas para prescrição usa-se a pena in abstracto máx. reduzida
+→ 20 anos − 2/3 = 6,67 anos → art. 109, III CP → prazo de 12 anos</div>
+    </div>
+    <div class="example-box">
+      <div class="ex-title">📌 Distinção: Tentativa × Crime Impossível × Desistência</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">Três condutas aparentemente similares com tratamentos radicalmente distintos.</p>
+      <div class="ex-calc">CASO 1 — TENTATIVA (art. 14, II, CP):
+Agente entra em farmácia com arma para roubar.
+Polícia chega e ele foge sem nada levar.
+→ Circunstância ALHEIA à vontade impediu consumação
+→ TENTATIVA de roubo → pena reduzida de 1/3 a 2/3 ✅
+
+CASO 2 — DESISTÊNCIA VOLUNTÁRIA (art. 15 CP):
+Agente inicia a abordagem, mas desiste
+voluntariamente antes de exigir os bens.
+→ Circunstância da PRÓPRIA VONTADE
+→ Responde apenas pelos atos já praticados
+→ "Ponte de ouro" — sem tentativa de roubo ✅
+
+CASO 3 — CRIME IMPOSSÍVEL (art. 17 CP):
+Agente aponta arma desmuniciada para roubar
+(completamente sem munição e sem condições
+de ser carregada imediatamente).
+→ Meio ABSOLUTAMENTE ineficaz
+→ Fato atípico — não responde por nada
+→ STJ: debate sobre arma desmuniciada ✅</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 10. COMPARATIVO                           -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="comparativo">
+  <div class="section-header">
+    <div class="section-num">10</div>
+    <div class="section-title"><span>Quadro Sinóptico</span>Art. 14 × Art. 15 × Art. 17 CP — Sistema Completo</div>
+  </div>
+
+  <div style="overflow-x:auto;">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Critério</th>
+          <th>Art. 14, II — Tentativa</th>
+          <th>Art. 15 — Desistência Vol. / Arrep. Eficaz</th>
+          <th>Art. 17 — Crime Impossível</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hl">
+          <td>Fase do iter criminis</td>
+          <td>Atos executórios — interrompidos por fator externo</td>
+          <td>Atos executórios — interrompidos por VONTADE do agente</td>
+          <td>Atos executórios — mas inidôneos ab initio</td>
+        </tr>
+        <tr>
+          <td>Razão da não consumação</td>
+          <td><strong>Circunstâncias ALHEIAS</strong> à vontade do agente</td>
+          <td>Desistência: <strong>interrompe atos</strong> por vontade própria. Arr. Eficaz: <strong>impede resultado</strong> por vontade própria</td>
+          <td>Meio absolutamente ineficaz OU objeto absolutamente impróprio</td>
+        </tr>
+        <tr class="hl2">
+          <td>Consequência jurídica</td>
+          <td>Crime tentado — pena reduzida de 1/3 a 2/3</td>
+          <td>Responde apenas pelos atos praticados até a desistência/arrependimento — "ponte de ouro"</td>
+          <td>Fato atípico — NÃO há crime. Impunível.</td>
+        </tr>
+        <tr>
+          <td>Elemento volitivo</td>
+          <td>Agente QUER consumar, mas circunstância externa impede</td>
+          <td>Agente PODE consumar, mas NÃO QUER — fórmula de Frank: "posso, mas não quero"</td>
+          <td>Agente quer consumar, mas meios/objeto são absolutamente inadequados</td>
+        </tr>
+        <tr class="hl3">
+          <td>Requisito central</td>
+          <td>Ato executório idôneo + não consumação por causa externa</td>
+          <td>Voluntariedade da desistência (não precisa ser espontânea)</td>
+          <td>Inidoneidade ABSOLUTA dos meios ou do objeto (não relativa)</td>
+        </tr>
+        <tr>
+          <td>Teoria por trás</td>
+          <td>Teoria objetiva temperada</td>
+          <td>"Ponte de ouro" (política criminal de incentivo à desistência)</td>
+          <td>Teoria objetiva pura (não há risco real ao bem jurídico)</td>
+        </tr>
+        <tr class="hl">
+          <td>Responsabilização</td>
+          <td>Crime tentado — responde com pena reduzida</td>
+          <td>Desistência: crimes até ali praticados. Arrep. Eficaz: idem. Ex.: se disparou e depois retirou a bala → responde por lesão, não por tentativa de homicídio</td>
+          <td>Impunível — não há resposta penal pela intenção (vedação ao Direito Penal do Autor)</td>
+        </tr>
+        <tr class="hl4">
+          <td>Exemplo paradigma</td>
+          <td>Agente dispara e erra; é preso pela polícia</td>
+          <td>Agente dispara, vê a vítima caída e leva ao hospital evitando a morte</td>
+          <td>Agente aponta arma sem munição; ou tenta matar cadáver</td>
+        </tr>
+        <tr class="hl5">
+          <td>Voluntariedade × Espontaneidade</td>
+          <td>Irrelevante (a desistência aqui NÃO existe)</td>
+          <td>Exige VOLUNTARIEDADE, não espontaneidade. A desistência por conselho de terceiro pode ser voluntária se o agente tinha livre escolha</td>
+          <td>Irrelevante para o tipo — o problema é objetivo (inidoneidade)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="alert alert-red mt2">
+    <div class="alert-icon">🔴</div>
+    <div><strong>Distinção Fundamental — Tentativa × Desistência: Fórmula de Frank:</strong> O critério para distinguir tentativa (art. 14, II) de desistência voluntária (art. 15) é a <strong>Fórmula de Frank</strong>: se o agente "podia prosseguir, mas não quis" → desistência voluntária; se "queria prosseguir, mas não pôde" → tentativa. A pressão psicológica (ex.: medo de ser preso) não torna involuntária a desistência — se o agente ainda tinha capacidade física de prosseguir e optou por não fazê-lo, é desistência voluntária.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 11. JURISPRUDÊNCIA STF/STJ                -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="jurisprudencia">
+  <div class="section-header">
+    <div class="section-num">11</div>
+    <div class="section-title"><span>STF · STJ · Súmulas · Teses</span>Jurisprudência e Posições dos Tribunais Superiores</div>
+  </div>
+
+  <div class="alert alert-navy mt1" style="margin-bottom:1.2rem;">
+    <div class="alert-icon">ℹ️</div>
+    <div>As posições abaixo refletem entendimentos consolidados do STF e STJ sobre consumação e tentativa (art. 14 CP). São referenciadas por tema e diploma legal para garantia de <strong>zero alucinação</strong>. O art. 14 CP é um dos dispositivos com maior volume de jurisprudência dos tribunais superiores.</div>
+  </div>
+
+  <div class="juris-grid">
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge sumula">Súmula 582 — 2016</span>
+        <div class="juris-title">Consumação do Roubo — Teoria da Apprehensio/Amotio (Inversão da Posse)</div>
+      </div>
+      <div class="juris-body">
+        <p>A Súmula 582 do STJ consolidou a teoria da <em>apprehensio</em> (também denominada <em>amotio</em>) para a consumação do crime de roubo: <em>"Consuma-se o crime de roubo com a inversão da posse do bem mediante emprego de violência ou grave ameaça, ainda que por breve tempo e em seguida à perseguição imediata ao agente e recuperação da coisa roubada, sendo prescindível a posse mansa e pacífica ou desvigiada."</em></p>
+        <p class="mt1">Esse entendimento aplica-se igualmente ao furto (STJ): a consumação ocorre com a <em>inversão da posse</em> do bem, mesmo que momentânea. A teoria da <em>ablatio</em> (que exigia deslocamento da coisa para local seguro) e a da <em>ilatio</em> (que exigia chegada ao destino) foram rejeitadas. O critério é a mudança de domínio — o bem saiu da esfera de disponibilidade do titular e entrou na do agente, ainda que por instante. Isso determina se o crime é tentado ou consumado.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Súmula 582/STJ — 2016</span>
+          <span class="tag tag-gold">Teoria da Apprehensio</span>
+          <span class="tag tag-blue">Roubo × Furto — Consumação</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <span class="juris-badge sumula">Súmula 610</span>
+        <div class="juris-title">Latrocínio — Consumação com Morte, Ainda que Sem Subtração</div>
+      </div>
+      <div class="juris-body">
+        <p>A Súmula 610 do STF enuncia: <em>"Há crime de latrocínio, quando o homicídio se consuma, ainda que não realize o agente a subtração de bens da vítima."</em> Essa súmula resolve uma questão complexa de consumação: no latrocínio (art. 157, §3.º, II, CP), o resultado morte é determinante para a consumação, não a subtração. Se o agente mata mas não consegue subtrair → latrocínio consumado. Se o agente subtrai mas não mata → roubo majorado consumado, não latrocínio consumado (eventualmente tentativa de latrocínio).</p>
+        <p class="mt1">Aplicação direta do art. 14, I, CP ao crime de latrocínio: a "definição legal" do latrocínio consumado requer a morte — e esta, ocorrida, consuma o tipo independentemente da efetividade da subtração.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Súmula 610/STF</span>
+          <span class="tag tag-gold">Latrocínio — Art. 157, §3.º, II, CP</span>
+          <span class="tag tag-blue">Consumação pelo Resultado Morte</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Tentativa de Homicídio × Lesão Corporal — Animus Necandi como Elemento Diferenciador</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ consolidou que a distinção entre tentativa de homicídio (art. 121, caput, CP + art. 14, II, CP) e lesão corporal consumada (art. 129 CP) reside no <strong>elemento subjetivo</strong>: o <em>animus necandi</em> (dolo de matar). Sem a prova do dolo de matar, não há tentativa de homicídio — apenas lesão corporal consumada. O dolo de matar é verificado a partir de elementos objetivos da conduta: localização dos golpes, reiteração, intensidade, instrumento usado, dinâmica do crime.</p>
+        <p class="mt1">O STJ não admite que a mera gravidade das lesões, isoladamente, prove o animus necandi. É necessário analisar o conjunto probatório. Essa distinção é essencial para determinar a competência: homicídio tentado → Tribunal do Júri (art. 5.º, XXXVIII, CF/88); lesão corporal → Juízo Singular.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Animus Necandi — Dolo de Matar</span>
+          <span class="tag tag-gold">Tentativa de Homicídio × Lesão Corporal</span>
+          <span class="tag tag-blue">Competência — Júri × Singular</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Critério do Iter Criminis Percorrido para Fixação da Redução na Tentativa (1/3 a 2/3)</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ consolidou que o critério para fixação da fração de redução na tentativa (parágrafo único do art. 14 CP) é o <strong>iter criminis percorrido</strong>: quanto mais próximo da consumação esteve o agente, menor a redução (próximo de 1/3); quanto mais distante, maior a redução (próximo de 2/3). O tribunal revisará dosimetrias que não observem esse critério — redução de 2/3 para tentativa cruenta e perfeita (mais próxima da consumação), por exemplo, configura erro na fixação da causa de diminuição.</p>
+        <p class="mt1">O STJ também firmou que a tentativa branca (vítima não atingida), em regra, admite a maior redução (2/3), enquanto a tentativa cruenta e perfeita (vítima atingida, todos os atos esgotados) admite a menor (1/3). Essa correlação é a que os examinadores de magistratura mais cobram na dosimetria da tentativa.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Iter Criminis Percorrido</span>
+          <span class="tag tag-gold">Redução 1/3 a 2/3 — §único Art. 14</span>
+          <span class="tag tag-blue">Dosimetria da Tentativa</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge sumula">Súmula 567</span>
+        <div class="juris-title">Sistema de Vigilância e Crime Impossível no Furto — Distinção com Tentativa</div>
+      </div>
+      <div class="juris-body">
+        <p>A Súmula 567 do STJ enuncia: <em>"Sistema de vigilância realizado por monitoramento eletrônico ou por existência de segurança no interior de estabelecimento comercial, por si só, não torna impossível, por si só, a prática do crime de furto."</em> Essa súmula distingue tentativa (art. 14, II, CP) de crime impossível (art. 17 CP) no furto em estabelecimento comercial com vigilância.</p>
+        <p class="mt1">A presença de câmeras e seguranças torna a <em>consumação mais difícil</em>, mas não torna os meios absolutamente ineficazes nem o objeto absolutamente impróprio. Logo, o furto flagrado por câmeras antes da subtração é <strong>tentativa de furto</strong> (art. 155 + art. 14, II, CP), e não crime impossível. Apenas a inidoneidade <em>absoluta</em> — não a relativa — caracteriza o crime impossível.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Súmula 567/STJ</span>
+          <span class="tag tag-gold">Crime Impossível × Tentativa — Furto</span>
+          <span class="tag tag-blue">Inidoneidade Absoluta × Relativa</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Tentativa de Crime Hediondo — Natureza Hedionda da Tentativa</div>
+      </div>
+      <div class="juris-body">
+        <p>O STF firmou que a tentativa de crime hediondo (ex.: tentativa de homicídio qualificado, tentativa de estupro) <strong>mantém a natureza hedionda</strong> do crime. A hediondez é do tipo penal — e o tipo tentado é modalidade do mesmo tipo penal. A redução de pena (1/3 a 2/3) aplica-se normalmente, mas as consequências da hediondez (vedação de fiança, progressão diferenciada, livramento condicional em 2/3 etc.) incidem sobre a pena definitiva da tentativa.</p>
+        <p class="mt1">Questão de prova: crime hediondo tentado → a pena do tentado é menor (reduzida), mas as regras especiais da Lei 8.072/90 se aplicam normalmente (livramento condicional após 2/3, progressão de regime diferenciada etc.).</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Crime Hediondo Tentado</span>
+          <span class="tag tag-gold">Lei 8.072/90</span>
+          <span class="tag tag-blue">Natureza Hedionda Mantida</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Atos Preparatórios × Atos Executórios no Tráfico de Drogas — Iter e Tentativa</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ tem posição consolidada de que o crime de tráfico de drogas (art. 33 da Lei 11.343/2006) é crime de <strong>ação múltipla ou conteúdo variado</strong> (tipo misto alternativo com 18 verbos nucleares). Em razão da amplitude dos verbos, o STJ reconhece que a tentativa de tráfico é de <strong>difícil configuração</strong> — pois a maioria dos atos que precedem a entrega da droga já constituem verbos típicos do art. 33 (ex.: "ter em depósito", "guardar", "transportar").</p>
+        <p class="mt1">Assim, o que seria tentativa de venda pode ser consumação de "guardar" ou "ter em depósito". O STJ aplica a teoria objetivo-material para distinguir os casos: se o agente praticou qualquer verbo do tipo, o crime está consumado; a tentativa ocorre apenas quando nenhum dos 18 verbos foi integralmente realizado.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Tráfico — Lei 11.343/2006, Art. 33</span>
+          <span class="tag tag-gold">Tipo Misto Alternativo</span>
+          <span class="tag tag-blue">Tentativa de Difícil Configuração</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Prescrição na Tentativa — Pena Máxima In Abstracto Reduzida de 1/3 a 2/3</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ aplica de forma consolidada a regra de que, para o cálculo da prescrição do crime tentado, utiliza-se a <strong>pena máxima in abstracto do crime tentado</strong> — ou seja, a pena máxima cominada para o crime consumado, reduzida do máximo de 1/3 (a menor redução possível), conforme art. 109 CP c/c art. 14, §único, CP. A redução de 1/3 é usada porque é a menos benéfica para o réu — garante o prazo prescricional mínimo da tentativa.</p>
+        <p class="mt1">Exemplo: tentativa de homicídio simples → pena máxima do consumado: 20 anos → reduzida de 1/3 (menor redução) = 13 anos e 4 meses → prazo prescricional: mais de 12 anos e não mais de 16 anos → art. 109, I, CP → 16 anos (prescrição). Se usada a maior redução (2/3): 20 − 13,33 = 6,67 anos → art. 109, III, CP → 12 anos. Essa distinção impacta diretamente o cálculo da prescrição retroativa.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Prescrição da Tentativa</span>
+          <span class="tag tag-gold">Art. 109 CP c/c Art. 14, §único, CP</span>
+          <span class="tag tag-blue">Pena Máx. in Abstracto Reduzida</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 12. DOUTRINA                              -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="doutrina">
+  <div class="section-header">
+    <div class="section-num">12</div>
+    <div class="section-title"><span>Doutrina Nacional</span>Principais Posições Doutrinárias</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cleber Masson — Direito Penal Esquematizado</div>
+      </div>
+      <div class="juris-body">
+        <p>Masson adota a <strong>teoria objetivo-material</strong> para delimitar o início dos atos executórios, reconhecendo que os atos imediatamente anteriores ao verbo núcleo do tipo, segundo o plano do agente, já configuram execução. Sistematiza as espécies de tentativa (perfeita/imperfeita; cruenta/incruenta) com ênfase na sua relevância para a dosimetria. Destaca que a tentativa é <strong>causa geral de diminuição de pena (3.ª fase da dosimetria)</strong> e que o critério do iter criminis percorrido é o único admitido pelo STJ para fixação da fração. Admite, como posição minoritária, a tentativa na culpa imprópria (descriminante putativa culposa). Distingue com precisão tentativa, desistência voluntária e crime impossível, com ênfase na Fórmula de Frank.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cezar Roberto Bitencourt — Tratado de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Bitencourt aprofunda a análise dogmática do art. 14 CP sob a perspectiva da teoria finalista e do funcionalismo. Adota a <strong>teoria objetivo-material (com influxos do objetivo-individual de Welzel)</strong> para o início da execução. Nega categoricamente a tentativa nos crimes culposos, omissivos próprios e habituais. Analisa com rigor os crimes de atentado, explicando que neles o legislador adota a teoria subjetiva — a pena não é reduzida porque se pune o dolo independentemente do resultado. Critica a doutrina que confunde tentativa com atos preparatórios, apontando que a distinção é essencial para o Estado de Direito: punir atos preparatórios como tentativa violaria a legalidade e a ofensividade. Desenvolve extensamente a distinção entre tentativa perfeita e imperfeita e seus efeitos na dosimetria.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Rogério Greco — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Greco analisa o art. 14 CP com foco nos fundamentos constitucionais da diferenciação entre consumado e tentado: o princípio da <strong>proporcionalidade</strong> justifica a redução de pena na tentativa, pois o dano ao bem jurídico é menor. Adota a teoria objetivo-material para o início da execução. Dedica especial atenção à questão dos crimes que não admitem tentativa, com análise sistemática de cada categoria. Rejeita a tentativa nos crimes omissivos impróprios. Defende que o critério do iter criminis percorrido é de ordem quantitativa (extensão do iter) e qualitativa (grau de perigo ao bem jurídico). Analisa a "teoria da impressão" (Eindruckstheorie) como fundamento para a punição da tentativa na perspectiva do funcionalismo de Roxin — relevante para provas de alto nível.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Guilherme de Souza Nucci — Código Penal Comentado</div>
+      </div>
+      <div class="juris-body">
+        <p>Nucci comenta o art. 14 CP com foco na aplicação forense e na jurisprudência. Adota a teoria objetivo-material para o início da execução e destaca que a jurisprudência do STJ é o principal parâmetro prático para o magistrado na distinção entre ato preparatório e executório. Analisa detidamente a Súmula 582/STJ (consumação do roubo pela teoria da apprehensio) e a Súmula 610/STF (latrocínio). Critica a tendência jurisprudencial de ampliar o conceito de atos executórios além do razoável em crimes patrimoniais, alertando para o risco de punir atos preparatórios como tentativa. Quanto à dosimetria, reforça que o juiz deve fundamentar a escolha da fração de redução na tentativa com referência explícita ao iter criminis percorrido — ausência de fundamentação gera nulidade.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Fernando Capez — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Capez apresenta o art. 14 CP de forma didática e voltada a concursos. Desenvolve os conceitos com clareza: tentativa perfeita (crime falho) = todos os atos executórios esgotados, resultado não ocorre; tentativa imperfeita = execução interrompida antes de esgotar os atos. Tabela de admissibilidade da tentativa por tipo de crime: não admitem — culposos, preterdolosos (quanto ao resultado além do dolo), omissivos próprios, habituais, contravenções (art. 4.º LCP), unissubsistentes, de atentado; admitem — todos os demais dolosos materiais ou formais plurissubsistentes. Destaca a importância da tentativa para o Tribunal do Júri: homicídio doloso tentado → Júri; sem prova de animus necandi → Juízo Singular (lesão). Esse ponto é altamente cobrado em concursos de magistratura.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Controvérsia: Tentativa em Crimes Omissivos Impróprios</div>
+      </div>
+      <div class="juris-body">
+        <p>O debate sobre a admissibilidade da tentativa nos crimes omissivos impróprios (comissivos por omissão — art. 13, §2.º, CP) divide a doutrina nacional:</p>
+        <ul class="mt1">
+          <li><strong>Posição A — Admite (Masson, Greco, Zaffaroni):</strong> Se o garantidor não age (omissão) mas outro agente intervém e impede o resultado, há tentativa — o garantidor "tentou" matar (por omissão), mas o resultado morte não ocorreu por fator externo. Fundamenta-se na estrutura do tipo comissivo por omissão: o resultado é exigido, logo a sua não ocorrência por causa externa configura tentativa.</li>
+          <li><strong>Posição B — Não admite (Bitencourt, Fragoso):</strong> A omissão é um/zero — o garantidor ou omite (tipo realizado) ou age (atipicidade). Não há fracionamento dos atos omissivos que permita "início" e "interrupção" da execução omissiva.</li>
+          <li><strong>Conclusão para concurso:</strong> A posição que admite é a majoritária entre os autores mais consultados (Masson, Greco). Adote essa posição, mas mencione a controvérsia.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- 13. SISTEMÁTICA                           -->
+<!-- ══════════════════════════════════════════ -->
+<section class="section" id="sistematica">
+  <div class="section-header">
+    <div class="section-num">13</div>
+    <div class="section-title"><span>Conexões Sistemáticas</span>Art. 14 CP na Sistemática do Código Penal</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔗 Artigos Diretamente Conectados ao Art. 14 CP</h3>
+      <ul>
+        <li><strong>Art. 13 CP (Nexo causal):</strong> para a consumação do crime material, exige-se o resultado naturalístico causalmente vinculado à conduta — sem resultado: tentativa ou crime formal/mera conduta</li>
+        <li><strong>Art. 15 CP (Desistência e Arrependimento):</strong> figura central na análise do iter criminis — distingue-se da tentativa pela voluntariedade da interrupção. "Ponte de ouro" de Von Liszt.</li>
+        <li><strong>Art. 17 CP (Crime impossível):</strong> outra exclusão da tentativa — quando os meios são absolutamente ineficazes ou o objeto é absolutamente impróprio. STJ Súmula 567.</li>
+        <li><strong>Art. 11 CP (Frações de dia):</strong> a redução de 1/3 a 2/3 da tentativa pode gerar frações de dia → art. 11 CP as despreza</li>
+        <li><strong>Art. 12 CP (Subsidiariedade):</strong> o art. 14 CP aplica-se às leis penais especiais via art. 12 CP, salvo disposição em contrário (ex.: art. 4.º LCP exclui tentativa de contravenção)</li>
+        <li><strong>Art. 20 CP (Erro de tipo):</strong> o erro de tipo que exclui o dolo também exclui a tentativa — sem dolo, não há tentativa dolosa</li>
+        <li><strong>Art. 26 CP (Inimputabilidade):</strong> aplica-se à tentativa — inimputável que tenta crime recebe medida de segurança</li>
+        <li><strong>Art. 29 CP (Concurso de pessoas):</strong> admite coautoria e participação na tentativa — o partícipe que contribuiu para tentativa responde por tentativa</li>
+        <li><strong>Art. 68 CP (Dosimetria):</strong> a tentativa é causa de diminuição de 3.ª fase → art. 14, §único, aplica-se após agravantes/atenuantes</li>
+        <li><strong>Art. 109 CP (Prescrição):</strong> prazo prescricional da tentativa = pena máxima do consumado reduzida de 1/3 (a menor redução)</li>
+        <li><strong>Art. 111, II, CP (Início da prescrição):</strong> nos crimes tentados, a prescrição começa a correr do dia em que cessou a atividade criminosa (dia da última tentativa)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📋 Art. 14 CP e Tribunal do Júri</h3>
+      <div class="law-quote">
+        <strong>Art. 5.º, XXXVIII, CF/88:</strong>
+        "É reconhecida a instituição do júri, com a organização que lhe der a lei, assegurados: a plenitude de defesa; o sigilo das votações; a soberania dos veredictos; a competência para o julgamento dos crimes dolosos contra a vida."
+      </div>
+      <p class="mt2" style="font-size:0.85rem;color:var(--text-mid);">O art. 14 CP tem relação direta com a competência do Tribunal do Júri: a <strong>tentativa de homicídio doloso</strong> (art. 121 + art. 14, II, CP) é crime doloso contra a vida tentado → competência do Júri. Mas a <strong>lesão corporal consumada</strong> (art. 129 CP) → Juízo Singular.</p>
+      <p class="mt1" style="font-size:0.85rem;color:var(--text-mid);">A distinção depende do <strong>animus necandi</strong> (dolo de matar). O juiz da pronúncia, ao verificar os indícios do dolo de matar, pronuncia o réu por tentativa de homicídio → Júri. Se afastar o dolo de matar, desclassifica para lesão corporal → Singular.</p>
+      <div class="alert alert-red mt2" style="font-size:0.8rem;">
+        <div>🔴 <strong>Ponto crítico para magistratura:</strong> O juiz que desclassifica tentativa de homicídio para lesão corporal na pronúncia deve fazê-lo com extrema cautela — a soberania do Júri e o <em>in dubio pro societate</em> (na pronúncia) levam a manter a pronúncia diante de qualquer dúvida sobre o dolo de matar.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-3 mt2">
+    <div class="card">
+      <h3>⚡ Tentativa × Princípio da Ofensividade</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">O princípio da ofensividade (<em>nullum crimen sine iniuria</em>) exige que o crime lesione ou exponha a perigo concreto o bem jurídico. A tentativa, ao expor o bem jurídico a perigo real (risco de consumação), satisfaz esse princípio. Por isso, o CP pune a tentativa — diferentemente dos atos preparatórios (sem perigo real imediato) e do crime impossível (sem perigo algum). A teoria objetivo-material é mais alinhada com o princípio da ofensividade do que a subjetiva.</p>
+    </div>
+    <div class="card">
+      <h3>🔄 Resumo Mnemônico para Prova</h3>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.83rem;line-height:1.85;">
+        <p><strong style="color:var(--gold-light);">Art. 14, I → CONSUMADO</strong><br>
+        ✅ Todos elementos do tipo realizados<br>
+        ✅ Pena plena — sem redução</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.5rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Art. 14, II → TENTADO</strong><br>
+        ✅ Execução iniciada + não consumação<br>
+        ✅ Fator externo à vontade do agente<br>
+        ✅ Redução de 1/3 a 2/3</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.5rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Critério redução:</strong><br>
+        Maior iter → menor redução (1/3)<br>
+        Menor iter → maior redução (2/3)<br>
+        Branca → 2/3 | Cruenta perfeita → 1/3</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.5rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Fórmula de Frank:</strong><br>
+        "Posso mas não quis" = Art. 15<br>
+        "Quis mas não pude" = Art. 14, II</p>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📅 Tentativa e Execução Penal</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">Na execução penal, a condição de tentado impacta:</p>
+      <ul class="mt1" style="font-size:0.84rem;">
+        <li><strong>Crimes hediondos tentados:</strong> mantêm a natureza hedionda — progressão de regime e livramento condicional seguem as regras da Lei 8.072/90 sobre a pena definitiva (já reduzida de 1/3 a 2/3)</li>
+        <li><strong>Progressão de regime:</strong> calculada sobre a pena definitiva da tentativa — se 5 anos tentados (após redução), progressão sobre os 5 anos</li>
+        <li><strong>Prescrição retroativa:</strong> usa-se a pena concretamente aplicada (tentativa com redução) — impacto direto no prazo e na data da prescrição</li>
+        <li><strong>Reincidência:</strong> condenação por crime tentado gera reincidência se novo crime cometido antes de 5 anos do cumprimento da pena (art. 64, I, CP)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- PROVA / ENAM                             -->
+<!-- ══════════════════════════════════════════ -->
+<section id="prova" class="prova-section">
+  <h2>⚖️ Pontos Cobrados em Magistratura e ENAM</h2>
+  <p class="intro">Questões, teses e pegadinhas recorrentes nos concursos de Juiz de Direito, ENAM e equivalentes relacionadas ao Art. 14 CP.</p>
+
+  <div class="prova-items">
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">01</span>Quais são os três elementos da tentativa previstos no art. 14, II, CP?</div>
+      <div class="prova-item-a"><strong>(1) Início da execução</strong> — o agente deve ter praticado pelo menos um ato executório, que representa o início do ataque ao bem jurídico (não mera cogitação ou preparação); <strong>(2) Não consumação</strong> — o tipo penal não se realiza integralmente; o resultado típico (crimes materiais) ou a conduta completa (crimes formais) não ocorrem; <strong>(3) Circunstâncias alheias à vontade do agente</strong> — a razão da não consumação é fator externo (fuga da vítima, intervenção policial, falha dos meios), não a vontade do próprio agente (que configura desistência voluntária ou arrependimento eficaz — art. 15 CP).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">02</span>Qual a diferença entre tentativa perfeita (acabada/crime falho) e tentativa imperfeita (inacabada)?</div>
+      <div class="prova-item-a"><strong>Tentativa perfeita (acabada/crime falho):</strong> o agente esgota todos os atos executórios que pretendia praticar, mas o resultado não ocorre. Ex.: atira todos os tiros planejados, mas a vítima sobrevive. <strong>Tentativa imperfeita (inacabada):</strong> o agente é interrompido antes de esgotar os atos executórios — não completa a execução planejada. Ex.: é detido após o 1.º de 3 disparos planejados. Relevância para dosimetria: a tentativa perfeita, por estar mais próxima da consumação, em regra admite menor redução de pena (próximo de 1/3); a imperfeita admite maior redução (próximo de 2/3).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">03</span>Qual a teoria adotada pelo direito brasileiro para delimitar o início dos atos executórios?</div>
+      <div class="prova-item-a">O CP brasileiro não adota expressamente nenhuma teoria — usa "iniciada a execução" (art. 14, II). A <strong>doutrina majoritária brasileira</strong> (Masson, Bitencourt, Greco, Nucci, Capez) adota a <strong>teoria objetivo-material</strong> (Frank/Liszt), que considera ato executório aquele que representa início de ataque ao bem jurídico, incluindo os atos imediatamente anteriores ao verbo núcleo do tipo segundo o plano do agente. A teoria <strong>objetivo-formal</strong> (clássica) — que exige o início do verbo nuclear — é minoritária por ser excessivamente restritiva. A teoria <strong>subjetiva</strong> (qualquer manifestação externa do dolo) é rejeitada por violar a legalidade e a ofensividade.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">04</span>A Fórmula de Frank distingue tentativa de desistência voluntária. Explique-a.</div>
+      <div class="prova-item-a">A <strong>Fórmula de Frank</strong> estabelece: <em>"Posso, mas não quero"</em> = <strong>desistência voluntária</strong> (art. 15 CP) — o agente poderia continuar a execução, mas decide não consumar; <em>"Quero, mas não posso"</em> = <strong>tentativa</strong> (art. 14, II, CP) — o agente quer consumar, mas circunstâncias externas impedem. Aplicação: o ladrão que abandona o assalto porque teve pena da vítima: "podia, mas não quis" → desistência voluntária. O ladrão que foge porque a polícia chegou: "queria, mas não pôde" → tentativa. A pressão psicológica (medo de ser preso) não torna involuntária a desistência — se o agente ainda tinha capacidade física de agir, é voluntária.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">05</span>Quais crimes NÃO admitem tentativa? Liste os principais com justificativas.</div>
+      <div class="prova-item-a"><strong>(1) Crimes culposos</strong> — exigem dolo de consumação; culpa é incompatível com tentativa. <strong>(2) Crimes preterdolosos</strong> — o resultado agravador é culposo; sem dolo quanto ao excesso, não há tentativa desse excesso. <strong>(3) Crimes omissivos próprios</strong> — a omissão é um/zero; não há fracionamento que permita "início" de execução omissiva. <strong>(4) Crimes habituais</strong> — tipo exige reiteração; ato isolado é atípico. <strong>(5) Crimes unissubsistentes</strong> — um único ato indivisível; ou o ato ocorre (consumado) ou não ocorre (atípico). <strong>(6) Contravenções penais</strong> — art. 4.º LCP exclui expressamente. <strong>(7) Crimes de atentado/empreendimento</strong> — lei equipara tentativa ao consumado (sem redução). Admitem tentativa: crimes dolosos materiais e formais plurissubsistentes, em regra.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">06</span>Qual é o critério do STJ para fixar a fração de redução da tentativa entre 1/3 e 2/3?</div>
+      <div class="prova-item-a">O STJ consolidou o critério do <strong>iter criminis percorrido</strong>: quanto mais próximo da consumação esteve o agente (maior iter percorrido), <strong>menor a redução</strong> (próximo de 1/3); quanto mais distante da consumação (menor iter percorrido), <strong>maior a redução</strong> (próximo de 2/3). Traduzindo nas espécies: tentativa <strong>cruenta perfeita</strong> (vítima atingida, todos os atos esgotados) → redução próxima de 1/3; tentativa <strong>branca imperfeita</strong> (vítima não atingida, execução interrompida antes de completar os atos) → redução próxima de 2/3. A ausência de fundamentação para a escolha da fração é causa de nulidade da dosimetria.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">07</span>O que são crimes de atentado e qual sua relação com o art. 14 CP?</div>
+      <div class="prova-item-a"><strong>Crimes de atentado ou de empreendimento</strong> são aqueles em que a lei penal equipara expressamente a tentativa ao crime consumado — afastando a redução do parágrafo único do art. 14 CP (a cláusula "salvo disposição em contrário"). Nesses crimes, o legislador adota a <strong>teoria subjetiva da tentativa</strong>: pune-se pelo dolo, independentemente do resultado. Exemplos: art. 352 CP (evasão mediante violência — a mera tentativa de evasão já é descrita no tipo e recebe a mesma pena do consumado). A consequência prática é que não há redução de pena: o agente que tentou é punido com a mesma pena de quem consumou.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">08</span>Qual a Súmula 582 do STJ e qual sua relevância para o art. 14 CP?</div>
+      <div class="prova-item-a">A <strong>Súmula 582/STJ (2016)</strong> enuncia: <em>"Consuma-se o crime de roubo com a inversão da posse do bem mediante emprego de violência ou grave ameaça, ainda que por breve tempo e em seguida à perseguição imediata ao agente e recuperação da coisa roubada, sendo prescindível a posse mansa e pacífica ou desvigiada."</em> Relevância para o art. 14 CP: o roubo (e, por extensão, o furto) consuma-se pela <strong>teoria da apprehensio/amotio</strong> — com a mera inversão de posse, ainda que momentânea. Logo, o crime que antes seria considerado "tentado" (porque a coisa foi recuperada) passa a ser tratado como <strong>consumado</strong>. Isso impacta diretamente a distinção entre roubo tentado e consumado: a recuperação da coisa pela perseguição imediata não torna o crime tentado — ele já se consumou com a inversão da posse.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">09</span>Como se calcula a prescrição do crime tentado?</div>
+      <div class="prova-item-a">Para a prescrição do crime tentado, utiliza-se a <strong>pena máxima in abstracto do crime consumado, reduzida do mínimo de 1/3</strong> (parágrafo único do art. 14 CP c/c art. 109 CP). Usa-se a menor redução possível (1/3) porque é a menos benéfica para o réu e, portanto, resulta no maior prazo prescricional da tentativa, que deve ser o critério para a prescrição <em>in abstracto</em>. Exemplo: tentativa de homicídio simples → pena máxima = 20 anos → reduzida de 1/3 = 13 anos e 4 meses → prazo: art. 109, I, CP → 20 anos (pena > 12 anos). No dies a quo (início da prescrição da tentativa): dia em que cessou a atividade criminosa (art. 111, II, CP).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">10</span>[ENAM — alta recorrência] A presença de câmeras de vigilância e seguranças em supermercado torna o furto crime impossível?</div>
+      <div class="prova-item-a"><strong>Não.</strong> O STJ, na Súmula 567, consolidou que o sistema de vigilância por monitoramento eletrônico ou existência de seguranças em estabelecimento comercial <em>não torna impossível, por si só</em>, a prática do crime de furto. A presença de câmeras torna a subtração mais difícil, mas não torna os meios absolutamente ineficazes nem o objeto absolutamente impróprio. Trata-se de inidoneidade <em>relativa</em> — não absoluta. O crime impossível (art. 17 CP) exige inidoneidade <em>absoluta</em>. Portanto, o furto flagrado por câmeras antes da subtração é <strong>tentativa de furto</strong> (art. 155 + art. 14, II, CP) — punível com pena reduzida de 1/3 a 2/3, e não fato atípico.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">11</span>O crime hediondo tentado mantém a natureza hedionda? Qual a implicação prática?</div>
+      <div class="prova-item-a"><strong>Sim.</strong> O STF consolidou que a tentativa de crime hediondo mantém a natureza hedionda — a hediondez é do tipo penal, e o tipo tentado é modalidade do mesmo tipo. Implicação prática: sobre a pena definitiva da tentativa (já reduzida de 1/3 a 2/3), aplicam-se as regras especiais da Lei 8.072/90: (a) progressão de regime diferenciada (40% da pena, ou 60% se reincidente em crime hediondo); (b) livramento condicional após 2/3 da pena (se reincidente em crime hediondo: vedado); (c) vedação de fiança; (d) vedação de graça, indulto e anistia para os crimes previstos na lei. A pena é menor (por ser tentada), mas as restrições do cumprimento são as mesmas.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">12</span>Qual a relação entre o art. 14, II, CP e a competência do Tribunal do Júri?</div>
+      <div class="prova-item-a">A tentativa de crime doloso contra a vida (tentativa de homicídio doloso — art. 121 + art. 14, II; tentativa de infanticídio; tentativa de induzimento, instigação ou auxílio ao suicídio qualificado) é crime doloso contra a vida na forma tentada → <strong>competência do Tribunal do Júri</strong> (art. 5.º, XXXVIII, CF/88 + arts. 74, §1.º, e 413 do CPP). O ponto nevrálgico para o magistrado: na pronúncia, verificar se há indícios de <strong>animus necandi</strong> (dolo de matar). Com animus: pronúncia por tentativa de homicídio → Júri. Sem animus: desclassificação para lesão corporal → Singular. O princípio do <em>in dubio pro societate</em> orienta a manutenção da pronúncia diante de dúvida sobre o dolo de matar — o mérito é do Júri.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">13</span>[ENAM — questão integrada] Identifique: (a) tentativa de homicídio; (b) desistência voluntária; (c) arrependimento eficaz; (d) crime impossível — com exemplos e consequências jurídicas.</div>
+      <div class="prova-item-a"><strong>(a) Tentativa de homicídio (art. 121 + art. 14, II, CP):</strong> agente atira para matar, mas a vítima é salva no hospital por intervenção médica (fator externo). Consequência: crime tentado — pena reduzida de 1/3 a 2/3. <strong>(b) Desistência voluntária (art. 15, 1.ª parte, CP):</strong> agente saca arma para matar, mas decide não atirar voluntariamente (pode, mas não quis). Consequência: responde apenas pelos atos praticados (ex.: porte ilegal de arma, ameaça se proferiu palavras ameaçadoras) — não responde por tentativa de homicídio. <strong>(c) Arrependimento eficaz (art. 15, 2.ª parte, CP):</strong> agente atira e acerta a vítima, mas voluntariamente a socorre e impede a morte. Consequência: responde pelos atos praticados (lesão corporal consumada — art. 129 CP) — sem tentativa de homicídio. <strong>(d) Crime impossível (art. 17 CP):</strong> agente atira em cadáver pensando estar viva (objeto absolutamente impróprio). Consequência: fato atípico — impunível.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">14</span>O que diz a Súmula 610 do STF e qual sua relação com o art. 14 CP?</div>
+      <div class="prova-item-a">A <strong>Súmula 610/STF</strong> enuncia: <em>"Há crime de latrocínio, quando o homicídio se consuma, ainda que não realize o agente a subtração de bens da vítima."</em> Relação com o art. 14 CP: o latrocínio (art. 157, §3.º, II, CP) consuma-se quando o resultado morte ocorre — independentemente da subtração. Isso significa: (a) se há morte mas não subtração → latrocínio consumado (não tentado); (b) se não há morte mas há subtração → roubo majorado consumado (não latrocínio consumado); (c) se não há morte nem subtração → dependendo dos atos praticados, pode ser tentativa de latrocínio. A súmula define o elemento determinante da consumação no latrocínio: o resultado morte — e, com isso, constrói a linha entre consumado e tentado nesse crime qualificado pelo resultado.</div>
+    </div>
+
+  </div>
+</section>
+
+</div><!-- /page-wrap -->
+
+<footer>
+  <strong>Art. 14.º do Código Penal Brasileiro</strong> — Decreto-Lei n.º 2.848/1940<br>
+  Material elaborado para preparação à Magistratura / ENAM · Doutrina e jurisprudência consolidadas · Atualizado 2025
+</footer>
+
+</body>
+</html>

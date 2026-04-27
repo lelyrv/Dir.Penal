@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 4° do CP — Tempo do Crime | Magistratura/ENAM 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f0ebe0;--paper:#faf7f1;
+  --navy:#0c1e38;--navy2:#172b50;--navy3:#1e3460;
+  --gold:#c4850a;--gold2:#dfa020;--gold3:#f5c548;
+  --crim:#7a1515;--crim2:#9e2020;
+  --teal:#0f4838;--teal2:#186050;
+  --olive:#344820;--olive2:#4a6430;
+  --purple:#3c1858;
+  --amber:#7a4800;--amber2:#a86000;
+  --slate:#3a4858;--border:#bca060;
+  --shad:rgba(12,30,56,.13);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Spectral',Georgia,serif;background:var(--bg);color:var(--navy);min-height:100vh}
+
+/* HEADER */
+header{
+  background:linear-gradient(155deg,var(--navy) 0%,var(--navy2) 55%,#1a3468 100%);
+  padding:2.8rem 2rem 2.3rem;text-align:center;position:relative;overflow:hidden;
+  border-bottom:5px solid var(--gold);
+}
+header::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(circle at 15% 60%,rgba(196,133,10,.1) 0%,transparent 50%),
+    radial-gradient(circle at 85% 40%,rgba(15,72,56,.15) 0%,transparent 50%),
+    repeating-linear-gradient(45deg,rgba(196,133,10,.03) 0,rgba(196,133,10,.03) 1px,transparent 1px,transparent 12px);
+}
+.hbadge{display:inline-block;background:var(--gold);color:var(--navy);font-family:'Cinzel',serif;font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:.3rem 1rem;border-radius:2px;margin-bottom:.9rem}
+header h1{font-family:'Cinzel',Georgia,serif;font-size:clamp(1.6rem,4.2vw,2.9rem);font-weight:700;color:#fff;line-height:1.12;margin-bottom:.5rem}
+header h1 em{color:var(--gold2);font-style:normal}
+header .sub{color:rgba(255,255,255,.68);font-size:.95rem;font-style:italic;margin-bottom:1.3rem}
+.lei-box{margin:.4rem auto 0;max-width:780px;background:rgba(196,133,10,.12);border:1px solid rgba(196,133,10,.36);border-radius:6px;padding:1.1rem 1.8rem;color:#fff;font-size:1.05rem;line-height:1.8}
+.lei-box strong{color:var(--gold2);font-style:italic}
+.lei-box .fonte{font-size:.8rem;opacity:.72;margin-top:.4rem}
+
+/* TABS */
+.tw{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:2.5px solid var(--gold);overflow-x:auto;scrollbar-width:none}
+.tw::-webkit-scrollbar{display:none}
+.tabs{display:flex;padding:0 .8rem;white-space:nowrap}
+.tb{background:none;border:none;color:rgba(255,255,255,.5);font-family:'Spectral',serif;font-size:.83rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.88rem 1.05rem;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;flex-shrink:0}
+.tb:hover{color:#fff}.tb.on{color:var(--gold2);border-bottom-color:var(--gold2)}
+
+/* MAIN */
+main{max-width:1120px;margin:0 auto;padding:2rem 1.2rem 5rem}
+.sec{display:none}.sec.on{display:block}
+.sec-title{font-family:'Cinzel',serif;font-size:1.65rem;font-weight:700;color:var(--navy);border-bottom:2.5px solid var(--gold);padding-bottom:.6rem;margin-bottom:1.8rem}
+
+/* CARDS */
+.card{background:var(--paper);border:1px solid var(--border);border-radius:8px;padding:1.4rem 1.6rem;margin-bottom:1.3rem;box-shadow:0 2px 10px var(--shad)}
+.ct{font-family:'Cinzel',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.75rem;display:flex;align-items:center;flex-wrap:wrap;gap:.55rem}
+.bx{font-family:'Spectral',serif;font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.22rem .7rem;border-radius:3px;flex-shrink:0}
+.bd{background:#e3f0d8;color:var(--olive);border:1px solid #a5c888}
+.bstf{background:#fce5e5;color:var(--crim);border:1px solid #d89898}
+.bstj{background:#e3eef8;color:var(--navy2);border:1px solid #98b5d8}
+.bw{background:#fff5df;color:var(--amber);border:1px solid #e5c038}
+.bp{background:#e3f8e3;color:var(--olive);border:1px solid #88cc88}
+.bpur{background:#f0e3ff;color:var(--purple);border:1px solid #c098e0}
+.bt{background:#e0f0ee;color:var(--teal);border:1px solid #88c0b8}
+.bcrim{background:var(--crim);color:#fff;border:1px solid var(--crim2);font-size:.7rem}
+
+/* FLOW */
+.fw{display:flex;flex-direction:column;align-items:center}
+.fn{width:100%;max-width:790px;background:var(--paper);border:2px solid var(--border);border-radius:8px;padding:1.15rem 1.5rem;box-shadow:0 2px 8px var(--shad);margin:0}
+.fn.root{background:var(--navy);border-color:var(--gold2);color:#fff;text-align:center;border-radius:50px;padding:.9rem 2rem}
+.fn.root .nt{color:var(--gold2);font-size:1.28rem}
+.fn.sub{background:#edf3fa;border-color:#98b5d8}
+.fn.grn{background:#edf8ed;border-color:#88cc88}
+.fn.red{background:#fdf0f0;border-color:#c88888}
+.fn.gold{background:#fdf6e2;border-color:var(--gold)}
+.fn.teal{background:#edf8f4;border-color:#88c0b8}
+.fn.pur{background:#f5e3ff;border-color:#c098e0}
+.fn.amber{background:#fdf5e3;border-color:#d8b040}
+.fn.dk{background:#1a3060;border-color:var(--gold2);color:#fff}
+.nt{font-family:'Cinzel',serif;font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.4rem}
+.fn.dk .nt{color:var(--gold2)}
+.fn.dk .nb{color:rgba(255,255,255,.82)}
+.nb{font-size:.91rem;line-height:1.78;color:var(--slate)}
+.arr{text-align:center;font-size:1.5rem;color:var(--gold);padding:.3rem 0;line-height:1}
+.row2{display:flex;gap:1rem;width:100%;max-width:790px}
+.row2 .fn{flex:1}
+.row3{display:flex;gap:.8rem;width:100%;max-width:790px}
+.row3 .fn{flex:1}
+@media(max-width:640px){.row2,.row3{flex-direction:column}}
+
+/* JULGADOS */
+.jg{background:#f8f3e6;border-left:4px solid var(--crim2);padding:.9rem 1.15rem;margin:.7rem 0;border-radius:0 6px 6px 0;font-size:.9rem;line-height:1.75}
+.jg.stj{border-left-color:var(--navy2)}.jg.teal{border-left-color:var(--teal2)}.jg.amb{border-left-color:var(--amber2)}.jg.grn{border-left-color:var(--olive2)}.jg.gold{border-left-color:var(--gold)}
+.jr{font-size:.71rem;color:var(--crim2);font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.3rem}
+.jg.stj .jr{color:var(--navy2)}.jg.teal .jr{color:var(--teal)}.jg.amb .jr{color:var(--amber)}.jg.grn .jr{color:var(--olive)}.jg.gold .jr{color:var(--amber)}
+
+/* ACCORDION */
+.abtn{width:100%;background:none;border:none;border-bottom:1px solid var(--border);padding:.9rem .2rem;text-align:left;font-family:'Cinzel',serif;font-size:1rem;font-weight:700;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.abtn:hover{color:var(--gold)}.aico{transition:transform .25s;font-size:.88rem}
+.abtn.open .aico{transform:rotate(180deg)}
+.abody{display:none;padding:.9rem .2rem}.abody.open{display:block}
+
+/* TABLE */
+table{width:100%;border-collapse:collapse;font-size:.88rem;margin:.6rem 0}
+th{background:var(--navy);color:var(--gold2);font-family:'Spectral',serif;font-weight:700;letter-spacing:.04em;padding:.65rem .9rem;text-align:left}
+td{padding:.55rem .9rem;border-bottom:1px solid #e8ddc0;vertical-align:top;line-height:1.62}
+tr:nth-child(even) td{background:rgba(196,133,10,.05)}
+
+/* GRID */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.8rem}
+@media(max-width:640px){.g2,.g3{grid-template-columns:1fr}}
+
+/* PROVA BOX */
+.pbox{background:linear-gradient(135deg,var(--navy),var(--navy2));border:2.5px solid var(--gold);border-radius:10px;padding:1.6rem 2rem;margin:1rem 0;color:#fff}
+.pbox h3{font-family:'Cinzel',serif;font-size:1.1rem;color:var(--gold2);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.pi{display:flex;gap:.8rem;padding:.58rem 0;border-bottom:1px solid rgba(196,133,10,.22);font-size:.9rem;line-height:1.68;color:rgba(255,255,255,.88)}
+.pi:last-child{border-bottom:none}
+.pn{min-width:1.6rem;color:var(--gold2);font-weight:700;font-family:'Cinzel',serif;font-size:1.1rem}
+.danger{background:#fdf0f0;border:2.5px solid var(--crim2);border-radius:8px;padding:1.3rem 1.6rem;margin:1rem 0}
+.danger h4{font-family:'Cinzel',serif;color:var(--crim);font-size:1.02rem;margin-bottom:.7rem;display:flex;align-items:center;gap:.4rem}
+
+/* MNEMONIC BOX */
+.mbox{background:linear-gradient(135deg,var(--teal),var(--teal2));border-radius:10px;padding:1.4rem 1.8rem;margin:.8rem 0;color:#fff;text-align:center}
+.mbox h3{font-family:'Cinzel',serif;font-size:1.2rem;color:var(--gold3);margin-bottom:.8rem}
+.mrow{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-top:.6rem}
+.mitem{text-align:center}
+.mlet{font-family:'Cinzel',serif;font-size:2.5rem;font-weight:700;color:var(--gold3);line-height:1}
+.mword{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-top:.15rem}
+
+/* COMPBOX */
+.cbox{background:var(--paper);border:2px solid var(--border);border-radius:8px;padding:1rem 1.2rem;text-align:center;font-size:.88rem;line-height:1.6}
+.cbox .big{font-family:'Cinzel',serif;font-size:1.5rem;font-weight:700;margin:.3rem 0}
+
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hbadge">Magistratura · ENAM · 2026</div>
+  <h1>Art. 4° do <em>Código Penal</em> — <em>Tempus Delicti</em><br>Tempo do Crime</h1>
+  <p class="sub">Fluxograma Completo · Doutrina · STF · STJ · Pontos de Prova</p>
+  <div class="lei-box">
+    <strong>"Considera-se praticado o crime no momento da ação ou omissão, ainda que outro seja o momento do resultado."</strong>
+    <div class="fonte">Art. 4° do Código Penal · Redação dada pela Lei n° 7.209, de 11.7.1984 (Reforma da Parte Geral)</div>
+  </div>
+</header>
+
+<div class="tw">
+  <div class="tabs">
+    <button class="tb on" onclick="showTab('fluxo',this)">⊞ Fluxograma</button>
+    <button class="tb" onclick="showTab('teorias',this)">📋 3 Teorias</button>
+    <button class="tb" onclick="showTab('efeitos',this)">⚡ Efeitos</button>
+    <button class="tb" onclick="showTab('stf',this)">⚖ STF</button>
+    <button class="tb" onclick="showTab('especiais',this)">🔗 Casos Especiais</button>
+    <button class="tb" onclick="showTab('prova',this)">🎯 Prova</button>
+  </div>
+</div>
+
+<main>
+
+<!-- ════════ TAB 1: FLUXOGRAMA ════════ -->
+<div id="tab-fluxo" class="sec on">
+  <div class="sec-title">Fluxograma Estrutural — Art. 4° do CP</div>
+
+  <!-- MNEMÔNICO -->
+  <div class="mbox">
+    <h3>🧠 Mnemônico Infalível: L.U.T.A.</h3>
+    <div class="mrow">
+      <div class="mitem"><div class="mlet">L</div><div class="mword">Lugar do crime</div></div>
+      <div class="mitem"><div class="mlet">U</div><div class="mword">Ubiquidade (art. 6°)</div></div>
+      <div class="mitem"><div class="mlet">T</div><div class="mword">Tempo do crime</div></div>
+      <div class="mitem"><div class="mlet">A</div><div class="mword">Atividade (art. 4°)</div></div>
+    </div>
+    <p style="font-size:.85rem;opacity:.8;margin-top:.6rem">Lugar = Ubiquidade (art. 6°) · Tempo = Atividade (art. 4°)</p>
+  </div>
+
+  <div class="fw" style="gap:0;margin-top:1.5rem">
+    <div class="fn root">
+      <div class="nt">ART. 4° DO CÓDIGO PENAL</div>
+      <div style="font-size:.85rem;color:rgba(255,255,255,.72);font-style:italic">Tempus Delicti · Teoria da Atividade</div>
+    </div>
+    <div class="arr">▼</div>
+
+    <!-- TEXTO LEGAL + CONTEXTO -->
+    <div class="fn gold">
+      <div class="nt">📜 Texto Legal e Posição Sistemática</div>
+      <div class="nb">
+        <strong>Art. 4° CP:</strong> "Considera-se praticado o crime no momento da ação ou omissão, ainda que outro seja o momento do resultado."<br><br>
+        <strong>Posição:</strong> Integra o Capítulo I — Da Aplicação da Lei Penal (arts. 1°-12 do CP). Junto ao art. 6° (lugar do crime), forma o par <em>tempus-locus delicti</em>.<br>
+        <strong>Reforma:</strong> Redação dada pela Lei 7.209/1984. Redação original do CP/1940 era similar.<br>
+        <strong>Finalidade:</strong> Fixar o marco temporal para todos os efeitos jurídico-penais que dependem do momento da prática delituosa.
+      </div>
+    </div>
+    <div class="arr">▼</div>
+
+    <!-- 3 TEORIAS -->
+    <div class="fn sub">
+      <div class="nt">📊 Três Teorias Doutrinárias — O Brasil Adotou A Teoria da Atividade</div>
+    </div>
+    <div class="arr">▼</div>
+
+    <div class="row3">
+      <div class="fn red">
+        <div class="nt" style="color:var(--crim)">❌ Teoria do Resultado</div>
+        <div class="nb">O crime considera-se praticado no momento da produção do resultado naturalístico.<br><br><em>Problema:</em> o agente poderia praticar a conduta antes dos 18 anos e "tornar-se" imputável com o resultado posterior. Viola a lógica do livre arbítrio.</div>
+      </div>
+      <div class="fn grn">
+        <div class="nt" style="color:var(--teal)">✅ Teoria da Atividade<br><small style="font-weight:400;font-size:.8rem">(CP, art. 4°)</small></div>
+        <div class="nb">O crime considera-se praticado no momento da <strong>ação ou omissão</strong>, independentemente do resultado. <strong>ADOTADA pelo CP brasileiro</strong>.<br><br><em>Justificativa:</em> a vontade delituosa é o elemento central — e ela se manifesta na conduta, não no resultado.</div>
+      </div>
+      <div class="fn amber">
+        <div class="nt" style="color:var(--amber)">◑ Teoria Mista (Ubiquidade)</div>
+        <div class="nb">O crime considera-se praticado tanto no momento da ação quanto no momento do resultado.<br><br><em>Adotada para:</em> Lugar do crime (art. 6° CP) — NÃO para o tempo. NÃO confundir!</div>
+      </div>
+    </div>
+    <div class="arr">▼</div>
+
+    <!-- EFEITOS PRINCIPAIS -->
+    <div class="fn dk">
+      <div class="nt">⚡ Principais Efeitos da Teoria da Atividade — Art. 4° CP</div>
+      <div class="nb">
+        <strong>1. Lei Penal Aplicável:</strong> aplica-se a lei vigente ao tempo da conduta (ação/omissão) — salvo lex mitior posterior<br>
+        <strong>2. Imputabilidade:</strong> aferida ao tempo da conduta — e não ao tempo do resultado<br>
+        <strong>3. Menoridade penal:</strong> se menor ao tempo da ação, é inimputável — mesmo que seja maior quando o resultado ocorre<br>
+        <strong>4. Menoridade relativa (21 anos):</strong> verifica-se ao tempo da ação — benefício da redução prescricional e atenuante<br>
+        <strong>5. Anistia/Graça/Indulto:</strong> o momento da conduta define se o agente está abrangido<br>
+        <strong>EXCEÇÃO — Prescrição:</strong> art. 111, I, CP adota a teoria do resultado — prazo começa da CONSUMAÇÃO, não da ação
+      </div>
+    </div>
+    <div class="arr">▼</div>
+
+    <!-- EXCEÇÃO PRESCRICAO -->
+    <div class="fn red">
+      <div class="nt">⚠ EXCEÇÃO CRÍTICA: Prescrição Adota a Teoria do Resultado</div>
+      <div class="nb">
+        Enquanto o art. 4° adota a teoria da atividade para o <em>tempo do crime</em>, o art. 111, I, CP adota a <strong>teoria do resultado</strong> para o <em>início do prazo prescricional</em>:<br><br>
+        <strong>Art. 111, I, CP:</strong> "A prescrição, antes de transitar em julgado a sentença final, começa a correr: I — do dia em que o crime se consumou."<br><br>
+        <em>Fundamento:</em> A teoria do resultado é mais favorável ao réu para fins prescricionais — o prazo começa da consumação, não da ação, o que é mais benéfico quando há lapso entre ação e resultado (ex.: homicídio com resultado tardio — prescrição conta da morte, não dos disparos).<br><br>
+        <strong>Resumo:</strong> Para tudo → Teoria da Atividade (art. 4°). Para prescrição → Teoria do Resultado (art. 111, I).
+      </div>
+    </div>
+    <div class="arr">▼</div>
+
+    <!-- CRIMES ESPECIAIS -->
+    <div class="fn gold">
+      <div class="nt">🔑 Casos Especiais — Crime Permanente e Crime Continuado</div>
+      <div class="nb">
+        <strong>Crime Permanente:</strong> consumação se prolonga no tempo. O "tempo do crime" abrange todo o período de permanência. Consequência: a lei nova mais grave, se entrar em vigor antes de cessada a permanência, aplica-se integralmente (Súmula 711/STF).<br><br>
+        <strong>Crime Continuado:</strong> pluralidade de condutas tratadas como crime único por ficção legal. Aplica-se a lei vigente ao tempo do último ato de continuidade (Súmula 711/STF).<br><br>
+        <strong>Crime Instantâneo:</strong> consumação ocorre em momento determinado. Aplica-se a lei vigente na ação (art. 4°). Sem complexidade.
+      </div>
+    </div>
+    <div class="arr">▼</div>
+
+    <!-- SUMULA 711 -->
+    <div class="fn teal">
+      <div class="nt" style="color:var(--teal)">⚖ Súmula 711/STF — A "Exceção Inteligível"</div>
+      <div class="nb">
+        <strong>"A lei penal mais grave aplica-se ao crime continuado ou ao crime permanente, se a sua vigência é anterior à cessação da continuidade ou da permanência."</strong><br><br>
+        <em>Fundamento:</em> não é retroatividade — é aplicação imediata da lei ao crime que ainda está em curso. O agente, ciente da nova lei, opta por continuar o crime. Renova o dolo sob a nova regra.<br><br>
+        <em>Consequência para menoridade:</em> se menor inicia crime permanente e atinge a maioridade durante a permanência, é imputável (cessa a permanência já maior de 18 anos).
+      </div>
+    </div>
+    <div class="arr">▼</div>
+
+    <!-- SINTESE COMPARATIVA -->
+    <div class="fn sub">
+      <div class="nt">📊 Quadro Comparativo — Art. 4° × Art. 6° × Art. 111, I</div>
+      <div class="nb">
+        <table>
+          <tr><th>Tema</th><th>Teoria Adotada</th><th>Dispositivo</th></tr>
+          <tr><td>Tempo do crime (geral)</td><td style="color:var(--teal)">✅ Atividade — momento da ação/omissão</td><td>Art. 4° CP</td></tr>
+          <tr><td>Lugar do crime</td><td style="color:var(--amber)">◑ Ubiquidade — ação E resultado</td><td>Art. 6° CP</td></tr>
+          <tr><td>Início do prazo prescricional</td><td style="color:var(--crim)">⚠ Resultado — momento da consumação</td><td>Art. 111, I, CP</td></tr>
+          <tr><td>Imputabilidade</td><td style="color:var(--teal)">✅ Atividade — tempo da conduta</td><td>Art. 4° CP</td></tr>
+          <tr><td>Crime permanente/continuado</td><td>Cessação — Súmula 711 STF</td><td>Art. 111, III, CP + Súmula 711</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ TAB 2: 3 TEORIAS ════════ -->
+<div id="tab-teorias" class="sec">
+  <div class="sec-title">As Três Teorias — Tempo do Crime</div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bd">Doutrina</span>Visão Geral das Teorias</div>
+    <p style="font-size:.91rem;line-height:1.78;margin-bottom:.8rem">O Direito Penal precisou definir o <em>tempus delicti</em> — o momento exato em que o crime é considerado praticado — para resolver questões de: (1) lei penal aplicável; (2) imputabilidade do agente; (3) prescrição; (4) benefícios como anistia, graça e indulto. Surgem três teorias:</p>
+    <div class="g3">
+      <div class="cbox">
+        <div style="font-size:.78rem;color:var(--crim);font-weight:700;text-transform:uppercase;letter-spacing:.06em">Teoria do Resultado</div>
+        <div class="big" style="color:var(--crim)">≠ CP</div>
+        <div style="font-size:.85rem;line-height:1.65">Crime = momento do resultado naturalístico.<br><br><em>Problema:</em> punir alguém pelo resultado sem considerar o momento da vontade delituosa viola a lógica da culpabilidade.</div>
+      </div>
+      <div class="cbox" style="border-color:#88cc88">
+        <div style="font-size:.78rem;color:var(--teal);font-weight:700;text-transform:uppercase;letter-spacing:.06em">Teoria da Atividade</div>
+        <div class="big" style="color:var(--teal)">= CP</div>
+        <div style="font-size:.85rem;line-height:1.65">Crime = momento da ação ou omissão.<br><br><em>Art. 4° CP.</em> A vontade delituosa é avaliada quando se manifesta — na conduta.</div>
+      </div>
+      <div class="cbox" style="border-color:#d8b040">
+        <div style="font-size:.78rem;color:var(--amber);font-weight:700;text-transform:uppercase;letter-spacing:.06em">Teoria Mista (Ubiquidade)</div>
+        <div class="big" style="color:var(--amber)">≠ art. 4°</div>
+        <div style="font-size:.85rem;line-height:1.65">Crime = momento da ação E do resultado.<br><br><em>Usada no Lugar do crime</em> (art. 6°). Não aplicada ao tempo.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bd">Doutrina</span>Teoria da Atividade — Fundamentos e Justificativas</div>
+    <p style="font-size:.91rem;line-height:1.78">A teoria da atividade é a que melhor se harmoniza com o <strong>princípio da culpabilidade</strong> e com a <strong>dogmática penal moderna</strong>, pois:</p>
+    <br>
+    <p style="font-size:.91rem;line-height:1.78"><strong>1. Valorização da conduta:</strong> O Direito Penal brasileiro foca no <em>desvalor da ação</em> — a reprovabilidade recai sobre o comportamento humano, não sobre o resultado (que pode ser fortuito ou decorrente de concausas).</p>
+    <br>
+    <p style="font-size:.91rem;line-height:1.78"><strong>2. Imputabilidade coerente:</strong> A capacidade de entender e querer (arts. 26-28 CP) deve ser avaliada no momento em que o agente decide agir criminosamente — não em momento posterior, que pode ter sido mero acidente.</p>
+    <br>
+    <p style="font-size:.91rem;line-height:1.78"><strong>3. Lei penal justa:</strong> O agente deve conhecer, ao tempo de sua conduta, as consequências penais — o que só é possível se a lei vigente ao tempo da ação é a aplicável.</p>
+    <br>
+    <p style="font-size:.91rem;line-height:1.78"><strong>4. Segurança jurídica:</strong> A certeza do marco temporal favorece a previsibilidade da norma penal e a estabilidade do sistema.</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bd">Comparativo</span>CP × CPP × Código Penal Militar (CPM)</div>
+    <table>
+      <tr><th>Diploma</th><th>Tempo do Crime</th><th>Lugar do Crime</th></tr>
+      <tr>
+        <td><strong>Código Penal (CP)</strong></td>
+        <td style="color:var(--teal)">✅ Teoria da Atividade (art. 4°) — momento da ação ou omissão</td>
+        <td>Ubiquidade (art. 6°) — local da ação E do resultado</td>
+      </tr>
+      <tr>
+        <td><strong>CPP (competência interna)</strong></td>
+        <td>—</td>
+        <td>Teoria do Resultado (art. 70, CPP) — local da consumação (competência do juízo)</td>
+      </tr>
+      <tr>
+        <td><strong>Código Penal Militar (CPM)</strong></td>
+        <td style="color:var(--teal)">✅ Teoria da Atividade — crimes comissivos e omissivos (art. 5°, CPM)</td>
+        <td>Ubiquidade — crimes comissivos · Atividade — crimes omissivos (LUTA no CPM → L.U.A.T.A.)</td>
+      </tr>
+    </table>
+    <p style="font-size:.87rem;margin-top:.6rem;color:var(--crim)"><strong>Atenção:</strong> O CPM tem regra diferente para o <em>lugar do crime</em> nos crimes omissivos (teoria da atividade, não da ubiquidade). O mnemônico do CPM é L.U.A.T.A. (Lugar: Ubiquidade nos comissivos, Atividade nos omissivos; Tempo: Atividade).</p>
+  </div>
+</div>
+
+<!-- ════════ TAB 3: EFEITOS ════════ -->
+<div id="tab-efeitos" class="sec">
+  <div class="sec-title">Efeitos Práticos da Teoria da Atividade</div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bd">Efeito 1</span>Lei Penal Aplicável</div>
+    <p style="font-size:.91rem;line-height:1.78">Aplica-se a lei vigente ao tempo da conduta (ação ou omissão). Se entre a conduta e o resultado surge lei mais grave, ela <strong>não retroage</strong> (irretroatividade da lex gravior — art. 5°, XL, CF). Se surge lei mais benéfica, ela <strong>retroage</strong> (novatio legis in mellius — art. 2°, §único, CP).</p>
+    <div class="jg gold" style="margin-top:.7rem">
+      <div class="jr" style="color:var(--amber)">Exemplo Prático</div>
+      João dispara contra Maria no dia 1° de janeiro (vigente a lei A, pena de 6 a 20 anos). Maria fica em coma e falece no dia 1° de março, quando já vigora a lei B (pena de 8 a 25 anos). Aplica-se a <strong>lei A</strong> — vigente ao tempo da ação (art. 4° CP). A lei B mais grave não retroage.
+    </div>
+    <div class="jg gold" style="margin-top:.3rem">
+      <div class="jr" style="color:var(--amber)">STJ · HC 926.021 · Rel. Min. Jesuíno Rissato · 2024</div>
+      A norma do art. 112, §1°, da LEP é de natureza penal, e, enquanto tal, somente pode incidir ao tempo do crime, ou seja, no momento em que a ação ou omissão foi praticada (art. 4° do CP), salvo se mais benéfica ao executando, caso em que terá efeito retroativo (art. 2°, §único, do CP).
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bd">Efeito 2</span>Imputabilidade — Aferida ao Tempo da Ação</div>
+    <p style="font-size:.91rem;line-height:1.78">A imputabilidade penal (capacidade de entender a ilicitude e determinar-se conforme esse entendimento — art. 26, CP) é verificada no momento da <strong>conduta</strong>, e não do resultado.</p>
+    <div class="g2" style="margin-top:.8rem">
+      <div>
+        <div class="jg grn">
+          <div class="jr" style="color:var(--olive)">Caso 1 — Menor que fica maior</div>
+          João, com 17 anos e 11 meses, dispara contra a vítima. Ela fica em coma e falece 3 meses depois, quando João já completou 18 anos. <strong>João é inimputável</strong> — no momento da ação, era menor. Responde apenas por ato infracional (ECA). A teoria da atividade protege o réu.
+        </div>
+      </div>
+      <div>
+        <div class="jg grn">
+          <div class="jr" style="color:var(--olive)">Caso 2 — Menoridade relativa (21 anos)</div>
+          Pedro, com 20 anos, pratica homicídio. A vítima falece meses depois, quando Pedro já tem 22 anos. Para fins de <strong>atenuante (art. 65, I, CP) e redução prescricional (art. 115, CP)</strong>, vale a idade ao tempo da ação — Pedro tem os benefícios da menoridade relativa.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bw">Efeito 3 — Exceção</span>Prescrição — Teoria do Resultado (art. 111, I, CP)</div>
+    <p style="font-size:.91rem;line-height:1.78;margin-bottom:.7rem">Para fins prescricionais, o CP adota a <strong>teoria do resultado</strong>: o prazo prescricional da pretensão punitiva começa a correr do dia em que o crime se consumou (art. 111, I, CP) — e não do dia da ação.</p>
+    <div class="jg amb">
+      <div class="jr">Fundamento da Exceção</div>
+      A adoção da teoria do resultado para a prescrição é <em>mais favorável ao réu</em>: o prazo prescricional começa da consumação (resultado), e não da ação — o que é melhor para o agente quando há lapso entre ação e resultado. A exceção tem fundamento teleológico: favorece o réu ao ampliar o prazo de extinção da punibilidade.
+    </div>
+    <div class="jg amb" style="margin-top:.5rem">
+      <div class="jr">Exemplo Prático</div>
+      João desfere facadas em Maria no dia 1°/1/2020. Maria fica internada e falece no dia 1°/1/2022. A prescrição começa a correr de <strong>1°/1/2022</strong> (data da morte — consumação do homicídio) e não de 1°/1/2020 (data das facadas — ação). Para João, isso é mais favorável, pois o prazo prescricional começa mais tarde.
+    </div>
+    <table style="margin-top:.7rem">
+      <tr><th>Finalidade</th><th>Teoria</th><th>Marco Temporal</th></tr>
+      <tr><td>Tempo do crime (geral)</td><td style="color:var(--teal)">Atividade</td><td>Ação ou omissão (art. 4°)</td></tr>
+      <tr><td>Imputabilidade</td><td style="color:var(--teal)">Atividade</td><td>Ação ou omissão (art. 4°)</td></tr>
+      <tr><td>Lei penal aplicável</td><td style="color:var(--teal)">Atividade</td><td>Ação ou omissão (art. 4°)</td></tr>
+      <tr><td>Início do prazo prescricional</td><td style="color:var(--crim)">Resultado (EXCEÇÃO)</td><td>Consumação (art. 111, I)</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bd">Efeito 4</span>Anistia, Graça, Indulto e Atos de Clemência</div>
+    <p style="font-size:.91rem;line-height:1.78">Para fins de benefícios de clemência soberana, o momento de referência é o da prática do crime (teoria da atividade). Se o decreto de anistia ou indulto menciona "crimes praticados até X data", o marco é a data da conduta — não do resultado. Cuidado: o indulto/graça pode exigir condições adicionais (cumprimento de fração da pena, primariedade, etc.) que são verificadas na data do decreto.</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bd">Efeito 5</span>Crime Omissivo — Aplicação da Teoria da Atividade</div>
+    <p style="font-size:.91rem;line-height:1.78">O art. 4° CP é expresso ao incluir a <strong>omissão</strong>: "no momento da ação <em>ou omissão</em>". Assim, nos crimes omissivos próprios (o tipo descreve um non facere — ex.: omissão de socorro, art. 135 CP) e nos crimes omissivos impróprios (comissivos por omissão — garante que deixa de agir quando tinha o dever), o crime considera-se praticado no momento da omissão.</p>
+    <div class="jg teal" style="margin-top:.6rem">
+      <div class="jr" style="color:var(--teal)">Exemplo — Estelionato</div>
+      Um agente induz a vítima a erro enviando email fraudulento em 1°/1/2020. A vítima, enganada, realiza transferência bancária em 1°/6/2020. Para fins do art. 4° CP, o crime de estelionato considera-se praticado em <strong>1°/1/2020</strong> (momento da ação fraudulenta — o envio do e-mail), mesmo que o resultado prejuízo ocorra 6 meses depois. A lei vigente em 1°/1/2020 é a aplicável.
+    </div>
+  </div>
+</div>
+
+<!-- ════════ TAB 4: STF ════════ -->
+<div id="tab-stf" class="sec">
+  <div class="sec-title">Jurisprudência — STF e STJ</div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bstf">STF · Súmula 711</span>Crime Permanente e Continuado — Lei Mais Grave</div>
+    <div class="jg">
+      <div class="jr">Súmula 711/STF</div>
+      "A lei penal mais grave aplica-se ao crime continuado ou ao crime permanente, se a sua vigência é anterior à cessação da continuidade ou da permanência."
+    </div>
+    <div class="jg" style="margin-top:.5rem">
+      <div class="jr">STF · RHC 83.437 — Crime Ambiental Permanente</div>
+      Tratando-se de crime permanente (impedir o nascimento de nova vegetação — art. 48 da Lei 9.605/1998), a consumação não se dá instantaneamente, protrai-se no tempo, renovando-se a cada momento a consumação do delito. Não houve violação ao princípio da legalidade ou tipicidade, pois a conduta já era crime antes. Houve apenas uma sucessão de leis, perfeitamente legítima, nos termos da Súmula 711/STF. Tratando-se de crime permanente, o lapso prescricional somente começa a fluir a partir do momento em que cessa a permanência.
+    </div>
+    <div class="jg" style="margin-top:.5rem">
+      <div class="jr">STF · AP 470 ED-décimos quartos · Rel. Min. Joaquim Barbosa · P · 5/9/2013</div>
+      A Súmula 711 aplica-se também ao crime continuado. A lei mais grave aplica-se a toda a cadeia de continuidade delitiva se estava em vigor antes da cessação. O julgado afastou o argumento de que a lei mais grave retroagiria ilicitamente ao atingir condutas praticadas antes de sua vigência — pois o crime continuado é tratado como ficção de crime único (art. 71 CP).
+    </div>
+    <p style="font-size:.87rem;margin-top:.6rem;color:var(--slate)"><em>Fundamento da Súmula 711:</em> não é retroatividade — é aplicação imediata da lei vigente ao crime que ainda está em curso. O agente, ao persistir na conduta após a vigência da lei mais grave, assume o risco da nova sanção.</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bstf">STF</span>Menoridade e Crime Permanente — Imputabilidade</div>
+    <div class="jg">
+      <div class="jr">STF — Posição Consolidada</div>
+      Se menor de 18 anos inicia a execução de crime permanente (ex.: sequestro) e, durante o período de permanência, atinge a maioridade, é imputável — pois no momento da cessação da permanência já era maior de 18 anos. O fundamento é que, ao continuar o crime após atingir a maioridade, o agente pratica conduta autônoma como imputável. A Súmula 711/STF confirma que a lei vigente na cessação é a aplicável, o que inclui o reconhecimento da imputabilidade.
+    </div>
+    <p style="font-size:.87rem;margin-top:.5rem;color:var(--crim)"><strong>Atenção:</strong> Se o menor cessa o crime permanente antes de completar 18 anos, é inimputável quanto a todo o período — a permanência é tratada como crime único.</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bstj">STJ</span>Art. 4° CP e Progressão de Regime — Lei Penal Material</div>
+    <div class="jg stj">
+      <div class="jr">STJ · HC 926.021 · Rel. Min. Jesuíno Rissato (Des. Conv. TJDFT) · DJe 5/8/2024</div>
+      A norma expressa no art. 112, §1°, da LEP, por se tratar de um benefício da execução da pena, é de natureza penal (e não procedimental). Enquanto tal, somente pode incidir ao tempo do crime, ou seja, no momento em que a ação ou omissão for praticada (art. 4° do CP), salvo se for mais benéfica ao executando, situação em que terá efeito retroativo (art. 2°, §único, do CP). O STF reafirmou: "A lei que estabelece requisitos mais gravosos para concessão de progressão de regime não se aplica aos crimes cometidos antes da sua vigência" (RHC 221.271 AgR, Rel. Min. Luiz Fux, julgado em 9/5/2023).
+    </div>
+    <p style="font-size:.87rem;margin-top:.5rem;color:var(--slate)"><em>Relevância prática:</em> confirma que a teoria da atividade (art. 4° CP) é o marco de referência para definir a lei penal aplicável inclusive na execução penal — o que valida o art. 4° como dispositivo de amplitude geral.</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bstf">STF · Súmula 497</span>Prescrição no Crime Continuado — Norma Complementar ao Art. 4°</div>
+    <div class="jg">
+      <div class="jr">Súmula 497/STF</div>
+      "Quando se tratar de crime continuado, a prescrição regula-se pela pena imposta na sentença, não se computando o acréscimo decorrente da continuação."
+    </div>
+    <p style="font-size:.88rem;margin-top:.5rem;color:var(--slate)"><em>Relação com art. 4°:</em> Para fins de prescrição no crime continuado, o art. 111, III, CP dispõe que ela começa a correr do dia em que cessou a continuidade. A Súmula 497/STF complementa ao definir como calcular a pena base (sem o acréscimo da continuação) para o cômputo prescricional.</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bstj">STJ · 2024</span>Exame Criminológico (Lei 14.843/2024) — Marco Temporal do Crime</div>
+    <div class="jg stj">
+      <div class="jr">STJ · AgRg no HC 954.277/SP · Rel. Min. Reynaldo Soares da Fonseca · 5ª Turma · 4/12/2024</div>
+      O art. 112, §1°, da LEP, com nova redação dada pela Lei 14.843/2024, tornou obrigatório o exame criminológico para progressão de regime. Por se tratar de norma de natureza penal material que impõe novo requisito mais gravoso, sua aplicação retroativa viola o art. 5°, XL, da CF e o art. 2°, §único, do CP. <strong>A norma só incide aos crimes cometidos após sua vigência</strong>, consoante o marco temporal do art. 4° CP — o momento da ação ou omissão.
+    </div>
+  </div>
+</div>
+
+<!-- ════════ TAB 5: CASOS ESPECIAIS ════════ -->
+<div id="tab-especiais" class="sec">
+  <div class="sec-title">Casos Especiais — Aplicação do Art. 4° CP</div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bw">Especial 1</span>Crime Instantâneo × Crime Permanente × Crime Continuado</div>
+    <table>
+      <tr><th>Modalidade</th><th>Conceito</th><th>Tempo do Crime</th><th>Exemplos</th></tr>
+      <tr>
+        <td><strong>Instantâneo</strong></td>
+        <td>Consumação em momento determinado. Não se prolonga no tempo.</td>
+        <td>Momento da ação/omissão (art. 4°)</td>
+        <td>Homicídio, roubo, furto simples</td>
+      </tr>
+      <tr>
+        <td><strong>Instantâneo de efeitos permanentes</strong></td>
+        <td>Consumação instantânea, mas efeitos se prolongam. Ex.: bigamia — celebrado o segundo casamento, consumado. Efeitos persistem.</td>
+        <td>Momento da conduta (art. 4°) — NÃO aplica Súmula 711</td>
+        <td>Bigamia, homicídio, lesões corporais</td>
+      </tr>
+      <tr>
+        <td><strong>Permanente</strong></td>
+        <td>Consumação se prolonga no tempo por vontade do agente. Estado de flagrância contínuo.</td>
+        <td>Todo o período de permanência. Aplica Súmula 711/STF</td>
+        <td>Sequestro, cárcere privado, porte ilegal de arma, tráfico (depósito)</td>
+      </tr>
+      <tr>
+        <td><strong>Continuado</strong> (art. 71 CP)</td>
+        <td>Ficção jurídica: vários crimes tratados como crime único por condições semelhantes de tempo, lugar, modo.</td>
+        <td>Cessação do último ato. Aplica Súmula 711/STF</td>
+        <td>Série de furtos nas mesmas condições</td>
+      </tr>
+    </table>
+    <p style="font-size:.88rem;margin-top:.5rem;color:var(--crim)"><strong>Atenção:</strong> Crime instantâneo de efeitos permanentes NÃO atrai a Súmula 711 — a consumação é em momento determinado, os efeitos apenas persistem.</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bw">Especial 2</span>Menoridade Penal e Crime Permanente — Detalhamento</div>
+    <div class="g2">
+      <div>
+        <strong>Cenário A — Inicia menor, cessa menor:</strong>
+        <p style="font-size:.88rem;line-height:1.72;margin-top:.4rem">João inicia sequestro com 17 anos e liberta a vítima com 17 anos e 11 meses. <strong>Inimputável</strong> — cessa a permanência como menor. Responde por ato infracional.</p>
+        <div class="jg grn" style="margin-top:.5rem">
+          <div class="jr" style="color:var(--olive)">Resultado</div>
+          Ato infracional — ECA. NÃO responde criminalmente.
+        </div>
+      </div>
+      <div>
+        <strong>Cenário B — Inicia menor, cessa maior:</strong>
+        <p style="font-size:.88rem;line-height:1.72;margin-top:.4rem">João inicia sequestro com 17 anos e 11 meses. Durante a permanência, completa 18 anos e só então liberta a vítima. <strong>Imputável</strong> — cessa a permanência como maior. Aplica Súmula 711/STF.</p>
+        <div class="jg" style="margin-top:.5rem">
+          <div class="jr">Resultado</div>
+          Responde criminalmente. Imputável na cessação. Lei vigente na cessação aplicável.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bpur">Especial 3</span>Crimes à Distância e Crimes de Espaço Máximo — Distinção com Lugar do Crime</div>
+    <p style="font-size:.91rem;line-height:1.78">Não confundir com art. 6°:</p>
+    <table style="margin-top:.5rem">
+      <tr><th>Dispositivo</th><th>Questão</th><th>Teoria</th></tr>
+      <tr><td>Art. 4° CP</td><td>QUANDO o crime foi praticado (tempo)</td><td>Atividade — momento da ação/omissão</td></tr>
+      <tr><td>Art. 6° CP</td><td>ONDE o crime foi praticado (lugar — crimes transnacionais)</td><td>Ubiquidade — local da ação E do resultado</td></tr>
+      <tr><td>Art. 70, CPP</td><td>ONDE julgar o crime (competência interna)</td><td>Resultado — local da consumação (fixação de competência)</td></tr>
+    </table>
+    <p style="font-size:.87rem;margin-top:.5rem;color:var(--slate)">O art. 6° (ubiquidade) só se aplica aos chamados <em>crimes à distância</em> ou <em>de espaço máximo</em> — quando a conduta ocorre em um país e o resultado em outro. Para crimes comuns praticados inteiramente no Brasil, o lugar é onde ocorreu a ação.</p>
+  </div>
+
+  <div class="card">
+    <div class="ct"><span class="bx bpur">Especial 4</span>Norma Processual vs. Norma Material — Impacto do Art. 4°</div>
+    <p style="font-size:.91rem;line-height:1.78;margin-bottom:.7rem">O art. 4° tem relevância para definir se uma norma é processual (rege-se pelo tempus regit actum — CPP, art. 2°) ou material (rege-se pelo art. 4° CP + art. 5°, XL, CF). Uma norma que afeta a situação do réu em relação à punição (penas, benefícios, extinção da punibilidade) é material e submete-se ao marco do art. 4° CP.</p>
+    <div class="jg stj">
+      <div class="jr">STJ — Tese sobre Norma Híbrida e ANPP (Tema 1.098)</div>
+      O ANPP (art. 28-A, CPP) tem natureza híbrida — processual (evita a ação) e material (extingue a punibilidade). Por seu conteúdo material, submete-se à retroatividade benéfica (art. 2°, §único, CP), com referência ao marco temporal do art. 4° CP para identificar quais fatos são alcançáveis.
+    </div>
+    <div class="jg stj" style="margin-top:.5rem">
+      <div class="jr">STJ · HC 926.021 · 2024 (já citado)</div>
+      Norma de progressão de regime tem natureza penal material → marco temporal = art. 4° CP (momento da ação/omissão). Norma mais gravosa posterior NÃO retroage. Norma mais benéfica retroage.
+    </div>
+  </div>
+</div>
+
+<!-- ════════ TAB 6: PROVA ════════ -->
+<div id="tab-prova" class="sec">
+  <div class="sec-title">🎯 Pontos Sempre Cobrados em Magistratura / ENAM</div>
+
+  <div class="pbox">
+    <h3>📌 Questões de Alta Incidência — Art. 4° do CP</h3>
+
+    <div class="pi"><span class="pn">1</span>
+      <span><strong>Mnemônico L.U.T.A.:</strong> Lugar = Ubiquidade (art. 6° CP); Tempo = Atividade (art. 4° CP). Saber isso de cor é o mínimo para não errar questões objetivas sobre tempo e lugar do crime.</span>
+    </div>
+    <div class="pi"><span class="pn">2</span>
+      <span><strong>As 3 teorias e qual o CP adotou:</strong> Teoria do Resultado (≠ CP para tempo), Teoria da Atividade (= art. 4° CP), Teoria da Ubiquidade/mista (= art. 6° CP para lugar). Saber diferenciar e o fundamento de cada uma.</span>
+    </div>
+    <div class="pi"><span class="pn">3</span>
+      <span><strong>Imputabilidade aferida ao tempo da ação:</strong> Caso clássico do menor de 17 anos e 11 meses que atira e a vítima morre após completar 18 anos — inimputável. É o exemplo mais cobrado do art. 4° CP em provas de magistratura.</span>
+    </div>
+    <div class="pi"><span class="pn">4</span>
+      <span><strong>Exceção da prescrição (art. 111, I, CP — teoria do resultado):</strong> Para prescrição, o prazo começa da consumação — não da ação. É exceção à teoria da atividade. Perguntar "quando começa a prescrição" é uma das pegadinhas mais clássicas dos concursos.</span>
+    </div>
+    <div class="pi"><span class="pn">5</span>
+      <span><strong>Súmula 711/STF — Crime permanente e continuado:</strong> A lei mais grave aplica-se se vigente antes da cessação. Saber o fundamento (não é retroatividade — é aplicação imediata ao crime ainda em curso) e os casos de imputabilidade.</span>
+    </div>
+    <div class="pi"><span class="pn">6</span>
+      <span><strong>Crime instantâneo de efeitos permanentes NÃO atrai a Súmula 711:</strong> Ex.: bigamia — consumada com a celebração do segundo casamento. Os efeitos persistem, mas a lei vigente na consumação é a aplicável. Não aplica Súmula 711.</span>
+    </div>
+    <div class="pi"><span class="pn">7</span>
+      <span><strong>CP × CPM — Diferença no lugar do crime omissivo:</strong> No CP, lugar do crime omissivo = ubiquidade (art. 6°). No CPM, lugar do crime omissivo = atividade. Mnemônico CPM: L.U.A.T.A. Essa distinção cai em provas da área militar e também em provas gerais.</span>
+    </div>
+    <div class="pi"><span class="pn">8</span>
+      <span><strong>Menoridade relativa (21 anos) — tempo da ação:</strong> Atenuante (art. 65, I) e redução prescricional pela metade (art. 115) verificadas ao tempo da ação/omissão. Se ação ocorreu com 20 anos, os benefícios se aplicam ainda que o resultado ocorra com 22 anos.</span>
+    </div>
+    <div class="pi"><span class="pn">9</span>
+      <span><strong>Norma penal material × norma processual e o art. 4°:</strong> Norma penal material tem como marco o art. 4° CP (momento da ação) — retroatividade benéfica; irretroatividade gravosa. Norma processual pura = tempus regit actum (art. 2° CPP). Norma híbrida = retroatividade benéfica.</span>
+    </div>
+    <div class="pi"><span class="pn">10</span>
+      <span><strong>Estelionato por e-mail — tempo do crime:</strong> Muito cobrado. O estelionato (fraude + induzimento em erro + prejuízo) considera-se praticado no momento da ação fraudulenta (envio do e-mail), e não quando a vítima faz a transferência meses depois. Aplica-se a lei vigente ao tempo da ação (art. 4°).</span>
+    </div>
+    <div class="pi"><span class="pn">11</span>
+      <span><strong>Lei 14.843/2024 — Exame Criminológico e o art. 4° CP:</strong> STJ (AgRg no HC 954.277/SP, 2024) e STF (RHC 221.271 AgR, 2023): lei mais gravosa que impõe novo requisito para progressão de regime não retroage — por força do art. 4° CP (marco temporal) + art. 5°, XL, CF (irretroatividade).</span>
+    </div>
+    <div class="pi"><span class="pn">12</span>
+      <span><strong>Prescrição no crime permanente (art. 111, III, CP):</strong> Começa a correr do dia em que cessa a permanência. Súmula 711 se aplica para a lei mais grave; para prescrição, o marco é a cessação da permanência (o que pode ser o mesmo marco).</span>
+    </div>
+    <div class="pi"><span class="pn">13</span>
+      <span><strong>Súmula 497/STF — Prescrição no crime continuado:</strong> Regula-se pela pena imposta na sentença, sem computar o acréscimo da continuação. Complementa a Súmula 711/STF para fins prescricionais.</span>
+    </div>
+    <div class="pi"><span class="pn">14</span>
+      <span><strong>Art. 4° CP para fins de anistia/graça/indulto:</strong> O momento da conduta define se o agente está abrangido pelos benefícios. Se o decreto beneficia "crimes praticados até X data", o marco é a data da ação/omissão.</span>
+    </div>
+    <div class="pi"><span class="pn">15</span>
+      <span><strong>Crime omissivo e art. 4°:</strong> O texto legal inclui expressamente "ação ou omissão" — o art. 4° aplica-se tanto a crimes comissivos quanto a crimes omissivos próprios e impróprios. O tempo do crime omissivo = momento da omissão (quando o garante deixou de agir).</span>
+    </div>
+  </div>
+
+  <!-- QUADRO SÍNTESE -->
+  <div class="card" style="margin-top:1.5rem">
+    <div class="ct"><span class="bx bp">Quadro-Síntese</span>Art. 4° CP — Respostas Objetivas para Prova</div>
+    <table>
+      <tr><th>Pergunta</th><th>Resposta</th><th>Fundamento</th></tr>
+      <tr><td>Teoria do tempo do crime no CP</td><td style="color:var(--teal)">✅ Teoria da Atividade</td><td>Art. 4° CP</td></tr>
+      <tr><td>Teoria do lugar do crime no CP</td><td>Ubiquidade (mista)</td><td>Art. 6° CP</td></tr>
+      <tr><td>Teoria do lugar no CPP (competência)</td><td>Resultado</td><td>Art. 70, CPP</td></tr>
+      <tr><td>Quando se verifica imputabilidade?</td><td>Ao tempo da ação/omissão</td><td>Art. 4° CP</td></tr>
+      <tr><td>Quando começa o prazo prescricional?</td><td style="color:var(--crim)">⚠ Da consumação (EXCEÇÃO)</td><td>Art. 111, I, CP</td></tr>
+      <tr><td>Lei aplicável a crime permanente/continuado</td><td>Vigente na cessação (Súmula 711/STF)</td><td>Súmula 711 STF</td></tr>
+      <tr><td>Menor inicia crime permanente e cessa maior?</td><td>Imputável — cessa como maior</td><td>Súmula 711 + art. 4° CP</td></tr>
+      <tr><td>Crime instantâneo de efeitos permanentes</td><td>Súmula 711 NÃO se aplica</td><td>Consumação instantânea</td></tr>
+      <tr><td>CPM — Lugar do crime omissivo</td><td>Atividade (≠ CP que usa ubiquidade)</td><td>Art. 5°, CPM (L.U.A.T.A.)</td></tr>
+    </table>
+  </div>
+
+  <!-- ARMADILHAS -->
+  <div class="danger">
+    <h4>⚠ Armadilhas Frequentes em Provas</h4>
+    <ul style="font-size:.91rem;line-height:1.9;padding-left:1.2rem">
+      <li><strong>Confundir tempo com lugar do crime:</strong> Tempo = Atividade (art. 4°). Lugar = Ubiquidade (art. 6°). São artigos diferentes com teorias diferentes!</li>
+      <li><strong>Afirmar que prescrição segue a teoria da atividade:</strong> ERRADO. A prescrição começa da consumação — teoria do resultado (art. 111, I, CP). É a principal exceção à teoria da atividade.</li>
+      <li><strong>Aplicar Súmula 711 a crimes instantâneos de efeitos permanentes:</strong> ERRADO. A bigamia, por exemplo, consuma-se na celebração do segundo casamento — os efeitos são permanentes, mas a consumação é instantânea. A Súmula 711 não se aplica.</li>
+      <li><strong>Dizer que a Súmula 711 autoriza retroatividade maléfica:</strong> ERRADO. A lei não retroage — ela é aplicada a um crime que ainda está em curso ao tempo de sua vigência. É aplicação imediata, não retroatividade.</li>
+      <li><strong>Confundir L.U.T.A. do CP com L.U.A.T.A. do CPM:</strong> No CPM, para crimes omissivos, o lugar é a atividade — não a ubiquidade. Distinção importante para concursos militares.</li>
+      <li><strong>Dizer que a imputabilidade se verifica no momento do resultado:</strong> ERRADO. A imputabilidade é aferida ao tempo da conduta (art. 4° CP). O agente menor que comete homicídio permanece inimputável mesmo que a vítima morra quando ele já completou 18 anos.</li>
+    </ul>
+  </div>
+
+  <!-- DISCURSIVAS -->
+  <div class="card" style="margin-top:1rem">
+    <div class="ct"><span class="bx bp">Discursiva ENAM</span>Temas de Alta Incidência em Provas Discursivas</div>
+    <ol style="font-size:.91rem;line-height:1.9;padding-left:1.2rem">
+      <li>Explique a teoria da atividade (art. 4° CP) e seus efeitos práticos para a lei penal aplicável, a imputabilidade e a prescrição, indicando as exceções ao princípio.</li>
+      <li>Analise o enunciado da Súmula 711/STF, explicando por que a aplicação da lei mais grave ao crime permanente e continuado não viola o princípio da irretroatividade da lei penal gravosa.</li>
+      <li>Diferencie o crime permanente do crime instantâneo de efeitos permanentes e explique as consequências dessa distinção para a aplicação da lei penal no tempo.</li>
+      <li>Discorra sobre a exceção prescricional ao princípio da atividade, explicando por que o art. 111, I, CP adota a teoria do resultado e qual o fundamento dessa escolha.</li>
+    </ol>
+  </div>
+</div>
+
+</main>
+
+<script>
+function showTab(id,btn){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.tb').forEach(b=>b.classList.remove('on'));
+  document.getElementById('tab-'+id).classList.add('on');
+  btn.classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function tAcc(btn){
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+</script>
+</body>
+</html>

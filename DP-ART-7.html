@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 7° CP — Extraterritorialidade | Magistratura/ENAM 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════
+   TOKENS & RESET
+═══════════════════════════════════════════ */
+:root{
+  --bg:#f0ebe1;--surface:#faf6ee;--surface2:#f4f0e6;
+  --ink:#0c1a2e;--ink2:#1a2e48;--ink3:#243d5c;
+  --gold:#9a6800;--gold2:#c28a00;--gold3:#f0b400;--gold4:#fdd75a;
+  --ruby:#6c0f0f;--ruby2:#8c1a1a;--ruby3:#b52222;
+  --pine:#083a20;--pine2:#0f5030;--pine3:#166840;
+  --plum:#2e0754;--plum2:#4a1280;--plum3:#6820b0;
+  --amber:#703000;--amber2:#9a4800;
+  --slate:#3c4e64;--muted:#7a8fa6;
+  --bd:#b09040;--bd2:#c8a850;
+  --shad:rgba(12,26,46,.12);--shad2:rgba(12,26,46,.22);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:15px}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+
+/* ═══════════════════════════════════════════
+   HEADER
+═══════════════════════════════════════════ */
+.header{
+  background:linear-gradient(165deg,var(--ink) 0%,#162540 50%,var(--ink2) 100%);
+  padding:2.2rem 1.5rem 1.8rem;
+  border-bottom:4px solid var(--gold2);
+  position:relative;overflow:hidden;
+}
+.header::before{content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse at 20% 60%,rgba(194,138,0,.12) 0%,transparent 55%),
+             radial-gradient(ellipse at 80% 40%,rgba(15,80,48,.16) 0%,transparent 55%),
+             repeating-linear-gradient(55deg,rgba(194,138,0,.02) 0,rgba(194,138,0,.02) 1px,transparent 1px,transparent 16px);
+}
+.header-inner{max-width:1100px;margin:0 auto;text-align:center;position:relative}
+.h-badge{display:inline-block;background:var(--gold2);color:var(--ink);
+  font-family:'Fraunces',Georgia,serif;font-size:.66rem;font-weight:700;
+  letter-spacing:.25em;text-transform:uppercase;padding:.25rem .9rem;
+  border-radius:2px;margin-bottom:.6rem}
+.h-title{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.6rem,4.5vw,2.9rem);
+  font-weight:900;color:#fff;line-height:1.05;margin-bottom:.35rem}
+.h-title em{color:var(--gold4);font-style:italic}
+.h-sub{color:rgba(255,255,255,.58);font-size:.88rem;font-style:italic;margin-bottom:1.1rem}
+.lei-strip{margin:.3rem auto;max-width:820px;background:rgba(194,138,0,.13);
+  border:1px solid rgba(194,138,0,.36);border-radius:5px;
+  padding:.95rem 1.6rem;color:#fff;font-size:.97rem;line-height:1.75}
+.lei-strip strong{color:var(--gold4);font-style:italic;display:block;margin-bottom:.3rem}
+.lei-strip small{opacity:.65;font-size:.78rem}
+
+/* ═══════════════════════════════════════════
+   NAV ANCHORS — sticky
+═══════════════════════════════════════════ */
+.navbar{position:sticky;top:0;z-index:200;background:var(--ink);
+  border-bottom:2px solid var(--gold2);overflow-x:auto;scrollbar-width:none}
+.navbar::-webkit-scrollbar{display:none}
+.nav-inner{display:flex;padding:0 .5rem;white-space:nowrap;max-width:1200px;margin:0 auto}
+.nav-a{
+  display:inline-flex;align-items:center;gap:.38rem;
+  color:rgba(255,255,255,.48);
+  font-size:.76rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  padding:.75rem .85rem;text-decoration:none;
+  border-bottom:2.5px solid transparent;transition:all .2s;flex-shrink:0;
+}
+.nav-a:hover{color:#fff}
+.nav-a.active{color:var(--gold4);border-bottom-color:var(--gold4)}
+
+/* ═══════════════════════════════════════════
+   MAIN LAYOUT
+═══════════════════════════════════════════ */
+.wrap{max-width:1140px;margin:0 auto;padding:1.8rem 1rem 4rem}
+
+/* SECTION ANCHORS */
+.section{padding-top:1.8rem;margin-bottom:.5rem}
+.sec-head{display:flex;align-items:center;gap:.8rem;margin-bottom:1.4rem;
+  padding-bottom:.55rem;border-bottom:2px solid var(--gold2)}
+.sec-icon{font-size:1.4rem;flex-shrink:0}
+.sec-title{font-family:'Fraunces',Georgia,serif;font-size:1.5rem;font-weight:700;color:var(--ink)}
+
+/* GRID SYSTEM */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.9rem}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem}
+.full{grid-column:1/-1}
+@media(max-width:820px){.g2,.g3,.g4{grid-template-columns:1fr}}
+@media(min-width:821px) and (max-width:1040px){.g3{grid-template-columns:1fr 1fr}.g4{grid-template-columns:1fr 1fr}}
+
+/* ═══════════════════════════════════════════
+   CARDS
+═══════════════════════════════════════════ */
+.card{background:var(--surface);border:1px solid var(--bd);border-radius:8px;
+  padding:1.15rem 1.35rem;box-shadow:0 2px 10px var(--shad)}
+.card.accent{border-color:var(--gold2);border-width:2px}
+.card.pine-card{background:#edf8f2;border-color:#80c0a0}
+.card.ruby-card{background:#fdf0f0;border-color:#c88888}
+.card.plum-card{background:#f0e8ff;border-color:#b090e0}
+.card.amber-card{background:#fdf5e0;border-color:#d0a030}
+.card.slate-card{background:#edf3f8;border-color:#90b0d0}
+
+.card-title{font-family:'Fraunces',Georgia,serif;font-size:1rem;font-weight:700;
+  color:var(--ink);margin-bottom:.65rem;display:flex;align-items:center;flex-wrap:wrap;gap:.45rem}
+.chip{font-family:'DM Sans',sans-serif;font-size:.6rem;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;padding:.18rem .6rem;border-radius:3px;flex-shrink:0}
+.chip-pine{background:#d0f0e0;color:var(--pine);border:1px solid #80c0a0}
+.chip-ruby{background:#fce4e4;color:var(--ruby);border:1px solid #d08888}
+.chip-stj{background:#dde8f8;color:var(--ink2);border:1px solid #88b0d8}
+.chip-stf{background:#fce4e4;color:var(--ruby);border:1px solid #d08888}
+.chip-gold{background:#fff0cc;color:var(--amber);border:1px solid #d0a030}
+.chip-plum{background:#eedfff;color:var(--plum);border:1px solid #b080e0}
+.chip-ink{background:var(--ink);color:var(--gold4);border:1px solid var(--ink2)}
+
+p.body{font-size:.88rem;line-height:1.72;color:var(--slate)}
+p.note{font-size:.83rem;line-height:1.65;color:var(--muted);font-style:italic;margin-top:.45rem}
+
+/* ═══════════════════════════════════════════
+   FLOW NODES
+═══════════════════════════════════════════ */
+.flow{display:flex;flex-direction:column;align-items:center;gap:0}
+.fnode{width:100%;max-width:800px;border-radius:7px;padding:.95rem 1.3rem;
+  border:1.5px solid var(--bd);background:var(--surface);
+  font-size:.86rem;line-height:1.7;color:var(--slate)}
+.fnode.fn-root{background:var(--ink);border-color:var(--gold3);color:#fff;
+  border-radius:40px;text-align:center;padding:.8rem 1.8rem}
+.fnode.fn-root .ft{color:var(--gold4);font-size:1.1rem}
+.fnode.fn-gold{background:#fdf6e2;border-color:var(--gold2)}
+.fnode.fn-pine{background:#ecf8f2;border-color:#80c0a0}
+.fnode.fn-ruby{background:#fdf0f0;border-color:#c88888}
+.fnode.fn-plum{background:#f0e8ff;border-color:#b090e0}
+.fnode.fn-slate{background:#edf3f8;border-color:#90b0d0}
+.fnode.fn-dark{background:var(--ink2);border-color:var(--gold2);color:#fff}
+.fnode.fn-dark .ft{color:var(--gold4)}
+.fnode.fn-dark .body-f{color:rgba(255,255,255,.82)}
+.ft{font-family:'Fraunces',Georgia,serif;font-size:.96rem;font-weight:700;color:var(--ink);margin-bottom:.3rem}
+.farr{text-align:center;color:var(--gold2);padding:.22rem 0;font-size:1.35rem;line-height:1}
+
+/* ═══════════════════════════════════════════
+   JULGADOS
+═══════════════════════════════════════════ */
+.jg{border-left:3.5px solid var(--ruby2);background:#f8f2e5;
+  padding:.82rem 1rem;margin:.5rem 0;border-radius:0 6px 6px 0;
+  font-size:.84rem;line-height:1.72}
+.jg.j-stj{border-left-color:var(--ink2)}
+.jg.j-pine{border-left-color:var(--pine2)}
+.jg.j-plum{border-left-color:var(--plum2)}
+.jg.j-gold{border-left-color:var(--gold)}
+.jg.j-amber{border-left-color:var(--amber2)}
+.jr{font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  margin-bottom:.25rem;color:var(--ruby2)}
+.jg.j-stj .jr{color:var(--ink2)}.jg.j-pine .jr{color:var(--pine2)}
+.jg.j-plum .jr{color:var(--plum2)}.jg.j-gold .jr{color:var(--amber)}
+.jg.j-amber .jr{color:var(--amber2)}
+
+/* ═══════════════════════════════════════════
+   TABLE
+═══════════════════════════════════════════ */
+.tbl{width:100%;border-collapse:collapse;font-size:.83rem;margin:.5rem 0}
+.tbl th{background:var(--ink);color:var(--gold4);
+  font-family:'Fraunces',Georgia,serif;font-weight:700;
+  padding:.55rem .8rem;text-align:left;letter-spacing:.03em}
+.tbl td{padding:.48rem .8rem;border-bottom:1px solid #e8ddb0;vertical-align:top;line-height:1.58}
+.tbl tr:nth-child(even) td{background:rgba(194,138,0,.05)}
+
+/* ═══════════════════════════════════════════
+   MNEMÔNICO BOX
+═══════════════════════════════════════════ */
+.mnem{background:linear-gradient(135deg,var(--pine),var(--pine2));
+  border-radius:9px;padding:1.2rem 1.6rem;color:#fff;margin-bottom:1.3rem}
+.mnem h3{font-family:'Fraunces',Georgia,serif;font-size:1rem;
+  color:var(--gold4);margin-bottom:.7rem}
+.mrow{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center}
+.mi .ml{font-family:'Fraunces',Georgia,serif;font-size:2.1rem;font-weight:900;
+  color:var(--gold4);line-height:1}
+.mi .ms{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;
+  color:rgba(255,255,255,.68);margin-top:.1rem}
+
+/* ═══════════════════════════════════════════
+   PROVA BOX
+═══════════════════════════════════════════ */
+.pbox{background:linear-gradient(135deg,var(--ink),var(--ink2));
+  border:2px solid var(--gold2);border-radius:10px;
+  padding:1.5rem 1.8rem;color:#fff;margin-top:1.2rem}
+.pbox h3{font-family:'Fraunces',Georgia,serif;font-size:1.05rem;
+  color:var(--gold4);margin-bottom:.9rem;display:flex;align-items:center;gap:.4rem}
+.pi{display:flex;gap:.7rem;padding:.5rem 0;border-bottom:1px solid rgba(194,138,0,.2);
+  font-size:.86rem;line-height:1.64;color:rgba(255,255,255,.88)}
+.pi:last-child{border-bottom:none}
+.pn{min-width:1.5rem;color:var(--gold4);font-weight:700;
+  font-family:'Fraunces',Georgia,serif;font-size:1rem;flex-shrink:0}
+
+/* DANGER */
+.danger{background:#fdf0f0;border:2px solid var(--ruby2);
+  border-radius:7px;padding:1.1rem 1.4rem;margin-top:1rem}
+.danger h4{font-family:'Fraunces',Georgia,serif;color:var(--ruby);
+  font-size:.95rem;margin-bottom:.6rem}
+
+/* CONDITIONS BOX */
+.cond-list{list-style:none;padding:0;margin:.5rem 0}
+.cond-list li{display:flex;gap:.55rem;padding:.38rem 0;
+  border-bottom:1px solid #e8ddb0;font-size:.86rem;line-height:1.6;color:var(--slate)}
+.cond-list li:last-child{border-bottom:none}
+.cnum{background:var(--ink);color:var(--gold4);border-radius:50%;
+  width:1.4rem;height:1.4rem;display:flex;align-items:center;justify-content:center;
+  font-size:.7rem;font-weight:700;flex-shrink:0;font-family:'Fraunces',serif}
+
+/* PRINCIPLE GRID */
+.princ-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:.8rem;margin:.6rem 0}
+.princ{background:var(--surface2);border:1.5px solid var(--bd);border-radius:7px;padding:.9rem 1rem}
+.princ .pt{font-family:'Fraunces',Georgia,serif;font-size:.93rem;font-weight:700;color:var(--ink);margin-bottom:.25rem}
+.princ .ps{font-size:.76rem;color:var(--gold);font-style:italic;margin-bottom:.35rem}
+.princ .pb{font-size:.82rem;color:var(--slate);line-height:1.6}
+
+/* HIGHLIGHT */
+.hl-box{background:linear-gradient(135deg,rgba(194,138,0,.12),rgba(194,138,0,.06));
+  border:1.5px solid var(--gold2);border-radius:7px;
+  padding:1rem 1.2rem;margin:.5rem 0;font-size:.86rem;line-height:1.72}
+
+/* BACK TOP */
+.back-top{position:fixed;bottom:1.5rem;right:1.5rem;z-index:500;
+  background:var(--ink);color:var(--gold4);border:1.5px solid var(--gold2);
+  width:2.6rem;height:2.6rem;border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-size:1.1rem;text-decoration:none;
+  box-shadow:0 3px 12px var(--shad2);transition:all .2s;opacity:0;pointer-events:none}
+.back-top.visible{opacity:1;pointer-events:auto}
+.back-top:hover{background:var(--gold2);color:var(--ink)}
+
+/* SCROLL PROGRESS */
+.progress{position:fixed;top:0;left:0;height:3px;background:var(--gold2);
+  z-index:9999;transition:width .1s linear}
+
+/* DIVIDER */
+.divider{border:none;height:1px;background:linear-gradient(to right,transparent,var(--bd),transparent);
+  margin:1.8rem 0}
+
+/* RESPONSIVE PRINT */
+@media print{
+  .navbar,.back-top,.progress{display:none!important}
+  .section{page-break-inside:avoid}
+  .header{border-bottom:2px solid #000;background:#fff;color:#000}
+  .h-title,.h-title em{color:#000}
+}
+@media(max-width:480px){
+  html{font-size:14px}
+  .lei-strip{padding:.7rem 1rem;font-size:.88rem}
+  .nav-a{font-size:.7rem;padding:.65rem .65rem}
+}
+</style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div class="progress" id="prog"></div>
+
+<!-- HEADER -->
+<div class="header" id="topo">
+  <div class="header-inner">
+    <div class="h-badge">Magistratura · ENAM · 2026</div>
+    <h1 class="h-title">Art. 7° do <em>Código Penal</em><br>Extraterritorialidade da Lei Penal</h1>
+    <p class="h-sub">Incondicionada · Condicionada · Hipercondicionada · Princípios · STF/STJ 2024 · Pontos de Prova</p>
+    <div class="lei-strip">
+      <strong>"Ficam sujeitos à lei brasileira, embora cometidos no estrangeiro: I — os crimes: a) contra a vida ou a liberdade do Presidente da República; b) contra o patrimônio ou a fé pública da União, do Distrito Federal, de Estado, de Território, de Município, de empresa pública, sociedade de economia mista, autarquia ou fundação instituída pelo Poder Público; c) contra a administração pública, por quem está a seu serviço; d) de genocídio, quando o agente for brasileiro ou domiciliado no Brasil; II — os crimes: a) que, por tratado ou convenção, o Brasil se obrigou a reprimir; b) praticados por brasileiro; c) praticados em aeronaves ou embarcações brasileiras, mercantes ou de propriedade privada, quando em território estrangeiro e aí não sejam julgados."</strong>
+      <small>Art. 7° do Código Penal · Lei n° 7.209/1984 · §§1°, 2° e 3° complementam o texto</small>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR ÂNCORAS -->
+<nav class="navbar" role="navigation" aria-label="Navegação do Art. 7°">
+  <div class="nav-inner">
+    <a class="nav-a active" href="#s-visao">⊞ Visão Geral</a>
+    <a class="nav-a" href="#s-incond">🔒 Incondicionada</a>
+    <a class="nav-a" href="#s-cond">📋 Condicionada</a>
+    <a class="nav-a" href="#s-hipercond">⚡ Hipercondicionada</a>
+    <a class="nav-a" href="#s-principios">📐 Princípios</a>
+    <a class="nav-a" href="#s-comp">⚖ Competência</a>
+    <a class="nav-a" href="#s-juris">📋 STF · STJ</a>
+    <a class="nav-a" href="#s-prova">🎯 Prova</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<!-- ══════════════════════════════════
+     §1 VISÃO GERAL
+══════════════════════════════════ -->
+<section class="section" id="s-visao">
+  <div class="sec-head">
+    <span class="sec-icon">⊞</span>
+    <h2 class="sec-title">Visão Geral — Extraterritorialidade (Art. 7° CP)</h2>
+  </div>
+
+  <!-- MNEMÔNICO -->
+  <div class="mnem">
+    <h3>🧠 Mnemônico — Tipos de Extraterritorialidade</h3>
+    <div class="mrow">
+      <div class="mi"><div class="ml">I</div><div class="ms">Inciso I → Incondicionada</div></div>
+      <div class="mi"><div class="ml">II</div><div class="ms">Inciso II → Condicionada (§2°)</div></div>
+      <div class="mi"><div class="ml">III</div><div class="ms">§3° → Hiper-condicionada</div></div>
+    </div>
+    <p style="font-size:.8rem;opacity:.72;margin-top:.6rem;text-align:center">Inciso I = sem condições · Inciso II + §2° = com condições · §3° = com condições + 2 a mais</p>
+  </div>
+
+  <div class="g2">
+    <div class="card accent">
+      <div class="card-title"><span class="chip chip-ink">Fundamento</span>O que é Extraterritorialidade?</div>
+      <p class="body">É a aplicação da lei penal brasileira a <strong>crimes praticados fora do território nacional</strong>. Excepção ao princípio da territorialidade (art. 5° CP) — a regra geral é a territorialidade; a extraterritorialidade é a exceção, prevista para situações em que a soberania ou os interesses nacionais exigem a intervenção da lei brasileira mesmo além das fronteiras.</p>
+      <div class="hl-box" style="margin-top:.7rem">
+        <strong>Três espécies:</strong><br>
+        ① <strong>Incondicionada</strong> — inciso I + §1° → sem qualquer condição<br>
+        ② <strong>Condicionada</strong> — inciso II + §2° → com condições cumulativas<br>
+        ③ <strong>Hipercondicionada</strong> — §3° → condições do §2° + 2 condições extras
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="chip chip-gold">Fluxo Geral</span>Como Identificar a Modalidade</div>
+      <div class="flow">
+        <div class="fnode fn-root"><div class="ft">CRIME PRATICADO NO EXTERIOR</div></div>
+        <div class="farr">▼</div>
+        <div class="fnode fn-gold"><div class="ft">Está no Art. 7°, Inciso I?</div>
+          Crimes contra: vida/liberdade do PR, patrimônio/fé pública, ADM pública, genocídio (br./dom.)
+        </div>
+        <div class="farr">▼</div>
+        <div class="g2" style="width:100%;max-width:800px">
+          <div class="fnode fn-pine" style="padding:.8rem 1rem">
+            <div class="ft" style="color:var(--pine)">✅ SIM → INCONDICIONADA</div>
+            Aplica-se a lei brasileira <em>incondicionalmente</em>. Mesmo que absolvido/condenado no exterior.
+          </div>
+          <div class="fnode fn-slate" style="padding:.8rem 1rem">
+            <div class="ft" style="color:var(--ink2)">→ NÃO → Inciso II ou §3°</div>
+            Verificar se é condicionada (inc. II + §2°) ou hipercondicionada (§3°).
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- QUADRO COMPARATIVO RÁPIDO -->
+  <div class="card accent full">
+    <div class="card-title"><span class="chip chip-gold">Quadro-Mestre</span>Comparativo das 3 Espécies — Art. 7° CP</div>
+    <table class="tbl">
+      <thead>
+        <tr><th>Critério</th><th>Incondicionada (I)</th><th>Condicionada (II)</th><th>Hipercondicionada (§3°)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Dispositivo</strong></td><td>Art. 7°, I + §1°</td><td>Art. 7°, II + §2°</td><td>Art. 7°, §3°</td></tr>
+        <tr><td><strong>Sujeito ativo</strong></td><td>Qualquer pessoa (br. ou est.)</td><td>Br. / por tratado / aeronave/embarcação br.</td><td>Estrangeiro contra brasileiro</td></tr>
+        <tr><td><strong>Ingresso no Brasil?</strong></td><td>NÃO é necessário</td><td>✅ SIM — obrigatório</td><td>✅ SIM — obrigatório</td></tr>
+        <tr><td><strong>Julgado à revelia?</strong></td><td>✅ SIM — possível</td><td>❌ NÃO</td><td>❌ NÃO</td></tr>
+        <tr><td><strong>Dupla tipicidade</strong></td><td>❌ Irrelevante</td><td>✅ Exigida (§2°, b)</td><td>✅ Exigida</td></tr>
+        <tr><td><strong>Absolvição/condenação no ext.</strong></td><td>Irrelevante (§1°)</td><td>Impede (§2°, d)</td><td>Impede</td></tr>
+        <tr><td><strong>Extradição negada/não pedida</strong></td><td>Irrelevante</td><td>Irrelevante</td><td>✅ Exigida (+2 condições)</td></tr>
+        <tr><td><strong>Requisição MJ</strong></td><td>Não</td><td>Não (exceto alguns casos)</td><td>✅ SIM — obrigatória</td></tr>
+        <tr><td><strong>Princípio aplicável</strong></td><td>Defesa (a,b,c) / Universal (d)</td><td>Universal / Nacionalidade / Bandeira</td><td>Personalidade passiva</td></tr>
+        <tr><td><strong>Pena no exterior</strong></td><td>Art. 8° CP — detração/atenuação</td><td>Art. 8° CP — detração/atenuação</td><td>Art. 8° CP — detração/atenuação</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════
+     §2 INCONDICIONADA
+══════════════════════════════════ -->
+<section class="section" id="s-incond">
+  <div class="sec-head">
+    <span class="sec-icon">🔒</span>
+    <h2 class="sec-title">Extraterritorialidade Incondicionada — Art. 7°, I + §1°</h2>
+  </div>
+
+  <div class="g2">
+    <div class="card pine-card">
+      <div class="card-title"><span class="chip chip-pine">§1°</span>Regra da Incondicionada</div>
+      <p class="body"><strong>"Nos casos do inciso I, o agente é punido segundo a lei brasileira, ainda que absolvido ou condenado no estrangeiro."</strong></p>
+      <div class="hl-box" style="margin-top:.65rem;background:rgba(8,58,32,.08);border-color:#80c0a0">
+        • Não precisa entrar no Brasil (pode ser julgado à revelia)<br>
+        • Não importa se absolvido ou condenado no exterior<br>
+        • Não importa se o fato é crime no país onde ocorreu<br>
+        • Não importa se a punibilidade está extinta no exterior<br>
+        • Não importa se o agente foi perdoado no estrangeiro<br>
+        • Lei brasileira aplica-se <em>automaticamente</em>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="chip chip-pine">Hipóteses</span>Crimes Sujeitos — Inciso I (4 alíneas)</div>
+
+      <div class="jg j-pine" style="margin-bottom:.4rem">
+        <div class="jr" style="color:var(--pine2)">Alínea "a" — Princípio da Defesa/Real/Proteção</div>
+        Crimes contra a <strong>vida ou a liberdade do Presidente da República</strong> (ou Vice, segundo parte da doutrina). Fundamento: proteção da mais alta autoridade do Estado brasileiro.
+      </div>
+      <div class="jg j-pine" style="margin-bottom:.4rem">
+        <div class="jr" style="color:var(--pine2)">Alínea "b" — Princípio da Defesa/Real/Proteção</div>
+        Crimes contra o <strong>patrimônio ou a fé pública</strong> da União, DF, Estado, Território, Município, empresa pública, sociedade de economia mista, autarquia ou fundação pública. Ex.: falsificação de documento público da União praticada no exterior.
+      </div>
+      <div class="jg j-pine" style="margin-bottom:.4rem">
+        <div class="jr" style="color:var(--pine2)">Alínea "c" — Princípio da Defesa/Real/Proteção</div>
+        Crimes contra a <strong>administração pública, por quem está a seu serviço</strong>. Ex.: funcionário público federal que pratica corrupção passiva durante missão no exterior.
+      </div>
+      <div class="jg j-pine">
+        <div class="jr" style="color:var(--pine2)">Alínea "d" — Princípio da Justiça Universal (ou Nacionalidade Ativa)</div>
+        Crime de <strong>genocídio</strong>, quando o agente for <strong>brasileiro ou domiciliado no Brasil</strong>. Doutrina diverge: Capez aplica o princípio da Justiça Universal; outros aplicam o da Nacionalidade Ativa (agente brasileiro).
+      </div>
+
+      <p class="note">⚠ <strong>Atenção (Bitencourt):</strong> na extraterritorialidade incondicionada, o agente pode ser julgado à revelia no Brasil, mesmo sem ter ingressado no território nacional.</p>
+    </div>
+  </div>
+
+  <div class="card full" style="margin-top:1rem">
+    <div class="card-title"><span class="chip chip-gold">Pena Cumprida no Exterior</span>Art. 8° CP — Detração e Atenuação</div>
+    <table class="tbl">
+      <tr><th>Situação</th><th>Regra (Art. 8° CP)</th></tr>
+      <tr><td>Penas <strong>idênticas</strong> (mesma espécie)</td><td>A pena cumprida no exterior é <strong>computada</strong> na pena brasileira (desconta-se integralmente — detração)</td></tr>
+      <tr><td>Penas <strong>diversas</strong> (espécies diferentes)</td><td>A pena cumprida no exterior <strong>atenua</strong> a pena imposta no Brasil (não é desconto integral, mas consideração na dosimetria)</td></tr>
+    </table>
+    <p class="note">Fundamento: evitar o <em>bis in idem</em> material. O art. 8° aplica-se tanto à extraterritorialidade incondicionada (inc. I) quanto à condicionada (inc. II) e hipercondicionada (§3°).</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════
+     §3 CONDICIONADA
+══════════════════════════════════ -->
+<section class="section" id="s-cond">
+  <div class="sec-head">
+    <span class="sec-icon">📋</span>
+    <h2 class="sec-title">Extraterritorialidade Condicionada — Art. 7°, II + §2°</h2>
+  </div>
+
+  <div class="g2">
+    <div class="card slate-card">
+      <div class="card-title"><span class="chip chip-stj">Inciso II</span>Hipóteses de Extraterritorialidade Condicionada</div>
+      <div class="jg j-stj" style="margin-bottom:.4rem">
+        <div class="jr">Alínea "a" — Princípio da Justiça Universal/Cosmopolita</div>
+        Crimes que, <strong>por tratado ou convenção, o Brasil se obrigou a reprimir</strong>. Ex.: tráfico de pessoas, lavagem de dinheiro, terrorismo — quando há convenção internacional ratificada pelo Brasil exigindo a repressão.
+      </div>
+      <div class="jg j-stj" style="margin-bottom:.4rem">
+        <div class="jr">Alínea "b" — Princípio da Personalidade/Nacionalidade Ativa</div>
+        Crimes <strong>praticados por brasileiro</strong> (nato ou naturalizado) no exterior. É a hipótese mais cobrada em provas: o brasileiro que comete crime fora do Brasil. Exemplo clássico do caso Neymar (estupro alegado em Paris — art. 7°, II, "b").
+      </div>
+      <div class="jg j-stj">
+        <div class="jr">Alínea "c" — Princípio da Bandeira/Pavilhão/Representação</div>
+        Crimes <strong>praticados em aeronaves ou embarcações brasileiras, mercantes ou de propriedade privada, quando em território estrangeiro e aí não sejam julgados</strong>. Condição extra: não ter sido julgado no país estrangeiro.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="chip chip-ruby">§2°</span>5 Condições Cumulativas — Devem ser TODAS preenchidas</div>
+      <p class="body" style="margin-bottom:.65rem">As condições do §2° são <strong>objetivas de punibilidade</strong> (a maioria da doutrina) — na ausência de qualquer uma, o fato não é punível no Brasil:</p>
+      <ul class="cond-list">
+        <li><span class="cnum">a</span><div><strong>Entrada do agente no território nacional</strong> — o agente deve ter ingressado no Brasil (condição de procedibilidade; sem ingresso, não há julgamento). Não pode ser julgado à revelia.</div></li>
+        <li><span class="cnum">b</span><div><strong>Ser o fato punível também no país em que foi praticado</strong> — <em>dupla tipicidade</em> (ou dupla incriminação). O fato deve ser crime também no estrangeiro, não necessariamente com a mesma classificação.</div></li>
+        <li><span class="cnum">c</span><div><strong>Estar o crime incluído entre aqueles pelos quais a lei brasileira autoriza a extradição</strong> — o crime deve ser extraditável pelo Brasil (pena mínima superior a 1 ano, em regra; salvo crimes previstos em tratado).</div></li>
+        <li><span class="cnum">d</span><div><strong>Não ter sido o agente absolvido no estrangeiro ou não ter aí cumprido a pena</strong> — respeito ao <em>ne bis in idem</em> internacional. Se foi absolvido ou já cumpriu pena, não há julgamento no Brasil.</div></li>
+        <li><span class="cnum">e</span><div><strong>Não ter sido o agente perdoado no estrangeiro ou, por outro motivo, não estar extinta a punibilidade, segundo a lei mais favorável</strong> — aplica-se a lei mais benéfica (brasileira ou estrangeira) para verificar a extinção da punibilidade.</div></li>
+      </ul>
+      <p class="note">⚠ <strong>Condições cumulativas:</strong> todas devem estar presentes simultaneamente. A ausência de qualquer uma impede a aplicação da lei brasileira.</p>
+    </div>
+  </div>
+
+  <!-- CASO PRÁTICO FAMOSO -->
+  <div class="card full amber-card" style="margin-top:1rem">
+    <div class="card-title"><span class="chip chip-gold">Caso Prático</span>Verificação das Condições — Extraterritorialidade Condicionada (Art. 7°, II, "b" + §2°)</div>
+    <div class="g2">
+      <div>
+        <p class="body"><strong>Situação-exemplo (ref. ao caso Robinho/Emagis):</strong> Brasileiro pratica estupro na Itália. Retorna ao Brasil. Itália o condena. Brasil é instado a julgar.</p>
+        <div class="jg j-amber" style="margin-top:.6rem">
+          <div class="jr" style="color:var(--amber2)">Verificação do §2° (condicionada)</div>
+          (a) ✅ Ingressou no Brasil — SIM<br>
+          (b) ✅ Estupro é crime na Itália — SIM (dupla tipicidade)<br>
+          (c) ✅ Estupro é extraditável pelo Brasil — SIM<br>
+          (d) ⚠ Absolvido ou pena cumprida na Itália? — Se SIM → impede<br>
+          (e) ✅ Punibilidade não extinta em nenhuma das leis — SIM
+        </div>
+      </div>
+      <div>
+        <p class="body"><strong>Transferência de Execução de Pena (art. 100, Lei 13.445/2017):</strong> Alternativa relevante. O STJ (HDE 7.986/EX, 2024 — caso Robinho) homologou sentença estrangeira e determinou cumprimento imediato da pena no Brasil — sem novo julgamento, evitando bis in idem.</p>
+        <div class="jg j-stj" style="margin-top:.6rem">
+          <div class="jr">STJ · HDE 7.986/EX · Corte Especial · 20/3/2024 (Info 805)</div>
+          A transferência de execução de pena (Lei de Migração, art. 100) veda a propositura de nova ação penal sobre o mesmo fato — assegurando o non bis in idem no plano internacional. Brasileiro nato não pode ser extraditado, mas pode ter a pena cumprida no Brasil via homologação de sentença estrangeira.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════
+     §4 HIPERCONDICIONADA
+══════════════════════════════════ -->
+<section class="section" id="s-hipercond">
+  <div class="sec-head">
+    <span class="sec-icon">⚡</span>
+    <h2 class="sec-title">Extraterritorialidade Hipercondicionada — Art. 7°, §3°</h2>
+  </div>
+
+  <div class="g2">
+    <div class="card ruby-card">
+      <div class="card-title"><span class="chip chip-ruby">§3°</span>O que é a Hipercondicionada?</div>
+      <p class="body"><strong>"A lei brasileira aplica-se também ao crime cometido por estrangeiro contra brasileiro fora do Brasil"</strong>, desde que reunidas as condições do §2° (as 5 condições da extraterritorialidade condicionada) <em>acrescidas</em> de 2 condições extras:</p>
+      <div class="hl-box" style="margin-top:.65rem;background:rgba(108,15,15,.07);border-color:#c88888">
+        <strong>Princípio aplicado:</strong> Personalidade Passiva (ou Nacionalidade Passiva)<br>
+        <strong>Sujeito ativo:</strong> Estrangeiro<br>
+        <strong>Sujeito passivo:</strong> Brasileiro<br>
+        <strong>Local:</strong> Fora do Brasil
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="chip chip-ruby">+2 Condições</span>Requisitos Extras do §3° (além dos 5 do §2°)</div>
+      <ul class="cond-list">
+        <li><span class="cnum">+1</span><div><strong>Não ter sido pedida ou ter sido negada a extradição do estrangeiro</strong> — a hipercondicionada só se aplica quando a extradição não é viável (não foi pedida ou foi negada). Se há extradição, usa-se o mecanismo extradicionário; se não, o Brasil julga pela lei nacional.</div></li>
+        <li><span class="cnum">+2</span><div><strong>Ter havido requisição do Ministro da Justiça</strong> — é condição de procedibilidade. Sem a requisição do MJ, não há ação penal válida no Brasil.</div></li>
+      </ul>
+      <p class="note">Total de condições: <strong>5 (§2°) + 2 (§3°) = 7 condições cumulativas</strong>. Por isso "hipercondicionada" — é a modalidade mais difícil de ser aplicada.</p>
+    </div>
+  </div>
+
+  <div class="card full" style="margin-top:1rem">
+    <div class="card-title"><span class="chip chip-gold">Tabela Comparativa</span>Condições por Modalidade</div>
+    <table class="tbl">
+      <thead><tr><th>Condição</th><th>Incondicionada (I)</th><th>Condicionada (II)</th><th>Hipercondicionada (§3°)</th></tr></thead>
+      <tbody>
+        <tr><td>Ingresso no Brasil</td><td>❌ Não exigido</td><td>✅ Exigido</td><td>✅ Exigido</td></tr>
+        <tr><td>Dupla tipicidade</td><td>❌ Irrelevante</td><td>✅ Exigida</td><td>✅ Exigida</td></tr>
+        <tr><td>Crime extraditável</td><td>❌ Irrelevante</td><td>✅ Exigido</td><td>✅ Exigido</td></tr>
+        <tr><td>Não absolvido/pena não cumprida no ext.</td><td>❌ Irrelevante</td><td>✅ Exigido</td><td>✅ Exigido</td></tr>
+        <tr><td>Não extinta punibilidade (lei + favorável)</td><td>❌ Irrelevante</td><td>✅ Exigido</td><td>✅ Exigido</td></tr>
+        <tr><td>Extradição não pedida ou negada</td><td>❌</td><td>❌</td><td>✅ Exigido (+1)</td></tr>
+        <tr><td>Requisição do Ministro da Justiça</td><td>❌</td><td>❌</td><td>✅ Exigido (+2)</td></tr>
+        <tr><td><strong>Total de condições</strong></td><td><strong>0</strong></td><td><strong>5</strong></td><td><strong>7</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════
+     §5 PRINCÍPIOS
+══════════════════════════════════ -->
+<section class="section" id="s-principios">
+  <div class="sec-head">
+    <span class="sec-icon">📐</span>
+    <h2 class="sec-title">Princípios — Fundamentos da Extraterritorialidade</h2>
+  </div>
+
+  <div class="princ-grid">
+    <div class="princ">
+      <div class="pt">1. Territorialidade</div>
+      <div class="ps">Art. 5° CP — Regra Geral</div>
+      <div class="pb">Aplica-se a lei do Estado onde o crime foi praticado. A extraterritorialidade é exceção a esta regra.</div>
+    </div>
+    <div class="princ">
+      <div class="pt">2. Defesa / Real / Proteção</div>
+      <div class="ps">Art. 7°, I, a, b, c</div>
+      <div class="pb">Aplica-se a lei do Estado cujo bem jurídico foi lesado. Ex.: crimes contra o Estado brasileiro praticados no exterior.</div>
+    </div>
+    <div class="princ">
+      <div class="pt">3. Justiça Universal / Cosmopolita</div>
+      <div class="ps">Art. 7°, I, d + II, a</div>
+      <div class="pb">Todo Estado pode punir crimes de repercussão universal (genocídio, crimes por tratado). Independe da nacionalidade ou local.</div>
+    </div>
+    <div class="princ">
+      <div class="pt">4. Personalidade Ativa / Nacionalidade</div>
+      <div class="ps">Art. 7°, II, b</div>
+      <div class="pb">Aplica-se a lei da <em>nacionalidade do agente</em>. Crime praticado por brasileiro no exterior.</div>
+    </div>
+    <div class="princ">
+      <div class="pt">5. Personalidade Passiva</div>
+      <div class="ps">Art. 7°, §3°</div>
+      <div class="pb">Aplica-se a lei da <em>nacionalidade da vítima</em>. Crime praticado por estrangeiro contra brasileiro fora do Brasil.</div>
+    </div>
+    <div class="princ">
+      <div class="pt">6. Bandeira / Pavilhão / Representação</div>
+      <div class="ps">Art. 7°, II, c</div>
+      <div class="pb">Aplica-se a lei do Estado de registro (bandeira) da embarcação ou aeronave. Privadas brasileiras em território estrangeiro, se não julgadas lá.</div>
+    </div>
+  </div>
+
+  <div class="card full">
+    <div class="card-title"><span class="chip chip-gold">Mapeamento</span>Princípio × Dispositivo × Modalidade</div>
+    <table class="tbl">
+      <thead><tr><th>Alínea/§</th><th>Hipótese</th><th>Princípio Aplicável</th><th>Modalidade</th></tr></thead>
+      <tbody>
+        <tr><td>I, "a"</td><td>Contra vida/liberdade do Presidente da República</td><td>Defesa / Real / Proteção</td><td>Incondicionada</td></tr>
+        <tr><td>I, "b"</td><td>Contra patrimônio/fé pública de entes públicos</td><td>Defesa / Real / Proteção</td><td>Incondicionada</td></tr>
+        <tr><td>I, "c"</td><td>Contra ADM pública, por quem a serve</td><td>Defesa / Real / Proteção</td><td>Incondicionada</td></tr>
+        <tr><td>I, "d"</td><td>Genocídio por brasileiro ou domiciliado no Brasil</td><td>Justiça Universal (maioria) / Personalidade Ativa</td><td>Incondicionada</td></tr>
+        <tr><td>II, "a"</td><td>Crimes que o Brasil se obrigou a reprimir por tratado</td><td>Justiça Universal / Cosmopolita</td><td>Condicionada</td></tr>
+        <tr><td>II, "b"</td><td>Praticados por brasileiro</td><td>Personalidade Ativa / Nacionalidade</td><td>Condicionada</td></tr>
+        <tr><td>II, "c"</td><td>Em aeronave/embarcação br. privada no exterior, não julgados lá</td><td>Bandeira / Pavilhão / Representação</td><td>Condicionada</td></tr>
+        <tr><td>§3°</td><td>Por estrangeiro contra brasileiro fora do Brasil</td><td>Personalidade Passiva / Nacionalidade Passiva</td><td>Hipercondicionada</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════
+     §6 COMPETÊNCIA
+══════════════════════════════════ -->
+<section class="section" id="s-comp">
+  <div class="sec-head">
+    <span class="sec-icon">⚖</span>
+    <h2 class="sec-title">Competência — Quem Julga no Brasil?</h2>
+  </div>
+
+  <div class="g2">
+    <div class="card">
+      <div class="card-title"><span class="chip chip-stj">STJ</span>Regra Geral — Justiça Estadual</div>
+      <p class="body">Segundo o STJ, em regra, compete à <strong>Justiça Estadual</strong> processar e julgar crimes praticados no exterior por brasileiro que retornou ao Brasil — quando não há interesse da União (art. 109 CF).</p>
+      <div class="jg j-stj" style="margin-top:.6rem">
+        <div class="jr">STJ · CC 115.375/SP</div>
+        Crime de furto praticado por brasileiro no Japão contra vítima brasileira. Agente retorna ao Brasil. Competência: Justiça Estadual (último domicílio do agente — art. 88 CPP). Não há interesse federal específico.
+      </div>
+      <p class="note">Art. 88 CPP: quando o crime é praticado fora do Brasil, a competência é da Capital do Estado onde o réu por último residiu; se nunca residiu no Brasil → Capital Federal.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="chip chip-ruby">Exceção</span>Justiça Federal — Quando Há Interesse da União</div>
+      <p class="body">A competência é da <strong>Justiça Federal</strong> quando o crime praticado no exterior enquadra-se nas hipóteses do art. 109 da CF/88:</p>
+      <div class="jg" style="margin-top:.5rem">
+        <div class="jr">Hipóteses de Competência Federal (art. 109 CF)</div>
+        • Art. 109, IV: crimes praticados em detrimento de bens, serviços ou interesses da União<br>
+        • Art. 109, V: crimes previstos em tratados internacionais com execução internacional comprometida pelo Brasil<br>
+        • Art. 109, X: crimes de ingresso ou permanência irregular de estrangeiro<br>
+        • Extradição negada → a persecução no Brasil pode ser federal (CC 154.656/MG — STJ)
+      </div>
+      <p class="note">STJ: se o crime praticado por brasileiro no exterior não ofende bens, serviços ou interesses da União, a mera circunstância de ter ocorrido no exterior não atrai a competência federal.</p>
+    </div>
+  </div>
+
+  <div class="card full" style="margin-top:1rem">
+    <div class="card-title"><span class="chip chip-stj">Lei de Migração</span>Transferência de Execução de Pena — Art. 100 da Lei 13.445/2017</div>
+    <div class="g2">
+      <div>
+        <p class="body">A Lei de Migração (Lei 13.445/2017) criou o instituto da <strong>transferência de execução de pena</strong>: brasileiro condenado no exterior pode cumprir a pena no Brasil, via homologação de sentença estrangeira pelo STJ.</p>
+        <p class="body" style="margin-top:.5rem"><strong>Distinção fundamental:</strong> não é julgamento novo (bis in idem vedado) — é apenas a execução da pena estrangeira no Brasil, sem nova ação penal.</p>
+      </div>
+      <div>
+        <div class="jg j-stj">
+          <div class="jr">STJ · HDE 7.986/EX (Caso Robinho) · Corte Especial · 20/3/2024 · Info 805</div>
+          O STJ homologou a sentença italiana e determinou cumprimento imediato da pena de 9 anos de reclusão no Brasil pelo crime de estupro cometido na Itália. Fundamento: a transferência de execução (art. 100, Lei 13.445/2017) não viola a proibição de extradição de brasileiro nato, pois não há entrega do nacional — apenas transferência da execução da pena. Veda nova ação penal pelo mesmo fato — non bis in idem.
+        </div>
+        <div class="jg" style="margin-top:.4rem">
+          <div class="jr">STF · HC 239.192 e HC 239.238 · Rel. Min. Luiz Fux · 27/11/2024</div>
+          O STF confirmou a constitucionalidade da transferência de execução de pena de brasileiro condenado no exterior, compatibilizando com o art. 5°, LI, CF (inextraditabilidade do brasileiro nato). A transferência de execução é instrumento de cooperação internacional distinto da extradição.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════
+     §7 JURISPRUDÊNCIA
+══════════════════════════════════ -->
+<section class="section" id="s-juris">
+  <div class="sec-head">
+    <span class="sec-icon">📋</span>
+    <h2 class="sec-title">Jurisprudência — STF e STJ</h2>
+  </div>
+
+  <div class="g2">
+    <div class="card">
+      <div class="card-title"><span class="chip chip-stj">STJ 2024</span>Caso Robinho — Transferência de Execução de Pena</div>
+      <div class="jg j-stj">
+        <div class="jr">STJ · HDE 7.986/EX · Corte Especial · Rel. Min. Francisco Falcão · 20/3/2024 · DJe 22/3/2024 · Info 805</div>
+        <strong>Fatos:</strong> Robinho (brasileiro nato) condenado a 9 anos pela Justiça italiana por estupro. Itália solicita transferência de execução. STJ homologa e determina cumprimento imediato.<br><br>
+        <strong>Teses:</strong> (1) A transferência de execução de pena (art. 100, Lei 13.445/2017) é distinta da extradição — não viola art. 5°, LI, CF; (2) O sistema de contenciosidade limitada impede rediscussão do mérito; (3) Veda-se nova ação penal — non bis in idem; (4) Normas de cooperação internacional têm natureza híbrida — aplicação imediata (STF).
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="chip chip-stf">STF 2024</span>HC 239.192 e HC 239.238 — Constitucionalidade da Transferência</div>
+      <div class="jg">
+        <div class="jr">STF · HC 239.192 e HC 239.238 · Rel. Min. Luiz Fux · Plenário · 27/11/2024 · DJe 17/12/2024</div>
+        O STF indeferiu o habeas corpus e confirmou a constitucionalidade da transferência de execução de pena imposta pela Justiça italiana ao brasileiro condenado por estupro coletivo. Fundamentos: (1) compatibilidade com o art. 5°, LI (inextraditabilidade do nato); (2) compatibilidade com o Princípio do Reconhecimento Mútuo em matéria penal; (3) a retroatividade da Lei de Migração não viola irretroatividade penal (art. 5°, XL) — norma de cooperação não é norma penal material; (4) aplicação do Princípio da Reciprocidade.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="chip chip-stj">STJ</span>Competência Estadual — Crime Exterior por Brasileiro (Regra Geral)</div>
+      <div class="jg j-stj">
+        <div class="jr">STJ · CC 115.375/SP · Regra Geral</div>
+        Crime de furto praticado por brasileiro residente no Japão. Iter criminis integralmente ocorrido no exterior. Agente retornou ao Brasil. Competência: <strong>Justiça Estadual</strong> (último domicílio do indiciado — art. 88 CPP). Não há interesse federal específico. O simples fato de o crime ter sido cometido por brasileiro no exterior não atrai a competência da Justiça Federal.
+      </div>
+      <div class="jg j-stj" style="margin-top:.4rem">
+        <div class="jr">STF · HC 105.461/SP · 1ª Turma</div>
+        Homicídio cometido no exterior por brasileiro. Competência: Tribunal do Júri estadual (não federal). A persecução não é fundada em acordo de extradição, mas no CP brasileiro — não ofende bens ou interesses da União.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><span class="chip chip-stj">STJ</span>Competência Federal — Exceção: Negativa de Extradição</div>
+      <div class="jg j-stj">
+        <div class="jr">STJ · CC 154.656/MG · 3ª Seção · Rel. Min. Ribeiro Dantas · 25/4/2018</div>
+        Quando o crime praticado no exterior é transferido para a jurisdição brasileira <em>por negativa de extradição</em>, compete à Justiça Federal (art. 109, IV, CF). Fundamento: o interesse da União na persecução penal decorre da atribuição constitucional de representar a Nação nas relações com Estados estrangeiros.
+      </div>
+    </div>
+
+    <div class="card full">
+      <div class="card-title"><span class="chip chip-stj">STJ</span>Falsificação de Documento Público da União no Exterior — Incondicionada (art. 7°, I, "b")</div>
+      <div class="jg j-stj">
+        <div class="jr">STJ · Entendimento Consolidado (11ª Turma TRF)</div>
+        Crime de falsificação de documento público da União (art. 297 CP) praticado no exterior → aplica-se a lei brasileira pela extraterritorialidade incondicionada (art. 7°, I, "b" CP). O delito objetiva resguardar a fé pública da União. Competência: Justiça Federal (bem jurídico federal protegido).
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════
+     §8 PROVA
+══════════════════════════════════ -->
+<section class="section" id="s-prova">
+  <div class="sec-head">
+    <span class="sec-icon">🎯</span>
+    <h2 class="sec-title">Pontos Sempre Cobrados em Magistratura / ENAM</h2>
+  </div>
+
+  <div class="pbox">
+    <h3>📌 15 Questões de Alta Incidência — Art. 7° do CP</h3>
+    <div class="pi"><span class="pn">1</span><span><strong>Três espécies de extraterritorialidade:</strong> Incondicionada (inc. I + §1°) · Condicionada (inc. II + §2°) · Hipercondicionada (§3°). Saber enquadrar cada hipótese é fundamental para objetivas e discursivas.</span></div>
+    <div class="pi"><span class="pn">2</span><span><strong>Incondicionada: julgamento à revelia e independência do exterior:</strong> Na extraterritorialidade incondicionada, o agente pode ser julgado à revelia (sem ingressar no Brasil) e a absolvição/condenação no exterior é absolutamente irrelevante (§1°).</span></div>
+    <div class="pi"><span class="pn">3</span><span><strong>Genocídio (inc. I, "d") — princípio divergente:</strong> A doutrina diverge entre Justiça Universal (Capez) e Personalidade Ativa (outros). O agente deve ser brasileiro ou domiciliado no Brasil. Hipótese de extraterritorialidade incondicionada.</span></div>
+    <div class="pi"><span class="pn">4</span><span><strong>5 condições do §2° são CUMULATIVAS:</strong> (a) ingresso, (b) dupla tipicidade, (c) crime extraditável, (d) não absolvido/pena não cumprida, (e) punibilidade não extinta. A ausência de qualquer uma impede a lei brasileira. Condições objetivas de punibilidade.</span></div>
+    <div class="pi"><span class="pn">5</span><span><strong>Dupla tipicidade (§2°, b):</strong> O fato deve ser crime no país onde foi praticado. Se for legal no exterior (ex.: maconha legalizada lá, contravenção aqui), não há extraterritorialidade condicionada. Cuidado: na incondicionada, dupla tipicidade é irrelevante.</span></div>
+    <div class="pi"><span class="pn">6</span><span><strong>Brasileiro pratica crime no exterior (art. 7°, II, "b"):</strong> Extraterritorialidade condicionada. Precisam ser preenchidas as 5 condições do §2°, incluindo ingresso no Brasil e dupla tipicidade. Princípio da Personalidade/Nacionalidade Ativa.</span></div>
+    <div class="pi"><span class="pn">7</span><span><strong>Hipercondicionada (§3°) = 5 + 2 condições:</strong> Estrangeiro contra brasileiro fora do Brasil. Além das 5 condições do §2°, exige: (1) extradição não pedida ou negada E (2) requisição do Ministro da Justiça. Total: 7 condições cumulativas. Princípio da Personalidade Passiva.</span></div>
+    <div class="pi"><span class="pn">8</span><span><strong>Competência → regra = Justiça Estadual:</strong> O simples fato de o crime ter sido praticado no exterior por brasileiro não atrai a competência federal. Competência estadual = último domicílio do réu (art. 88 CPP). Exceção: há interesse da União (art. 109 CF).</span></div>
+    <div class="pi"><span class="pn">9</span><span><strong>Extradição negada → competência federal:</strong> Quando a persecução penal no Brasil decorre de negativa de extradição, a competência é da Justiça Federal (STJ, CC 154.656/MG). Fundamento: art. 109, IV, CF — interesse da União.</span></div>
+    <div class="pi"><span class="pn">10</span><span><strong>Caso Robinho (STJ, HDE 7.986/EX, 2024):</strong> Transferência de execução de pena ≠ extradição. Brasileiro nato não pode ser extraditado, mas pode ter pena estrangeira executada no Brasil via homologação pelo STJ (art. 100, Lei 13.445/2017). Veda nova ação penal (non bis in idem).</span></div>
+    <div class="pi"><span class="pn">11</span><span><strong>STF HC 239.192/2024 — constitucionalidade da transferência:</strong> O STF confirmou que a transferência de execução de pena é compatível com o art. 5°, LI, CF. É instrumento de cooperação internacional distinto da extradição. Aplicação imediata das normas de cooperação (não são normas penais materiais).</span></div>
+    <div class="pi"><span class="pn">12</span><span><strong>Art. 8° CP — pena cumprida no exterior:</strong> Se idêntica, é computada (detração integral). Se diversa, atenua a pena brasileira. Aplica-se a todas as modalidades de extraterritorialidade (incondicionada, condicionada e hipercondicionada). Finalidade: evitar bis in idem material.</span></div>
+    <div class="pi"><span class="pn">13</span><span><strong>Princípios × Hipóteses — saber mapear:</strong> Alíneas "a", "b", "c" do inciso I = Princípio da Defesa. Alínea "d" = Justiça Universal. Inciso II, "a" = Universal. Inciso II, "b" = Personalidade Ativa. Inciso II, "c" = Bandeira/Pavilhão. §3° = Personalidade Passiva.</span></div>
+    <div class="pi"><span class="pn">14</span><span><strong>Lei de Tortura (Lei 9.455/1997, art. 2°) — extraterritorialidade especial:</strong> Crime de tortura praticado fora do Brasil aplica-se a lei brasileira quando: (a) vítima for brasileira (sem condicionantes), OU (b) agente estiver em local sob jurisdição brasileira. Modalidade autônoma de extraterritorialidade prevista em lei especial.</span></div>
+    <div class="pi"><span class="pn">15</span><span><strong>Aeronave/embarcação privada br. no exterior (art. 7°, II, "c"):</strong> Extraterritorialidade condicionada. O crime praticado a bordo de embarcação/aeronave privada brasileira em território estrangeiro sujeita-se à lei brasileira SE não for julgado no país estrangeiro. Princípio da Bandeira/Pavilhão/Representação.</span></div>
+  </div>
+
+  <!-- QUADRO-SÍNTESE -->
+  <div class="card full accent" style="margin-top:1.3rem">
+    <div class="card-title"><span class="chip chip-pine">Síntese</span>Respostas Objetivas para Prova</div>
+    <table class="tbl">
+      <thead><tr><th>Pergunta</th><th>Resposta</th></tr></thead>
+      <tbody>
+        <tr><td>Extraterritorialidade incondicionada — precisa entrar no Brasil?</td><td style="color:var(--pine2)">NÃO — pode ser julgado à revelia</td></tr>
+        <tr><td>Incondicionada — absolvição no exterior impede?</td><td style="color:var(--pine2)">NÃO — irrelevante (§1°)</td></tr>
+        <tr><td>Condicionada — dupla tipicidade é exigida?</td><td style="color:var(--ruby2)">SIM — §2°, alínea "b"</td></tr>
+        <tr><td>Condicionada — precisa entrar no Brasil?</td><td style="color:var(--ruby2)">SIM — §2°, alínea "a"</td></tr>
+        <tr><td>§3° (hipercondicionada) — quem requisita?</td><td>Ministro da Justiça</td></tr>
+        <tr><td>§3° — quantas condições no total?</td><td>7 (5 do §2° + 2 do §3°)</td></tr>
+        <tr><td>Competência (regra geral): crime exterior por br.</td><td>Justiça Estadual (art. 88 CPP)</td></tr>
+        <tr><td>Competência: extradição negada → persecução no Brasil</td><td>Justiça Federal (STJ CC 154.656/MG)</td></tr>
+        <tr><td>Princípio do inc. I, "a", "b", "c"</td><td>Defesa / Real / Proteção</td></tr>
+        <tr><td>Princípio do inc. I, "d" (genocídio)</td><td>Justiça Universal (maioria) / ou Personalidade Ativa</td></tr>
+        <tr><td>Princípio do inc. II, "b" (brasileiro no exterior)</td><td>Personalidade Ativa / Nacionalidade</td></tr>
+        <tr><td>Princípio do §3° (estrangeiro × brasileiro fora)</td><td>Personalidade Passiva / Nacionalidade Passiva</td></tr>
+        <tr><td>Pena idêntica cumprida no exterior → efeito no Brasil?</td><td>Computa (desconta) — art. 8° CP</td></tr>
+        <tr><td>Pena diversa cumprida no exterior → efeito?</td><td>Atenua a pena brasileira — art. 8° CP</td></tr>
+        <tr><td>Transferência execução pena (Robinho/STJ 2024)</td><td>Possível via Lei 13.445/2017, art. 100. Não é extradição. Veda nova ação penal.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ARMADILHAS -->
+  <div class="danger">
+    <h4>⚠ 7 Armadilhas Frequentes em Provas</h4>
+    <ul style="font-size:.87rem;line-height:1.88;padding-left:1.2rem">
+      <li><strong>Dizer que na incondicionada também é necessário entrar no Brasil:</strong> ERRADO. Apenas na condicionada e hipercondicionada. Na incondicionada o julgamento à revelia é expressamente possível.</li>
+      <li><strong>Confundir os princípios do inciso I, "d" (genocídio):</strong> A doutrina diverge entre Justiça Universal (Capez, majoritário) e Personalidade Ativa. Nas provas, adotar Justiça Universal como resposta principal, mas conhecer a divergência.</li>
+      <li><strong>Esquecer a condição de dupla tipicidade na condicionada:</strong> Se o fato não é crime no país onde foi praticado, não há extraterritorialidade condicionada — mesmo que seja crime no Brasil.</li>
+      <li><strong>Confundir transferência de execução de pena com extradição:</strong> São institutos distintos. Transferência = execução da pena estrangeira no Brasil (possível para brasileiros natos). Extradição = entrega da pessoa (vedada para brasileiros natos).</li>
+      <li><strong>Afirmar que crime no exterior por brasileiro sempre vai à Justiça Federal:</strong> ERRADO. A regra é Justiça Estadual (art. 88 CPP). Só há competência federal se houver interesse da União (art. 109 CF).</li>
+      <li><strong>Aplicar o §3° sem todas as 7 condições:</strong> A hipercondicionada exige 7 condições cumulativas. Esquecer a requisição do MJ ou a negativa de extradição invalida a aplicação.</li>
+      <li><strong>Aplicar o art. 7° ao funcionário público estrangeiro que pratica crime contra a ADM pública brasileira:</strong> A alínea "c" do inciso I ("contra a administração pública, por quem está a seu serviço") exige que o agente esteja a serviço da administração pública brasileira — não alcança agentes de outros países.</li>
+    </ul>
+  </div>
+
+  <!-- DISCURSIVAS -->
+  <div class="card full" style="margin-top:1rem">
+    <div class="card-title"><span class="chip chip-pine">Discursiva ENAM</span>Temas de Alta Incidência em Provas Dissertativas</div>
+    <ol style="font-size:.88rem;line-height:1.9;padding-left:1.2rem">
+      <li>Disserte sobre as modalidades de extraterritorialidade previstas no art. 7° do CP, diferenciando-as quanto aos fundamentos, hipóteses e condições exigidas para aplicação da lei penal brasileira.</li>
+      <li>Analise as 5 condições cumulativas da extraterritorialidade condicionada (art. 7°, §2°, CP), explicando a natureza jurídica de tais condições e o que ocorre quando uma delas está ausente.</li>
+      <li>Discorra sobre a transferência de execução de pena (art. 100 da Lei 13.445/2017), distinguindo-a da extradição, com referência ao caso Robinho (STJ, HDE 7.986/EX, 2024) e ao julgamento do STF (HC 239.192, 2024).</li>
+      <li>Explique a competência jurisdicional para julgamento no Brasil de crimes praticados no exterior, identificando quando a competência é estadual e quando é federal, com fundamentos legais e jurisprudenciais.</li>
+    </ol>
+  </div>
+</section>
+
+</div><!-- fim .wrap -->
+
+<!-- BACK TO TOP -->
+<a href="#topo" class="back-top" id="btt" title="Voltar ao topo">↑</a>
+
+<script>
+/* SCROLL PROGRESS + BACK TOP + ACTIVE NAV */
+(function(){
+  var prog = document.getElementById('prog');
+  var btt = document.getElementById('btt');
+  var navLinks = document.querySelectorAll('.nav-a');
+  var sections = Array.from(document.querySelectorAll('.section'));
+
+  function onScroll(){
+    var total = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = total > 0 ? (window.scrollY / total * 100) : 0;
+    prog.style.width = pct.toFixed(1) + '%';
+
+    if(window.scrollY > 300){ btt.classList.add('visible'); }
+    else{ btt.classList.remove('visible'); }
+
+    /* Active nav link */
+    var cur = '';
+    sections.forEach(function(s){
+      var top = s.getBoundingClientRect().top;
+      if(top <= 100){ cur = '#' + s.id; }
+    });
+    navLinks.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === cur);
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* Smooth scroll */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var target = document.querySelector(this.getAttribute('href'));
+      if(target){
+        e.preventDefault();
+        var offset = document.querySelector('.navbar').offsetHeight + 12;
+        window.scrollTo({top: target.getBoundingClientRect().top + window.scrollY - offset, behavior:'smooth'});
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 15º CP — Desistência Voluntária e Arrependimento Eficaz | Magistratura ENAM</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a; --navy-mid: #1a2f45; --navy-light: #243b55;
+    --gold: #c8960c; --gold-light: #e8b84b; --gold-pale: #fdf3d8;
+    --cream: #faf7f2; --cream-mid: #f0ebe2;
+    --text-dark: #1a1208; --text-mid: #3d3020; --text-soft: #6b5c40;
+    --border: #d4c49a; --border-light: #e8dcbf;
+    --red-accent: #8b1a1a; --green-accent: #1a4a2e;
+    --blue-accent: #1a3a5c; --purple-accent: #4a1a5c;
+    --teal-accent: #0d4a4a; --orange-accent: #7a3800;
+    --shadow: 0 4px 24px rgba(13,27,42,0.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Source Serif 4', Georgia, serif; background: var(--cream); color: var(--text-dark); font-size: 15px; line-height: 1.75; }
+
+/* ── NAV CORRIGIDO ── */
+#top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    width: 100%;
+    max-width: 100%;
+
+    background: var(--navy);
+    border-bottom: 3px solid var(--gold);
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    /*
+      CORREÇÃO PRINCIPAL:
+      permite quebrar linha em vez de cortar os links
+    */
+    flex-wrap: wrap;
+
+    gap: 4px;
+
+    padding: 0.45rem 1rem;
+
+    overflow: visible;
+    overflow-x: visible;
+    overflow-y: visible;
+
+    white-space: normal;
+
+    box-sizing: border-box;
+}
+
+/* Remove qualquer comportamento antigo de scrollbar */
+#top-nav::-webkit-scrollbar {
+    display: none;
+}
+
+#top-nav .nav-brand {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold, #b8922a);
+
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    padding: 0.75rem 1rem 0.75rem 0;
+    margin-right: 0.5rem;
+
+    border-right: 1px solid rgba(184, 146, 42, 0.35);
+
+    white-space: nowrap;
+    flex: 0 0 auto;
+}
+
+#top-nav a {
+    color: rgba(255, 255, 255, 0.78);
+    text-decoration: none;
+
+    font-size: 0.72rem;
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+
+    padding: 0.7rem 0.75rem;
+
+    border-bottom: 3px solid transparent;
+    border-radius: 4px 4px 0 0;
+
+    white-space: nowrap;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-bottom-color 0.2s ease;
+}
+
+#top-nav a:hover {
+    color: var(--gold, #b8922a);
+    background: rgba(184, 146, 42, 0.14);
+    border-bottom-color: var(--gold, #b8922a);
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 900px) {
+    #top-nav {
+        padding: 0.5rem 0.75rem;
+        gap: 3px;
+    }
+
+    #top-nav .nav-brand {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgba(184, 146, 42, 0.35);
+        margin-right: 0;
+        margin-bottom: 0.25rem;
+        padding: 0.6rem 0;
+    }
+
+    #top-nav a {
+        font-size: 0.68rem;
+        padding: 0.6rem 0.65rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #top-nav {
+        align-items: stretch;
+    }
+
+    #top-nav a {
+        flex: 1 1 auto;
+        font-size: 0.64rem;
+        padding: 0.55rem 0.5rem;
+    }
+}
+
+  /* ── HERO ── */
+  #hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1e3d5c 100%); color: white; padding: 3.5rem 2rem 3rem; text-align: center; position: relative; overflow: hidden; }
+  #hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, rgba(200,150,12,0.03) 0px, rgba(200,150,12,0.03) 1px, transparent 1px, transparent 40px); }
+  #hero .badge { display: inline-block; background: rgba(200,150,12,0.15); border: 1px solid rgba(200,150,12,0.5); color: var(--gold-light); font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; padding: 0.35rem 1rem; border-radius: 2px; margin-bottom: 1.2rem; font-family: 'Source Serif 4', serif; font-weight: 600; }
+  #hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 0.6rem; letter-spacing: -0.5px; }
+  #hero h1 span { color: var(--gold-light); }
+  #hero .subtitle { font-size: 1rem; color: rgba(255,255,255,0.65); font-style: italic; margin-bottom: 1.5rem; }
+  #hero .law-box { display: inline-block; background: rgba(255,255,255,0.06); border: 1px solid rgba(200,150,12,0.4); border-left: 4px solid var(--gold); color: rgba(255,255,255,0.9); font-family: 'Source Serif 4', serif; font-size: 0.93rem; font-style: italic; padding: 1rem 1.5rem; max-width: 820px; text-align: left; line-height: 1.75; border-radius: 0 4px 4px 0; }
+  #hero .law-box strong { color: var(--gold-light); font-style: normal; display: block; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.4rem; }
+
+  /* ── LAYOUT ── */
+  .page-wrap { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+  /* ── SECTIONS ── */
+  .section { margin-top: 3.5rem; scroll-margin-top: 56px; }
+  .section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--border); }
+  .section-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--border); line-height: 1; min-width: 2.5rem; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; color: var(--navy); line-height: 1.2; }
+  .section-title span { display: block; font-size: 0.75rem; font-family: 'Source Serif 4', serif; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-style: normal; }
+
+  /* ── CARDS ── */
+  .card { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 1.4rem 1.6rem; box-shadow: var(--shadow); }
+  .card-grid { display: grid; gap: 1rem; }
+  .card-grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .card-grid-2 { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+  .card h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.6rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-light); }
+  .card p, .card li { font-size: 0.88rem; line-height: 1.7; color: var(--text-mid); }
+  .card ul { padding-left: 1.1rem; }
+  .card li { margin-bottom: 0.3rem; }
+
+  /* Instituto cards */
+  .inst-card { border-top: 4px solid; }
+  .inst-dv  { border-top-color: var(--green-accent); }
+  .inst-ae  { border-top-color: var(--blue-accent); }
+  .inst-tent{ border-top-color: var(--red-accent); }
+  .inst-dv h3  { color: var(--green-accent); }
+  .inst-ae h3  { color: var(--blue-accent); }
+  .inst-tent h3{ color: var(--red-accent); }
+
+  /* ── FLOWCHART ── */
+  .flow-wrap { background: white; border: 1px solid var(--border-light); border-radius: 6px; padding: 2rem 1.5rem; box-shadow: var(--shadow); overflow-x: auto; }
+  .flow-center { display: flex; flex-direction: column; align-items: center; gap: 0; }
+  .flow-node { border-radius: 4px; padding: 0.65rem 1.4rem; font-family: 'Source Serif 4', serif; font-size: 0.82rem; font-weight: 600; text-align: center; min-width: 220px; max-width: 520px; }
+  .flow-start { background: var(--navy); color: white; border-radius: 50px; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; }
+  .flow-end-green { background: var(--green-accent); color: white; border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-end-red   { background: var(--red-accent); color: white; border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-end-gold  { background: var(--gold); color: var(--navy); border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-end-blue  { background: var(--blue-accent); color: white; border-radius: 50px; font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem; }
+  .flow-box-navy   { background: var(--navy-mid); color: white; border-left: 4px solid var(--gold); font-size: 0.8rem; }
+  .flow-box-green  { background: #edf7f0; border: 1px solid #7ec89a; border-left: 4px solid var(--green-accent); color: var(--text-dark); }
+  .flow-box-blue   { background: #edf2f8; border: 1px solid #8eb4d8; border-left: 4px solid var(--blue-accent); color: var(--text-dark); }
+  .flow-box-red    { background: #fdf0f0; border: 1px solid #e09090; border-left: 4px solid var(--red-accent); color: var(--text-dark); }
+  .flow-box-gold   { background: var(--gold-pale); border: 2px solid var(--gold); color: var(--text-dark); }
+  .flow-box-purple { background: #f3eef8; border: 1px solid #b89dd8; border-left: 4px solid var(--purple-accent); color: var(--text-dark); }
+  .flow-box-teal   { background: #e8f5f5; border: 1px solid #6ec8c8; border-left: 4px solid var(--teal-accent); color: var(--text-dark); }
+  .flow-arrow { font-size: 1.3rem; color: var(--border); line-height: 1; margin: 0.15rem 0; }
+  .flow-row { display: flex; align-items: flex-start; gap: 1.5rem; width: 100%; justify-content: center; flex-wrap: wrap; }
+  .flow-branch { display: flex; flex-direction: column; align-items: center; gap: 0; flex: 1; min-width: 175px; }
+  .flow-label { font-size: 0.68rem; color: var(--text-soft); font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; background: var(--cream-mid); padding: 0.15rem 0.5rem; border-radius: 2px; margin: 0.15rem 0; }
+  .flow-connector-line { width: 1px; height: 28px; background: var(--border); }
+
+  /* ── TABLE ── */
+  .comp-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; background: white; box-shadow: var(--shadow); border-radius: 6px; overflow: hidden; }
+  .comp-table thead { background: var(--navy); color: white; }
+  .comp-table thead th { padding: 0.85rem 1rem; font-family: 'Source Serif 4', serif; font-weight: 600; letter-spacing: 0.5px; font-size: 0.8rem; text-align: left; }
+  .comp-table thead th:first-child { color: var(--gold-light); }
+  .comp-table tbody tr { border-bottom: 1px solid var(--border-light); }
+  .comp-table tbody tr:last-child { border-bottom: none; }
+  .comp-table tbody tr:nth-child(even) { background: var(--cream); }
+  .comp-table td { padding: 0.75rem 1rem; color: var(--text-mid); vertical-align: top; }
+  .comp-table td:first-child { font-weight: 600; color: var(--navy); white-space: nowrap; font-size: 0.8rem; }
+  .comp-table .hl  td { background: var(--gold-pale) !important; }
+  .comp-table .hl2 td { background: #edf7f0 !important; }
+  .comp-table .hl3 td { background: #edf2f8 !important; }
+  .comp-table .hl4 td { background: #fdf0f0 !important; }
+
+  /* ── JURIS ── */
+  .juris-card { background: white; border: 1px solid var(--border-light); border-left: 5px solid; border-radius: 0 6px 6px 0; padding: 1.2rem 1.4rem; box-shadow: var(--shadow); }
+  .juris-card.stf { border-left-color: var(--red-accent); }
+  .juris-card.stj { border-left-color: var(--navy); }
+  .juris-card.doutrina { border-left-color: var(--gold); }
+  .juris-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
+  .juris-badge { font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 2px; font-family: 'Source Serif 4', serif; }
+  .juris-badge.stf      { background: var(--red-accent); color: white; }
+  .juris-badge.stj      { background: var(--navy); color: white; }
+  .juris-badge.doutrina { background: var(--gold); color: var(--navy); }
+  .juris-badge.sumula   { background: var(--green-accent); color: white; }
+  .juris-badge.tese     { background: var(--blue-accent); color: white; }
+  .juris-badge.purple   { background: var(--purple-accent); color: white; }
+  .juris-title { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700; color: var(--navy); }
+  .juris-body  { font-size: 0.84rem; color: var(--text-mid); line-height: 1.7; }
+  .juris-body em { font-style: italic; color: var(--navy); }
+  .juris-grid { display: grid; gap: 1rem; }
+
+  /* ── ALERTS ── */
+  .alert { padding: 0.9rem 1.2rem; border-radius: 4px; font-size: 0.84rem; line-height: 1.7; display: flex; gap: 0.7rem; align-items: flex-start; }
+  .alert-gold   { background: var(--gold-pale); border: 1px solid #d4aa3a; color: #5a4000; }
+  .alert-red    { background: #fdf0f0; border: 1px solid #e09090; color: #5a0000; }
+  .alert-navy   { background: #f0f4f8; border: 1px solid #abc; color: var(--navy); }
+  .alert-green  { background: #edf7f0; border: 1px solid #7ec89a; color: #1a4a2e; }
+  .alert-purple { background: #f3eef8; border: 1px solid #b89dd8; color: var(--purple-accent); }
+  .alert-teal   { background: #e8f5f5; border: 1px solid #6ec8c8; color: var(--teal-accent); }
+  .alert-icon   { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.05rem; }
+  .alert strong { font-weight: 700; }
+
+  /* ── PROVA ── */
+  .prova-section { background: var(--navy); border-radius: 8px; padding: 2rem; color: white; margin-top: 3.5rem; scroll-margin-top: 56px; }
+  .prova-section h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--gold-light); margin-bottom: 0.5rem; }
+  .prova-section .intro { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; font-style: italic; }
+  .prova-items { display: grid; gap: 0.75rem; }
+  .prova-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(200,150,12,0.25); border-left: 4px solid var(--gold); border-radius: 0 4px 4px 0; padding: 1rem 1.2rem; }
+  .prova-item-q { font-size: 0.82rem; font-weight: 600; color: var(--gold-light); margin-bottom: 0.4rem; display: flex; align-items: flex-start; gap: 0.6rem; }
+  .prova-item-q .qnum { background: var(--gold); color: var(--navy); font-size: 0.65rem; font-weight: 700; padding: 0.1rem 0.45rem; border-radius: 2px; flex-shrink: 0; margin-top: 0.1rem; }
+  .prova-item-a { font-size: 0.82rem; color: rgba(255,255,255,0.8); line-height: 1.65; }
+  .prova-item-a strong { color: white; }
+
+  /* ── TAGS ── */
+  .tag { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; margin: 0.1rem; font-family: 'Source Serif 4', serif; }
+  .tag-blue   { background: #dce8f5; color: var(--blue-accent); }
+  .tag-green  { background: #dceee3; color: var(--green-accent); }
+  .tag-gold   { background: var(--gold-pale); color: #7a5a00; border: 1px solid #d4aa3a; }
+  .tag-red    { background: #fde8e8; color: var(--red-accent); }
+  .tag-purple { background: #ece5f5; color: var(--purple-accent); }
+  .tag-teal   { background: #e0f0f0; color: var(--teal-accent); }
+
+  /* ── EXAMPLE BOX ── */
+  .example-box { background: var(--navy-mid); color: white; border-radius: 6px; padding: 1.2rem 1.4rem; font-size: 0.84rem; line-height: 1.75; }
+  .example-box .ex-title { color: var(--gold-light); font-weight: 700; font-family: 'Playfair Display', serif; font-size: 0.95rem; margin-bottom: 0.5rem; }
+  .example-box .ex-calc { background: rgba(200,150,12,0.12); border: 1px solid rgba(200,150,12,0.3); border-radius: 4px; padding: 0.7rem 1rem; margin-top: 0.7rem; font-family: 'JetBrains Mono', monospace; font-size: 0.79rem; color: var(--gold-light); white-space: pre-wrap; }
+
+  /* ── LAW QUOTE ── */
+  .law-quote { background: var(--cream-mid); border-left: 4px solid var(--navy); padding: 0.9rem 1.2rem; font-size: 0.88rem; font-style: italic; color: var(--text-mid); line-height: 1.7; border-radius: 0 4px 4px 0; }
+  .law-quote strong { font-style: normal; color: var(--navy); font-size: 0.75rem; letter-spacing: 0.5px; display: block; margin-bottom: 0.25rem; }
+
+  /* ── PONTE DE OURO ── */
+  .ponte-box { background: linear-gradient(135deg, var(--green-accent) 0%, #2a6a3e 100%); color: white; border-radius: 8px; padding: 1.5rem 1.8rem; box-shadow: 0 6px 30px rgba(26,74,46,0.3); }
+  .ponte-box h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--gold-light); margin-bottom: 0.5rem; }
+  .ponte-box p, .ponte-box li { font-size: 0.86rem; color: rgba(255,255,255,0.88); line-height: 1.7; }
+  .ponte-box ul { padding-left: 1.1rem; margin-top: 0.5rem; }
+  .ponte-box li { margin-bottom: 0.3rem; }
+  .ponte-box .highlight { background: rgba(200,150,12,0.2); border: 1px solid rgba(200,150,12,0.4); border-radius: 4px; padding: 0.6rem 0.9rem; margin-top: 0.75rem; font-size: 0.85rem; color: var(--gold-light); font-style: italic; }
+
+  /* ── DIVIDER ── */
+  .divider { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); margin: 1.2rem 0; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--navy); color: rgba(255,255,255,0.45); text-align: center; padding: 1.5rem; font-size: 0.75rem; border-top: 2px solid var(--gold); }
+  footer strong { color: var(--gold-light); }
+
+  /* ── PRINT ── */
+  @media print {
+    #top-nav { display: none; }
+    #hero { padding: 2rem 1rem; }
+    #hero::before { display: none; }
+    .page-wrap { max-width: 100%; padding: 0 0.5rem 2rem; }
+    .section { margin-top: 2rem; page-break-inside: avoid; }
+    .card, .juris-card, .flow-wrap, .example-box { box-shadow: none; border: 1px solid #ccc; }
+    .prova-section { background: #f0f4f8 !important; color: #000 !important; }
+    .prova-section h2 { color: #0d1b2a !important; }
+    .prova-item { background: white !important; border: 1px solid #ccc !important; }
+    .prova-item-q { color: #7a5a00 !important; }
+    .prova-item-a { color: #333 !important; }
+    .example-box, .ponte-box { background: #f0f4f8 !important; color: #000 !important; border: 1px solid #ccc; }
+    footer { display: none; }
+    body { font-size: 11pt; }
+  }
+  /* ── MOBILE ── */
+  @media (max-width: 640px) {
+    #hero { padding: 2rem 1rem; }
+    #hero h1 { font-size: 1.6rem; }
+    .card-grid-3, .card-grid-2 { grid-template-columns: 1fr; }
+    .section-title { font-size: 1.1rem; }
+    .comp-table { font-size: 0.76rem; }
+    .comp-table td, .comp-table th { padding: 0.55rem 0.65rem; }
+    .flow-node { min-width: 150px; font-size: 0.74rem; }
+  }
+  /* ── MISC ── */
+  .mt1 { margin-top: 0.75rem; }
+  .mt2 { margin-top: 1rem; }
+  .mt3 { margin-top: 1.5rem; }
+  .flex-gap { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: flex-start; }
+  strong { font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav id="top-nav" aria-label="Atalhos do artigo">
+  <div class="nav-brand">Art. 15º CP</div>
+
+  <div class="nav-main-links">
+    <a href="#visao-geral">Visão Geral</a>
+    <a href="#desistencia">Desistência Vol.</a>
+    <a href="#arrependimento">Arrep. Eficaz</a>
+    <a href="#fluxograma">Fluxograma</a>
+    <a href="#frank">Fórmula Frank</a>
+    <a href="#comparativo">Comparativo</a>
+    <a href="#concurso">Concurso Pessoas</a>
+    <a href="#exemplos">Exemplos</a>
+    <a href="#jurisprudencia">Juris. STF/STJ</a>
+    <a href="#doutrina">Doutrina</a>
+    <a href="#sistematica">Sistemática</a>
+    <a href="#prova" class="nav-prova">Prova</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<header id="hero">
+  <div class="badge">Código Penal · Título II · Do Crime</div>
+  <h1>Art. 15º — <span>Desistência Voluntária e Arrependimento Eficaz</span></h1>
+  <p class="subtitle">Ponte de Ouro · Voluntariedade × Espontaneidade · Responsabilidade Remanescente · Magistratura · ENAM</p>
+  <div class="law-box">
+    <strong>Art. 15.º do Decreto-Lei n.º 2.848/1940 (Código Penal)</strong>
+    "O agente que, voluntariamente, desiste de prosseguir na execução ou impede que o resultado se produza, só responde pelos atos já praticados."
+  </div>
+</header>
+
+<div class="page-wrap">
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- 1. VISÃO GERAL                                -->
+<!-- ══════════════════════════════════════════════ -->
+<section class="section" id="visao-geral">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div class="section-title"><span>Introdução &amp; Sistemática</span>Visão Geral do Artigo</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📍 Finalidade, Posição Sistemática e "Ponte de Ouro"</h3>
+      <p>O art. 15 CP integra o <strong>Título II ("Do Crime")</strong> e está inserido logo após o art. 14 (tentativa), com o qual forma um sistema coerente: enquanto o art. 14 pune a tentativa quando fatores externos impedem a consumação, o art. 15 <em>premia</em> o agente que, por vontade própria, interrompe a execução ou impede o resultado.</p>
+      <p class="mt2">O dispositivo consagra a chamada <strong>"Ponte de Ouro"</strong> (<em>goldene Brücke</em>), expressão cunhada por <strong>Franz von Liszt</strong>: o direito penal estende ao agente um caminho de volta — se ele desistir voluntariamente ou evitar o resultado, será punido apenas pelo que já praticou. Trata-se de <strong>incentivo político-criminal à não consumação</strong>: é mais racional recompensar o abandono do crime do que punir o agente da mesma forma que o consumado.</p>
+    </div>
+    <div class="card">
+      <h3>🏛️ Natureza Jurídica e Estrutura do Art. 15</h3>
+      <ul>
+        <li><strong>Contém dois institutos autônomos:</strong> (1) <em>Desistência voluntária</em> — "desiste de prosseguir na execução" (atos executórios não esgotados); (2) <em>Arrependimento eficaz</em> — "impede que o resultado se produza" (atos executórios já esgotados)</li>
+        <li><strong>Natureza jurídica — posições:</strong> (a) Causa excludente de tipicidade (maioria doutrinária: Greco, Bitencourt, Masson — o fato passa a ser atípico quanto ao crime tentado); (b) Causa extintiva da punibilidade (posição minoritária); (c) Causa pessoal de exclusão de pena (posição alemã)</li>
+        <li><strong>Posição majoritária no Brasil:</strong> causa de <em>exclusão da tipicidade</em> quanto ao crime tentado pretendido — o agente <em>não</em> responde por tentativa do crime inicialmente pretendido</li>
+        <li><strong>Responsabilidade remanescente:</strong> o agente responde pelos <em>atos já praticados</em> que configurem crime autônomo</li>
+        <li><strong>Aplicação:</strong> somente em crimes dolosos — incompatível com crimes culposos (que não admitem tentativa)</li>
+        <li><strong>Não se confunde com desistência voluntária no crime doloso de perigo:</strong> nestes, a desistência pode ser excludente de tipicidade do próprio crime de perigo</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="ponte-box mt2">
+    <h3>🌉 A "Ponte de Ouro" — Von Liszt e o Fundamento Político-Criminal</h3>
+    <p>A metáfora da <strong>"Ponte de Ouro"</strong> (Franz von Liszt, 1881) é a mais importante para compreender o art. 15 CP: imagine um agente que iniciou a travessia rumo ao crime — já está no meio do caminho (atos executórios iniciados). O direito, ao invés de tratá-lo como criminoso irrecuperável, estende-lhe uma <em>ponte dourada</em> de retorno: se ele voltar voluntariamente, o Estado o recebe com punição reduzida (apenas pelos atos já praticados). O custo de punir tentativas consumadas é alto; o benefício de evitar crimes consumados é ainda maior.</p>
+    <div class="highlight">"O legislador quer que o crime não se consume. Por isso, estende ao agente uma ponte dourada de retorno: se ele desistir, paga apenas pelo que já fez — não pelo que tentou fazer." — Von Liszt</div>
+    <ul class="mt2">
+      <li><strong>Fundamento utilitarista:</strong> é mais vantajoso para a sociedade que o agente abandone o crime a qualquer momento da execução</li>
+      <li><strong>Fundamento da proporcionalidade:</strong> se o bem jurídico foi preservado, a resposta penal deve ser proporcionalmente menor</li>
+      <li><strong>Fundamento da prevenção especial:</strong> o agente que desiste demonstra capacidade de autocontenção — menor necessidade de pena</li>
+    </ul>
+  </div>
+
+  <div class="alert alert-gold mt2">
+    <div class="alert-icon">⚠️</div>
+    <div><strong>Ponto Crucial — Distinção entre os dois institutos do art. 15:</strong> A <strong>desistência voluntária</strong> opera-se quando o agente <em>interrompe os atos executórios</em> antes de esgotá-los (tentativa imperfeita em andamento). O <strong>arrependimento eficaz</strong> opera-se quando o agente já <em>esgotou todos os atos executórios</em>, mas ainda tem tempo de impedir o resultado e o faz. O critério de distinção é o <em>esgotamento ou não dos atos executórios</em> antes da intervenção voluntária do agente.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- 2. DESISTÊNCIA VOLUNTÁRIA                     -->
+<!-- ══════════════════════════════════════════════ -->
+<section class="section" id="desistencia">
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div class="section-title"><span>Art. 15, 1.ª Parte — Análise Profunda</span>Desistência Voluntária: "Desiste de Prosseguir na Execução"</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card inst-card inst-dv">
+      <h3>🟢 Conceito e Pressupostos</h3>
+      <p><strong>Conceito:</strong> Ocorre quando o agente, tendo iniciado a execução e sem ter esgotado todos os atos executórios que pretendia praticar, <em>voluntariamente</em> abandona a continuação da execução — interrompendo os atos antes do seu esgotamento.</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Pressuposto 1 — Execução iniciada:</strong> o agente deve ter realizado pelo menos um ato executório. Sem início de execução, não há desistência voluntária — apenas cogitação/preparação abandonada (fato atípico desde o início)</li>
+        <li><strong>Pressuposto 2 — Atos executórios não esgotados:</strong> o agente ainda não completou todos os atos que planejava praticar. Se já os esgotou, o instituto aplicável é o arrependimento eficaz</li>
+        <li><strong>Pressuposto 3 — Voluntariedade:</strong> a interrupção deve ser voluntária — não provocada por obstáculo externo intransponível. NÃO precisa ser espontânea</li>
+        <li><strong>Pressuposto 4 — Resultado não consumado:</strong> o crime pretendido não deve ter-se consumado antes da desistência</li>
+      </ul>
+      <div class="alert alert-green mt2" style="font-size:0.8rem;">
+        <div>✅ <strong>Estrutura:</strong> Tentativa imperfeita em andamento + voluntária interrupção da execução = desistência voluntária → agente responde apenas pelos atos já praticados.</div>
+      </div>
+    </div>
+
+    <div class="card inst-card inst-dv">
+      <h3>🟢 Voluntariedade × Espontaneidade — Distinção Crucial</h3>
+      <p>A lei exige <strong>voluntariedade</strong>, não <strong>espontaneidade</strong>. São conceitos distintos:</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Voluntária:</strong> a decisão de desistir partiu da livre vontade do agente — ele podia prosseguir, mas optou por não fazê-lo. A motivação é irrelevante: pode ser pena da vítima, medo de ser preso, arrependimento moral, conselho de terceiro, etc.</li>
+        <li><strong>Espontânea:</strong> a decisão nasceu sem influência de fatores externos — o agente desistiu "por conta própria", sem qualquer estímulo exterior.</li>
+        <li><strong>A desistência pode ser voluntária sem ser espontânea:</strong> se um terceiro convence o agente a desistir, mas o agente ainda tinha plena capacidade de prosseguir e livremente optou por parar → desistência voluntária (art. 15 CP), mesmo não sendo espontânea</li>
+      </ul>
+      <div class="alert alert-gold mt2" style="font-size:0.81rem;">
+        <div>🎯 <strong>Teste da voluntariedade:</strong> O agente <em>podia prosseguir</em> na execução (tinha meios e capacidade)? Se sim e optou por não fazê-lo → voluntária → art. 15 CP. Se não podia prosseguir (obstáculo externo intransponível) → não há voluntariedade → tentativa → art. 14, II, CP.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card">
+      <h3>📋 Hipóteses de Voluntariedade × Não Voluntariedade</h3>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.82rem;">
+          <thead style="background:var(--navy);color:white;">
+            <tr><th style="padding:0.5rem 0.7rem;">Situação</th><th style="padding:0.5rem 0.7rem;">Voluntária?</th><th style="padding:0.5rem 0.7rem;">Resultado</th></tr>
+          </thead>
+          <tbody>
+            <tr style="background:#edf7f0;"><td style="padding:0.5rem 0.7rem;">Agente para de atirar por sentir pena da vítima</td><td style="padding:0.5rem 0.7rem;font-weight:700;color:var(--green-accent);">SIM</td><td style="padding:0.5rem 0.7rem;">Art. 15 — Desistência voluntária</td></tr>
+            <tr><td style="padding:0.5rem 0.7rem;">Agente para pois terceiro o convence a desistir</td><td style="padding:0.5rem 0.7rem;font-weight:700;color:var(--green-accent);">SIM</td><td style="padding:0.5rem 0.7rem;">Art. 15 — Voluntária (não espontânea)</td></tr>
+            <tr style="background:#edf7f0;"><td style="padding:0.5rem 0.7rem;">Agente para com medo de ser preso (polícia à vista)</td><td style="padding:0.5rem 0.7rem;font-weight:700;color:#7a5a00;">DEBATE</td><td style="padding:0.5rem 0.7rem;">Maioria: voluntária (ainda podia agir); minoria: não voluntária</td></tr>
+            <tr><td style="padding:0.5rem 0.7rem;">Agente é imobilizado por terceiro antes de concluir</td><td style="padding:0.5rem 0.7rem;font-weight:700;color:var(--red-accent);">NÃO</td><td style="padding:0.5rem 0.7rem;">Art. 14, II — Tentativa (fator externo)</td></tr>
+            <tr style="background:#edf7f0;"><td style="padding:0.5rem 0.7rem;">Agente não consegue completar por falha da arma</td><td style="padding:0.5rem 0.7rem;font-weight:700;color:var(--red-accent);">NÃO</td><td style="padding:0.5rem 0.7rem;">Art. 14, II — Tentativa (fator externo: falha do meio)</td></tr>
+            <tr><td style="padding:0.5rem 0.7rem;">Agente para porque se arrependeu moralmente</td><td style="padding:0.5rem 0.7rem;font-weight:700;color:var(--green-accent);">SIM</td><td style="padding:0.5rem 0.7rem;">Art. 15 — Desistência voluntária e espontânea</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card">
+      <h3>⚡ Responsabilidade Remanescente na Desistência Voluntária</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">A desistência voluntária exclui a responsabilidade pelo crime tentado pretendido, mas o agente responde pelos <strong>atos já praticados</strong> que configurem crime autônomo:</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Ameaça + desistência do homicídio:</strong> agente ameaça a vítima ("vou te matar") e, municiado com arma, desiste antes de atirar → responde por ameaça (art. 147 CP) + porte ilegal de arma (se for o caso), mas <em>não</em> por tentativa de homicídio</li>
+        <li><strong>Disparo + desistência:</strong> agente dispara um tiro que acerta a vítima no braço, mas desiste de prosseguir → responde por lesão corporal (art. 129 CP) — que já estava consumada — mas não por tentativa de homicídio (se havia dolo de matar, o arrependimento eficaz não restaura a tentativa — vide seção seguinte)</li>
+        <li><strong>Entrada forçada + desistência do furto:</strong> agente arromba a porta, entra na casa, mas desiste de subtrair → responde por dano (art. 163 CP) + violação de domicílio (art. 150 CP), mas não por tentativa de furto</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- 3. ARREPENDIMENTO EFICAZ                      -->
+<!-- ══════════════════════════════════════════════ -->
+<section class="section" id="arrependimento">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div class="section-title"><span>Art. 15, 2.ª Parte — Análise Profunda</span>Arrependimento Eficaz: "Impede que o Resultado se Produza"</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card inst-card inst-ae">
+      <h3>🔵 Conceito e Pressupostos</h3>
+      <p><strong>Conceito:</strong> Ocorre quando o agente <em>já esgotou todos os atos executórios</em> que planejava praticar (tentativa perfeita), mas o resultado ainda não ocorreu — e o agente, voluntariamente, <em>atua de forma eficaz</em> para impedir a produção do resultado.</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Pressuposto 1 — Esgotamento dos atos executórios:</strong> o agente completou todos os atos que pretendia — sem isso, seria desistência voluntária, não arrependimento eficaz</li>
+        <li><strong>Pressuposto 2 — Resultado ainda não ocorrido:</strong> o resultado típico ainda não se consumou quando o agente age para impedi-lo. Se o resultado já ocorreu, não há mais arrependimento eficaz — o crime está consumado</li>
+        <li><strong>Pressuposto 3 — Voluntariedade da ação impeditiva:</strong> a conduta de impedir o resultado deve ser voluntária — partindo da livre decisão do agente</li>
+        <li><strong>Pressuposto 4 — Eficácia:</strong> a conduta do agente deve <em>efetivamente impedir</em> o resultado. Se o resultado não ocorre por fator externo (não pela ação do agente), não há arrependimento eficaz — pode haver tentativa (art. 14, II)</li>
+      </ul>
+      <div class="alert alert-blue" style="background:#edf2f8;border:1px solid #8eb4d8;color:var(--blue-accent);padding:0.8rem 1rem;border-radius:4px;font-size:0.8rem;margin-top:1rem;">
+        <div>📌 <strong>Estrutura:</strong> Tentativa perfeita + voluntária ação impeditiva + eficácia na prevenção do resultado = arrependimento eficaz → agente responde apenas pelos atos já praticados.</div>
+      </div>
+    </div>
+
+    <div class="card inst-card inst-ae">
+      <h3>🔵 Eficácia como Requisito — Distinção Fundamental</h3>
+      <p>O arrependimento eficaz exige que a ação voluntária do agente seja a <strong>causa eficiente</strong> da não ocorrência do resultado. Se o resultado não ocorre por razão alheia à conduta do agente, não há arrependimento eficaz:</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Agente leva vítima ao hospital voluntariamente → médico salva:</strong> é arrependimento eficaz? <strong>SIM</strong> — a conduta do agente (levar ao hospital) foi causal para o salvamento. A ação do médico foi consequência direta da ação do agente</li>
+        <li><strong>Agente deixa vítima ferida e outra pessoa a salva:</strong> <strong>NÃO</strong> é arrependimento eficaz — o agente não agiu para impedir o resultado; terceiro o impediu → tentativa de homicídio (art. 14, II)</li>
+        <li><strong>Agente ministra antídoto:</strong> é arrependimento eficaz — conduta ativa do próprio agente que causalmente impede o resultado</li>
+        <li><strong>Agente tenta impedir mas resultado ocorre mesmo assim:</strong> arrependimento <em>ineficaz</em> → não se aplica o art. 15 → crime consumado</li>
+      </ul>
+      <div class="alert alert-gold mt2" style="font-size:0.81rem;">
+        <div>⭐ <strong>Regra de ouro:</strong> A EFICÁCIA é elemento do tipo do arrependimento eficaz. Sem resultado impedido, não há arrependimento eficaz — mas pode haver atenuante genérica de pena (arrependimento posterior — art. 16 CP, se a eficácia for parcial).</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card">
+      <h3>⚡ Responsabilidade Remanescente no Arrependimento Eficaz</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">Assim como na desistência voluntária, o agente responde pelos <strong>atos já praticados</strong> que configurem crime autônomo consumado:</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Envenenamento + antídoto ministrado pelo agente:</strong> vítima não morre → agente responde por lesão corporal (art. 129 CP) consumada — o envenenamento que não matou gerou lesão — mas <em>não</em> por tentativa de homicídio</li>
+        <li><strong>Disparo + socorro eficaz:</strong> agente atira na vítima com dolo de matar, mas voluntariamente a leva ao hospital → vítima sobrevive → agente responde por lesão corporal consumada, não por tentativa de homicídio</li>
+        <li><strong>Envenenamento sem lesão + antídoto imediato:</strong> agente coloca veneno no alimento, mas antes da ingestão se arrepende e retira o alimento — não há nem lesão → agente não responde por nada (atos não configuraram crime autônomo)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📋 Arrependimento Eficaz × Arrependimento Posterior (Art. 16 CP)</h3>
+      <div class="law-quote">
+        <strong>Art. 16 CP — Arrependimento Posterior:</strong>
+        "Nos crimes cometidos sem violência ou grave ameaça à pessoa, reparado o dano ou restituída a coisa, até o recebimento da denúncia ou da queixa, por ato voluntário do agente, a pena será reduzida de um a dois terços."
+      </div>
+      <p class="mt2" style="font-size:0.84rem;color:var(--text-mid);">São institutos completamente distintos:</p>
+      <ul class="mt1" style="font-size:0.83rem;">
+        <li><strong>Arrependimento eficaz (art. 15):</strong> opera <em>antes</em> da consumação → impede o resultado → exclui o tipo tentado → agente responde apenas pelos atos praticados</li>
+        <li><strong>Arrependimento posterior (art. 16):</strong> opera <em>após</em> a consumação → o crime já ocorreu → apenas <em>reduz a pena</em> de 1/3 a 2/3 → exige reparação do dano/restituição antes do recebimento da denúncia → só para crimes sem violência ou grave ameaça</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- 4. FLUXOGRAMA                                 -->
+<!-- ══════════════════════════════════════════════ -->
+<section class="section" id="fluxograma">
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma Completo — Art. 14 × Art. 15 × Art. 17 CP</div>
+  </div>
+
+  <div class="flow-wrap">
+    <div class="flow-center">
+
+      <div class="flow-node flow-start">AGENTE PRATICOU ATOS EXECUTÓRIOS — O CRIME NÃO SE CONSUMOU</div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <!-- Passo 1 -->
+      <div class="flow-node flow-box-navy" style="max-width:560px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 1 — Por que o crime não se consumou?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Identificar a razão da não consumação é o ponto de partida da análise</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">Fator EXTERNO à vontade</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Circunstância alheia impediu<br>Ex.: fuga da vítima, polícia,<br>falha do meio, resistência<br>→ <strong>TENTATIVA</strong> — Art. 14, II, CP
+          </div>
+          <div class="flow-connector-line" style="height:20px;"></div>
+          <div class="flow-end-red" style="font-size:0.7rem;padding:0.5rem 1rem;">Art. 14, II — Tentativa<br>Pena reduzida de 1/3 a 2/3</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:130px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">VONTADE do próprio agente</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            O agente deliberadamente<br>parou ou impediu o resultado<br>→ Verificar Art. 15 CP<br><strong>→ Passo 2</strong>
+          </div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:130px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">Inidoneidade ABSOLUTA</div>
+          <div class="flow-node flow-box-teal" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Meio absolutamente ineficaz<br>ou objeto absolutamente impróprio<br>→ <strong>CRIME IMPOSSÍVEL</strong><br>Art. 17 CP — Atípico
+          </div>
+          <div class="flow-connector-line" style="height:20px;"></div>
+          <div class="flow-end-gold" style="font-size:0.7rem;padding:0.5rem 1rem;">Art. 17 CP — Fato Atípico</div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <!-- Passo 2 -->
+      <div class="flow-node flow-box-navy" style="max-width:560px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 2 — O agente ESGOTOU todos os atos executórios que pretendia?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Critério central para distinguir desistência voluntária de arrependimento eficaz</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — atos não esgotados<br>(tentativa imperfeita)</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;min-width:200px;">
+            Agente interrompeu a execução<br>antes de concluí-la<br>→ Verificar Passo 3<br><strong>Possível DESISTÊNCIA VOLUNTÁRIA</strong>
+          </div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:100px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">SIM — atos esgotados<br>(tentativa perfeita)</div>
+          <div class="flow-node flow-box-blue" style="font-size:0.76rem;text-align:center;min-width:200px;">
+            Agente completou todos os atos<br>mas agiu para impedir resultado<br>→ Verificar Passo 4<br><strong>Possível ARREPENDIMENTO EFICAZ</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <!-- Passo 3 - Desistência Voluntária -->
+      <div class="flow-node flow-box-navy" style="max-width:560px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 3 — DESISTÊNCIA VOLUNTÁRIA — A interrupção foi VOLUNTÁRIA?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Fórmula de Frank: "Podia prosseguir, mas não quis"? → Voluntária. "Queria, mas não pôde"? → Tentativa.</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — fator externo impediu</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Obstáculo externo impediu<br>a continuação<br>→ <strong>TENTATIVA</strong> — Art. 14, II, CP<br><small>(não desistência)</small>
+          </div>
+          <div class="flow-connector-line" style="height:18px;"></div>
+          <div class="flow-end-red" style="font-size:0.7rem;padding:0.5rem 1rem;">Tentativa — Art. 14, II CP</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:120px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">SIM — decisão livre do agente</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            <strong>DESISTÊNCIA VOLUNTÁRIA</strong><br>Art. 15, 1.ª parte, CP<br><small>Não responde por tentativa<br>do crime pretendido</small>
+          </div>
+          <div class="flow-connector-line" style="height:18px;"></div>
+          <div class="flow-end-green" style="font-size:0.7rem;padding:0.5rem 1rem;">Art. 15 — Responde só pelos atos praticados</div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <!-- Passo 4 - Arrependimento Eficaz -->
+      <div class="flow-node flow-box-navy" style="max-width:560px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 4 — ARREPENDIMENTO EFICAZ — A conduta do agente EFETIVAMENTE impediu o resultado?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">O agente agiu voluntariamente E sua ação foi causalmente eficaz para evitar o resultado?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — resultado ocorreu mesmo assim</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Arrependimento INEFICAZ<br>→ Crime <strong>CONSUMADO</strong><br>Art. 14, I, CP<br><small>Esforço pode ser atenuante genérica</small>
+          </div>
+          <div class="flow-connector-line" style="height:18px;"></div>
+          <div class="flow-end-red" style="font-size:0.7rem;padding:0.5rem 1rem;">Crime Consumado — Art. 14, I CP</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:130px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — terceiro impediu (não o agente)</div>
+          <div class="flow-node flow-box-purple" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Resultado não ocorreu, mas<br>por fator externo (não o agente)<br>→ <strong>TENTATIVA</strong> — Art. 14, II<br><small>Sem arrependimento eficaz</small>
+          </div>
+          <div class="flow-connector-line" style="height:18px;"></div>
+          <div class="flow-end-red" style="font-size:0.7rem;padding:0.5rem 1rem;">Tentativa — Art. 14, II CP</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:130px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">SIM — agente impediu eficazmente</div>
+          <div class="flow-node flow-box-blue" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            <strong>ARREPENDIMENTO EFICAZ</strong><br>Art. 15, 2.ª parte, CP<br><small>Não responde por tentativa<br>do crime pretendido</small>
+          </div>
+          <div class="flow-connector-line" style="height:18px;"></div>
+          <div class="flow-end-blue" style="font-size:0.7rem;padding:0.5rem 1rem;">Art. 15 — Responde só pelos atos praticados</div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <!-- Passo 5 - Responsabilidade remanescente -->
+      <div class="flow-node flow-box-navy" style="max-width:560px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 5 — RESPONSABILIDADE REMANESCENTE — Os atos praticados configuram crime autônomo?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Art. 15: "só responde pelos atos já praticados" — verificar se há tipo penal consumado</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">NÃO configuram crime autônomo</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Agente <strong>não responde</strong><br>por nenhum crime<br><small>Fato atípico ao final</small>
+          </div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:90px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">SIM — configuram crime consumado</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;min-width:175px;">
+            Agente responde pelo(s)<br>crime(s) autônomo(s)<br>consumado(s)<br><small>Ex.: lesão, ameaça, dano</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-node flow-end-gold" style="max-width:520px;">
+        Art. 15 CP aplicado · "Ponte de Ouro" efetivada · Responsabilidade remanescente determinada
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- 5. FÓRMULA DE FRANK                           -->
+<!-- ══════════════════════════════════════════════ -->
+<section class="section" id="frank">
+  <div class="section-header">
+    <div class="section-num">05</div>
+    <div class="section-title"><span>Critério Decisivo</span>Fórmula de Frank — Voluntariedade na Desistência</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card" style="border-top:4px solid var(--green-accent);background:var(--gold-pale);">
+      <h3 style="color:#7a5a00;">⭐ A Fórmula de Frank — Explicação Completa</h3>
+      <p>Desenvolvida pelo penalista alemão <strong>Reinhard Frank</strong>, a fórmula é o principal critério doutrinário para verificar a voluntariedade da desistência (art. 15 CP) e distingui-la da tentativa (art. 14, II, CP):</p>
+      <div class="divider"></div>
+      <div style="display:flex;flex-direction:column;gap:0.7rem;margin-top:0.5rem;">
+        <div style="background:var(--green-accent);color:white;border-radius:6px;padding:0.85rem 1rem;">
+          <strong style="font-size:0.9rem;">"Posso prosseguir, mas NÃO QUERO"</strong>
+          <p style="font-size:0.83rem;margin-top:0.3rem;color:rgba(255,255,255,0.9);">→ <strong>DESISTÊNCIA VOLUNTÁRIA</strong> — Art. 15 CP<br>O agente tem capacidade e possibilidade de continuar, mas livremente opta por não fazê-lo. A motivação é irrelevante.</p>
+        </div>
+        <div style="background:var(--red-accent);color:white;border-radius:6px;padding:0.85rem 1rem;">
+          <strong style="font-size:0.9rem;">"QUERO prosseguir, mas não posso"</strong>
+          <p style="font-size:0.83rem;margin-top:0.3rem;color:rgba(255,255,255,0.9);">→ <strong>TENTATIVA</strong> — Art. 14, II, CP<br>Um fator externo à vontade do agente impede a continuação da execução. O agente quer consumar, mas não consegue.</p>
+        </div>
+      </div>
+      <div class="alert alert-gold mt2" style="font-size:0.81rem;">
+        <div>🎯 <strong>Aplicação prática:</strong> Agente que para porque ouviu sirene de polícia aproximando-se — ainda tinha meios e capacidade física de prosseguir → "podia, mas não quis" (medo da polícia não elimina a voluntariedade) → desistência voluntária, segundo a maioria da doutrina brasileira (Masson, Greco, Capez). Posição minoritária (Bitencourt): o medo de ser preso pode eliminar a voluntariedade se tornar o prosseguimento "psicologicamente impossível".</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>📐 Casos-Limite de Voluntariedade — Debate Doutrinário</h3>
+      <div style="display:flex;flex-direction:column;gap:0.65rem;margin-top:0.4rem;">
+        <div style="background:var(--cream-mid);border-left:3px solid var(--green-accent);padding:0.6rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--green-accent);">✅ Voluntária (maioria):</strong> Agente para porque viu câmera de segurança. "Podia fisicamente prosseguir, mas não quis". Desistência voluntária.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--green-accent);padding:0.6rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--green-accent);">✅ Voluntária (maioria):</strong> Agente para porque terceiro o convenceu moralmente. Voluntária (não espontânea). Art. 15 CP.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid #c06000;padding:0.6rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:#c06000;">⚠️ Controvertida:</strong> Agente para porque polícia está logo atrás e certamente o prenderia se continuasse. Maioria: voluntária (podia prosseguir). Bitencourt: não voluntária se prosseguir era "impossível sem ser preso imediatamente".
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--red-accent);padding:0.6rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">❌ Não voluntária:</strong> Agente é imobilizado por terceiro. Fator externo objetivo → Tentativa → Art. 14, II.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--red-accent);padding:0.6rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">❌ Não voluntária:</strong> Arma falha repetidamente (falha do meio externo). Queria, mas não pôde → Tentativa → Art. 14, II.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--red-accent);padding:0.6rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--red-accent);">❌ Não voluntária:</strong> Vítima foge (fator externo). Queria, mas não pôde alcançar → Tentativa → Art. 14, II.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- 6. COMPARATIVO SISTÊMICO                      -->
+<!-- ══════════════════════════════════════════════ -->
+<section class="section" id="comparativo">
+  <div class="section-header">
+    <div class="section-num">06</div>
+    <div class="section-title"><span>Quadro Sinóptico</span>Art. 14 × Art. 15 × Art. 16 × Art. 17 CP — Sistema Completo</div>
+  </div>
+
+  <div style="overflow-x:auto;">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Critério</th>
+          <th>Tentativa (Art. 14, II)</th>
+          <th>Desistência Voluntária (Art. 15, 1.ª)</th>
+          <th>Arrependimento Eficaz (Art. 15, 2.ª)</th>
+          <th>Arrep. Posterior (Art. 16)</th>
+          <th>Crime Impossível (Art. 17)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hl">
+          <td>Esgotamento dos atos executórios</td>
+          <td>Pode ou não ter esgotado</td>
+          <td><strong>NÃO</strong> esgotados</td>
+          <td><strong>SIM</strong> esgotados</td>
+          <td>Crime já consumado</td>
+          <td>Irrelevante (meio/objeto inidôneo)</td>
+        </tr>
+        <tr>
+          <td>Resultado</td>
+          <td>Não ocorreu (fator externo)</td>
+          <td>Não ocorreu (agente parou)</td>
+          <td>Não ocorreu (agente impediu)</td>
+          <td>Ocorreu (crime consumado)</td>
+          <td>Não poderia ocorrer (inidoneidade absoluta)</td>
+        </tr>
+        <tr class="hl2">
+          <td>Razão da não consumação</td>
+          <td>Fator <strong>externo</strong> à vontade</td>
+          <td>Vontade do <strong>próprio agente</strong> (interrompeu atos)</td>
+          <td>Ação voluntária e <strong>eficaz</strong> do agente (impediu resultado)</td>
+          <td>—</td>
+          <td>Inidoneidade absoluta ab initio</td>
+        </tr>
+        <tr>
+          <td>Consequência jurídica</td>
+          <td>Crime tentado — pena reduzida de 1/3 a 2/3</td>
+          <td>Responde só pelos atos praticados (sem tentativa do crime pretendido)</td>
+          <td>Responde só pelos atos praticados (sem tentativa do crime pretendido)</td>
+          <td>Redução de pena de 1/3 a 2/3 (crime consumado)</td>
+          <td>Fato atípico — não há crime</td>
+        </tr>
+        <tr class="hl3">
+          <td>Natureza jurídica (majoritária)</td>
+          <td>Causa de diminuição de pena (3.ª fase)</td>
+          <td>Excludente de tipicidade quanto ao crime tentado</td>
+          <td>Excludente de tipicidade quanto ao crime tentado</td>
+          <td>Causa de diminuição de pena</td>
+          <td>Excludente de tipicidade</td>
+        </tr>
+        <tr>
+          <td>Momento de incidência</td>
+          <td>Durante execução — fator externo para antes</td>
+          <td>Durante execução — agente para voluntariamente</td>
+          <td>Após execução — antes do resultado</td>
+          <td>Após consumação — antes do recebimento da denúncia</td>
+          <td>Ab initio — meios/objeto inidôneos</td>
+        </tr>
+        <tr class="hl4">
+          <td>Exige crime sem violência?</td>
+          <td>Não</td>
+          <td>Não</td>
+          <td>Não</td>
+          <td><strong>SIM</strong> (art. 16 CP)</td>
+          <td>Não</td>
+        </tr>
+        <tr>
+          <td>Exemplos paradigmáticos</td>
+          <td>Atira para matar; vítima sobrevive por médico</td>
+          <td>Saca arma para matar; desiste voluntariamente antes de atirar</td>
+          <td>Atira; leva a vítima ao hospital e a salva voluntariamente</td>
+          <td>Furta; devolve a coisa antes da denúncia</td>
+          <td>Aponta arma sem munição para matar</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="alert alert-gold mt2">
+    <div class="alert-icon">🎯</div>
+    <div><strong>Mnemônico para o ENAM:</strong> Art. 14 II = "queria consumar, fator externo impediu". Art. 15 desistência = "podia, mas não quis" (interrompeu atos). Art. 15 arrep. eficaz = "concluiu os atos, mas voluntaria e eficazmente impediu o resultado". Art. 16 = após consumação, reparou o dano (reduz pena). Art. 17 = meio ou objeto absolutamente inidôneo (fato atípico).</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- 7. CONCURSO DE PESSOAS                        -->
+<!-- ══════════════════════════════════════════════ -->
+<section class="section" id="concurso">
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <div class="section-title"><span>Tema Complexo e Muito Cobrado</span>Art. 15 CP no Concurso de Pessoas</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>⚡ Natureza Pessoal — Comunicabilidade Limitada</h3>
+      <p>A desistência voluntária e o arrependimento eficaz são <strong>circunstâncias de natureza pessoal</strong> (subjetivas). Nos termos do art. 30 CP, as circunstâncias de caráter pessoal não se comunicam aos coautores e partícipes:</p>
+      <div class="divider"></div>
+      <div class="law-quote" style="font-size:0.84rem;">
+        <strong>Art. 30 CP:</strong> "Não se comunicam as circunstâncias e as condições de caráter pessoal, salvo quando elementares do crime."
+      </div>
+      <p class="mt2" style="font-size:0.85rem;color:var(--text-mid);"><strong>Consequência:</strong> Se um dos coautores desiste voluntariamente ou se arrepende de forma eficaz, os demais coautores <em>não</em> se beneficiam automaticamente. Cada um responde por sua conduta individualmente.</p>
+      <div class="alert alert-red mt2" style="font-size:0.81rem;">
+        <div>🔴 <strong>Ponto de atenção:</strong> Se A e B planejam um homicídio e A desiste voluntariamente antes de atirar, B que atirou e não matou responde por <strong>tentativa de homicídio</strong>. A responde apenas pelos atos que praticou (ex.: ameaça, se houver). A desistência de A não aproveita B.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>📋 Hipóteses Específicas no Concurso de Pessoas</h3>
+      <div style="display:flex;flex-direction:column;gap:0.65rem;margin-top:0.4rem;">
+        <div style="background:var(--cream-mid);border-left:3px solid var(--green-accent);padding:0.6rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--green-accent);">Caso 1 — Desistência de um coautor:</strong> A e B iniciam assalto; A desiste voluntariamente e se retira antes de qualquer ato executório seu. B consuma o roubo. → A não responde pelo roubo (desistência voluntária). Mas e se A já praticou algum ato? → responde pelos atos praticados.
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--blue-accent);padding:0.6rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--blue-accent);">Caso 2 — Arrependimento eficaz de um coautor (STJ e doutrina):</strong> A e B envenenam vítima; A se arrepende e administra antídoto (eficaz). B não agiu para impedir. Resultado: A responde apenas pelos atos praticados (lesão); B responde por tentativa de homicídio (não houve arrependimento eficaz de sua parte).
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--gold);padding:0.6rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:#7a5a00;">Caso 3 — Desistência do partícipe:</strong> A induz B a cometer homicídio; antes de B agir, A convence B a desistir (ambos desistem). Ambos se beneficiam do art. 15 CP. Se B desiste por conta própria mas A não sabia: A responde por induzimento ao crime tentado? Há debate — mas a maioria entende que, sem ato executório de B, A responde no máximo por participação tentada impunível (se não houve início de execução, não há participação punível).
+        </div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--purple-accent);padding:0.6rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--purple-accent);">Caso 4 — Arrependimento ineficaz (só de um):</strong> A e B atiram na vítima; A voluntariamente leva ao hospital, mas B impede o socorro. Vítima morre. Arrependimento de A foi ineficaz (resultado não impedido). → Ambos respondem por homicídio consumado. O esforço de A pode ser atenuante genérica.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- 8. EXEMPLOS PRÁTICOS                          -->
+<!-- ══════════════════════════════════════════════ -->
+<section class="section" id="exemplos">
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <div class="section-title"><span>Cálculos e Casos Resolvidos</span>Exemplos Práticos do Art. 15 CP</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="example-box">
+      <div class="ex-title">📌 Caso 1 — Desistência Voluntária no Homicídio</div>
+      <p style="color:rgba(255,255,255,0.85);font-size:0.84rem;">Agente A saca arma e aponta para vítima com dolo de matar. Antes de atirar, sente pena e guarda a arma. Vítima permanece ilesa.</p>
+      <div class="ex-calc">Análise:
+✅ Início de execução: SIM (sacou arma e apontou)
+✅ Atos não esgotados: SIM (não atirou)
+✅ Interrupção voluntária: SIM ("podia, mas não quis")
+✅ Resultado não ocorrido: SIM
+
+→ DESISTÊNCIA VOLUNTÁRIA — Art. 15, 1.ª parte, CP
+→ NÃO responde por tentativa de homicídio (art. 121 + 14, II)
+
+Atos já praticados — crime autônomo?
+→ Ameaça (art. 147 CP): depende se houve palavras/gestos 
+  ameaçadores antes de guardar a arma
+→ Porte ilegal de arma (Lei 10.826/03): se sem registro
+
+Resultado: se não houver atos que configurem crime
+autônomo → agente NÃO responde por nada ✅</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Caso 2 — Arrependimento Eficaz no Envenenamento</div>
+      <p style="color:rgba(255,255,255,0.85);font-size:0.84rem;">Agente A coloca veneno mortal no café da vítima (esgotou atos executórios). Vítima bebe e começa a sentir-se mal. A se arrepende, confessa à vítima e a leva ao hospital, onde recebe antídoto. Vítima sobrevive.</p>
+      <div class="ex-calc">Análise:
+✅ Atos executórios esgotados: SIM (envenenou)
+✅ Resultado ainda não ocorrido: SIM (vítima não morreu ainda)
+✅ Ação voluntária de A: SIM (levou ao hospital)
+✅ Ação EFICAZ de A: SIM (vítima sobreviveu graças a A)
+
+→ ARREPENDIMENTO EFICAZ — Art. 15, 2.ª parte, CP
+→ NÃO responde por tentativa de homicídio
+
+Atos já praticados — crime autônomo?
+→ Lesão corporal (art. 129, §2.º, III ou §1.º, I, CP):
+  a vítima sofreu danos à saúde pelo veneno (consumada)
+→ Periclitação da vida (art. 132 CP): conduta de criar 
+  perigo concreto (discutível se absorvida pela lesão)
+
+Resultado final:
+→ A responde por lesão corporal consumada ✅
+→ Não responde por tentativa de homicídio ✅</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Caso 3 — Arrependimento INEFICAZ (Crime Consumado)</div>
+      <p style="color:rgba(255,255,255,0.85);font-size:0.84rem;">Agente A envenena a vítima e, arrependido, a leva ao hospital. Apesar dos esforços médicos, vítima morre.</p>
+      <div class="ex-calc">Análise:
+✅ Atos executórios esgotados: SIM
+✅ Ação voluntária de A: SIM
+❌ Ação EFICAZ de A: NÃO — vítima MORREU
+
+→ Arrependimento INEFICAZ
+→ Crime CONSUMADO — Art. 14, I, CP
+→ A responde por homicídio doloso consumado (art. 121, caput)
+
+Atenuação possível?
+→ Não há redução de pena por arrependimento eficaz
+  (pois foi ineficaz)
+→ Pode haver atenuante genérica inominada (art. 66 CP)
+  se o esforço de A para salvar foi significativo
+→ Não se aplica art. 16 CP (homicídio é crime com violência
+  contra a pessoa — vedado o arrependimento posterior)
+
+Resultado: homicídio doloso consumado ✅</div>
+    </div>
+
+    <div class="example-box">
+      <div class="ex-title">📌 Caso 4 — Distinção com Tentativa (Fator Externo)</div>
+      <p style="color:rgba(255,255,255,0.85);font-size:0.84rem;">Agente A aponta arma para vítima. Antes de atirar, policial surge e algemou A. A "não atirou" — mas por fator externo.</p>
+      <div class="ex-calc">Análise:
+✅ Início de execução: SIM (apontou arma)
+✅ Atos não esgotados: SIM (não atirou)
+❌ Interrupção voluntária: NÃO — policial (fator EXTERNO)
+   impediu a continuação
+   "Queria, mas não pôde" → TENTATIVA
+
+→ TENTATIVA — Art. 14, II, CP
+→ A responde por tentativa de homicídio
+   (se houver animus necandi — dolo de matar)
+
+Dosimetria:
+→ Pena-base do homicídio tentado
+→ Redução de 1/3 a 2/3 pelo iter percorrido
+→ Tentativa branca + imperfeita: próximo de 2/3 de redução
+
+Compare com Caso 1:
+No Caso 1: A "podia, mas não quis" → Art. 15
+Neste caso: A "queria, mas não pôde" → Art. 14, II ✅</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- 9. JURISPRUDÊNCIA STF / STJ                   -->
+<!-- ══════════════════════════════════════════════ -->
+<section class="section" id="jurisprudencia">
+  <div class="section-header">
+    <div class="section-num">09</div>
+    <div class="section-title"><span>STF · STJ · Teses</span>Jurisprudência dos Tribunais Superiores</div>
+  </div>
+
+  <div class="alert alert-navy mt1" style="margin-bottom:1.2rem;">
+    <div class="alert-icon">ℹ️</div>
+    <div>Posições referenciadas por tema e assunto, sem numeração inventada de acórdãos, para garantia de <strong>zero alucinação</strong>. O art. 15 CP tem menor volume de Súmulas específicas que outros dispositivos, mas questões processuais e de concurso de pessoas são ricas em jurisprudência.</div>
+  </div>
+
+  <div class="juris-grid">
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Natureza Jurídica da Desistência Voluntária — Excludente de Tipicidade</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ aplica, de forma consolidada, a compreensão de que a desistência voluntária e o arrependimento eficaz são <strong>causas de exclusão da tipicidade</strong> quanto ao crime tentado pretendido — o agente simplesmente não responde pelo crime na forma tentada. Esta posição é a majoritária na doutrina brasileira (Greco, Bitencourt, Masson) e tem amparo no texto do art. 15 CP: "só responde pelos atos já praticados" — implica que o tipo do crime tentado não se configura.</p>
+        <p class="mt1">A distinção é importante para o processo penal: se a desistência é excludente de tipicidade, o juiz deve absolver (art. 386, III, CPP) o réu quanto ao crime tentado; se fosse causa de extinção de punibilidade, seria diferente a fundamentação. O STJ aplica a absolvição quanto ao crime tentado quando reconhece o art. 15 CP.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-green">Excludente de Tipicidade</span>
+          <span class="tag tag-gold">Art. 386, III, CPP</span>
+          <span class="tag tag-blue">Responsabilidade Remanescente</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <span class="juris-badge tese">Posição Consolidada</span>
+        <div class="juris-title">Voluntariedade — Medo de ser Preso Não Elimina, em Regra, a Voluntariedade</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ consolidou que a voluntariedade da desistência não é afastada pelo simples fato de o agente ter interrompido a execução em razão do medo de ser preso, da aproximação de policiais ou da presença de testemunhas — desde que o agente ainda tivesse plena capacidade física de prosseguir na execução. Se ele <em>podia prosseguir</em> mas <em>optou por não fazê-lo</em> (mesmo que motivado pelo medo), a desistência é voluntária nos termos do art. 15 CP.</p>
+        <p class="mt1">O STJ distingue: (a) medo de ser preso com capacidade de prosseguir → voluntária; (b) impossibilidade física de prosseguir pela intervenção policial (ex.: agente foi imobilizado, algemado, confrontado com força irresistível) → tentativa (art. 14, II, CP). Este entendimento segue a doutrina majoritária (Masson, Capez, Greco) e a Fórmula de Frank.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-green">Voluntariedade × Espontaneidade</span>
+          <span class="tag tag-gold">Fórmula de Frank</span>
+          <span class="tag tag-blue">Medo × Impossibilidade Física</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <div class="juris-title">Arrependimento Eficaz — Eficácia como Requisito Essencial</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ exige que o arrependimento seja <strong>eficaz</strong> — ou seja, que a conduta voluntária do agente tenha sido causalmente determinante para a não ocorrência do resultado. Se o resultado não ocorreu, mas por razão independente da conduta do agente (ex.: médico que salvou a vítima sem qualquer contribuição do agente), não há arrependimento eficaz — pode haver tentativa (art. 14, II, CP).</p>
+        <p class="mt1">Quanto à responsabilidade remanescente: o STJ reconhece que, mesmo no arrependimento eficaz, o agente responde pelos crimes que se consumaram antes de sua ação impeditiva. Ex.: agente que envenenou a vítima e depois a salvou responde por lesão corporal (gerada pelo veneno antes do antídoto), mas não por tentativa de homicídio.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-blue">Eficácia Causal</span>
+          <span class="tag tag-gold">Responsabilidade Remanescente</span>
+          <span class="tag tag-red">Arrependimento Ineficaz → Consumado</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <div class="juris-title">Art. 15 no Concurso de Pessoas — Natureza Pessoal</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ aplica, em conformidade com o art. 30 CP, o princípio da personalidade das circunstâncias subjetivas: a desistência voluntária e o arrependimento eficaz de um dos coautores <em>não beneficiam automaticamente</em> os demais. Cada participante responde por sua conduta e pelo estado em que se encontrava o iter criminis no momento de sua contribuição.</p>
+        <p class="mt1">Se um coautor desiste voluntariamente antes de praticar qualquer ato executório próprio (mas o outro prossegue), o que desistiu não responde pelo crime tentado ou consumado pelo outro. Se já praticou atos executórios, responde pelos crimes autônomos decorrentes desses atos — independentemente do resultado final causado pelo comparsa.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-blue">Art. 30 CP — Circunstâncias Pessoais</span>
+          <span class="tag tag-gold">Não Comunicabilidade</span>
+          <span class="tag tag-green">Responsabilidade Individual</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <div class="juris-title">Fundamento Constitucional da "Ponte de Ouro" — Proporcionalidade e Dignidade</div>
+      </div>
+      <div class="juris-body">
+        <p>O STF fundamenta o art. 15 CP nos princípios constitucionais da <strong>proporcionalidade</strong> (art. 5.º, XLVI, CF/88), da <strong>dignidade da pessoa humana</strong> (art. 1.º, III, CF/88) e da <strong>ressocialização</strong> (art. 5.º, XLVII e XLVIII, CF/88): o agente que voluntariamente abandona o crime ou impede o resultado demonstra menor grau de culpabilidade e menor necessidade de pena. Punir iguamente o que desistiu e o que consumou seria desproporcional e contrário à função ressocializadora da pena.</p>
+        <p class="mt1">O STF também aplica o art. 15 CP como filtro para verificar se a condenação por tentativa é proporcional: nos casos em que o agente voluntariamente abandonou o iter e não houve resultado, é cabível a revisão da condenação por tentativa para reconhecimento da desistência voluntária.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Proporcionalidade — Art. 5.º, XLVI, CF</span>
+          <span class="tag tag-gold">Dignidade da Pessoa Humana</span>
+          <span class="tag tag-blue">Ressocialização</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <div class="juris-title">Art. 15 × Art. 16 CP — Distinção Aplicada</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ distingue com clareza os dois institutos: o <strong>art. 15 CP</strong> (arrependimento eficaz) opera <em>antes da consumação</em> e exclui a tipicidade do crime tentado; o <strong>art. 16 CP</strong> (arrependimento posterior) opera <em>após a consumação</em> e apenas reduz a pena. No art. 16, exige-se: crime sem violência ou grave ameaça à pessoa; reparação do dano ou restituição da coisa; voluntariedade; até o recebimento da denúncia ou da queixa. O art. 15 não tem essas restrições — aplica-se a qualquer crime doloso onde haja execução que se possa interromper ou resultado que se possa impedir.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-blue">Art. 15 → Antes da Consumação → Exclui Tipicidade</span>
+          <span class="tag tag-gold">Art. 16 → Após Consumação → Reduz Pena</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- 10. DOUTRINA                                  -->
+<!-- ══════════════════════════════════════════════ -->
+<section class="section" id="doutrina">
+  <div class="section-header">
+    <div class="section-num">10</div>
+    <div class="section-title"><span>Doutrina Nacional</span>Principais Posições Doutrinárias</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Rogério Greco — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Greco adota a tese de que a desistência voluntária e o arrependimento eficaz são <strong>causas de exclusão da tipicidade</strong> do crime tentado — o fato simplesmente não se subsume ao tipo da tentativa. Destaca que a "Ponte de Ouro" de Von Liszt tem fundamento político-criminal: é mais vantajoso para a sociedade preservar o bem jurídico do que punir o agente pela intenção. Analisa detalhadamente a Fórmula de Frank e adota a posição de que a voluntariedade não exige espontaneidade — a desistência motivada pelo medo de ser preso ainda pode ser voluntária, desde que o agente pudesse fisicamente prosseguir. Quanto ao arrependimento eficaz, exige a eficácia causal da conduta do agente — não basta a intenção de impedir o resultado, é necessário que o impeça.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cezar Roberto Bitencourt — Tratado de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Bitencourt aprofunda a análise dogmática do art. 15 CP, distinguindo rigorosamente os dois institutos pela presença ou não do esgotamento dos atos executórios. Quanto à natureza jurídica, adota a <strong>exclusão da tipicidade</strong> — posição majoritária. Quanto à voluntariedade, é mais exigente que Greco: para Bitencourt, o medo iminente de ser preso (com possibilidade concreta e imediata de prisão) pode, em certos casos, tornar psicologicamente involuntária a desistência, aproximando-se de situações de não voluntariedade. Analisa o arrependimento eficaz com ênfase na causalidade: a conduta do agente deve ser eficientemente determinante para a não ocorrência do resultado — se o médico salva a vítima independentemente, não há arrependimento eficaz do agente.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cleber Masson — Direito Penal Esquematizado</div>
+      </div>
+      <div class="juris-body">
+        <p>Masson sistematiza o art. 15 CP de forma completa e voltada a concursos. Aponta os dois institutos com clareza: desistência voluntária = interrompeu atos executórios antes de esgotá-los; arrependimento eficaz = atos esgotados + ação eficaz para impedir o resultado. Adota a Fórmula de Frank como critério principal de voluntariedade. Quanto à natureza jurídica, alinha-se à posição majoritária: <strong>causa de exclusão da tipicidade</strong>. Destaca que os institutos do art. 15 são <em>circunstâncias de caráter pessoal</em> (art. 30 CP) — não se comunicam automaticamente aos coautores e partícipes. Apresenta o quadro comparativo com os arts. 14, 16 e 17 CP, fundamental para a distinção em provas de magistratura.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Guilherme de Souza Nucci — Código Penal Comentado</div>
+      </div>
+      <div class="juris-body">
+        <p>Nucci comenta o art. 15 CP com foco na aplicação forense. Quanto à natureza jurídica, adota a <strong>causa de exclusão da tipicidade</strong>. Analisa com profundidade o problema da voluntariedade na desistência: a pressão externa (presença policial, câmeras, testemunhas) geralmente não elimina a voluntariedade se o agente ainda tinha capacidade física de prosseguir — a voluntariedade é juízo sobre a liberdade de escolha, não sobre a ausência de pressão psicológica. Destaca a responsabilidade remanescente: o operador do direito deve identificar precisamente quais crimes autônomos os "atos já praticados" configuram — é o passo mais importante na aplicação prática do art. 15. Critica a tendência de desconsiderar a desistência voluntária quando há qualquer pressão externa sobre o agente.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Fernando Capez — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Capez apresenta o art. 15 CP de forma didática, focada nos distinções críticas para o concurso. Adota a posição de que desistência voluntária e arrependimento eficaz são causas de <strong>exclusão da tipicidade</strong> quanto ao crime tentado pretendido. Destaca o critério do esgotamento dos atos executórios como chave da distinção entre os dois institutos. Quanto à voluntariedade, segue a Fórmula de Frank e a doutrina majoritária: qualquer motivo que parta da vontade do agente é suficiente — medo, pena, conselho de terceiro, etc. Analisa a responsabilidade remanescente com exemplos práticos: entrada arrombada para furtar, desistência antes de subtrair → agente responde por dano e violação de domicílio, não por tentativa de furto.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Controvérsia: Natureza Jurídica — Tipicidade × Punibilidade × Pessoal</div>
+      </div>
+      <div class="juris-body">
+        <p>Há três posições sobre a natureza jurídica da desistência voluntária e do arrependimento eficaz:</p>
+        <ul class="mt1">
+          <li><strong>Posição A — Excludente de tipicidade (majoritária no Brasil):</strong> Greco, Bitencourt, Masson, Capez, Nucci. O fato é atípico quanto ao crime tentado — o tipo da tentativa não se completa porque o elemento "circunstâncias alheias à vontade do agente" (art. 14, II) está ausente. Consequência processual: absolvição (art. 386, III, CPP)</li>
+          <li><strong>Posição B — Causa de extinção da punibilidade (minoritária):</strong> alguns autores mais antigos. O tipo da tentativa se realiza, mas a punibilidade é extinta pela desistência/arrependimento. Consequência: extinção da punibilidade (art. 107 CP)</li>
+          <li><strong>Posição C — Causa pessoal de exclusão de pena (doutrina alemã — Strafausschließungsgrund):</strong> Roxin. O tipo e a culpabilidade estão presentes, mas o legislador renuncia à pena por razões político-criminais. Diferente das duas anteriores por manter o injusto penal</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- 11. SISTEMÁTICA                               -->
+<!-- ══════════════════════════════════════════════ -->
+<section class="section" id="sistematica">
+  <div class="section-header">
+    <div class="section-num">11</div>
+    <div class="section-title"><span>Conexões Sistemáticas</span>Art. 15 CP na Sistemática do Código Penal</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔗 Artigos Diretamente Conectados ao Art. 15 CP</h3>
+      <ul>
+        <li><strong>Art. 14, II, CP (Tentativa):</strong> art. 15 é exceção ao art. 14 — onde haveria tentativa, a voluntariedade do agente transforma em desistência/arrependimento. São lidos sempre em conjunto</li>
+        <li><strong>Art. 16 CP (Arrependimento posterior):</strong> opera após a consumação (≠ art. 15, que opera antes) — reduz pena, não exclui tipo. Diferença essencial para provas</li>
+        <li><strong>Art. 17 CP (Crime impossível):</strong> terceiro "escape" da tentativa: inidoneidade absoluta (≠ art. 15, que exige atos idôneos interrompidos/impedidos)</li>
+        <li><strong>Art. 29 CP (Concurso de pessoas):</strong> cada coautor/partícipe é analisado individualmente quanto ao art. 15 — natureza pessoal da desistência/arrependimento</li>
+        <li><strong>Art. 30 CP (Comunicabilidade):</strong> circunstâncias de caráter pessoal não se comunicam → a desistência de um não aproveita automaticamente os demais</li>
+        <li><strong>Art. 13, §2.º, CP (Garantidor):</strong> o garante omissivo que desiste voluntariamente de praticar o crime omissivo (age para impedir o resultado que sua omissão criaria) → arrependimento eficaz por omissão</li>
+        <li><strong>Art. 68 CP (Dosimetria):</strong> nos casos de responsabilidade remanescente, a pena dos crimes autônomos segue a dosimetria normal — sem redução da tentativa (art. 14, §único)</li>
+        <li><strong>Art. 107 CP (Extinção da punibilidade):</strong> se a desistência for entendida como extinção da punibilidade (posição minoritária), aplicar-se-ia este artigo; para a maioria, é excludente de tipicidade (art. 386, III, CPP)</li>
+        <li><strong>Art. 386, III, CPP (Absolvição):</strong> fundamentação adequada da absolvição quando reconhecido o art. 15 CP como excludente de tipicidade</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🔄 Resumo Mnemônico para Prova</h3>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.84rem;line-height:1.9;">
+        <p><strong style="color:var(--gold-light);">Art. 15, 1.ª parte → DESISTÊNCIA VOLUNTÁRIA</strong><br>
+        Atos: iniciados mas NÃO esgotados<br>
+        Interrompeu por vontade própria<br>
+        "Podia, mas não quis" (Frank)<br>
+        → Não responde por tentativa</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.6rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Art. 15, 2.ª parte → ARREPENDIMENTO EFICAZ</strong><br>
+        Atos: iniciados e ESGOTADOS<br>
+        Impediu o resultado voluntaria e EFICAZMENTE<br>
+        → Não responde por tentativa</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.6rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Em ambos: responsabilidade remanescente</strong><br>
+        "Só responde pelos atos já praticados"<br>
+        → Verificar crimes autônomos consumados</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.6rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Voluntariedade ≠ Espontaneidade</strong><br>
+        Motivo irrelevante — o que importa:<br>
+        podia prosseguir + optou por não fazê-lo</p>
+        <div style="height:1px;background:rgba(200,150,12,0.3);margin:0.6rem 0;"></div>
+        <p><strong style="color:var(--gold-light);">Natureza jurídica (majoritária):</strong><br>
+        Excludente de tipicidade<br>
+        Absolvição → Art. 386, III, CPP</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-3 mt2">
+    <div class="card">
+      <h3>⚡ Desistência em Crimes Habituais e Permanentes</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">Nos <strong>crimes permanentes</strong> (ex.: sequestro — art. 148 CP), a consumação se prolonga no tempo. Se o agente libera a vítima voluntariamente antes que circunstância externa force a libertação, há desistência voluntária (ou arrependimento eficaz, se a consumação estava em pleno curso e o agente agiu para cessar o estado antijurídico). A doutrina aplica o art. 15 CP nesses casos. Nos <strong>crimes habituais</strong>, a desistência opera-se com o abandono da habitualidade — um único ato de cessação voluntária não configura a tentativa por não haver atos executórios "fracionáveis".</p>
+    </div>
+    <div class="card">
+      <h3>📅 Art. 15 CP e Prescrição</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">Se o agente desistiu voluntariamente e responde apenas pelos crimes autônomos praticados, a prescrição incidirá sobre as penas máximas dos crimes autônomos — e não sobre o crime tentado (do qual foi absolvido). O dies a quo da prescrição dos crimes autônomos remanescentes é a data do crime consumado correspondente aos atos praticados (art. 111, I, CP). O reconhecimento do art. 15 CP impacta diretamente os prazos prescricionais, geralmente reduzindo-os (pois os crimes autônomos têm penas menores que o crime tentado pretendido).</p>
+    </div>
+    <div class="card">
+      <h3>🌉 Aplicação no Tribunal do Júri</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);">A desistência voluntária tem impacto direto na <strong>competência do Tribunal do Júri</strong>: se reconhecida pelo juiz da pronúncia, a desclassificação da tentativa de homicídio para crimes menores (ameaça, lesão corporal) transfere a competência do Júri para o Juízo Singular. O juiz da pronúncia deve verificar se os elementos da desistência voluntária estão presentes para, eventualmente, desclassificar o crime — respeitando o <em>in dubio pro societate</em> (qualquer dúvida sobre o dolo de matar mantém a pronúncia por tentativa de homicídio).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- PROVA / ENAM                                  -->
+<!-- ══════════════════════════════════════════════ -->
+<section id="prova" class="prova-section">
+  <h2>⚖️ Pontos Cobrados em Magistratura e ENAM</h2>
+  <p class="intro">Questões, teses e pegadinhas recorrentes nos concursos de Juiz de Direito, ENAM e equivalentes relacionadas ao Art. 15 CP.</p>
+
+  <div class="prova-items">
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">01</span>Quais são os dois institutos previstos no art. 15 CP? Qual o critério que os distingue entre si?</div>
+      <div class="prova-item-a"><strong>Desistência voluntária</strong> (art. 15, 1.ª parte): o agente inicia a execução, mas interrompe voluntariamente os atos executórios <em>antes de esgotá-los</em>. <strong>Arrependimento eficaz</strong> (art. 15, 2.ª parte): o agente já esgotou todos os atos executórios, mas voluntaria e eficazmente impede que o resultado se produza. O critério que os distingue é o <em>esgotamento ou não dos atos executórios</em> no momento da atuação voluntária do agente: atos não esgotados = desistência voluntária; atos esgotados = arrependimento eficaz. Em ambos os casos, o agente responde apenas pelos atos já praticados (responsabilidade remanescente).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">02</span>O art. 15 CP exige que a desistência seja espontânea ou apenas voluntária? Qual a diferença?</div>
+      <div class="prova-item-a">O art. 15 CP exige apenas <strong>voluntariedade</strong> — não exige espontaneidade. <strong>Voluntária</strong> significa que a decisão partiu da livre vontade do agente, que tinha plena capacidade de prosseguir, mas optou por não fazê-lo. A motivação é irrelevante: pode ser pena da vítima, medo de ser preso, conselho de terceiro ou qualquer outro motivo. <strong>Espontânea</strong> significa que a decisão nasceu sem qualquer influência externa — o agente desistiu "por conta própria". A espontaneidade é mais restritiva que a voluntariedade. Como o art. 15 exige apenas voluntariedade, a desistência provocada por conselho de terceiro é válida para aplicação do art. 15 CP.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">03</span>Explique a Fórmula de Frank e como ela se aplica à distinção entre tentativa e desistência voluntária.</div>
+      <div class="prova-item-a">A <strong>Fórmula de Frank</strong> é o principal critério doutrinário: <em>"Posso prosseguir, mas não quero"</em> = <strong>desistência voluntária</strong> (art. 15 CP) — o agente tinha capacidade física de continuar, mas livremente optou por não fazê-lo; <em>"Quero prosseguir, mas não posso"</em> = <strong>tentativa</strong> (art. 14, II, CP) — um fator externo impede a continuação. Aplicação prática: agente que para porque ouviu sirene de polícia, mas ainda tinha plena capacidade de atirar → "podia, mas não quis" → desistência voluntária. Agente que é imobilizado por policial → "queria, mas não pôde" → tentativa. O critério não é a presença ou ausência de pressão externa, mas se o agente mantinha capacidade física de prosseguir.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">04</span>Qual a consequência jurídica da desistência voluntária e do arrependimento eficaz? O agente fica completamente impune?</div>
+      <div class="prova-item-a"><strong>Não necessariamente.</strong> O art. 15 CP não gera impunidade total — apenas exclui a responsabilidade pelo crime tentado pretendido. O agente <em>"só responde pelos atos já praticados"</em>. Se os atos praticados até a desistência/arrependimento configurarem algum crime autônomo consumado, o agente responde por ele. Ex.: agente que sacou arma, ameaçou a vítima e então desistiu de matar → não responde por tentativa de homicídio, mas <em>responde por ameaça</em> (art. 147 CP). Agente que envenenou e depois administrou antídoto → não responde por tentativa de homicídio, mas <em>responde por lesão corporal</em> (art. 129 CP). Somente se os atos praticados não configurarem crime autônomo é que o agente ficará totalmente impune.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">05</span>O arrependimento eficaz exige que o próprio agente impeça o resultado, ou basta que o resultado não ocorra?</div>
+      <div class="prova-item-a">O arrependimento eficaz exige que o <strong>próprio agente</strong>, por conduta voluntária e <strong>eficaz</strong>, impeça o resultado. Não basta que o resultado não ocorra por razão alheia ao agente. Se a vítima sobrevive porque um terceiro (médico, outra pessoa) a salvou — sem nenhuma contribuição causal do agente — não há arrependimento eficaz; pode haver tentativa (art. 14, II, CP). A causalidade entre a conduta do agente e a não ocorrência do resultado é requisito essencial. Ex.: agente leva a vítima envenenada ao hospital → médico salva → há arrependimento eficaz (a conduta de levar foi causal para o salvamento). Agente abandona a vítima e terceiro a encontra e salva → não há arrependimento eficaz → tentativa.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">06</span>Qual a natureza jurídica da desistência voluntária e do arrependimento eficaz segundo a doutrina majoritária?</div>
+      <div class="prova-item-a">Segundo a <strong>doutrina majoritária brasileira</strong> (Greco, Bitencourt, Masson, Capez, Nucci), tanto a desistência voluntária quanto o arrependimento eficaz são <strong>causas de exclusão da tipicidade</strong> quanto ao crime tentado pretendido. O fundamento: o tipo da tentativa (art. 14, II, CP) exige que a não consumação se deva a "circunstâncias alheias à vontade do agente" — quando a não consumação decorre da própria vontade do agente, esse elemento está ausente, tornando o fato atípico quanto à tentativa. Consequência processual: o juiz deve <em>absolver</em> o réu quanto ao crime tentado com base no art. 386, III, CPP (fato não constitui infração penal). A posição minoritária entende ser causa de extinção da punibilidade (art. 107 CP).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">07</span>A desistência voluntária de um coautor beneficia os demais coautores do crime?</div>
+      <div class="prova-item-a"><strong>Não automaticamente.</strong> A desistência voluntária e o arrependimento eficaz são <strong>circunstâncias de caráter pessoal</strong> (subjetivas) e, nos termos do art. 30 CP, não se comunicam aos coautores e partícipes. Cada participante responde por sua conduta e pelo estado do iter criminis em que se encontrava quando atuou. Ex.: se A desiste voluntariamente antes de praticar qualquer ato executório e B prossegue e mata a vítima — A não responde pelo homicídio tentado ou consumado; B responde pelo homicídio. A desistência de A não aproveita B. Da mesma forma, se A e B envenenaram juntos a vítima, e apenas A administra antídoto eficazmente — A responde apenas pelos atos praticados (lesão); B responde por tentativa de homicídio (não se beneficia do arrependimento eficaz de A).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">08</span>Qual a diferença entre arrependimento eficaz (art. 15) e arrependimento posterior (art. 16 CP)?</div>
+      <div class="prova-item-a"><strong>Arrependimento eficaz (art. 15, 2.ª parte):</strong> opera <em>antes da consumação</em> do crime pretendido; o agente esgotou os atos executórios, mas voluntaria e eficazmente impede o resultado; <em>exclui a tipicidade</em> do crime tentado; agente responde apenas pelos atos praticados; aplica-se a qualquer crime doloso. <strong>Arrependimento posterior (art. 16 CP):</strong> opera <em>após a consumação</em>; o crime já se consumou; o agente repara o dano ou restitui a coisa; <em>não exclui o crime</em> — apenas <em>reduz a pena de 1/3 a 2/3</em>; aplica-se apenas a crimes sem violência ou grave ameaça; deve ocorrer até o recebimento da denúncia ou queixa. São institutos opostos: um impede a consumação (exclui tipo tentado); o outro ocorre após a consumação (reduz pena).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">09</span>[ENAM — alta recorrência] Agente entra armado em banco para roubar. Ao ver a agência lotada, decide não roubar e sai. O que responde?</div>
+      <div class="prova-item-a">Análise do iter criminis: o agente entrou armado no banco — isso <em>pode ou não</em> configurar início de execução, dependendo da teoria adotada e das circunstâncias. Pela teoria objetivo-material: entrar no banco já pode ser ato executório (ato imediatamente anterior ao verbo "subtrair" segundo o plano do agente). Se sim → havia início de execução → o agente que saiu voluntariamente praticou <strong>desistência voluntária</strong> (art. 15, 1.ª parte). Responsabilidade remanescente: os atos praticados (entrar armado no banco) podem configurar <strong>porte ilegal de arma de fogo</strong> (Lei 10.826/03) se sem autorização — crime autônomo que subsiste. <strong>Não responde por tentativa de roubo</strong>. Se a teoria objetivo-formal for aplicada (início só com o verbo "subtrair"), o agente ainda estava em fase preparatória ao sair → fato atípico. A teoria objetivo-material é majoritária → desistência voluntária.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">10</span>Agente dispara em vítima com dolo de matar, arrependido a leva ao hospital. Vítima sobrevive graças à intervenção médica iniciada pelo próprio agente. Qual o crime?</div>
+      <div class="prova-item-a">Trata-se de <strong>arrependimento eficaz</strong> (art. 15, 2.ª parte, CP): o agente esgotou os atos executórios (disparou), mas voluntariamente levou a vítima ao hospital — conduta causalmente eficaz para a sobrevivência. Resultado: <strong>não</strong> responde por tentativa de homicídio (art. 121 + art. 14, II, CP). Responsabilidade remanescente: os disparos que atingiram a vítima causaram <strong>lesão corporal consumada</strong> — o agente responde por lesão corporal (art. 129 CP), na modalidade correspondente à gravidade das lesões. A gravidade das lesões determina qual § do art. 129 se aplica (leve, grave, gravíssima). O crime de lesão corporal estava consumado antes do arrependimento — não pode ser "desfeito".</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">11</span>Qual o impacto do reconhecimento da desistência voluntária na competência do Tribunal do Júri?</div>
+      <div class="prova-item-a">O reconhecimento da desistência voluntária (art. 15 CP) impacta diretamente a <strong>competência</strong>: se o juiz da pronúncia reconhece que o agente desistiu voluntariamente de matar (art. 15 CP), a conduta deixa de ser tentativa de homicídio doloso (crime doloso contra a vida → Júri) e passa a ser desclassificada para os crimes autônomos remanescentes (ameaça, lesão corporal, etc. → Juízo Singular). Na fase de pronúncia, o juiz deve observar o <em>in dubio pro societate</em>: qualquer dúvida sobre a voluntariedade da desistência deve levar à manutenção da pronúncia por tentativa de homicídio — remetendo a questão ao Júri para decidir no mérito. A desclassificação pela desistência voluntária só ocorre quando ela está <em>clara e incontroversa</em> nos autos.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">12</span>[ENAM — questão integrada de alta dificuldade] A e B planejam matar C com veneno. A coloca o veneno na bebida de C; B deveria dar a bebida à vítima. Antes de B servir a bebida, A se arrepende e avisa C, que não bebe. B não sabia do aviso e estava pronto para servir. Identifique as responsabilidades penais.</div>
+      <div class="prova-item-a">Análise: <strong>Para A:</strong> A praticou ato executório (colocar o veneno). Depois agiu voluntariamente para impedir o resultado (avisou a vítima → ela não bebeu → resultado não ocorreu). A conduta de A foi eficazmente causal para a não ocorrência do resultado → <strong>arrependimento eficaz</strong> (art. 15, 2.ª parte, CP). A não responde por tentativa de homicídio. Responsabilidade remanescente: os atos de A (envenenar a bebida) não causaram lesão (C não bebeu) → se não há crime autônomo configurado, A pode não responder por nada. <strong>Para B:</strong> B não beneficia do arrependimento eficaz de A (circunstância pessoal — art. 30 CP). B praticou atos executórios (estava pronto para servir a bebida envenenada). O resultado não ocorreu — mas por qual razão? Pelo aviso de A (fator externo à vontade de B). B não desistiu voluntariamente → <strong>tentativa de homicídio</strong> (art. 121 + art. 14, II, CP). B responde por tentativa, com pena reduzida de 1/3 a 2/3.</div>
+    </div>
+
+  </div>
+</section>
+
+</div><!-- /page-wrap -->
+
+<footer>
+  <strong>Art. 15.º do Código Penal Brasileiro</strong> — Decreto-Lei n.º 2.848/1940<br>
+  Material elaborado para preparação à Magistratura / ENAM · Doutrina e jurisprudência consolidadas · Atualizado 2025
+</footer>
+
+</body>
+</html>

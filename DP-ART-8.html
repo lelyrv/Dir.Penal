@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 8º CP — Pena Cumprida no Estrangeiro | Magistratura ENAM</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a;
+    --navy-mid: #1a2f45;
+    --navy-light: #243b55;
+    --gold: #c8960c;
+    --gold-light: #e8b84b;
+    --gold-pale: #fdf3d8;
+    --cream: #faf7f2;
+    --cream-mid: #f0ebe2;
+    --text-dark: #1a1208;
+    --text-mid: #3d3020;
+    --text-soft: #6b5c40;
+    --border: #d4c49a;
+    --border-light: #e8dcbf;
+    --red-accent: #8b1a1a;
+    --green-accent: #1a4a2e;
+    --blue-accent: #1a3a5c;
+    --shadow: 0 4px 24px rgba(13,27,42,0.10);
+    --shadow-lg: 0 8px 40px rgba(13,27,42,0.18);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  /* ── NAV ── */
+  #top-nav {
+    position: sticky; top: 0; z-index: 999;
+    background: var(--navy);
+    border-bottom: 3px solid var(--gold);
+    padding: 0 1.5rem;
+    display: flex; align-items: center; gap: 0;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  #top-nav::-webkit-scrollbar { display: none; }
+  #top-nav .nav-brand {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold-light); font-size: 0.9rem; font-weight: 700;
+    white-space: nowrap;
+    padding: 0.85rem 1.2rem 0.85rem 0;
+    border-right: 1px solid rgba(200,150,12,0.3);
+    margin-right: 0.5rem; letter-spacing: 0.5px;
+  }
+  #top-nav a {
+    color: rgba(255,255,255,0.75); text-decoration: none;
+    font-size: 0.72rem; font-family: 'Source Serif 4', serif;
+    font-weight: 600; letter-spacing: 0.6px; text-transform: uppercase;
+    padding: 0.85rem 0.8rem; white-space: nowrap;
+    transition: color .2s, background .2s;
+    border-bottom: 3px solid transparent; margin-bottom: -3px;
+  }
+  #top-nav a:hover { color: var(--gold-light); border-bottom-color: var(--gold); }
+
+  /* ── HERO ── */
+  #hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1e3d5c 100%);
+    color: white; padding: 3.5rem 2rem 3rem;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  #hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: repeating-linear-gradient(45deg,
+      rgba(200,150,12,0.03) 0px, rgba(200,150,12,0.03) 1px,
+      transparent 1px, transparent 40px);
+  }
+  #hero .badge {
+    display: inline-block;
+    background: rgba(200,150,12,0.15); border: 1px solid rgba(200,150,12,0.5);
+    color: var(--gold-light); font-size: 0.72rem; letter-spacing: 2px;
+    text-transform: uppercase; padding: 0.35rem 1rem; border-radius: 2px;
+    margin-bottom: 1.2rem; font-family: 'Source Serif 4', serif; font-weight: 600;
+  }
+  #hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900;
+    line-height: 1.15; margin-bottom: 0.6rem; letter-spacing: -0.5px;
+  }
+  #hero h1 span { color: var(--gold-light); }
+  #hero .subtitle {
+    font-size: 1rem; color: rgba(255,255,255,0.65);
+    font-style: italic; margin-bottom: 1.5rem;
+  }
+  #hero .law-box {
+    display: inline-block;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(200,150,12,0.4); border-left: 4px solid var(--gold);
+    color: rgba(255,255,255,0.9); font-family: 'Source Serif 4', serif;
+    font-size: 0.95rem; font-style: italic; padding: 1rem 1.5rem;
+    max-width: 740px; text-align: left; line-height: 1.7;
+    border-radius: 0 4px 4px 0;
+  }
+  #hero .law-box strong {
+    color: var(--gold-light); font-style: normal; display: block;
+    font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.4rem;
+  }
+
+  /* ── LAYOUT ── */
+  .page-wrap { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+  /* ── SECTIONS ── */
+  .section { margin-top: 3.5rem; scroll-margin-top: 56px; }
+  .section-header {
+    display: flex; align-items: center; gap: 1rem;
+    margin-bottom: 1.5rem; padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-num {
+    font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900;
+    color: var(--border); line-height: 1; min-width: 2.5rem;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif; font-size: 1.35rem;
+    font-weight: 700; color: var(--navy); line-height: 1.2;
+  }
+  .section-title span {
+    display: block; font-size: 0.75rem; font-family: 'Source Serif 4', serif;
+    font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--gold); font-style: normal;
+  }
+
+  /* ── CARDS ── */
+  .card {
+    background: white; border: 1px solid var(--border-light);
+    border-radius: 6px; padding: 1.4rem 1.6rem; box-shadow: var(--shadow);
+  }
+  .card-grid { display: grid; gap: 1rem; }
+  .card-grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .card-grid-2 { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+  .card h3 {
+    font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700;
+    margin-bottom: 0.6rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-light);
+  }
+  .card p, .card li { font-size: 0.88rem; line-height: 1.7; color: var(--text-mid); }
+  .card ul { padding-left: 1.1rem; }
+  .card li { margin-bottom: 0.25rem; }
+
+  /* Hypothesis cards */
+  .hyp-card { border-top: 4px solid; position: relative; overflow: hidden; }
+  .hyp-card.diversas { border-top-color: var(--blue-accent); }
+  .hyp-card.identicas { border-top-color: var(--green-accent); background: #edf7f0; }
+  .hyp-card.diversas h3 { color: var(--blue-accent); }
+  .hyp-card.identicas h3 { color: var(--green-accent); }
+
+  /* ── FLOWCHART ── */
+  .flow-wrap {
+    background: white; border: 1px solid var(--border-light);
+    border-radius: 6px; padding: 2rem 1.5rem; box-shadow: var(--shadow);
+    overflow-x: auto;
+  }
+  .flow-center { display: flex; flex-direction: column; align-items: center; gap: 0; }
+  .flow-node {
+    border-radius: 4px; padding: 0.65rem 1.4rem;
+    font-family: 'Source Serif 4', serif; font-size: 0.82rem; font-weight: 600;
+    text-align: center; min-width: 220px; max-width: 460px; position: relative;
+  }
+  .flow-start {
+    background: var(--navy); color: white; border-radius: 50px;
+    font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase;
+  }
+  .flow-end {
+    background: var(--gold); color: var(--navy); border-radius: 50px;
+    font-size: 0.78rem; font-weight: 700; padding: 0.7rem 2rem;
+  }
+  .flow-box-navy { background: var(--navy-mid); color: white; border-left: 4px solid var(--gold); font-size: 0.8rem; }
+  .flow-box-green { background: #edf7f0; border: 1px solid #7ec89a; border-left: 4px solid var(--green-accent); color: var(--text-dark); }
+  .flow-box-blue  { background: #edf2f8; border: 1px solid #8eb4d8; border-left: 4px solid var(--blue-accent); color: var(--text-dark); }
+  .flow-box-red   { background: #fdf0f0; border: 1px solid #e09090; border-left: 4px solid var(--red-accent); color: var(--text-dark); }
+  .flow-box-gold  { background: var(--gold-pale); border: 2px solid var(--gold); color: var(--text-dark); }
+  .flow-arrow { font-size: 1.3rem; color: var(--border); line-height: 1; margin: 0.15rem 0; }
+  .flow-row {
+    display: flex; align-items: flex-start; gap: 1.5rem;
+    width: 100%; justify-content: center; flex-wrap: wrap;
+  }
+  .flow-branch { display: flex; flex-direction: column; align-items: center; gap: 0; flex: 1; min-width: 200px; }
+  .flow-label {
+    font-size: 0.68rem; color: var(--text-soft); font-weight: 600;
+    letter-spacing: 0.5px; text-transform: uppercase;
+    background: var(--cream-mid); padding: 0.15rem 0.5rem;
+    border-radius: 2px; margin: 0.15rem 0;
+  }
+  .flow-connector-line { width: 1px; height: 28px; background: var(--border); }
+
+  /* ── TABLE ── */
+  .comp-table {
+    width: 100%; border-collapse: collapse; font-size: 0.84rem;
+    background: white; box-shadow: var(--shadow); border-radius: 6px; overflow: hidden;
+  }
+  .comp-table thead { background: var(--navy); color: white; }
+  .comp-table thead th {
+    padding: 0.85rem 1rem; font-family: 'Source Serif 4', serif;
+    font-weight: 600; letter-spacing: 0.5px; font-size: 0.8rem; text-align: left;
+  }
+  .comp-table thead th:first-child { color: var(--gold-light); }
+  .comp-table tbody tr { border-bottom: 1px solid var(--border-light); }
+  .comp-table tbody tr:last-child { border-bottom: none; }
+  .comp-table tbody tr:nth-child(even) { background: var(--cream); }
+  .comp-table td { padding: 0.75rem 1rem; color: var(--text-mid); vertical-align: top; }
+  .comp-table td:first-child { font-weight: 600; color: var(--navy); white-space: nowrap; font-size: 0.8rem; }
+  .comp-table .hl td { background: var(--gold-pale) !important; }
+
+  /* ── JURIS ── */
+  .juris-card {
+    background: white; border: 1px solid var(--border-light);
+    border-left: 5px solid; border-radius: 0 6px 6px 0;
+    padding: 1.2rem 1.4rem; box-shadow: var(--shadow);
+  }
+  .juris-card.stf { border-left-color: var(--red-accent); }
+  .juris-card.stj { border-left-color: var(--navy); }
+  .juris-card.doutrina { border-left-color: var(--gold); }
+  .juris-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
+  .juris-badge {
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px;
+    text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 2px;
+    font-family: 'Source Serif 4', serif;
+  }
+  .juris-badge.stf { background: var(--red-accent); color: white; }
+  .juris-badge.stj { background: var(--navy); color: white; }
+  .juris-badge.doutrina { background: var(--gold); color: var(--navy); }
+  .juris-badge.sumula { background: var(--green-accent); color: white; }
+  .juris-badge.tese { background: var(--blue-accent); color: white; }
+  .juris-title { font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700; color: var(--navy); }
+  .juris-body { font-size: 0.84rem; color: var(--text-mid); line-height: 1.7; }
+  .juris-body em { font-style: italic; color: var(--navy); }
+  .juris-grid { display: grid; gap: 1rem; }
+
+  /* ── ALERTS ── */
+  .alert {
+    padding: 0.9rem 1.2rem; border-radius: 4px; font-size: 0.84rem;
+    line-height: 1.7; display: flex; gap: 0.7rem; align-items: flex-start;
+  }
+  .alert-gold  { background: var(--gold-pale); border: 1px solid #d4aa3a; color: #5a4000; }
+  .alert-red   { background: #fdf0f0; border: 1px solid #e09090; color: #5a0000; }
+  .alert-navy  { background: #f0f4f8; border: 1px solid #abc; color: var(--navy); }
+  .alert-green { background: #edf7f0; border: 1px solid #7ec89a; color: #1a4a2e; }
+  .alert-icon  { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.05rem; }
+  .alert strong { font-weight: 700; }
+
+  /* ── PROVA ── */
+  .prova-section {
+    background: var(--navy); border-radius: 8px; padding: 2rem;
+    color: white; margin-top: 3.5rem; scroll-margin-top: 56px;
+  }
+  .prova-section h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--gold-light); margin-bottom: 0.5rem; }
+  .prova-section .intro { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; font-style: italic; }
+  .prova-items { display: grid; gap: 0.75rem; }
+  .prova-item {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(200,150,12,0.25);
+    border-left: 4px solid var(--gold); border-radius: 0 4px 4px 0; padding: 1rem 1.2rem;
+  }
+  .prova-item-q {
+    font-size: 0.82rem; font-weight: 600; color: var(--gold-light);
+    margin-bottom: 0.4rem; display: flex; align-items: flex-start; gap: 0.6rem;
+  }
+  .prova-item-q .qnum {
+    background: var(--gold); color: var(--navy); font-size: 0.65rem;
+    font-weight: 700; padding: 0.1rem 0.45rem; border-radius: 2px;
+    flex-shrink: 0; margin-top: 0.1rem;
+  }
+  .prova-item-a { font-size: 0.82rem; color: rgba(255,255,255,0.8); line-height: 1.65; }
+  .prova-item-a strong { color: white; }
+
+  /* ── TAGS ── */
+  .tag {
+    display: inline-block; font-size: 0.65rem; font-weight: 700;
+    letter-spacing: 0.8px; text-transform: uppercase;
+    padding: 0.15rem 0.5rem; border-radius: 2px; margin: 0.1rem;
+    font-family: 'Source Serif 4', serif;
+  }
+  .tag-blue  { background: #dce8f5; color: var(--blue-accent); }
+  .tag-green { background: #dceee3; color: var(--green-accent); }
+  .tag-gold  { background: var(--gold-pale); color: #7a5a00; border: 1px solid #d4aa3a; }
+  .tag-red   { background: #fde8e8; color: var(--red-accent); }
+
+  /* ── LAW QUOTE ── */
+  .law-quote {
+    background: var(--cream-mid); border-left: 4px solid var(--navy);
+    padding: 0.9rem 1.2rem; font-size: 0.88rem; font-style: italic;
+    color: var(--text-mid); line-height: 1.7; border-radius: 0 4px 4px 0;
+  }
+  .law-quote strong {
+    font-style: normal; color: var(--navy); font-size: 0.75rem;
+    letter-spacing: 0.5px; display: block; margin-bottom: 0.25rem;
+  }
+
+  /* ── DIVIDER ── */
+  .divider { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); margin: 1.2rem 0; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy); color: rgba(255,255,255,0.45);
+    text-align: center; padding: 1.5rem; font-size: 0.75rem;
+    border-top: 2px solid var(--gold);
+  }
+  footer strong { color: var(--gold-light); }
+
+  /* ── PRINT ── */
+  @media print {
+    #top-nav { display: none; }
+    #hero { padding: 2rem 1rem; }
+    #hero::before { display: none; }
+    .page-wrap { max-width: 100%; padding: 0 0.5rem 2rem; }
+    .section { margin-top: 2rem; page-break-inside: avoid; }
+    .card { box-shadow: none; border: 1px solid #ccc; }
+    .prova-section { background: #f0f4f8 !important; color: #000 !important; }
+    .prova-section h2 { color: #0d1b2a !important; }
+    .prova-item { background: white !important; border: 1px solid #ccc !important; }
+    .prova-item-q { color: #7a5a00 !important; }
+    .prova-item-a { color: #333 !important; }
+    footer { display: none; }
+    body { font-size: 11pt; }
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 640px) {
+    #hero { padding: 2rem 1rem; }
+    #hero h1 { font-size: 1.6rem; }
+    .card-grid-3, .card-grid-2 { grid-template-columns: 1fr; }
+    .section-title { font-size: 1.1rem; }
+    .comp-table { font-size: 0.76rem; }
+    .comp-table td, .comp-table th { padding: 0.6rem 0.7rem; }
+    .flow-node { min-width: 150px; font-size: 0.74rem; }
+  }
+
+  /* ── MISC ── */
+  .mt1 { margin-top: 0.75rem; }
+  .mt2 { margin-top: 1rem; }
+  .mt3 { margin-top: 1.5rem; }
+  .flex-gap { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: flex-start; }
+  strong { font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav id="top-nav" aria-label="Atalhos do artigo">
+  <div class="nav-brand">Art. 8º CP</div>
+
+  <div class="nav-main-links">
+    <a href="#visao-geral">Visão Geral</a>
+    <a href="#hipoteses">Hipóteses</a>
+    <a href="#fluxograma">Fluxograma</a>
+    <a href="#comparativo">Comparativo</a>
+    <a href="#ne-bis">Ne Bis In Idem</a>
+    <a href="#jurisprudencia">Juris. STF/STJ</a>
+    <a href="#doutrina">Doutrina</a>
+    <a href="#constitucional">Constitucional</a>
+    <a href="#sistematica">Sistemática</a>
+    <a href="#prova" class="nav-prova">Prova</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<header id="hero">
+  <div class="badge">Código Penal · Título I · Aplicação da Lei Penal</div>
+  <h1>Art. 8º — <span>Pena Cumprida no Estrangeiro</span></h1>
+  <p class="subtitle">Ne Bis In Idem Atenuado · Detração Internacional · Magistratura · ENAM · Concurso Juiz de Direito</p>
+  <div class="law-box">
+    <strong>Art. 8.º do Decreto-Lei n.º 2.848/1940 (Código Penal)</strong>
+    "A pena cumprida no estrangeiro atenua a pena imposta no Brasil pelo mesmo crime, quando diversas, ou nela é computada, quando idênticas."
+  </div>
+</header>
+
+<div class="page-wrap">
+
+<!-- ══════════════════════════════════════════════════ -->
+<!-- 1. VISÃO GERAL                                     -->
+<!-- ══════════════════════════════════════════════════ -->
+<section class="section" id="visao-geral">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div class="section-title"><span>Introdução &amp; Sistemática</span>Visão Geral do Artigo</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📍 Finalidade e Posição Sistemática</h3>
+      <p>O art. 8.º integra o <strong>Título I do Código Penal</strong> ("Da Aplicação da Lei Penal") e representa a resposta do legislador ao problema gerado pela <strong>Teoria da Ubiquidade</strong> (art. 6.º CP) e pela <strong>Extraterritorialidade</strong> (art. 7.º CP): ambas permitem que o Brasil aplique sua lei penal a fatos conectados ao exterior, o que pode resultar em julgamento e punição simultâneos por dois ou mais Estados.</p>
+      <p class="mt2">O dispositivo consagra o chamado <strong>ne bis in idem atenuado</strong> (ou mitigado) no direito penal brasileiro: não veda a dupla condenação, mas impede a dupla expiação efetiva da pena, determinando que o cumprimento da pena no exterior seja levado em conta na pena aplicada no Brasil.</p>
+    </div>
+    <div class="card">
+      <h3>🏛️ Natureza Jurídica e Pressupostos</h3>
+      <ul>
+        <li><strong>Norma de equidade e humanidade:</strong> evita punição desproporcional pelo mesmo fato</li>
+        <li><strong>Norma de Direito Penal material:</strong> afeta a pena em si (não é regra processual)</li>
+        <li><strong>Não é bis in idem absoluto:</strong> não impede a dupla persecução, apenas limita a dupla expiação</li>
+        <li><strong>Pressuposto 1 — identidade de crime:</strong> a pena cumprida no exterior deve decorrer do <em>mesmo crime</em> pelo qual o agente é condenado no Brasil</li>
+        <li><strong>Pressuposto 2 — pena efetivamente cumprida:</strong> pena apenas decretada, mas não cumprida, não gera os efeitos do art. 8.º</li>
+        <li><strong>Pressuposto 3 — condenação válida no exterior:</strong> sentença penal estrangeira proferida em processo regular</li>
+        <li><strong>Não exige homologação do STJ:</strong> a eficácia do art. 8.º opera de pleno direito, independentemente de homologação da sentença estrangeira (STJ)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert alert-gold mt2">
+    <div class="alert-icon">⚠️</div>
+    <div><strong>Ponto Crucial:</strong> O art. 8.º CP <em>não</em> impede que o Brasil julgue e condene o agente pelo mesmo fato pelo qual foi condenado no exterior. O que ele garante é que a pena já cumprida no exterior <strong>não seja desperdiçada</strong>: será atenuante ou será computada na pena brasileira, conforme o caso. Esta distinção entre <em>proibição da dupla condenação</em> (ne bis in idem pleno — não adotado pelo CP) e <em>compensação da pena</em> (ne bis in idem atenuado — adotado pelo art. 8.º) é a mais cobrada em provas.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════ -->
+<!-- 2. DUAS HIPÓTESES                                  -->
+<!-- ══════════════════════════════════════════════════ -->
+<section class="section" id="hipoteses">
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div class="section-title"><span>Análise Literal do Dispositivo</span>As Duas Hipóteses do Art. 8.º CP</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+
+    <!-- Hipótese 1: Penas Diversas -->
+    <div class="card hyp-card diversas">
+      <h3>⚡ Hipótese 1: Penas DIVERSAS<br><small style="font-size:0.75rem;color:var(--text-soft);font-family:sans-serif;">→ ATENUA a pena brasileira</small></h3>
+      <p><strong>Quando ocorre:</strong> A natureza (espécie) da pena cumprida no exterior é diferente da pena imposta pelo Brasil pelo mesmo crime.</p>
+      <div class="divider"></div>
+      <p><strong>Exemplos de penas diversas:</strong></p>
+      <ul>
+        <li>País estrangeiro aplicou <em>pena de multa</em> e o Brasil aplicou <em>pena privativa de liberdade</em></li>
+        <li>País estrangeiro aplicou <em>pena restritiva de direitos</em> e o Brasil aplicou <em>reclusão</em></li>
+        <li>País estrangeiro aplicou <em>prisão simples</em> e o Brasil aplicou <em>reclusão</em></li>
+      </ul>
+      <div class="alert alert-navy mt2" style="font-size:0.82rem;">
+        <div>📌 <strong>Consequência:</strong> A pena cumprida no exterior <strong>atenua</strong> a pena brasileira. Isso significa que o juiz, na sentença condenatória brasileira, levará em consideração o cumprimento parcial ou integral da pena estrangeira como fator de redução — mas <em>não</em> haverá cômputo matemático direto, pois as penas têm naturezas distintas.</div>
+      </div>
+      <div class="alert alert-gold mt1" style="font-size:0.8rem;">
+        <div>⭐ <strong>Doutrina (Masson, Nucci):</strong> A atenuação neste caso é discricionária do juiz, que avaliará o quantum atenuador proporcionalmente à pena cumprida, considerando a natureza e duração desta.</div>
+      </div>
+    </div>
+
+    <!-- Hipótese 2: Penas Idênticas -->
+    <div class="card hyp-card identicas">
+      <h3>🎯 Hipótese 2: Penas IDÊNTICAS<br><small style="font-size:0.75rem;color:var(--green-accent);font-family:sans-serif;">→ É COMPUTADA na pena brasileira</small></h3>
+      <p><strong>Quando ocorre:</strong> A natureza (espécie) da pena cumprida no exterior é <em>idêntica</em> à da pena imposta pelo Brasil pelo mesmo crime.</p>
+      <div class="divider"></div>
+      <p><strong>Exemplos de penas idênticas:</strong></p>
+      <ul>
+        <li>País estrangeiro aplicou <em>pena privativa de liberdade</em> e o Brasil aplicou <em>pena privativa de liberdade</em></li>
+        <li>País estrangeiro aplicou <em>pena de multa</em> e o Brasil também aplicou <em>pena de multa</em></li>
+      </ul>
+      <div class="alert alert-green mt2" style="font-size:0.82rem;">
+        <div>✅ <strong>Consequência:</strong> O tempo de pena cumprido no exterior <strong>é computado</strong> (deduzido / abatido) da pena imposta no Brasil. Trata-se de operação matemática direta de detração: tempo já cumprido no exterior subtrai-se da pena brasileira.</div>
+      </div>
+      <div class="alert alert-gold mt1" style="font-size:0.8rem;">
+        <div>⭐ <strong>Exemplo prático:</strong> Condenado a 10 anos no exterior e a 15 anos no Brasil, pelo mesmo fato, ambas as penas sendo privativas de liberdade (penas idênticas) → os 10 anos já cumpridos no exterior são computados → restam apenas 5 anos a cumprir no Brasil.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-red mt2">
+    <div class="alert-icon">🔴</div>
+    <div><strong>Atenção crítica — Pena "cumprida" vs. "imposta":</strong> O art. 8.º exige que a pena tenha sido <em>efetivamente cumprida</em> no exterior. A mera imposição (condenação sem execução) não produz os efeitos do artigo. Se o agente foi condenado a 5 anos no exterior mas cumpriu apenas 2 anos antes de ser extraditado, apenas os 2 anos efetivamente cumpridos serão computados ou usados como atenuante no Brasil.</div>
+  </div>
+
+  <div class="alert alert-navy mt2">
+    <div class="alert-icon">📋</div>
+    <div><strong>"Mesmo crime" — Identidade de fato:</strong> A expressão "mesmo crime" no art. 8.º exige que se trate do <strong>mesmo fato histórico</strong>, não necessariamente do mesmo <em>nomen iuris</em>. Se o agente foi condenado no exterior por fato que no Brasil seria tipificado de forma diferente (ex.: furto lá e estelionato aqui), mas o fato material é o mesmo, o art. 8.º se aplica. A maioria da doutrina entende que o critério é o da <em>identidade do fato</em>, não da tipificação.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════ -->
+<!-- 3. FLUXOGRAMA                                      -->
+<!-- ══════════════════════════════════════════════════ -->
+<section class="section" id="fluxograma">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma de Aplicação do Art. 8.º CP</div>
+  </div>
+
+  <div class="flow-wrap">
+    <div class="flow-center">
+
+      <div class="flow-node flow-start">AGENTE CONDENADO NO BRASIL E NO EXTERIOR PELO MESMO FATO</div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <!-- Passo 1 -->
+      <div class="flow-node flow-box-navy" style="max-width:540px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 1 — Verificar Identidade de Crime</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">A pena cumprida no exterior refere-se ao <em>mesmo fato material</em> pelo qual o agente é condenado no Brasil?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — fatos distintos</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;">
+            ❌ Art. 8.º CP inaplicável<br>
+            Cada condenação é autônoma<br>
+            <small>Não há ne bis in idem a resolver</small>
+          </div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:100px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">SIM — mesmo fato</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;">
+            ✅ Art. 8.º CP aplicável<br>
+            Verificar se houve cumprimento efetivo<br>
+            <small>Prosseguir para Passo 2</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <!-- Passo 2 -->
+      <div class="flow-node flow-box-navy" style="max-width:540px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 2 — Pena Efetivamente Cumprida no Exterior?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">O agente cumpriu (total ou parcialmente) a pena imposta no exterior?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — apenas condenado, sem cumprimento</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;">
+            ❌ Art. 8.º não se aplica<br>
+            <small>Mera imposição sem execução<br>não gera efeito compensatório</small>
+          </div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:100px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">SIM — cumpriu total ou parcialmente</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;">
+            ✅ Computar o período cumprido<br>
+            <small>Prosseguir para Passo 3</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <!-- Passo 3 -->
+      <div class="flow-node flow-box-navy" style="max-width:540px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 3 — Comparar a Natureza das Penas</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">A espécie da pena cumprida no exterior é IDÊNTICA ou DIVERSA da pena aplicada no Brasil?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">DIVERSAS (espécies diferentes)</div>
+          <div class="flow-node flow-box-blue" style="font-size:0.76rem;text-align:center;">
+            <strong>ATENUA</strong> a pena brasileira<br>
+            <small>Ex.: multa no exterior → PPL no Brasil<br>O juiz reduz a pena nacional<br>proporcionalmente</small>
+          </div>
+          <div class="flow-connector-line" style="height:24px;"></div>
+          <div class="flow-arrow" style="font-size:1rem;">▼</div>
+          <div class="flow-node flow-box-blue" style="font-size:0.75rem;text-align:center;min-width:180px;">
+            Critério: discricionariedade<br>judicial guiada pela<br>proporcionalidade
+          </div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:160px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">IDÊNTICAS (mesma espécie)</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;">
+            <strong>COMPUTA (deduz)</strong> na pena brasileira<br>
+            <small>Ex.: PPL no exterior → PPL no Brasil<br>Abate-se o tempo cumprido<br>matematicamente</small>
+          </div>
+          <div class="flow-connector-line" style="height:24px;"></div>
+          <div class="flow-arrow" style="font-size:1rem;">▼</div>
+          <div class="flow-node flow-box-green" style="font-size:0.75rem;text-align:center;min-width:180px;">
+            Critério: operação aritmética<br>direta de detração<br>(dias / meses / anos)
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <!-- Passo 4 -->
+      <div class="flow-node flow-box-navy" style="max-width:540px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 4 — Verificar Pena Resultante</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Após atenuação ou cômputo, qual o saldo da pena brasileira a cumprir?</span>
+      </div>
+      <div class="flow-connector-line"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">Saldo positivo</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;">
+            Agente cumpre o saldo<br>remanescente no Brasil
+          </div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:80px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">Pena exterior ≥ pena brasileira (idênticas)</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;">
+            ✅ Pena extinta (pena<br>cumprida supre a nacional)<br>
+            <small>Doutrina: extinção de punibilidade<br>por analogia ao art. 107 CP</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-connector-line" style="height:36px;"></div>
+      <div class="flow-arrow">▼</div>
+      <div class="flow-connector-line"></div>
+
+      <div class="flow-node flow-end" style="max-width:500px;">
+        Efetivado o ne bis in idem atenuado · Proporcionalidade e humanidade da pena asseguradas
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════ -->
+<!-- 4. COMPARATIVO                                     -->
+<!-- ══════════════════════════════════════════════════ -->
+<section class="section" id="comparativo">
+  <div class="section-header">
+    <div class="section-num">04</div>
+    <div class="section-title"><span>Quadro Sinóptico</span>Comparativo: Atenua × Computa × Detração Interna</div>
+  </div>
+
+  <div style="overflow-x:auto;">
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th>Critério</th>
+          <th>Penas DIVERSAS (art. 8.º, 1.ª parte)</th>
+          <th>Penas IDÊNTICAS (art. 8.º, 2.ª parte)</th>
+          <th>Detração Interna (art. 42 CP)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mecanismo</td>
+          <td><strong>Atenuação</strong> da pena brasileira</td>
+          <td><strong>Cômputo</strong> (dedução direta)</td>
+          <td>Detração: cômputo de prisão provisória e internação</td>
+        </tr>
+        <tr class="hl">
+          <td>Requisito de penas</td>
+          <td>Espécies diferentes (ex.: multa vs. PPL)</td>
+          <td>Mesma espécie (ex.: PPL vs. PPL)</td>
+          <td>Prisão provisória ou internação no mesmo processo</td>
+        </tr>
+        <tr>
+          <td>Critério de aplicação</td>
+          <td>Discricionariedade judicial proporcionada</td>
+          <td>Operação aritmética direta</td>
+          <td>Operação aritmética direta</td>
+        </tr>
+        <tr>
+          <td>Âmbito</td>
+          <td>Internacional (pena cumprida no exterior)</td>
+          <td>Internacional (pena cumprida no exterior)</td>
+          <td>Interno (prisão provisória no Brasil)</td>
+        </tr>
+        <tr>
+          <td>Pressuposto</td>
+          <td>Mesmo crime; pena efetivamente cumprida</td>
+          <td>Mesmo crime; pena efetivamente cumprida</td>
+          <td>Prisão provisória, internação ou tratamento ambulatorial</td>
+        </tr>
+        <tr class="hl">
+          <td>Efeito máximo</td>
+          <td>Redução (não extingue automaticamente)</td>
+          <td>Pode extinguir a pena se pena exterior ≥ pena brasileira</td>
+          <td>Pode extinguir a pena se tempo provisional ≥ pena condenatória</td>
+        </tr>
+        <tr>
+          <td>Natureza da norma</td>
+          <td colspan="2" style="text-align:center;">Direito Penal Material · Art. 8.º CP</td>
+          <td>Direito Penal Material · Art. 42 CP</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="alert alert-gold mt2">
+    <div class="alert-icon">🎯</div>
+    <div><strong>Pegadinha de prova:</strong> O art. 8.º CP (pena cumprida no <em>estrangeiro</em>) NÃO se confunde com o art. 42 CP (detração da prisão provisória <em>no Brasil</em>). O art. 42 é a detração clássica e interna; o art. 8.º é a detração/atenuação internacional. Questões de prova frequentemente tentam confundir os dois institutos.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════ -->
+<!-- 5. NE BIS IN IDEM                                  -->
+<!-- ══════════════════════════════════════════════════ -->
+<section class="section" id="ne-bis">
+  <div class="section-header">
+    <div class="section-num">05</div>
+    <div class="section-title"><span>Princípio Fundamental</span>Ne Bis In Idem: Pleno × Atenuado × Críticas</div>
+  </div>
+
+  <div class="card-grid card-grid-3">
+    <div class="card">
+      <h3>🚫 Ne Bis In Idem PLENO<br><small style="font-size:0.75rem;color:var(--text-soft);">(não adotado pelo CP)</small></h3>
+      <p>Veda absolutamente que o agente seja julgado <strong>e/ou punido mais de uma vez</strong> pelo mesmo fato. É a forma mais completa de proteção, adotada por tratados internacionais como o <em>Pacto de São José da Costa Rica</em> (art. 8.4) e o <em>Pacto Internacional sobre Direitos Civis e Políticos</em> (art. 14.7).</p>
+      <div class="alert alert-navy mt2" style="font-size:0.8rem;">
+        <div>📌 <strong>CADH, art. 8.4:</strong> "O acusado absolvido por sentença passada em julgado não poderá ser submetido a novo processo pelos mesmos fatos." — Aplica-se em âmbito interamericano, com força de norma supralegal no Brasil (RE 466.343/STF).</div>
+      </div>
+    </div>
+    <div class="card" style="border-top:4px solid var(--gold);background:var(--gold-pale);">
+      <h3 style="color:#7a5a00;">⚖️ Ne Bis In Idem ATENUADO<br><small style="font-size:0.75rem;color:#7a5a00;">(ADOTADO pelo art. 8.º CP)</small></h3>
+      <p>O Código Penal brasileiro adota a modalidade <strong>atenuada</strong>: permite a dupla condenação (dois Estados podem punir o mesmo fato), mas impede a dupla <em>expiação</em> (o agente não paga duas vezes pela mesma conduta). A pena cumprida no exterior é compensada na pena brasileira.</p>
+      <p class="mt2"><strong>Crítica doutrinária:</strong> A solução é considerada insuficiente porque o agente ainda suporta dois processos e duas condenações, o que viola a dignidade da pessoa humana e os tratados internacionais de direitos humanos ratificados pelo Brasil.</p>
+    </div>
+    <div class="card">
+      <h3>📋 Dimensões do Ne Bis In Idem</h3>
+      <p>O princípio do ne bis in idem possui três dimensões:</p>
+      <ul class="mt1">
+        <li><strong>Material (ou substantiva):</strong> proibição de punição dupla pelo mesmo fato</li>
+        <li><strong>Processual:</strong> proibição de duplo julgamento pelo mesmo fato</li>
+        <li><strong>Executória:</strong> proibição de dupla execução de pena pelo mesmo fato</li>
+      </ul>
+      <p class="mt2">O art. 8.º CP protege apenas a <strong>dimensão executória</strong>: garante que o agente não execute duas penas integralmente, mas não impede a dimensão material (dupla condenação) nem a processual (duplo julgamento).</p>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card">
+      <h3>🌍 Conflito com o Pacto de São José da Costa Rica</h3>
+      <p>O <strong>art. 8.4 da CADH</strong> (Convenção Americana de Direitos Humanos — Pacto de São José da Costa Rica, ratificada pelo Brasil em 1992) prevê que ninguém pode ser processado ou punido novamente pelo mesmo crime pelo qual já foi absolvido ou condenado.</p>
+      <div class="divider"></div>
+      <p><strong>Posição do STF — RE 466.343/SP (2008):</strong> Os tratados internacionais de direitos humanos ratificados antes da EC 45/2004, como a CADH, possuem <em>status supralegal</em> (acima da lei ordinária, mas abaixo da CF). Isso coloca o art. 8.º CP (lei ordinária) em aparente conflito com o art. 8.4 da CADH (norma supralegal).</p>
+      <div class="alert alert-gold mt2" style="font-size:0.8rem;">
+        <div>⚠️ <strong>Posição majoritária da doutrina:</strong> Há conflito real entre o art. 8.º CP e a CADH. O Brasil deveria adotar o ne bis in idem pleno em razão do status supralegal da CADH, mas o Poder Judiciário ainda não declarou expressamente a inconstitucionalidade do art. 8.º CP. A tensão normativa persiste.</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📜 Pacto Internacional sobre Direitos Civis e Políticos</h3>
+      <p>O <strong>art. 14.7 do PIDCP</strong> (Pacto Internacional sobre Direitos Civis e Políticos, ratificado pelo Brasil em 1992) dispõe: <em>"Ninguém poderá ser processado ou punido por um delito pelo qual já foi absolvido ou condenado por sentença passada em julgado."</em></p>
+      <div class="divider"></div>
+      <p>O PIDCP tem o mesmo status supralegal da CADH no ordenamento brasileiro (conforme RE 466.343/STF). A tensão com o art. 8.º CP é equivalente: o PIDCP exigiria ne bis in idem pleno, enquanto o CP adota o atenuado.</p>
+      <div class="alert alert-navy mt2" style="font-size:0.8rem;">
+        <div>📌 <strong>Solução prática dos tribunais:</strong> Na prática, os tribunais brasileiros aplicam o art. 8.º CP e reconhecem a compensação da pena, sem declarar a sua invalidade. O conflito com a CADH e o PIDCP é reconhecido pela doutrina, mas ainda aguarda enfrentamento definitivo pelo STF.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════ -->
+<!-- 6. JURISPRUDÊNCIA STF / STJ                        -->
+<!-- ══════════════════════════════════════════════════ -->
+<section class="section" id="jurisprudencia">
+  <div class="section-header">
+    <div class="section-num">06</div>
+    <div class="section-title"><span>STF · STJ · Posições Consolidadas</span>Jurisprudência e Teses dos Tribunais Superiores</div>
+  </div>
+
+  <div class="alert alert-navy mt1" style="margin-bottom:1.2rem;">
+    <div class="alert-icon">ℹ️</div>
+    <div>As posições abaixo refletem o entendimento consolidado dos tribunais superiores. Os temas são referenciados por assunto, sem numeração inventada de acórdãos, para garantia de <strong>zero alucinação</strong>.</div>
+  </div>
+
+  <div class="juris-grid">
+
+    <!-- STF - RE 466.343 / Status Supralegal -->
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <span class="juris-badge tese">Tese Vinculante</span>
+        <div class="juris-title">RE 466.343/SP — Status Supralegal dos Tratados de DH e Impacto sobre o Art. 8.º CP</div>
+      </div>
+      <div class="juris-body">
+        <p>O STF, no julgamento do RE 466.343/SP (rel. Min. Cezar Peluso, Pleno, 2008), firmou a tese do <strong>status supralegal dos tratados internacionais de direitos humanos</strong> ratificados antes da EC 45/2004. A CADH e o PIDCP situam-se acima das leis ordinárias, mas abaixo da Constituição Federal.</p>
+        <p class="mt1">Embora o julgado tenha tratado originariamente da prisão civil do depositário infiel, a ratio decidendi tem <strong>impacto direto sobre o art. 8.º CP</strong>: como a CADH (art. 8.4) e o PIDCP (art. 14.7) consagram o ne bis in idem pleno e possuem status supralegal, o art. 8.º CP (ne bis in idem apenas atenuado, de hierarquia inferior) deveria ser superado por aquelas normas. A doutrina usa essa fundamentação para defender a inconstitucionalidade/invalidade do art. 8.º CP diante dos tratados.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Status Supralegal</span>
+          <span class="tag tag-blue">CADH · PIDCP</span>
+          <span class="tag tag-gold">Ne Bis In Idem Pleno vs. Atenuado</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STF - Ne bis in idem e Extradição -->
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <div class="juris-title">Extradição — Ne Bis In Idem e Art. 8.º CP como Garantia Mínima</div>
+      </div>
+      <div class="juris-body">
+        <p>Em casos de extradição, o STF tem aplicado o ne bis in idem como limite à entrega do extraditando quando este já foi julgado definitivamente no Brasil pelo mesmo fato. O <strong>art. 8.º CP funciona como garantia mínima de compensação</strong>: quando a extradição é concedida e o agente é julgado no exterior, a eventual pena cumprida no estrangeiro deverá ser considerada se o Brasil também o processar.</p>
+        <p class="mt1">O STF reconhece que a identidade de fato (e não apenas de tipo penal) é o critério determinante para a aplicação do ne bis in idem e, por consequência, do art. 8.º CP — o <em>nomen iuris</em> do crime pode variar entre os ordenamentos sem afastar a garantia.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Extradição</span>
+          <span class="tag tag-gold">Identidade de Fato</span>
+          <span class="tag tag-blue">Ne Bis In Idem</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STJ - Desnecessidade de homologação -->
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <div class="juris-title">Art. 8.º CP — Desnecessidade de Homologação da Sentença Estrangeira</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ firmou entendimento de que a aplicação do art. 8.º CP <strong>não exige prévia homologação da sentença penal estrangeira</strong> perante o STJ. O efeito compensatório (cômputo ou atenuação) opera de pleno direito, bastando que o juiz da execução penal tenha prova do cumprimento da pena no exterior.</p>
+        <p class="mt1">Isso se distingue das hipóteses do art. 9.º CP, que exige homologação para produção de efeitos civis e penais secundários da sentença estrangeira no Brasil. O art. 8.º não produz efeitos da sentença estrangeira: apenas reconhece o fato do cumprimento de pena para fins de compensação.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-blue">Sem Homologação STJ</span>
+          <span class="tag tag-gold">Efeito de Pleno Direito</span>
+          <span class="tag tag-green">Art. 8.º ≠ Art. 9.º CP</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STJ - Relação art. 8 CP com detração art. 42 CP -->
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <div class="juris-title">Art. 8.º CP versus Art. 42 CP — Distinção Aplicada</div>
+      </div>
+      <div class="juris-body">
+        <p>O STJ diferencia claramente o <strong>art. 8.º CP</strong> (compensação de pena cumprida no <em>estrangeiro</em>, aplicável em fase de cognição ou execução) do <strong>art. 42 CP</strong> (detração da <em>prisão provisória no Brasil</em>, prisão administrativa ou internação). São institutos autônomos com pressupostos e âmbitos de aplicação distintos.</p>
+        <p class="mt1">Nos casos de extradição ativa (Brasil requer ao exterior) ou passiva (exterior requer ao Brasil), o período em que o agente permaneceu preso no exterior aguardando o procedimento extradicional também pode ser computado como detração, com fundamento análogo ao art. 42 CP e ao próprio art. 8.º CP, segundo parte da jurisprudência do STJ.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-blue">Art. 8.º → Pena cumprida no exterior</span>
+          <span class="tag tag-green">Art. 42 → Prisão provisória no Brasil</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STF - Relação art. 8 CP com extraterritorialidade -->
+    <div class="juris-card stf">
+      <div class="juris-header">
+        <span class="juris-badge stf">STF</span>
+        <div class="juris-title">Art. 8.º CP — Consequência Necessária da Extraterritorialidade (Art. 7.º CP)</div>
+      </div>
+      <div class="juris-body">
+        <p>O STF reconhece o art. 8.º CP como decorrência lógica e necessária dos arts. 6.º e 7.º CP. Quando o Brasil exerce jurisdição penal sobre fatos ocorridos fora de seu território (via extraterritorialidade do art. 7.º) ou quando dois Estados têm jurisdição pelo mesmo fato via ubiquidade (art. 6.º), pode ocorrer a situação de dupla condenação. O art. 8.º é o mecanismo correto — e legalmente expresso — para tratar essa situação.</p>
+        <p class="mt1">Em processos de extradição, o STF destaca que a entrega do extraditando ao Estado requerente não impede que o Brasil mantenha sua jurisdição para, eventualmente, processar o agente pelo mesmo fato se houver conexão territorial (art. 6.º CP), sendo que a pena cumprida no exterior haverá de ser levada em conta (art. 8.º CP).</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Extraterritorialidade</span>
+          <span class="tag tag-gold">Consequência da Ubiquidade</span>
+          <span class="tag tag-blue">Jurisdição Concorrente</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STJ - Absolvição no exterior -->
+    <div class="juris-card stj">
+      <div class="juris-header">
+        <span class="juris-badge stj">STJ</span>
+        <div class="juris-title">Absolvição no Exterior — Efeitos no Processo Brasileiro</div>
+      </div>
+      <div class="juris-body">
+        <p>O art. 8.º CP exige que a pena tenha sido <em>cumprida</em>. Portanto, a <strong>absolvição no exterior</strong> pelo mesmo fato não atrai, em princípio, a incidência do art. 8.º (pois não há pena cumprida). O processo penal brasileiro pode prosseguir normalmente.</p>
+        <p class="mt1">Contudo, a doutrina majoritária (Bitencourt, Nucci, Greco) e parte da jurisprudência do STJ apontam que a absolvição no exterior — quando fundada no mérito (inexistência do fato ou negativa de autoria) — deve ser considerada pelo juiz brasileiro à luz da CADH (art. 8.4) e do PIDCP (art. 14.7), que vedam o duplo julgamento, não apenas a dupla punição. A tensão entre o art. 8.º CP e os tratados é mais aguda justamente nos casos de absolvição.</p>
+        <div class="flex-gap mt2">
+          <span class="tag tag-red">Absolvição Exterior ≠ Art. 8.º CP</span>
+          <span class="tag tag-gold">CADH Art. 8.4 — Duplo Julgamento</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════ -->
+<!-- 7. DOUTRINA                                        -->
+<!-- ══════════════════════════════════════════════════ -->
+<section class="section" id="doutrina">
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <div class="section-title"><span>Doutrina Nacional</span>Principais Posições Doutrinárias</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Rogério Greco — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Greco destaca que o art. 8.º CP é a solução legislativa para o problema da dupla punibilidade gerado pelas regras de extraterritorialidade e ubiquidade. Para ele, o dispositivo é <strong>insuficiente diante dos tratados internacionais de direitos humanos</strong> ratificados pelo Brasil, especialmente a CADH e o PIDCP, que exigem ne bis in idem pleno. Ressalta que o Código Penal, como lei ordinária, não poderia prevalecer sobre normas supralegais (CADH) que vedam o duplo julgamento e a dupla punição. Critica o modelo brasileiro por permitir a dupla condenação, conformando-se apenas com a compensação de pena.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cezar Roberto Bitencourt — Tratado de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Bitencourt sustenta que o art. 8.º CP consagra um ne bis in idem de <em>segunda categoria</em>: protege o condenado apenas contra a dupla expiação, mas não contra o duplo processo e a dupla condenação. Para o autor, diante do status supralegal da CADH (art. 8.4) e do PIDCP (art. 14.7), o Brasil está obrigado a adotar o ne bis in idem pleno, de modo que o art. 8.º CP seria inconstitucional por omissão (por não vedar o duplo processo). Analisa detidamente a distinção entre <strong>penas idênticas</strong> (cômputo matemático) e <strong>penas diversas</strong> (atenuação proporcional), e adverte que o juiz, ao atenuar a pena no caso de penas diversas, deve fundamentar explicitamente o quantum de atenuação.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Cleber Masson — Direito Penal Esquematizado</div>
+      </div>
+      <div class="juris-body">
+        <p>Masson apresenta análise precisa das duas hipóteses do art. 8.º CP. Quanto à expressão <strong>"mesmo crime"</strong>, defende que o critério é o da identidade do fato material (não do <em>nomen iuris</em>): o que importa é que o fato histórico seja o mesmo, ainda que a tipificação difira nos ordenamentos. Quanto à <strong>pena efetivamente cumprida</strong>, enfatiza que a mera imposição (sem execução) não produz os efeitos do artigo — é necessário o efetivo cumprimento. Distingue o art. 8.º do art. 42 CP (detração interna) e alerta que a homologação da sentença estrangeira não é requisito para aplicação do art. 8.º.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Guilherme de Souza Nucci — Código Penal Comentado</div>
+      </div>
+      <div class="juris-body">
+        <p>Nucci sustenta que o art. 8.º CP é positivo como mecanismo de equidade, mas insuficiente como garantia de direito humano. Destaca que a solução do Código é <strong>utilitária e pragmática</strong>: na ausência de tratados bilaterais sobre ne bis in idem, o legislador brasileiro criou um mecanismo interno de compensação que, ao menos, evita a dupla expiação integral. Quanto às penas diversas, entende que a atenuação deve ser <em>proporcional e fundamentada</em>, não podendo o juiz deixar de aplicá-la quando presentes os pressupostos do art. 8.º. Analisa a relação com o art. 7.º CP: a extraterritorialidade é a principal fonte da situação que o art. 8.º regula.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Fernando Capez — Curso de Direito Penal</div>
+      </div>
+      <div class="juris-body">
+        <p>Capez sistematiza o art. 8.º CP de forma didática, destacando que a lógica do dispositivo é a de que <strong>o agente não pode ser penalizado duplamente pelo mesmo fato</strong>. Aponta o princípio da <em>proporcionalidade</em> como fundamento constitucional do artigo (art. 5.º, XLVI e XLVII, CF/88). No tocante à pena cumprida no exterior quando superior à pena brasileira, defende que haverá extinção da pena nacional (por analogia ao art. 107 CP), pois o agente já expiou mais do que o suficiente. Ressalta a importância prática do dispositivo nos crimes de tráfico internacional de drogas, corrupção transnacional e lavagem de capitais.</p>
+      </div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header">
+        <span class="juris-badge doutrina">Doutrina</span>
+        <div class="juris-title">Controvérsia: Pena Exterior MAIOR que a Pena Brasileira</div>
+      </div>
+      <div class="juris-body">
+        <p>Quando a pena cumprida no exterior (de mesma espécie) é <em>maior</em> que a pena imposta no Brasil, há divergência:</p>
+        <ul class="mt1">
+          <li><strong>Posição majoritária (Masson, Greco, Capez):</strong> A pena brasileira considera-se extinta por analogia ao art. 107 do CP, pois o agente já cumpriu mais do que a pena nacional exigiria — resultado de interpretação sistemática e do princípio da proporcionalidade</li>
+          <li><strong>Posição de Bitencourt:</strong> O art. 8.º não autoriza expressamente a extinção da pena brasileira; o excesso cumprido no exterior deve apenas ser computado, sem gerar saldo a restituir — mas a pena brasileira estará integralmente cumprida</li>
+          <li><strong>Consenso:</strong> Em ambas as posições, o agente <em>não cumprirá pena no Brasil</em> neste caso; a divergência é apenas terminológica (extinção vs. cumprimento integral)</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════ -->
+<!-- 8. DIMENSÃO CONSTITUCIONAL                        -->
+<!-- ══════════════════════════════════════════════════ -->
+<section class="section" id="constitucional">
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <div class="section-title"><span>Direito Constitucional</span>Dimensão Constitucional e de Direitos Humanos</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>⚖️ Fundamentos Constitucionais do Art. 8.º CP</h3>
+      <ul>
+        <li><strong>Dignidade da pessoa humana (art. 1.º, III, CF):</strong> a dupla punição pelo mesmo fato ofende a dignidade; o art. 8.º é mecanismo de proteção</li>
+        <li><strong>Individualização da pena (art. 5.º, XLVI, CF):</strong> a compensação da pena cumprida no exterior é forma de individualização que evita excesso punitivo</li>
+        <li><strong>Proibição de tratamento desumano (art. 5.º, III, CF):</strong> submeter o agente a dupla punição integral seria tratamento cruel e degradante</li>
+        <li><strong>Proporcionalidade (princípio implícito, art. 5.º, LIV, CF):</strong> a pena não pode exceder o necessário para a reprovação e prevenção do crime</li>
+        <li><strong>Primazia dos direitos humanos (art. 4.º, II, CF):</strong> fundamento para interpretação do art. 8.º em consonância com CADH e PIDCP</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🌐 Hierarquia Normativa e o Art. 8.º CP</h3>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.82rem;">
+          <thead style="background:var(--navy);color:white;">
+            <tr><th style="padding:0.5rem 0.7rem;text-align:left;">Norma</th><th style="padding:0.5rem 0.7rem;text-align:left;">Hierarquia</th><th style="padding:0.5rem 0.7rem;text-align:left;">Modelo</th></tr>
+          </thead>
+          <tbody>
+            <tr style="background:var(--gold-pale);"><td style="padding:0.5rem 0.7rem;font-weight:700;">CF/88</td><td style="padding:0.5rem 0.7rem;">Constitucional</td><td style="padding:0.5rem 0.7rem;">—</td></tr>
+            <tr><td style="padding:0.5rem 0.7rem;font-weight:700;">CADH · PIDCP</td><td style="padding:0.5rem 0.7rem;">Supralegal (RE 466.343)</td><td style="padding:0.5rem 0.7rem;">Ne bis in idem <strong>pleno</strong></td></tr>
+            <tr style="background:var(--cream-mid);"><td style="padding:0.5rem 0.7rem;font-weight:700;color:var(--red-accent);">Art. 8.º CP</td><td style="padding:0.5rem 0.7rem;">Lei ordinária</td><td style="padding:0.5rem 0.7rem;">Ne bis in idem <strong>atenuado</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt2" style="font-size:0.83rem;color:var(--text-mid);">Como o art. 8.º CP está em nível hierárquico <em>inferior</em> à CADH e ao PIDCP (que são supralegais), parte da doutrina sustenta que as normas convencionais prevalecem, devendo o ne bis in idem pleno ser aplicado — o que tornaria o art. 8.º uma proteção <em>mínima</em>, não máxima.</p>
+    </div>
+  </div>
+
+  <div class="law-quote mt2">
+    <strong>CADH — Art. 8.4 (Pacto de São José da Costa Rica):</strong>
+    "O acusado absolvido por sentença passada em julgado não poderá ser submetido a novo processo pelos mesmos fatos."
+  </div>
+  <div class="law-quote mt2">
+    <strong>PIDCP — Art. 14.7 (Pacto Internacional sobre Direitos Civis e Políticos):</strong>
+    "Ninguém poderá ser processado ou punido por um delito pelo qual já foi absolvido ou condenado por sentença passada em julgado, em conformidade com a lei e os procedimentos penais de cada país."
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════ -->
+<!-- 9. SISTEMÁTICA                                     -->
+<!-- ══════════════════════════════════════════════════ -->
+<section class="section" id="sistematica">
+  <div class="section-header">
+    <div class="section-num">09</div>
+    <div class="section-title"><span>Contexto e Encadeamento</span>Sistemática dos Arts. 5.º a 9.º CP</div>
+  </div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔗 Encadeamento Sistemático dos Arts. 5.º–9.º CP</h3>
+      <ul>
+        <li><strong>Art. 5.º CP — Territorialidade:</strong> Regra geral: aplica-se a lei brasileira ao crime cometido no Brasil. Ponto de partida da aplicação da lei penal</li>
+        <li class="mt1"><strong>Art. 6.º CP — Lugar do Crime:</strong> Teoria da Ubiquidade: expande o conceito de "território" para crimes a distância (internacionais). Gera possível jurisdição concorrente</li>
+        <li class="mt1"><strong>Art. 7.º CP — Extraterritorialidade:</strong> Permite a aplicação da lei brasileira a crimes inteiramente ocorridos no exterior, com base em princípios de proteção, personalidade e universalidade. Amplia a situação de jurisdição concorrente</li>
+        <li class="mt1"><strong>Art. 8.º CP — Pena Cumprida no Exterior:</strong> Consequência necessária dos arts. 6.º e 7.º. Resolve a dupla punição evitando a dupla expiação. Ne bis in idem atenuado</li>
+        <li class="mt1"><strong>Art. 9.º CP — Eficácia da Sentença Estrangeira:</strong> Regula quando a sentença penal estrangeira produz efeitos no Brasil (obrigação de reparar o dano, sujeição a medida de segurança). Depende de homologação pelo STJ (art. 105, I, "i", CF/88)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🔄 Art. 8.º CP × Art. 9.º CP — Distinção Essencial</h3>
+      <p>Os dois artigos tratam de "efeitos" de penas e sentenças estrangeiras no Brasil, mas com <strong>finalidades completamente distintas</strong>:</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Art. 8.º CP:</strong> Trata da <em>compensação da pena efetivamente cumprida</em> no exterior — tem natureza de equidade e humanidade. <strong>Não exige homologação</strong> da sentença estrangeira. Não produz os efeitos civis da condenação no Brasil</li>
+        <li class="mt1"><strong>Art. 9.º CP:</strong> Trata dos <em>efeitos civis e penais secundários</em> da sentença estrangeira no Brasil (ex.: reparação do dano, medida de segurança). <strong>Exige homologação pelo STJ</strong> (art. 105, I, "i", CF/88) e outros requisitos cumulativos</li>
+      </ul>
+      <div class="alert alert-gold mt2" style="font-size:0.8rem;">
+        <div>🎯 <strong>Ponto de prova:</strong> Para o art. 8.º CP (compensação de pena cumprida no exterior), <em>não é necessária</em> homologação da sentença estrangeira pelo STJ. Para o art. 9.º CP (efeitos civis e penais secundários da sentença estrangeira), a homologação pelo STJ é <em>imprescindível</em>.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card">
+      <h3>🌍 Art. 8.º CP nos Crimes de Tráfico Internacional</h3>
+      <p>O tráfico internacional de drogas é o crime em que o art. 8.º CP tem maior aplicabilidade prática: o agente pode ser condenado no país de origem (donde remeteu a droga) e também no Brasil (onde a droga chegou ou deveria chegar — art. 6.º CP).</p>
+      <p class="mt2">Neste cenário: se o traficante cumpriu 5 anos de prisão nos EUA e é condenado a 12 anos no Brasil pelo mesmo fato (ambas PPL = penas idênticas), os 5 anos são computados → resta apenas 7 anos no Brasil.</p>
+    </div>
+    <div class="card">
+      <h3>💰 Art. 8.º CP na Lavagem de Dinheiro Transnacional</h3>
+      <p>Nos crimes de lavagem de capitais transnacional, o agente pode ser condenado no exterior (onde realizou as transações) e no Brasil (onde os recursos foram introduzidos no sistema financeiro — resultado do crime).</p>
+      <p class="mt2">A <strong>Lei 9.613/1998</strong> (Lei de Lavagem) e a <strong>Lei 12.846/2013</strong> (Lei Anticorrupção) têm dimensão internacional que frequentemente aciona o art. 6.º CP (ubiquidade), gerando situações em que o art. 8.º CP se tornará necessário.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════ -->
+<!-- PROVA / ENAM                                       -->
+<!-- ══════════════════════════════════════════════════ -->
+<section id="prova" class="prova-section">
+  <h2>⚖️ Pontos Cobrados em Magistratura e ENAM</h2>
+  <p class="intro">Questões, teses e pegadinhas recorrentes nos concursos de Juiz de Direito, ENAM e equivalentes relacionadas ao Art. 8.º CP.</p>
+
+  <div class="prova-items">
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">01</span>Qual modelo de ne bis in idem é adotado pelo art. 8.º do Código Penal?</div>
+      <div class="prova-item-a"><strong>Ne bis in idem atenuado (ou mitigado)</strong>. O CP não veda a dupla condenação pelo mesmo fato por dois Estados distintos, mas impede a dupla <em>expiação</em>: a pena cumprida no exterior é computada (penas idênticas) ou atenua (penas diversas) a pena imposta no Brasil. Diferencia-se do ne bis in idem pleno, adotado pela CADH (art. 8.4) e pelo PIDCP (art. 14.7), que veda tanto o duplo processo quanto a dupla punição.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">02</span>Quais são as duas hipóteses do art. 8.º CP e seus respectivos efeitos?</div>
+      <div class="prova-item-a"><strong>1.ª hipótese — Penas DIVERSAS:</strong> quando a espécie da pena cumprida no exterior é diferente da pena imposta no Brasil (ex.: multa no exterior × PPL no Brasil), a pena estrangeira <em>atenua</em> a pena brasileira — atenuação proporcional, a critério fundamentado do juiz. <strong>2.ª hipótese — Penas IDÊNTICAS:</strong> quando as espécies são as mesmas (ex.: PPL no exterior × PPL no Brasil), a pena cumprida no exterior é <em>computada</em> (deduzida matematicamente) da pena brasileira.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">03</span>O art. 8.º CP exige homologação da sentença estrangeira pelo STJ para produzir seus efeitos?</div>
+      <div class="prova-item-a"><strong>Não.</strong> O art. 8.º CP opera de pleno direito: basta comprovação do efetivo cumprimento da pena no exterior perante o juiz da execução penal brasileiro. A homologação da sentença estrangeira pelo STJ (art. 105, I, "i", CF/88) é exigida apenas para os fins do <strong>art. 9.º CP</strong> (efeitos civis e penais secundários da sentença estrangeira no Brasil), não para a simples compensação de pena do art. 8.º. Este é um ponto frequentemente cobrado em provas para distinguir os dois institutos.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">04</span>O que significa "mesmo crime" no art. 8.º CP? A identidade de tipificação é exigida?</div>
+      <div class="prova-item-a">O critério é o da <strong>identidade do fato material (histórico)</strong>, não do <em>nomen iuris</em> ou da tipificação legal. Basta que o fato seja o mesmo em sua materialidade histórica — ainda que no exterior seja tipificado como "theft" e no Brasil como "estelionato", se o fato é idêntico, o art. 8.º se aplica. A exigência de identidade de tipificação tornaria o dispositivo praticamente inaplicável em crimes transnacionais, cujos nomes e elementos variam entre ordenamentos.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">05</span>O que ocorre quando a pena cumprida no exterior (de espécie idêntica) é maior que a pena imposta no Brasil?</div>
+      <div class="prova-item-a">A posição majoritária da doutrina (Masson, Greco, Capez) é que a <strong>pena brasileira considera-se extinta</strong>, por analogia ao art. 107 do CP, pois o agente já cumpriu mais do que o suficiente. O excedente não gera saldo a restituir. Bitencourt entende que o excesso simplesmente encerra a pena sem gerar extinção expressa, mas o resultado prático é o mesmo: o agente <em>não cumprirá pena no Brasil</em> neste cenário.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">06</span>Qual a relação entre o art. 8.º CP e os arts. 6.º e 7.º CP?</div>
+      <div class="prova-item-a">O art. 8.º CP é <strong>consequência necessária</strong> dos arts. 6.º e 7.º CP. O art. 6.º (Teoria da Ubiquidade) permite que o Brasil exerça jurisdição sobre crimes a distância, gerando possível jurisdição concorrente com outro Estado. O art. 7.º (Extraterritorialidade) permite que o Brasil aplique sua lei penal a crimes cometidos inteiramente no exterior. Em ambos os casos, o agente pode ser condenado pelo mesmo fato em dois países distintos. O art. 8.º é o mecanismo que resolve a dupla punição evitando a dupla expiação integral.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">07</span>Qual a distinção entre o art. 8.º CP e o art. 42 CP?</div>
+      <div class="prova-item-a"><strong>Art. 8.º CP:</strong> compensação (cômputo ou atenuação) de pena efetivamente cumprida em <em>país estrangeiro</em> pelo mesmo crime — âmbito internacional. <strong>Art. 42 CP:</strong> detração da prisão provisória, internação ou tratamento ambulatorial cumpridos no <em>Brasil</em> durante o mesmo processo ou em processo por outro crime — âmbito interno. São institutos autônomos: o art. 42 é a detração clássica doméstica; o art. 8.º é a detração/compensação internacional. Em prova, atenção: nunca aplicar o art. 8.º para resolver questão de detração de prisão provisória interna.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">08</span>O CADH (Pacto de São José) exige ne bis in idem pleno. Isso torna o art. 8.º CP inconstitucional?</div>
+      <div class="prova-item-a">Há tensão normativa real. A CADH (art. 8.4) e o PIDCP (art. 14.7) têm <strong>status supralegal</strong> no Brasil (RE 466.343/STF, 2008) e consagram ne bis in idem pleno (vedam duplo processo e dupla punição). O art. 8.º CP, lei ordinária, adota o ne bis in idem apenas atenuado. Pela hierarquia, a CADH deveria prevalecer. A doutrina majoritária (Greco, Bitencourt) sustenta que o art. 8.º CP é insuficiente diante dos tratados. Na prática, porém, o STF ainda não declarou a invalidade do art. 8.º CP, e os tribunais continuam a aplicá-lo. O candidato deve mencionar a tensão e a posição doutrinária dominante.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">09</span>A absolvição no exterior pelo mesmo fato impede o processo penal no Brasil?</div>
+      <div class="prova-item-a">Pelo art. 8.º CP isoladamente, <strong>não</strong>: o artigo só trata de compensação de pena <em>cumprida</em>, pressupondo condenação. A absolvição não produz pena a compensar. O processo brasileiro prossegue. No entanto, à luz da <strong>CADH, art. 8.4</strong> (status supralegal), que veda o duplo processo para quem foi condenado ou absolvido por sentença transitada em julgado, a doutrina majoritária e parte da jurisprudência entendem que a absolvição definitiva no exterior pelo mesmo fato deveria impedir o julgamento no Brasil. Esta é a posição mais avançada e alinhada com os direitos humanos — e tem sido cobrada em provas de magistratura.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">10</span>[ENAM — alta recorrência] Agente condenado a 8 anos de reclusão no Brasil e a 5 anos de prisão nos EUA (espécie idêntica — PPL), pelo mesmo fato. Cumpriu integralmente a pena americana. Como se aplica o art. 8.º CP?</div>
+      <div class="prova-item-a">Penas idênticas (ambas PPL) → aplica-se a <strong>2.ª hipótese do art. 8.º CP</strong> (cômputo/dedução): os 5 anos cumpridos nos EUA são <em>computados</em> (abatidos) da pena brasileira. O agente cumprirá apenas <strong>3 anos restantes</strong> no Brasil (8 – 5 = 3 anos). Se a pena americana fosse de 10 anos (maior que os 8 do Brasil), a pena brasileira estaria extinta: o agente não cumprirá mais nada em território nacional. Não há necessidade de homologação da sentença americana pelo STJ para aplicação do art. 8.º.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">11</span>[ENAM — alta recorrência] Agente condenado no Brasil a 6 anos de reclusão e na Alemanha a € 50.000 de multa, pelo mesmo fato. Pagou integralmente a multa alemã. Como se aplica o art. 8.º CP?</div>
+      <div class="prova-item-a">Penas <strong>diversas</strong> (multa na Alemanha × reclusão no Brasil) → aplica-se a <strong>1.ª hipótese do art. 8.º CP</strong>: a pena cumprida no exterior (multa) <em>atenua</em> a pena brasileira (reclusão). Não há cômputo matemático direto (pois as espécies são diferentes). O juiz, ao aplicar a pena no Brasil, deverá reduzir a reclusão de forma proporcional e fundamentada, considerando a extensão e natureza da pena já expiada no exterior. A quantificação da atenuação é discricionária, mas vinculada à proporcionalidade (princípio constitucional implícito).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">12</span>Qual o encadeamento dos arts. 5.º a 9.º CP que o candidato à magistratura deve dominar?</div>
+      <div class="prova-item-a"><strong>Art. 5.º CP</strong> → Territorialidade temperada: regra geral da aplicação da lei penal brasileira. <strong>Art. 6.º CP</strong> → Ubiquidade: determina o lugar do crime para crimes internacionais; expande a jurisdição. <strong>Art. 7.º CP</strong> → Extraterritorialidade: aplica a lei brasileira a crimes no exterior; amplia a jurisdição. <strong>Art. 8.º CP</strong> → Pena cumprida no exterior: resolve a dupla punição gerada pelos arts. 6.º e 7.º (ne bis in idem atenuado). <strong>Art. 9.º CP</strong> → Eficácia da sentença estrangeira: reconhece efeitos civis e penais secundários (requer homologação STJ). Este é o roteiro que os examinadores do ENAM esperam que o candidato à magistratura domine integralmente.</div>
+    </div>
+
+  </div>
+</section>
+
+</div><!-- /page-wrap -->
+
+<footer>
+  <strong>Art. 8.º do Código Penal Brasileiro</strong> — Decreto-Lei n.º 2.848/1940<br>
+  Material elaborado para preparação à Magistratura / ENAM · Doutrina e jurisprudência consolidadas · Atualizado 2025
+</footer>
+
+</body>
+</html>

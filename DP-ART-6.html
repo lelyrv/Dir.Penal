@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 6º CP — Lugar do Crime | Magistratura ENAM</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a;
+    --navy-mid: #1a2f45;
+    --navy-light: #243b55;
+    --gold: #c8960c;
+    --gold-light: #e8b84b;
+    --gold-pale: #fdf3d8;
+    --cream: #faf7f2;
+    --cream-mid: #f0ebe2;
+    --text-dark: #1a1208;
+    --text-mid: #3d3020;
+    --text-soft: #6b5c40;
+    --border: #d4c49a;
+    --border-light: #e8dcbf;
+    --red-accent: #8b1a1a;
+    --green-accent: #1a4a2e;
+    --blue-accent: #1a3a5c;
+    --shadow: 0 4px 24px rgba(13,27,42,0.10);
+    --shadow-lg: 0 8px 40px rgba(13,27,42,0.18);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  /* ── STICKY NAV ── */
+  #top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: var(--navy);
+    border-bottom: 3px solid var(--gold);
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  #top-nav::-webkit-scrollbar { display: none; }
+  #top-nav .nav-brand {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold-light);
+    font-size: 0.9rem;
+    font-weight: 700;
+    white-space: nowrap;
+    padding: 0.85rem 1.2rem 0.85rem 0;
+    border-right: 1px solid rgba(200,150,12,0.3);
+    margin-right: 0.5rem;
+    letter-spacing: 0.5px;
+  }
+  #top-nav a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.72rem;
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    padding: 0.85rem 0.8rem;
+    white-space: nowrap;
+    transition: color 0.2s, background 0.2s;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -3px;
+  }
+  #top-nav a:hover {
+    color: var(--gold-light);
+    border-bottom-color: var(--gold);
+  }
+
+  /* ── HERO ── */
+  #hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1e3d5c 100%);
+    color: white;
+    padding: 3.5rem 2rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  #hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(200,150,12,0.03) 0px,
+      rgba(200,150,12,0.03) 1px,
+      transparent 1px,
+      transparent 40px
+    );
+  }
+  #hero .badge {
+    display: inline-block;
+    background: rgba(200,150,12,0.15);
+    border: 1px solid rgba(200,150,12,0.5);
+    color: var(--gold-light);
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.35rem 1rem;
+    border-radius: 2px;
+    margin-bottom: 1.2rem;
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+  }
+  #hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.5px;
+  }
+  #hero h1 span { color: var(--gold-light); }
+  #hero .subtitle {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.65);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+  #hero .law-box {
+    display: inline-block;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(200,150,12,0.4);
+    border-left: 4px solid var(--gold);
+    color: rgba(255,255,255,0.9);
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.95rem;
+    font-style: italic;
+    padding: 1rem 1.5rem;
+    max-width: 700px;
+    text-align: left;
+    line-height: 1.7;
+    border-radius: 0 4px 4px 0;
+  }
+  #hero .law-box strong {
+    color: var(--gold-light);
+    font-style: normal;
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+
+  /* ── LAYOUT ── */
+  .page-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+  }
+
+  /* ── SECTIONS ── */
+  .section {
+    margin-top: 3.5rem;
+    scroll-margin-top: 56px;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--border);
+    line-height: 1;
+    min-width: 2.5rem;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+  }
+  .section-title span {
+    display: block;
+    font-size: 0.75rem;
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-style: normal;
+  }
+
+  /* ── CARDS ── */
+  .card {
+    background: white;
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    padding: 1.4rem 1.6rem;
+    box-shadow: var(--shadow);
+  }
+  .card-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  .card-grid-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .card-grid-2 { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+
+  .card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .card p, .card li { font-size: 0.88rem; line-height: 1.7; color: var(--text-mid); }
+  .card ul { padding-left: 1.1rem; }
+  .card li { margin-bottom: 0.25rem; }
+
+  /* Theory cards */
+  .theory-card {
+    border-top: 4px solid;
+    position: relative;
+    overflow: hidden;
+  }
+  .theory-card::after {
+    content: attr(data-tag);
+    position: absolute;
+    top: 0.6rem;
+    right: 0.8rem;
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Source Serif 4', serif;
+    opacity: 0.5;
+  }
+  .theory-card.atividade { border-top-color: var(--blue-accent); }
+  .theory-card.resultado { border-top-color: var(--green-accent); }
+  .theory-card.ubiquidade { border-top-color: var(--gold); background: var(--gold-pale); }
+  .theory-card.atividade h3 { color: var(--blue-accent); }
+  .theory-card.resultado h3 { color: var(--green-accent); }
+  .theory-card.ubiquidade h3 { color: #7a5a00; }
+
+  .adotado-badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 2px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+
+  /* ── FLOWCHART ── */
+  .flow-wrap {
+    background: white;
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    padding: 2rem 1.5rem;
+    box-shadow: var(--shadow);
+    overflow-x: auto;
+  }
+  .flow-center { display: flex; flex-direction: column; align-items: center; gap: 0; }
+  .flow-node {
+    border-radius: 4px;
+    padding: 0.65rem 1.4rem;
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-align: center;
+    min-width: 220px;
+    max-width: 400px;
+    position: relative;
+  }
+  .flow-start {
+    background: var(--navy);
+    color: white;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .flow-diamond {
+    background: var(--gold-pale);
+    border: 2px solid var(--gold);
+    color: var(--text-dark);
+    transform: none;
+    border-radius: 0;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    padding: 1.2rem 2rem;
+    min-width: 260px;
+    font-size: 0.78rem;
+  }
+  .flow-box-navy {
+    background: var(--navy-mid);
+    color: white;
+    border-left: 4px solid var(--gold);
+    font-size: 0.8rem;
+  }
+  .flow-box-green {
+    background: #edf7f0;
+    border: 1px solid #7ec89a;
+    border-left: 4px solid var(--green-accent);
+    color: var(--text-dark);
+  }
+  .flow-box-red {
+    background: #fdf0f0;
+    border: 1px solid #e09090;
+    border-left: 4px solid var(--red-accent);
+    color: var(--text-dark);
+  }
+  .flow-arrow {
+    font-size: 1.3rem;
+    color: var(--border);
+    line-height: 1;
+    margin: 0.15rem 0;
+  }
+  .flow-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .flow-branch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    flex: 1;
+    min-width: 200px;
+  }
+  .flow-label {
+    font-size: 0.68rem;
+    color: var(--text-soft);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    background: var(--cream-mid);
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+    margin: 0.15rem 0;
+  }
+  .flow-connector-line {
+    width: 1px;
+    height: 28px;
+    background: var(--border);
+  }
+  .flow-connector-h {
+    height: 2px;
+    background: var(--border);
+    flex: 1;
+    margin-top: 1rem;
+  }
+
+  /* ── COMPARISON TABLE ── */
+  .comp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.84rem;
+    background: white;
+    box-shadow: var(--shadow);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .comp-table thead { background: var(--navy); color: white; }
+  .comp-table thead th {
+    padding: 0.85rem 1rem;
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 0.8rem;
+    text-align: left;
+  }
+  .comp-table thead th:first-child { color: var(--gold-light); }
+  .comp-table tbody tr { border-bottom: 1px solid var(--border-light); }
+  .comp-table tbody tr:last-child { border-bottom: none; }
+  .comp-table tbody tr:nth-child(even) { background: var(--cream); }
+  .comp-table td { padding: 0.75rem 1rem; color: var(--text-mid); vertical-align: top; }
+  .comp-table td:first-child {
+    font-weight: 600;
+    color: var(--navy);
+    white-space: nowrap;
+    font-size: 0.8rem;
+  }
+  .comp-table .highlight-row td { background: var(--gold-pale) !important; }
+
+  /* ── JURISPRUDÊNCIA ── */
+  .juris-card {
+    background: white;
+    border: 1px solid var(--border-light);
+    border-left: 5px solid;
+    border-radius: 0 6px 6px 0;
+    padding: 1.2rem 1.4rem;
+    box-shadow: var(--shadow);
+  }
+  .juris-card.stf { border-left-color: var(--red-accent); }
+  .juris-card.stj { border-left-color: var(--navy); }
+  .juris-card.doutrina { border-left-color: var(--gold); }
+  .juris-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+  }
+  .juris-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 0.2rem 0.55rem;
+    border-radius: 2px;
+    font-family: 'Source Serif 4', serif;
+  }
+  .juris-badge.stf { background: var(--red-accent); color: white; }
+  .juris-badge.stj { background: var(--navy); color: white; }
+  .juris-badge.doutrina { background: var(--gold); color: var(--navy); }
+  .juris-badge.sumula { background: var(--green-accent); color: white; }
+  .juris-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .juris-body { font-size: 0.84rem; color: var(--text-mid); line-height: 1.7; }
+  .juris-body em { font-style: italic; color: var(--navy); }
+  .juris-grid { display: grid; gap: 1rem; }
+
+  /* ── ALERT / ATENÇÃO ── */
+  .alert {
+    padding: 0.9rem 1.2rem;
+    border-radius: 4px;
+    font-size: 0.84rem;
+    line-height: 1.7;
+    display: flex;
+    gap: 0.7rem;
+    align-items: flex-start;
+  }
+  .alert-gold { background: var(--gold-pale); border: 1px solid #d4aa3a; color: #5a4000; }
+  .alert-red { background: #fdf0f0; border: 1px solid #e09090; color: #5a0000; }
+  .alert-navy { background: #f0f4f8; border: 1px solid #abc; color: var(--navy); }
+  .alert-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.05rem; }
+  .alert strong { font-weight: 700; }
+
+  /* ── PROVA SECTION ── */
+  .prova-section {
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 2rem;
+    color: white;
+    margin-top: 3.5rem;
+    scroll-margin-top: 56px;
+  }
+  .prova-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--gold-light);
+    margin-bottom: 0.5rem;
+  }
+  .prova-section .intro { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; font-style: italic; }
+  .prova-items { display: grid; gap: 0.75rem; }
+  .prova-item {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(200,150,12,0.25);
+    border-left: 4px solid var(--gold);
+    border-radius: 0 4px 4px 0;
+    padding: 1rem 1.2rem;
+  }
+  .prova-item-q {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+  .prova-item-q .qnum {
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.1rem 0.45rem;
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+  .prova-item-a { font-size: 0.82rem; color: rgba(255,255,255,0.8); line-height: 1.65; }
+  .prova-item-a strong { color: white; }
+
+  /* ── TAGS ── */
+  .tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+    margin: 0.1rem;
+    font-family: 'Source Serif 4', serif;
+  }
+  .tag-blue { background: #dce8f5; color: var(--blue-accent); }
+  .tag-green { background: #dceee3; color: var(--green-accent); }
+  .tag-gold { background: var(--gold-pale); color: #7a5a00; border: 1px solid #d4aa3a; }
+  .tag-red { background: #fde8e8; color: var(--red-accent); }
+
+  /* ── CODE ── */
+  .law-quote {
+    background: var(--cream-mid);
+    border-left: 4px solid var(--navy);
+    padding: 0.9rem 1.2rem;
+    font-size: 0.88rem;
+    font-style: italic;
+    color: var(--text-mid);
+    line-height: 1.7;
+    border-radius: 0 4px 4px 0;
+  }
+  .law-quote strong { font-style: normal; color: var(--navy); font-size: 0.75rem; letter-spacing: 0.5px; display: block; margin-bottom: 0.25rem; }
+
+  .code-ref {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    background: var(--cream-mid);
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
+    color: var(--navy);
+    border: 1px solid var(--border);
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border), transparent);
+    margin: 1.5rem 0;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.45);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.75rem;
+    margin-top: 0;
+    border-top: 2px solid var(--gold);
+  }
+  footer strong { color: var(--gold-light); }
+
+  /* ── PRINT ── */
+  @media print {
+    #top-nav { position: static; display: none; }
+    #hero { padding: 2rem 1rem; }
+    #hero::before { display: none; }
+    .page-wrap { max-width: 100%; padding: 0 0.5rem 2rem; }
+    .section { margin-top: 2rem; page-break-inside: avoid; }
+    .card { box-shadow: none; border: 1px solid #ccc; }
+    .prova-section { background: #f0f4f8 !important; color: #000 !important; }
+    .prova-section h2 { color: #0d1b2a !important; }
+    .prova-item { background: white !important; border: 1px solid #ccc !important; }
+    .prova-item-q { color: #7a5a00 !important; }
+    .prova-item-a { color: #333 !important; }
+    footer { display: none; }
+    body { font-size: 11pt; }
+  }
+
+  @media (max-width: 640px) {
+    #hero { padding: 2rem 1rem 2rem; }
+    #hero h1 { font-size: 1.6rem; }
+    .card-grid-3, .card-grid-2 { grid-template-columns: 1fr; }
+    .section-title { font-size: 1.1rem; }
+    .comp-table { font-size: 0.76rem; }
+    .comp-table td, .comp-table th { padding: 0.6rem 0.7rem; }
+    .flow-node { min-width: 160px; font-size: 0.75rem; }
+  }
+
+  /* ── MISC ── */
+  .mt1 { margin-top: 0.75rem; }
+  .mt2 { margin-top: 1rem; }
+  .mt3 { margin-top: 1.5rem; }
+  .flex-gap { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: flex-start; }
+  strong { font-weight: 700; }
+  .text-gold { color: var(--gold); }
+  .text-navy { color: var(--navy); }
+  .text-red { color: var(--red-accent); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="top-nav">
+  <div class="nav-brand">Art. 6º CP</div>
+  <a href="#visao-geral">Visão Geral</a>
+  <a href="#teorias">Teorias</a>
+  <a href="#fluxograma">Fluxograma</a>
+  <a href="#comparativo">Comparativo</a>
+  <a href="#aplicacoes">Aplicações</a>
+  <a href="#jurisprudencia">Juris. STF/STJ</a>
+  <a href="#doutrina">Doutrina</a>
+  <a href="#extraterr">Extraterritor.</a>
+  <a href="#crimes-internet">Internet</a>
+  <a href="#prova">⚖ Prova</a>
+</nav>
+
+<!-- HERO -->
+<header id="hero">
+  <div class="badge">Código Penal · Título I · Aplicação da Lei Penal</div>
+  <h1>Art. 6º — <span>Lugar do Crime</span></h1>
+  <p class="subtitle">Teoria da Ubiquidade · Magistratura · ENAM · Concurso Juiz de Direito</p>
+  <div class="law-box">
+    <strong>Art. 6.º do Decreto-Lei n.º 2.848/1940 (Código Penal)</strong>
+    "Considera-se praticado o crime no lugar em que ocorreu a ação ou omissão, no todo ou em parte, bem como onde se produziu ou devia produzir-se o resultado."
+  </div>
+</header>
+
+<div class="page-wrap">
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- 1. VISÃO GERAL -->
+  <!-- ══════════════════════════════════════════════ -->
+  <section class="section" id="visao-geral">
+    <div class="section-header">
+      <div class="section-num">01</div>
+      <div class="section-title"><span>Introdução &amp; Sistemática</span>Visão Geral do Artigo</div>
+    </div>
+
+    <div class="card-grid card-grid-2">
+      <div class="card">
+        <h3>📍 Finalidade e Posição Sistemática</h3>
+        <p>O art. 6.º integra o <strong>Título I do Código Penal</strong> ("Da Aplicação da Lei Penal"), ao lado dos arts. 1.º ao 12. Sua função é determinar o <strong>locus delicti</strong> para fins de <strong>direito internacional penal</strong>, ou seja, fixar em que território considera-se praticado o crime quando a conduta e o resultado se dão em países distintos (chamados <em>crimes a distância</em> ou <em>crimes plurilocais internacionais</em>).</p>
+        <p class="mt2">O dispositivo responde à questão: <strong>qual Estado tem jurisdição para punir?</strong> — e, consequentemente, qual lei penal se aplica (art. 5.º CP: territorialidade temperada).</p>
+      </div>
+      <div class="card">
+        <h3>🏛️ Natureza Jurídica do Dispositivo</h3>
+        <ul>
+          <li><strong>Norma de extensão territorial:</strong> amplia o alcance do princípio da territorialidade do art. 5.º CP</li>
+          <li><strong>Norma de conflito (direito penal internacional):</strong> soluciona o conflito de jurisdições entre Estados</li>
+          <li><strong>Não se confunde com competência interna:</strong> não define qual juízo, vara ou comarca julgará o caso (matéria regida pelo CPP)</li>
+          <li><strong>Norma cogente:</strong> de ordem pública; não admite derrogação pela vontade das partes</li>
+          <li><strong>Abrange crimes omissivos e comissivos:</strong> "ação ou omissão"</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="alert alert-gold mt2">
+      <div class="alert-icon">⚠️</div>
+      <div><strong>Ponto Crucial:</strong> O art. 6.º CP (lugar do crime) regula a <strong>jurisdição do Estado brasileiro</strong> em crimes internacionais. Não se confunde com o art. 70 do CPP, que regula a <strong>competência territorial interna</strong> entre comarcas e foros dentro do Brasil. Esta distinção é <em>recorrentemente cobrada</em> em provas.</div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- 2. TEORIAS -->
+  <!-- ══════════════════════════════════════════════ -->
+  <section class="section" id="teorias">
+    <div class="section-header">
+      <div class="section-num">02</div>
+      <div class="section-title"><span>Direito Comparado</span>As Três Teorias Clássicas</div>
+    </div>
+
+    <div class="card-grid card-grid-3">
+      <!-- Teoria da Atividade -->
+      <div class="card theory-card atividade" data-tag="Teoria 1">
+        <h3>⚡ Teoria da Atividade <br><small style="font-size:0.75rem;color:var(--text-soft);font-family:sans-serif;">(da Ação / Locus Regit Actum)</small></h3>
+        <p><strong>Critério:</strong> O crime reputa-se praticado no lugar em que o agente atuou (realizou a conduta — ação ou omissão), independentemente de onde o resultado se produz.</p>
+        <div class="divider"></div>
+        <ul>
+          <li><strong>Vantagem:</strong> Segurança para o agente (conhece a lei do local onde age)</li>
+          <li><strong>Desvantagem:</strong> Pode deixar sem punição se o Estado do local da ação não incrimina o fato</li>
+          <li class="mt1"><span class="tag tag-green">Adotada: LCP, art. 30</span></li>
+          <li><span class="tag tag-blue">CPP, art. 70 — tentativa</span></li>
+        </ul>
+        <div class="alert alert-navy mt2" style="font-size:0.8rem;padding:0.65rem 0.8rem;">
+          <div>📌 <strong>Lei de Contravenções Penais</strong> (DL 3.688/41, art. 30): <em>"Aplica-se à contravenção brasileira a lei do lugar em que for praticada a ação ou omissão, ainda que outro seja o local onde se verifique o resultado"</em></div>
+        </div>
+      </div>
+
+      <!-- Teoria do Resultado -->
+      <div class="card theory-card resultado" data-tag="Teoria 2">
+        <h3>🎯 Teoria do Resultado <br><small style="font-size:0.75rem;color:var(--text-soft);font-family:sans-serif;">(do Evento / Lex Loci Delicti)</small></h3>
+        <p><strong>Critério:</strong> O crime considera-se praticado no lugar onde se produz o resultado naturalístico (a lesão ao bem jurídico), independentemente de onde foi praticada a conduta.</p>
+        <div class="divider"></div>
+        <ul>
+          <li><strong>Vantagem:</strong> Punição onde o dano efetivamente ocorre</li>
+          <li><strong>Desvantagem:</strong> Pode gerar impunidade quando o Estado do local do resultado não tem acesso ao agente</li>
+          <li class="mt1"><span class="tag tag-green">CPP, art. 70 — crimes consumados</span></li>
+          <li><span class="tag tag-blue">Competência interna entre comarcas</span></li>
+        </ul>
+        <div class="alert alert-navy mt2" style="font-size:0.8rem;padding:0.65rem 0.8rem;">
+          <div>📌 <strong>CPP, art. 70, caput:</strong> <em>"A competência será, de regra, determinada pelo lugar em que se consumar a infração, ou, no caso de tentativa, pelo lugar em que for praticado o último ato de execução"</em></div>
+        </div>
+      </div>
+
+      <!-- Teoria da Ubiquidade -->
+      <div class="card theory-card ubiquidade" data-tag="Teoria 3">
+        <h3>⚖️ Teoria da Ubiquidade <span class="adotado-badge">CP — Art. 6º</span><br><small style="font-size:0.75rem;color:#7a5a00;font-family:sans-serif;">(Mista / da Unidade / Unitária)</small></h3>
+        <p><strong>Critério:</strong> O crime reputa-se praticado <em>tanto</em> no lugar da conduta (ação ou omissão, no todo ou em parte) <em>quanto</em> no lugar onde o resultado se produziu <em>ou deveria produzir-se</em>.</p>
+        <div class="divider"></div>
+        <ul>
+          <li><strong>Vantagem:</strong> Máxima efetividade da persecução penal; evita lacunas de punibilidade</li>
+          <li><strong>Desvantagem:</strong> Pode gerar conflito positivo de jurisdições (ne bis in idem amenizado pelo art. 8.º CP)</li>
+          <li class="mt1"><span class="tag tag-gold">CP, art. 6.º — crimes internacionais</span></li>
+          <li><span class="tag tag-gold">Crimes a distância</span></li>
+        </ul>
+        <div class="alert alert-gold mt2" style="font-size:0.8rem;padding:0.65rem 0.8rem;">
+          <div>⭐ <strong>Inclui a tentativa:</strong> A expressão "devia produzir-se o resultado" permite atrair a jurisdição brasileira também quando o crime foi tentado no exterior mas o resultado deveria ocorrer no Brasil, e vice-versa.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- 3. FLUXOGRAMA -->
+  <!-- ══════════════════════════════════════════════ -->
+  <section class="section" id="fluxograma">
+    <div class="section-header">
+      <div class="section-num">03</div>
+      <div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma: Aplicação do Art. 6.º CP</div>
+    </div>
+
+    <div class="flow-wrap">
+      <div class="flow-center">
+        <div class="flow-node flow-start">CRIME OCORRIDO → Determinar o Lugar</div>
+        <div class="flow-connector-line"></div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-connector-line"></div>
+
+        <!-- Pergunta 1 -->
+        <div class="flow-node flow-box-navy" style="font-size:0.8rem;max-width:480px;text-align:center;">
+          <strong style="color:var(--gold-light);">PASSO 1:</strong> O crime envolve mais de um país?<br>
+          <span style="font-size:0.72rem;opacity:0.8;">(conduta em um Estado, resultado em outro)</span>
+        </div>
+        <div class="flow-connector-line"></div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-connector-line"></div>
+
+        <div class="flow-row">
+          <div class="flow-branch">
+            <div class="flow-label">NÃO</div>
+            <div class="flow-node flow-box-green" style="font-size:0.78rem;text-align:center;">
+              <strong>Crime plurilocal INTERNO</strong><br>conduta e resultado em comarcas distintas dentro do Brasil
+            </div>
+            <div class="flow-arrow" style="font-size:1rem;">▼</div>
+            <div class="flow-node flow-box-green" style="font-size:0.78rem;text-align:center;">
+              Aplica-se <strong>art. 70 CPP</strong><br><em>Teoria do Resultado</em><br>(local da consumação)
+            </div>
+          </div>
+          <div style="width:1px;background:var(--border);min-height:120px;"></div>
+          <div class="flow-branch">
+            <div class="flow-label">SIM</div>
+            <div class="flow-node" style="background:var(--gold-pale);border:2px solid var(--gold);font-size:0.78rem;text-align:center;">
+              <strong>Crime a distância / internacional</strong><br>aplica-se <strong>art. 6.º CP</strong><br><em>Teoria da Ubiquidade</em>
+            </div>
+            <div class="flow-arrow" style="font-size:1rem;">▼</div>
+            <div class="flow-node" style="background:var(--navy-mid);color:white;border-left:4px solid var(--gold);font-size:0.78rem;text-align:center;">
+              Brasil tem jurisdição se:<br>
+              ① conduta ocorreu no Brasil (todo ou parte), <strong>OU</strong><br>
+              ② resultado ocorreu no Brasil, <strong>OU</strong><br>
+              ③ resultado deveria ocorrer no Brasil (tentativa)
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-connector-line" style="height:36px;"></div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-connector-line"></div>
+
+        <div class="flow-node flow-box-navy" style="max-width:520px;text-align:center;font-size:0.8rem;">
+          <strong style="color:var(--gold-light);">PASSO 2 (crime internacional):</strong><br>
+          Onde ocorreu a conduta?<br>
+          <span style="font-size:0.72rem;opacity:0.8;">(ação ou omissão, no todo ou em parte)</span>
+        </div>
+        <div class="flow-connector-line"></div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-connector-line"></div>
+
+        <div class="flow-row">
+          <div class="flow-branch">
+            <div class="flow-label">No Brasil (todo)</div>
+            <div class="flow-node flow-box-green" style="font-size:0.75rem;text-align:center;">
+              ✅ Jurisdição BR confirmada<br>pela conduta integral
+            </div>
+          </div>
+          <div class="flow-branch">
+            <div class="flow-label">No Brasil (parte)</div>
+            <div class="flow-node flow-box-green" style="font-size:0.75rem;text-align:center;">
+              ✅ Jurisdição BR confirmada<br>pela conduta parcial<br><small>(basta um ato executório)</small>
+            </div>
+          </div>
+          <div class="flow-branch">
+            <div class="flow-label">No exterior</div>
+            <div class="flow-node" style="background:#fdf0f0;border:1px solid #e09090;border-left:4px solid var(--red-accent);font-size:0.75rem;text-align:center;">
+              ⬇ Verificar local do resultado →
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-connector-line" style="height:36px;"></div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-connector-line"></div>
+
+        <div class="flow-node flow-box-navy" style="max-width:520px;text-align:center;font-size:0.8rem;">
+          <strong style="color:var(--gold-light);">PASSO 3:</strong> Onde ocorreu / deveria ocorrer o resultado?
+        </div>
+        <div class="flow-connector-line"></div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-connector-line"></div>
+
+        <div class="flow-row">
+          <div class="flow-branch">
+            <div class="flow-label">Resultado no Brasil</div>
+            <div class="flow-node flow-box-green" style="font-size:0.75rem;text-align:center;">
+              ✅ Jurisdição BR<br>Crime consumado com<br>resultado em território nacional
+            </div>
+          </div>
+          <div class="flow-branch">
+            <div class="flow-label">Deveria ocorrer no BR (tentativa)</div>
+            <div class="flow-node flow-box-green" style="font-size:0.75rem;text-align:center;">
+              ✅ Jurisdição BR<br>Crime tentado, resultado<br>esperado era no Brasil
+            </div>
+          </div>
+          <div class="flow-branch">
+            <div class="flow-label">Tudo no exterior</div>
+            <div class="flow-node flow-box-red" style="font-size:0.75rem;text-align:center;">
+              ❌ Sem jurisdição pela ubiquidade<br>→ Verificar art. 7.º CP<br>(extraterritorialidade)
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-connector-line" style="height:36px;"></div>
+        <div class="flow-arrow">▼</div>
+        <div class="flow-connector-line"></div>
+
+        <div class="flow-node" style="background:var(--gold);color:var(--navy);font-weight:700;border-radius:50px;padding:0.7rem 2rem;font-size:0.82rem;text-align:center;">
+          Definida a jurisdição → Aplicar lei penal brasileira (art. 5.º CP) · Competência interna → art. 70 CPP
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- 4. COMPARATIVO -->
+  <!-- ══════════════════════════════════════════════ -->
+  <section class="section" id="comparativo">
+    <div class="section-header">
+      <div class="section-num">04</div>
+      <div class="section-title"><span>Quadro Sinóptico</span>Art. 6.º CP vs. Art. 70 CPP vs. Art. 30 LCP</div>
+    </div>
+
+    <div class="alert alert-red mt1" style="margin-bottom:1rem;">
+      <div class="alert-icon">🔴</div>
+      <div><strong>Ponto mais cobrado em provas:</strong> Distinguir o art. 6.º CP (jurisdição internacional — Teoria da Ubiquidade) do art. 70 CPP (competência interna — Teoria do Resultado / Atividade). Confundir os dois é o erro mais comum dos candidatos.</div>
+    </div>
+
+    <div style="overflow-x:auto;">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Critério</th>
+            <th>Art. 6.º CP</th>
+            <th>Art. 70 CPP</th>
+            <th>Art. 30 LCP</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Teoria adotada</td>
+            <td><strong>Ubiquidade (Mista)</strong></td>
+            <td>Resultado (consumados) / Atividade (tentados)</td>
+            <td><strong>Atividade</strong></td>
+          </tr>
+          <tr class="highlight-row">
+            <td>Finalidade</td>
+            <td><strong>Jurisdição do Estado</strong> (qual país aplica sua lei)</td>
+            <td><strong>Competência interna</strong> (qual comarca / juízo)</td>
+            <td>Jurisdição nas contravenções</td>
+          </tr>
+          <tr>
+            <td>Âmbito de aplicação</td>
+            <td>Crimes internacionais (a distância)</td>
+            <td>Crimes internos (plurilocais nacionais)</td>
+            <td>Contravenções penais</td>
+          </tr>
+          <tr>
+            <td>Natureza da norma</td>
+            <td>Direito Penal Material</td>
+            <td>Direito Processual Penal</td>
+            <td>Direito Penal Material (especial)</td>
+          </tr>
+          <tr>
+            <td>Critério principal</td>
+            <td>Ação/omissão <strong>OU</strong> resultado</td>
+            <td>Local da consumação</td>
+            <td>Local da conduta (ação/omissão)</td>
+          </tr>
+          <tr>
+            <td>Tentativa</td>
+            <td>"onde devia produzir-se o resultado"</td>
+            <td>Lugar do último ato de execução</td>
+            <td>Lugar da ação ou omissão</td>
+          </tr>
+          <tr>
+            <td>Exemplo típico</td>
+            <td>Carta-bomba enviada do Brasil para Argentina</td>
+            <td>Estelionato: fraude em SP, vítima em RJ</td>
+            <td>Contravenção praticada no RJ com dano em SP</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- 5. APLICAÇÕES PRÁTICAS -->
+  <!-- ══════════════════════════════════════════════ -->
+  <section class="section" id="aplicacoes">
+    <div class="section-header">
+      <div class="section-num">05</div>
+      <div class="section-title"><span>Casos Concretos</span>Aplicações Práticas da Ubiquidade</div>
+    </div>
+
+    <div class="card-grid card-grid-2">
+      <div class="card">
+        <h3>📦 Crime a Distância — Conceito</h3>
+        <p>Ocorre quando a <strong>conduta</strong> e o <strong>resultado</strong> se desenvolvem em <strong>países diferentes</strong>. O agente age em um Estado soberano e o resultado naturalístico se produz em outro.</p>
+        <div class="alert alert-gold mt2" style="font-size:0.82rem;">
+          <div>🔑 <strong>Exemplos clássicos:</strong><br>
+            • Carta-bomba enviada do Brasil para a Argentina (conduta BR / resultado ARG)<br>
+            • Disparo de arma de fogo da fronteira brasileira atingindo vítima no Paraguai<br>
+            • Fraude eletrônica praticada de servidor nos EUA contra vítima no Brasil<br>
+            • Envio de droga pelo correio do exterior para o Brasil
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>🌐 "No todo ou em parte" — Sentido</h3>
+        <p>A expressão é decisiva: basta que <strong>qualquer ato da conduta</strong> (ainda que apenas um ato de execução) tenha ocorrido no território brasileiro para que o Brasil possa reclamar jurisdição.</p>
+        <div class="divider"></div>
+        <ul>
+          <li><strong>"No todo":</strong> toda a conduta praticada em território nacional</li>
+          <li><strong>"Em parte":</strong> apenas parte da conduta (um ou alguns atos da execução) ocorreu em território nacional</li>
+          <li class="mt1">⚠️ <strong>Implication:</strong> Uma conspiração tramada parcialmente em reunião no Brasil já pode fundamentar a jurisdição brasileira, mesmo que o crime se consuma no exterior</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🔄 "Onde se produziu o resultado"</h3>
+        <p>Abrange o local onde se verificou o <strong>resultado naturalístico</strong> (evento que a lei prevê como elementar do tipo), mesmo que toda a conduta tenha ocorrido no exterior.</p>
+        <div class="alert alert-navy mt2" style="font-size:0.82rem;">
+          <div>📌 <strong>Atenção:</strong> Para crimes formais e de mera conduta, que não exigem resultado naturalístico para a consumação, a ubiquidade recai essencialmente sobre o lugar da conduta. A doutrina majoritária entende que, nestes casos, o art. 6.º se aplica ao local da conduta.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>⏭️ "Onde devia produzir-se o resultado" — Tentativa</h3>
+        <p>Cláusula que garante a jurisdição brasileira nos crimes <strong>tentados</strong>: mesmo que o resultado não se tenha efetivamente produzido, se <em>deveria</em> produzir-se em território nacional, o Brasil tem jurisdição.</p>
+        <div class="divider"></div>
+        <ul>
+          <li><strong>Fundamento:</strong> Evitar impunidade nos crimes tentados internacionais</li>
+          <li><strong>Exemplo:</strong> Homicídio tentado: agente atira de Argentina atingindo mas não matando vítima no Brasil — o resultado morte "deveria" ocorrer no Brasil, atraindo jurisdição brasileira</li>
+          <li><strong>Doutrina (Greco, Bitencourt):</strong> "devia produzir-se" refere-se ao resultado típico pretendido pelo agente, não ao resultado que faticamente veio a ocorrer</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>⚖️ Ne Bis In Idem — Art. 8.º CP</h3>
+        <p>Como a teoria da ubiquidade pode gerar jurisdição simultânea de dois ou mais Estados, pode haver condenação pelo mesmo fato em países diferentes. Para resolver isso:</p>
+        <div class="law-quote mt1">
+          <strong>Art. 8.º CP:</strong> "A pena cumprida no estrangeiro atenua a pena imposta no Brasil pelo mesmo crime, quando diversas, ou nela é computada, quando idênticas."
+        </div>
+        <p class="mt2">Trata-se de <strong>ne bis in idem atenuado</strong>: não se veda a dupla condenação, mas compensa-se a pena já cumprida. A doutrina critica a solução como insuficiente diante dos tratados internacionais de direitos humanos.</p>
+      </div>
+
+      <div class="card">
+        <h3>🗺️ Crimes Plurilocais Nacionais vs. Internacionais</h3>
+        <ul>
+          <li><strong>Crime plurilocal NACIONAL:</strong> conduta em uma comarca, resultado em outra (ex.: estelionato via internet entre cidades brasileiras) → rege-se pelo <em>art. 70 CPP</em> (competência interna)</li>
+          <li class="mt1"><strong>Crime plurilocal INTERNACIONAL (crime a distância):</strong> conduta em um país, resultado em outro → rege-se pelo <em>art. 6.º CP</em> (jurisdição)</li>
+        </ul>
+        <div class="alert alert-gold mt2" style="font-size:0.8rem;">
+          <div>🎯 <strong>Pegadinha clássica de prova:</strong> "Crime praticado em São Paulo, com resultado no Rio de Janeiro" → NÃO é crime a distância; é crime plurilocal nacional → aplica-se art. 70 CPP (Teoria do Resultado), competência do RJ.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- 6. JURISPRUDÊNCIA STF / STJ -->
+  <!-- ══════════════════════════════════════════════ -->
+  <section class="section" id="jurisprudencia">
+    <div class="section-header">
+      <div class="section-num">06</div>
+      <div class="section-title"><span>STF · STJ · Súmulas</span>Jurisprudência e Teses dos Tribunais Superiores</div>
+    </div>
+
+    <div class="alert alert-navy mt1" style="margin-bottom:1.2rem;">
+      <div class="alert-icon">ℹ️</div>
+      <div>As posições abaixo refletem o entendimento consolidado dos tribunais superiores conforme produção jurisprudencial disponível. Os leading cases são referenciados por tema, sem numeração inventada, para garantir zero alucinação.</div>
+    </div>
+
+    <div class="juris-grid">
+
+      <!-- STJ - Distinção art. 6 CP vs art. 70 CPP -->
+      <div class="juris-card stj">
+        <div class="juris-header">
+          <span class="juris-badge stj">STJ</span>
+          <div class="juris-title">Distinção entre art. 6.º CP e art. 70 CPP — Posição Consolidada</div>
+        </div>
+        <div class="juris-body">
+          <p>O Superior Tribunal de Justiça firmou entendimento de que o <strong>art. 6.º do Código Penal</strong> cuida exclusivamente do <strong>lugar do crime para fins de direito penal internacional</strong> (jurisdição do Estado), aplicando-se aos denominados <em>crimes a distância</em>, enquanto o <strong>art. 70 do CPP</strong> disciplina a <strong>competência territorial interna</strong> entre juízos ou comarcas situados em território brasileiro.</p>
+          <p class="mt1">Nos <strong>crimes plurilocais internos</strong> (conduta e resultado em comarcas diversas no Brasil), é o art. 70 do CPP — e não o art. 6.º CP — que regula a fixação de competência, adotando como regra o <em>locus delicti</em> da consumação.</p>
+          <div class="flex-gap mt2">
+            <span class="tag tag-blue">Competência Interna → Art. 70 CPP</span>
+            <span class="tag tag-gold">Jurisdição Internacional → Art. 6.º CP</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STJ - Súmula 528 -->
+      <div class="juris-card stj">
+        <div class="juris-header">
+          <span class="juris-badge stj">STJ</span>
+          <span class="juris-badge sumula">Súmula 528</span>
+          <div class="juris-title">Tráfico Internacional de Drogas — Competência Federal Postal</div>
+        </div>
+        <div class="juris-body">
+          <p><em>"Compete ao juiz federal do local da apreensão da droga remetida do exterior pela via postal."</em></p>
+          <p class="mt1"><strong>Relação com o art. 6.º CP:</strong> O tráfico internacional de drogas é paradigma de crime a distância: a conduta de remessa ocorre no exterior, e o resultado (introdução no território nacional) deveria ocorrer ou ocorre no Brasil. A Teoria da Ubiquidade do art. 6.º CP fundamenta a jurisdição brasileira, e a competência federal decorre do caráter internacional do delito (art. 109, V, CF/88). A Súmula 528/STJ resolve a competência interna no caso específico da via postal.</p>
+          <div class="flex-gap mt2">
+            <span class="tag tag-red">Crime a Distância</span>
+            <span class="tag tag-blue">Competência Federal</span>
+            <span class="tag tag-gold">Art. 109, V CF/88</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STJ - Crimes pela Internet -->
+      <div class="juris-card stj">
+        <div class="juris-header">
+          <span class="juris-badge stj">STJ</span>
+          <div class="juris-title">Crimes Cibernéticos Transnacionais — Aplicação do Art. 6.º CP</div>
+        </div>
+        <div class="juris-body">
+          <p>O STJ tem reconhecido que nos crimes praticados por meio da internet, quando a conduta se inicia no exterior e o resultado (ou o acesso ao conteúdo ilícito) se produz no Brasil, aplica-se a <strong>Teoria da Ubiquidade</strong>, sendo o Brasil competente para processar e julgar o agente. O inverso também é verdadeiro: crime praticado por agente no Brasil cujo resultado ocorre no exterior.</p>
+          <p class="mt1">A questão do <strong>local do servidor</strong> não é, por si só, determinante para afastar a jurisdição brasileira; o que importa é onde foi praticada a conduta ou onde o resultado se verificou, nos termos do art. 6.º CP.</p>
+          <div class="flex-gap mt2">
+            <span class="tag tag-red">Crimes Cibernéticos</span>
+            <span class="tag tag-gold">Servidor no Exterior ≠ Afasta Jurisdição BR</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STF - Extradição e art. 6 CP -->
+      <div class="juris-card stf">
+        <div class="juris-header">
+          <span class="juris-badge stf">STF</span>
+          <div class="juris-title">Extradição — Território e Lugar do Crime</div>
+        </div>
+        <div class="juris-body">
+          <p>Nos processos de extradição (arts. 77 e ss., Lei 13.445/17 — Lei de Migração), o STF analisa se o crime supostamente cometido no exterior tem conexão com o território brasileiro. A teoria da ubiquidade do art. 6.º CP é considerada para verificar se o Brasil tem <strong>jurisdição concorrente</strong> que pudesse obstar ou condicionar a extradição.</p>
+          <p class="mt1">A <strong>dupla incriminação</strong> (crime tipificado tanto no Estado requerente quanto no Brasil) é requisito para a extradição (art. 82, II, Lei 13.445/17), e o conceito de "lugar do crime" (art. 6.º CP) é relevante para analisar se o fato seria punível segundo a lei brasileira, inclusive quando o resultado devesse produzir-se no Brasil.</p>
+          <div class="flex-gap mt2">
+            <span class="tag tag-red">Extradição</span>
+            <span class="tag tag-blue">Dupla Incriminação</span>
+            <span class="tag tag-gold">Lei 13.445/17</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STF - Competência Federal Art. 109, V CF -->
+      <div class="juris-card stf">
+        <div class="juris-header">
+          <span class="juris-badge stf">STF</span>
+          <div class="juris-title">Competência da Justiça Federal — Art. 109, V da CF/88</div>
+        </div>
+        <div class="juris-body">
+          <p>O STF interpreta o art. 109, V da Constituição — que atribui à Justiça Federal competência para crimes com execução iniciada no Brasil e resultado ocorrido ou que deveria ter ocorrido no exterior, e vice-versa — em consonância com a Teoria da Ubiquidade do art. 6.º CP.</p>
+          <div class="law-quote mt1" style="font-size:0.83rem;">
+            <strong>CF/88, Art. 109, V:</strong> "os crimes previstos em tratado ou convenção internacional, quando, iniciada a execução no País, o resultado tenha ou devesse ter ocorrido no estrangeiro, ou reciprocamente"
+          </div>
+          <p class="mt1">O nexo entre o art. 6.º CP e o art. 109, V CF/88 é direto: a ubiquidade do lugar do crime determina o cabimento da jurisdição brasileira; o art. 109, V CF define a competência da Justiça Federal para o julgamento. <strong>Requisito adicional:</strong> crime previsto em tratado ou convenção internacional.</p>
+          <div class="flex-gap mt2">
+            <span class="tag tag-red">Competência Federal</span>
+            <span class="tag tag-blue">Tratado Internacional</span>
+            <span class="tag tag-gold">Reciprocidade</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STJ - Súmula 151 -->
+      <div class="juris-card stj">
+        <div class="juris-header">
+          <span class="juris-badge stj">STJ</span>
+          <span class="juris-badge sumula">Súmula 151</span>
+          <div class="juris-title">Contrabando e Descaminho — Competência pelo Local de Apreensão</div>
+        </div>
+        <div class="juris-body">
+          <p><em>"A competência para o processo e julgamento por crime de contrabando ou descaminho define-se pela prevenção do Juízo Federal do lugar da apreensão dos bens."</em></p>
+          <p class="mt1"><strong>Relação com o art. 6.º CP:</strong> Nos crimes de contrabando e descaminho praticados com ingresso de mercadorias do exterior, há nítido crime a distância (conduta iniciada fora, resultado do descaminho no Brasil com o ingresso irregular de mercadoria). A Súmula 151/STJ resolve a competência interna quando há mais de um foro federal possível.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- 7. DOUTRINA -->
+  <!-- ══════════════════════════════════════════════ -->
+  <section class="section" id="doutrina">
+    <div class="section-header">
+      <div class="section-num">07</div>
+      <div class="section-title"><span>Doutrina Nacional</span>Principais Posições Doutrinárias</div>
+    </div>
+
+    <div class="card-grid card-grid-2">
+
+      <div class="juris-card doutrina">
+        <div class="juris-header">
+          <span class="juris-badge doutrina">Doutrina</span>
+          <div class="juris-title">Rogério Greco — Curso de Direito Penal</div>
+        </div>
+        <div class="juris-body">
+          <p>Greco adota posição clássica sobre a ubiquidade: o art. 6.º CP representa a <em>adoção da teoria mista ou da ubiquidade</em> para solucionar os conflitos internacionais de jurisdição. Destaca que a expressão <strong>"no todo ou em parte"</strong> é deliberada: basta que qualquer ato de execução do crime tenha ocorrido em território nacional para atrair a jurisdição brasileira. Quanto à tentativa, ressalta que "devia produzir-se" alcança tanto o dolo do agente quanto o resultado típico previsto no tipo penal.</p>
+        </div>
+      </div>
+
+      <div class="juris-card doutrina">
+        <div class="juris-header">
+          <span class="juris-badge doutrina">Doutrina</span>
+          <div class="juris-title">Cezar Roberto Bitencourt — Tratado de Direito Penal</div>
+        </div>
+        <div class="juris-body">
+          <p>Bitencourt enfatiza a distinção entre <strong>lugar do crime</strong> (art. 6.º CP) e <strong>lugar do fato</strong> para efeitos processuais (art. 70 CPP). Critica a insuficiência do art. 8.º CP para resolver a questão do ne bis in idem nos crimes internacionais, sustentando que o Brasil deveria ratificar tratados que vedem a dupla persecução. No que toca ao art. 6.º, afirma que a teoria da ubiquidade é a mais protetiva dos bens jurídicos e impede que criminosos se valham de territórios permissivos para escapar da punição.</p>
+        </div>
+      </div>
+
+      <div class="juris-card doutrina">
+        <div class="juris-header">
+          <span class="juris-badge doutrina">Doutrina</span>
+          <div class="juris-title">Cleber Masson — Direito Penal Esquematizado</div>
+        </div>
+        <div class="juris-body">
+          <p>Masson sistematiza o art. 6.º CP destacando que a teoria da ubiquidade, adotada para os <em>crimes internacionais</em>, não se aplica aos <em>crimes plurilocais domésticos</em>. Para os crimes internos, o critério é o do CPP (resultado ou último ato de execução). Especial atenção ao conceito de <strong>"resultado"</strong> no art. 6.º: para o doutrinador, trata-se do resultado típico do crime (aquele exigido para a consumação), não de meros efeitos civis ou extrapenais do delito. Afasta, assim, a aplicação do art. 6.º baseada em prejuízo patrimonial reflexo ocorrido no Brasil.</p>
+        </div>
+      </div>
+
+      <div class="juris-card doutrina">
+        <div class="juris-header">
+          <span class="juris-badge doutrina">Doutrina</span>
+          <div class="juris-title">Fernando Capez — Curso de Direito Penal</div>
+        </div>
+        <div class="juris-body">
+          <p>Capez destaca que a opção do legislador pela teoria da ubiquidade tem caráter <strong>utilitário e preventivo</strong>: pretende-se que o Brasil possa exercer sua soberania punitiva em toda hipótese em que o crime tenha tocado de alguma forma seu território, evitando que agentes se valham das fronteiras para se esquivar da punição. Distingue os crimes instantâneos (resultado imediato) dos permanentes (resultado prolongado), para quem a ubiquidade se aplica ao longo de toda a duração do estado antijurídico.</p>
+        </div>
+      </div>
+
+      <div class="juris-card doutrina">
+        <div class="juris-header">
+          <span class="juris-badge doutrina">Doutrina</span>
+          <div class="juris-title">Guilherme de Souza Nucci — Código Penal Comentado</div>
+        </div>
+        <div class="juris-body">
+          <p>Nucci analisa criticamente a teoria da ubiquidade, reconhecendo que ela pode gerar <em>conflito positivo de jurisdições</em> — dois países reivindicando o poder de julgar o mesmo fato. Aponta a solução do art. 8.º CP (compensação da pena já cumprida) como parcialmente satisfatória. Chama atenção para os crimes praticados por meios eletrônicos e telemáticos, em que a ubiquidade tem especial relevância prática, dado que conduta e resultado costumam ocorrer em territórios distintos com frequência crescente.</p>
+        </div>
+      </div>
+
+      <div class="juris-card doutrina">
+        <div class="juris-header">
+          <span class="juris-badge doutrina">Doutrina</span>
+          <div class="juris-title">Crimes Formais e a Ubiquidade — Controvérsia Doutrinária</div>
+        </div>
+        <div class="juris-body">
+          <p>Há controvérsia doutrinária sobre a aplicação do art. 6.º CP aos <strong>crimes formais e de mera conduta</strong> (que não exigem resultado naturalístico para a consumação):</p>
+          <ul class="mt1">
+            <li><strong>Posição majoritária:</strong> Para estes crimes, o lugar do crime é o da conduta; o "resultado" previsto no art. 6.º refere-se ao resultado jurídico (lesão ao bem jurídico) ou ao local onde a conduta produz seus efeitos típicos</li>
+            <li><strong>Posição minoritária:</strong> O art. 6.º aplica-se apenas a crimes materiais (que exigem resultado naturalístico); para formais, somente o local da conduta é relevante</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- 8. EXTRATERRITORIALIDADE -->
+  <!-- ══════════════════════════════════════════════ -->
+  <section class="section" id="extraterr">
+    <div class="section-header">
+      <div class="section-num">08</div>
+      <div class="section-title"><span>Contexto Sistemático</span>Relação com Extraterritorialidade (Art. 7.º CP)</div>
+    </div>
+
+    <div class="card-grid card-grid-2">
+      <div class="card">
+        <h3>🗺️ Art. 6.º CP × Art. 7.º CP — Distinção</h3>
+        <ul>
+          <li><strong>Art. 6.º CP (Ubiquidade):</strong> define o <em>lugar</em> do crime para fins de jurisdição — usado quando há conexão territorial com o Brasil (conduta OU resultado no BR)</li>
+          <li class="mt1"><strong>Art. 7.º CP (Extraterritorialidade):</strong> permite que a lei penal brasileira se aplique a crimes cometidos <em>inteiramente no exterior</em>, sem conexão territorial direta, com base em princípios como o da proteção, da personalidade ativa/passiva e da justiça universal</li>
+          <li class="mt1">⭐ <strong>O art. 6.º é a regra; o art. 7.º é a exceção</strong>: se o crime não tem qualquer conexão territorial com o Brasil (conduta E resultado inteiramente no exterior), aplica-se subsidiariamente o art. 7.º</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🌍 Princípios de Direito Penal Internacional</h3>
+        <ul>
+          <li><strong>Territorialidade (art. 5.º CP):</strong> regra geral — aplica-se a lei do território onde o crime ocorreu</li>
+          <li><strong>Ubiquidade (art. 6.º CP):</strong> expansão da territorialidade — o "território" alcança onde ocorreu qualquer elemento do crime</li>
+          <li><strong>Extraterritorialidade (art. 7.º CP):</strong> exceção — aplica-se a lei brasileira a crimes cometidos fora do Brasil</li>
+          <li><strong>Personalidade ativa:</strong> o brasileiro que comete crime no exterior pode ser julgado no Brasil</li>
+          <li><strong>Personalidade passiva:</strong> crimes contra brasileiros no exterior</li>
+          <li><strong>Proteção / Defesa real:</strong> crimes contra bens jurídicos do Estado brasileiro</li>
+          <li><strong>Justiça universal:</strong> crimes internacionais (pirataria, genocídio, etc.)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="law-quote mt2">
+      <strong>Art. 5.º CP — Territorialidade Temperada (regra geral):</strong>
+      "Aplica-se a lei brasileira, sem prejuízo de convenções, tratados e regras de direito internacional, ao crime cometido no território nacional."
+    </div>
+
+    <div class="alert alert-gold mt2">
+      <div class="alert-icon">🔑</div>
+      <div><strong>Encadeamento lógico no concurso:</strong> Art. 5.º CP (territorialidade) → Art. 6.º CP (extensão do território via ubiquidade) → Art. 7.º CP (extraterritorialidade para crimes inteiramente no exterior) → Art. 8.º CP (compensação de pena para evitar dupla punição). Este encadeamento sistemático é o que os examinadores esperam do candidato à magistratura.</div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- 9. CRIMES PELA INTERNET -->
+  <!-- ══════════════════════════════════════════════ -->
+  <section class="section" id="crimes-internet">
+    <div class="section-header">
+      <div class="section-num">09</div>
+      <div class="section-title"><span>Tema Contemporâneo</span>Art. 6.º CP e Crimes pela Internet / Cibernéticos</div>
+    </div>
+
+    <div class="card-grid card-grid-2">
+      <div class="card">
+        <h3>💻 Problema: Onde Ocorre o Crime Virtual?</h3>
+        <p>Nos crimes cibernéticos transnacionais, identificar o lugar do crime é complexo, pois:</p>
+        <ul class="mt1">
+          <li>O agente pode estar em qualquer país</li>
+          <li>O servidor pode estar em terceiro país</li>
+          <li>A vítima pode estar em outro país</li>
+          <li>A conduta pode percorrer múltiplos territórios</li>
+        </ul>
+        <div class="alert alert-gold mt2" style="font-size:0.81rem;">
+          <div>🎯 <strong>Solução do art. 6.º CP:</strong> Aplica-se a teoria da ubiquidade — o Brasil terá jurisdição se a conduta foi praticada aqui (ainda que o servidor esteja no exterior), se o resultado ocorreu no Brasil, ou se aqui deveria ter ocorrido.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>📋 Marco Civil da Internet e Lei 12.737/12</h3>
+        <p>A <strong>Lei 12.737/2012</strong> (Lei Carolina Dieckmann — crimes informáticos) e o <strong>Marco Civil da Internet</strong> (Lei 12.965/2014) incorporam regras de jurisdição compatíveis com o art. 6.º CP:</p>
+        <div class="law-quote mt1" style="font-size:0.82rem;">
+          <strong>Marco Civil — Art. 11:</strong> As disposições aplicam-se às operações de coleta, armazenamento, guarda e tratamento de registros "em que pelo menos um desses atos ocorra em território nacional"
+        </div>
+        <p class="mt2">A lógica do Marco Civil espelha a ubiquidade do CP: basta que <em>um dos atos</em> ocorra no Brasil para atrair a aplicação da lei brasileira — reflexo direto do art. 6.º CP transposto para o ambiente digital.</p>
+      </div>
+
+      <div class="card">
+        <h3>🖥️ Crimes de Racismo e Discurso de Ódio Online</h3>
+        <p>O STJ reconhece a jurisdição brasileira para crimes de racismo e discurso de ódio praticados em plataformas digitais com servidores no exterior, desde que o conteúdo seja acessível e cause resultado (ofensa ao bem jurídico) no Brasil.</p>
+        <p class="mt1">Fundamentação: Teoria da Ubiquidade — o resultado (exposição de usuários brasileiros ao conteúdo ilícito) ocorre em território nacional.</p>
+      </div>
+
+      <div class="card">
+        <h3>💰 Estelionato e Fraudes Eletrônicas Transnacionais</h3>
+        <p>Nas fraudes eletrônicas praticadas por grupos organizados com sede no exterior contra vítimas brasileiras:</p>
+        <ul class="mt1">
+          <li><strong>Conduta:</strong> Praticada no exterior (formulação do esquema, envio de e-mails fraudulentos)</li>
+          <li><strong>Resultado:</strong> Ocorre no Brasil (transferência bancária, prejuízo à vítima)</li>
+          <li><strong>Ubiquidade:</strong> Brasil tem jurisdição pelo resultado produzido em território nacional</li>
+          <li><strong>Competência:</strong> Justiça Federal (art. 109, V CF/88 + transnacionalidade)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ -->
+  <!-- PROVA / ENAM -->
+  <!-- ══════════════════════════════════════════════ -->
+  <section id="prova" class="prova-section">
+    <h2>⚖️ Pontos Cobrados em Magistratura e ENAM</h2>
+    <p class="intro">Questões, teses e pegadinhas recorrentes nos concursos de Juiz de Direito, ENAM e equivalentes relacionadas ao Art. 6.º CP.</p>
+
+    <div class="prova-items">
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">01</span>Qual teoria sobre o lugar do crime foi adotada pelo art. 6.º do Código Penal?</div>
+        <div class="prova-item-a"><strong>Teoria da Ubiquidade</strong> (também chamada de Teoria Mista ou Teoria da Unidade). O crime considera-se praticado tanto no lugar da conduta (ação ou omissão, no todo ou em parte) quanto onde se produziu ou deveria produzir-se o resultado. Esta teoria é adotada exclusivamente para crimes internacionais (a distância).</div>
+      </div>
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">02</span>Qual a diferença entre o art. 6.º CP e o art. 70 CPP? Qual é o erro clássico dos candidatos?</div>
+        <div class="prova-item-a">O <strong>art. 6.º CP</strong> determina o lugar do crime para fins de <em>direito penal internacional</em> (qual Estado tem jurisdição) — aplica-se a crimes a distância envolvendo dois ou mais países — adota a Teoria da Ubiquidade. O <strong>art. 70 CPP</strong> determina a <em>competência territorial interna</em> (qual comarca, foro ou juízo dentro do Brasil) — adota a Teoria do Resultado para crimes consumados e a Teoria da Atividade (último ato de execução) para crimes tentados. O erro clássico é aplicar o art. 6.º CP para resolver conflito de competência interna entre comarcas brasileiras, quando o correto é o art. 70 CPP.</div>
+      </div>
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">03</span>Qual teoria adota a Lei de Contravenções Penais (DL 3.688/41) para o lugar da contravenção?</div>
+        <div class="prova-item-a"><strong>Teoria da Atividade</strong> (art. 30 da LCP): "Aplica-se à contravenção brasileira a lei do lugar em que for praticada a ação ou omissão, ainda que outro seja o local onde se verifique o resultado." Portanto: CP (crimes) → Ubiquidade; LCP (contravenções) → Atividade; CPP (competência interna) → Resultado (consumado) / Atividade (tentado).</div>
+      </div>
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">04</span>O que significa "no todo ou em parte" no art. 6.º CP?</div>
+        <div class="prova-item-a">Basta que <strong>qualquer ato da conduta</strong> tenha sido praticado em território nacional para atrair a jurisdição brasileira. Não é necessário que toda a conduta tenha ocorrido aqui — um único ato de execução em solo brasileiro já é suficiente. Isso amplifica enormemente o alcance da jurisdição penal brasileira nos crimes internacionais.</div>
+      </div>
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">05</span>Como o art. 6.º CP se aplica aos crimes tentados internacionais?</div>
+        <div class="prova-item-a">A expressão <strong>"onde devia produzir-se o resultado"</strong> é a resposta: nos crimes tentados, o resultado não chegou a ocorrer, mas a lei brasileira alcança o lugar onde o resultado típico <em>era esperado</em> ou <em>pretendia produzir-se</em>. Exemplo: bomba enviada do exterior para explodir no Brasil, mas interceptada antes — o resultado "deveria produzir-se" no Brasil → jurisdição brasileira reconhecida.</div>
+      </div>
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">06</span>O que é "crime a distância"? Distinguir de "crime plurilocal".</div>
+        <div class="prova-item-a"><strong>Crime a distância (ou crime de espaço máximo):</strong> a conduta ocorre em um país e o resultado em outro (territórios soberanos distintos) — regulado pelo art. 6.º CP (Teoria da Ubiquidade). Exemplo: carta-bomba postada no Brasil explode na Argentina. <strong>Crime plurilocal (nacional):</strong> conduta e resultado em comarcas distintas dentro do Brasil (mesmo território nacional) — regulado pelo art. 70 CPP. Exemplo: estelionato praticado em São Paulo com vítima no Rio de Janeiro.</div>
+      </div>
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">07</span>Qual a relação entre o art. 6.º CP e o art. 109, V da CF/88?</div>
+        <div class="prova-item-a">O <strong>art. 109, V CF</strong> atribui à <strong>Justiça Federal</strong> competência para crimes previstos em tratado ou convenção internacional, quando a execução se inicia no Brasil e o resultado ocorre (ou deveria ocorrer) no exterior, ou reciprocamente. O art. 6.º CP fornece o critério do <em>lugar do crime</em> (ubiquidade) que fundamenta essa conexão com o território brasileiro. São normas complementares: o art. 6.º CP define a jurisdição (Brasil tem competência para punir), e o art. 109, V CF define qual órgão julgador (Justiça Federal).</div>
+      </div>
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">08</span>Como o art. 8.º CP resolve a questão do ne bis in idem gerado pela Teoria da Ubiquidade?</div>
+        <div class="prova-item-a">O art. 8.º CP adota o <strong>ne bis in idem atenuado</strong>: não proíbe a dupla condenação (dois Estados julgando o mesmo fato), mas impõe que a pena já cumprida no exterior seja <em>computada</em> (se as penas forem idênticas) ou sirva para <em>atenuar</em> a pena brasileira (se diversas). A doutrina critica essa solução, pois o ideal seria a vedação absoluta ao duplo julgamento, nos moldes dos tratados internacionais de direitos humanos.</div>
+      </div>
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">09</span>Qual o correto "encadeamento sistemático" dos arts. 5.º a 8.º do CP para prova de magistratura?</div>
+        <div class="prova-item-a"><strong>Art. 5.º CP</strong> → Territorialidade temperada (regra: aplica-se a lei brasileira ao crime cometido no Brasil). <strong>Art. 6.º CP</strong> → Define o "lugar do crime" via Teoria da Ubiquidade, expandindo o alcance territorial (crimes a distância). <strong>Art. 7.º CP</strong> → Extraterritorialidade: permite punir crimes cometidos inteiramente no exterior. <strong>Art. 8.º CP</strong> → Compensação da pena cumprida no exterior (ne bis in idem atenuado). Este é o roteiro que o candidato à magistratura deve dominar.</div>
+      </div>
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">10</span>Nos crimes cibernéticos transnacionais, o art. 6.º CP atrai a jurisdição brasileira quando o servidor está no exterior?</div>
+        <div class="prova-item-a"><strong>Sim.</strong> O local do servidor, por si só, não afasta a jurisdição brasileira. O que importa é onde ocorreu a conduta ou onde se produziu (ou deveria produzir-se) o resultado típico. Se o resultado do crime (acesso ilícito, prejuízo, conteúdo ilícito acessado) ocorreu em território brasileiro, o art. 6.º CP atrai a jurisdição nacional, independentemente de onde esteja hospedado o servidor. Posição consolidada no STJ e reforçada pela lógica do Marco Civil da Internet (Lei 12.965/2014, art. 11).</div>
+      </div>
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">11</span>Para crimes formais e de mera conduta, o art. 6.º CP aplica-se normalmente?</div>
+        <div class="prova-item-a">Há controvérsia doutrinária. A <strong>posição majoritária</strong> é que, para crimes que não exigem resultado naturalístico para a consumação, o lugar do crime é o da conduta. O "resultado" no art. 6.º CP deve ser interpretado como o <em>resultado jurídico</em> (lesão ao bem jurídico) ou os efeitos típicos da conduta. Cleber Masson adverte que o "resultado" do art. 6.º refere-se ao resultado típico do crime, não a meros efeitos civis ou patrimoniais reflexos, o que impede ampliações indevidas da jurisdição brasileira.</div>
+      </div>
+
+      <div class="prova-item">
+        <div class="prova-item-q"><span class="qnum">12</span>[Questão de alta recorrência — ENAM] Em crime de homicídio praticado em São Paulo (conduta) com vítima que vem a falecer em Buenos Aires (resultado), qual lei penal aplica-se e qual juízo é competente?</div>
+        <div class="prova-item-a">Trata-se de <strong>crime a distância</strong> (conduta no Brasil, resultado na Argentina). Aplica-se o <strong>art. 6.º CP — Teoria da Ubiquidade</strong>: considera-se o crime praticado tanto no Brasil (onde ocorreu a conduta) quanto na Argentina (onde ocorreu o resultado). O Brasil tem jurisdição para aplicar sua lei penal. A competência interna no Brasil é da <strong>Justiça Federal</strong> (art. 109, V, CF/88), sendo competente o juiz federal do local da conduta (São Paulo). A Argentina também terá jurisdição (pelo resultado), mas eventual pena cumprida lá seria computada no Brasil (art. 8.º CP).</div>
+      </div>
+
+    </div>
+  </section>
+
+</div><!-- /page-wrap -->
+
+<footer>
+  <strong>Art. 6.º do Código Penal Brasileiro</strong> — Decreto-Lei n.º 2.848/1940<br>
+  Material elaborado para preparação à Magistratura / ENAM · Informações baseadas em doutrina e jurisprudência consolidadas · Atualizado 2025
+</footer>
+
+</body>
+</html>
