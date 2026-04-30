@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 25 CP — Legítima Defesa | Fluxograma Magistratura ENAM</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0d1b2a;--navy-mid:#1a2f45;--navy-light:#243b55;--gold:#c8960c;--gold-light:#e8b84b;--gold-pale:#fdf3d8;--cream:#faf7f2;--cream-mid:#f0ebe2;--text-dark:#1a1208;--text-mid:#3d3020;--text-soft:#6b5c40;--border:#d4c49a;--border-light:#e8dcbf;--red-accent:#8b1a1a;--green-accent:#1a4a2e;--blue-accent:#1a3a5c;--purple-accent:#4a1a5c;--shadow:0 4px 24px rgba(13,27,42,0.10);}
+  *{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+  body{font-family:'Source Serif 4',Georgia,serif;background:var(--cream);color:var(--text-dark);font-size:15px;line-height:1.75;}
+  #top-nav{position:sticky;top:0;z-index:999;background:var(--navy);border-bottom:3px solid var(--gold);padding:0 1.5rem;display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;}
+  #top-nav::-webkit-scrollbar{display:none;}
+  #top-nav .nav-brand{font-family:'Playfair Display',serif;color:var(--gold-light);font-size:0.9rem;font-weight:700;white-space:nowrap;padding:0.85rem 1.2rem 0.85rem 0;border-right:1px solid rgba(200,150,12,0.3);margin-right:0.5rem;letter-spacing:0.5px;}
+  #top-nav a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.72rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;padding:0.85rem 0.8rem;white-space:nowrap;transition:color .2s;border-bottom:3px solid transparent;margin-bottom:-3px;}
+  #top-nav a:hover,#top-nav a.nav-prova:hover{color:var(--gold-light);border-bottom-color:var(--gold);}
+  #top-nav a.nav-prova{color:var(--gold-light);}
+  #hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 60%,#1e3d5c 100%);color:white;padding:3.5rem 2rem 3rem;text-align:center;position:relative;overflow:hidden;}
+  #hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(200,150,12,0.03) 0px,rgba(200,150,12,0.03) 1px,transparent 1px,transparent 40px);}
+  #hero .badge{display:inline-block;background:rgba(200,150,12,0.15);border:1px solid rgba(200,150,12,0.5);color:var(--gold-light);font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;padding:0.35rem 1rem;border-radius:2px;margin-bottom:1.2rem;font-family:'Source Serif 4',serif;font-weight:600;position:relative;}
+  #hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.15;margin-bottom:0.6rem;letter-spacing:-0.5px;position:relative;}
+  #hero h1 span{color:var(--gold-light);}
+  #hero .subtitle{font-size:1rem;color:rgba(255,255,255,0.65);font-style:italic;margin-bottom:1.5rem;position:relative;}
+  #hero .law-box{display:inline-block;background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.4);border-left:4px solid var(--gold);color:rgba(255,255,255,0.9);font-family:'Source Serif 4',serif;font-size:0.93rem;font-style:italic;padding:1rem 1.5rem;max-width:1120px;text-align:left;line-height:1.9;border-radius:0 4px 4px 0;position:relative;}
+  #hero .law-box strong{color:var(--gold-light);font-style:normal;display:block;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem;}
+  .page-wrap{width:100%!important;max-width:none!important;margin:0!important;padding-left:clamp(1rem,3vw,4rem)!important;padding-right:clamp(1rem,3vw,4rem)!important;padding-bottom:4rem;}
+  .section,.prova-section,.card,.flow-wrap,.comp-table,.juris-grid{max-width:none!important;}
+  .section{margin-top:3.5rem;scroll-margin-top:56px;}
+  .section-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:0.75rem;border-bottom:2px solid var(--border);}
+  .section-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--border);line-height:1;min-width:2.5rem;}
+  .section-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--navy);line-height:1.2;}
+  .section-title span{display:block;font-size:0.75rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-style:normal;}
+  .card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1.4rem 1.6rem;box-shadow:var(--shadow);}
+  .card-grid{display:grid;gap:1rem;}.card-grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}.card-grid-2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr));}.card-grid-4{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));}
+  .card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:0.6rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border-light);}
+  .card h4{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;margin-bottom:0.35rem;}
+  .card p,.card li{font-size:0.88rem;line-height:1.7;color:var(--text-mid);}
+  .card ul{padding-left:1.1rem;}.card li{margin-bottom:0.3rem;}
+  .type-card{border-top:4px solid;}.tc-red{border-top-color:var(--red-accent);}.tc-red h3{color:var(--red-accent);}.tc-green{border-top-color:var(--green-accent);}.tc-green h3{color:var(--green-accent);}.tc-blue{border-top-color:var(--blue-accent);}.tc-blue h3{color:var(--blue-accent);}.tc-gold{border-top-color:var(--gold);}.tc-gold h3{color:#7a5a00;}.tc-purple{border-top-color:var(--purple-accent);}.tc-purple h3{color:var(--purple-accent);}
+  .flow-wrap{background:white;border:1px solid var(--border-light);border-radius:6px;padding:2rem 1.5rem;box-shadow:var(--shadow);overflow-x:auto;}
+  .flow-center{display:flex;flex-direction:column;align-items:center;}.flow-node{border-radius:4px;padding:0.65rem 1.4rem;font-family:'Source Serif 4',serif;font-size:0.82rem;font-weight:600;text-align:center;min-width:220px;max-width:720px;}
+  .flow-start{background:var(--navy);color:white;border-radius:50px;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;}
+  .flow-end-green{background:var(--green-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}.flow-end-red{background:var(--red-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}.flow-end-gold{background:var(--gold);color:var(--navy);border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}.flow-end-blue{background:var(--blue-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}.flow-end-purple{background:var(--purple-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+  .flow-box-navy{background:var(--navy-mid);color:white;border-left:4px solid var(--gold);font-size:0.8rem;}.flow-box-green{background:#edf7f0;border:1px solid #7ec89a;border-left:4px solid var(--green-accent);color:var(--text-dark);}.flow-box-blue{background:#edf2f8;border:1px solid #8eb4d8;border-left:4px solid var(--blue-accent);color:var(--text-dark);}.flow-box-red{background:#fdf0f0;border:1px solid #e09090;border-left:4px solid var(--red-accent);color:var(--text-dark);}.flow-box-gold{background:var(--gold-pale);border:2px solid var(--gold);color:var(--text-dark);}.flow-box-purple{background:#f3eef8;border:1px solid #b89dd8;border-left:4px solid var(--purple-accent);color:var(--text-dark);}
+  .flow-arrow{font-size:1.3rem;color:var(--border);line-height:1;margin:0.15rem 0;}.flow-row{display:flex;align-items:flex-start;gap:1.5rem;width:100%;justify-content:center;flex-wrap:wrap;}.flow-branch{display:flex;flex-direction:column;align-items:center;flex:1;min-width:210px;}.flow-label{font-size:0.68rem;color:var(--text-soft);font-weight:600;letter-spacing:0.5px;text-transform:uppercase;background:var(--cream-mid);padding:0.15rem 0.5rem;border-radius:2px;margin:0.15rem 0;}.flow-connector-line{width:1px;height:28px;background:var(--border);}
+  .comp-table{width:100%;border-collapse:collapse;font-size:0.84rem;background:white;box-shadow:var(--shadow);border-radius:6px;overflow:hidden;}.comp-table thead{background:var(--navy);color:white;}.comp-table thead th{padding:0.85rem 1rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:0.5px;font-size:0.8rem;text-align:left;}.comp-table thead th:first-child{color:var(--gold-light);}.comp-table tbody tr{border-bottom:1px solid var(--border-light);}.comp-table tbody tr:last-child{border-bottom:none;}.comp-table tbody tr:nth-child(even){background:var(--cream);}.comp-table td{padding:0.75rem 1rem;color:var(--text-mid);vertical-align:top;}.comp-table td:first-child{font-weight:600;color:var(--navy);font-size:0.8rem;}.comp-table .hl td{background:var(--gold-pale)!important;}.comp-table .hl2 td{background:#edf7f0!important;}.comp-table .hl3 td{background:#edf2f8!important;}.comp-table .hl4 td{background:#fdf0f0!important;}.comp-table .hl5 td{background:#f3eef8!important;}
+  .juris-card{background:white;border:1px solid var(--border-light);border-left:5px solid;border-radius:0 6px 6px 0;padding:1.2rem 1.4rem;box-shadow:var(--shadow);}.juris-card.stf{border-left-color:var(--red-accent);}.juris-card.stj{border-left-color:var(--navy);}.juris-card.doutrina{border-left-color:var(--gold);}.juris-card.cnj{border-left-color:var(--purple-accent);}.juris-header{display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem;flex-wrap:wrap;}.juris-badge{font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:0.2rem 0.55rem;border-radius:2px;font-family:'Source Serif 4',serif;}.juris-badge.stf{background:var(--red-accent);color:white;}.juris-badge.stj{background:var(--navy);color:white;}.juris-badge.doutrina{background:var(--gold);color:var(--navy);}.juris-badge.sumula{background:var(--green-accent);color:white;}.juris-badge.tese{background:var(--blue-accent);color:white;}.juris-badge.purple{background:var(--purple-accent);color:white;}.juris-title{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--navy);}.juris-body{font-size:0.84rem;color:var(--text-mid);line-height:1.7;}.juris-grid{display:grid;gap:1rem;}
+  .alert{padding:0.9rem 1.2rem;border-radius:4px;font-size:0.84rem;line-height:1.7;display:flex;gap:0.7rem;align-items:flex-start;}.alert-gold{background:var(--gold-pale);border:1px solid #d4aa3a;color:#5a4000;}.alert-red{background:#fdf0f0;border:1px solid #e09090;color:#5a0000;}.alert-navy{background:#f0f4f8;border:1px solid #abc;color:var(--navy);}.alert-green{background:#edf7f0;border:1px solid #7ec89a;color:#1a4a2e;}.alert-purple{background:#f3eef8;border:1px solid #b89dd8;color:var(--purple-accent);}.alert-icon{font-size:1.1rem;flex-shrink:0;margin-top:0.05rem;}.alert strong{font-weight:700;}
+  .prova-section{background:var(--navy);border-radius:8px;padding:2rem;color:white;margin-top:3.5rem;scroll-margin-top:56px;}.prova-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold-light);margin-bottom:0.5rem;}.prova-section .intro{font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;font-style:italic;}.prova-items{display:grid;gap:0.75rem;}.prova-item{background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.25);border-left:4px solid var(--gold);border-radius:0 4px 4px 0;padding:1rem 1.2rem;}.prova-item-q{font-size:0.82rem;font-weight:600;color:var(--gold-light);margin-bottom:0.4rem;display:flex;align-items:flex-start;gap:0.6rem;}.prova-item-q .qnum{background:var(--gold);color:var(--navy);font-size:0.65rem;font-weight:700;padding:0.1rem 0.45rem;border-radius:2px;flex-shrink:0;margin-top:0.1rem;}.prova-item-a{font-size:0.82rem;color:rgba(255,255,255,0.82);line-height:1.65;}.prova-item-a strong{color:white;}
+  .tag{display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;padding:0.15rem 0.5rem;border-radius:2px;margin:0.1rem;font-family:'Source Serif 4',serif;}.tag-blue{background:#dce8f5;color:var(--blue-accent);}.tag-green{background:#dceee3;color:var(--green-accent);}.tag-gold{background:var(--gold-pale);color:#7a5a00;border:1px solid #d4aa3a;}.tag-red{background:#fde8e8;color:var(--red-accent);}.tag-purple{background:#ece5f5;color:var(--purple-accent);}
+  .law-quote{background:var(--cream-mid);border-left:4px solid var(--navy);padding:0.9rem 1.2rem;font-size:0.88rem;font-style:italic;color:var(--text-mid);line-height:1.7;border-radius:0 4px 4px 0;}.law-quote strong{font-style:normal;color:var(--navy);font-size:0.75rem;letter-spacing:0.5px;display:block;margin-bottom:0.25rem;}.divider{height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);margin:1.2rem 0;}
+  .especie-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:0.85rem;}.especie-card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1rem 1.2rem;border-left:4px solid;box-shadow:var(--shadow);}.especie-card h4{font-family:'Playfair Display',serif;font-size:0.92rem;font-weight:700;margin-bottom:0.35rem;}.especie-card p,.especie-card li{font-size:0.82rem;color:var(--text-mid);line-height:1.6;}.especie-card ul{padding-left:1rem;margin-top:0.3rem;}.especie-card li{margin-bottom:0.25rem;}.ec-red{border-left-color:var(--red-accent);}.ec-red h4{color:var(--red-accent);}.ec-blue{border-left-color:var(--blue-accent);}.ec-blue h4{color:var(--blue-accent);}.ec-green{border-left-color:var(--green-accent);}.ec-green h4{color:var(--green-accent);}.ec-gold{border-left-color:var(--gold);}.ec-gold h4{color:#7a5a00;}.ec-purple{border-left-color:var(--purple-accent);}.ec-purple h4{color:var(--purple-accent);}
+  .anat-visual{display:flex;align-items:stretch;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);}.av-col{flex:1;padding:1.2rem 1.4rem;}.av-navy{background:var(--navy-mid);color:white;}.av-sep{background:var(--navy);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:900;flex:0 0 2.5rem;}.av-red{background:var(--red-accent);color:white;}.av-blue{background:var(--blue-accent);color:white;}.av-gold{background:var(--gold);color:var(--navy);}.av-purple{background:var(--purple-accent);color:white;}.av-col h4{font-family:'Playfair Display',serif;font-size:0.98rem;font-weight:700;margin-bottom:0.5rem;border-bottom:1px solid rgba(255,255,255,0.2);padding-bottom:0.35rem;}.av-col p,.av-col li{font-size:0.82rem;line-height:1.65;}.av-col ul{padding-left:1rem;margin-top:0.3rem;}
+  .source-note{font-size:0.78rem;color:var(--text-soft);border-top:1px dashed var(--border);padding-top:0.7rem;margin-top:0.9rem;}.kbd{font-family:'JetBrains Mono',monospace;background:var(--cream-mid);border:1px solid var(--border-light);border-radius:3px;padding:0.05rem 0.35rem;font-size:0.75rem;color:var(--navy);}.mini-ref{font-size:0.74rem;color:var(--text-soft);font-family:'JetBrains Mono',monospace;}.source-list li{font-size:0.82rem;margin-bottom:0.45rem;}
+  footer{background:var(--navy);color:rgba(255,255,255,0.45);text-align:center;padding:1.5rem;font-size:0.75rem;border-top:2px solid var(--gold);}footer strong{color:var(--gold-light);}
+  @page{size:A3 landscape;margin:8mm;}
+  @media print{#top-nav{display:none;}#hero{padding:1.2rem 1rem;}#hero::before{display:none;}.page-wrap{padding:0 0.35rem 1rem!important;}.section{margin-top:1.15rem;page-break-inside:avoid;}.card,.juris-card,.flow-wrap{box-shadow:none;border:1px solid #ccc;}.prova-section{background:#f0f4f8!important;color:#000!important;}.prova-section h2{color:#0d1b2a!important;}.prova-item{background:white!important;border:1px solid #ccc!important;}.prova-item-q{color:#7a5a00!important;}.prova-item-a{color:#333!important;}.anat-visual{flex-direction:column;}.av-sep{padding:0.4rem;flex:0 0 1.5rem;}footer{display:none;}body{font-size:8pt;line-height:1.35;}.card p,.card li,.juris-body,.especie-card p,.especie-card li{font-size:7.7pt;line-height:1.35}.section-title{font-size:1rem}.section-num{font-size:1.2rem}.card{padding:.65rem}.prova-section{padding:1rem}.flow-wrap{padding:1rem}.comp-table{font-size:7pt}.comp-table td,.comp-table th{padding:.35rem}}
+  @media(max-width:640px){#hero{padding:2rem 1rem;}#hero h1{font-size:1.6rem;}.card-grid-3,.card-grid-2,.card-grid-4{grid-template-columns:1fr;}.section-title{font-size:1.1rem;}.comp-table{font-size:0.76rem;}.comp-table td,.comp-table th{padding:0.55rem 0.65rem;}.flow-node{min-width:150px;font-size:0.74rem;}.anat-visual{flex-direction:column;}.av-sep{padding:0.4rem;flex:0 0 1.5rem;}}
+  .mt1{margin-top:0.75rem;}.mt2{margin-top:1rem;}.mt3{margin-top:1.5rem;}.flex-gap{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:flex-start;}strong{font-weight:700;}
+</style>
+</head>
+<body>
+
+<nav id="top-nav" aria-label="Atalhos do artigo">
+  <div class="nav-brand">Art. 25 CP</div>
+  <div class="nav-main-links">
+    <a href="#visao-geral">Visão Geral</a>
+    <a href="#texto-legal">Texto Legal</a>
+    <a href="#teoria-crime">Teoria do Crime</a>
+    <a href="#requisitos">Requisitos</a>
+    <a href="#agressao">Agressão Injusta</a>
+    <a href="#atualidade">Atual/Iminente</a>
+    <a href="#meios">Meios/Moderação</a>
+    <a href="#especies">Espécies</a>
+    <a href="#putativa">Putativa</a>
+    <a href="#excesso">Excesso</a>
+    <a href="#seguranca">Agente Público</a>
+    <a href="#processo">Processo/Júri</a>
+    <a href="#fluxograma">Fluxograma</a>
+    <a href="#comparativo">Comparativo</a>
+    <a href="#jurisprudencia">Juris. STF/STJ</a>
+    <a href="#doutrina">Doutrina</a>
+    <a href="#prova" class="nav-prova">Prova</a>
+    <a href="#fontes">Fontes</a>
+  </div>
+</nav>
+
+<header id="hero">
+  <div class="badge">Código Penal · Título II · Do Crime · Excludentes de Ilicitude · Atualização conferida até 28/04/2026</div>
+  <h1>Art. 25 — <span>Legítima Defesa</span></h1>
+  <p class="subtitle">Injusta agressão · Atualidade ou iminência · Direito próprio ou alheio · Meios necessários · Moderação · Excesso · Júri · Magistratura · ENAM</p>
+  <div class="law-box">
+    <strong>Art. 25 do Decreto-Lei n.º 2.848/1940 — Código Penal</strong>
+    “Entende-se em legítima defesa quem, usando moderadamente dos meios necessários, repele injusta agressão, atual ou iminente, a direito seu ou de outrem.”<br><br>
+    <strong>Parágrafo único — Lei n.º 13.964/2019</strong>
+    “Observados os requisitos previstos no caput deste artigo, considera-se também em legítima defesa o agente de segurança pública que repele agressão ou risco de agressão a vítima mantida refém durante a prática de crimes.”
+  </div>
+</header>
+
+<div class="page-wrap">
+
+<section class="section" id="visao-geral">
+  <div class="section-header"><div class="section-num">01</div><div class="section-title"><span>Introdução &amp; Estrutura</span>Mapa Geral do Art. 25 CP</div></div>
+  <div class="card-grid card-grid-3">
+    <div class="card type-card tc-blue">
+      <h3>📍 Função do art. 25 CP</h3>
+      <p>O art. 25 CP define a <strong>legítima defesa</strong>, causa legal de exclusão da ilicitude. O fato continua materialmente existente e pode ser típico em abstrato, mas deixa de ser contrário ao Direito porque o ordenamento autoriza a reação defensiva contra agressão injusta, atual ou iminente.</p>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>🔴 Núcleo duro</h3>
+      <p>A legítima defesa exige uma <strong>agressão humana injusta</strong> e uma <strong>reação defensiva necessária e moderada</strong>. Sem agressão atual ou iminente, há vingança, retaliação ou prevenção remota, não legítima defesa. Sem moderação, entra o problema do excesso punível.</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>🟡 Ponto de prova</h3>
+      <p>O parágrafo único, incluído pelo Pacote Anticrime, <strong>não criou autorização automática para matar</strong> nem presunção absoluta em favor do agente de segurança pública. A própria lei condiciona a hipótese aos requisitos do caput: agressão/riscos concretos, necessidade e moderação.</p>
+    </div>
+  </div>
+  <div class="alert alert-gold mt2"><div class="alert-icon">⭐</div><div><strong>Fórmula de prova:</strong> legítima defesa = <strong>agressão injusta</strong> + <strong>atual ou iminente</strong> + <strong>direito próprio ou de terceiro</strong> + <strong>meios necessários</strong> + <strong>uso moderado</strong> + <strong>ânimo defensivo</strong>. A falta de qualquer núcleo afasta a justificante ou desloca o caso para excesso, erro, estado de necessidade ou crime comum.</div></div>
+</section>
+
+<section class="section" id="texto-legal">
+  <div class="section-header"><div class="section-num">02</div><div class="section-title"><span>Anatomia do Dispositivo</span>Texto Legal Fatiado para Prova</div></div>
+  <div class="anat-visual">
+    <div class="av-col av-red"><h4>“Quem...”</h4><p><strong>Sujeito ativo amplo</strong></p><ul><li>Qualquer pessoa pode agir em legítima defesa.</li><li>Inclui defesa própria e defesa de terceiro.</li><li>Agente público também pode atuar, mas dentro dos requisitos legais.</li></ul></div>
+    <div class="av-sep">→</div>
+    <div class="av-col av-navy"><h4>“Usando moderadamente”</h4><p><strong>Limite de intensidade</strong></p><ul><li>A reação deve cessar quando cessar a agressão.</li><li>Exagero consciente ou culposo gera excesso punível.</li><li>Moderação é analisada no contexto concreto, não em régua matemática.</li></ul></div>
+    <div class="av-sep">→</div>
+    <div class="av-col av-blue"><h4>“Meios necessários”</h4><p><strong>Limite de escolha</strong></p><ul><li>Meio idôneo e disponível para repelir a agressão.</li><li>Não exige fuga heroica ou passividade absoluta.</li><li>Se havia meio menos lesivo igualmente eficaz, o meio mais gravoso pode ser excessivo.</li></ul></div>
+    <div class="av-sep">→</div>
+    <div class="av-col av-gold"><h4>“Injusta agressão, atual ou iminente”</h4><p><strong>Pressuposto objetivo</strong></p><ul><li>A agressão deve ser contrária ao Direito.</li><li>Atual: em curso. Iminente: prestes a ocorrer.</li><li>Agressão passada vira vingança; agressão futura remota vira prevenção indevida.</li></ul></div>
+  </div>
+  <div class="card mt2">
+    <h3>📌 Parágrafo único — leitura correta</h3>
+    <p>O parágrafo único explicita situação envolvendo <strong>agente de segurança pública</strong> que repele agressão ou risco de agressão contra vítima mantida refém durante a prática de crimes. A expressão “observados os requisitos previstos no caput” é decisiva: a hipótese continua exigindo injusta agressão, atualidade/iminência ou risco concreto, necessidade, moderação e proteção de direito próprio ou alheio.</p>
+    <div class="source-note">Referência normativa central: CP, arts. 23, II e parágrafo único; 24; 25; 20, §1º; 21; CPP, arts. 386, VI; 397, I; 415, IV; 483.</div>
+  </div>
+</section>
+
+<section class="section" id="teoria-crime">
+  <div class="section-header"><div class="section-num">03</div><div class="section-title"><span>Teoria do Crime</span>Legítima Defesa como Excludente de Ilicitude</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>⚖️ Onde entra no conceito analítico de crime?</h3>
+      <p>No modelo tripartido mais cobrado em concursos, crime é fato típico, ilícito e culpável. A legítima defesa atua no <strong>segundo substrato</strong>: a ilicitude. Por isso, se reconhecida, o agente não pratica crime, nos termos do art. 23, II, CP.</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Art. 23, II:</strong> fundamento legal da exclusão da ilicitude.</li>
+        <li><strong>Art. 25:</strong> conceito e requisitos da legítima defesa.</li>
+        <li><strong>Art. 386, VI, CPP:</strong> absolvição se existirem circunstâncias que excluam o crime ou fundada dúvida sobre sua existência.</li>
+        <li><strong>Art. 397, I, CPP:</strong> absolvição sumária se a causa excludente de ilicitude for manifesta.</li>
+        <li><strong>Art. 415, IV, CPP:</strong> no júri, absolvição sumária se demonstrada causa de exclusão do crime.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🧭 Legítima defesa não é “licença para punir”</h3>
+      <p>A reação defensiva não se confunde com castigo, vingança privada, execução, represália ou “correção” do agressor. A justificante existe para <strong>repelir</strong> agressão, não para retribuir o mal sofrido. A palavra “repele” é o verbo central do art. 25: defesa necessária, contemporânea e limitada.</p>
+      <div class="alert alert-red mt2"><div>⚠️ <strong>Erro clássico:</strong> “a vítima me agrediu antes, então posso reagir depois”. Não. Se a agressão cessou, o perigo não é atual nem iminente; em regra, o fato posterior é retaliação.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="requisitos">
+  <div class="section-header"><div class="section-num">04</div><div class="section-title"><span>Núcleo Dogmático</span>Requisitos Cumulativos da Legítima Defesa</div></div>
+  <div class="especie-grid">
+    <div class="especie-card ec-red"><h4>1. Agressão</h4><p>Conduta humana que ameaça ou lesa bem jurídico. Ataque de animal, força natural ou estado de inconsciência costuma conduzir ao estado de necessidade; se o animal é usado como instrumento por pessoa, há agressão humana mediata.</p></div>
+    <div class="especie-card ec-blue"><h4>2. Injustiça</h4><p>A agressão deve ser contrária ao Direito. Não se exige que o agressor seja culpável ou imputável; basta que a agressão seja objetivamente injusta. Não há legítima defesa contra ato lícito, como prisão regular ou cumprimento regular de ordem legal.</p></div>
+    <div class="especie-card ec-gold"><h4>3. Atualidade ou iminência</h4><p>Atual é a agressão em curso. Iminente é a agressão prestes a ocorrer, com probabilidade concreta e imediata. Agressão passada não autoriza defesa; agressão futura remota não basta.</p></div>
+    <div class="especie-card ec-green"><h4>4. Direito próprio ou alheio</h4><p>Admite-se defesa de si e de terceiro. Podem ser protegidos vida, integridade, liberdade, patrimônio, dignidade sexual e outros bens jurídicos. A intensidade da reação deve dialogar com a gravidade concreta da agressão.</p></div>
+    <div class="especie-card ec-purple"><h4>5. Meio necessário</h4><p>É o meio disponível, eficaz e menos gravoso dentro das circunstâncias reais. A avaliação não pode ser feita com conforto retrospectivo absoluto; deve considerar a urgência, a percepção possível e os recursos concretamente disponíveis.</p></div>
+    <div class="especie-card ec-red"><h4>6. Uso moderado</h4><p>Mesmo o meio necessário pode ser usado de modo excessivo. A moderação limita intensidade, duração e quantidade da reação. Cessada a agressão, deve cessar a defesa.</p></div>
+    <div class="especie-card ec-blue"><h4>7. Elemento subjetivo defensivo</h4><p>A doutrina dominante exige conhecimento da situação justificante e finalidade defensiva. Quem atua por vingança, sabendo não haver agressão atual/iminente, não se abriga no art. 25.</p></div>
+    <div class="especie-card ec-gold"><h4>8. Ausência de provocação dolosa como armadilha</h4><p>Quem provoca intencionalmente reação para criar pretexto de “defesa” não pode se beneficiar da justificante. A provocação leve ou imprudente pode não excluir automaticamente, mas pesa na análise da injustiça, necessidade e moderação.</p></div>
+  </div>
+</section>
+
+<section class="section" id="agressao">
+  <div class="section-header"><div class="section-num">05</div><div class="section-title"><span>Pressuposto Objetivo</span>Agressão Injusta: O que Entra e o que Não Entra</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-green">
+      <h3>✅ Pode configurar agressão injusta</h3>
+      <ul>
+        <li>Ataque físico contra vida ou integridade corporal.</li>
+        <li>Violência sexual ou ameaça concreta de violência sexual.</li>
+        <li>Invasão domiciliar violenta ou iminente com risco real a pessoas.</li>
+        <li>Subtração violenta ou grave ameaça em roubo em curso.</li>
+        <li>Ato de autoridade manifestamente ilegal e agressivo contra direito individual.</li>
+        <li>Ataque praticado por inimputável, criança ou pessoa em surto, se objetivamente injusto — sem prejuízo de exigir maior cautela na necessidade e moderação, quando possível.</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>🚫 Em regra, não configura</h3>
+      <ul>
+        <li>Agressão já encerrada, usada como justificativa para vingança.</li>
+        <li>Medo genérico, suspeita abstrata ou perigo remoto.</li>
+        <li>Ofensa verbal pretérita sem perigo atual a bem jurídico relevante.</li>
+        <li>Atuação estatal regular e lícita.</li>
+        <li>Briga mutuamente assumida, sem identificação de agressor inicial ou de excesso superveniente.</li>
+        <li>“Legítima defesa da honra” em feminicídio ou violência contra a mulher: tese excluída do âmbito do art. 25 pela ADPF 779/STF.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="alert alert-navy mt2"><div class="alert-icon">📌</div><div><strong>Magistratura:</strong> “injusta agressão” não é sinônimo de “crime do agressor”. Uma agressão pode ser injusta mesmo quando o agressor é inimputável ou atua sem culpabilidade. A injustiça é objetiva; a culpabilidade do agressor é outro plano.</div></div>
+</section>
+
+<section class="section" id="atualidade">
+  <div class="section-header"><div class="section-num">06</div><div class="section-title"><span>Tempo da Reação</span>Agressão Atual, Iminente, Passada e Futura</div></div>
+  <table class="comp-table">
+    <thead><tr><th>Situação temporal</th><th>Conceito técnico</th><th>Consequência penal</th><th>Pegadinha de prova</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Agressão atual</td><td>Já começou e ainda está em curso.</td><td>Pode autorizar legítima defesa se presentes os demais requisitos.</td><td>A defesa deve parar quando a agressão termina.</td></tr>
+      <tr class="hl3"><td>Agressão iminente</td><td>Não começou, mas está prestes a ocorrer de forma concreta e imediata.</td><td>Pode autorizar reação antecipatória defensiva.</td><td>Iminência não é medo abstrato: exige proximidade real.</td></tr>
+      <tr class="hl4"><td>Agressão passada</td><td>Já terminou; não há perigo defensivo atual.</td><td>Não gera legítima defesa; pode caracterizar vingança.</td><td>“Apanhei ontem” não autoriza “reagir” hoje.</td></tr>
+      <tr class="hl"><td>Agressão futura/remota</td><td>Possível agressão em momento incerto.</td><td>Não basta para art. 25; pode haver medidas lícitas preventivas, não violência defensiva penalmente justificada.</td><td>Planejamento de reação armada contra ameaça vaga tende a afastar o art. 25.</td></tr>
+      <tr class="hl5"><td>Agressão permanente ou continuada</td><td>Violação que se prolonga no tempo, mantendo risco atual.</td><td>Pode haver atualidade enquanto a violação ou o perigo subsistirem.</td><td>Exige cuidado: nem todo conflito prolongado autoriza violência defensiva ampla.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="section" id="meios">
+  <div class="section-header"><div class="section-num">07</div><div class="section-title"><span>Controle de Proporcionalidade</span>Meios Necessários, Uso Moderado e Proporcionalidade Concreta</div></div>
+  <div class="card-grid card-grid-3">
+    <div class="card type-card tc-blue">
+      <h3>🛠️ Meio necessário</h3>
+      <p>É o recurso defensivo idôneo e disponível para cessar a agressão. O juiz deve perguntar: havia alternativa menos lesiva, igualmente eficaz e concretamente acessível naquele momento? Se não havia, o meio mais gravoso pode ser necessário.</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>🎚️ Uso moderado</h3>
+      <p>Mesmo um meio necessário pode ser utilizado de modo imoderado. Disparos, golpes ou contenções devem ser avaliados em intensidade, direção, número, continuidade e cessação após neutralização do risco.</p>
+    </div>
+    <div class="card type-card tc-purple">
+      <h3>⚖️ Proporcionalidade</h3>
+      <p>A proporcionalidade não exige simetria perfeita entre ataque e defesa. O que se exige é ausência de descompasso intolerável entre a gravidade da agressão, o bem protegido, os meios disponíveis e o modo de uso.</p>
+    </div>
+  </div>
+  <div class="alert alert-red mt2"><div class="alert-icon">⚠️</div><div><strong>Arma de fogo:</strong> não há regra automática de licitude ou ilicitude. Pode ser meio necessário em agressão grave à vida/integridade; pode ser excesso se usada contra agressão leve, cessada ou controlável por meio menos gravoso. O exame é concreto.</div></div>
+</section>
+
+<section class="section" id="especies">
+  <div class="section-header"><div class="section-num">08</div><div class="section-title"><span>Classificações Doutrinárias</span>Espécies de Legítima Defesa</div></div>
+  <div class="especie-grid">
+    <div class="especie-card ec-blue"><h4>Legítima defesa própria</h4><p>O agente protege direito seu. É a forma mais simples e mais cobrada.</p></div>
+    <div class="especie-card ec-green"><h4>Legítima defesa de terceiro</h4><p>O agente protege direito alheio. O terceiro pode ser conhecido ou desconhecido. Em bens disponíveis, a vontade do titular pode influenciar a análise.</p></div>
+    <div class="especie-card ec-gold"><h4>Legítima defesa real</h4><p>A agressão injusta efetivamente existe. Se todos os requisitos se verificam, exclui a ilicitude.</p></div>
+    <div class="especie-card ec-purple"><h4>Legítima defesa putativa</h4><p>O agente supõe, por erro, situação de agressão que não existe ou não tem a extensão imaginada. A consequência depende da natureza e evitabilidade do erro.</p></div>
+    <div class="especie-card ec-red"><h4>Legítima defesa sucessiva</h4><p>Surge quando o primeiro “defensor” se excede e passa a praticar agressão injusta; o agressor inicial pode então defender-se do excesso.</p></div>
+    <div class="especie-card ec-blue"><h4>Legítima defesa subjetiva</h4><p>Expressão usada por parte da doutrina para excesso derivado de erro justificável quanto à intensidade ou permanência da agressão. Cuidado: não é categoria expressa no CP.</p></div>
+    <div class="especie-card ec-gold"><h4>Ofendículos</h4><p>Dispositivos predispostos de defesa patrimonial ou pessoal, como cercas, alarmes e barreiras. São admitidos se visíveis, proporcionais e não configurarem armadilha excessiva; podem ser tratados como exercício regular de direito ou legítima defesa preordenada.</p></div>
+    <div class="especie-card ec-red"><h4>Legítima defesa recíproca?</h4><p>Em regra, não se admite quando há agressões mútuas injustas. A exceção prática aparece quando se identifica excesso de um dos lados, abrindo espaço para legítima defesa sucessiva.</p></div>
+  </div>
+</section>
+
+<section class="section" id="putativa">
+  <div class="section-header"><div class="section-num">09</div><div class="section-title"><span>Erro e Descriminantes Putativas</span>Legítima Defesa Putativa: Como Resolver na Prova</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-blue">
+      <h3>🔎 Erro sobre pressuposto fático</h3>
+      <p>Se o agente, por erro plenamente justificado pelas circunstâncias, supõe situação de fato que, se existisse, tornaria a ação legítima, aplica-se o art. 20, §1º, CP: há isenção de pena. Se o erro deriva de culpa e o crime admite modalidade culposa, responde por culpa.</p>
+      <div class="divider"></div>
+      <p><strong>Exemplo de estrutura:</strong> o agente acredita, de modo justificável, que a vítima sacaria arma real e letal, quando na verdade portava objeto inofensivo indistinguível no contexto.</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>🧠 Erro sobre existência/limites da permissão</h3>
+      <p>Quando o agente conhece os fatos, mas erra sobre a autorização jurídica para agir ou sobre os limites normativos da legítima defesa, a solução tende a ser tratada como erro de proibição indireto: art. 21 CP, com isenção se inevitável ou redução de pena se evitável.</p>
+      <div class="alert alert-gold mt2"><div>⭐ <strong>ENAM:</strong> diferencie erro de tipo permissivo — erro sobre fato que, se existisse, justificaria — de erro de proibição indireto — erro sobre o alcance da norma permissiva.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="excesso">
+  <div class="section-header"><div class="section-num">10</div><div class="section-title"><span>Art. 23, Parágrafo Único</span>Excesso Punível na Legítima Defesa</div></div>
+  <div class="card-grid card-grid-3">
+    <div class="card type-card tc-red">
+      <h3>🔥 Excesso doloso</h3>
+      <p>O agente percebe que ultrapassou a necessidade/moderação, mas quer prosseguir ou assume o risco. Responde pelo resultado doloso, se presentes os demais elementos do tipo.</p>
+    </div>
+    <div class="card type-card tc-blue">
+      <h3>🟦 Excesso culposo</h3>
+      <p>O agente inicialmente atua sob situação defensiva, mas ultrapassa por imprudência, negligência ou imperícia os limites necessários e proporcionais. Só há punição se o fato tiver modalidade culposa prevista.</p>
+    </div>
+    <div class="card type-card tc-purple">
+      <h3>🟣 Excesso exculpante</h3>
+      <p>Construção doutrinária ligada a medo, susto ou perturbação intensa que tornaria inexigível conduta diversa. Não há previsão expressa geral no CP; use com cautela em prova objetiva.</p>
+    </div>
+  </div>
+  <table class="comp-table mt2">
+    <thead><tr><th>Tipo de excesso</th><th>Onde ocorre</th><th>Exemplo abstrato</th><th>Tratamento</th></tr></thead>
+    <tbody>
+      <tr class="hl"><td>Intensivo</td><td>Na escolha ou intensidade do meio.</td><td>Usa força letal quando bastava contenção segura e disponível.</td><td>Pode ser doloso ou culposo.</td></tr>
+      <tr class="hl3"><td>Extensivo</td><td>No tempo da reação.</td><td>Continua agredindo depois de neutralizado o risco.</td><td>Afasta a justificante no trecho excedente.</td></tr>
+      <tr class="hl4"><td>Acidental</td><td>Erro justificável de percepção no calor da agressão.</td><td>Acredita que agressão ainda prossegue por circunstâncias concretas.</td><td>Pode aproximar-se de erro permissivo ou excesso exculpante, conforme a teoria adotada.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="section" id="seguranca">
+  <div class="section-header"><div class="section-num">11</div><div class="section-title"><span>Pacote Anticrime</span>Parágrafo Único: Agente de Segurança Pública e Vítima Refém</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-gold">
+      <h3>🟡 O que a regra faz</h3>
+      <p>O parágrafo único afirma que, observados os requisitos do caput, também se considera em legítima defesa o agente de segurança pública que repele agressão ou risco de agressão contra vítima mantida refém durante prática de crimes.</p>
+      <div class="divider"></div>
+      <ul>
+        <li>Reforça a tutela de vítima refém.</li>
+        <li>Não dispensa injusta agressão ou risco concreto de agressão.</li>
+        <li>Não elimina o controle de necessidade e moderação.</li>
+        <li>Não cria salvo-conduto para execução ou excesso.</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>🔴 Como o juiz deve controlar</h3>
+      <p>A sentença ou decisão deve examinar: presença da vítima refém; agressão ou risco de agressão concreto; meios disponíveis; treinamento e deveres funcionais; proporcionalidade da resposta; cessação do risco; preservação de vidas; e eventual excesso doloso ou culposo.</p>
+      <div class="alert alert-red mt2"><div>⚠️ <strong>Prova:</strong> “agente de segurança pública” não é categoria imune ao art. 23, parágrafo único. Se houver excesso, responde por excesso doloso ou culposo.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="processo">
+  <div class="section-header"><div class="section-num">12</div><div class="section-title"><span>Processo Penal &amp; Júri</span>Como a Legítima Defesa Aparece na Decisão Judicial</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📋 Procedimento comum</h3>
+      <ul>
+        <li><strong>Resposta à acusação:</strong> se a excludente de ilicitude for manifesta, cabe absolvição sumária pelo art. 397, I, CPP.</li>
+        <li><strong>Sentença:</strong> reconhecida a legítima defesa ou fundada dúvida sobre sua existência, a absolvição se enquadra no art. 386, VI, CPP.</li>
+        <li><strong>Ônus argumentativo:</strong> a defesa deve trazer elementos mínimos; a condenação exige superação racional da dúvida razoável.</li>
+        <li><strong>Fundamentação:</strong> separar fato, agressão, atualidade, necessidade, moderação, excesso e consequência.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>⚖️ Tribunal do Júri</h3>
+      <ul>
+        <li><strong>Primeira fase:</strong> absolvição sumária somente quando demonstrada causa de exclusão do crime; havendo dúvida relevante sobre requisitos, a tendência é submissão ao Conselho de Sentença.</li>
+        <li><strong>Plenário:</strong> a legítima defesa normalmente chega ao quesito absolutório genérico: “O jurado absolve o acusado?”</li>
+        <li><strong>Excesso culposo subsidiário:</strong> conforme orientação recente do STJ, quando sustentado em plenário, exige quesito próprio e autônomo, mesmo se rejeitado o quesito absolutório genérico.</li>
+        <li><strong>ADPF 779/STF:</strong> é vedada a tese de “legítima defesa da honra”, direta ou indireta, inclusive no júri.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="fluxograma">
+  <div class="section-header"><div class="section-num">13</div><div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma Completo do Art. 25 CP</div></div>
+  <div class="flow-wrap">
+    <div class="flow-center">
+      <div class="flow-node flow-start">FATO TÍPICO EM TESE — ANALISAR ILICITUDE / LEGÍTIMA DEFESA</div>
+      <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+      <div class="flow-node flow-box-navy"><strong style="color:var(--gold-light);">PASSO 1 — Houve agressão humana?</strong><br><span style="font-size:0.74rem;opacity:0.85;">Ataque ou ameaça concreta de lesão a bem jurídico por conduta humana direta ou mediata?</span></div>
+      <div class="flow-row mt1">
+        <div class="flow-branch"><div class="flow-label">NÃO</div><div class="flow-node flow-box-purple">VERIFICAR OUTRA EXCLUDENTE<br><span style="font-size:0.72rem;">Animal, desastre, força natural ou estado de inconsciência podem conduzir ao estado de necessidade.</span></div></div>
+        <div class="flow-branch"><div class="flow-label">SIM</div><div class="flow-node flow-box-blue">PASSO 2 — A agressão era injusta?</div></div>
+      </div>
+      <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+      <div class="flow-row mt1">
+        <div class="flow-branch"><div class="flow-label">ATO LÍCITO</div><div class="flow-node flow-end-red">NÃO HÁ LEGÍTIMA DEFESA<br><span style="font-size:0.72rem;">Não se repele licitamente prisão regular, busca legal ou cumprimento regular de dever.</span></div></div>
+        <div class="flow-branch"><div class="flow-label">ATO INJUSTO</div><div class="flow-node flow-box-gold">PASSO 3 — Era atual ou iminente?</div></div>
+      </div>
+      <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+      <div class="flow-row mt1">
+        <div class="flow-branch"><div class="flow-label">PASSADA/FUTURA REMOTA</div><div class="flow-node flow-end-red">SEM ART. 25<br><span style="font-size:0.72rem;">Tende a vingança, retaliação ou prevenção remota.</span></div></div>
+        <div class="flow-branch"><div class="flow-label">ATUAL/IMINENTE</div><div class="flow-node flow-box-navy">PASSO 4 — Protege direito próprio ou de terceiro?</div></div>
+      </div>
+      <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+      <div class="flow-node flow-box-blue"><strong>PASSO 5 — O meio escolhido era necessário?</strong><br><span style="font-size:0.74rem;">Meio idôneo, disponível e menos gravoso igualmente eficaz nas circunstâncias?</span></div>
+      <div class="flow-row mt1">
+        <div class="flow-branch"><div class="flow-label">MEIO DESNECESSÁRIO</div><div class="flow-node flow-box-red">POSSÍVEL EXCESSO NA ESCOLHA DO MEIO</div></div>
+        <div class="flow-branch"><div class="flow-label">MEIO NECESSÁRIO</div><div class="flow-node flow-box-gold">PASSO 6 — O uso foi moderado?</div></div>
+      </div>
+      <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+      <div class="flow-row">
+        <div class="flow-branch"><div class="flow-label">MODERADO</div><div class="flow-node flow-end-green">LEGÍTIMA DEFESA REAL<br><span style="font-size:0.72rem;">Exclui ilicitude → art. 23, II + art. 25 CP.</span></div></div>
+        <div class="flow-branch"><div class="flow-label">IMODERADO</div><div class="flow-node flow-box-red"><strong>EXCESSO PUNÍVEL</strong><br>Verificar dolo, culpa ou eventual inexigibilidade.</div><div class="flow-arrow">▼</div><div class="flow-node flow-end-red">RESPONDE PELO EXCESSO<br><span style="font-size:0.72rem;">Art. 23, parágrafo único, CP.</span></div></div>
+        <div class="flow-branch"><div class="flow-label">ERRO SOBRE AGRESSÃO</div><div class="flow-node flow-box-purple"><strong>LEGÍTIMA DEFESA PUTATIVA</strong><br>Aplicar art. 20, §1º, ou art. 21 CP, conforme natureza do erro.</div></div>
+      </div>
+      <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+      <div class="flow-node flow-box-navy" style="max-width:900px;"><strong style="color:var(--gold-light);">CONTROLE FINAL:</strong> se a tese for “legítima defesa da honra”, exclua do âmbito do art. 25 por força da ADPF 779/STF. Se for júri e houver excesso culposo como tese subsidiária, formular quesito próprio conforme orientação recente do STJ.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="comparativo">
+  <div class="section-header"><div class="section-num">14</div><div class="section-title"><span>Tabela Premium</span>Comparativo com Institutos Próximos</div></div>
+  <table class="comp-table">
+    <thead><tr><th>Instituto</th><th>Base legal</th><th>Pressuposto</th><th>Natureza</th><th>Diferença que cai</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Legítima defesa</td><td>CP, arts. 23, II, e 25</td><td>Agressão humana injusta, atual ou iminente</td><td>Excludente de ilicitude</td><td>Há reação contra agressor; exige meios necessários e moderação.</td></tr>
+      <tr class="hl"><td>Estado de necessidade</td><td>CP, art. 24</td><td>Perigo atual não provocado voluntariamente, inevitável por outro modo</td><td>Excludente de ilicitude</td><td>Há conflito de bens jurídicos; em regra, o lesado não é agressor injusto.</td></tr>
+      <tr class="hl3"><td>Estrito cumprimento do dever legal</td><td>CP, art. 23, III</td><td>Dever jurídico imposto ao agente</td><td>Excludente de ilicitude</td><td>Comum para agentes públicos; excesso continua punível.</td></tr>
+      <tr class="hl5"><td>Exercício regular de direito</td><td>CP, art. 23, III</td><td>Atuação dentro de direito reconhecido</td><td>Excludente de ilicitude</td><td>Ofendículos podem ser enquadrados aqui ou como legítima defesa preordenada.</td></tr>
+      <tr class="hl4"><td>Legítima defesa putativa</td><td>CP, art. 20, §1º; art. 21</td><td>Erro sobre situação justificante ou sobre alcance da permissão</td><td>Erro; não legítima defesa real</td><td>Erro fático justificável isenta; erro culposo pode gerar culpa se prevista.</td></tr>
+      <tr><td>Excesso punível</td><td>CP, art. 23, parágrafo único</td><td>Ultrapassagem dos limites da justificante</td><td>Responsabilização pelo excesso</td><td>Pode ser doloso ou culposo; excesso culposo só pune se houver tipo culposo.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="section" id="jurisprudencia">
+  <div class="section-header"><div class="section-num">15</div><div class="section-title"><span>STF/STJ — Teses Seguras</span>Jurisprudência Essencial para Magistratura</div></div>
+  <div class="juris-grid">
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge tese">ADPF 779</span><span class="juris-title">Legítima defesa da honra é inconstitucional</span></div><div class="juris-body">O STF excluiu a “legítima defesa da honra” do âmbito dos arts. 23, II, e 25 do CP e do art. 65 do CPP. Defesa, acusação, autoridade policial e juízo não podem invocá-la direta ou indiretamente; se usada, pode gerar nulidade do ato, da prova, dos debates ou do julgamento, sem permitir que a defesa se beneficie da própria torpeza.</div></div>
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge tese">Júri</span><span class="juris-title">Soberania dos veredictos não blinda tese inconstitucional</span></div><div class="juris-body">Na ADPF 779, o STF assentou que não viola a soberania dos veredictos o provimento de apelação que anule absolvição fundada em quesito genérico quando o contexto indicar repristinação da tese de legítima defesa da honra.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">REsp 2.043.554/AL</span><span class="juris-title">Excesso culposo no Júri exige quesito próprio</span></div><div class="juris-body">A Terceira Seção firmou que a rejeição da legítima defesa não prejudica a análise da tese subsidiária de excesso culposo. Sustentado o excesso culposo em plenário, deve haver quesito próprio e autônomo; a omissão pode gerar nulidade por falta de quesito obrigatório.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">Pronúncia</span><span class="juris-title">Dúvida sobre requisitos leva ao Júri</span></div><div class="juris-body">Em crimes dolosos contra a vida, a absolvição sumária por legítima defesa exige prova segura da excludente. Existindo dúvidas quanto à moderação dos meios necessários ou aos requisitos da justificante, a submissão ao Tribunal do Júri preserva a competência constitucional do Conselho de Sentença.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge sumula">Súmula 7</span><span class="juris-title">Reexame fático-probatório</span></div><div class="juris-body">Reconhecimento ou afastamento de legítima defesa frequentemente depende do exame do conjunto probatório: agressão, atualidade, meio disponível, moderação e dinâmica do fato. Em recurso especial, pretensão de simples reexame de prova encontra óbice na Súmula 7/STJ.</div></div>
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge sumula">Súmula 156</span><span class="juris-title">Quesito obrigatório no Júri</span></div><div class="juris-body">É absoluta a nulidade do julgamento pelo Júri por falta de quesito obrigatório. A tese se conecta diretamente ao art. 25 quando a defesa sustenta legítima defesa, excesso culposo ou desclassificação vinculada ao excesso.</div></div>
+  </div>
+</section>
+
+<section class="section" id="doutrina">
+  <div class="section-header"><div class="section-num">16</div><div class="section-title"><span>Doutrina Sistematizada</span>Linhas Dogmáticas Seguras para Prova Oral e Sentença</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📚 Síntese doutrinária dominante</h3>
+      <ul>
+        <li>A legítima defesa é causa de <strong>justificação</strong>, não de exclusão da culpabilidade.</li>
+        <li>O fundamento é a defesa do Direito contra agressão injusta quando o Estado não consegue atuar a tempo.</li>
+        <li>A agressão deve ser humana; perigo não humano tende ao estado de necessidade.</li>
+        <li>A injustiça da agressão é objetiva; não depende de culpabilidade do agressor.</li>
+        <li>A necessidade recai sobre a escolha do meio; a moderação recai sobre o modo de uso.</li>
+        <li>A proporcionalidade é concreta e contextual, sem exigir equivalência aritmética entre ataque e defesa.</li>
+        <li>A legítima defesa putativa não é legítima defesa real: é problema de erro.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>⚖️ Tópicos críticos de argumentação judicial</h3>
+      <ul>
+        <li>Fixar precisamente qual foi a agressão injusta e quando começou/cessou.</li>
+        <li>Indicar por que a agressão era atual ou iminente, evitando narrativas genéricas de medo.</li>
+        <li>Descrever quais meios estavam disponíveis e por que o escolhido era necessário.</li>
+        <li>Explicar a moderação em termos de quantidade, intensidade, duração e cessação.</li>
+        <li>Se houver excesso, separar o trecho justificado do trecho excedente.</li>
+        <li>Em crimes dolosos contra a vida, fundamentar com cuidado a absolvição sumária: ela exige demonstração segura.</li>
+        <li>Em plenário do júri, impedir teses discriminatórias travestidas de legítima defesa, especialmente após ADPF 779.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="prova-section" id="prova">
+  <h2>🎓 Pontos que Sempre Caem em Magistratura / ENAM</h2>
+  <p class="intro">Checklist objetivo para revisar antes de questões, prova oral e sentença criminal.</p>
+  <div class="prova-items">
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">01</span>Legítima defesa exclui o quê?</div><div class="prova-item-a"><strong>Ilicitude.</strong> O fato pode ser típico, mas não é antijurídico quando preenchidos os requisitos do art. 25.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">02</span>Quais são os requisitos cumulativos?</div><div class="prova-item-a"><strong>Agressão injusta, atual ou iminente, a direito próprio ou alheio, reação com meios necessários e uso moderado.</strong> A doutrina ainda exige elemento subjetivo defensivo.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">03</span>Há legítima defesa contra agressão passada?</div><div class="prova-item-a"><strong>Não.</strong> Agressão passada gera, em regra, vingança ou retaliação. O art. 25 exige atualidade ou iminência.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">04</span>Agressão de animal autoriza legítima defesa?</div><div class="prova-item-a"><strong>Em regra, não.</strong> Pode configurar estado de necessidade. Mas, se o animal é usado como instrumento por pessoa, há agressão humana mediata.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">05</span>Legítima defesa contra inimputável é possível?</div><div class="prova-item-a"><strong>Sim, em tese.</strong> A agressão pode ser objetivamente injusta mesmo sem culpabilidade do agressor; a necessidade e a moderação devem ser examinadas com rigor.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">06</span>Meio necessário é sempre meio proporcional?</div><div class="prova-item-a"><strong>Não necessariamente.</strong> O meio precisa ser idôneo e disponível; o uso deve ser moderado. Necessidade e moderação são filtros distintos.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">07</span>O parágrafo único autoriza atuação letal automática por agente de segurança?</div><div class="prova-item-a"><strong>Não.</strong> O texto exige expressamente os requisitos do caput. Logo, continua havendo controle de agressão/riscos, necessidade e moderação.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">08</span>Excesso culposo na legítima defesa é punível?</div><div class="prova-item-a"><strong>Sim, se houver previsão culposa do crime.</strong> O art. 23, parágrafo único, fala em excesso doloso ou culposo.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">09</span>Legítima defesa putativa exclui ilicitude?</div><div class="prova-item-a"><strong>Não como legítima defesa real.</strong> É problema de erro. Se erro fático plenamente justificado, art. 20, §1º; se erro culposo, pode haver crime culposo se previsto.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">10</span>Legítima defesa recíproca existe?</div><div class="prova-item-a"><strong>Em regra, não.</strong> Agressões mútuas injustas afastam a justificante. Pode haver legítima defesa sucessiva se um dos envolvidos se excede.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">11</span>Quando cabe absolvição sumária por legítima defesa no júri?</div><div class="prova-item-a"><strong>Quando demonstrada de forma segura a causa de exclusão do crime.</strong> Se houver dúvida relevante sobre requisitos, a questão tende a ir ao Conselho de Sentença.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">12</span>O que decidiu o STF na ADPF 779?</div><div class="prova-item-a"><strong>A tese de legítima defesa da honra é inconstitucional.</strong> Não pode ser usada, direta ou indiretamente, por defesa, acusação, polícia ou juízo, inclusive no Tribunal do Júri.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">13</span>O que há de mais atual no STJ sobre excesso culposo no Júri?</div><div class="prova-item-a"><strong>REsp 2.043.554/AL.</strong> A rejeição da legítima defesa não prejudica tese subsidiária de excesso culposo; se sustentada, exige quesito próprio e autônomo.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">14</span>Qual é a frase-chave para sentença?</div><div class="prova-item-a"><strong>“A legítima defesa não se presume: deve ser demonstrada pela dinâmica concreta da agressão, da necessidade do meio e da moderação no uso.”</strong></div></div>
+  </div>
+</section>
+
+<section class="section" id="fontes">
+  <div class="section-header"><div class="section-num">17</div><div class="section-title"><span>Controle de Fidedignidade</span>Fontes Normativas e Jurisprudenciais Utilizadas</div></div>
+  <div class="card">
+    <h3>📌 Fontes primárias e de controle</h3>
+    <ul class="source-list">
+      <li><strong>Código Penal — Senado Federal, 9.ª edição, 2026, atualizado até janeiro de 2026:</strong> arts. 20, 21, 23, 24 e 25.</li>
+      <li><strong>Código de Processo Penal — Senado Federal, 7.ª edição, 2025, atualizado até fevereiro de 2025:</strong> arts. 386, VI; 397, I; 413; 415, IV; 478; 482; 483; 492.</li>
+      <li><strong>STF — ADPF 779/DF, Plenário, j. 01/08/2023:</strong> inconstitucionalidade da tese de legítima defesa da honra e interpretação conforme dos arts. 23 e 25 do CP, art. 65 e art. 483 do CPP.</li>
+      <li><strong>STJ — REsp 2.043.554/AL, Terceira Seção, Rel. Min. Rogerio Schietti Cruz, DJEN 12/11/2025:</strong> quesitação autônoma do excesso culposo sustentado como tese subsidiária no Júri.</li>
+      <li><strong>STJ — REsp 1.241.987/PR, Sexta Turma:</strong> limites da pronúncia, competência do Júri e cautela no decote de teses/circunstâncias quando há suporte probatório.</li>
+      <li><strong>STF — Súmula 156:</strong> nulidade absoluta do julgamento do Júri por falta de quesito obrigatório.</li>
+    </ul>
+    <div class="alert alert-navy mt2"><div>🔒 <strong>Nota de integridade:</strong> o material evita atribuir a autores específicos enunciados não conferidos em fonte primária. As formulações doutrinárias foram apresentadas como categorias dogmáticas amplamente consolidadas em Direito Penal brasileiro.</div></div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <strong>Art. 25 CP — Legítima Defesa | Magistratura / ENAM</strong> · Página única com atalhos internos · Atualizado em 28/04/2026 · Modelo visual preservado do HTML-base enviado pelo usuário.
+</footer>
+
+</body>
+</html>

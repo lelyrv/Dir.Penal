@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 24º CP — Estado de Necessidade | Magistratura ENAM</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0d1b2a;--navy-mid:#1a2f45;--navy-light:#243b55;--gold:#c8960c;--gold-light:#e8b84b;--gold-pale:#fdf3d8;--cream:#faf7f2;--cream-mid:#f0ebe2;--text-dark:#1a1208;--text-mid:#3d3020;--text-soft:#6b5c40;--border:#d4c49a;--border-light:#e8dcbf;--red-accent:#8b1a1a;--green-accent:#1a4a2e;--blue-accent:#1a3a5c;--purple-accent:#4a1a5c;--shadow:0 4px 24px rgba(13,27,42,0.10);}
+  *{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+  body{font-family:'Source Serif 4',Georgia,serif;background:var(--cream);color:var(--text-dark);font-size:15px;line-height:1.75;}
+  #top-nav{position:sticky;top:0;z-index:999;background:var(--navy);border-bottom:3px solid var(--gold);padding:0 1.5rem;display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;}
+  #top-nav::-webkit-scrollbar{display:none;}
+  #top-nav .nav-brand{font-family:'Playfair Display',serif;color:var(--gold-light);font-size:0.9rem;font-weight:700;white-space:nowrap;padding:0.85rem 1.2rem 0.85rem 0;border-right:1px solid rgba(200,150,12,0.3);margin-right:0.5rem;letter-spacing:0.5px;}
+  #top-nav a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.72rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;padding:0.85rem 0.8rem;white-space:nowrap;transition:color .2s;border-bottom:3px solid transparent;margin-bottom:-3px;}
+  #top-nav a:hover{color:var(--gold-light);border-bottom-color:var(--gold);}
+  #hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 60%,#1e3d5c 100%);color:white;padding:3.5rem 2rem 3rem;text-align:center;position:relative;overflow:hidden;}
+  #hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(200,150,12,0.03) 0px,rgba(200,150,12,0.03) 1px,transparent 1px,transparent 40px);}
+  #hero .badge{display:inline-block;background:rgba(200,150,12,0.15);border:1px solid rgba(200,150,12,0.5);color:var(--gold-light);font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;padding:0.35rem 1rem;border-radius:2px;margin-bottom:1.2rem;font-family:'Source Serif 4',serif;font-weight:600;}
+  #hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.15;margin-bottom:0.6rem;letter-spacing:-0.5px;}
+  #hero h1 span{color:var(--gold-light);}
+  #hero .subtitle{font-size:1rem;color:rgba(255,255,255,0.65);font-style:italic;margin-bottom:1.5rem;}
+  #hero .law-box{display:inline-block;background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.4);border-left:4px solid var(--gold);color:rgba(255,255,255,0.9);font-family:'Source Serif 4',serif;font-size:0.9rem;font-style:italic;padding:1rem 1.5rem;max-width:900px;text-align:left;line-height:1.9;border-radius:0 4px 4px 0;}
+  #hero .law-box strong{color:var(--gold-light);font-style:normal;display:block;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem;}
+  .page-wrap{width:100%!important;max-width:none!important;margin:0!important;padding-left:clamp(1rem,3vw,4rem)!important;padding-right:clamp(1rem,3vw,4rem)!important;padding-bottom:4rem;}
+  .section,.prova-section,.card,.flow-wrap,.comp-table,.juris-grid{max-width:none!important;}
+  .section{margin-top:3.5rem;scroll-margin-top:56px;}
+  .section-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:0.75rem;border-bottom:2px solid var(--border);}
+  .section-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--border);line-height:1;min-width:2.5rem;}
+  .section-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--navy);line-height:1.2;}
+  .section-title span{display:block;font-size:0.75rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-style:normal;}
+  .card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1.4rem 1.6rem;box-shadow:var(--shadow);}
+  .card-grid{display:grid;gap:1rem;}
+  .card-grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
+  .card-grid-2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr));}
+  .card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:0.6rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border-light);}
+  .card p,.card li{font-size:0.88rem;line-height:1.7;color:var(--text-mid);}
+  .card ul{padding-left:1.1rem;}.card li{margin-bottom:0.3rem;}
+  .type-card{border-top:4px solid;}
+  .tc-red{border-top-color:var(--red-accent);}.tc-red h3{color:var(--red-accent);}
+  .tc-green{border-top-color:var(--green-accent);}.tc-green h3{color:var(--green-accent);}
+  .tc-blue{border-top-color:var(--blue-accent);}.tc-blue h3{color:var(--blue-accent);}
+  .tc-gold{border-top-color:var(--gold);}.tc-gold h3{color:#7a5a00;}
+  .tc-purple{border-top-color:var(--purple-accent);}.tc-purple h3{color:var(--purple-accent);}
+  .flow-wrap{background:white;border:1px solid var(--border-light);border-radius:6px;padding:2rem 1.5rem;box-shadow:var(--shadow);overflow-x:auto;}
+  .flow-center{display:flex;flex-direction:column;align-items:center;}
+  .flow-node{border-radius:4px;padding:0.65rem 1.4rem;font-family:'Source Serif 4',serif;font-size:0.82rem;font-weight:600;text-align:center;min-width:220px;max-width:600px;}
+  .flow-start{background:var(--navy);color:white;border-radius:50px;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;}
+  .flow-end-green{background:var(--green-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+  .flow-end-red{background:var(--red-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+  .flow-end-gold{background:var(--gold);color:var(--navy);border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+  .flow-end-blue{background:var(--blue-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+  .flow-box-navy{background:var(--navy-mid);color:white;border-left:4px solid var(--gold);font-size:0.8rem;}
+  .flow-box-green{background:#edf7f0;border:1px solid #7ec89a;border-left:4px solid var(--green-accent);color:var(--text-dark);}
+  .flow-box-blue{background:#edf2f8;border:1px solid #8eb4d8;border-left:4px solid var(--blue-accent);color:var(--text-dark);}
+  .flow-box-red{background:#fdf0f0;border:1px solid #e09090;border-left:4px solid var(--red-accent);color:var(--text-dark);}
+  .flow-box-gold{background:var(--gold-pale);border:2px solid var(--gold);color:var(--text-dark);}
+  .flow-arrow{font-size:1.3rem;color:var(--border);line-height:1;margin:0.15rem 0;}
+  .flow-row{display:flex;align-items:flex-start;gap:1.5rem;width:100%;justify-content:center;flex-wrap:wrap;}
+  .flow-branch{display:flex;flex-direction:column;align-items:center;flex:1;min-width:175px;}
+  .flow-label{font-size:0.68rem;color:var(--text-soft);font-weight:600;letter-spacing:0.5px;text-transform:uppercase;background:var(--cream-mid);padding:0.15rem 0.5rem;border-radius:2px;margin:0.15rem 0;}
+  .flow-connector-line{width:1px;height:28px;background:var(--border);}
+  .comp-table{width:100%;border-collapse:collapse;font-size:0.84rem;background:white;box-shadow:var(--shadow);border-radius:6px;overflow:hidden;}
+  .comp-table thead{background:var(--navy);color:white;}
+  .comp-table thead th{padding:0.85rem 1rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:0.5px;font-size:0.8rem;text-align:left;}
+  .comp-table thead th:first-child{color:var(--gold-light);}
+  .comp-table tbody tr{border-bottom:1px solid var(--border-light);}
+  .comp-table tbody tr:last-child{border-bottom:none;}
+  .comp-table tbody tr:nth-child(even){background:var(--cream);}
+  .comp-table td{padding:0.75rem 1rem;color:var(--text-mid);vertical-align:top;}
+  .comp-table td:first-child{font-weight:600;color:var(--navy);font-size:0.8rem;}
+  .comp-table .hl td{background:var(--gold-pale)!important;}
+  .comp-table .hl2 td{background:#edf7f0!important;}
+  .comp-table .hl3 td{background:#edf2f8!important;}
+  .comp-table .hl4 td{background:#fdf0f0!important;}
+  .comp-table .hl5 td{background:#f3eef8!important;}
+  .juris-card{background:white;border:1px solid var(--border-light);border-left:5px solid;border-radius:0 6px 6px 0;padding:1.2rem 1.4rem;box-shadow:var(--shadow);}
+  .juris-card.stf{border-left-color:var(--red-accent);}
+  .juris-card.stj{border-left-color:var(--navy);}
+  .juris-card.doutrina{border-left-color:var(--gold);}
+  .juris-header{display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem;flex-wrap:wrap;}
+  .juris-badge{font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:0.2rem 0.55rem;border-radius:2px;font-family:'Source Serif 4',serif;}
+  .juris-badge.stf{background:var(--red-accent);color:white;}
+  .juris-badge.stj{background:var(--navy);color:white;}
+  .juris-badge.doutrina{background:var(--gold);color:var(--navy);}
+  .juris-badge.tese{background:var(--blue-accent);color:white;}
+  .juris-title{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--navy);}
+  .juris-body{font-size:0.84rem;color:var(--text-mid);line-height:1.7;}
+  .juris-grid{display:grid;gap:1rem;}
+  .alert{padding:0.9rem 1.2rem;border-radius:4px;font-size:0.84rem;line-height:1.7;display:flex;gap:0.7rem;align-items:flex-start;}
+  .alert-gold{background:var(--gold-pale);border:1px solid #d4aa3a;color:#5a4000;}
+  .alert-red{background:#fdf0f0;border:1px solid #e09090;color:#5a0000;}
+  .alert-navy{background:#f0f4f8;border:1px solid #abc;color:var(--navy);}
+  .alert-green{background:#edf7f0;border:1px solid #7ec89a;color:#1a4a2e;}
+  .alert-icon{font-size:1.1rem;flex-shrink:0;margin-top:0.05rem;}
+  .alert strong{font-weight:700;}
+  .prova-section{background:var(--navy);border-radius:8px;padding:2rem;color:white;margin-top:3.5rem;scroll-margin-top:56px;}
+  .prova-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold-light);margin-bottom:0.5rem;}
+  .prova-section .intro{font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;font-style:italic;}
+  .prova-items{display:grid;gap:0.75rem;}
+  .prova-item{background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.25);border-left:4px solid var(--gold);border-radius:0 4px 4px 0;padding:1rem 1.2rem;}
+  .prova-item-q{font-size:0.82rem;font-weight:600;color:var(--gold-light);margin-bottom:0.4rem;display:flex;align-items:flex-start;gap:0.6rem;}
+  .prova-item-q .qnum{background:var(--gold);color:var(--navy);font-size:0.65rem;font-weight:700;padding:0.1rem 0.45rem;border-radius:2px;flex-shrink:0;margin-top:0.1rem;}
+  .prova-item-a{font-size:0.82rem;color:rgba(255,255,255,0.8);line-height:1.65;}
+  .prova-item-a strong{color:white;}
+  .tag{display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;padding:0.15rem 0.5rem;border-radius:2px;margin:0.1rem;font-family:'Source Serif 4',serif;}
+  .tag-blue{background:#dce8f5;color:var(--blue-accent);}
+  .tag-green{background:#dceee3;color:var(--green-accent);}
+  .tag-gold{background:var(--gold-pale);color:#7a5a00;border:1px solid #d4aa3a;}
+  .tag-red{background:#fde8e8;color:var(--red-accent);}
+  .example-box{background:var(--navy-mid);color:white;border-radius:6px;padding:1.2rem 1.4rem;font-size:0.84rem;line-height:1.75;}
+  .example-box .ex-title{color:var(--gold-light);font-weight:700;font-family:'Playfair Display',serif;font-size:0.95rem;margin-bottom:0.5rem;}
+  .example-box .ex-calc{background:rgba(200,150,12,0.12);border:1px solid rgba(200,150,12,0.3);border-radius:4px;padding:0.7rem 1rem;margin-top:0.7rem;font-family:'JetBrains Mono',monospace;font-size:0.79rem;color:var(--gold-light);white-space:pre-wrap;}
+  .law-quote{background:var(--cream-mid);border-left:4px solid var(--navy);padding:0.9rem 1.2rem;font-size:0.88rem;font-style:italic;color:var(--text-mid);line-height:1.7;border-radius:0 4px 4px 0;}
+  .law-quote strong{font-style:normal;color:var(--navy);font-size:0.75rem;letter-spacing:0.5px;display:block;margin-bottom:0.25rem;}
+  .divider{height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);margin:1.2rem 0;}
+  .especie-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:0.85rem;}
+  .especie-card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1rem 1.2rem;border-left:4px solid;box-shadow:var(--shadow);}
+  .especie-card h4{font-family:'Playfair Display',serif;font-size:0.92rem;font-weight:700;margin-bottom:0.35rem;}
+  .especie-card p,.especie-card li{font-size:0.82rem;color:var(--text-mid);line-height:1.6;}
+  .especie-card ul{padding-left:1rem;margin-top:0.3rem;}
+  .especie-card li{margin-bottom:0.25rem;}
+  .ec-red{border-left-color:var(--red-accent);}.ec-red h4{color:var(--red-accent);}
+  .ec-blue{border-left-color:var(--blue-accent);}.ec-blue h4{color:var(--blue-accent);}
+  .ec-green{border-left-color:var(--green-accent);}.ec-green h4{color:var(--green-accent);}
+  .ec-gold{border-left-color:var(--gold);}.ec-gold h4{color:#7a5a00;}
+  .ec-purple{border-left-color:var(--purple-accent);}.ec-purple h4{color:var(--purple-accent);}
+  .anat-visual{display:flex;align-items:stretch;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);}
+  .av-col{flex:1;padding:1.2rem 1.4rem;}
+  .av-sep{background:var(--navy);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:900;flex:0 0 2.5rem;}
+  .av-green{background:var(--green-accent);color:white;}
+  .av-gold{background:var(--gold);color:var(--navy);}
+  .av-col h4{font-family:'Playfair Display',serif;font-size:0.98rem;font-weight:700;margin-bottom:0.5rem;border-bottom:1px solid rgba(255,255,255,0.2);padding-bottom:0.35rem;}
+  .av-col p,.av-col li{font-size:0.82rem;line-height:1.65;}
+  .av-col ul{padding-left:1rem;margin-top:0.3rem;}
+  footer{background:var(--navy);color:rgba(255,255,255,0.45);text-align:center;padding:1.5rem;font-size:0.75rem;border-top:2px solid var(--gold);}
+  footer strong{color:var(--gold-light);}
+  @media print{#top-nav{display:none;}.page-wrap{padding:0 0.5rem 2rem!important;}.section{margin-top:2rem;page-break-inside:avoid;}.card,.juris-card,.flow-wrap,.example-box{box-shadow:none;border:1px solid #ccc;}.prova-section{background:#f0f4f8!important;color:#000!important;}.prova-section h2{color:#0d1b2a!important;}.prova-item{background:white!important;border:1px solid #ccc!important;}.prova-item-q{color:#7a5a00!important;}.prova-item-a{color:#333!important;}.anat-visual{flex-direction:column;}footer{display:none;}body{font-size:11pt;}}
+  @media(max-width:640px){#hero h1{font-size:1.6rem;}.card-grid-3,.card-grid-2{grid-template-columns:1fr;}.comp-table{font-size:0.76rem;}.comp-table td,.comp-table th{padding:0.55rem 0.65rem;}.flow-node{min-width:150px;font-size:0.74rem;}.anat-visual{flex-direction:column;}.av-sep{padding:0.4rem;flex:0 0 1.5rem;}}
+  .mt1{margin-top:0.75rem;}.mt2{margin-top:1rem;}.mt3{margin-top:1.5rem;}
+  .flex-gap{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:flex-start;}
+  strong{font-weight:700;}
+</style>
+</head>
+<body>
+<nav id="top-nav">
+  <div class="nav-brand">Art. 24º CP</div>
+  <a href="#visao-geral">Visão Geral</a>
+  <a href="#conceito">Conceito</a>
+  <a href="#requisitos">Requisitos</a>
+  <a href="#proporcionalidade">Proporcionalidade</a>
+  <a href="#teorias">Teorias</a>
+  <a href="#par1">§1.º Dever Legal</a>
+  <a href="#par2">§2.º Diminuição</a>
+  <a href="#fluxograma">Fluxograma</a>
+  <a href="#comparativo">Comparativo</a>
+  <a href="#exemplos">Exemplos</a>
+  <a href="#jurisprudencia">Juris. STF/STJ</a>
+  <a href="#doutrina">Doutrina</a>
+  <a href="#sistematica">Sistemática</a>
+  <a href="#prova">⚖ Prova</a>
+</nav>
+<header id="hero">
+  <div class="badge">Código Penal · Título II · Da Ilicitude · Art. 23 · Excludentes de Antijuridicidade</div>
+  <h1>Art. 24º — <span>Estado de Necessidade</span></h1>
+  <p class="subtitle">Excludente de Ilicitude · Perigo Atual · Proporcionalidade · Teoria Unitária × Diferenciadora · §1.º Dever Legal · §2.º Causa de Diminuição · Magistratura · ENAM</p>
+  <div class="law-box">
+    <strong>Art. 24.º do Decreto-Lei n.º 2.848/1940 (Código Penal)</strong>
+    "Considera-se em estado de necessidade quem pratica o fato para salvar de perigo atual, que não provocou por sua vontade, nem podia de outro modo evitar, direito próprio ou alheio, cujo sacrifício, nas circunstâncias, não era razoável exigir-se.<br>
+    § 1.º Não pode alegar estado de necessidade quem tinha o dever legal de enfrentar o perigo.<br>
+    § 2.º Embora seja razoável exigir-se o sacrifício do direito ameaçado, a pena poderá ser reduzida de um a dois terços."
+  </div>
+</header>
+<div class="page-wrap">
+
+<!-- 01. VISÃO GERAL -->
+<section class="section" id="visao-geral">
+  <div class="section-header"><div class="section-num">01</div><div class="section-title"><span>Introdução &amp; Estrutura</span>Visão Geral do Artigo</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📍 Finalidade e Posição Sistemática</h3>
+      <p>O art. 24 CP disciplina o <strong>estado de necessidade</strong> — excludente de ilicitude (antijuridicidade) que opera na segunda etapa da análise do crime (tipicidade → <em>ilicitude</em> → culpabilidade). Quando presente, o fato continua <em>típico</em>, mas deixa de ser <em>antijurídico</em>: o agente age licitamente, pois sacrifica um bem jurídico menor para salvar outro de valor igual ou superior diante de perigo atual e inevitável.</p>
+      <p class="mt2">O CP de 1940 adotou a <strong>teoria unitária (monista)</strong>: toda situação de necessidade é excludente de ilicitude, independentemente da relação de valor entre os bens. Quando o bem sacrificado é superior, o §2.º prevê apenas causa de diminuição de pena — diferente do CP Militar (teoria diferenciadora), que trata esse caso como excludente de culpabilidade.</p>
+    </div>
+    <div class="card">
+      <h3>🏛️ Estrutura do Art. 24 CP</h3>
+      <ul>
+        <li><strong>Caput — Estado de necessidade justificante:</strong> Bem sacrificado ≤ bem salvo → exclui a ILICITUDE → fato lícito → sem crime.</li>
+        <li><strong>§1.º — Vedação para quem tem dever legal:</strong> Bombeiros, policiais, militares, médicos de plantão com dever legal de enfrentar o perigo não podem invocar o art. 24 CP para fugir do perigo inerente à função.</li>
+        <li><strong>§2.º — Estado de necessidade imperfeito (causa de diminuição):</strong> Bem sacrificado > bem salvo → era razoável exigir o sacrifício → fato ILÍCITO → pena reduzida de 1/3 a 2/3 (3.ª fase da dosimetria).</li>
+        <li><strong>Elemento afetado:</strong> ILICITUDE — o fato é típico e culpável, mas não antijurídico (caput).</li>
+      </ul>
+    </div>
+  </div>
+  <div class="alert alert-gold mt2">
+    <div class="alert-icon">⭐</div>
+    <div><strong>Distinção fundamental — Ilicitude vs. Culpabilidade:</strong> Estado de necessidade (art. 24 CP) exclui a <strong>ILICITUDE</strong> → fato LÍCITO. Coação irresistível (art. 22 CP) exclui a <strong>CULPABILIDADE</strong> → fato ILÍCITO (mas sem culpabilidade). Esta distinção gera consequências práticas enormes: (a) Vítima do ato em estado de necessidade NÃO pode exercer legítima defesa real; vítima do coagido PODE. (b) Responsabilidade civil difere. É a distinção mais cobrada em magistratura sobre excludentes.</div>
+  </div>
+  <div class="card-grid card-grid-3 mt2">
+    <div class="card type-card tc-green"><h3>🟢 Caput — Excludente de Ilicitude</h3><p>Bem sacrificado ≤ bem salvo → fato LÍCITO → sem crime. A vítima do ato não pode exercer legítima defesa real. Pode haver indenização civil (art. 929 CC).</p></div>
+    <div class="card type-card tc-gold"><h3>🟡 §2.º — Causa de Diminuição</h3><p>Bem sacrificado > bem salvo → era razoável exigir o sacrifício → fato ILÍCITO → pena reduzida 1/3 a 2/3 (3.ª fase). A vítima PODE exercer legítima defesa real.</p></div>
+    <div class="card type-card tc-red"><h3>🔴 §1.º — Sem Excludente</h3><p>Quem tem dever legal de enfrentar o perigo (bombeiro, policial, militar, médico de plantão) não pode alegar estado de necessidade para fugir de perigo inerente à função.</p></div>
+  </div>
+</section>
+
+<!-- 02. CONCEITO -->
+<section class="section" id="conceito">
+  <div class="section-header"><div class="section-num">02</div><div class="section-title"><span>Análise Dogmática</span>Conceito, Natureza Jurídica e Teorias</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📋 Conceito de Estado de Necessidade</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.6rem;">O <strong>estado de necessidade</strong> é situação de conflito entre dois bens jurídicos legítimos em que o perigo de destruição de um só pode ser evitado com o sacrifício do outro. O agente que sacrifica o bem de menor valor para salvar o de maior age licitamente.</p>
+      <div style="background:var(--navy);color:white;border-radius:6px;padding:1rem;font-size:0.83rem;line-height:1.85;">
+        <strong style="color:var(--gold-light);">Colisão de Bens no Estado de Necessidade:</strong>
+        <p class="mt1">BEM A (em perigo) ← Perigo atual, não provocado voluntariamente</p>
+        <p>Para salvar A → necessário sacrificar BEM B (de terceiro)</p>
+        <p style="color:var(--gold-light);font-style:italic;margin-top:0.3rem;">Se B ≤ A: excludente de ilicitude (caput) → fato LÍCITO</p>
+        <p>Se B > A: causa de diminuição §2.º → fato ILÍCITO, pena ↓ 1/3–2/3</p>
+      </div>
+    </div>
+    <div class="card">
+      <h3>⚖️ Teoria Unitária × Teoria Diferenciadora</h3>
+      <div style="display:flex;flex-direction:column;gap:0.45rem;">
+        <div style="background:var(--gold-pale);border:2px solid var(--gold);border-radius:6px;padding:0.8rem 1rem;font-size:0.82rem;">
+          <strong style="color:#7a5a00;">⭐ Teoria Unitária — ADOTADA pelo CP/1940 (art. 24):</strong> Todo estado de necessidade é excludente de ilicitude. Se bem sacrificado > bem salvo → não exclui ilicitude, mas §2.º prevê causa de diminuição de pena 1/3–2/3.
+        </div>
+        <div style="background:#edf2f8;border:1px solid #8eb4d8;border-radius:6px;padding:0.8rem 1rem;font-size:0.82rem;">
+          <strong style="color:var(--blue-accent);">Teoria Diferenciadora — Adotada pelo CPM (art. 39 CPM):</strong> Distingue (a) justificante: bem sacrificado ≤ salvo → exclui ilicitude; (b) exculpante: bem sacrificado > salvo → exclui culpabilidade → isenção total de pena. O CP comum NÃO adota esta distinção.
+        </div>
+        <div style="background:#dceee3;border:1px solid #7ec89a;border-radius:6px;padding:0.8rem 1rem;font-size:0.82rem;">
+          <strong style="color:var(--green-accent);">Para o concurso (ENAM/Magistratura estadual):</strong> CP = teoria UNITÁRIA. CPM = teoria DIFERENCIADORA. Consequência prática: civil com bem sacrificado > salvo → §2.º (pena reduzida). Militar nas mesmas condições → CPM: exculpante (isento de pena).
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03. REQUISITOS -->
+<section class="section" id="requisitos">
+  <div class="section-header"><div class="section-num">03</div><div class="section-title"><span>Alta Cobrança — Análise Literal</span>Requisitos Cumulativos do Estado de Necessidade</div></div>
+  <div class="alert alert-gold" style="margin-bottom:1rem;"><div class="alert-icon">⭐</div><div><strong>Todos os requisitos são CUMULATIVOS:</strong> A ausência de qualquer requisito afasta o caput do art. 24 CP. Pode restar o §2.º (se o único problema for a proporcionalidade) ou nenhum benefício. Dominar cada requisito com profundidade é essencial para magistratura.</div></div>
+  <div class="especie-grid">
+    <div class="especie-card ec-red">
+      <h4>🔴 1. Perigo Atual (inclui iminente)</h4>
+      <p>O perigo deve ser presente ou prestes a se concretizar de forma inevitável. Doutrina e STJ incluem o perigo iminente no conceito de "atual". <strong>Não abrangido:</strong> perigo futuro e incerto; perigo já cessado.</p>
+      <ul><li>Origem: pessoa, animal, fenômeno natural, caso fortuito</li><li>Distinção da legítima defesa: nesta, há agressão humana injusta; no estado de necessidade, há perigo (qualquer fonte)</li></ul>
+    </div>
+    <div class="especie-card ec-blue">
+      <h4>🔵 2. Perigo Não Provocado Voluntariamente</h4>
+      <p>"Por sua vontade" = dolosamente (posição majoritária: Masson, Bitencourt, Greco). Provocação <em>culposa</em> não afasta o estado de necessidade.</p>
+      <ul><li>Provocação dolosa: sem estado de necessidade</li><li>Provocação culposa: admitido (maioria); possível responsabilidade pelo crime culposo original</li><li>Capez (minoritário): culpa também afasta</li></ul>
+    </div>
+    <div class="especie-card ec-green">
+      <h4>🟢 3. Inevitabilidade por Outro Meio</h4>
+      <p>O sacrifício do bem alheio era o único meio disponível e acessível de afastar o perigo. Não havia alternativa menos lesiva concretamente disponível.</p>
+      <ul><li>Análise concreta: não basta existência abstrata de alternativa — deve ser acessível naquele momento</li><li>Fuga: maioria entende não ser obrigatória</li><li>Requisito de subsidiariedade: última ratio</li></ul>
+    </div>
+    <div class="especie-card ec-gold">
+      <h4>🟡 4. Proteção de Direito Próprio ou Alheio</h4>
+      <p>Qualquer bem jurídico tutelado pode ser protegido. O estado de necessidade pode ser próprio ou de terceiro (sem necessidade de relação especial).</p>
+      <ul><li>Bens protegíveis: vida, integridade, honra, patrimônio, liberdade etc.</li><li>Estado de necessidade de terceiro: qualquer pessoa pode agir em favor de desconhecido</li></ul>
+    </div>
+    <div class="especie-card ec-purple">
+      <h4>🟣 5. Proporcionalidade (Sacrifício Não Razoável Exigir)</h4>
+      <p>O bem sacrificado não deve ser de valor sensivelmente superior ao bem salvo. Requisito mais importante e mais cobrado.</p>
+      <ul><li>B sacrificado ≤ B salvo → caput → fato lícito</li><li>B sacrificado > B salvo → §2.º → fato ilícito, pena ↓</li><li>Vida > patrimônio: sempre proporcional sacrificar patrimônio para salvar vida</li></ul>
+    </div>
+    <div class="especie-card ec-red">
+      <h4>🔴 6. Elemento Subjetivo (Animus Necessitatis)</h4>
+      <p>O agente deve ter consciência de que está em situação de necessidade e agir para salvar o bem ameaçado. Sem o elemento subjetivo, não há excludente.</p>
+      <ul><li>Doutrina finalista: exige consciência da situação de necessidade</li><li>Compatibilidade com dolo: estado de necessidade não exclui o dolo — exclui a ilicitude da conduta dolosa</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- 04. PROPORCIONALIDADE -->
+<section class="section" id="proporcionalidade">
+  <div class="section-header"><div class="section-num">04</div><div class="section-title"><span>Requisito Decisivo — Máxima Cobrança</span>Proporcionalidade: Caput × §2.º e Critérios de Ponderação</div></div>
+  <div class="anat-visual">
+    <div class="av-col av-green">
+      <h4>🟢 CAPUT — Bem Sacrificado ≤ Bem Salvo (Não era razoável exigir)</h4>
+      <p><strong>Excludente de Ilicitude → Fato LÍCITO</strong></p>
+      <ul>
+        <li>O ordenamento não pode razoavelmente exigir que se suporte a perda do bem maior para preservar o menor</li>
+        <li>Vítima do ato: NÃO pode exercer legítima defesa real (ato lícito)</li>
+        <li>Pode haver indenização civil (art. 929 CC) em favor do terceiro inocente lesado</li>
+        <li>Ex.: Destruir carro (patrimônio) para salvar vida → vida > patrimônio → caput</li>
+        <li>Ex.: Matar animal que ataca → vida humana > vida animal → caput</li>
+        <li>Ex.: Invadir domicílio para escapar de incêndio → vida > inviolabilidade → caput</li>
+      </ul>
+    </div>
+    <div class="av-sep">≠</div>
+    <div class="av-col av-gold">
+      <h4>🟡 §2.º — Bem Sacrificado > Bem Salvo (Era razoável exigir)</h4>
+      <p><strong>Causa de Diminuição de Pena 1/3 a 2/3 → Fato ILÍCITO</strong></p>
+      <ul>
+        <li>Era razoável exigir que o agente suportasse o sacrifício do seu bem de menor valor</li>
+        <li>Fato permanece ilícito: vítima PODE exercer legítima defesa real</li>
+        <li>Pena reduzida de 1/3 a 2/3 na 3.ª fase da dosimetria</li>
+        <li>Teoria unitária CP: ainda é "estado de necessidade", mas sem exclusão da ilicitude</li>
+        <li>CPM (teoria diferenciadora): mesma situação = estado de necessidade exculpante → isento de pena</li>
+        <li>Ex.: Sacrificar vida alheia para salvar patrimônio → §2.º CP; militar → CPM: isento</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card mt2">
+    <h3>📋 Critérios para Ponderação dos Bens em Conflito</h3>
+    <div class="card-grid card-grid-3 mt1">
+      <div><p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Hierarquia dos bens:</strong> Vida humana > integridade física grave > liberdade > patrimônio > honra. A pena prevista em lei para os crimes que protegem cada bem é um indicador do valor relativo atribuído pelo ordenamento.</p></div>
+      <div><p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Intensidade e extensão:</strong> Considera-se não só a natureza do bem, mas a intensidade do perigo sofrido e a extensão do dano causado. Análise concreta e contextualizada (STJ: análise ex ante — como o agente percebia no momento, não retrospectivamente).</p></div>
+      <div><p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Vida × vida (caso mais difícil):</strong> Quando bens têm o mesmo valor (náufrago de Carneades), doutrina majoritária admite estado de necessidade (caput), pois o sacrifício não era razoável exigir (valores iguais). STJ: admite com análise concreta. Capez (minoritário): nega.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05. TEORIAS JUSTIFICADORAS -->
+<section class="section" id="teorias">
+  <div class="section-header"><div class="section-num">05</div><div class="section-title"><span>Dogmática Penal</span>Teorias Justificadoras e Consequências Práticas CP × CPM</div></div>
+  <div style="overflow-x:auto;">
+    <table class="comp-table">
+      <thead><tr><th>Critério</th><th>Teoria Unitária (CP/1940)</th><th>Teoria Diferenciadora (CPM)</th></tr></thead>
+      <tbody>
+        <tr class="hl2"><td>Bem sacrificado ≤ bem salvo</td><td>Excludente de ILICITUDE → fato lícito → sem crime</td><td>Estado de nec. JUSTIFICANTE → exclui ilicitude → sem crime</td></tr>
+        <tr class="hl4"><td>Bem sacrificado > bem salvo</td><td>NÃO exclui ilicitude → causa de diminuição §2.º (1/3–2/3)</td><td>Estado de nec. EXCULPANTE → exclui CULPABILIDADE → isento de pena</td></tr>
+        <tr class="hl3"><td>Consequência para o agente civil</td><td>Responde com pena reduzida (fato ilícito)</td><td>Isento de pena (civil não se sujeita ao CPM)</td></tr>
+        <tr><td>Vítima pode exercer legítima defesa real?</td><td>Caput: NÃO (lícito). §2.º: SIM (ilícito)</td><td>Justificante: NÃO. Exculpante: SIM (fato ilícito)</td></tr>
+        <tr class="hl"><td>Embasamento legal</td><td>Art. 24 CP (Decreto-Lei n.º 2.848/1940)</td><td>Art. 39 CPM (Decreto-Lei n.º 1.001/1969)</td></tr>
+        <tr><td>Para concursos</td><td>MAGISTRATURA ESTADUAL / ENAM</td><td>Concursos militares (Justiça Militar)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="alert alert-red mt2"><div class="alert-icon">🔴</div><div><strong>Pegadinha de prova:</strong> No CP (teoria unitária), quando o bem sacrificado é de valor SUPERIOR ao bem salvo, o agente responde pelo crime — apenas com pena reduzida (§2.º). No CPM (teoria diferenciadora), a mesma situação gera isenção total de pena (exculpante). Confundir as teorias é o erro mais comum sobre este tema em provas de magistratura.</div></div>
+</section>
+
+<!-- 06. §1.º DEVER LEGAL -->
+<section class="section" id="par1">
+  <div class="section-header"><div class="section-num">06</div><div class="section-title"><span>Art. 24, §1.º — Alta Cobrança</span>Dever Legal de Enfrentar o Perigo</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📋 Conceito, Fundamento e Profissionais Abrangidos</h3>
+      <div class="law-quote"><strong>Art. 24, §1.º CP:</strong>"Não pode alegar estado de necessidade quem tinha o dever legal de enfrentar o perigo."</div>
+      <p style="font-size:0.84rem;color:var(--text-mid);margin-top:0.75rem;margin-bottom:0.5rem;">Determinadas funções implicam dever jurídico de enfrentar riscos — o perigo faz parte do papel funcional. Para essas pessoas, o ordenamento exige o enfrentamento como condição do cargo.</p>
+      <ul style="font-size:0.83rem;">
+        <li><strong>"Dever LEGAL":</strong> Deve estar previsto em lei — não basta dever moral, contratual ou social</li>
+        <li><strong>Bombeiros militares</strong> (leis estaduais de organização)</li>
+        <li><strong>Policiais militares e civis</strong> (estatutos e leis orgânicas)</li>
+        <li><strong>Militares das Forças Armadas</strong> (Lei n.º 6.880/80 — Estatuto dos Militares)</li>
+        <li><strong>Médicos em plantão de emergência</strong> com dever legal específico de atendimento</li>
+        <li><strong>Fundamento:</strong> Ao assumir funções de risco, o profissional assume implicitamente a obrigação de enfrentá-lo — a exigibilidade de conduta diversa persiste</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>⚡ O §1.º Não é Absoluto — Limites do Dever Legal</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">O STJ e a doutrina majoritária reconhecem que o dever legal de enfrentar o perigo tem limites:</p>
+      <div style="display:flex;flex-direction:column;gap:0.45rem;">
+        <div style="background:var(--gold-pale);border:1px solid var(--gold);border-radius:6px;padding:0.8rem 1rem;font-size:0.82rem;">
+          <strong style="color:#7a5a00;">⭐ Regra (STJ e doutrina majoritária):</strong> O §1.º refere-se a perigos <em>normais e proporcionais</em> à função. O profissional deve suportar os riscos inerentes ao seu papel funcional.
+        </div>
+        <div style="background:#dceee3;border:1px solid #7ec89a;border-radius:6px;padding:0.8rem 1rem;font-size:0.82rem;">
+          <strong style="color:var(--green-accent);">Exceção — perigo absolutamente extraordinário:</strong> Perigos que superem em muito o risco inerente à função podem afastar o §1.º. Nenhuma lei pode exigir suicídio funcional. Bombeiro diante de explosão nuclear sem equipamento → o dever legal não pode exigir a morte certa e absolutamente desnecessária.
+        </div>
+        <div style="background:#edf2f8;border:1px solid #8eb4d8;border-radius:6px;padding:0.8rem 1rem;font-size:0.82rem;">
+          <strong style="color:var(--blue-accent);">O §1.º não veda todo estado de necessidade do profissional:</strong> Veda invocar estado de necessidade para OMITIR-SE ao dever funcional. Não veda invocar estado de necessidade para PRATICAR ATO NECESSÁRIO a salvar terceiros. Ex.: Bombeiro não pode fugir do incêndio (§1.º), mas pode invocar estado de necessidade para invadir propriedade privada ao salvar vítimas.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07. §2.º CAUSA DE DIMINUIÇÃO -->
+<section class="section" id="par2">
+  <div class="section-header"><div class="section-num">07</div><div class="section-title"><span>Art. 24, §2.º — Alta Cobrança</span>Estado de Necessidade Imperfeito — Causa de Diminuição de Pena</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📋 Análise do §2.º e Consequências Jurídicas</h3>
+      <div class="law-quote"><strong>Art. 24, §2.º CP:</strong>"Embora seja razoável exigir-se o sacrifício do direito ameaçado, a pena poderá ser reduzida de um a dois terços."</div>
+      <p style="font-size:0.84rem;color:var(--text-mid);margin-top:0.75rem;">O agente sacrificou bem de valor SUPERIOR ao bem salvo — era razoável exigir que suportasse o sacrifício do seu bem de menor valor. A teoria unitária do CP não exclui a ilicitude nesses casos.</p>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;margin-top:0.75rem;">
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--red-accent);">Efeito:</strong> Fato ILÍCITO → Crime existe → pena reduzida 1/3 a 2/3 (3.ª fase da dosimetria)</div>
+        <div style="background:#edf2f8;border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--blue-accent);">Vítima pode exercer legítima defesa real</strong> (pois o ato é ilícito)</div>
+        <div style="background:var(--gold-pale);border:1px solid var(--gold);border-radius:6px;padding:0.65rem 0.9rem;font-size:0.82rem;"><strong style="color:#7a5a00;">CPM (teoria diferenciadora):</strong> mesma situação → estado de necessidade EXCULPANTE → exclui culpabilidade → isento de pena. Tratamento mais favorável ao militar.</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>⚡ Quantum da Redução — Critérios para o Juiz</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">A redução de <strong>1/3 a 2/3</strong> é discricionária do juiz, com fundamentação obrigatória:</p>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;">
+        <div style="background:#dceee3;border-left:3px solid var(--green-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--green-accent);">Redução maior (próxima a 2/3):</strong> Bens em conflito de valor muito próximo — o bem sacrificado é apenas ligeiramente superior ao salvo. Quanto mais próximos em valor → mais próximo do caput → maior redução.</div>
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--red-accent);">Redução menor (próxima a 1/3):</strong> Bem sacrificado muito superior ao salvo — desproporcionalidade acentuada. Ex.: matar pessoa para salvar objeto de pouco valor.</div>
+        <div style="background:var(--cream-mid);border-left:3px solid var(--navy);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--navy);">Fase dosimétrica:</strong> 3.ª fase — causa de diminuição. Aplicada após circunstâncias atenuantes e agravantes (2.ª fase). Fundamentação obrigatória do quantum na sentença.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08. FLUXOGRAMA -->
+<section class="section" id="fluxograma">
+  <div class="section-header"><div class="section-num">08</div><div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma: Análise do Estado de Necessidade (Art. 24 CP)</div></div>
+  <div class="flow-wrap">
+    <div class="flow-center">
+      <div class="flow-node flow-start">AGENTE PRATICOU FATO TÍPICO — VERIFICAR ESTADO DE NECESSIDADE (ART. 24 CP)</div>
+      <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 1 — Havia PERIGO ATUAL (ou iminente) a bem jurídico próprio ou alheio?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Perigo real e presente — não futuro incerto; não já cessado. Pode provir de pessoa, animal, fenômeno natural.</span>
+      </div>
+      <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — sem perigo atual</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:175px;">Sem estado de necessidade<br>Fato ilícito — analisar outros institutos</div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-red" style="font-size:0.72rem;">Sem Excludente — Fato Ilícito</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:90px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">SIM — havia perigo atual</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;min-width:175px;">Perigo identificado<br>Prosseguir Passo 2</div>
+        </div>
+      </div>
+      <div class="flow-connector-line" style="height:36px;"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 2 — O agente PROVOCOU VOLUNTARIAMENTE (dolosamente) o perigo?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Dolo = sem estado de necessidade. Culpa = admitido (posição majoritária).</span>
+      </div>
+      <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">SIM — provocou dolosamente</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:175px;">Sem estado de necessidade<br>(art. 24 — "não provocou por sua vontade")</div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-red" style="font-size:0.72rem;">Sem Excludente — Provocou o Perigo</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — não provocou (ou foi culposa)</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;min-width:175px;">Requisito satisfeito<br>Prosseguir Passo 3</div>
+        </div>
+      </div>
+      <div class="flow-connector-line" style="height:36px;"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 3 — O perigo era INEVITÁVEL por outro meio menos lesivo?</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">O sacrifício do bem alheio era o único meio disponível e acessível? Havia alternativa concreta menos danosa?</span>
+      </div>
+      <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — havia meio menos lesivo disponível</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:175px;">Sem inevitabilidade<br>Sem estado de necessidade</div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-red" style="font-size:0.72rem;">Sem Inevitabilidade — Fato Ilícito</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:110px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">SIM — único meio possível</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;min-width:175px;">Inevitabilidade presente<br>Prosseguir Passo 4</div>
+        </div>
+      </div>
+      <div class="flow-connector-line" style="height:36px;"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 4 — O agente tinha DEVER LEGAL de enfrentar o perigo? (§1.º)</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Bombeiro, policial, militar, médico de plantão. Dever proporcional à função — não ilimitado.</span>
+      </div>
+      <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">SIM — tinha dever legal (§1.º)</div>
+          <div class="flow-node flow-box-red" style="font-size:0.76rem;text-align:center;min-width:185px;">Sem estado de necessidade (§1.º)<br>Era exigível o enfrentamento do perigo<br>Fato ilícito (salvo perigo extraordinário)</div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-red" style="font-size:0.72rem;">§1.º — Dever Legal — Sem Excludente</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:115px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">NÃO — sem dever legal</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;min-width:175px;">§1.º não se aplica<br>Prosseguir Passo 5</div>
+        </div>
+      </div>
+      <div class="flow-connector-line" style="height:36px;"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+      <div class="flow-node flow-box-navy" style="max-width:580px;text-align:center;">
+        <strong style="color:var(--gold-light);">PASSO 5 — Era RAZOÁVEL EXIGIR o sacrifício do bem ameaçado? (Proporcionalidade)</strong><br>
+        <span style="font-size:0.74rem;opacity:0.85;">Bem sacrificado ≤ bem salvo → NÃO era razoável exigir → caput. Bem sacrificado > bem salvo → ERA razoável exigir → §2.º</span>
+      </div>
+      <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+      <div class="flow-row">
+        <div class="flow-branch">
+          <div class="flow-label">NÃO era razoável exigir (B sacrif. ≤ B salvo)</div>
+          <div class="flow-node flow-box-green" style="font-size:0.76rem;text-align:center;min-width:185px;"><strong>ESTADO DE NECESSIDADE — Art. 24, caput</strong><br>EXCLUDENTE DE ILICITUDE<br>FATO LÍCITO → Sem crime</div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-green" style="font-size:0.72rem;">Fato Lícito — Excludente de Ilicitude</div>
+        </div>
+        <div style="width:1px;background:var(--border);min-height:115px;"></div>
+        <div class="flow-branch">
+          <div class="flow-label">SIM era razoável exigir (B sacrif. > B salvo)</div>
+          <div class="flow-node flow-box-gold" style="font-size:0.76rem;text-align:center;min-width:185px;"><strong>ESTADO DE NECESSIDADE — Art. 24, §2.º</strong><br>NÃO exclui ilicitude<br>Fato ILÍCITO → Causa de diminuição 1/3 a 2/3</div>
+          <div class="flow-connector-line" style="height:16px;"></div>
+          <div class="flow-end-gold" style="font-size:0.72rem;">Fato Ilícito — Causa de Diminuição §2.º</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09. COMPARATIVO -->
+<section class="section" id="comparativo">
+  <div class="section-header"><div class="section-num">09</div><div class="section-title"><span>Quadro Sinóptico Completo</span>Estado de Necessidade × Legítima Defesa × Coação Irresistível × CPM</div></div>
+  <div style="overflow-x:auto;">
+    <table class="comp-table">
+      <thead><tr><th>Critério</th><th>Estado de Nec. Caput (CP)</th><th>Estado de Nec. §2.º (CP)</th><th>Estado de Nec. Exculpante (CPM)</th><th>Legítima Defesa (art. 25)</th><th>Coação Irresistível (art. 22)</th></tr></thead>
+      <tbody>
+        <tr class="hl2"><td>Fonte do perigo</td><td>Qualquer (animal, natural, pessoa)</td><td>Qualquer</td><td>Qualquer</td><td>Agressão humana injusta</td><td>Pessoa humana (coator)</td></tr>
+        <tr><td>Elemento excluído</td><td style="color:var(--green-accent);font-weight:700;">ILICITUDE</td><td style="color:var(--red-accent);">Nenhum (só diminuição)</td><td style="color:var(--green-accent);font-weight:700;">CULPABILIDADE</td><td style="color:var(--green-accent);font-weight:700;">ILICITUDE</td><td style="color:var(--green-accent);font-weight:700;">CULPABILIDADE</td></tr>
+        <tr class="hl3"><td>Fato é lícito?</td><td style="color:var(--green-accent);font-weight:700;">SIM</td><td style="color:var(--red-accent);font-weight:700;">NÃO</td><td style="color:var(--red-accent);">NÃO (ilícito, sem culp.)</td><td style="color:var(--green-accent);font-weight:700;">SIM</td><td style="color:var(--red-accent);font-weight:700;">NÃO (ilícito, sem culp.)</td></tr>
+        <tr class="hl4"><td>Vítima: legítima defesa real?</td><td>NÃO (ato lícito)</td><td>SIM (ato ilícito)</td><td>SIM (ato ilícito)</td><td>NÃO (ato lícito)</td><td>SIM (ato ilícito)</td></tr>
+        <tr><td>Consequência penal</td><td>Sem crime</td><td>Crime + pena ↓ 1/3–2/3</td><td>Isento de pena</td><td>Sem crime</td><td>Isento de pena</td></tr>
+        <tr class="hl5"><td>Indenização civil da vítima</td><td>Possível (art. 929 CC)</td><td>Sim (ato ilícito)</td><td>Possível (ato ilícito)</td><td>Em regra não (agressor)</td><td>Sim — do coagido e do coator</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="alert alert-red mt2"><div class="alert-icon">🔴</div><div><strong>Resumo Mnemônico — Art. 24 CP:</strong><br>
+  <strong>6 Requisitos:</strong> Perigo ATUAL + Não provocou (dolosa) + Inevitabilidade + Direito próprio/alheio + Proporcionalidade + Animus necessitatis<br>
+  <strong>Caput:</strong> B sacrif. ≤ B salvo → exclui ILICITUDE → Fato LÍCITO → sem crime<br>
+  <strong>§2.º:</strong> B sacrif. > B salvo → Fato ILÍCITO → causa de diminuição 1/3–2/3 (3.ª fase)<br>
+  <strong>§1.º:</strong> Dever legal de enfrentar → sem estado de necessidade (salvo perigo absolutamente extraordinário)<br>
+  <strong>CP (unitária) × CPM (diferenciadora):</strong> CP §2.º = pena reduzida; CPM exculpante = isento de pena<br>
+  <strong>Estado nec. × Legít. def.:</strong> Estado nec. = perigo (qualquer fonte). Leg. def. = agressão humana injusta</div></div>
+</section>
+
+<!-- 10. EXEMPLOS -->
+<section class="section" id="exemplos">
+  <div class="section-header"><div class="section-num">10</div><div class="section-title"><span>Casos Concretos Resolvidos</span>Exemplos Práticos do Art. 24 CP</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 1 — Estado de Necessidade Clássico (Caput)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A está dirigindo em rodovia quando o carro tem falha nos freios (defeito de fábrica). Para evitar colisão frontal com ônibus cheio de passageiros, A desvia e colide com carro de B, causando dano patrimonial a B.</p>
+      <div class="ex-calc">ANÁLISE — ART. 24, CAPUT CP:
+1. Perigo atual? SIM — falha nos freios + colisão iminente
+2. Não provocou voluntariamente? SIM — defeito de fábrica
+3. Inevitabilidade? SIM — único meio disponível
+4. Direito alheio? SIM — vidas dos passageiros do ônibus
+5. Dever legal §1.º? NÃO — motorista civil comum
+6. Proporcionalidade?
+   Bem salvo: múltiplas vidas humanas — valor máximo
+   Bem sacrificado: patrimônio de B (carro)
+   Vidas >> Patrimônio → NÃO era razoável exigir sacrifício
+
+→ ESTADO DE NECESSIDADE (art. 24, caput CP)
+→ EXCLUI ILICITUDE → FATO LÍCITO → SEM CRIME para A
+
+CONSEQUÊNCIA CIVIL (art. 929 CC):
+B (terceiro inocente) pode pleitear indenização de A.
+A tem ação regressiva contra o fabricante do carro
+(causador do defeito — art. 930 CC). ✅</div>
+    </div>
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 2 — §2.º: Teoria Unitária vs. CPM</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">A, para salvar seu carro (bem patrimonial) de ser levado por enchente, empurra violentamente B (transeunte inocente), causando-lhe lesão corporal grave. Não havia outra saída disponível.</p>
+      <div class="ex-calc">ANÁLISE — ART. 24 CP:
+1–5: Demais requisitos presentes (perigo atual, inevitabilidade etc.)
+6. Proporcionalidade:
+   Bem salvo: carro de A (patrimônio) — valor patrimonial
+   Bem sacrificado: integridade física de B — valor pessoal
+   Integridade física > Patrimônio → ERA razoável exigir sacrifício
+   (A deveria ter deixado seu carro ser levado)
+
+→ NÃO configura caput (proporcionalidade ausente)
+→ ART. 24, §2.º CP (teoria unitária):
+   Fato ILÍCITO (lesão corporal grave dolosa)
+   Causa de diminuição: 1/3 a 2/3 (3.ª fase)
+   B pode exercer legítima defesa real contra A
+   Bens muito díspares → redução menor (próxima de 1/3)
+
+MESMO CASO NO CPM (se fosse militar):
+Bem sacrificado > bem salvo → estado de necessidade
+EXCULPANTE (art. 39 CPM) → exclui culpabilidade →
+agente isento de pena. Tratamento mais favorável. ✅</div>
+    </div>
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 3 — §1.º: Bombeiro e Limite do Dever Legal</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">X, bombeiro militar de plantão, recusa-se a entrar em edifício em chamas para resgatar vítimas, alegando estado de necessidade em razão do risco à própria vida.</p>
+      <div class="ex-calc">ANÁLISE — ART. 24, §1.º CP:
+
+X alega estado de necessidade (art. 24 CP):
+→ Verificar §1.º: "quem tinha o dever legal de enfrentar o perigo"
+
+X é BOMBEIRO MILITAR:
+→ Dever legal expresso nas leis de organização dos corpos
+   de bombeiros militares estaduais
+→ O risco de incêndio/salvamento é inerente à função
+→ Ao assumir a função, X aceitou o dever de enfrentar esses riscos
+
+→ §1.º: VEDA estado de necessidade para omitir-se ao dever
+→ X NÃO pode alegar estado de necessidade
+→ X responde por abandono de função e omissão de socorro
+
+EXCEÇÃO — se o perigo fosse absolutamente extraordinário:
+Se o edifício tivesse iminente risco de explosão química
+sem qualquer equipamento disponível — perigo que supera
+o razoavelmente inerente à função de bombeiro:
+→ STJ e doutrina majoritária: §1.º cede → pode haver
+   estado de necessidade mesmo para o bombeiro
+→ O dever legal não exige suicídio funcional ✅</div>
+    </div>
+    <div class="example-box">
+      <div class="ex-title">📌 Exemplo 4 — Estado Nec. × Legítima Defesa × Coação (Classificação)</div>
+      <p style="color:rgba(255,255,255,0.8);font-size:0.84rem;">Três situações para identificação correta do instituto aplicável.</p>
+      <div class="ex-calc">SITUAÇÃO A — ESTADO DE NECESSIDADE (Art. 24 CP):
+Cão feroz ataca A. Para escapar, A pula muro da propriedade de B.
+→ Perigo: ANIMAL (não agressão humana injusta)
+→ Art. 24 CP (estado de necessidade), não art. 25
+→ Vida de A > inviolabilidade do domicílio de B
+→ CAPUT: excludente de ilicitude → fato LÍCITO ✅
+
+SITUAÇÃO B — LEGÍTIMA DEFESA (Art. 25 CP):
+B ataca A com faca. A reage com golpe moderado para se defender.
+→ Perigo: AGRESSÃO INJUSTA de pessoa humana (B)
+→ Art. 25 CP (legítima defesa), não art. 24
+→ A reage contra o próprio agressor — não sacrifica inocente
+→ Legítima defesa perfeita → fato LÍCITO ✅
+
+SITUAÇÃO C — COAÇÃO IRRESISTÍVEL (Art. 22 CP):
+C ameaça A: "mate B ou mato sua filha." A mata B.
+→ Perigo: PESSOA HUMANA (coator C) com dolo de coagir
+→ A age sob ameaça irresistível de terceiro
+→ Art. 22 CP (coação irresistível), não art. 24
+→ Afeta CULPABILIDADE — fato ILÍCITO, A isento de pena
+→ C responde como autor mediato do homicídio
+
+DISTINÇÃO ESSENCIAL:
+Estado nec.: perigo de SITUAÇÃO → exclui ILICITUDE
+Coação irresistível: perigo de AMEAÇA HUMANA DOLOSA → exclui CULPABILIDADE ✅</div>
+    </div>
+  </div>
+</section>
+
+<!-- 11. JURISPRUDÊNCIA -->
+<section class="section" id="jurisprudencia">
+  <div class="section-header"><div class="section-num">11</div><div class="section-title"><span>STF · STJ · Teses Consolidadas</span>Jurisprudência sobre o Art. 24 CP</div></div>
+  <div class="juris-grid">
+    <div class="juris-card stj">
+      <div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">Posição Consolidada</span><div class="juris-title">Proporcionalidade — Análise Concreta e Ex Ante das Circunstâncias</div></div>
+      <div class="juris-body">
+        <p>O STJ consolida que a proporcionalidade no estado de necessidade deve ser analisada de forma <strong>concreta, contextualizada e ex ante</strong> — considerando as informações disponíveis ao agente no momento da ação, não retrospectivamente. A vida humana tem precedência absoluta sobre bens patrimoniais; a integridade física supera o patrimônio em qualquer análise de proporcionalidade.</p>
+        <p class="mt1">O STJ rejeita o estado de necessidade quando a desproporcionalidade é flagrante: sacrificar vida ou integridade física de terceiro inocente para salvar bem patrimonial de menor valor não configura o caput — recai, quando muito, na causa de diminuição do §2.º. A análise deve considerar o que o agente razoavelmente sabia e percebia no momento, sem o benefício da análise retrospectiva com informações que não tinha.</p>
+        <div class="flex-gap mt2"><span class="tag tag-red">Proporcionalidade — Análise Concreta</span><span class="tag tag-gold">Vida > Patrimônio — Sempre</span><span class="tag tag-blue">Análise Ex Ante</span></div>
+      </div>
+    </div>
+    <div class="juris-card stj">
+      <div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">Posição Consolidada</span><div class="juris-title">Teoria Unitária — CP Adotou a Unitária; CPM Adota a Diferenciadora</div></div>
+      <div class="juris-body">
+        <p>O STJ consolida que o CP de 1940 adotou a <strong>teoria unitária</strong>: toda situação de necessidade é analisada como excludente de ilicitude. Quando o bem sacrificado tem valor superior ao salvo, aplica-se a causa de diminuição do §2.º (não uma excludente de culpabilidade). O CPM (art. 39) adota a teoria diferenciadora — o militar que sacrifica bem de maior valor tem estado de necessidade exculpante e é isento de pena.</p>
+        <p class="mt1">Esta distinção gera tratamento mais favorável ao militar: enquanto o civil tem apenas redução de pena de 1/3 a 2/3 (§2.º CP), o militar é absolvido por exclusão de culpabilidade (CPM). O STJ aplica cada sistema ao respectivo jurisdicionado. Para concursos de magistratura estadual, aplica-se sempre o CP (teoria unitária).</p>
+        <div class="flex-gap mt2"><span class="tag tag-red">Teoria Unitária — CP/1940</span><span class="tag tag-gold">Teoria Diferenciadora — CPM</span><span class="tag tag-blue">§2.º CP ≠ Isenção de Pena do CPM</span></div>
+      </div>
+    </div>
+    <div class="juris-card stj">
+      <div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">Posição Consolidada</span><div class="juris-title">Provocação Culposa do Perigo Não Afasta o Estado de Necessidade</div></div>
+      <div class="juris-body">
+        <p>O STJ firmou que "não provocou por sua vontade" significa não provocou <strong>dolosamente</strong>. A provocação culposa do perigo não afasta automaticamente o estado de necessidade — o agente que imprudentemente criou a situação de perigo ainda pode invocar o art. 24 CP, desde que todos os demais requisitos estejam presentes. Contudo, pode responder pelo crime culposo original que criou a situação de perigo.</p>
+        <div class="flex-gap mt2"><span class="tag tag-red">Provocação Dolosa → Sem Estado de Nec.</span><span class="tag tag-gold">Provocação Culposa → Admite Estado de Nec.</span><span class="tag tag-blue">"Por sua vontade" = Dolo</span></div>
+      </div>
+    </div>
+    <div class="juris-card stf">
+      <div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge tese">Posição Consolidada</span><div class="juris-title">Estado de Necessidade e Responsabilidade Civil — Arts. 929 e 930 do CC</div></div>
+      <div class="juris-body">
+        <p>O STF e o STJ consolidam que o estado de necessidade <strong>não elimina automaticamente a responsabilidade civil</strong>. O art. 929 CC prevê que o terceiro inocente lesado tem direito à indenização, mesmo que o agente tenha agido licitamente (estado de necessidade). O art. 930 CC prevê ação regressiva do agente contra o causador do perigo.</p>
+        <p class="mt1">Exceção: se o dono do bem lesado foi o próprio causador do perigo, não tem direito à indenização (art. 930, parágrafo único, CC). Ex.: destruir cão que atacava o agente → dono do cão não tem direito à indenização.</p>
+        <div class="flex-gap mt2"><span class="tag tag-red">Estado de Nec. Penal ≠ Sem Responsabilidade Civil</span><span class="tag tag-gold">Art. 929 CC — Indenização à Vítima</span><span class="tag tag-blue">Art. 930 CC — Ação Regressiva</span></div>
+      </div>
+    </div>
+    <div class="juris-card stj">
+      <div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">Posição Consolidada</span><div class="juris-title">Dever Legal do §1.º Não é Absoluto — Limites na Razoabilidade</div></div>
+      <div class="juris-body">
+        <p>O STJ firmo que o dever legal de enfrentar o perigo (§1.º) é proporcional à função e ao preparo do profissional. Perigos absolutamente extraordinários — que superem em muito o risco inerente à atividade — podem afastar a vedação do §1.º e autorizar o estado de necessidade mesmo para profissionais de risco. O dever funcional não equivale a obrigação de suicídio ou de enfrentar riscos absolutamente desproporcionais sem qualquer equipamento ou condição mínima.</p>
+        <div class="flex-gap mt2"><span class="tag tag-red">§1.º — Dever Proporcional à Função</span><span class="tag tag-gold">Perigo Extraordinário → Pode Admitir Estado de Nec.</span><span class="tag tag-blue">Sem Dever de Heroísmo Suicida</span></div>
+      </div>
+    </div>
+    <div class="juris-card stj">
+      <div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">Posição Consolidada</span><div class="juris-title">Perigo Iminente Abrangido pelo "Perigo Atual" do Art. 24 CP</div></div>
+      <div class="juris-body">
+        <p>O STJ e a doutrina majoritária entendem que o art. 24 CP, ao falar em "perigo atual", abrange o <strong>perigo iminente</strong> — prestes a se concretizar de forma inevitável. Não seria razoável exigir que o agente aguardasse a consumação do dano para agir. O perigo iminente difere do perigo futuro e incerto: o iminente está prestes a ocorrer com alta certeza e imediatidade; o futuro é mera possibilidade abstrata. Para concursos: perigo iminente = perigo atual para fins do art. 24 CP.</p>
+        <div class="flex-gap mt2"><span class="tag tag-red">Perigo Iminente = Perigo Atual (art. 24)</span><span class="tag tag-gold">Perigo Futuro Incerto → Sem Estado de Nec.</span><span class="tag tag-blue">Interpretação Teleológica do Art. 24</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12. DOUTRINA -->
+<section class="section" id="doutrina">
+  <div class="section-header"><div class="section-num">12</div><div class="section-title"><span>Doutrina Nacional</span>Principais Posições sobre o Art. 24 CP</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="juris-card doutrina">
+      <div class="juris-header"><span class="juris-badge doutrina">Doutrina</span><div class="juris-title">Cleber Masson — Direito Penal Esquematizado</div></div>
+      <div class="juris-body"><p>Masson sistematiza o estado de necessidade com foco em concursos. Adota a teoria unitária e distingue com precisão o caput (excludente de ilicitude) do §2.º (causa de diminuição). Sobre "não provocou por sua vontade": vontade = dolo; provocação culposa não afasta. Para o §1.º: dever legal não é absoluto — perigos extraordinários afastam a obrigação funcional. Traz como diferencial prático a comparação CP × CPM: civil com bem sacrificado > salvo → §2.º (pena reduzida); militar → CPM: isento. Destaca que o §2.º é causa de diminuição na 3.ª fase da dosimetria, com quantum inversamente proporcional à desproporcionalidade entre os bens em conflito.</p></div>
+    </div>
+    <div class="juris-card doutrina">
+      <div class="juris-header"><span class="juris-badge doutrina">Doutrina</span><div class="juris-title">Cezar Roberto Bitencourt — Tratado de Direito Penal</div></div>
+      <div class="juris-body"><p>Bitencourt analisa com profundidade dogmática. Critica a teoria unitária pura: o §2.º implicitamente reconhece a insuficiência da teoria — quando o bem sacrificado é superior, deveria haver excludente de culpabilidade (inexigibilidade supralegal), não mera causa de diminuição. Propõe releitura do §2.º à luz da teoria diferenciadora, com aplicação da inexigibilidade supralegal para isenção total de pena quando a desproporcionalidade é extrema. Sobre proporcionalidade: análise concreta e não hierárquica rígida. Para o §1.º: posição liberal — dever legal tem limite amplo na razoabilidade. Admite estado de necessidade putativo (art. 20, §1.º CP) com análise precisa.</p></div>
+    </div>
+    <div class="juris-card doutrina">
+      <div class="juris-header"><span class="juris-badge doutrina">Doutrina</span><div class="juris-title">Rogério Greco — Curso de Direito Penal</div></div>
+      <div class="juris-body"><p>Greco analisa o estado de necessidade sob perspectiva constitucional — a proporcionalidade como princípio implícito fundamenta o instituto. Sobre inevitabilidade: fuga não é obrigatória — o agente que optou por enfrentar o perigo ao invés de fugir não perde a excludente, desde que o meio escolhido fosse o menos danoso disponível. Para o elemento subjetivo: exige consciência da situação de necessidade (animus necessitatis). Sobre o §1.º: dever legal limitado pela razoabilidade — nenhuma lei pode exigir suicídio funcional. Quanto à teoria adotada: alinha-se à unitária com ressalvas críticas sobre a adequação do §2.º para casos de extrema desproporcionalidade.</p></div>
+    </div>
+    <div class="juris-card doutrina">
+      <div class="juris-header"><span class="juris-badge doutrina">Doutrina</span><div class="juris-title">Guilherme de Souza Nucci — Código Penal Comentado</div></div>
+      <div class="juris-body"><p>Nucci comenta o art. 24 CP com foco forense. Ônus da prova: réu deve tornar verossímeis o perigo e os demais requisitos. Proporcionalidade: critério do "avaliação razoável do homem comum" — o que o cidadão médio consideraria proporcional naquelas circunstâncias. §2.º: redução discricionária com fundamentação obrigatória. Critica a posição que exclui completamente a fuga como alternativa — defende que, quando a fuga era possível e segura, pode influir na análise da inevitabilidade. §1.º: posição restritiva — dever legal deve ser interpretado amplamente para profissionais de risco, salvo situações absolutamente extraordinárias. Estado de necessidade putativo: aplica art. 20, §1.º (descriminante putativa factual).</p></div>
+    </div>
+    <div class="juris-card doutrina">
+      <div class="juris-header"><span class="juris-badge doutrina">Doutrina</span><div class="juris-title">Fernando Capez — Curso de Direito Penal</div></div>
+      <div class="juris-body"><p>Capez apresenta o estado de necessidade de forma didática para concursos. Sistematiza os 6 requisitos do caput de forma direta. Ponto divergente da maioria: sobre "não provocou por sua vontade", Capez adota posição mais restritiva — a provocação culposa também pode afastar o estado de necessidade, pois o agente contribuiu para criar o perigo. Para o §1.º: posição de exclusão ampla — profissionais com dever legal devem enfrentar riscos da função sem invocar o art. 24, com exceção apenas de situações absolutamente anormais. Destaca como ponto de prova central a distinção estado de necessidade (exclui ilicitude) × coação irresistível (exclui culpabilidade) e CP (teoria unitária) × CPM (teoria diferenciadora).</p></div>
+    </div>
+    <div class="juris-card doutrina">
+      <div class="juris-header"><span class="juris-badge doutrina">Doutrina</span><div class="juris-title">Controvérsia: §2.º como Mera Causa de Diminuição ou Excludente Supralegal</div></div>
+      <div class="juris-body">
+        <ul class="mt1">
+          <li><strong>Posição A — §2.º = pura causa de diminuição (Masson, Capez — majoritária):</strong> CP adotou teoria unitária — fato ilícito com pena reduzida. Ponto final.</li>
+          <li><strong>Posição B — §2.º + inexigibilidade supralegal (Bitencourt):</strong> Em casos de extrema desproporcionalidade, a inexigibilidade de conduta diversa pode afastar a culpabilidade via causa supralegal → isenção total de pena, além da redução do §2.º.</li>
+          <li><strong>Posição C — admissibilidade restrita da supralegal (STJ):</strong> O §2.º é causa de diminuição; inexigibilidade supralegal admitida com critério muito restritivo em casos excepcionais.</li>
+          <li><strong>Para o concurso:</strong> Adote Posição A (teoria unitária pura — §2.º = causa de diminuição). É a posição do CP e da doutrina majoritária. Mencionarposições B e C na dissertação pode ser valorizado.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 13. SISTEMÁTICA -->
+<section class="section" id="sistematica">
+  <div class="section-header"><div class="section-num">13</div><div class="section-title"><span>Conexões Sistemáticas</span>Art. 24 CP na Sistemática do Código Penal e Código Civil</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔗 Artigos Diretamente Conectados ao Art. 24 CP</h3>
+      <ul>
+        <li><strong>Art. 23 CP (Excludentes de Ilicitude):</strong> O estado de necessidade é uma das três excludentes de ilicitude do CP, ao lado da legítima defesa (art. 25) e do estrito cumprimento do dever legal e exercício regular de direito (art. 23, III). Todas excluem a antijuridicidade → fato lícito.</li>
+        <li><strong>Art. 25 CP (Legítima Defesa):</strong> Principal instituto a comparar. Legítima defesa: reage contra agressão humana injusta. Estado de necessidade: reage a perigo de qualquer fonte, podendo sacrificar bem de terceiro inocente. Na legítima defesa, reage-se contra o próprio agressor; no estado de necessidade, pode-se sacrificar inocente.</li>
+        <li><strong>Art. 22 CP (Coação Irresistível):</strong> Estado de necessidade exclui ILICITUDE (fato lícito). Coação irresistível exclui CULPABILIDADE (fato ilícito, sem culpabilidade). A vítima do ato em estado de necessidade (caput) não pode exercer legítima defesa real; a vítima do coagido pode.</li>
+        <li><strong>Art. 20, §1.º CP (Descriminante Putativa):</strong> Estado de necessidade putativo (agente imagina erroneamente estar em estado de necessidade) é tratado como descriminante putativa factual — art. 20, §1.º CP. Teoria limitada: erro de tipo → exclui dolo → inevitável: isento; evitável: culposo.</li>
+        <li><strong>Art. 23, §único CP (Excesso):</strong> O excesso doloso ou culposo no estado de necessidade afasta a excludente. Quem vai além do necessário responde pelo excesso.</li>
+        <li><strong>Art. 39 CPM:</strong> Teoria diferenciadora — bem sacrificado > bem salvo → estado de necessidade exculpante → exclui culpabilidade → isenção total de pena.</li>
+        <li><strong>Arts. 929 e 930 CC:</strong> Estado de necessidade penal não elimina responsabilidade civil: terceiro inocente tem direito à indenização (art. 929). Ação regressiva contra causador do perigo (art. 930).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📋 Estado de Necessidade Putativo — Resumo</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">Muito cobrado como ponto de distinção com o caput do art. 24 CP:</p>
+      <div style="display:flex;flex-direction:column;gap:0.45rem;">
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);padding:0.6rem 0.9rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--red-accent);">Estado de necessidade real (art. 24 caput):</strong> Todos os requisitos objetivos presentes → excludente real de ilicitude → fato lícito → absolvição.</div>
+        <div style="background:var(--gold-pale);border:1px solid var(--gold);border-radius:6px;padding:0.65rem 0.9rem;font-size:0.82rem;"><strong style="color:#7a5a00;">Estado de necessidade putativo (art. 20, §1.º):</strong> Agente imagina erroneamente que os pressupostos fáticos existem (perigo inexistente ou já cessado). Erro sobre os FATOS → descriminante putativa factual → teoria limitada: trata como erro de tipo. Se inevitável: isento de pena. Se evitável: crime culposo.</div>
+        <div style="background:#edf2f8;border-left:3px solid var(--blue-accent);padding:0.6rem 0.9rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--blue-accent);">Erro sobre limites normativos (art. 21 CP):</strong> Se o erro não é sobre os fatos (perigo), mas sobre os limites jurídicos do estado de necessidade → erro de proibição indireto (art. 21 CP). Inevitável: isento; evitável: pena reduzida 1/6 a 1/3.</div>
+      </div>
+      <div class="alert alert-navy mt2" style="font-size:0.8rem;"><div>📌 <strong>Dosimetria do §2.º:</strong> 3.ª fase — causa de diminuição. Quantum: quanto mais próximos os bens em valor → maior redução (até 2/3). Quanto mais desproporcional → menor redução (a partir de 1/3). Fundamentação obrigatória na sentença.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROVA -->
+<section id="prova" class="prova-section">
+  <h2>⚖️ Pontos Cobrados em Magistratura e ENAM</h2>
+  <p class="intro">Questões, teses e pegadinhas recorrentes nos concursos de Juiz de Direito, ENAM e equivalentes relacionadas ao Art. 24 CP.</p>
+  <div class="prova-items">
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">01</span>Qual elemento do crime é excluído pelo estado de necessidade? O fato é lícito ou ilícito?</div>
+      <div class="prova-item-a">O estado de necessidade (art. 24 CP) exclui a <strong>ilicitude (antijuridicidade)</strong> — é excludente de ilicitude. O fato continua típico, mas deixa de ser antijurídico: é <strong>lícito</strong>. Consequências práticas: (1) A vítima do ato em estado de necessidade NÃO pode exercer legítima defesa real — pois o ato é lícito e a legítima defesa exige agressão injusta; (2) O agente não pratica crime → absolvição (art. 386, VI, CPP); (3) Pode haver responsabilidade civil em favor do terceiro inocente lesado (art. 929 CC). Distinção crucial: coação irresistível (art. 22 CP) exclui a <strong>culpabilidade</strong> — o fato é ilícito mas sem culpabilidade. Estado de necessidade = fato LÍCITO. Coação irresistível = fato ILÍCITO sem culpabilidade. Esta é a distinção mais cobrada sobre excludentes em magistratura.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">02</span>Quais são os 6 requisitos cumulativos do estado de necessidade (art. 24, caput CP)?</div>
+      <div class="prova-item-a">(1) <strong>Perigo atual</strong> — risco real e presente; doutrina e STJ incluem o iminente; não abrange futuro incerto nem perigo cessado; pode derivar de qualquer fonte (pessoa, animal, fenômeno natural). (2) <strong>Perigo não provocado voluntariamente</strong> — "vontade" = dolo (majoritário: Masson, Bitencourt, Greco); provocação culposa não afasta; Capez (minoritário) afasta em qualquer provocação. (3) <strong>Inevitabilidade por outro meio</strong> — o sacrifício do bem alheio era o único meio disponível e acessível concretamente; sem alternativa menos lesiva; requisito de subsidiariedade. (4) <strong>Proteção de direito próprio ou alheio</strong> — qualquer bem jurídico; estado de necessidade de terceiro admitido sem necessidade de relação especial. (5) <strong>Proporcionalidade (sacrifício não razoável exigir)</strong> — bem sacrificado ≤ bem salvo: caput; bem sacrificado > bem salvo: §2.º. Vida sempre supera patrimônio. (6) <strong>Elemento subjetivo (animus necessitatis)</strong> — consciência de que está em situação de necessidade e age para salvar o bem ameaçado. Todos os requisitos são cumulativos — faltando qualquer um, o caput não se aplica.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">03</span>Qual a diferença entre estado de necessidade e legítima defesa? Por que o ataque de animal gera estado de necessidade e não legítima defesa?</div>
+      <div class="prova-item-a">A distinção central está na <strong>natureza da ameaça e no alvo da reação</strong>. <strong>Estado de necessidade (art. 24):</strong> O perigo pode derivar de qualquer fonte — pessoa, animal, fenômeno natural, caso fortuito. O agente sacrifica bem de <em>terceiro inocente</em> que não necessariamente criou o perigo. Não há "agressor injusto" — há um conflito entre bens jurídicos legítimos. <strong>Legítima defesa (art. 25):</strong> Exige agressão <em>injusta de pessoa humana</em>. O agente reage contra o próprio agressor — não pode atingir terceiro inocente. O animal não é "agressor" no sentido jurídico da legítima defesa (não é sujeito de direitos e deveres, não age injustamente). Por isso, o ataque de cão feroz gera estado de necessidade: o perigo não provém de "agressão humana injusta", mas de situação de perigo (animal agindo por instinto). O agente que se defende do cão age em estado de necessidade (art. 24 CP), não em legítima defesa (art. 25 CP). Esta distinção é altamente cobrada em magistratura.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">04</span>O que é teoria unitária e teoria diferenciadora? Qual o CP adota? Quais as consequências práticas?</div>
+      <div class="prova-item-a"><strong>Teoria Unitária (CP/1940 — art. 24):</strong> O estado de necessidade é sempre excludente de ilicitude — uma única figura. Bem sacrificado ≤ salvo → exclui ilicitude (caput). Bem sacrificado > salvo → não exclui ilicitude, mas há causa de diminuição 1/3–2/3 (§2.º). O fato é ilícito — agente responde com pena menor. <strong>Teoria Diferenciadora (CPM — art. 39):</strong> Distingue (a) justificante: bem sacrificado ≤ salvo → exclui ilicitude; (b) exculpante: bem sacrificado > salvo → exclui culpabilidade (inexigibilidade de conduta diversa) → isenção total de pena. <strong>Consequências práticas:</strong> Civil (CP): sacrificou bem de valor maior → fato ilícito → responde com pena reduzida (§2.º). Militar (CPM): mesmas circunstâncias → estado de necessidade exculpante → isento de pena. O militar tem tratamento mais favorável. Além disso: no §2.º (CP), o fato é ilícito → vítima pode exercer legítima defesa real. Na excludente de culpabilidade (CPM): fato também ilícito → vítima pode exercer legítima defesa real. <strong>Para o concurso:</strong> CP = teoria unitária (§2.º = causa de diminuição). CPM = teoria diferenciadora (exculpante = exclui culpabilidade).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">05</span>O §1.º do art. 24 CP é absoluto? Quem está sujeito a ele? Em que situações pode ceder?</div>
+      <div class="prova-item-a">O §1.º do art. 24 CP estabelece que "não pode alegar estado de necessidade quem tinha o dever legal de enfrentar o perigo." <strong>Profissionais abrangidos:</strong> bombeiros militares, policiais militares e civis, militares das Forças Armadas, médicos em plantão de emergência com dever legal específico. O fundamento: ao assumir funções de risco, o profissional aceita o dever de enfrentar o perigo inerente à função. <strong>O §1.º NÃO é absoluto:</strong> O STJ e a doutrina majoritária reconhecem que o dever legal tem limites na razoabilidade. O §1.º refere-se a perigos normais e proporcionais à função. Perigos absolutamente extraordinários — que superem em muito o risco inerente — podem afastar a vedação do §1.º. Nenhuma lei pode exigir suicídio funcional. <strong>O §1.º veda o estado de necessidade para OMITIR-SE ao dever funcional</strong> — não impede o estado de necessidade para praticar ato necessário a salvar terceiros (ex.: bombeiro não pode fugir do incêndio, mas pode invadir propriedade para salvar vítimas). <strong>Para concurso:</strong> O §1.º veda invocar estado de necessidade para recusar o enfrentamento do perigo inerente à função; não é absoluto diante de perigos absolutamente extraordinários.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">06</span>O que é o §2.º do art. 24 CP? Como se aplica na dosimetria? Compare com o CPM.</div>
+      <div class="prova-item-a">O §2.º do art. 24 CP: "Embora seja razoável exigir-se o sacrifício do direito ameaçado, a pena poderá ser reduzida de um a dois terços." Situação: o agente sacrificou bem de valor <em>superior</em> ao bem salvo — era razoável exigir que suportasse o sacrifício do seu próprio bem de menor valor, mas não o fez. Pela teoria unitária do CP, o fato é ilícito (sem exclusão da antijuridicidade). <strong>Efeitos:</strong> Crime existe; agente é condenado; pena reduzida de 1/3 a 2/3 na 3.ª fase da dosimetria (causa de diminuição). A vítima do ato pode exercer legítima defesa real (fato ilícito). <strong>Dosimetria:</strong> pena-base (1.ª fase) → atenuantes/agravantes (2.ª fase) → causa de diminuição 1/3 a 2/3 do §2.º (3.ª fase). Quanto mais próximos os bens em valor → maior redução (até 2/3). Quanto mais desproporcional → menor redução (a partir de 1/3). <strong>Comparação com CPM:</strong> O CPM (teoria diferenciadora, art. 39) nesta mesma situação → estado de necessidade exculpante → exclui culpabilidade → militar isento de pena. O civil responde (com pena reduzida); o militar é absolvido.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">07</span>O estado de necessidade exclui a responsabilidade civil? O terceiro lesado tem direito à indenização?</div>
+      <div class="prova-item-a"><strong>Não</strong> — o estado de necessidade penal não elimina automaticamente a responsabilidade civil. O Código Civil traz regime específico: <strong>Art. 929 CC:</strong> Se o terceiro lesado (ou o dono do bem destruído) não foi culpado pelo perigo, tem direito à indenização pelos prejuízos sofridos — ainda que o ato tenha sido lícito penalmente (estado de necessidade). <strong>Art. 930 CC:</strong> O agente que indenizou o terceiro tem ação regressiva contra o causador do perigo. Exemplo: A destrói carro de B (inocente) para escapar de incêndio causado por C. A não pratica crime (estado de necessidade). Mas A deve indenizar B (art. 929 CC). A tem ação regressiva contra C (art. 930 CC). <strong>Exceção (art. 930, parágrafo único CC):</strong> Se o dono do bem lesado foi o próprio causador do perigo → sem direito à indenização. Ex.: A destrói cão de B que o atacava → B (causador do perigo via cão) não tem direito à indenização. <strong>Ponto de prova:</strong> Estado de necessidade penal = sem crime. Estado de necessidade civil ≠ sem indenização para terceiro inocente. O STF e o STJ consolidam esta distinção.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">08</span>O que é estado de necessidade putativo? Qual o tratamento jurídico?</div>
+      <div class="prova-item-a">O <strong>estado de necessidade putativo</strong> ocorre quando o agente imagina erroneamente estar em situação de necessidade — acredita que os pressupostos fáticos existem (perigo, inevitabilidade etc.), mas objetivamente eles não existem. <strong>Tratamento jurídico (teoria limitada — adotada pelo CP):</strong> O erro sobre os FATOS que configurariam o estado de necessidade é descriminante putativa factual — regulada pelo art. 20, §1.º CP (erro de tipo sobre os pressupostos fáticos da excludente). Consequências: (a) Erro inevitável: isento de pena — dolo excluído → atipicidade; (b) Erro evitável: crime culposo (se previsto em lei). <strong>Exemplo:</strong> A acredita que o prédio está em chamas (perigo inexistente) e quebra janela de B para escapar. Perigo inexistente → estado de necessidade putativo → art. 20, §1.º CP. <strong>Distinção:</strong> Se o erro é sobre os FATOS (inexistência do perigo) → art. 20, §1.º (descriminante putativa factual → erro de tipo). Se o erro é sobre os LIMITES NORMATIVOS do estado de necessidade (o agente conhece os fatos, mas erra sobre os limites jurídicos do instituto) → art. 21 CP (erro de proibição indireto → não exclui dolo; inevitável: isento; evitável: 1/6–1/3).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">09</span>[ENAM — alta recorrência] A vítima do ato praticado em estado de necessidade pode exercer legítima defesa real?</div>
+      <div class="prova-item-a"><strong>Depende do dispositivo aplicável:</strong> <strong>Estado de necessidade CAPUT (art. 24 CP — fato LÍCITO):</strong> A vítima NÃO pode exercer legítima defesa real. O ato em estado de necessidade (caput) é lícito — não há agressão injusta. A legítima defesa (art. 25 CP) exige que a agressão seja injusta. Como o ato é lícito, não é injusto. A vítima que reage ao ato de estado de necessidade (caput) não está em legítima defesa real — pode estar em estado de necessidade (se os requisitos do art. 24 estiverem presentes). <strong>Estado de necessidade §2.º (art. 24 CP — fato ILÍCITO):</strong> A vítima PODE exercer legítima defesa real. No §2.º, o fato continua ilícito (sem exclusão da antijuridicidade) — há agressão injusta, ainda que sem pena completa para o agente. <strong>Coação irresistível (art. 22 CP — fato ILÍCITO sem culpabilidade):</strong> A vítima PODE exercer legítima defesa real. O fato do coagido é ilícito — há agressão injusta. <strong>Mnemônico:</strong> Fato lícito (caput, legítima defesa perfeita) → vítima sem legítima defesa real. Fato ilícito (§2.º, coação irresistível, legítima defesa com excesso) → vítima com legítima defesa real possível.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">10</span>O perigo iminente configura "perigo atual" no art. 24 CP? E o perigo futuro?</div>
+      <div class="prova-item-a"><strong>Perigo iminente: SIM</strong> — está abrangido pelo conceito de "perigo atual" do art. 24 CP, segundo o STJ e a doutrina majoritária. O texto do art. 24 CP fala apenas em "atual" (diferentemente do art. 25 CP, que menciona "atual ou iminente" para a legítima defesa). Porém, a interpretação teleológica do STJ inclui o iminente: seria irracional exigir que o agente aguarde a concretização total do dano. Perigo iminente é aquele prestes a se concretizar com alta certeza e imediatidade — sem possibilidade real de evitá-lo de outra forma. <strong>Perigo futuro e incerto: NÃO</strong> — não configura "perigo atual". O perigo futuro é mera possibilidade abstrata sem iminência concreta. Não autoriza o estado de necessidade. <strong>Perigo já cessado: NÃO</strong> — o estado de necessidade não pode ser invocado após o perigo ter passado — não há estado de necessidade retroativo ou por antecipação. <strong>Para concurso:</strong> Perigo iminente = perigo atual para fins do art. 24 CP. Perigo futuro e incerto ou perigo cessado → sem estado de necessidade.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">11</span>O que ocorre quando o agente provocou culposamente o perigo que gerou o estado de necessidade?</div>
+      <div class="prova-item-a">Há divergência doutrinária sobre o efeito da provocação culposa: <strong>Posição majoritária (Masson, Greco, Bitencourt):</strong> "Por sua vontade" significa dolo. A provocação culposa não afasta o estado de necessidade — o agente que imprudentemente criou o perigo pode invocar o art. 24 CP se todos os demais requisitos estiverem presentes. Contudo, pode responder pelo crime culposo original que gerou a situação de perigo. Ex.: A dirige imprudentemente e tem falha mecânica decorrente de sua negligência; para evitar atropelar multidão, destrói bem de terceiro. A alega estado de necessidade: admitido (posição majoritária), mas A pode responder por dano culposo pela imprudência original. <strong>Posição minoritária (Capez):</strong> Qualquer provocação do perigo — dolosa ou culposa — afasta o estado de necessidade, pois o agente contribuiu para criar a situação. <strong>Para concursos:</strong> Adote a posição majoritária: provocação culposa não afasta o estado de necessidade. Provocação dolosa afasta (requisito expresso do art. 24 caput).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">12</span>Compare estado de necessidade (art. 24 CP) com coação irresistível (art. 22 CP): quais as diferenças e consequências práticas?</div>
+      <div class="prova-item-a"><strong>Estado de necessidade (art. 24 CP):</strong> Perigo de qualquer fonte (situação, animal, fenômeno natural, terceiro sem dolo de coagir). O agente sacrifica bem de terceiro inocente para salvar bem próprio ou alheio. Exclui a ILICITUDE → fato LÍCITO (caput). A vítima do ato não pode exercer legítima defesa real. Pode haver indenização civil (art. 929 CC). Ninguém necessariamente "mandou" o agente praticar o ato. <strong>Coação irresistível (art. 22 CP):</strong> Perigo provém de pessoa humana (coator) que intencionalmente ameaça o agente para forçá-lo a praticar crime. O coagido pratica crime dolosamente, mas sem culpabilidade. Exclui a CULPABILIDADE → fato ILÍCITO (mas sem culpabilidade). A vítima do ato pode exercer legítima defesa real (fato ilícito). O coator responde como autor mediato. <strong>Consequências práticas decisivas:</strong> Estado de necessidade caput = fato lícito → vítima sem legítima defesa real + possível indenização civil. Coação irresistível = fato ilícito → vítima com legítima defesa real + responsabilidade civil do coagido e do coator. <strong>Mnemônico:</strong> Estado de nec. = SITUAÇÃO → exclui ILICITUDE. Coação = AMEAÇA HUMANA DOLOSA → exclui CULPABILIDADE.</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">13</span>[ENAM — questão integrada] Analise: A, policial militar, perde o controle da viatura durante perseguição (sem culpa), e para não atropelar multidão, sobe a calçada e destrói banca de jornal de B. Analise o enquadramento jurídico completo.</div>
+      <div class="prova-item-a"><strong>Análise — Art. 24 CP:</strong> Fato típico: dano (art. 163 CP). (1) Perigo atual: SIM — perda de controle da viatura com atropelamento iminente da multidão. (2) Não provocou voluntariamente: SIM — o acidente ocorreu sem dolo de A (supondo falha mecânica ou situação fortuita). (3) Inevitabilidade: SIM — única opção concreta para desviar da multidão. (4) Direito alheio (vidas da multidão): SIM. (5) §1.º — dever legal de enfrentar o perigo? A é policial. O §1.º veda invocar estado de necessidade para recusar o enfrentamento do perigo inerente à função. Aqui, A não está recusando enfrentar um perigo — está praticando ato necessário para salvar terceiros (a multidão). O §1.º não se aplica: A não está fugindo de situação de risco da função, está agindo para salvar terceiros em perigo. (6) Proporcionalidade: bem salvo = vidas humanas (múltiplas); bem sacrificado = banca de jornal (patrimônio de B). Vida >> Patrimônio → não era razoável exigir sacrifício. <strong>Resultado: Estado de necessidade (art. 24, caput CP) → fato LÍCITO → A sem crime.</strong> <strong>Responsabilidade civil:</strong> B pode pleitear indenização do Estado (responsabilidade civil objetiva — art. 37, §6.º CF/88) e eventualmente de A (art. 929 CC). O Estado tem ação regressiva contra A se houuve culpa de sua parte na perseguição (art. 930 CC).</div>
+    </div>
+
+    <div class="prova-item">
+      <div class="prova-item-q"><span class="qnum">14</span>Como a proporcionalidade funciona quando os bens em conflito são de igual valor (vida × vida)? Qual a posição majoritária?</div>
+      <div class="prova-item-a">O caso de colisão entre bens de igual valor — especialmente vida × vida — é o mais difícil e debatido no estado de necessidade. O exemplo clássico é o caso de Carneades: náufrago que toma a tábua de outro para não se afogar, causando a morte do outro. <strong>Posição majoritária (STJ + Masson, Bitencourt, Greco):</strong> Admite o estado de necessidade (caput). Fundamento: o art. 24 CP exige que o sacrifício "não era razoável exigir-se" — quando os bens têm o mesmo valor, não é razoável exigir que alguém suporte a perda de um bem de igual valor ao que está salvando. O sacrifício de bem de valor IGUAL não era razoável exigir. Logo, configura-se o caput (não o §2.º, que se aplica quando o bem sacrificado é de valor superior). <strong>Posição minoritária (Capez):</strong> Nega o estado de necessidade quando há colisão de vidas de igual valor — o agente responderia pelo homicídio sem excludente. Fundamento: nenhuma vida pode ser sacrificada em nome de outra de igual valor sem crime. <strong>Para concurso:</strong> Adote a posição majoritária. Vida × vida → estado de necessidade admitido (caput), pois o bem sacrificado tem valor igual ao salvo, e o sacrifício não era razoável exigir.</div>
+    </div>
+
+  </div>
+</section>
+
+</div><!-- /page-wrap -->
+<footer>
+  <strong>Art. 24.º do Código Penal Brasileiro</strong> — Decreto-Lei n.º 2.848/1940<br>
+  Material elaborado para preparação à Magistratura / ENAM · Doutrina e jurisprudência consolidadas · Atualizado 2025
+</footer>
+</body>
+</html>

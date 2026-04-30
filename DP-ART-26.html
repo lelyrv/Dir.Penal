@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 26º CP — Inimputabilidade e Semi-imputabilidade | Magistratura ENAM</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0d1b2a;--navy-mid:#1a2f45;--navy-light:#243b55;--gold:#c8960c;--gold-light:#e8b84b;--gold-pale:#fdf3d8;--cream:#faf7f2;--cream-mid:#f0ebe2;--text-dark:#1a1208;--text-mid:#3d3020;--text-soft:#6b5c40;--border:#d4c49a;--border-light:#e8dcbf;--red-accent:#8b1a1a;--green-accent:#1a4a2e;--blue-accent:#1a3a5c;--purple-accent:#4a1a5c;--shadow:0 4px 24px rgba(13,27,42,0.10);}
+  *{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+  body{font-family:'Source Serif 4',Georgia,serif;background:var(--cream);color:var(--text-dark);font-size:15px;line-height:1.75;}
+  #top-nav{position:sticky;top:0;z-index:999;background:var(--navy);border-bottom:3px solid var(--gold);padding:0 1.5rem;display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;}
+  #top-nav::-webkit-scrollbar{display:none;}
+  #top-nav .nav-brand{font-family:'Playfair Display',serif;color:var(--gold-light);font-size:0.9rem;font-weight:700;white-space:nowrap;padding:0.85rem 1.2rem 0.85rem 0;border-right:1px solid rgba(200,150,12,0.3);margin-right:0.5rem;letter-spacing:0.5px;}
+  #top-nav a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.72rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;padding:0.85rem 0.8rem;white-space:nowrap;transition:color .2s;border-bottom:3px solid transparent;margin-bottom:-3px;}
+  #top-nav a:hover,#top-nav a.nav-prova:hover{color:var(--gold-light);border-bottom-color:var(--gold);}
+  #top-nav a.nav-prova{color:var(--gold-light);}
+  #hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 60%,#1e3d5c 100%);color:white;padding:3.5rem 2rem 3rem;text-align:center;position:relative;overflow:hidden;}
+  #hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(200,150,12,0.03) 0px,rgba(200,150,12,0.03) 1px,transparent 1px,transparent 40px);}
+  #hero .badge{display:inline-block;background:rgba(200,150,12,0.15);border:1px solid rgba(200,150,12,0.5);color:var(--gold-light);font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;padding:0.35rem 1rem;border-radius:2px;margin-bottom:1.2rem;font-family:'Source Serif 4',serif;font-weight:600;position:relative;}
+  #hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.15;margin-bottom:0.6rem;letter-spacing:-0.5px;position:relative;}
+  #hero h1 span{color:var(--gold-light);}
+  #hero .subtitle{font-size:1rem;color:rgba(255,255,255,0.65);font-style:italic;margin-bottom:1.5rem;position:relative;}
+  #hero .law-box{display:inline-block;background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.4);border-left:4px solid var(--gold);color:rgba(255,255,255,0.9);font-family:'Source Serif 4',serif;font-size:0.93rem;font-style:italic;padding:1rem 1.5rem;max-width:980px;text-align:left;line-height:1.9;border-radius:0 4px 4px 0;position:relative;}
+  #hero .law-box strong{color:var(--gold-light);font-style:normal;display:block;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem;}
+  .page-wrap{width:100%!important;max-width:none!important;margin:0!important;padding-left:clamp(1rem,3vw,4rem)!important;padding-right:clamp(1rem,3vw,4rem)!important;padding-bottom:4rem;}
+  .section,.prova-section,.card,.flow-wrap,.comp-table,.juris-grid{max-width:none!important;}
+  .section{margin-top:3.5rem;scroll-margin-top:56px;}
+  .section-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:0.75rem;border-bottom:2px solid var(--border);}
+  .section-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--border);line-height:1;min-width:2.5rem;}
+  .section-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--navy);line-height:1.2;}
+  .section-title span{display:block;font-size:0.75rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-style:normal;}
+  .card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1.4rem 1.6rem;box-shadow:var(--shadow);}
+  .card-grid{display:grid;gap:1rem;}.card-grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}.card-grid-2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr));}.card-grid-4{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));}
+  .card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:0.6rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border-light);}
+  .card h4{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;margin-bottom:0.35rem;}
+  .card p,.card li{font-size:0.88rem;line-height:1.7;color:var(--text-mid);}
+  .card ul{padding-left:1.1rem;}.card li{margin-bottom:0.3rem;}
+  .type-card{border-top:4px solid;}.tc-red{border-top-color:var(--red-accent);}.tc-red h3{color:var(--red-accent);}.tc-green{border-top-color:var(--green-accent);}.tc-green h3{color:var(--green-accent);}.tc-blue{border-top-color:var(--blue-accent);}.tc-blue h3{color:var(--blue-accent);}.tc-gold{border-top-color:var(--gold);}.tc-gold h3{color:#7a5a00;}.tc-purple{border-top-color:var(--purple-accent);}.tc-purple h3{color:var(--purple-accent);}
+  .flow-wrap{background:white;border:1px solid var(--border-light);border-radius:6px;padding:2rem 1.5rem;box-shadow:var(--shadow);overflow-x:auto;}
+  .flow-center{display:flex;flex-direction:column;align-items:center;}.flow-node{border-radius:4px;padding:0.65rem 1.4rem;font-family:'Source Serif 4',serif;font-size:0.82rem;font-weight:600;text-align:center;min-width:220px;max-width:640px;}
+  .flow-start{background:var(--navy);color:white;border-radius:50px;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;}
+  .flow-end-green{background:var(--green-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}.flow-end-red{background:var(--red-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}.flow-end-gold{background:var(--gold);color:var(--navy);border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}.flow-end-blue{background:var(--blue-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}.flow-end-purple{background:var(--purple-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+  .flow-box-navy{background:var(--navy-mid);color:white;border-left:4px solid var(--gold);font-size:0.8rem;}.flow-box-green{background:#edf7f0;border:1px solid #7ec89a;border-left:4px solid var(--green-accent);color:var(--text-dark);}.flow-box-blue{background:#edf2f8;border:1px solid #8eb4d8;border-left:4px solid var(--blue-accent);color:var(--text-dark);}.flow-box-red{background:#fdf0f0;border:1px solid #e09090;border-left:4px solid var(--red-accent);color:var(--text-dark);}.flow-box-gold{background:var(--gold-pale);border:2px solid var(--gold);color:var(--text-dark);}.flow-box-purple{background:#f3eef8;border:1px solid #b89dd8;border-left:4px solid var(--purple-accent);color:var(--text-dark);}
+  .flow-arrow{font-size:1.3rem;color:var(--border);line-height:1;margin:0.15rem 0;}.flow-row{display:flex;align-items:flex-start;gap:1.5rem;width:100%;justify-content:center;flex-wrap:wrap;}.flow-branch{display:flex;flex-direction:column;align-items:center;flex:1;min-width:190px;}.flow-label{font-size:0.68rem;color:var(--text-soft);font-weight:600;letter-spacing:0.5px;text-transform:uppercase;background:var(--cream-mid);padding:0.15rem 0.5rem;border-radius:2px;margin:0.15rem 0;}.flow-connector-line{width:1px;height:28px;background:var(--border);}
+  .comp-table{width:100%;border-collapse:collapse;font-size:0.84rem;background:white;box-shadow:var(--shadow);border-radius:6px;overflow:hidden;}.comp-table thead{background:var(--navy);color:white;}.comp-table thead th{padding:0.85rem 1rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:0.5px;font-size:0.8rem;text-align:left;}.comp-table thead th:first-child{color:var(--gold-light);}.comp-table tbody tr{border-bottom:1px solid var(--border-light);}.comp-table tbody tr:last-child{border-bottom:none;}.comp-table tbody tr:nth-child(even){background:var(--cream);}.comp-table td{padding:0.75rem 1rem;color:var(--text-mid);vertical-align:top;}.comp-table td:first-child{font-weight:600;color:var(--navy);font-size:0.8rem;}.comp-table .hl td{background:var(--gold-pale)!important;}.comp-table .hl2 td{background:#edf7f0!important;}.comp-table .hl3 td{background:#edf2f8!important;}.comp-table .hl4 td{background:#fdf0f0!important;}.comp-table .hl5 td{background:#f3eef8!important;}
+  .juris-card{background:white;border:1px solid var(--border-light);border-left:5px solid;border-radius:0 6px 6px 0;padding:1.2rem 1.4rem;box-shadow:var(--shadow);}.juris-card.stf{border-left-color:var(--red-accent);}.juris-card.stj{border-left-color:var(--navy);}.juris-card.doutrina{border-left-color:var(--gold);}.juris-card.cnj{border-left-color:var(--purple-accent);}.juris-header{display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem;flex-wrap:wrap;}.juris-badge{font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:0.2rem 0.55rem;border-radius:2px;font-family:'Source Serif 4',serif;}.juris-badge.stf{background:var(--red-accent);color:white;}.juris-badge.stj{background:var(--navy);color:white;}.juris-badge.doutrina{background:var(--gold);color:var(--navy);}.juris-badge.sumula{background:var(--green-accent);color:white;}.juris-badge.tese{background:var(--blue-accent);color:white;}.juris-badge.purple{background:var(--purple-accent);color:white;}.juris-title{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--navy);}.juris-body{font-size:0.84rem;color:var(--text-mid);line-height:1.7;}.juris-grid{display:grid;gap:1rem;}
+  .alert{padding:0.9rem 1.2rem;border-radius:4px;font-size:0.84rem;line-height:1.7;display:flex;gap:0.7rem;align-items:flex-start;}.alert-gold{background:var(--gold-pale);border:1px solid #d4aa3a;color:#5a4000;}.alert-red{background:#fdf0f0;border:1px solid #e09090;color:#5a0000;}.alert-navy{background:#f0f4f8;border:1px solid #abc;color:var(--navy);}.alert-green{background:#edf7f0;border:1px solid #7ec89a;color:#1a4a2e;}.alert-purple{background:#f3eef8;border:1px solid #b89dd8;color:var(--purple-accent);}.alert-icon{font-size:1.1rem;flex-shrink:0;margin-top:0.05rem;}.alert strong{font-weight:700;}
+  .prova-section{background:var(--navy);border-radius:8px;padding:2rem;color:white;margin-top:3.5rem;scroll-margin-top:56px;}.prova-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold-light);margin-bottom:0.5rem;}.prova-section .intro{font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;font-style:italic;}.prova-items{display:grid;gap:0.75rem;}.prova-item{background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.25);border-left:4px solid var(--gold);border-radius:0 4px 4px 0;padding:1rem 1.2rem;}.prova-item-q{font-size:0.82rem;font-weight:600;color:var(--gold-light);margin-bottom:0.4rem;display:flex;align-items:flex-start;gap:0.6rem;}.prova-item-q .qnum{background:var(--gold);color:var(--navy);font-size:0.65rem;font-weight:700;padding:0.1rem 0.45rem;border-radius:2px;flex-shrink:0;margin-top:0.1rem;}.prova-item-a{font-size:0.82rem;color:rgba(255,255,255,0.82);line-height:1.65;}.prova-item-a strong{color:white;}
+  .tag{display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;padding:0.15rem 0.5rem;border-radius:2px;margin:0.1rem;font-family:'Source Serif 4',serif;}.tag-blue{background:#dce8f5;color:var(--blue-accent);}.tag-green{background:#dceee3;color:var(--green-accent);}.tag-gold{background:var(--gold-pale);color:#7a5a00;border:1px solid #d4aa3a;}.tag-red{background:#fde8e8;color:var(--red-accent);}.tag-purple{background:#ece5f5;color:var(--purple-accent);}
+  .law-quote{background:var(--cream-mid);border-left:4px solid var(--navy);padding:0.9rem 1.2rem;font-size:0.88rem;font-style:italic;color:var(--text-mid);line-height:1.7;border-radius:0 4px 4px 0;}.law-quote strong{font-style:normal;color:var(--navy);font-size:0.75rem;letter-spacing:0.5px;display:block;margin-bottom:0.25rem;}.divider{height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);margin:1.2rem 0;}
+  .especie-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:0.85rem;}.especie-card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1rem 1.2rem;border-left:4px solid;box-shadow:var(--shadow);}.especie-card h4{font-family:'Playfair Display',serif;font-size:0.92rem;font-weight:700;margin-bottom:0.35rem;}.especie-card p,.especie-card li{font-size:0.82rem;color:var(--text-mid);line-height:1.6;}.especie-card ul{padding-left:1rem;margin-top:0.3rem;}.especie-card li{margin-bottom:0.25rem;}.ec-red{border-left-color:var(--red-accent);}.ec-red h4{color:var(--red-accent);}.ec-blue{border-left-color:var(--blue-accent);}.ec-blue h4{color:var(--blue-accent);}.ec-green{border-left-color:var(--green-accent);}.ec-green h4{color:var(--green-accent);}.ec-gold{border-left-color:var(--gold);}.ec-gold h4{color:#7a5a00;}.ec-purple{border-left-color:var(--purple-accent);}.ec-purple h4{color:var(--purple-accent);}
+  .anat-visual{display:flex;align-items:stretch;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);}.av-col{flex:1;padding:1.2rem 1.4rem;}.av-navy{background:var(--navy-mid);color:white;}.av-sep{background:var(--navy);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:900;flex:0 0 2.5rem;}.av-red{background:var(--red-accent);color:white;}.av-blue{background:var(--blue-accent);color:white;}.av-gold{background:var(--gold);color:var(--navy);}.av-purple{background:var(--purple-accent);color:white;}.av-col h4{font-family:'Playfair Display',serif;font-size:0.98rem;font-weight:700;margin-bottom:0.5rem;border-bottom:1px solid rgba(255,255,255,0.2);padding-bottom:0.35rem;}.av-col p,.av-col li{font-size:0.82rem;line-height:1.65;}.av-col ul{padding-left:1rem;margin-top:0.3rem;}
+  .source-note{font-size:0.78rem;color:var(--text-soft);border-top:1px dashed var(--border);padding-top:0.7rem;margin-top:0.9rem;}.kbd{font-family:'JetBrains Mono',monospace;background:var(--cream-mid);border:1px solid var(--border-light);border-radius:3px;padding:0.05rem 0.35rem;font-size:0.75rem;color:var(--navy);}.mini-ref{font-size:0.74rem;color:var(--text-soft);font-family:'JetBrains Mono',monospace;}.source-list li{font-size:0.82rem;margin-bottom:0.45rem;}
+  footer{background:var(--navy);color:rgba(255,255,255,0.45);text-align:center;padding:1.5rem;font-size:0.75rem;border-top:2px solid var(--gold);}footer strong{color:var(--gold-light);}
+  @media print{#top-nav{display:none;}#hero{padding:2rem 1rem;}#hero::before{display:none;}.page-wrap{padding:0 0.5rem 2rem!important;}.section{margin-top:2rem;page-break-inside:avoid;}.card,.juris-card,.flow-wrap{box-shadow:none;border:1px solid #ccc;}.prova-section{background:#f0f4f8!important;color:#000!important;}.prova-section h2{color:#0d1b2a!important;}.prova-item{background:white!important;border:1px solid #ccc!important;}.prova-item-q{color:#7a5a00!important;}.prova-item-a{color:#333!important;}.anat-visual{flex-direction:column;}.av-sep{padding:0.4rem;flex:0 0 1.5rem;}footer{display:none;}body{font-size:11pt;}}
+  @media(max-width:640px){#hero{padding:2rem 1rem;}#hero h1{font-size:1.6rem;}.card-grid-3,.card-grid-2,.card-grid-4{grid-template-columns:1fr;}.section-title{font-size:1.1rem;}.comp-table{font-size:0.76rem;}.comp-table td,.comp-table th{padding:0.55rem 0.65rem;}.flow-node{min-width:150px;font-size:0.74rem;}.anat-visual{flex-direction:column;}.av-sep{padding:0.4rem;flex:0 0 1.5rem;}}
+  .mt1{margin-top:0.75rem;}.mt2{margin-top:1rem;}.mt3{margin-top:1.5rem;}.flex-gap{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:flex-start;}strong{font-weight:700;}
+</style>
+</head>
+<body>
+
+<nav id="top-nav" aria-label="Atalhos do artigo">
+  <div class="nav-brand">Art. 26º CP</div>
+  <div class="nav-main-links">
+    <a href="#visao-geral">Visão Geral</a>
+    <a href="#texto-legal">Texto Legal</a>
+    <a href="#culpabilidade">Culpabilidade</a>
+    <a href="#criterio">Critério Biopsicológico</a>
+    <a href="#inimputabilidade">Inimputabilidade</a>
+    <a href="#semi">Semi-imputabilidade</a>
+    <a href="#menoridade-embriaguez">Menoridade/Embriaguez</a>
+    <a href="#incidente">Incidente</a>
+    <a href="#medidas">Medidas de Segurança</a>
+    <a href="#fluxograma">Fluxograma</a>
+    <a href="#comparativo">Comparativo</a>
+    <a href="#jurisprudencia">Juris. STF/STJ</a>
+    <a href="#doutrina">Doutrina</a>
+    <a href="#prova" class="nav-prova">Prova</a>
+    <a href="#fontes">Fontes</a>
+  </div>
+</nav>
+
+<header id="hero">
+  <div class="badge">Código Penal · Título III · Da Imputabilidade Penal · Atualização legislativa conferida até jan/2026</div>
+  <h1>Art. 26º — <span>Inimputabilidade e Semi-imputabilidade</span></h1>
+  <p class="subtitle">Doença mental · Desenvolvimento mental incompleto ou retardado · Critério biopsicológico · Absolvição imprópria · Medida de segurança · Magistratura · ENAM</p>
+  <div class="law-box">
+    <strong>Art. 26 do Decreto-Lei n.º 2.848/1940 (Código Penal)</strong>
+    “É isento de pena o agente que, por doença mental ou desenvolvimento mental incompleto ou retardado, era, ao tempo da ação ou da omissão, inteiramente incapaz de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento.”<br><br>
+    <strong>Parágrafo único — Redução de pena</strong>
+    “A pena pode ser reduzida de um a dois terços, se o agente, em virtude de perturbação de saúde mental ou por desenvolvimento mental incompleto ou retardado, não era inteiramente capaz de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento.”
+  </div>
+</header>
+
+<div class="page-wrap">
+
+<section class="section" id="visao-geral">
+  <div class="section-header"><div class="section-num">01</div><div class="section-title"><span>Introdução &amp; Estrutura</span>Mapa Geral do Art. 26 CP</div></div>
+  <div class="card-grid card-grid-3">
+    <div class="card type-card tc-blue">
+      <h3>📍 Função do Art. 26 CP</h3>
+      <p>O art. 26 CP disciplina a <strong>imputabilidade penal</strong>, isto é, a capacidade de culpabilidade. Ele não apaga o fato típico nem a ilicitude: atua na <strong>culpabilidade</strong>. O agente pratica fato típico e antijurídico, mas pode não ser penalmente censurável por ausência ou redução da capacidade de entender ou de autodeterminar-se no momento do fato.</p>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>🔴 Caput — Inimputabilidade</h3>
+      <p>Se, por doença mental ou desenvolvimento mental incompleto ou retardado, o agente era <strong>inteiramente incapaz</strong> de entender o caráter ilícito do fato ou de determinar-se conforme esse entendimento, é <strong>isento de pena</strong>. No processo, a consequência típica é a <strong>absolvição imprópria</strong>, com medida de segurança se cabível.</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>🟡 Parágrafo único — Semi-imputabilidade</h3>
+      <p>Se a capacidade não estava abolida, mas <strong>diminuída</strong>, o agente é condenado, com <strong>redução de pena de 1/3 a 2/3</strong>. Havendo necessidade de especial tratamento curativo, a pena privativa de liberdade pode ser substituída por medida de segurança, nos termos do art. 98 CP.</p>
+    </div>
+  </div>
+  <div class="alert alert-gold mt2"><div class="alert-icon">⭐</div><div><strong>Chave de prova:</strong> o art. 26 CP exige análise em quatro camadas: <strong>causa biopsíquica</strong> + <strong>repercussão na capacidade de entendimento ou autodeterminação</strong> + <strong>momento da ação/omissão</strong> + <strong>efeito jurídico</strong> — absolvição imprópria, redução de pena ou imputabilidade plena.</div></div>
+</section>
+
+<section class="section" id="texto-legal">
+  <div class="section-header"><div class="section-num">02</div><div class="section-title"><span>Anatomia do Dispositivo</span>Texto Legal Fatiado para Prova</div></div>
+  <div class="anat-visual">
+    <div class="av-col av-red"><h4>CAPUT — Inimputável</h4><p><strong>“É isento de pena”</strong></p><ul><li>Não há pena, porque falta imputabilidade.</li><li>A sentença é absolutória imprópria quando impõe medida de segurança.</li><li>O fato permanece típico e ilícito.</li></ul></div>
+    <div class="av-sep">→</div>
+    <div class="av-col av-navy"><h4>Causa biopsíquica</h4><p><strong>“doença mental ou desenvolvimento mental incompleto ou retardado”</strong></p><ul><li>Não basta diagnóstico isolado.</li><li>Exige nexo com a incapacidade penal.</li><li>A expressão legal “retardado” deve ser lida com técnica e respeito, como referência legal histórica a deficiência intelectual/desenvolvimento mental retardado.</li></ul></div>
+    <div class="av-sep">→</div>
+    <div class="av-col av-blue"><h4>Tempo e grau</h4><p><strong>“ao tempo da ação ou da omissão, inteiramente incapaz”</strong></p><ul><li>Incapacidade deve existir no momento do fato.</li><li>Inteiramente incapaz = incapacidade plena.</li><li>Doença posterior segue lógica processual própria, não art. 26 caput.</li></ul></div>
+    <div class="av-sep">→</div>
+    <div class="av-col av-gold"><h4>Faculdades atingidas</h4><p><strong>“entender o caráter ilícito ou determinar-se”</strong></p><ul><li>Capacidade intelectual: compreender a ilicitude.</li><li>Capacidade volitiva: agir conforme essa compreensão.</li><li>Basta comprometer uma delas.</li></ul></div>
+  </div>
+  <div class="card mt2">
+    <h3>📌 Parágrafo único — estrutura própria</h3>
+    <p>O parágrafo único não fala em incapacidade total. Ele pressupõe agente com capacidade <strong>reduzida</strong>, não abolida: “não era inteiramente capaz”. Por isso, a consequência jurídica primária não é absolvição, mas <strong>condenação com causa especial de diminuição</strong>. A substituição por medida de segurança depende de necessidade de especial tratamento curativo, conforme art. 98 CP.</p>
+    <div class="source-note">Referência normativa: Código Penal, arts. 26, 96, 97 e 98.</div>
+  </div>
+</section>
+
+<section class="section" id="culpabilidade">
+  <div class="section-header"><div class="section-num">03</div><div class="section-title"><span>Teoria do Crime</span>Imputabilidade como Elemento da Culpabilidade</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>⚖️ Onde o art. 26 entra?</h3>
+      <p>No modelo analítico mais cobrado em concursos, o crime é fato típico, ilícito e culpável. A culpabilidade reúne, de modo didático: <strong>imputabilidade</strong>, <strong>potencial consciência da ilicitude</strong> e <strong>exigibilidade de conduta diversa</strong>. O art. 26 CP atinge o primeiro elemento: a capacidade de receber censura penal.</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Art. 20 CP:</strong> erro de tipo — atinge dolo/tipicidade subjetiva.</li>
+        <li><strong>Art. 21 CP:</strong> erro de proibição — atinge potencial consciência da ilicitude.</li>
+        <li><strong>Art. 22 CP:</strong> coação moral irresistível/obediência hierárquica — exigibilidade.</li>
+        <li><strong>Art. 26 CP:</strong> inimputabilidade/semi-imputabilidade — imputabilidade.</li>
+        <li><strong>Art. 23 CP:</strong> excludentes de ilicitude — ilicitude, não culpabilidade.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🧠 Capacidade de entendimento × capacidade de autodeterminação</h3>
+      <p><strong>Entendimento</strong> é a capacidade de compreender o caráter ilícito do fato. <strong>Autodeterminação</strong> é a capacidade de agir conforme essa compreensão. A inimputabilidade pode decorrer da abolição de uma ou de outra. Por isso, não se exige que o agente desconheça o mundo ao redor: pode entender fatos materiais e, ainda assim, estar incapaz de compreender a ilicitude ou de dirigir a própria conduta.</p>
+      <div class="alert alert-navy mt2"><div>📌 <strong>Erro frequente:</strong> confundir doença mental com inimputabilidade automática. O STJ exige demonstração de que a enfermidade afetou, no tempo do fato, a capacidade intelectiva ou volitiva.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="criterio">
+  <div class="section-header"><div class="section-num">04</div><div class="section-title"><span>Núcleo Dogmático</span>Critério Biopsicológico-Normativo</div></div>
+  <div class="especie-grid">
+    <div class="especie-card ec-blue"><h4>1. Elemento biológico</h4><p>Deve existir doença mental, desenvolvimento mental incompleto ou desenvolvimento mental retardado. No parágrafo único, a lei fala em perturbação de saúde mental ou desenvolvimento mental incompleto/retardado.</p></div>
+    <div class="especie-card ec-red"><h4>2. Elemento psicológico</h4><p>A causa deve repercutir na capacidade de entender a ilicitude ou determinar-se conforme esse entendimento. Sem repercussão funcional, há imputabilidade.</p></div>
+    <div class="especie-card ec-gold"><h4>3. Elemento temporal</h4><p>A incapacidade deve existir <strong>ao tempo da ação ou da omissão</strong>. Transtorno posterior ao crime é tratado como insanidade superveniente, com consequências processuais/executórias próprias.</p></div>
+    <div class="especie-card ec-purple"><h4>4. Juízo normativo</h4><p>O laudo é técnico; a conclusão jurídica é do juiz. O magistrado deve valorar a perícia e o conjunto probatório, fundamentando tecnicamente eventual divergência.</p></div>
+  </div>
+  <div class="alert alert-gold mt2"><div class="alert-icon">⭐</div><div><strong>Fórmula de prova:</strong> Art. 26 CP = critério <strong>biopsicológico</strong>. O art. 27 CP, ao tratar dos menores de 18 anos, usa critério <strong>biológico</strong> absoluto. Embriaguez tem disciplina autônoma no art. 28 CP.</div></div>
+</section>
+
+<section class="section" id="inimputabilidade">
+  <div class="section-header"><div class="section-num">05</div><div class="section-title"><span>Caput</span>Inimputabilidade Plena: Requisitos, Prova e Efeitos</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔴 Requisitos cumulativos</h3>
+      <ul>
+        <li><strong>Causa legal:</strong> doença mental ou desenvolvimento mental incompleto/retardado.</li>
+        <li><strong>Incapacidade integral:</strong> o agente era inteiramente incapaz.</li>
+        <li><strong>Alvo da incapacidade:</strong> entender o caráter ilícito do fato ou determinar-se conforme esse entendimento.</li>
+        <li><strong>Momento:</strong> incapacidade existente ao tempo da ação/omissão.</li>
+        <li><strong>Nexo:</strong> a incapacidade deve decorrer da causa biopsíquica legalmente relevante.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📋 Efeitos processuais e penais</h3>
+      <ul>
+        <li><strong>Sentença:</strong> absolvição por circunstância que isenta de pena — usualmente chamada de absolvição imprópria quando aplicada medida de segurança.</li>
+        <li><strong>Sanção aplicável:</strong> medida de segurança, quando cabível, e não pena.</li>
+        <li><strong>Espécies:</strong> internação em hospital de custódia/tratamento psiquiátrico ou tratamento ambulatorial, conforme arts. 96 e 97 CP, lidos à luz da política antimanicomial contemporânea.</li>
+        <li><strong>Prova:</strong> incidente de insanidade mental e perícia médico-legal, quando houver dúvida fundada.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="alert alert-red mt2"><div class="alert-icon">⚠️</div><div><strong>Não automatize:</strong> diagnóstico psiquiátrico ≠ inimputabilidade. A pergunta penal é funcional e temporal: no momento do fato, a doença ou desenvolvimento incompleto/retardado anulou a capacidade de entender ou de autodeterminar-se?</div></div>
+</section>
+
+<section class="section" id="semi">
+  <div class="section-header"><div class="section-num">06</div><div class="section-title"><span>Parágrafo único</span>Semi-imputabilidade: Redução de Pena e Sistema Vicariante</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-gold">
+      <h3>🟡 Conceito e efeito primário</h3>
+      <p>A semi-imputabilidade ocorre quando o agente, em virtude de perturbação de saúde mental ou desenvolvimento mental incompleto/retardado, <strong>não era inteiramente capaz</strong> de entender o caráter ilícito do fato ou de determinar-se conforme esse entendimento. Há culpabilidade diminuída, não abolida.</p>
+      <div class="divider"></div>
+      <p><strong>Efeito:</strong> condenação com redução de pena de <span class="kbd">1/3 a 2/3</span>. A fração deve dialogar com o grau de redução da capacidade: quanto maior a perda de autodeterminação/entendimento, maior a redução.</p>
+    </div>
+    <div class="card type-card tc-purple">
+      <h3>🟣 Art. 98 CP — substituição por medida de segurança</h3>
+      <p>Se o condenado semi-imputável necessitar de especial tratamento curativo, a pena privativa de liberdade pode ser substituída por internação ou tratamento ambulatorial, pelo prazo mínimo de 1 a 3 anos. É a lógica <strong>vicariante</strong>: para o mesmo fato, não se executam cumulativamente pena e medida de segurança.</p>
+      <div class="alert alert-purple mt2"><div>📌 <strong>Prova:</strong> semi-imputável não é absolvido pelo art. 26 parágrafo único; ele é condenado. Só haverá medida de segurança substitutiva se preenchido o art. 98 CP.</div></div>
+    </div>
+  </div>
+  <div class="card mt2">
+    <h3>⚔️ Semi-imputabilidade e crimes graves</h3>
+    <p>A semi-imputabilidade não descaracteriza, por si só, a natureza hedionda do delito nem afasta automaticamente qualificadoras do homicídio. Em tese, pode coexistir com qualificadoras ligadas ao motivo, meio ou modo de execução, desde que provadas e compatíveis com o caso concreto.</p>
+  </div>
+</section>
+
+<section class="section" id="menoridade-embriaguez">
+  <div class="section-header"><div class="section-num">07</div><div class="section-title"><span>Não Confundir</span>Art. 26 × Menoridade × Embriaguez × Doença Superveniente</div></div>
+  <table class="comp-table">
+    <thead><tr><th>Situação</th><th>Base legal</th><th>Critério</th><th>Efeito correto</th><th>Pegadinha de prova</th></tr></thead>
+    <tbody>
+      <tr class="hl"><td>Doença mental ao tempo do fato com incapacidade total</td><td>Art. 26, caput, CP</td><td>Biopsicológico</td><td>Isenção de pena; absolvição imprópria; medida de segurança se cabível</td><td>Não basta diagnóstico: exige incapacidade penal no momento do fato.</td></tr>
+      <tr class="hl2"><td>Perturbação de saúde mental com capacidade reduzida</td><td>Art. 26, parágrafo único, CP</td><td>Biopsicológico</td><td>Condenação com redução de 1/3 a 2/3; eventual art. 98 CP</td><td>Não é absolvição; é culpabilidade diminuída.</td></tr>
+      <tr class="hl3"><td>Menor de 18 anos</td><td>Art. 27 CP</td><td>Biológico absoluto</td><td>Inimputabilidade penal; sujeição à legislação especial</td><td>Não depende de perícia para aferir discernimento penal.</td></tr>
+      <tr class="hl4"><td>Embriaguez voluntária ou culposa</td><td>Art. 28, II, CP</td><td>Regra de imputabilidade</td><td>Não exclui imputabilidade penal</td><td>Não confundir embriaguez comum com doença mental.</td></tr>
+      <tr class="hl5"><td>Embriaguez completa acidental por caso fortuito/força maior</td><td>Art. 28, §1º, CP</td><td>Disciplina específica</td><td>Isenção de pena se inteiramente incapaz</td><td>É hipótese própria do art. 28, não art. 26.</td></tr>
+      <tr><td>Embriaguez acidental incompleta</td><td>Art. 28, §2º, CP</td><td>Disciplina específica</td><td>Redução de pena de 1/3 a 2/3</td><td>O paralelo com semi-imputabilidade não muda a base legal.</td></tr>
+      <tr><td>Doença mental superveniente ao crime</td><td>CPP, art. 152; CP, art. 41; CPP, art. 154</td><td>Processual/executório</td><td>Suspensão do processo ou recolhimento a hospital/tratamento adequado, conforme fase</td><td>Não altera a imputabilidade no momento do fato.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="section" id="incidente">
+  <div class="section-header"><div class="section-num">08</div><div class="section-title"><span>Processo Penal</span>Incidente de Insanidade Mental — CPP, arts. 149 a 154</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔎 Quando instaurar?</h3>
+      <p>Quando houver dúvida sobre a integridade mental do acusado, o juiz deve ordenar exame médico-legal, de ofício ou a requerimento do Ministério Público, defensor, curador, ascendente, descendente, irmão ou cônjuge. A dúvida deve ser minimamente fundada; alegação genérica não substitui elementos concretos.</p>
+      <div class="divider"></div>
+      <ul>
+        <li>No inquérito, a autoridade policial representa ao juiz competente.</li>
+        <li>O juiz nomeia curador ao acusado.</li>
+        <li>O processo fica suspenso, salvo diligências urgentes.</li>
+        <li>O prazo ordinário do exame é de 45 dias, salvo demonstração de necessidade de prazo maior.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📌 Resultado do exame</h3>
+      <ul>
+        <li><strong>Inimputável ao tempo do fato:</strong> o processo prossegue com curador, para decisão de mérito.</li>
+        <li><strong>Doença mental posterior à infração:</strong> o processo permanece suspenso até o restabelecimento, podendo o juiz ordenar internação adequada se necessário.</li>
+        <li><strong>Sanidade preservada:</strong> o processo retoma seu curso regular.</li>
+      </ul>
+      <div class="alert alert-navy mt2"><div>📌 <strong>Sentença:</strong> o CPP prevê absolvição quando existir circunstância que isente o réu de pena ou mesmo fundada dúvida sobre sua existência; se cabível, aplica-se medida de segurança.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="medidas">
+  <div class="section-header"><div class="section-num">09</div><div class="section-title"><span>Consequência Penal</span>Medidas de Segurança: CP, STJ e Política Antimanicomial</div></div>
+  <div class="card-grid card-grid-3">
+    <div class="card type-card tc-blue">
+      <h3>🏥 Espécies — art. 96 CP</h3>
+      <ul><li>Internação em hospital de custódia e tratamento psiquiátrico ou estabelecimento adequado.</li><li>Sujeição a tratamento ambulatorial.</li><li>Extinta a punibilidade, não se impõe nem subsiste medida de segurança.</li></ul>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>⏳ Prazo e perícia — art. 97 CP</h3>
+      <ul><li>Prazo legalmente indeterminado, enquanto não cessada a periculosidade.</li><li>Prazo mínimo: 1 a 3 anos.</li><li>Perícia médica ao fim do prazo mínimo e repetição anual, ou a qualquer tempo se determinada.</li><li>Desinternação/liberação é condicional; restabelece-se a situação anterior se, antes de 1 ano, houver fato indicativo de persistência de periculosidade.</li></ul>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>⚖️ Limites jurisprudenciais</h3>
+      <ul><li>STJ: a duração da medida de segurança não deve ultrapassar o limite máximo da pena abstratamente cominada ao delito.</li><li>STJ: inimputável não deve cumprir medida de segurança em penitenciária comum.</li><li>STJ: a prescrição, em sentença absolutória imprópria, regula-se pela pena máxima abstratamente prevista.</li></ul>
+    </div>
+  </div>
+  <div class="alert alert-purple mt2"><div class="alert-icon">🧭</div><div><strong>Atualização institucional — CNJ Res. 487/2023:</strong> a execução das medidas de segurança deve ser lida à luz da política antimanicomial, da dignidade humana, da Lei 10.216/2001 e da Convenção sobre os Direitos das Pessoas com Deficiência. A diretriz é cuidado em saúde, preferencialmente em rede territorial e não asilar; internação somente por razões clínicas e quando insuficientes os recursos extra-hospitalares.</div></div>
+</section>
+
+<section class="section" id="fluxograma">
+  <div class="section-header"><div class="section-num">10</div><div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma Completo do Art. 26 CP</div></div>
+  <div class="flow-wrap">
+    <div class="flow-center">
+      <div class="flow-node flow-start">FATO TÍPICO E ILÍCITO — ANALISAR CULPABILIDADE / IMPUTABILIDADE</div>
+      <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+      <div class="flow-node flow-box-navy"><strong style="color:var(--gold-light);">PASSO 1 — Há dúvida fundada sobre integridade mental?</strong><br><span style="font-size:0.74rem;opacity:0.85;">Elementos concretos indicam possível doença mental, desenvolvimento mental incompleto/retardado, perturbação de saúde mental ou incapacidade?</span></div>
+      <div class="flow-row mt1">
+        <div class="flow-branch"><div class="flow-label">NÃO</div><div class="flow-node flow-end-green">IMPUTABILIDADE PRESERVADA<br><span style="font-size:0.72rem;">Prossegue a análise normal da culpabilidade.</span></div></div>
+        <div class="flow-branch"><div class="flow-label">SIM</div><div class="flow-node flow-box-blue">INSTAURAR INCIDENTE DE INSANIDADE MENTAL<br><span style="font-size:0.72rem;">CPP arts. 149 a 154: perícia, curador e suspensão processual, salvo diligências urgentes.</span></div></div>
+      </div>
+      <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+      <div class="flow-node flow-box-gold"><strong>PASSO 2 — A incapacidade existia ao tempo da ação ou omissão?</strong><br><span style="font-size:0.74rem;">Temporalidade é decisiva: art. 26 julga a capacidade no momento do fato.</span></div>
+      <div class="flow-row mt1">
+        <div class="flow-branch"><div class="flow-label">NÃO — doença posterior</div><div class="flow-node flow-box-purple">INSANIDADE SUPERVENIENTE<br><span style="font-size:0.72rem;">Não é art. 26 caput/parágrafo único; aplicar CPP art. 152 ou regras executórias.</span></div></div>
+        <div class="flow-branch"><div class="flow-label">SIM — no momento do fato</div><div class="flow-node flow-box-navy">PASSO 3 — Qual era o grau de comprometimento?</div></div>
+      </div>
+      <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+      <div class="flow-row">
+        <div class="flow-branch"><div class="flow-label">Capacidade abolida</div><div class="flow-node flow-box-red"><strong>INIMPUTABILIDADE</strong><br>Inteiramente incapaz de entender a ilicitude ou determinar-se.</div><div class="flow-arrow">▼</div><div class="flow-node flow-end-red">ART. 26 CAPUT<br>Isento de pena → absolvição imprópria → medida de segurança se cabível.</div></div>
+        <div class="flow-branch"><div class="flow-label">Capacidade reduzida</div><div class="flow-node flow-box-gold"><strong>SEMI-IMPUTABILIDADE</strong><br>Não inteiramente capaz; culpabilidade diminuída.</div><div class="flow-arrow">▼</div><div class="flow-node flow-end-gold">ART. 26, PAR. ÚNICO<br>Condenação + redução de 1/3 a 2/3; possível art. 98 CP.</div></div>
+        <div class="flow-branch"><div class="flow-label">Capacidade preservada</div><div class="flow-node flow-box-green"><strong>DIAGNÓSTICO SEM REPERCUSSÃO PENAL</strong><br>Transtorno ou condição sem abolição/redução relevante.</div><div class="flow-arrow">▼</div><div class="flow-node flow-end-green">IMPUTÁVEL<br>Sem aplicação do art. 26.</div></div>
+      </div>
+      <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+      <div class="flow-node flow-box-purple" style="max-width:820px;"><strong>PASSO 4 — Se houver medida de segurança:</strong> escolher espécie adequada, observar prazo mínimo de 1 a 3 anos, perícia periódica, Súmula 527/STJ, prescrição pela pena máxima abstrata e diretrizes antimanicomiais do CNJ/Lei 10.216/2001.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="comparativo">
+  <div class="section-header"><div class="section-num">11</div><div class="section-title"><span>Tabela Premium</span>Comparativo de Consequências Jurídicas</div></div>
+  <table class="comp-table">
+    <thead><tr><th>Categoria</th><th>Capacidade mental no fato</th><th>Natureza jurídica</th><th>Sentença</th><th>Sanção/efeito</th><th>Base</th></tr></thead>
+    <tbody>
+      <tr class="hl4"><td>Inimputável</td><td>Inteiramente incapaz de entender ou determinar-se</td><td>Exclusão da imputabilidade; falta culpabilidade</td><td>Absolvição imprópria, se aplicada medida</td><td>Medida de segurança cabível</td><td>CP art. 26 caput; CPP art. 386 VI e par. ún. III; CP arts. 96-97</td></tr>
+      <tr class="hl"><td>Semi-imputável</td><td>Capacidade reduzida, mas não abolida</td><td>Culpabilidade diminuída</td><td>Condenação</td><td>Redução de 1/3 a 2/3 ou substituição por MS se art. 98</td><td>CP art. 26 par. ún.; CP art. 98</td></tr>
+      <tr class="hl2"><td>Imputável com transtorno sem impacto penal</td><td>Capacidade preservada</td><td>Culpabilidade íntegra</td><td>Condenação se comprovado o crime</td><td>Pena comum</td><td>Regra geral</td></tr>
+      <tr class="hl3"><td>Menor de 18 anos</td><td>Irrelevante aferição psicológica penal</td><td>Inimputabilidade legal absoluta</td><td>Não há condenação penal</td><td>Legislação especial</td><td>CP art. 27</td></tr>
+      <tr class="hl5"><td>Embriaguez voluntária/culposa</td><td>Alteração autointoxicatória comum</td><td>Não exclui imputabilidade</td><td>Condenação se comprovado o crime</td><td>Pena comum</td><td>CP art. 28, II</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="section" id="jurisprudencia">
+  <div class="section-header"><div class="section-num">12</div><div class="section-title"><span>STF/STJ — Teses Seguras</span>Jurisprudência Essencial para Magistratura</div></div>
+  <div class="juris-grid">
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">Critério biopsicológico</span><span class="juris-title">HC 33.401/RJ</span></div><div class="juris-body">O STJ afirma que o art. 26 CP adota o critério biopsicológico normativo: não basta a presença de enfermidade mental; é indispensável demonstrar, por prova/perícia, que ela comprometeu a capacidade de compreensão ou autodeterminação no momento do fato.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge sumula">Súmula 527</span><span class="juris-title">Duração máxima da medida de segurança</span></div><div class="juris-body">“O tempo de duração da medida de segurança não deve ultrapassar o limite máximo da pena abstratamente cominada ao delito praticado.” Essa é a orientação objetiva mais cobrada sobre prazo máximo no STJ.</div></div>
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge sumula">Súmula 422</span><span class="juris-title">Absolvição e medida de segurança</span></div><div class="juris-body">A absolvição criminal não prejudica a medida de segurança, quando couber, ainda que importe privação de liberdade. Em prova, isso fundamenta a ideia de absolvição imprópria.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">Sistema vicariante</span><span class="juris-title">HC 275.635/SP</span></div><div class="juris-body">O STJ registra que, após a Reforma Penal de 1984, foi afastada a cumulação ou sucessão de pena e medida de segurança pelo mesmo fato. Para o mesmo delito, a execução segue lógica vicariante: pena ou medida de segurança, conforme o caso.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">Semi-imputabilidade</span><span class="juris-title">Quantum, hediondez e qualificadoras</span></div><div class="juris-body">A redução do art. 26, parágrafo único, deve ser graduada conforme o grau de incapacidade do agente, não pelos vetores gerais do art. 59 CP. A semi-imputabilidade não afasta, por si só, a hediondez nem é incompatível com qualificadoras do homicídio ligadas ao motivo ou meio de execução.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">Execução adequada</span><span class="juris-title">Medida de segurança não é pena comum</span></div><div class="juris-body">O STJ considera inadequado manter inimputável em penitenciária comum por falta de vaga em hospital de custódia/tratamento; admite-se tratamento ambulatorial provisório quando necessário, sem converter a medida em pena comum.</div></div>
+    <div class="juris-card cnj"><div class="juris-header"><span class="juris-badge purple">CNJ</span><span class="juris-badge tese">Res. 487/2023</span><span class="juris-title">Política Antimanicomial do Judiciário</span></div><div class="juris-body">A Resolução CNJ 487/2023 estabelece diretrizes para cumprimento da Lei 10.216/2001 e da Convenção sobre os Direitos das Pessoas com Deficiência no processo penal e na execução de medidas de segurança, com centralidade no cuidado em rede, na dignidade e na vedação de práticas asilares.</div></div>
+  </div>
+</section>
+
+<section class="section" id="doutrina">
+  <div class="section-header"><div class="section-num">13</div><div class="section-title"><span>Doutrina Sistematizada</span>Linhas Dogmáticas Seguras</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card"><h3>📚 Síntese doutrinária dominante</h3><ul><li><strong>Imputabilidade</strong> é a capacidade de culpabilidade: compreender a ilicitude e orientar a conduta.</li><li><strong>Inimputabilidade do art. 26</strong> não significa inexistência de ação, dolo ou ilicitude; significa ausência de censurabilidade penal.</li><li><strong>Critério biopsicológico</strong>: exige causa mental e efeito psicológico no momento do fato.</li><li><strong>Perícia</strong> fornece base técnica; o juiz realiza o juízo normativo final.</li><li><strong>Semi-imputabilidade</strong> é culpabilidade reduzida, com condenação e redução penal.</li></ul></div>
+    <div class="card"><h3>⚖️ Tópicos críticos de argumentação</h3><ul><li>O art. 26 deve ser lido com o art. 149 CPP: havendo dúvida fundada, a sanidade mental exige instrução técnica.</li><li>O laudo deve responder sobre capacidade no momento do fato, não apenas diagnóstico atual.</li><li>A medida de segurança tem finalidade terapêutica/preventiva, mas deve respeitar legalidade, proporcionalidade, dignidade e controle judicial.</li><li>A política antimanicomial não revoga o CP; orienta a forma constitucional e humanizada de aplicação/execução.</li><li>Na sentença, separar: materialidade/autoria, ilicitude, imputabilidade, periculosidade/necessidade terapêutica e espécie da medida.</li></ul></div>
+  </div>
+</section>
+
+<section class="prova-section" id="prova">
+  <h2>🎓 Pontos que Sempre Caem em Magistratura / ENAM</h2>
+  <p class="intro">Checklist de revisão objetiva: leia antes de resolver questões e simular sentenças penais.</p>
+  <div class="prova-items">
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">01</span>Qual critério o art. 26 CP adota?</div><div class="prova-item-a"><strong>Biopsicológico.</strong> Exige causa mental legalmente relevante + incapacidade total ou reduzida de entender/determinar-se + existência no momento da ação/omissão.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">02</span>Doença mental gera inimputabilidade automática?</div><div class="prova-item-a"><strong>Não.</strong> O diagnóstico isolado é insuficiente. É indispensável demonstrar a repercussão concreta na capacidade intelectiva ou volitiva ao tempo do fato.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">03</span>Caput do art. 26 exclui o quê?</div><div class="prova-item-a"><strong>Exclui a imputabilidade</strong>, elemento da culpabilidade. O fato típico e ilícito permanece; a resposta é isenção de pena, geralmente com absolvição imprópria e medida de segurança se cabível.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">04</span>Parágrafo único absolve?</div><div class="prova-item-a"><strong>Não.</strong> O semi-imputável é condenado, com redução de pena de 1/3 a 2/3. Pode haver substituição por medida de segurança pelo art. 98 CP se houver necessidade de especial tratamento curativo.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">05</span>Como fixar a fração de redução da semi-imputabilidade?</div><div class="prova-item-a"><strong>Pelo grau de redução da capacidade de entendimento/autodeterminação.</strong> Quanto maior o comprometimento, maior a redução. Não é critério fundado nos vetores comuns do art. 59 CP.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">06</span>Medida de segurança pode durar indefinidamente?</div><div class="prova-item-a"><strong>O CP fala em prazo indeterminado enquanto não cessada a periculosidade</strong>, mas o STJ limita a duração ao máximo da pena abstratamente cominada ao delito, conforme Súmula 527.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">07</span>Pena e medida de segurança podem ser cumuladas pelo mesmo fato?</div><div class="prova-item-a"><strong>Não no sistema vicariante.</strong> Para o mesmo fato, após a Reforma de 1984, aplica-se pena ou medida de segurança, não ambas em cumulação/sucessão executória.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">08</span>Menoridade penal usa qual critério?</div><div class="prova-item-a"><strong>Critério biológico absoluto.</strong> Menores de 18 anos são penalmente inimputáveis, sujeitos à legislação especial. Não é necessário provar incapacidade de entendimento.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">09</span>Embriaguez voluntária exclui imputabilidade?</div><div class="prova-item-a"><strong>Não.</strong> O art. 28, II, CP afasta essa tese. A embriaguez acidental completa por caso fortuito ou força maior pode isentar pena; a incompleta pode reduzir pena.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">10</span>Doença mental posterior ao crime aplica art. 26?</div><div class="prova-item-a"><strong>Não.</strong> Se posterior ao fato, aplica-se o regime de insanidade superveniente: suspensão processual ou providências executórias próprias, sem alterar a imputabilidade no momento do delito.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">11</span>O que é absolvição imprópria?</div><div class="prova-item-a"><strong>Absolvição com imposição de medida de segurança.</strong> Reconhece-se isenção de pena por inimputabilidade, mas se aplica medida de segurança se presentes seus pressupostos.</div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">12</span>Qual é a atualização institucional mais importante?</div><div class="prova-item-a"><strong>Política antimanicomial.</strong> A Resolução CNJ 487/2023 orienta o Judiciário a aplicar processo penal e medidas de segurança com cuidado em saúde, rede territorial, dignidade, não discriminação e vedação de práticas asilares.</div></div>
+  </div>
+</section>
+
+<section class="section" id="fontes">
+  <div class="section-header"><div class="section-num">14</div><div class="section-title"><span>Controle de Fidedignidade</span>Fontes Normativas e Jurisprudenciais Utilizadas</div></div>
+  <div class="card">
+    <h3>📌 Fontes primárias e oficiais</h3>
+    <ul class="source-list">
+      <li><strong>Código Penal — Senado Federal, 9.ª edição, 2026, atualizado até janeiro de 2026:</strong> arts. 26, 27, 28, 96, 97, 98 e 99.</li>
+      <li><strong>Código de Processo Penal — Senado Federal:</strong> arts. 149 a 154 e art. 386, VI e parágrafo único, III.</li>
+      <li><strong>STJ — Súmula 527:</strong> limite temporal da medida de segurança pela pena máxima abstrata cominada.</li>
+      <li><strong>STF — Súmula 422:</strong> absolvição criminal não prejudica medida de segurança, quando couber.</li>
+      <li><strong>STJ — HC 33.401/RJ:</strong> critério biopsicológico normativo e insuficiência do diagnóstico sem prova de incapacidade.</li>
+      <li><strong>STJ — HC 275.635/SP:</strong> sistema vicariante e impossibilidade de cumular pena e medida de segurança pelo mesmo fato.</li>
+      <li><strong>STJ — jurisprudência sobre semi-imputabilidade:</strong> quantum da redução conforme grau de incapacidade; compatibilidade com hediondez/qualificadoras.</li>
+      <li><strong>CNJ — Resolução 487/2023:</strong> política antimanicomial do Poder Judiciário e diretrizes de cuidado não asilar.</li>
+    </ul>
+    <div class="alert alert-navy mt2"><div>🔒 <strong>Nota de integridade:</strong> esta página evita enunciados não rastreáveis. Quando há divergência doutrinária, o conteúdo foi apresentado como síntese dogmática segura, sem atribuir a autor específico enunciado não conferido em fonte primária.</div></div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <strong>Art. 26º CP — Magistratura / ENAM</strong> · Página única com atalhos internos · Atualizado em 28/04/2026 · Modelo visual preservado do HTML-base do Art. 22º CP.
+</footer>
+
+</body>
+</html>
