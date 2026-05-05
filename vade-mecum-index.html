@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vade Mecum Digital — Magistratura ENAM</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0d1b2a;
+    --navy-mid:#1a2f45;
+    --navy-light:#243b55;
+    --gold:#c8960c;
+    --gold-light:#e8b84b;
+    --gold-pale:#fdf3d8;
+    --cream:#faf7f2;
+    --cream-mid:#f0ebe2;
+    --text-dark:#1a1208;
+    --text-mid:#3d3020;
+    --text-soft:#6b5c40;
+    --border:#d4c49a;
+    --border-light:#e8dcbf;
+    --red-accent:#8b1a1a;
+    --green-accent:#1a4a2e;
+    --blue-accent:#1a3a5c;
+    --purple-accent:#4a1a5c;
+    --shadow:0 4px 24px rgba(13,27,42,0.10);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Source Serif 4',Georgia,serif;background:var(--cream);color:var(--text-dark);font-size:15px;line-height:1.75;}
+
+  /* ── TOP NAV ── */
+  #top-nav{
+    position:sticky;top:0;z-index:999;
+    background:var(--navy);
+    border-bottom:3px solid var(--gold);
+    padding:0 1.2rem;
+    display:flex;align-items:stretch;
+    flex-wrap:wrap;
+  }
+  #top-nav .nav-brand{
+    font-family:'Playfair Display',serif;
+    color:var(--gold-light);
+    font-size:0.88rem;font-weight:700;
+    white-space:nowrap;
+    padding:0.7rem 1.2rem 0.7rem 0;
+    border-right:1px solid rgba(200,150,12,0.3);
+    margin-right:0.8rem;
+    letter-spacing:0.5px;
+    display:flex;align-items:center;gap:0.5rem;
+  }
+  #top-nav .nav-brand .brand-icon{font-size:1rem;}
+  #top-nav .nav-links{
+    display:flex;align-items:center;gap:0;
+    flex-wrap:wrap;
+  }
+  #top-nav a{
+    color:rgba(255,255,255,0.72);
+    text-decoration:none;
+    font-size:clamp(0.58rem,0.62vw,0.7rem);
+    font-family:'Source Serif 4',serif;
+    font-weight:600;letter-spacing:0.45px;
+    text-transform:uppercase;
+    padding:0.65rem 0.6rem;
+    white-space:nowrap;
+    transition:color .2s;
+    border-bottom:3px solid transparent;
+    margin-bottom:-3px;
+  }
+  #top-nav a:hover{color:var(--gold-light);border-bottom-color:var(--gold);}
+  #top-nav a.active{color:var(--gold-light);}
+
+  /* ── HERO ── */
+  #hero{
+    background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 55%,#1e3d5c 100%);
+    color:white;
+    padding:4rem 2rem 3.5rem;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  #hero::before{
+    content:'';position:absolute;inset:0;
+    background:
+      repeating-linear-gradient(45deg,rgba(200,150,12,0.03) 0px,rgba(200,150,12,0.03) 1px,transparent 1px,transparent 40px),
+      repeating-linear-gradient(-45deg,rgba(200,150,12,0.02) 0px,rgba(200,150,12,0.02) 1px,transparent 1px,transparent 60px);
+  }
+  #hero::after{
+    content:'';position:absolute;
+    bottom:-1px;left:0;right:0;height:40px;
+    background:linear-gradient(to bottom,transparent,var(--cream));
+  }
+  #hero .badge{
+    display:inline-block;
+    background:rgba(200,150,12,0.15);
+    border:1px solid rgba(200,150,12,0.5);
+    color:var(--gold-light);
+    font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;
+    padding:0.35rem 1.2rem;border-radius:2px;
+    margin-bottom:1.4rem;
+    font-family:'Source Serif 4',serif;font-weight:600;
+    position:relative;
+  }
+  #hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(2rem,5vw,3.4rem);
+    font-weight:900;line-height:1.1;
+    margin-bottom:0.5rem;
+    letter-spacing:-0.5px;
+    position:relative;
+  }
+  #hero h1 span{color:var(--gold-light);}
+  #hero .subtitle{
+    font-size:1rem;
+    color:rgba(255,255,255,0.6);
+    font-style:italic;
+    margin-bottom:1.8rem;
+    position:relative;
+    max-width:700px;
+    margin-left:auto;margin-right:auto;
+  }
+  .hero-stats{
+    display:flex;align-items:center;justify-content:center;
+    gap:2.5rem;flex-wrap:wrap;
+    position:relative;
+    margin-top:0.5rem;
+  }
+  .hero-stat{text-align:center;}
+  .hero-stat-num{
+    font-family:'Playfair Display',serif;
+    font-size:2rem;font-weight:900;
+    color:var(--gold-light);line-height:1;
+  }
+  .hero-stat-label{
+    font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase;
+    color:rgba(255,255,255,0.5);
+    font-family:'Source Serif 4',serif;font-weight:600;
+    margin-top:0.25rem;
+  }
+  .hero-stat-sep{
+    width:1px;height:40px;
+    background:rgba(200,150,12,0.3);
+  }
+
+  /* ── PAGE WRAP ── */
+  .page-wrap{
+    width:100%;max-width:none;
+    padding:3rem clamp(1rem,4vw,5rem) 5rem;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section{margin-top:3.5rem;scroll-margin-top:56px;}
+  .section-header{
+    display:flex;align-items:center;gap:1rem;
+    margin-bottom:1.75rem;padding-bottom:0.75rem;
+    border-bottom:2px solid var(--border);
+  }
+  .section-num{
+    font-family:'Playfair Display',serif;
+    font-size:2rem;font-weight:900;
+    color:var(--border);line-height:1;
+    min-width:2.5rem;
+  }
+  .section-title{
+    font-family:'Playfair Display',serif;
+    font-size:1.35rem;font-weight:700;
+    color:var(--navy);line-height:1.2;
+  }
+  .section-title span{
+    display:block;font-size:0.72rem;
+    font-family:'Source Serif 4',serif;font-weight:600;
+    letter-spacing:1.5px;text-transform:uppercase;
+    color:var(--gold);font-style:normal;
+    margin-bottom:0.1rem;
+  }
+
+  /* ── MATÉRIA GRID ── */
+  .materia-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+    gap:1.25rem;
+  }
+
+  /* ── MATÉRIA CARD ── */
+  .materia-card{
+    background:white;
+    border:1px solid var(--border-light);
+    border-radius:8px;
+    border-left:5px solid;
+    box-shadow:var(--shadow);
+    text-decoration:none;
+    display:flex;
+    flex-direction:column;
+    padding:1.5rem 1.6rem 1.4rem;
+    transition:transform .2s ease, box-shadow .2s ease, border-left-width .15s ease;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+  }
+  .materia-card::before{
+    content:'';
+    position:absolute;
+    top:0;right:0;
+    width:80px;height:80px;
+    border-radius:50%;
+    opacity:0.05;
+    transform:translate(20px,-20px);
+    transition:opacity .2s;
+  }
+  .materia-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 40px rgba(13,27,42,0.16);
+  }
+  .materia-card:hover::before{opacity:0.12;}
+
+  .materia-icon{
+    font-size:2rem;
+    line-height:1;
+    margin-bottom:0.9rem;
+  }
+  .materia-nome{
+    font-family:'Playfair Display',serif;
+    font-size:1.08rem;font-weight:700;
+    line-height:1.25;
+    margin-bottom:0.35rem;
+  }
+  .materia-desc{
+    font-size:0.8rem;
+    color:var(--text-soft);
+    line-height:1.6;
+    flex:1;
+    font-style:italic;
+  }
+  .materia-footer{
+    display:flex;align-items:center;justify-content:space-between;
+    margin-top:1rem;padding-top:0.8rem;
+    border-top:1px solid var(--border-light);
+  }
+  .materia-tags{display:flex;flex-wrap:wrap;gap:0.3rem;}
+  .tag{
+    display:inline-block;
+    font-size:0.6rem;font-weight:700;
+    letter-spacing:0.8px;text-transform:uppercase;
+    padding:0.15rem 0.45rem;border-radius:2px;
+    font-family:'Source Serif 4',serif;
+  }
+  .tag-blue{background:#dce8f5;color:var(--blue-accent);}
+  .tag-green{background:#dceee3;color:var(--green-accent);}
+  .tag-gold{background:var(--gold-pale);color:#7a5a00;border:1px solid #d4aa3a;}
+  .tag-red{background:#fde8e8;color:var(--red-accent);}
+  .tag-purple{background:#ece5f5;color:var(--purple-accent);}
+  .tag-navy{background:#e0e8f2;color:var(--navy);}
+
+  .materia-arrow{
+    font-size:1.1rem;
+    color:var(--border);
+    font-weight:700;
+    transition:color .2s,transform .2s;
+  }
+  .materia-card:hover .materia-arrow{
+    color:var(--gold);
+    transform:translateX(4px);
+  }
+
+  /* Cores por matéria */
+  .mc-penal{border-left-color:var(--red-accent);}
+  .mc-penal .materia-nome{color:var(--red-accent);}
+  .mc-penal::before{background:var(--red-accent);}
+
+  .mc-proc-penal{border-left-color:#c0392b;}
+  .mc-proc-penal .materia-nome{color:#c0392b;}
+  .mc-proc-penal::before{background:#c0392b;}
+
+  .mc-const{border-left-color:var(--navy);}
+  .mc-const .materia-nome{color:var(--navy);}
+  .mc-const::before{background:var(--navy);}
+
+  .mc-admin{border-left-color:var(--blue-accent);}
+  .mc-admin .materia-nome{color:var(--blue-accent);}
+  .mc-admin::before{background:var(--blue-accent);}
+
+  .mc-proc-civil{border-left-color:#2471a3;}
+  .mc-proc-civil .materia-nome{color:#2471a3;}
+  .mc-proc-civil::before{background:#2471a3;}
+
+  .mc-civil{border-left-color:var(--gold);}
+  .mc-civil .materia-nome{color:#7a5a00;}
+  .mc-civil::before{background:var(--gold);}
+
+  .mc-empresarial{border-left-color:#1a6b4a;}
+  .mc-empresarial .materia-nome{color:#1a6b4a;}
+  .mc-empresarial::before{background:#1a6b4a;}
+
+  .mc-dh{border-left-color:var(--purple-accent);}
+  .mc-dh .materia-nome{color:var(--purple-accent);}
+  .mc-dh::before{background:var(--purple-accent);}
+
+  .mc-human{border-left-color:#6b4a1a;}
+  .mc-human .materia-nome{color:#6b4a1a;}
+  .mc-human::before{background:#6b4a1a;}
+
+  .mc-clt{border-left-color:#145a32;}
+  .mc-clt .materia-nome{color:#145a32;}
+  .mc-clt::before{background:#145a32;}
+
+  .mc-proc-trab{border-left-color:#0e6655;}
+  .mc-proc-trab .materia-nome{color:#0e6655;}
+  .mc-proc-trab::before{background:#0e6655;}
+
+  /* ── ALERTS ── */
+  .alert{
+    padding:0.9rem 1.2rem;border-radius:4px;
+    font-size:0.84rem;line-height:1.7;
+    display:flex;gap:0.7rem;align-items:flex-start;
+  }
+  .alert-gold{background:var(--gold-pale);border:1px solid #d4aa3a;color:#5a4000;}
+  .alert-navy{background:#f0f4f8;border:1px solid #abc;color:var(--navy);}
+  .alert-green{background:#edf7f0;border:1px solid #7ec89a;color:#1a4a2e;}
+  .alert-icon{font-size:1.1rem;flex-shrink:0;margin-top:0.05rem;}
+  .mt2{margin-top:1rem;}
+  .mt3{margin-top:1.5rem;}
+
+  /* ── CARD BÁSICO ── */
+  .card{
+    background:white;border:1px solid var(--border-light);
+    border-radius:6px;padding:1.4rem 1.6rem;
+    box-shadow:var(--shadow);
+  }
+  .card h3{
+    font-family:'Playfair Display',serif;
+    font-size:1.05rem;font-weight:700;
+    margin-bottom:0.6rem;padding-bottom:0.5rem;
+    border-bottom:1px solid var(--border-light);
+  }
+  .card p,.card li{font-size:0.88rem;line-height:1.7;color:var(--text-mid);}
+  .card ul{padding-left:1.1rem;}
+  .card li{margin-bottom:0.3rem;}
+  .card-grid{display:grid;gap:1rem;}
+  .card-grid-2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr));}
+  .card-grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
+  .type-card{border-top:4px solid;}
+  .tc-blue{border-top-color:var(--blue-accent);}.tc-blue h3{color:var(--blue-accent);}
+  .tc-gold{border-top-color:var(--gold);}.tc-gold h3{color:#7a5a00;}
+  .tc-green{border-top-color:var(--green-accent);}.tc-green h3{color:var(--green-accent);}
+  .tc-red{border-top-color:var(--red-accent);}.tc-red h3{color:var(--red-accent);}
+  .tc-navy{border-top-color:var(--navy);}.tc-navy h3{color:var(--navy);}
+
+  /* ── COMO USAR ── */
+  .how-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:1.25rem;
+    counter-reset:step;
+  }
+  .how-card{
+    background:white;border:1px solid var(--border-light);
+    border-radius:6px;padding:1.4rem;
+    box-shadow:var(--shadow);
+    position:relative;
+    padding-top:2.4rem;
+  }
+  .how-card::before{
+    counter-increment:step;
+    content:counter(step, decimal-leading-zero);
+    position:absolute;top:1rem;left:1.4rem;
+    font-family:'Playfair Display',serif;
+    font-size:1.6rem;font-weight:900;
+    color:var(--border);line-height:1;
+  }
+  .how-card h4{
+    font-family:'Playfair Display',serif;
+    font-size:0.95rem;font-weight:700;
+    color:var(--navy);margin-bottom:0.4rem;
+  }
+  .how-card p{font-size:0.82rem;color:var(--text-soft);line-height:1.65;}
+
+  /* ── SEÇÃO ENAM ── */
+  .enam-section{
+    background:var(--navy);border-radius:8px;
+    padding:2.2rem 2rem;color:white;
+    margin-top:3.5rem;
+  }
+  .enam-section h2{
+    font-family:'Playfair Display',serif;
+    font-size:1.5rem;color:var(--gold-light);
+    margin-bottom:0.4rem;
+  }
+  .enam-section .intro{
+    font-size:0.85rem;color:rgba(255,255,255,0.6);
+    margin-bottom:1.5rem;font-style:italic;
+  }
+  .enam-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:0.9rem;
+  }
+  .enam-item{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(200,150,12,0.25);
+    border-left:4px solid var(--gold);
+    border-radius:0 4px 4px 0;
+    padding:1rem 1.2rem;
+  }
+  .enam-item-label{
+    font-size:0.65rem;font-weight:700;
+    letter-spacing:1.5px;text-transform:uppercase;
+    color:var(--gold-light);
+    font-family:'Source Serif 4',serif;
+    margin-bottom:0.3rem;
+  }
+  .enam-item-text{
+    font-size:0.82rem;color:rgba(255,255,255,0.82);
+    line-height:1.6;
+  }
+  .enam-item-text strong{color:white;}
+
+  /* ── FOOTER ── */
+  footer{
+    background:var(--navy);color:rgba(255,255,255,0.45);
+    text-align:center;padding:1.5rem;
+    font-size:0.75rem;border-top:2px solid var(--gold);
+  }
+  footer strong{color:var(--gold-light);}
+
+  /* ── DIVIDER ── */
+  .divider{
+    height:1px;
+    background:linear-gradient(to right,transparent,var(--border),transparent);
+    margin:1.2rem 0;
+  }
+
+  /* ── SEARCH BAR ── */
+  .search-wrap{
+    position:relative;
+    max-width:560px;margin:0 auto 0;
+    position:relative;
+  }
+  .search-wrap input{
+    width:100%;
+    font-family:'Source Serif 4',serif;
+    font-size:0.9rem;
+    color:var(--text-dark);
+    background:rgba(255,255,255,0.1);
+    border:1px solid rgba(200,150,12,0.5);
+    border-radius:4px;
+    padding:0.7rem 2.8rem 0.7rem 1rem;
+    outline:none;
+    transition:border-color .2s,background .2s;
+    position:relative;
+  }
+  .search-wrap input::placeholder{color:rgba(255,255,255,0.4);font-style:italic;}
+  .search-wrap input:focus{
+    border-color:var(--gold-light);
+    background:rgba(255,255,255,0.15);
+  }
+  .search-wrap .search-icon{
+    position:absolute;right:0.9rem;top:50%;transform:translateY(-50%);
+    font-size:0.95rem;color:rgba(200,150,12,0.7);
+    pointer-events:none;
+  }
+
+  /* ── MINI REF ── */
+  .mini-ref{font-size:0.74rem;color:var(--text-soft);font-family:'JetBrains Mono',monospace;}
+
+  /* ── PRINT ── */
+  @media print{
+    #top-nav,footer{display:none;}
+    #hero{padding:1.2rem 1rem;}
+    .page-wrap{padding:0 0.35rem 1rem!important;}
+    .materia-card{break-inside:avoid;box-shadow:none;}
+    .enam-section{background:#f0f4f8!important;color:#000!important;}
+    .enam-section h2{color:#0d1b2a!important;}
+    .enam-item{background:white!important;border:1px solid #ccc!important;}
+  }
+
+  /* ── RESPONSIVE ── */
+  @media(max-width:640px){
+    #hero{padding:2.5rem 1rem 2rem;}
+    #hero h1{font-size:1.8rem;}
+    .materia-grid{grid-template-columns:1fr;}
+    .how-grid{grid-template-columns:1fr;}
+    .enam-grid{grid-template-columns:1fr;}
+    .hero-stat-sep{display:none;}
+    .hero-stats{gap:1.5rem;}
+    .card-grid-2,.card-grid-3{grid-template-columns:1fr;}
+  }
+
+  /* ── ANIMAÇÃO DE ENTRADA ── */
+  @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+  .materia-card{animation:fadeUp .4s ease both;}
+  .materia-card:nth-child(1){animation-delay:.05s;}
+  .materia-card:nth-child(2){animation-delay:.1s;}
+  .materia-card:nth-child(3){animation-delay:.15s;}
+  .materia-card:nth-child(4){animation-delay:.2s;}
+  .materia-card:nth-child(5){animation-delay:.25s;}
+  .materia-card:nth-child(6){animation-delay:.3s;}
+  .materia-card:nth-child(7){animation-delay:.35s;}
+  .materia-card:nth-child(8){animation-delay:.4s;}
+  .materia-card:nth-child(9){animation-delay:.45s;}
+  .materia-card:nth-child(10){animation-delay:.5s;}
+  .materia-card:nth-child(11){animation-delay:.55s;}
+</style>
+</head>
+<body>
+
+<nav id="top-nav" aria-label="Navegação principal">
+  <div class="nav-brand">
+    <span class="brand-icon">⚖️</span>
+    Vade Mecum · Magistratura
+  </div>
+  <div class="nav-links">
+    <a href="#materias" class="active">Matérias</a>
+    <a href="#como-usar">Como Usar</a>
+    <a href="#enam">Edital ENAM</a>
+    <a href="#sobre">Sobre</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+<header id="hero">
+  <div class="badge">Magistratura · ENAM · Concurso Unificado · Atualização conferida em 03/05/2026</div>
+  <h1>Vade Mecum <span>Digital</span></h1>
+  <p class="subtitle">Fluxogramas, tabelas comparativas, jurisprudência e pontos de prova organizados por matéria para magistratura</p>
+
+  <div class="search-wrap">
+    <input type="text" placeholder="Buscar matéria, instituto, artigo ou súmula…" id="searchInput" autocomplete="off">
+    <span class="search-icon">🔍</span>
+  </div>
+
+  <div class="hero-stats" style="margin-top:1.8rem;">
+    <div class="hero-stat">
+      <div class="hero-stat-num">11</div>
+      <div class="hero-stat-label">Matérias</div>
+    </div>
+    <div class="hero-stat-sep"></div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">ENAM</div>
+      <div class="hero-stat-label">Edital Unificado</div>
+    </div>
+    <div class="hero-stat-sep"></div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">STF/STJ</div>
+      <div class="hero-stat-label">Jurisprudência</div>
+    </div>
+    <div class="hero-stat-sep"></div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">2026</div>
+      <div class="hero-stat-label">Atualizado</div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════ PAGE WRAP ═══════════════════════════ -->
+<div class="page-wrap">
+
+  <!-- ── MATÉRIAS ── -->
+  <section class="section" id="materias">
+    <div class="section-header">
+      <div class="section-num">01</div>
+      <div class="section-title">
+        <span>Selecione a Matéria</span>
+        Áreas do Direito — Magistratura ENAM
+      </div>
+    </div>
+
+    <div class="materia-grid" id="materiaGrid">
+
+      <!-- 1. DIREITO PENAL -->
+      <a class="materia-card mc-penal" href="index-penal.html">
+        <div class="materia-icon">⚖️</div>
+        <div class="materia-nome">Direito Penal</div>
+        <div class="materia-desc">Teoria do crime, tipicidade, ilicitude, culpabilidade, penas, crimes em espécie, concurso de agentes, extinção da punibilidade e legislação especial.</div>
+        <div class="materia-footer">
+          <div class="materia-tags">
+            <span class="tag tag-red">CP</span>
+            <span class="tag tag-red">Lei 11.343</span>
+            <span class="tag tag-red">Lei 8.072</span>
+          </div>
+          <span class="materia-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 2. DIREITO PROCESSUAL PENAL -->
+      <a class="materia-card mc-proc-penal" href="direito-processual-penal/index.html">
+        <div class="materia-icon">🏛️</div>
+        <div class="materia-nome">Direito Processual Penal</div>
+        <div class="materia-desc">Inquérito policial, ação penal, competência, provas, prisões e medidas cautelares, recursos, execução penal e sistemas de garantias processuais.</div>
+        <div class="materia-footer">
+          <div class="materia-tags">
+            <span class="tag tag-red">CPP</span>
+            <span class="tag tag-red">LEP</span>
+            <span class="tag tag-red">STJ/STF</span>
+          </div>
+          <span class="materia-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 3. DIREITO CONSTITUCIONAL -->
+      <a class="materia-card mc-const" href="direito-constitucional/index.html">
+        <div class="materia-icon">📜</div>
+        <div class="materia-nome">Direito Constitucional</div>
+        <div class="materia-desc">Princípios fundamentais, direitos e garantias fundamentais, organização do Estado, poder constituinte, controle de constitucionalidade e jurisprudência do STF.</div>
+        <div class="materia-footer">
+          <div class="materia-tags">
+            <span class="tag tag-navy">CF/88</span>
+            <span class="tag tag-navy">STF</span>
+            <span class="tag tag-navy">ADI/ADC</span>
+          </div>
+          <span class="materia-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 4. DIREITO ADMINISTRATIVO -->
+      <a class="materia-card mc-admin" href="direito-administrativo/index.html">
+        <div class="materia-icon">🏢</div>
+        <div class="materia-nome">Direito Administrativo</div>
+        <div class="materia-desc">Princípios da Administração Pública, atos e contratos administrativos, licitação (Lei 14.133/2021), responsabilidade civil do Estado, agentes e servidores públicos.</div>
+        <div class="materia-footer">
+          <div class="materia-tags">
+            <span class="tag tag-blue">Lei 14.133</span>
+            <span class="tag tag-blue">Lei 8.112</span>
+            <span class="tag tag-blue">DL 200</span>
+          </div>
+          <span class="materia-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 5. DIREITO PROCESSUAL CIVIL -->
+      <a class="materia-card mc-proc-civil" href="direito-processual-civil/index.html">
+        <div class="materia-icon">⚙️</div>
+        <div class="materia-nome">Direito Processual Civil</div>
+        <div class="materia-desc">CPC/2015, competência, partes e procuradores, litisconsórcio, petição inicial, resposta do réu, provas, sentença, coisa julgada, recursos e cumprimento de sentença.</div>
+        <div class="materia-footer">
+          <div class="materia-tags">
+            <span class="tag tag-blue">CPC/2015</span>
+            <span class="tag tag-blue">STJ</span>
+            <span class="tag tag-blue">Recursos</span>
+          </div>
+          <span class="materia-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 6. DIREITO CIVIL -->
+      <a class="materia-card mc-civil" href="index-civil.html">
+        <div class="materia-icon">📕</div>
+        <div class="materia-nome">Direito Civil</div>
+        <div class="materia-desc">Parte Geral, obrigações, contratos, responsabilidade civil, direitos reais, posse, propriedade, família e sucessões. Base do Código Civil de 2002 e legislação extravagante.</div>
+        <div class="materia-footer">
+          <div class="materia-tags">
+            <span class="tag tag-gold">CC/2002</span>
+            <span class="tag tag-gold">CDC</span>
+            <span class="tag tag-gold">LGPD</span>
+          </div>
+          <span class="materia-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 7. DIREITO EMPRESARIAL -->
+      <a class="materia-card mc-empresarial" href="direito-empresarial/index.html">
+        <div class="materia-icon">🏦</div>
+        <div class="materia-nome">Direito Empresarial</div>
+        <div class="materia-desc">Teoria geral da empresa, sociedades empresárias, títulos de crédito, contratos mercantis, recuperação judicial e extrajudicial, falência e microempresas (LC 123/2006).</div>
+        <div class="materia-footer">
+          <div class="materia-tags">
+            <span class="tag tag-green">CC Empresarial</span>
+            <span class="tag tag-green">Lei 11.101</span>
+            <span class="tag tag-green">LC 123</span>
+          </div>
+          <span class="materia-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 8. DIREITOS HUMANOS -->
+      <a class="materia-card mc-dh" href="direitos-humanos/index.html">
+        <div class="materia-icon">🌐</div>
+        <div class="materia-nome">Direitos Humanos</div>
+        <div class="materia-desc">Sistema Internacional e Interamericano de proteção, Convenção Americana, Pacto de São José, direitos civis e políticos, econômicos, sociais e culturais, e jurisprudência da Corte IDH.</div>
+        <div class="materia-footer">
+          <div class="materia-tags">
+            <span class="tag tag-purple">CADH</span>
+            <span class="tag tag-purple">Corte IDH</span>
+            <span class="tag tag-purple">ONU</span>
+          </div>
+          <span class="materia-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 9. FORMAÇÃO HUMANÍSTICA -->
+      <a class="materia-card mc-human" href="formacao-humanistica/index.html">
+        <div class="materia-icon">📚</div>
+        <div class="materia-nome">Formação Humanística</div>
+        <div class="materia-desc">Filosofia do Direito, sociologia jurídica, ética judicial, teoria da decisão, hermenêutica jurídica, Estado Democrático de Direito e Estatuto da Magistratura.</div>
+        <div class="materia-footer">
+          <div class="materia-tags">
+            <span class="tag tag-gold">Ética</span>
+            <span class="tag tag-gold">LOMAN</span>
+            <span class="tag tag-gold">CNJ</span>
+          </div>
+          <span class="materia-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 10. CLT -->
+      <a class="materia-card mc-clt" href="clt/index.html">
+        <div class="materia-icon">🤝</div>
+        <div class="materia-nome">CLT — Direito do Trabalho</div>
+        <div class="materia-desc">Relação de emprego, contrato de trabalho, jornada, remuneração, férias, FGTS, extinção do contrato, negociação coletiva, sindicatos e Reforma Trabalhista (Lei 13.467/2017).</div>
+        <div class="materia-footer">
+          <div class="materia-tags">
+            <span class="tag tag-green">CLT</span>
+            <span class="tag tag-green">Lei 13.467</span>
+            <span class="tag tag-green">TST</span>
+          </div>
+          <span class="materia-arrow">→</span>
+        </div>
+      </a>
+
+      <!-- 11. DIREITO PROCESSUAL DO TRABALHO -->
+      <a class="materia-card mc-proc-trab" href="direito-processual-trabalho/index.html">
+        <div class="materia-icon">🔨</div>
+        <div class="materia-nome">Direito Processual do Trabalho</div>
+        <div class="materia-desc">Organização da Justiça do Trabalho, reclamação trabalhista, rito sumaríssimo, provas, recursos trabalhistas, liquidação e execução, dissídios individuais e coletivos.</div>
+        <div class="materia-footer">
+          <div class="materia-tags">
+            <span class="tag tag-green">CLT Proc.</span>
+            <span class="tag tag-green">TST</span>
+            <span class="tag tag-green">OJs</span>
+          </div>
+          <span class="materia-arrow">→</span>
+        </div>
+      </a>
+
+    </div><!-- /materia-grid -->
+
+    <div class="alert alert-gold mt3">
+      <div class="alert-icon">⭐</div>
+      <div><strong>Dica de estudo:</strong> clique em qualquer matéria para acessar fluxogramas decisórios, tabelas comparativas, jurisprudência do STF/STJ/TST e pontos que mais caem em magistratura. Cada página segue a estrutura de artigo do Vade Mecum com navegação interna.</div>
+    </div>
+  </section>
+
+  <!-- ── COMO USAR ── -->
+  <section class="section" id="como-usar">
+    <div class="section-header">
+      <div class="section-num">02</div>
+      <div class="section-title">
+        <span>Guia de Navegação</span>
+        Como Usar Este Vade Mecum
+      </div>
+    </div>
+
+    <div class="how-grid">
+      <div class="how-card">
+        <h4>Escolha a Matéria</h4>
+        <p>Clique no card da área desejada. Cada matéria tem sumário com atalhos internos para navegar diretamente ao instituto que precisa.</p>
+      </div>
+      <div class="how-card">
+        <h4>Fluxogramas Decisórios</h4>
+        <p>Cada artigo ou tema possui fluxograma passo a passo para raciocínio judicial. Ideal para sentença, discursiva e oral.</p>
+      </div>
+      <div class="how-card">
+        <h4>Tabelas Comparativas</h4>
+        <p>Coloque lado a lado os institutos, espécies e consequências jurídicas. Formato otimizado para memorização rápida.</p>
+      </div>
+      <div class="how-card">
+        <h4>Jurisprudência STF/STJ</h4>
+        <p>Teses, súmulas, leading cases e enunciados essenciais organizados por tema. Sem alucinação: apenas fontes verificadas.</p>
+      </div>
+      <div class="how-card">
+        <h4>Pontos de Prova</h4>
+        <p>Checklist objetivo com as pegadinhas e questões clássicas de magistratura para cada artigo ou tema abordado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EDITAL ENAM ── -->
+  <section class="enam-section" id="enam">
+    <h2>🎓 Edital ENAM — Magistratura Unificada</h2>
+    <p class="intro">Distribuição das matérias conforme o edital de concurso unificado para ingresso na magistratura estadual.</p>
+    <div class="enam-grid">
+      <div class="enam-item">
+        <div class="enam-item-label">Direito Público Central</div>
+        <div class="enam-item-text"><strong>Constitucional · Administrativo</strong><br>Base de toda a ordem jurídica e do exercício da função jurisdicional.</div>
+      </div>
+      <div class="enam-item">
+        <div class="enam-item-label">Direito Penal e Processo</div>
+        <div class="enam-item-text"><strong>Penal · Processual Penal</strong><br>Alta incidência em prova objetiva e discursiva. Exige domínio de STF e STJ.</div>
+      </div>
+      <div class="enam-item">
+        <div class="enam-item-label">Direito Privado</div>
+        <div class="enam-item-text"><strong>Civil · Empresarial · Proc. Civil</strong><br>CPC/2015 e CC/2002 com jurisprudência do STJ. Maior volume de conteúdo.</div>
+      </div>
+      <div class="enam-item">
+        <div class="enam-item-label">Direito Social e do Trabalho</div>
+        <div class="enam-item-text"><strong>CLT · Proc. Trabalho</strong><br>Reforma trabalhista, Instrução Normativa 39 e OJs do TST.</div>
+      </div>
+      <div class="enam-item">
+        <div class="enam-item-label">Dimensão Internacional</div>
+        <div class="enam-item-text"><strong>Direitos Humanos</strong><br>Sistema interamericano, CADH e jurisprudência da Corte IDH com repercussão interna.</div>
+      </div>
+      <div class="enam-item">
+        <div class="enam-item-label">Formação para a Função</div>
+        <div class="enam-item-text"><strong>Formação Humanística</strong><br>Ética judicial, LOMAN, CNJ e teoria da decisão. Peso crescente nas provas discursivas.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SOBRE ── -->
+  <section class="section" id="sobre">
+    <div class="section-header">
+      <div class="section-num">03</div>
+      <div class="section-title">
+        <span>Metodologia e Fontes</span>
+        Sobre Este Vade Mecum
+      </div>
+    </div>
+    <div class="card-grid card-grid-2">
+      <div class="card type-card tc-navy">
+        <h3>🎯 Proposta Metodológica</h3>
+        <p>Este Vade Mecum foi estruturado especificamente para a preparação à magistratura, com foco no raciocínio judicial aplicado. Cada tema apresenta: texto legal fatiado para análise, fluxograma decisório, tabela comparativa de institutos, jurisprudência selecionada e pontos de prova.</p>
+        <div class="divider"></div>
+        <p>O conteúdo segue a estrutura do edital unificado do ENAM e é organizado para uso em provas objetivas, discursivas, sentença e oral.</p>
+      </div>
+      <div class="card type-card tc-gold">
+        <h3>📌 Fontes e Atualização</h3>
+        <ul>
+          <li>Legislação federal vigente (texto oficial do Planalto)</li>
+          <li>Jurisprudência STF, STJ, TST e TRFs com referência aos temas e leading cases</li>
+          <li>Súmulas, OJs e enunciados de jornadas de direito</li>
+          <li>Provimentos e resoluções do CNJ</li>
+          <li>Doutrina dominante citada sem reprodução indevida</li>
+          <li>Atualização conferida em 03/05/2026</li>
+        </ul>
+        <div class="alert alert-gold mt2">
+          <div class="alert-icon">⚠️</div>
+          <div><strong>Cautela:</strong> sempre confirme a legislação vigente e a jurisprudência atualizada nos sítios oficiais do STF, STJ, TST e Presidência da República antes das provas.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-wrap -->
+
+<footer>
+  <strong>Vade Mecum Digital — Magistratura / ENAM</strong> · 11 matérias estruturadas para concurso · Fluxogramas, jurisprudência e pontos de prova · Atualização conferida em 03/05/2026
+</footer>
+
+<script>
+  // Busca simples nos cards de matéria
+  const searchInput = document.getElementById('searchInput');
+  const cards = document.querySelectorAll('.materia-card');
+
+  searchInput.addEventListener('input', function() {
+    const q = this.value.toLowerCase().trim();
+    cards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      card.style.display = (!q || text.includes(q)) ? '' : 'none';
+    });
+  });
+</script>
+</body>
+</html>

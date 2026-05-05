@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vade Mecum Magistratura | Código Civil | 2026</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ============================================================
+           AJUSTE AUTOMÁTICO DA ÁREA PRINCIPAL / IFRAME
+           ============================================================ */
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .content-area {
+            padding: 0 !important;
+            overflow: auto !important;
+            background: var(--bg-main, #f7f2ea);
+        }
+
+        iframe#painel_artigos {
+            width: 100%;
+            height: 100dvh;
+            min-height: 100dvh;
+            border: none;
+            display: block;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        iframe#painel_artigos.auto-height {
+            height: var(--iframe-height, 100dvh) !important;
+            min-height: var(--iframe-height, 100dvh) !important;
+        }
+
+        @media print {
+            html,
+            body {
+                width: 100% !important;
+                height: auto !important;
+                min-height: auto !important;
+                overflow: visible !important;
+                background: #fff !important;
+            }
+
+            .sidebar,
+            .menu-toggle {
+                display: none !important;
+            }
+
+            .content-area {
+                position: static !important;
+                inset: auto !important;
+                width: 100% !important;
+                height: auto !important;
+                min-height: auto !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow: visible !important;
+                display: block !important;
+                background: #fff !important;
+            }
+
+            iframe#painel_artigos {
+                width: 100% !important;
+                height: var(--iframe-height, auto) !important;
+                min-height: var(--iframe-height, auto) !important;
+                border: none !important;
+                overflow: visible !important;
+                display: block !important;
+                background: #fff !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="menu-toggle" onclick="toggleMenu()" title="Ocultar/Mostrar Menu">☰</button>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>CÓDIGO CIVIL</h2>
+            <p>SISTEMA ESTRUTURADO</p>
+        </div>
+
+        <a href="vade-mecum-index.html" style="display:block;padding:0.5rem 1.2rem;font-size:0.78rem;color:var(--gold-light,#e8b84b);text-decoration:none;border-bottom:1px solid rgba(200,150,12,0.2);letter-spacing:1px;font-weight:600;">← VOLTAR AO ÍNDICE</a>
+        <nav class="menu-artigos">
+            <div class="menu-group-title">Parte Geral — Das Pessoas Naturais</div>
+            <a href="CC-ART-1.html" target="painel_artigos">Art. 1º - Capacidade de Direitos e Deveres</a>
+            <a href="CC-ART-2.html" target="painel_artigos">Art. 2º - Personalidade Civil e Nascituro</a>
+            <a href="CC-ART-3.html" target="painel_artigos">Art. 3º - Incapacidade Absoluta</a>
+            <a href="CC-ART-4.html" target="painel_artigos">Art. 4º - Incapacidade Relativa</a>
+            <a href="CC-ART-5.html" target="painel_artigos">Art. 5º - Cessação da Menoridade</a>
+            <a href="CC-ART-6.html" target="painel_artigos">Art. 6º - Fim da Existência da Pessoa Natural</a>
+            <a href="CC-ART-7.html" target="painel_artigos">Art. 7º - Morte Presumida sem Decretação de Ausência</a>
+            <a href="CC-ART-8.html" target="painel_artigos">Art. 8º - Comoriência</a>
+            <a href="CC-ART-9.html" target="painel_artigos">Art. 9º - Registro Público</a>
+            <a href="CC-ART-10.html" target="painel_artigos">Art. 10 - Averbações no Registro Público</a>
+
+            <div class="menu-group-title">Direitos da Personalidade</div>
+            <a href="CC-ART-11.html" target="painel_artigos">Art. 11 - Intransmissibilidade e Irrenunciabilidade</a>
+            <a href="CC-ART-12.html" target="painel_artigos">Art. 12 - Tutela dos Direitos da Personalidade</a>
+            <a href="CC-ART-13.html" target="painel_artigos">Art. 13 - Disposição do Próprio Corpo</a>
+            <a href="CC-ART-14.html" target="painel_artigos">Art. 14 - Disposição Gratuita do Corpo Pós-Morte</a>
+            <a href="CC-ART-15.html" target="painel_artigos">Art. 15 - Tratamento Médico e Risco de Vida</a>
+            <a href="CC-ART-16.html" target="painel_artigos">Art. 16 - Direito ao Nome</a>
+            <a href="CC-ART-17.html" target="painel_artigos">Art. 17 - Proteção do Nome</a>
+            <a href="CC-ART-18.html" target="painel_artigos">Art. 18 - Uso do Nome em Propaganda Comercial</a>
+            <a href="CC-ART-19.html" target="painel_artigos">Art. 19 - Proteção do Pseudônimo</a>
+            <a href="CC-ART-20.html" target="painel_artigos">Art. 20 - Imagem, Honra e Exposição da Pessoa</a>
+            <a href="CC-ART-21.html" target="painel_artigos">Art. 21 - Vida Privada</a>
+
+            <div class="menu-group-title">Da Ausência — Curadoria dos Bens do Ausente</div>
+            <a href="CC-ART-22.html" target="painel_artigos">Art. 22 - Declaração de Ausência e Nomeação de Curador</a>
+            <a href="CC-ART-23.html" target="painel_artigos">Art. 23 - Ausente com Mandatário Ineficaz ou Insuficiente</a>
+            <a href="CC-ART-24.html" target="painel_artigos">Art. 24 - Poderes e Obrigações do Curador</a>
+            <a href="CC-ART-25.html" target="painel_artigos">Art. 25 - Ordem Legal de Curadoria</a>
+
+            <div class="menu-group-title">Da Ausência — Sucessão Provisória</div>
+            <a href="CC-ART-26.html" target="painel_artigos">Art. 26 - Abertura da Sucessão Provisória</a>
+            <a href="CC-ART-27.html" target="painel_artigos">Art. 27 - Interessados na Sucessão Provisória</a>
+            <a href="CC-ART-28.html" target="painel_artigos">Art. 28 - Eficácia da Sentença e Inventário</a>
+            <a href="CC-ART-29.html" target="painel_artigos">Art. 29 - Conversão de Bens Móveis</a>
+            <a href="CC-ART-30.html" target="painel_artigos">Art. 30 - Garantias para Imissão na Posse</a>
+            <a href="CC-ART-31.html" target="painel_artigos">Art. 31 - Alienação ou Hipoteca de Imóveis do Ausente</a>
+            <a href="CC-ART-32.html" target="painel_artigos">Art. 32 - Representação do Ausente pelos Sucessores</a>
+            <a href="CC-ART-33.html" target="painel_artigos">Art. 33 - Frutos e Rendimentos dos Bens do Ausente</a>
+            <a href="CC-ART-34.html" target="painel_artigos">Art. 34 - Rendimentos ao Sucessor Excluído</a>
+            <a href="CC-ART-35.html" target="painel_artigos">Art. 35 - Prova da Morte durante a Posse Provisória</a>
+            <a href="CC-ART-36.html" target="painel_artigos">Art. 36 - Reaparecimento do Ausente na Posse Provisória</a>
+
+            <div class="menu-group-title">Da Ausência — Sucessão Definitiva</div>
+            <a href="CC-ART-37.html" target="painel_artigos">Art. 37 - Abertura da Sucessão Definitiva</a>
+            <a href="CC-ART-38.html" target="painel_artigos">Art. 38 - Sucessão Definitiva por Idade Avançada</a>
+            <a href="CC-ART-39.html" target="painel_artigos">Art. 39 - Regresso do Ausente após Sucessão Definitiva</a>
+
+            <div class="menu-group-title">Das Pessoas Jurídicas — Disposições Gerais</div>
+            <a href="CC-ART-40.html" target="painel_artigos">Art. 40 - Pessoas Jurídicas de Direito Público e Privado</a>
+            <a href="CC-ART-41.html" target="painel_artigos">Art. 41 - Pessoas Jurídicas de Direito Público Interno</a>
+            <a href="CC-ART-42.html" target="painel_artigos">Art. 42 - Pessoas Jurídicas de Direito Público Externo</a>
+            <a href="CC-ART-43.html" target="painel_artigos">Art. 43 - Responsabilidade das Pessoas Jurídicas de Direito Público</a>
+            <a href="CC-ART-44.html" target="painel_artigos">Art. 44 - Pessoas Jurídicas de Direito Privado</a>
+            <a href="CC-ART-45.html" target="painel_artigos">Art. 45 - Existência Legal da Pessoa Jurídica</a>
+            <a href="CC-ART-46.html" target="painel_artigos">Art. 46 - Registro da Pessoa Jurídica</a>
+            <a href="CC-ART-47.html" target="painel_artigos">Art. 47 - Vinculação por Atos dos Administradores</a>
+            <a href="CC-ART-48.html" target="painel_artigos">Art. 48 - Administração Coletiva</a>
+            <a href="CC-ART-49.html" target="painel_artigos">Art. 49 - Administração Provisória Judicial</a>
+            <a href="CC-ART-49-A.html" target="painel_artigos">Art. 49-A - Autonomia Patrimonial da Pessoa Jurídica</a>
+            <a href="CC-ART-50.html" target="painel_artigos">Art. 50 - Desconsideração da Personalidade Jurídica</a>
+            <a href="CC-ART-51.html" target="painel_artigos">Art. 51 - Dissolução da Pessoa Jurídica</a>
+            <a href="CC-ART-52.html" target="painel_artigos">Art. 52 - Direitos da Personalidade da Pessoa Jurídica</a>
+        </nav>
+    </aside>
+
+    <main class="content-area">
+        <iframe
+            id="painel_artigos"
+            src="CC-ART-1.html"
+            name="painel_artigos"
+            title="Painel de artigos do Código Civil">
+        </iframe>
+    </main>
+
+    <script src="script.js"></script>
+
+    <script>
+        /* ============================================================
+           ALTURA AUTOMÁTICA DO IFRAME
+           ============================================================ */
+        (function () {
+            const iframe = document.getElementById('painel_artigos');
+
+            if (!iframe) return;
+
+            function getIframeDocument() {
+                return iframe.contentDocument || iframe.contentWindow.document;
+            }
+
+            function calcularAlturaReal(doc) {
+                const html = doc.documentElement;
+                const body = doc.body;
+
+                if (!html || !body) return window.innerHeight;
+
+                return Math.max(
+                    body.scrollHeight,
+                    body.offsetHeight,
+                    html.clientHeight,
+                    html.scrollHeight,
+                    html.offsetHeight
+                );
+            }
+
+            function ajustarAlturaIframe() {
+                try {
+                    const doc = getIframeDocument();
+                    const altura = calcularAlturaReal(doc);
+
+                    iframe.classList.add('auto-height');
+                    iframe.style.setProperty('--iframe-height', altura + 'px');
+
+                    document.documentElement.style.setProperty('--iframe-height', altura + 'px');
+                } catch (erro) {
+                    iframe.classList.remove('auto-height');
+                    iframe.style.removeProperty('--iframe-height');
+
+                    console.warn(
+                        'Não foi possível ajustar automaticamente o iframe. Verifique se o conteúdo está no mesmo domínio/origem.',
+                        erro
+                    );
+                }
+            }
+
+            function prepararObservador() {
+                try {
+                    const doc = getIframeDocument();
+
+                    ajustarAlturaIframe();
+
+                    if (doc.fonts && doc.fonts.ready) {
+                        doc.fonts.ready.then(ajustarAlturaIframe);
+                    }
+
+                    const observer = new ResizeObserver(ajustarAlturaIframe);
+
+                    if (doc.documentElement) observer.observe(doc.documentElement);
+                    if (doc.body) observer.observe(doc.body);
+
+                    const mutationObserver = new MutationObserver(ajustarAlturaIframe);
+
+                    if (doc.body) {
+                        mutationObserver.observe(doc.body, {
+                            childList: true,
+                            subtree: true,
+                            attributes: true,
+                            characterData: true
+                        });
+                    }
+
+                    setTimeout(ajustarAlturaIframe, 150);
+                    setTimeout(ajustarAlturaIframe, 500);
+                    setTimeout(ajustarAlturaIframe, 1000);
+                } catch (erro) {
+                    console.warn('Não foi possível observar alterações no iframe.', erro);
+                }
+            }
+
+            iframe.addEventListener('load', function () {
+                prepararObservador();
+
+                const area = document.querySelector('.content-area');
+                if (area) area.scrollTo({ top: 0, behavior: 'auto' });
+            });
+
+            window.addEventListener('load', ajustarAlturaIframe);
+            window.addEventListener('resize', ajustarAlturaIframe);
+            window.addEventListener('beforeprint', ajustarAlturaIframe);
+
+            document.querySelectorAll('.menu-artigos a[target="painel_artigos"]').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    document.querySelectorAll('.menu-artigos a').forEach(function (item) {
+                        item.classList.remove('active');
+                    });
+
+                    link.classList.add('active');
+
+                    setTimeout(ajustarAlturaIframe, 250);
+                    setTimeout(ajustarAlturaIframe, 700);
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
