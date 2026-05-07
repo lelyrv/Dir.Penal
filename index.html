@@ -5,25 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vade Mecum Digital — Magistratura ENAM</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="study-tracker.js"></script>
 <style>
   :root{
-    --navy:#0d1b2a;
-    --navy-mid:#1a2f45;
-    --navy-light:#243b55;
-    --gold:#c8960c;
-    --gold-light:#e8b84b;
-    --gold-pale:#fdf3d8;
-    --cream:#faf7f2;
-    --cream-mid:#f0ebe2;
-    --text-dark:#1a1208;
-    --text-mid:#3d3020;
-    --text-soft:#6b5c40;
-    --border:#d4c49a;
-    --border-light:#e8dcbf;
-    --red-accent:#8b1a1a;
-    --green-accent:#1a4a2e;
-    --blue-accent:#1a3a5c;
-    --purple-accent:#4a1a5c;
+    --navy:#0d1b2a;--navy-mid:#1a2f45;--navy-light:#243b55;
+    --gold:#c8960c;--gold-light:#e8b84b;--gold-pale:#fdf3d8;
+    --cream:#faf7f2;--cream-mid:#f0ebe2;
+    --text-dark:#1a1208;--text-mid:#3d3020;--text-soft:#6b5c40;
+    --border:#d4c49a;--border-light:#e8dcbf;
+    --red-accent:#8b1a1a;--green-accent:#1a4a2e;
+    --blue-accent:#1a3a5c;--purple-accent:#4a1a5c;
     --shadow:0 4px 24px rgba(13,27,42,0.10);
   }
   *{box-sizing:border-box;margin:0;padding:0;}
@@ -31,308 +23,239 @@
   body{font-family:'Source Serif 4',Georgia,serif;background:var(--cream);color:var(--text-dark);font-size:15px;line-height:1.75;}
 
   /* ── TOP NAV ── */
-  #top-nav{
-    position:sticky;top:0;z-index:999;
-    background:var(--navy);
-    border-bottom:3px solid var(--gold);
-    padding:0 1.2rem;
-    display:flex;align-items:stretch;
-    flex-wrap:wrap;
-  }
-  #top-nav .nav-brand{
-    font-family:'Playfair Display',serif;
-    color:var(--gold-light);
-    font-size:0.88rem;font-weight:700;
-    white-space:nowrap;
-    padding:0.7rem 1.2rem 0.7rem 0;
-    border-right:1px solid rgba(200,150,12,0.3);
-    margin-right:0.8rem;
-    letter-spacing:0.5px;
-    display:flex;align-items:center;gap:0.5rem;
-  }
-  #top-nav .nav-brand .brand-icon{font-size:1rem;}
-  #top-nav .nav-links{
-    display:flex;align-items:center;gap:0;
-    flex-wrap:wrap;
-  }
-  #top-nav a{
-    color:rgba(255,255,255,0.72);
-    text-decoration:none;
-    font-size:clamp(0.58rem,0.62vw,0.7rem);
-    font-family:'Source Serif 4',serif;
-    font-weight:600;letter-spacing:0.45px;
-    text-transform:uppercase;
-    padding:0.65rem 0.6rem;
-    white-space:nowrap;
-    transition:color .2s;
-    border-bottom:3px solid transparent;
-    margin-bottom:-3px;
-  }
+  #top-nav{position:sticky;top:0;z-index:999;background:var(--navy);border-bottom:3px solid var(--gold);padding:0 1.2rem;display:flex;align-items:stretch;flex-wrap:wrap;}
+  #top-nav .nav-brand{font-family:'Playfair Display',serif;color:var(--gold-light);font-size:0.88rem;font-weight:700;white-space:nowrap;padding:0.7rem 1.2rem 0.7rem 0;border-right:1px solid rgba(200,150,12,0.3);margin-right:0.8rem;letter-spacing:0.5px;display:flex;align-items:center;gap:0.5rem;}
+  #top-nav a{color:rgba(255,255,255,0.72);text-decoration:none;font-size:clamp(0.58rem,0.62vw,0.7rem);font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:0.45px;text-transform:uppercase;padding:0.65rem 0.6rem;white-space:nowrap;transition:color .2s;border-bottom:3px solid transparent;margin-bottom:-3px;}
   #top-nav a:hover{color:var(--gold-light);border-bottom-color:var(--gold);}
   #top-nav a.active{color:var(--gold-light);}
 
-  /* ── HERO ── */
-  #hero{
-    background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 55%,#1e3d5c 100%);
+  /* ══════════════════════════════════════════════
+     DASHBOARD SECTION
+  ══════════════════════════════════════════════ */
+  #dashboard{
+    background:linear-gradient(180deg,#0a1520 0%,#0f1e2e 100%);
     color:white;
-    padding:4rem 2rem 3.5rem;
-    text-align:center;
-    position:relative;
-    overflow:hidden;
-  }
-  #hero::before{
-    content:'';position:absolute;inset:0;
-    background:
-      repeating-linear-gradient(45deg,rgba(200,150,12,0.03) 0px,rgba(200,150,12,0.03) 1px,transparent 1px,transparent 40px),
-      repeating-linear-gradient(-45deg,rgba(200,150,12,0.02) 0px,rgba(200,150,12,0.02) 1px,transparent 1px,transparent 60px);
-  }
-  #hero::after{
-    content:'';position:absolute;
-    bottom:-1px;left:0;right:0;height:40px;
-    background:linear-gradient(to bottom,transparent,var(--cream));
-  }
-  #hero .badge{
-    display:inline-block;
-    background:rgba(200,150,12,0.15);
-    border:1px solid rgba(200,150,12,0.5);
-    color:var(--gold-light);
-    font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;
-    padding:0.35rem 1.2rem;border-radius:2px;
-    margin-bottom:1.4rem;
-    font-family:'Source Serif 4',serif;font-weight:600;
-    position:relative;
-  }
-  #hero h1{
-    font-family:'Playfair Display',serif;
-    font-size:clamp(2rem,5vw,3.4rem);
-    font-weight:900;line-height:1.1;
-    margin-bottom:0.5rem;
-    letter-spacing:-0.5px;
-    position:relative;
-  }
-  #hero h1 span{color:var(--gold-light);}
-  #hero .subtitle{
-    font-size:1rem;
-    color:rgba(255,255,255,0.6);
-    font-style:italic;
-    margin-bottom:1.8rem;
-    position:relative;
-    max-width:700px;
-    margin-left:auto;margin-right:auto;
-  }
-  .hero-stats{
-    display:flex;align-items:center;justify-content:center;
-    gap:2.5rem;flex-wrap:wrap;
-    position:relative;
-    margin-top:0.5rem;
-  }
-  .hero-stat{text-align:center;}
-  .hero-stat-num{
-    font-family:'Playfair Display',serif;
-    font-size:2rem;font-weight:900;
-    color:var(--gold-light);line-height:1;
-  }
-  .hero-stat-label{
-    font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase;
-    color:rgba(255,255,255,0.5);
-    font-family:'Source Serif 4',serif;font-weight:600;
-    margin-top:0.25rem;
-  }
-  .hero-stat-sep{
-    width:1px;height:40px;
-    background:rgba(200,150,12,0.3);
+    padding:2rem clamp(1rem,4vw,4rem) 2.5rem;
+    border-bottom:3px solid var(--gold);
   }
 
-  /* ── PAGE WRAP ── */
-  .page-wrap{
-    width:100%;max-width:none;
-    padding:3rem clamp(1rem,4vw,5rem) 5rem;
-  }
-
-  /* ── SECTION HEADER ── */
-  .section{margin-top:3.5rem;scroll-margin-top:56px;}
-  .section-header{
-    display:flex;align-items:center;gap:1rem;
-    margin-bottom:1.75rem;padding-bottom:0.75rem;
-    border-bottom:2px solid var(--border);
-  }
-  .section-num{
-    font-family:'Playfair Display',serif;
-    font-size:2rem;font-weight:900;
-    color:var(--border);line-height:1;
-    min-width:2.5rem;
-  }
-  .section-title{
-    font-family:'Playfair Display',serif;
-    font-size:1.35rem;font-weight:700;
-    color:var(--navy);line-height:1.2;
-  }
-  .section-title span{
-    display:block;font-size:0.72rem;
-    font-family:'Source Serif 4',serif;font-weight:600;
-    letter-spacing:1.5px;text-transform:uppercase;
-    color:var(--gold);font-style:normal;
-    margin-bottom:0.1rem;
-  }
-
-  /* ── MATÉRIA GRID ── */
-  .materia-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
-    gap:1.25rem;
-  }
-
-  /* ── MATÉRIA CARD ── */
-  .materia-card{
-    background:white;
-    border:1px solid var(--border-light);
-    border-radius:8px;
-    border-left:5px solid;
-    box-shadow:var(--shadow);
-    text-decoration:none;
-    display:flex;
-    flex-direction:column;
-    padding:1.5rem 1.6rem 1.4rem;
-    transition:transform .2s ease, box-shadow .2s ease, border-left-width .15s ease;
-    cursor:pointer;
-    position:relative;
-    overflow:hidden;
-  }
-  .materia-card::before{
-    content:'';
-    position:absolute;
-    top:0;right:0;
-    width:80px;height:80px;
-    border-radius:50%;
-    opacity:0.05;
-    transform:translate(20px,-20px);
-    transition:opacity .2s;
-  }
-  .materia-card:hover{
-    transform:translateY(-3px);
-    box-shadow:0 10px 40px rgba(13,27,42,0.16);
-  }
-  .materia-card:hover::before{opacity:0.12;}
-
-  .materia-icon{
-    font-size:2rem;
-    line-height:1;
-    margin-bottom:0.9rem;
-  }
-  .materia-nome{
-    font-family:'Playfair Display',serif;
-    font-size:1.08rem;font-weight:700;
-    line-height:1.25;
-    margin-bottom:0.35rem;
-  }
-  .materia-desc{
-    font-size:0.8rem;
-    color:var(--text-soft);
-    line-height:1.6;
-    flex:1;
-    font-style:italic;
-  }
-  .materia-footer{
+  /* Dashboard header */
+  .db-header{
     display:flex;align-items:center;justify-content:space-between;
-    margin-top:1rem;padding-top:0.8rem;
-    border-top:1px solid var(--border-light);
+    flex-wrap:wrap;gap:1rem;
+    margin-bottom:1.5rem;
   }
-  .materia-tags{display:flex;flex-wrap:wrap;gap:0.3rem;}
-  .tag{
-    display:inline-block;
-    font-size:0.6rem;font-weight:700;
-    letter-spacing:0.8px;text-transform:uppercase;
-    padding:0.15rem 0.45rem;border-radius:2px;
+  .db-title{
+    font-family:'Playfair Display',serif;
+    font-size:1.4rem;font-weight:700;
+    color:var(--gold-light);
+    display:flex;align-items:center;gap:0.6rem;
+  }
+  .db-subtitle{font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:0.1rem;font-style:italic;}
+  .db-actions{display:flex;gap:0.6rem;flex-wrap:wrap;}
+  .db-btn{
+    background:rgba(200,150,12,0.15);border:1px solid rgba(200,150,12,0.4);
+    color:var(--gold-light);font-size:0.72rem;font-weight:600;
+    letter-spacing:0.5px;text-transform:uppercase;
+    padding:0.45rem 0.9rem;border-radius:3px;cursor:pointer;
+    transition:background .2s;font-family:'Source Serif 4',serif;
+  }
+  .db-btn:hover{background:rgba(200,150,12,0.28);}
+  .db-btn.active{background:rgba(200,150,12,0.35);border-color:var(--gold-light);}
+
+  /* Filters */
+  .db-filters{
+    display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem;align-items:center;
+  }
+  .db-filter-label{font-size:0.7rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-right:0.3rem;}
+  .db-filter-btn{
+    background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);
+    color:rgba(255,255,255,0.6);font-size:0.72rem;font-weight:600;
+    padding:0.35rem 0.8rem;border-radius:20px;cursor:pointer;
+    transition:all .2s;font-family:'Source Serif 4',serif;
+  }
+  .db-filter-btn:hover,.db-filter-btn.active{
+    background:var(--gold);color:var(--navy);border-color:var(--gold);
+  }
+  .db-filter-sep{width:1px;height:20px;background:rgba(255,255,255,0.15);margin:0 0.3rem;}
+  .db-filter-select{
+    background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);
+    color:rgba(255,255,255,0.8);font-size:0.72rem;
+    padding:0.35rem 0.6rem;border-radius:3px;cursor:pointer;
     font-family:'Source Serif 4',serif;
   }
+  .db-filter-select option{background:#0f1e2e;color:white;}
+
+  /* Stats cards */
+  .db-stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:0.75rem;margin-bottom:1.5rem;
+  }
+  .db-stat-card{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(200,150,12,0.2);
+    border-radius:6px;padding:1rem 1.1rem;
+    position:relative;overflow:hidden;
+  }
+  .db-stat-card::before{
+    content:'';position:absolute;top:-20px;right:-20px;
+    width:60px;height:60px;border-radius:50%;
+    opacity:0.06;
+  }
+  .db-stat-card.gold::before{background:var(--gold);}
+  .db-stat-card.green::before{background:#2ecc71;}
+  .db-stat-card.blue::before{background:#3498db;}
+  .db-stat-card.red::before{background:#e74c3c;}
+  .db-stat-card.purple::before{background:#9b59b6;}
+  .db-stat-label{font-size:0.62rem;letter-spacing:1.2px;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:0.3rem;font-weight:600;}
+  .db-stat-value{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:900;line-height:1;color:white;}
+  .db-stat-value.gold{color:var(--gold-light);}
+  .db-stat-value.green{color:#2ecc71;}
+  .db-stat-value.blue{color:#74b9ff;}
+  .db-stat-value.red{color:#fc8181;}
+  .db-stat-sub{font-size:0.65rem;color:rgba(255,255,255,0.35);margin-top:0.3rem;}
+
+  /* Charts row */
+  .db-charts{
+    display:grid;
+    grid-template-columns:1fr 1.4fr 1fr;
+    gap:1rem;margin-bottom:1.5rem;
+  }
+  @media(max-width:900px){.db-charts{grid-template-columns:1fr 1fr;}}
+  @media(max-width:580px){.db-charts{grid-template-columns:1fr;}}
+  .db-chart-box{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:6px;padding:1rem;
+  }
+  .db-chart-title{font-size:0.7rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:0.8rem;}
+  .db-chart-canvas{width:100%!important;max-height:180px;}
+
+  /* Progress bars por matéria */
+  .db-progress-section{margin-bottom:1.5rem;}
+  .db-progress-title{font-size:0.7rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:0.75rem;}
+  .db-progress-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0.6rem;}
+  .db-prog-item{background:rgba(255,255,255,0.05);border-radius:5px;padding:0.7rem 1rem;}
+  .db-prog-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.4rem;}
+  .db-prog-name{font-size:0.78rem;font-weight:600;color:white;}
+  .db-prog-pct{font-size:0.72rem;color:rgba(255,255,255,0.5);}
+  .db-prog-bar-bg{height:6px;background:rgba(255,255,255,0.1);border-radius:3px;overflow:hidden;}
+  .db-prog-bar-fill{height:100%;border-radius:3px;transition:width .6s ease;}
+  .db-prog-meta{font-size:0.62rem;color:rgba(255,255,255,0.35);margin-top:0.3rem;}
+
+  /* Report table */
+  .db-report-section{margin-bottom:0.5rem;}
+  .db-report-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;}
+  .db-report-title{font-size:0.7rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:rgba(255,255,255,0.45);}
+  .db-table-wrap{overflow-x:auto;border-radius:6px;border:1px solid rgba(255,255,255,0.1);}
+  .db-table{width:100%;border-collapse:collapse;font-size:0.75rem;}
+  .db-table th{background:rgba(200,150,12,0.12);color:var(--gold-light);text-transform:uppercase;letter-spacing:0.6px;font-size:0.63rem;padding:0.6rem 0.8rem;text-align:left;white-space:nowrap;border-bottom:1px solid rgba(200,150,12,0.2);}
+  .db-table td{padding:0.55rem 0.8rem;color:rgba(255,255,255,0.75);border-bottom:1px solid rgba(255,255,255,0.05);white-space:nowrap;}
+  .db-table tr:hover td{background:rgba(255,255,255,0.04);}
+  .db-table tr:last-child td{border-bottom:none;}
+  .db-table .td-subj{font-weight:600;}
+  .db-table .td-sim{color:#2ecc71;font-weight:700;font-size:0.68rem;}
+  .db-table .td-nao{color:#fc8181;font-size:0.68rem;}
+  .db-empty{text-align:center;padding:2rem;color:rgba(255,255,255,0.3);font-style:italic;font-size:0.85rem;}
+
+  /* Summary table (totais por matéria) */
+  .db-summary-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:0.6rem;margin-bottom:1.5rem;
+  }
+  .db-sum-card{
+    background:rgba(255,255,255,0.05);border-radius:5px;
+    padding:0.7rem 1rem;border-left:3px solid;
+  }
+  .db-sum-name{font-size:0.78rem;font-weight:600;color:white;margin-bottom:0.4rem;}
+  .db-sum-row{display:flex;justify-content:space-between;font-size:0.68rem;color:rgba(255,255,255,0.45);margin-top:0.15rem;}
+  .db-sum-val{color:rgba(255,255,255,0.8);font-weight:600;}
+
+  /* No data message */
+  .db-no-data{
+    text-align:center;padding:3rem 1rem;
+    color:rgba(255,255,255,0.3);font-style:italic;
+  }
+  .db-no-data .nd-icon{font-size:2.5rem;margin-bottom:0.5rem;}
+  .db-no-data .nd-msg{font-size:0.9rem;}
+  .db-no-data .nd-hint{font-size:0.75rem;margin-top:0.5rem;color:rgba(255,255,255,0.2);}
+
+  /* Tabs for report vs summary */
+  .db-tab-row{display:flex;gap:0;margin-bottom:0.75rem;border-bottom:1px solid rgba(255,255,255,0.1);}
+  .db-tab{background:none;border:none;color:rgba(255,255,255,0.45);font-size:0.72rem;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;padding:0.5rem 1rem;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .2s;font-family:'Source Serif 4',serif;}
+  .db-tab:hover{color:rgba(255,255,255,0.7);}
+  .db-tab.active{color:var(--gold-light);border-bottom-color:var(--gold);}
+  .db-tab-panel{display:none;}.db-tab-panel.active{display:block;}
+
+  /* ── HERO ── */
+  #hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 55%,#1e3d5c 100%);color:white;padding:4rem 2rem 3.5rem;text-align:center;position:relative;overflow:hidden;}
+  #hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(200,150,12,0.03) 0px,rgba(200,150,12,0.03) 1px,transparent 1px,transparent 40px),repeating-linear-gradient(-45deg,rgba(200,150,12,0.02) 0px,rgba(200,150,12,0.02) 1px,transparent 1px,transparent 60px);}
+  #hero::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:40px;background:linear-gradient(to bottom,transparent,var(--cream));}
+  #hero .badge{display:inline-block;background:rgba(200,150,12,0.15);border:1px solid rgba(200,150,12,0.5);color:var(--gold-light);font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;padding:0.35rem 1.2rem;border-radius:2px;margin-bottom:1.4rem;font-family:'Source Serif 4',serif;font-weight:600;position:relative;}
+  #hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.4rem);font-weight:900;line-height:1.1;margin-bottom:0.5rem;letter-spacing:-0.5px;position:relative;}
+  #hero h1 span{color:var(--gold-light);}
+  #hero .subtitle{font-size:1rem;color:rgba(255,255,255,0.6);font-style:italic;margin-bottom:1.8rem;position:relative;max-width:700px;margin-left:auto;margin-right:auto;}
+  .hero-stats{display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap;position:relative;margin-top:0.5rem;}
+  .hero-stat{text-align:center;}
+  .hero-stat-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--gold-light);line-height:1;}
+  .hero-stat-label{font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.5);font-family:'Source Serif 4',serif;font-weight:600;margin-top:0.25rem;}
+  .hero-stat-sep{width:1px;height:40px;background:rgba(200,150,12,0.3);}
+
+  /* ── PAGE WRAP ── */
+  .page-wrap{width:100%;max-width:none;padding:3rem clamp(1rem,4vw,5rem) 5rem;}
+  .section{margin-top:3.5rem;scroll-margin-top:56px;}
+  .section-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.75rem;padding-bottom:0.75rem;border-bottom:2px solid var(--border);}
+  .section-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--border);line-height:1;min-width:2.5rem;}
+  .section-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--navy);line-height:1.2;}
+  .section-title span{display:block;font-size:0.72rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-style:normal;margin-bottom:0.1rem;}
+
+  /* ── MATÉRIA GRID ── */
+  .materia-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem;}
+  .materia-card{background:white;border:1px solid var(--border-light);border-radius:8px;border-left:5px solid;box-shadow:var(--shadow);text-decoration:none;display:flex;flex-direction:column;padding:1.5rem 1.6rem 1.4rem;transition:transform .2s ease,box-shadow .2s ease;cursor:pointer;position:relative;overflow:hidden;}
+  .materia-card::before{content:'';position:absolute;top:0;right:0;width:80px;height:80px;border-radius:50%;opacity:0.05;transform:translate(20px,-20px);transition:opacity .2s;}
+  .materia-card:hover{transform:translateY(-3px);box-shadow:0 10px 40px rgba(13,27,42,0.16);}
+  .materia-card:hover::before{opacity:0.12;}
+  .materia-icon{font-size:2rem;line-height:1;margin-bottom:0.9rem;}
+  .materia-nome{font-family:'Playfair Display',serif;font-size:1.08rem;font-weight:700;line-height:1.25;margin-bottom:0.35rem;}
+  .materia-desc{font-size:0.8rem;color:var(--text-soft);line-height:1.6;flex:1;font-style:italic;}
+  .materia-footer{display:flex;align-items:center;justify-content:space-between;margin-top:1rem;padding-top:0.8rem;border-top:1px solid var(--border-light);}
+  .materia-tags{display:flex;flex-wrap:wrap;gap:0.3rem;}
+  .tag{display:inline-block;font-size:0.6rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;padding:0.15rem 0.45rem;border-radius:2px;font-family:'Source Serif 4',serif;}
   .tag-blue{background:#dce8f5;color:var(--blue-accent);}
   .tag-green{background:#dceee3;color:var(--green-accent);}
   .tag-gold{background:var(--gold-pale);color:#7a5a00;border:1px solid #d4aa3a;}
   .tag-red{background:#fde8e8;color:var(--red-accent);}
   .tag-purple{background:#ece5f5;color:var(--purple-accent);}
   .tag-navy{background:#e0e8f2;color:var(--navy);}
+  .materia-arrow{font-size:1.1rem;color:var(--border);font-weight:700;transition:color .2s,transform .2s;}
+  .materia-card:hover .materia-arrow{color:var(--gold);transform:translateX(4px);}
 
-  .materia-arrow{
-    font-size:1.1rem;
-    color:var(--border);
-    font-weight:700;
-    transition:color .2s,transform .2s;
-  }
-  .materia-card:hover .materia-arrow{
-    color:var(--gold);
-    transform:translateX(4px);
-  }
+  /* ── MATERIA PROGRESS MINI ── */
+  .materia-progress{margin-top:0.5rem;}
+  .mp-bar-bg{height:4px;background:#e8dcbf;border-radius:2px;overflow:hidden;}
+  .mp-bar-fill{height:100%;border-radius:2px;transition:width .6s;}
+  .mp-label{font-size:0.6rem;color:var(--text-soft);margin-top:0.2rem;display:flex;justify-content:space-between;}
 
   /* Cores por matéria */
-  .mc-penal{border-left-color:var(--red-accent);}
-  .mc-penal .materia-nome{color:var(--red-accent);}
-  .mc-penal::before{background:var(--red-accent);}
-
-  .mc-proc-penal{border-left-color:#c0392b;}
-  .mc-proc-penal .materia-nome{color:#c0392b;}
-  .mc-proc-penal::before{background:#c0392b;}
-
-  .mc-const{border-left-color:var(--navy);}
-  .mc-const .materia-nome{color:var(--navy);}
-  .mc-const::before{background:var(--navy);}
-
-  .mc-admin{border-left-color:var(--blue-accent);}
-  .mc-admin .materia-nome{color:var(--blue-accent);}
-  .mc-admin::before{background:var(--blue-accent);}
-
-  .mc-proc-civil{border-left-color:#2471a3;}
-  .mc-proc-civil .materia-nome{color:#2471a3;}
-  .mc-proc-civil::before{background:#2471a3;}
-
-  .mc-civil{border-left-color:var(--gold);}
-  .mc-civil .materia-nome{color:#7a5a00;}
-  .mc-civil::before{background:var(--gold);}
-
-  .mc-empresarial{border-left-color:#1a6b4a;}
-  .mc-empresarial .materia-nome{color:#1a6b4a;}
-  .mc-empresarial::before{background:#1a6b4a;}
-
-  .mc-dh{border-left-color:var(--purple-accent);}
-  .mc-dh .materia-nome{color:var(--purple-accent);}
-  .mc-dh::before{background:var(--purple-accent);}
-
-  .mc-human{border-left-color:#6b4a1a;}
-  .mc-human .materia-nome{color:#6b4a1a;}
-  .mc-human::before{background:#6b4a1a;}
-
-  .mc-clt{border-left-color:#145a32;}
-  .mc-clt .materia-nome{color:#145a32;}
-  .mc-clt::before{background:#145a32;}
-
-  .mc-proc-trab{border-left-color:#0e6655;}
-  .mc-proc-trab .materia-nome{color:#0e6655;}
-  .mc-proc-trab::before{background:#0e6655;}
+  .mc-penal{border-left-color:var(--red-accent);}.mc-penal .materia-nome{color:var(--red-accent);}.mc-penal::before{background:var(--red-accent);}
+  .mc-proc-penal{border-left-color:#c0392b;}.mc-proc-penal .materia-nome{color:#c0392b;}.mc-proc-penal::before{background:#c0392b;}
+  .mc-const{border-left-color:var(--navy);}.mc-const .materia-nome{color:var(--navy);}.mc-const::before{background:var(--navy);}
+  .mc-admin{border-left-color:var(--blue-accent);}.mc-admin .materia-nome{color:var(--blue-accent);}.mc-admin::before{background:var(--blue-accent);}
+  .mc-proc-civil{border-left-color:#2471a3;}.mc-proc-civil .materia-nome{color:#2471a3;}.mc-proc-civil::before{background:#2471a3;}
+  .mc-civil{border-left-color:var(--gold);}.mc-civil .materia-nome{color:#7a5a00;}.mc-civil::before{background:var(--gold);}
+  .mc-clt{border-left-color:#145a32;}.mc-clt .materia-nome{color:#145a32;}.mc-clt::before{background:#145a32;}
 
   /* ── ALERTS ── */
-  .alert{
-    padding:0.9rem 1.2rem;border-radius:4px;
-    font-size:0.84rem;line-height:1.7;
-    display:flex;gap:0.7rem;align-items:flex-start;
-  }
+  .alert{padding:0.9rem 1.2rem;border-radius:4px;font-size:0.84rem;line-height:1.7;display:flex;gap:0.7rem;align-items:flex-start;}
   .alert-gold{background:var(--gold-pale);border:1px solid #d4aa3a;color:#5a4000;}
-  .alert-navy{background:#f0f4f8;border:1px solid #abc;color:var(--navy);}
-  .alert-green{background:#edf7f0;border:1px solid #7ec89a;color:#1a4a2e;}
   .alert-icon{font-size:1.1rem;flex-shrink:0;margin-top:0.05rem;}
-  .mt2{margin-top:1rem;}
-  .mt3{margin-top:1.5rem;}
+  .mt2{margin-top:1rem;}.mt3{margin-top:1.5rem;}
 
-  /* ── CARD BÁSICO ── */
-  .card{
-    background:white;border:1px solid var(--border-light);
-    border-radius:6px;padding:1.4rem 1.6rem;
-    box-shadow:var(--shadow);
-  }
-  .card h3{
-    font-family:'Playfair Display',serif;
-    font-size:1.05rem;font-weight:700;
-    margin-bottom:0.6rem;padding-bottom:0.5rem;
-    border-bottom:1px solid var(--border-light);
-  }
+  /* ── CARD ── */
+  .card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1.4rem 1.6rem;box-shadow:var(--shadow);}
+  .card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:0.6rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border-light);}
   .card p,.card li{font-size:0.88rem;line-height:1.7;color:var(--text-mid);}
   .card ul{padding-left:1.1rem;}
   .card li{margin-bottom:0.3rem;}
@@ -343,150 +266,46 @@
   .tc-blue{border-top-color:var(--blue-accent);}.tc-blue h3{color:var(--blue-accent);}
   .tc-gold{border-top-color:var(--gold);}.tc-gold h3{color:#7a5a00;}
   .tc-green{border-top-color:var(--green-accent);}.tc-green h3{color:var(--green-accent);}
-  .tc-red{border-top-color:var(--red-accent);}.tc-red h3{color:var(--red-accent);}
   .tc-navy{border-top-color:var(--navy);}.tc-navy h3{color:var(--navy);}
+  .divider{height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);margin:1.2rem 0;}
 
-  /* ── COMO USAR ── */
-  .how-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:1.25rem;
-    counter-reset:step;
-  }
-  .how-card{
-    background:white;border:1px solid var(--border-light);
-    border-radius:6px;padding:1.4rem;
-    box-shadow:var(--shadow);
-    position:relative;
-    padding-top:2.4rem;
-  }
-  .how-card::before{
-    counter-increment:step;
-    content:counter(step, decimal-leading-zero);
-    position:absolute;top:1rem;left:1.4rem;
-    font-family:'Playfair Display',serif;
-    font-size:1.6rem;font-weight:900;
-    color:var(--border);line-height:1;
-  }
-  .how-card h4{
-    font-family:'Playfair Display',serif;
-    font-size:0.95rem;font-weight:700;
-    color:var(--navy);margin-bottom:0.4rem;
-  }
+  /* ── HOW GRID ── */
+  .how-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;counter-reset:step;}
+  .how-card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1.4rem;box-shadow:var(--shadow);position:relative;padding-top:2.4rem;}
+  .how-card::before{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;top:1rem;left:1.4rem;font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;color:var(--border);line-height:1;}
+  .how-card h4{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:var(--navy);margin-bottom:0.4rem;}
   .how-card p{font-size:0.82rem;color:var(--text-soft);line-height:1.65;}
 
-  /* ── SEÇÃO ENAM ── */
-  .enam-section{
-    background:var(--navy);border-radius:8px;
-    padding:2.2rem 2rem;color:white;
-    margin-top:3.5rem;
-  }
-  .enam-section h2{
-    font-family:'Playfair Display',serif;
-    font-size:1.5rem;color:var(--gold-light);
-    margin-bottom:0.4rem;
-  }
-  .enam-section .intro{
-    font-size:0.85rem;color:rgba(255,255,255,0.6);
-    margin-bottom:1.5rem;font-style:italic;
-  }
-  .enam-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:0.9rem;
-  }
-  .enam-item{
-    background:rgba(255,255,255,0.06);
-    border:1px solid rgba(200,150,12,0.25);
-    border-left:4px solid var(--gold);
-    border-radius:0 4px 4px 0;
-    padding:1rem 1.2rem;
-  }
-  .enam-item-label{
-    font-size:0.65rem;font-weight:700;
-    letter-spacing:1.5px;text-transform:uppercase;
-    color:var(--gold-light);
-    font-family:'Source Serif 4',serif;
-    margin-bottom:0.3rem;
-  }
-  .enam-item-text{
-    font-size:0.82rem;color:rgba(255,255,255,0.82);
-    line-height:1.6;
-  }
+  /* ── ENAM SECTION ── */
+  .enam-section{background:var(--navy);border-radius:8px;padding:2.2rem 2rem;color:white;margin-top:3.5rem;}
+  .enam-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold-light);margin-bottom:0.4rem;}
+  .enam-section .intro{font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;font-style:italic;}
+  .enam-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0.9rem;}
+  .enam-item{background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.25);border-left:4px solid var(--gold);border-radius:0 4px 4px 0;padding:1rem 1.2rem;}
+  .enam-item-label{font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-light);font-family:'Source Serif 4',serif;margin-bottom:0.3rem;}
+  .enam-item-text{font-size:0.82rem;color:rgba(255,255,255,0.82);line-height:1.6;}
   .enam-item-text strong{color:white;}
 
   /* ── FOOTER ── */
-  footer{
-    background:var(--navy);color:rgba(255,255,255,0.45);
-    text-align:center;padding:1.5rem;
-    font-size:0.75rem;border-top:2px solid var(--gold);
-  }
+  footer{background:var(--navy);color:rgba(255,255,255,0.45);text-align:center;padding:1.5rem;font-size:0.75rem;border-top:2px solid var(--gold);}
   footer strong{color:var(--gold-light);}
 
-  /* ── DIVIDER ── */
-  .divider{
-    height:1px;
-    background:linear-gradient(to right,transparent,var(--border),transparent);
-    margin:1.2rem 0;
-  }
-
   /* ── SEARCH BAR ── */
-  .search-wrap{
-    position:relative;
-    max-width:560px;margin:0 auto 0;
-    position:relative;
-  }
-  .search-wrap input{
-    width:100%;
-    font-family:'Source Serif 4',serif;
-    font-size:0.9rem;
-    color:var(--text-dark);
-    background:rgba(255,255,255,0.1);
-    border:1px solid rgba(200,150,12,0.5);
-    border-radius:4px;
-    padding:0.7rem 2.8rem 0.7rem 1rem;
-    outline:none;
-    transition:border-color .2s,background .2s;
-    position:relative;
-  }
+  .search-wrap{position:relative;max-width:560px;margin:0 auto;}
+  .search-wrap input{width:100%;font-family:'Source Serif 4',serif;font-size:0.9rem;color:var(--text-dark);background:rgba(255,255,255,0.1);border:1px solid rgba(200,150,12,0.5);border-radius:4px;padding:0.7rem 2.8rem 0.7rem 1rem;outline:none;transition:border-color .2s,background .2s;}
   .search-wrap input::placeholder{color:rgba(255,255,255,0.4);font-style:italic;}
-  .search-wrap input:focus{
-    border-color:var(--gold-light);
-    background:rgba(255,255,255,0.15);
-  }
-  .search-wrap .search-icon{
-    position:absolute;right:0.9rem;top:50%;transform:translateY(-50%);
-    font-size:0.95rem;color:rgba(200,150,12,0.7);
-    pointer-events:none;
-  }
-
-  /* ── MINI REF ── */
-  .mini-ref{font-size:0.74rem;color:var(--text-soft);font-family:'JetBrains Mono',monospace;}
-
-  /* ── PRINT ── */
-  @media print{
-    #top-nav,footer{display:none;}
-    #hero{padding:1.2rem 1rem;}
-    .page-wrap{padding:0 0.35rem 1rem!important;}
-    .materia-card{break-inside:avoid;box-shadow:none;}
-    .enam-section{background:#f0f4f8!important;color:#000!important;}
-    .enam-section h2{color:#0d1b2a!important;}
-    .enam-item{background:white!important;border:1px solid #ccc!important;}
-  }
+  .search-wrap input:focus{border-color:var(--gold-light);background:rgba(255,255,255,0.15);}
+  .search-wrap .search-icon{position:absolute;right:0.9rem;top:50%;transform:translateY(-50%);font-size:0.95rem;color:rgba(200,150,12,0.7);pointer-events:none;}
 
   /* ── RESPONSIVE ── */
   @media(max-width:640px){
-    #hero{padding:2.5rem 1rem 2rem;}
-    #hero h1{font-size:1.8rem;}
+    #hero{padding:2.5rem 1rem 2rem;}#hero h1{font-size:1.8rem;}
     .materia-grid{grid-template-columns:1fr;}
-    .how-grid{grid-template-columns:1fr;}
-    .enam-grid{grid-template-columns:1fr;}
-    .hero-stat-sep{display:none;}
-    .hero-stats{gap:1.5rem;}
+    .hero-stat-sep{display:none;}.hero-stats{gap:1.5rem;}
     .card-grid-2,.card-grid-3{grid-template-columns:1fr;}
+    .db-stats{grid-template-columns:repeat(2,1fr);}
   }
 
-  /* ── ANIMAÇÃO DE ENTRADA ── */
   @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
   .materia-card{animation:fadeUp .4s ease both;}
   .materia-card:nth-child(1){animation-delay:.05s;}
@@ -500,22 +319,156 @@
   .materia-card:nth-child(9){animation-delay:.45s;}
   .materia-card:nth-child(10){animation-delay:.5s;}
   .materia-card:nth-child(11){animation-delay:.55s;}
+
+  @media print{
+    #dashboard{display:none;}
+    #top-nav,footer{display:none;}
+    #hero{padding:1.2rem 1rem;}
+    .page-wrap{padding:0 0.35rem 1rem!important;}
+    .materia-card{break-inside:avoid;box-shadow:none;}
+  }
 </style>
 </head>
 <body>
 
 <nav id="top-nav" aria-label="Navegação principal">
   <div class="nav-brand">
-    <span class="brand-icon">⚖️</span>
+    <span>⚖️</span>
     Vade Mecum · Magistratura
   </div>
   <div class="nav-links">
+    <a href="#dashboard" id="nav-dashboard">📊 Dashboard</a>
     <a href="#materias" class="active">Matérias</a>
     <a href="#como-usar">Como Usar</a>
     <a href="#enam">Edital ENAM</a>
     <a href="#sobre">Sobre</a>
   </div>
 </nav>
+
+<!-- ══════════════════════════ DASHBOARD ══════════════════════════ -->
+<section id="dashboard">
+
+  <div class="db-header">
+    <div>
+      <div class="db-title">📊 Dashboard de Estudos</div>
+      <div class="db-subtitle">Controle completo de horas, artigos e progresso por matéria</div>
+    </div>
+    <div class="db-actions">
+      <button class="db-btn" onclick="dbExportCSV()">⬇ Exportar CSV</button>
+      <button class="db-btn" onclick="dbClearData()" style="border-color:rgba(255,80,80,0.4);color:#fc8181;">🗑 Limpar Dados</button>
+    </div>
+  </div>
+
+  <!-- Filtros -->
+  <div class="db-filters">
+    <span class="db-filter-label">Período:</span>
+    <button class="db-filter-btn active" data-period="all"    onclick="dbSetPeriod(this,'all')">Total</button>
+    <button class="db-filter-btn"        data-period="today"  onclick="dbSetPeriod(this,'today')">Hoje</button>
+    <button class="db-filter-btn"        data-period="week"   onclick="dbSetPeriod(this,'week')">7 dias</button>
+    <button class="db-filter-btn"        data-period="month"  onclick="dbSetPeriod(this,'month')">30 dias</button>
+    <div class="db-filter-sep"></div>
+    <span class="db-filter-label">Matéria:</span>
+    <select class="db-filter-select" id="dbSubjectFilter" onchange="dbSetSubject(this.value)">
+      <option value="">Todas</option>
+      <option value="CP">Cód. Penal</option>
+      <option value="CPP">Cód. Proc. Penal</option>
+      <option value="CC">Cód. Civil</option>
+      <option value="CPC">Cód. Proc. Civil</option>
+      <option value="CLT">CLT</option>
+    </select>
+  </div>
+
+  <!-- Stats Cards -->
+  <div class="db-stats">
+    <div class="db-stat-card gold">
+      <div class="db-stat-label">Horas de Estudo</div>
+      <div class="db-stat-value gold" id="db-total-hours">0:00</div>
+      <div class="db-stat-sub" id="db-total-sessions">0 sessões registradas</div>
+    </div>
+    <div class="db-stat-card green">
+      <div class="db-stat-label">Artigos Concluídos</div>
+      <div class="db-stat-value green" id="db-completed">0</div>
+      <div class="db-stat-sub" id="db-completed-pct">de 5.211 artigos totais</div>
+    </div>
+    <div class="db-stat-card blue">
+      <div class="db-stat-label">Dias Estudados</div>
+      <div class="db-stat-value blue" id="db-days">0</div>
+      <div class="db-stat-sub" id="db-avg">média 0:00 por dia</div>
+    </div>
+    <div class="db-stat-card red">
+      <div class="db-stat-label">Horas de Pausa</div>
+      <div class="db-stat-value red" id="db-pause-hours">0:00</div>
+      <div class="db-stat-sub">intervalos registrados</div>
+    </div>
+    <div class="db-stat-card purple">
+      <div class="db-stat-label">Progresso Geral</div>
+      <div class="db-stat-value" id="db-progress-pct" style="color:#c8a0f8;">0,0%</div>
+      <div class="db-stat-sub">artigos / total do código</div>
+    </div>
+  </div>
+
+  <!-- Charts -->
+  <div class="db-charts">
+    <div class="db-chart-box">
+      <div class="db-chart-title">⏱ Horas por Matéria</div>
+      <canvas id="chartSubject" class="db-chart-canvas" height="160"></canvas>
+    </div>
+    <div class="db-chart-box">
+      <div class="db-chart-title">📅 Horas por Dia (últimos 14 dias)</div>
+      <canvas id="chartDays" class="db-chart-canvas" height="160"></canvas>
+    </div>
+    <div class="db-chart-box">
+      <div class="db-chart-title">🎯 Distribuição do Tempo</div>
+      <canvas id="chartDist" class="db-chart-canvas" height="160"></canvas>
+    </div>
+  </div>
+
+  <!-- Progresso por Matéria -->
+  <div class="db-progress-section">
+    <div class="db-progress-title">📚 Progresso por Matéria — Artigos Concluídos</div>
+    <div class="db-progress-grid" id="dbProgressGrid"></div>
+  </div>
+
+  <!-- Tabs: Relatório / Resumo -->
+  <div class="db-tab-row">
+    <button class="db-tab active" onclick="dbShowTab('sessions',this)">📋 Relatório de Sessões</button>
+    <button class="db-tab" onclick="dbShowTab('summary',this)">📊 Resumo por Matéria</button>
+  </div>
+
+  <div id="db-tab-sessions" class="db-tab-panel active">
+    <div class="db-report-header">
+      <div class="db-report-title">Histórico completo de leituras e intervalos</div>
+    </div>
+    <div class="db-table-wrap">
+      <table class="db-table">
+        <thead>
+          <tr>
+            <th>Data</th><th>Dia</th><th>Matéria</th><th>Artigo</th>
+            <th>Hora Início</th><th>Hora Final</th><th>Estudo</th><th>Pausas</th><th>Total</th><th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="dbSessionsBody">
+          <tr><td colspan="10" class="db-empty">Nenhuma sessão registrada ainda.<br>Abra um artigo e clique em "Iniciar Leitura" para começar.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="db-tab-summary" class="db-tab-panel">
+    <div class="db-report-header">
+      <div class="db-report-title">Totais acumulados por matéria</div>
+    </div>
+    <div class="db-table-wrap">
+      <table class="db-table">
+        <thead>
+          <tr><th>Matéria</th><th>Qtd Artigos (Código)</th><th>Concluídos</th><th>% Concluído</th><th>Horas Estudadas</th><th>Dias Dedicados</th></tr>
+        </thead>
+        <tbody id="dbSummaryBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+</section>
 
 <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
 <header id="hero">
@@ -529,25 +482,13 @@
   </div>
 
   <div class="hero-stats" style="margin-top:1.8rem;">
-    <div class="hero-stat">
-      <div class="hero-stat-num">11</div>
-      <div class="hero-stat-label">Matérias</div>
-    </div>
+    <div class="hero-stat"><div class="hero-stat-num">11</div><div class="hero-stat-label">Matérias</div></div>
     <div class="hero-stat-sep"></div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">ENAM</div>
-      <div class="hero-stat-label">Edital Unificado</div>
-    </div>
+    <div class="hero-stat"><div class="hero-stat-num">ENAM</div><div class="hero-stat-label">Edital Unificado</div></div>
     <div class="hero-stat-sep"></div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">STF/STJ</div>
-      <div class="hero-stat-label">Jurisprudência</div>
-    </div>
+    <div class="hero-stat"><div class="hero-stat-num">STF/STJ</div><div class="hero-stat-label">Jurisprudência</div></div>
     <div class="hero-stat-sep"></div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">2026</div>
-      <div class="hero-stat-label">Atualizado</div>
-    </div>
+    <div class="hero-stat"><div class="hero-stat-num">2026</div><div class="hero-stat-label">Atualizado</div></div>
   </div>
 </header>
 
@@ -579,6 +520,10 @@
           </div>
           <span class="materia-arrow">→</span>
         </div>
+        <div class="materia-progress">
+          <div class="mp-bar-bg"><div class="mp-bar-fill" id="prog-CP" style="width:0%;background:#8b1a1a;"></div></div>
+          <div class="mp-label"><span id="prog-CP-label">0 / 361 artigos</span><span id="prog-CP-pct">0%</span></div>
+        </div>
       </a>
 
       <!-- 2. DIREITO PROCESSUAL PENAL -->
@@ -594,6 +539,10 @@
           </div>
           <span class="materia-arrow">→</span>
         </div>
+        <div class="materia-progress">
+          <div class="mp-bar-bg"><div class="mp-bar-fill" id="prog-CPP" style="width:0%;background:#c0392b;"></div></div>
+          <div class="mp-label"><span id="prog-CPP-label">0 / 811 artigos</span><span id="prog-CPP-pct">0%</span></div>
+        </div>
       </a>
 
       <!-- 3. DIREITO CONSTITUCIONAL -->
@@ -608,6 +557,10 @@
             <span class="tag tag-navy">ADI/ADC</span>
           </div>
           <span class="materia-arrow">→</span>
+        </div>
+        <div class="materia-progress">
+          <div class="mp-bar-bg"><div class="mp-bar-fill" id="prog-CF" style="width:0%;background:#0d1b2a;"></div></div>
+          <div class="mp-label"><span id="prog-CF-label">0 / 250 artigos</span><span id="prog-CF-pct">0%</span></div>
         </div>
       </a>
 
@@ -639,6 +592,10 @@
           </div>
           <span class="materia-arrow">→</span>
         </div>
+        <div class="materia-progress">
+          <div class="mp-bar-bg"><div class="mp-bar-fill" id="prog-CPC" style="width:0%;background:#2471a3;"></div></div>
+          <div class="mp-label"><span id="prog-CPC-label">0 / 1071 artigos</span><span id="prog-CPC-pct">0%</span></div>
+        </div>
       </a>
 
       <!-- 6. DIREITO CIVIL -->
@@ -654,13 +611,17 @@
           </div>
           <span class="materia-arrow">→</span>
         </div>
+        <div class="materia-progress">
+          <div class="mp-bar-bg"><div class="mp-bar-fill" id="prog-CC" style="width:0%;background:#c8960c;"></div></div>
+          <div class="mp-label"><span id="prog-CC-label">0 / 2046 artigos</span><span id="prog-CC-pct">0%</span></div>
+        </div>
       </a>
 
       <!-- 7. DIREITO EMPRESARIAL -->
       <a class="materia-card mc-empresarial" href="direito-empresarial/index.html">
         <div class="materia-icon">🏦</div>
         <div class="materia-nome">Direito Empresarial</div>
-        <div class="materia-desc">Teoria geral da empresa, sociedades empresárias, títulos de crédito, contratos mercantis, recuperação judicial e extrajudicial, falência e microempresas (LC 123/2006).</div>
+        <div class="materia-desc">Teoria geral da empresa, sociedades empresárias, títulos de crédito, contratos mercantis, recuperação judicial e extrajudicial, falência e microempresas.</div>
         <div class="materia-footer">
           <div class="materia-tags">
             <span class="tag tag-green">CC Empresarial</span>
@@ -675,7 +636,7 @@
       <a class="materia-card mc-dh" href="direitos-humanos/index.html">
         <div class="materia-icon">🌐</div>
         <div class="materia-nome">Direitos Humanos</div>
-        <div class="materia-desc">Sistema Internacional e Interamericano de proteção, Convenção Americana, Pacto de São José, direitos civis e políticos, econômicos, sociais e culturais, e jurisprudência da Corte IDH.</div>
+        <div class="materia-desc">Sistema Internacional e Interamericano de proteção, Convenção Americana, Pacto de São José, direitos civis e políticos e jurisprudência da Corte IDH.</div>
         <div class="materia-footer">
           <div class="materia-tags">
             <span class="tag tag-purple">CADH</span>
@@ -705,7 +666,7 @@
       <a class="materia-card mc-clt" href="clt/index.html">
         <div class="materia-icon">🤝</div>
         <div class="materia-nome">CLT — Direito do Trabalho</div>
-        <div class="materia-desc">Relação de emprego, contrato de trabalho, jornada, remuneração, férias, FGTS, extinção do contrato, negociação coletiva, sindicatos e Reforma Trabalhista (Lei 13.467/2017).</div>
+        <div class="materia-desc">Relação de emprego, contrato de trabalho, jornada, remuneração, férias, FGTS, extinção do contrato, negociação coletiva, sindicatos e Reforma Trabalhista.</div>
         <div class="materia-footer">
           <div class="materia-tags">
             <span class="tag tag-green">CLT</span>
@@ -714,13 +675,17 @@
           </div>
           <span class="materia-arrow">→</span>
         </div>
+        <div class="materia-progress">
+          <div class="mp-bar-bg"><div class="mp-bar-fill" id="prog-CLT" style="width:0%;background:#145a32;"></div></div>
+          <div class="mp-label"><span id="prog-CLT-label">0 / 922 artigos</span><span id="prog-CLT-pct">0%</span></div>
+        </div>
       </a>
 
       <!-- 11. DIREITO PROCESSUAL DO TRABALHO -->
       <a class="materia-card mc-proc-trab" href="direito-processual-trabalho/index.html">
         <div class="materia-icon">🔨</div>
         <div class="materia-nome">Direito Processual do Trabalho</div>
-        <div class="materia-desc">Organização da Justiça do Trabalho, reclamação trabalhista, rito sumaríssimo, provas, recursos trabalhistas, liquidação e execução, dissídios individuais e coletivos.</div>
+        <div class="materia-desc">Organização da Justiça do Trabalho, reclamação trabalhista, rito sumaríssimo, provas, recursos trabalhistas, liquidação e execução.</div>
         <div class="materia-footer">
           <div class="materia-tags">
             <span class="tag tag-green">CLT Proc.</span>
@@ -735,7 +700,7 @@
 
     <div class="alert alert-gold mt3">
       <div class="alert-icon">⭐</div>
-      <div><strong>Dica de estudo:</strong> clique em qualquer matéria para acessar fluxogramas decisórios, tabelas comparativas, jurisprudência do STF/STJ/TST e pontos que mais caem em magistratura. Cada página segue a estrutura de artigo do Vade Mecum com navegação interna.</div>
+      <div><strong>Dica:</strong> clique em qualquer matéria e, ao entrar em um artigo, use os botões <strong>▶ Iniciar Leitura</strong>, <strong>⏸ Pausar</strong> e <strong>✅ Concluir</strong> para registrar automaticamente seu tempo de estudo. Marque <strong>Estudo Concluído</strong> quando dominar o artigo.</div>
     </div>
   </section>
 
@@ -743,32 +708,28 @@
   <section class="section" id="como-usar">
     <div class="section-header">
       <div class="section-num">02</div>
-      <div class="section-title">
-        <span>Guia de Navegação</span>
-        Como Usar Este Vade Mecum
-      </div>
+      <div class="section-title"><span>Guia de Navegação</span>Como Usar Este Vade Mecum</div>
     </div>
-
     <div class="how-grid">
       <div class="how-card">
         <h4>Escolha a Matéria</h4>
         <p>Clique no card da área desejada. Cada matéria tem sumário com atalhos internos para navegar diretamente ao instituto que precisa.</p>
       </div>
       <div class="how-card">
-        <h4>Fluxogramas Decisórios</h4>
-        <p>Cada artigo ou tema possui fluxograma passo a passo para raciocínio judicial. Ideal para sentença, discursiva e oral.</p>
+        <h4>Rastreie seu Tempo</h4>
+        <p>Em cada artigo, clique <strong>▶ Iniciar Leitura</strong> para começar o timer. Pause com ⏸ nos intervalos e conclua com ✅. Tudo fica registrado no dashboard.</p>
       </div>
       <div class="how-card">
-        <h4>Tabelas Comparativas</h4>
-        <p>Coloque lado a lado os institutos, espécies e consequências jurídicas. Formato otimizado para memorização rápida.</p>
+        <h4>Marque Artigos Concluídos</h4>
+        <p>Quando dominar um artigo, selecione <strong>Estudo Concluído</strong> para alimentar o progresso no dashboard e relatórios.</p>
       </div>
       <div class="how-card">
-        <h4>Jurisprudência STF/STJ</h4>
-        <p>Teses, súmulas, leading cases e enunciados essenciais organizados por tema. Sem alucinação: apenas fontes verificadas.</p>
+        <h4>Fluxogramas e Tabelas</h4>
+        <p>Cada artigo possui fluxograma decisório e tabela comparativa para raciocínio judicial em sentença, discursiva e oral.</p>
       </div>
       <div class="how-card">
-        <h4>Pontos de Prova</h4>
-        <p>Checklist objetivo com as pegadinhas e questões clássicas de magistratura para cada artigo ou tema abordado.</p>
+        <h4>Acompanhe o Dashboard</h4>
+        <p>Monitore horas por matéria, por dia, por semana e por mês. Exporte o relatório completo em CSV a qualquer momento.</p>
       </div>
     </div>
   </section>
@@ -778,30 +739,12 @@
     <h2>🎓 Edital ENAM — Magistratura Unificada</h2>
     <p class="intro">Distribuição das matérias conforme o edital de concurso unificado para ingresso na magistratura estadual.</p>
     <div class="enam-grid">
-      <div class="enam-item">
-        <div class="enam-item-label">Direito Público Central</div>
-        <div class="enam-item-text"><strong>Constitucional · Administrativo</strong><br>Base de toda a ordem jurídica e do exercício da função jurisdicional.</div>
-      </div>
-      <div class="enam-item">
-        <div class="enam-item-label">Direito Penal e Processo</div>
-        <div class="enam-item-text"><strong>Penal · Processual Penal</strong><br>Alta incidência em prova objetiva e discursiva. Exige domínio de STF e STJ.</div>
-      </div>
-      <div class="enam-item">
-        <div class="enam-item-label">Direito Privado</div>
-        <div class="enam-item-text"><strong>Civil · Empresarial · Proc. Civil</strong><br>CPC/2015 e CC/2002 com jurisprudência do STJ. Maior volume de conteúdo.</div>
-      </div>
-      <div class="enam-item">
-        <div class="enam-item-label">Direito Social e do Trabalho</div>
-        <div class="enam-item-text"><strong>CLT · Proc. Trabalho</strong><br>Reforma trabalhista, Instrução Normativa 39 e OJs do TST.</div>
-      </div>
-      <div class="enam-item">
-        <div class="enam-item-label">Dimensão Internacional</div>
-        <div class="enam-item-text"><strong>Direitos Humanos</strong><br>Sistema interamericano, CADH e jurisprudência da Corte IDH com repercussão interna.</div>
-      </div>
-      <div class="enam-item">
-        <div class="enam-item-label">Formação para a Função</div>
-        <div class="enam-item-text"><strong>Formação Humanística</strong><br>Ética judicial, LOMAN, CNJ e teoria da decisão. Peso crescente nas provas discursivas.</div>
-      </div>
+      <div class="enam-item"><div class="enam-item-label">Direito Público Central</div><div class="enam-item-text"><strong>Constitucional · Administrativo</strong><br>Base de toda a ordem jurídica e do exercício da função jurisdicional.</div></div>
+      <div class="enam-item"><div class="enam-item-label">Direito Penal e Processo</div><div class="enam-item-text"><strong>Penal · Processual Penal</strong><br>Alta incidência em prova objetiva e discursiva. Exige domínio de STF e STJ.</div></div>
+      <div class="enam-item"><div class="enam-item-label">Direito Privado</div><div class="enam-item-text"><strong>Civil · Empresarial · Proc. Civil</strong><br>CPC/2015 e CC/2002 com jurisprudência do STJ. Maior volume de conteúdo.</div></div>
+      <div class="enam-item"><div class="enam-item-label">Direito Social e do Trabalho</div><div class="enam-item-text"><strong>CLT · Proc. Trabalho</strong><br>Reforma trabalhista, Instrução Normativa 39 e OJs do TST.</div></div>
+      <div class="enam-item"><div class="enam-item-label">Dimensão Internacional</div><div class="enam-item-text"><strong>Direitos Humanos</strong><br>Sistema interamericano, CADH e jurisprudência da Corte IDH com repercussão interna.</div></div>
+      <div class="enam-item"><div class="enam-item-label">Formação para a Função</div><div class="enam-item-text"><strong>Formação Humanística</strong><br>Ética judicial, LOMAN, CNJ e teoria da decisão. Peso crescente nas provas discursivas.</div></div>
     </div>
   </section>
 
@@ -809,10 +752,7 @@
   <section class="section" id="sobre">
     <div class="section-header">
       <div class="section-num">03</div>
-      <div class="section-title">
-        <span>Metodologia e Fontes</span>
-        Sobre Este Vade Mecum
-      </div>
+      <div class="section-title"><span>Metodologia e Fontes</span>Sobre Este Vade Mecum</div>
     </div>
     <div class="card-grid card-grid-2">
       <div class="card type-card tc-navy">
@@ -825,7 +765,7 @@
         <h3>📌 Fontes e Atualização</h3>
         <ul>
           <li>Legislação federal vigente (texto oficial do Planalto)</li>
-          <li>Jurisprudência STF, STJ, TST e TRFs com referência aos temas e leading cases</li>
+          <li>Jurisprudência STF, STJ, TST e TRFs com referência</li>
           <li>Súmulas, OJs e enunciados de jornadas de direito</li>
           <li>Provimentos e resoluções do CNJ</li>
           <li>Doutrina dominante citada sem reprodução indevida</li>
@@ -846,17 +786,259 @@
 </footer>
 
 <script>
-  // Busca simples nos cards de matéria
-  const searchInput = document.getElementById('searchInput');
-  const cards = document.querySelectorAll('.materia-card');
+// ─── Dashboard State ─────────────────────────────────────────────────────────
+let dbPeriod = 'all';
+let dbSubjectFilter = '';
+let chartSubject, chartDays, chartDist;
 
-  searchInput.addEventListener('input', function() {
-    const q = this.value.toLowerCase().trim();
-    cards.forEach(card => {
-      const text = card.textContent.toLowerCase();
-      card.style.display = (!q || text.includes(q)) ? '' : 'none';
-    });
+function dbSetPeriod(btn, period) {
+  dbPeriod = period;
+  document.querySelectorAll('[data-period]').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  dbRefresh();
+}
+function dbSetSubject(val) {
+  dbSubjectFilter = val;
+  dbRefresh();
+}
+function dbShowTab(tab, btn) {
+  document.querySelectorAll('.db-tab').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.db-tab-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('db-tab-' + tab).classList.add('active');
+}
+
+function dbExportCSV() { VMTracker.exportCSV(); }
+function dbClearData() {
+  if (confirm('Apagar TODOS os dados de estudo? Esta ação não pode ser desfeita.')) {
+    localStorage.removeItem('vadeMecum_studySessions');
+    localStorage.removeItem('vadeMecum_completedArticles');
+    localStorage.removeItem('vadeMecum_activeSession');
+    dbRefresh(); updateProgressBars();
+  }
+}
+
+function dbRefresh() {
+  const sessions = VMTracker.filterSessions({ period: dbPeriod === 'all' ? null : dbPeriod, subjectId: dbSubjectFilter || null });
+  const global   = VMTracker.getGlobalStats();
+  const summary  = VMTracker.getSummaryBySubject();
+  const totalCompleted = Object.keys(VMTracker.getCompletedArticles()).length;
+
+  // Stats
+  const totalStudyMs  = sessions.reduce((a, s) => a + (s.totalStudyMs || 0), 0);
+  const totalPauseMs  = sessions.reduce((a, s) => a + (s.pauseTotalMs || 0), 0);
+  const uniqueDays    = new Set(sessions.map(s => s.date)).size;
+  const avgMs         = uniqueDays > 0 ? totalStudyMs / uniqueDays : 0;
+
+  document.getElementById('db-total-hours').textContent   = VMTracker.msToHHMM(totalStudyMs);
+  document.getElementById('db-total-sessions').textContent = sessions.length + ' sessão(ões) no período';
+  document.getElementById('db-completed').textContent     = totalCompleted;
+  document.getElementById('db-completed-pct').textContent = 'de 5.211 artigos totais';
+  document.getElementById('db-days').textContent          = uniqueDays;
+  document.getElementById('db-avg').textContent           = 'média ' + VMTracker.msToHHMM(avgMs) + ' por dia';
+  document.getElementById('db-pause-hours').textContent   = VMTracker.msToHHMM(totalPauseMs);
+
+  const totalPct = ((totalCompleted / 5211) * 100).toFixed(1).replace('.',',');
+  document.getElementById('db-progress-pct').textContent  = totalPct + '%';
+
+  // Charts
+  buildCharts(sessions);
+
+  // Sessions table
+  buildSessionsTable(sessions);
+
+  // Summary table
+  buildSummaryTable(summary);
+
+  // Progress bars
+  updateProgressBars();
+}
+
+function buildCharts(sessions) {
+  const cfg = VMTracker.getSubjectsConfig();
+  const bySubj = VMTracker.getStudyMinutesBySubject(sessions);
+  const byDay  = VMTracker.getStudyMinutesByDay(sessions, 14);
+
+  // ── Chart: Horas por Matéria ──
+  const subjLabels = Object.keys(cfg).map(k => cfg[k].name);
+  const subjData   = Object.keys(cfg).map(k => Math.round((bySubj[k] || 0) / 60 * 10) / 10);
+  const subjColors = Object.keys(cfg).map(k => cfg[k].color);
+
+  if (chartSubject) chartSubject.destroy();
+  chartSubject = new Chart(document.getElementById('chartSubject'), {
+    type: 'bar',
+    data: {
+      labels: subjLabels,
+      datasets: [{ data: subjData, backgroundColor: subjColors, borderRadius: 3, borderSkipped: false }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { ticks: { color: 'rgba(255,255,255,0.5)', font: { size: 9 }, maxRotation: 30 }, grid: { color: 'rgba(255,255,255,0.05)' } },
+        y: { ticks: { color: 'rgba(255,255,255,0.5)', font: { size: 9 } }, grid: { color: 'rgba(255,255,255,0.08)' }, title: { display: true, text: 'horas', color: 'rgba(255,255,255,0.3)', font: { size: 9 } } }
+      }
+    }
   });
+
+  // ── Chart: Horas por Dia ──
+  const dayKeys   = Object.keys(byDay);
+  const dayLabels = dayKeys.map(d => { const p = d.split('-'); return p[2]+'/'+p[1]; });
+  const dayData   = dayKeys.map(d => Math.round((byDay[d] || 0) / 60 * 10) / 10);
+
+  if (chartDays) chartDays.destroy();
+  chartDays = new Chart(document.getElementById('chartDays'), {
+    type: 'line',
+    data: {
+      labels: dayLabels,
+      datasets: [{
+        data: dayData,
+        borderColor: '#e8b84b', backgroundColor: 'rgba(232,184,75,0.12)',
+        tension: 0.4, pointBackgroundColor: '#e8b84b', pointRadius: 3, fill: true
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { ticks: { color: 'rgba(255,255,255,0.5)', font: { size: 9 } }, grid: { color: 'rgba(255,255,255,0.05)' } },
+        y: { ticks: { color: 'rgba(255,255,255,0.5)', font: { size: 9 } }, grid: { color: 'rgba(255,255,255,0.08)' }, title: { display: true, text: 'horas', color: 'rgba(255,255,255,0.3)', font: { size: 9 } } }
+      }
+    }
+  });
+
+  // ── Chart: Distribuição (doughnut) ──
+  const hasData = Object.values(bySubj).some(v => v > 0);
+  const distLabels = Object.keys(cfg).map(k => cfg[k].name);
+  const distData   = Object.keys(cfg).map(k => Math.round(bySubj[k] || 0));
+  const distColors = Object.keys(cfg).map(k => cfg[k].color);
+
+  if (chartDist) chartDist.destroy();
+  chartDist = new Chart(document.getElementById('chartDist'), {
+    type: 'doughnut',
+    data: {
+      labels: distLabels,
+      datasets: [{ data: hasData ? distData : [1], backgroundColor: hasData ? distColors : ['rgba(255,255,255,0.08)'], borderWidth: 0 }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      cutout: '60%',
+      plugins: {
+        legend: { display: true, position: 'bottom', labels: { color: 'rgba(255,255,255,0.5)', font: { size: 8 }, boxWidth: 10, padding: 6 } }
+      }
+    }
+  });
+}
+
+function buildSessionsTable(sessions) {
+  const tbody = document.getElementById('dbSessionsBody');
+  if (sessions.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="10" class="db-empty">Nenhuma sessão no período selecionado.<br>Abra um artigo e clique em "▶ Iniciar Leitura" para começar.</td></tr>';
+    return;
+  }
+  const sorted = [...sessions].sort((a, b) => b.startTs - a.startTs);
+  tbody.innerHTML = sorted.map(s => {
+    const pause1 = s.pauses && s.pauses[0];
+    return `<tr>
+      <td>${s.date || ''}</td>
+      <td style="text-transform:capitalize">${(s.dayOfWeek||'').slice(0,3)}.</td>
+      <td class="td-subj" style="color:${VMTracker.getSubjectsConfig()[s.subjectId]?.color || '#e8b84b'}">${s.subject || ''}</td>
+      <td style="font-family:monospace;font-size:0.68rem;">${s.articleFile || ''}</td>
+      <td>${s.startTime || ''}</td>
+      <td>${s.endTime || ''}</td>
+      <td style="color:#74b9ff;font-weight:600;">${s.studyDuration || '—'}</td>
+      <td style="color:#fc8181;">${s.pauseDuration || '0:00'}</td>
+      <td style="color:#e8b84b;font-weight:700;">${s.studyDuration || '—'}</td>
+      <td class="${(s.totalStudyMs||0) > 0 ? 'td-sim' : 'td-nao'}">${(s.totalStudyMs||0) > 0 ? 'Sim' : 'Não'}</td>
+    </tr>`;
+  }).join('');
+}
+
+function buildSummaryTable(summary) {
+  const tbody = document.getElementById('dbSummaryBody');
+  const rows = Object.values(summary);
+  let totalConc = 0, totalStudy = 0, totalDays = 0;
+  rows.forEach(r => { totalConc += r.completedCount; totalStudy += r.studyMinutes; totalDays = Math.max(totalDays, r.daysCount); });
+  tbody.innerHTML = rows.map(r => `
+    <tr>
+      <td class="td-subj" style="color:${r.color}">${r.name}</td>
+      <td>${r.totalArticles.toLocaleString('pt-BR')}</td>
+      <td style="color:#2ecc71;font-weight:600;">${r.completedCount}</td>
+      <td>${r.pct}%</td>
+      <td style="color:#74b9ff;">${r.studyHHMM}</td>
+      <td>${r.daysCount}</td>
+    </tr>`).join('') +
+    `<tr style="border-top:2px solid rgba(200,150,12,0.3);font-weight:700;">
+      <td style="color:var(--gold-light)">TOTAL GERAL</td>
+      <td>5.211</td>
+      <td style="color:#2ecc71;">${totalConc}</td>
+      <td>${((totalConc/5211)*100).toFixed(1)}%</td>
+      <td style="color:#74b9ff;">${VMTracker.msToHHMM(totalStudy*60000)}</td>
+      <td>${new Set(VMTracker.getSessions().filter(s=>s.state==='done').map(s=>s.date)).size}</td>
+    </tr>`;
+}
+
+function updateProgressBars() {
+  const summary = VMTracker.getSummaryBySubject();
+
+  // CP
+  const cp = summary['CP'] || {};
+  const cpW = Math.min(100, (cp.completedCount||0) / (cp.totalArticles||361) * 100);
+  const cpEl = document.getElementById('prog-CP');
+  if (cpEl) { cpEl.style.width = cpW + '%'; document.getElementById('prog-CP-label').textContent = (cp.completedCount||0) + ' / 361 artigos'; document.getElementById('prog-CP-pct').textContent = (cpW).toFixed(1) + '%'; }
+
+  const cc = summary['CC'] || {};
+  const ccW = Math.min(100, (cc.completedCount||0) / (cc.totalArticles||2046) * 100);
+  const ccEl = document.getElementById('prog-CC');
+  if (ccEl) { ccEl.style.width = ccW + '%'; document.getElementById('prog-CC-label').textContent = (cc.completedCount||0) + ' / 2046 artigos'; document.getElementById('prog-CC-pct').textContent = (ccW).toFixed(1) + '%'; }
+
+  const cpc = summary['CPC'] || {};
+  const cpcW = Math.min(100, (cpc.completedCount||0) / (cpc.totalArticles||1071) * 100);
+  const cpcEl = document.getElementById('prog-CPC');
+  if (cpcEl) { cpcEl.style.width = cpcW + '%'; document.getElementById('prog-CPC-label').textContent = (cpc.completedCount||0) + ' / 1071 artigos'; document.getElementById('prog-CPC-pct').textContent = (cpcW).toFixed(1) + '%'; }
+
+  const clt = summary['CLT'] || {};
+  const cltW = Math.min(100, (clt.completedCount||0) / (clt.totalArticles||922) * 100);
+  const cltEl = document.getElementById('prog-CLT');
+  if (cltEl) { cltEl.style.width = cltW + '%'; document.getElementById('prog-CLT-label').textContent = (clt.completedCount||0) + ' / 922 artigos'; document.getElementById('prog-CLT-pct').textContent = (cltW).toFixed(1) + '%'; }
+
+  const cpp = summary['CPP'] || {};
+  const cppW = Math.min(100, (cpp.completedCount||0) / (cpp.totalArticles||811) * 100);
+  const cppEl = document.getElementById('prog-CPP');
+  if (cppEl) { cppEl.style.width = cppW + '%'; document.getElementById('prog-CPP-label').textContent = (cpp.completedCount||0) + ' / 811 artigos'; document.getElementById('prog-CPP-pct').textContent = (cppW).toFixed(1) + '%'; }
+
+  // Progress grid
+  buildProgressGrid(summary);
+}
+
+function buildProgressGrid(summary) {
+  const grid = document.getElementById('dbProgressGrid');
+  if (!grid) return;
+  grid.innerHTML = Object.values(summary).map(r => `
+    <div class="db-prog-item">
+      <div class="db-prog-header">
+        <span class="db-prog-name" style="color:${r.color}">${r.name}</span>
+        <span class="db-prog-pct">${r.pct}%</span>
+      </div>
+      <div class="db-prog-bar-bg"><div class="db-prog-bar-fill" style="width:${Math.min(100,r.pct)}%;background:${r.color};"></div></div>
+      <div class="db-prog-meta">${r.completedCount} de ${r.totalArticles.toLocaleString('pt-BR')} artigos · ${r.studyHHMM}h de estudo · ${r.daysCount} dia(s)</div>
+    </div>`).join('');
+}
+
+// ─── Matéria Search ───────────────────────────────────────────────────────────
+const searchInput = document.getElementById('searchInput');
+const cards = document.querySelectorAll('.materia-card');
+searchInput.addEventListener('input', function() {
+  const q = this.value.toLowerCase().trim();
+  cards.forEach(card => { card.style.display = (!q || card.textContent.toLowerCase().includes(q)) ? '' : 'none'; });
+});
+
+// ─── Init ─────────────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', function() {
+  dbRefresh();
+  // Auto-refresh every 30s in case user has another tab open
+  setInterval(dbRefresh, 30000);
+});
 </script>
 </body>
 </html>
