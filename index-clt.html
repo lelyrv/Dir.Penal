@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLT — Consolidação das Leis do Trabalho | Vade Mecum Magistratura 2026</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .content-area {
+            padding: 0 !important;
+            overflow: auto !important;
+            background: var(--bg-main, #f7f2ea);
+        }
+
+        iframe#painel_artigos {
+            width: 100%;
+            height: 100dvh;
+            min-height: 100dvh;
+            border: none;
+            display: block;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        iframe#painel_artigos.auto-height {
+            height: var(--iframe-height, 100dvh) !important;
+            min-height: var(--iframe-height, 100dvh) !important;
+        }
+
+        /* Override sidebar header colour for CLT (green) */
+        .sidebar-header { background: linear-gradient(135deg, #145a32 0%, #1f6b42 100%) !important; }
+        .sidebar-header h2 { color: #e8f5e9 !important; }
+        .sidebar-header p  { color: rgba(255,255,255,.65) !important; }
+        .menu-artigos a.active { border-left-color: #2ecc71 !important; color: #145a32 !important; }
+
+        @media print {
+            html, body { width:100%!important; height:auto!important; overflow:visible!important; background:#fff!important; }
+            .sidebar, .menu-toggle { display:none!important; }
+            .content-area { position:static!important; inset:auto!important; width:100%!important; height:auto!important; margin:0!important; padding:0!important; overflow:visible!important; display:block!important; background:#fff!important; }
+            iframe#painel_artigos { width:100%!important; height:var(--iframe-height,auto)!important; border:none!important; overflow:visible!important; display:block!important; background:#fff!important; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="menu-toggle" onclick="toggleMenu()" title="Ocultar/Mostrar Menu">☰</button>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>CLT</h2>
+            <p>CONSOLIDAÇÃO DAS LEIS DO TRABALHO</p>
+        </div>
+
+        <a href="index.html" style="display:block;padding:0.5rem 1.2rem;font-size:0.78rem;color:var(--gold-light,#e8b84b);text-decoration:none;border-bottom:1px solid rgba(200,150,12,0.2);letter-spacing:1px;font-weight:600;">← VOLTAR AO ÍNDICE</a>
+
+        <nav class="menu-artigos">
+
+            <!-- ─── TÍTULO I — INTRODUÇÃO ─── -->
+            <div class="menu-group-title">Título I — Introdução (Arts. 1–12)</div>
+            <a href="CLT-ART-1.html"  target="painel_artigos">Art. 1º — Âmbito de Aplicação da CLT</a>
+            <a href="CLT-ART-2.html"  target="painel_artigos">Art. 2º — Conceito de Empregador</a>
+            <a href="CLT-ART-3.html"  target="painel_artigos">Art. 3º — Conceito de Empregado</a>
+            <a href="CLT-ART-4.html"  target="painel_artigos">Art. 4º — Tempo à Disposição</a>
+            <a href="CLT-ART-5.html"  target="painel_artigos">Art. 5º — Igualdade de Tratamento</a>
+            <a href="CLT-ART-6.html"  target="painel_artigos">Art. 6º — Trabalho a Distância</a>
+            <a href="CLT-ART-7.html"  target="painel_artigos">Art. 7º — Empregado Rural / Doméstico</a>
+            <a href="CLT-ART-8.html"  target="painel_artigos">Art. 8º — Fontes e Analogia</a>
+            <a href="CLT-ART-9.html"  target="painel_artigos">Art. 9º — Nulidade de Atos Fraudulentos</a>
+            <a href="CLT-ART-10.html" target="painel_artigos">Art. 10 — Sucessão Trabalhista</a>
+            <a href="CLT-ART-11.html" target="painel_artigos">Art. 11 — Prescrição Trabalhista</a>
+            <a href="CLT-ART-12.html" target="painel_artigos">Art. 12 — Preferência de Créditos</a>
+
+            <!-- ─── TÍTULO II — NORMAS DE TUTELA ─── -->
+            <div class="menu-group-title">Título II — Normas de Tutela do Trabalho (Arts. 13–223)</div>
+            <a href="CLT-ART-13.html"  target="painel_artigos">Art. 13 — Carteira de Trabalho (CTPS)</a>
+            <a href="CLT-ART-29.html"  target="painel_artigos">Art. 29 — Anotações na CTPS</a>
+            <a href="CLT-ART-58.html"  target="painel_artigos">Art. 58 — Duração do Trabalho</a>
+            <a href="CLT-ART-59.html"  target="painel_artigos">Art. 59 — Horas Extras</a>
+            <a href="CLT-ART-60.html"  target="painel_artigos">Art. 60 — Atividades Insalubres e Jornada</a>
+            <a href="CLT-ART-61.html"  target="painel_artigos">Art. 61 — Prorrogação de Jornada</a>
+            <a href="CLT-ART-62.html"  target="painel_artigos">Art. 62 — Exclusões do Controle de Jornada</a>
+            <a href="CLT-ART-66.html"  target="painel_artigos">Art. 66 — Intervalo Entre Jornadas</a>
+            <a href="CLT-ART-67.html"  target="painel_artigos">Art. 67 — Descanso Semanal Remunerado</a>
+            <a href="CLT-ART-71.html"  target="painel_artigos">Art. 71 — Intervalo Intrajornada</a>
+            <a href="CLT-ART-74.html"  target="painel_artigos">Art. 74 — Controle de Horário</a>
+            <a href="CLT-ART-75-A.html" target="painel_artigos">Arts. 75-A a 75-E — Teletrabalho</a>
+
+            <!-- ─── TÍTULO II — SALÁRIO ─── -->
+            <div class="menu-group-title">Salário e Remuneração (Arts. 76–153)</div>
+            <a href="CLT-ART-76.html"  target="painel_artigos">Art. 76 — Salário Mínimo</a>
+            <a href="CLT-ART-78.html"  target="painel_artigos">Art. 78 — Salário por Peça ou Tarefa</a>
+            <a href="CLT-ART-457.html" target="painel_artigos">Art. 457 — Integração Salarial</a>
+            <a href="CLT-ART-458.html" target="painel_artigos">Art. 458 — Salário In Natura</a>
+            <a href="CLT-ART-459.html" target="painel_artigos">Art. 459 — Prazo de Pagamento</a>
+            <a href="CLT-ART-460.html" target="painel_artigos">Art. 460 — Equiparação Salarial</a>
+            <a href="CLT-ART-461.html" target="painel_artigos">Art. 461 — Isonomia Salarial</a>
+            <a href="CLT-ART-462.html" target="painel_artigos">Art. 462 — Descontos no Salário</a>
+            <a href="CLT-ART-467.html" target="painel_artigos">Art. 467 — Multa por Atraso de Verbas</a>
+
+            <!-- ─── FÉRIAS ─── -->
+            <div class="menu-group-title">Férias (Arts. 129–153)</div>
+            <a href="CLT-ART-129.html" target="painel_artigos">Art. 129 — Direito a Férias</a>
+            <a href="CLT-ART-130.html" target="painel_artigos">Art. 130 — Período Aquisitivo</a>
+            <a href="CLT-ART-133.html" target="painel_artigos">Art. 133 — Perda do Direito a Férias</a>
+            <a href="CLT-ART-134.html" target="painel_artigos">Art. 134 — Concessão de Férias</a>
+            <a href="CLT-ART-137.html" target="painel_artigos">Art. 137 — Férias em Dobro</a>
+            <a href="CLT-ART-143.html" target="painel_artigos">Art. 143 — Abono Pecuniário</a>
+            <a href="CLT-ART-145.html" target="painel_artigos">Art. 145 — Remuneração de Férias</a>
+
+            <!-- ─── TÍTULO IV — CONTRATO DE TRABALHO ─── -->
+            <div class="menu-group-title">Título IV — Contrato Individual de Trabalho (Arts. 442–510)</div>
+            <a href="CLT-ART-442.html" target="painel_artigos">Art. 442 — Definição do Contrato</a>
+            <a href="CLT-ART-442-B.html" target="painel_artigos">Art. 442-B — Autônomo Exclusivo</a>
+            <a href="CLT-ART-443.html" target="painel_artigos">Art. 443 — Modalidades Contratuais</a>
+            <a href="CLT-ART-444.html" target="painel_artigos">Art. 444 — Cláusulas Contratuais</a>
+            <a href="CLT-ART-445.html" target="painel_artigos">Art. 445 — Prazo Determinado</a>
+            <a href="CLT-ART-447.html" target="painel_artigos">Art. 447 — Contrato Verbal</a>
+            <a href="CLT-ART-448.html" target="painel_artigos">Art. 448 — Nulidade de Cláusulas</a>
+            <a href="CLT-ART-452-A.html" target="painel_artigos">Art. 452-A — Contrato Intermitente</a>
+
+            <!-- ─── RESCISÃO ─── -->
+            <div class="menu-group-title">Rescisão do Contrato (Arts. 477–507)</div>
+            <a href="CLT-ART-477.html" target="painel_artigos">Art. 477 — Extinção do Contrato</a>
+            <a href="CLT-ART-477-A.html" target="painel_artigos">Art. 477-A — Dispensa Coletiva</a>
+            <a href="CLT-ART-477-B.html" target="painel_artigos">Art. 477-B — PDV e Quitação</a>
+            <a href="CLT-ART-480.html" target="painel_artigos">Art. 480 — Indenização por Ruptura</a>
+            <a href="CLT-ART-482.html" target="painel_artigos">Art. 482 — Justa Causa</a>
+            <a href="CLT-ART-483.html" target="painel_artigos">Art. 483 — Rescisão Indireta</a>
+            <a href="CLT-ART-484-A.html" target="painel_artigos">Art. 484-A — Extinção por Acordo Mútuo</a>
+            <a href="CLT-ART-487.html" target="painel_artigos">Art. 487 — Aviso Prévio</a>
+            <a href="CLT-ART-492.html" target="painel_artigos">Art. 492 — Estabilidade Decenal</a>
+
+            <!-- ─── TÍTULO V — ORGANIZAÇÃO SINDICAL ─── -->
+            <div class="menu-group-title">Título V — Organização Sindical (Arts. 511–610)</div>
+            <a href="CLT-ART-511.html" target="painel_artigos">Art. 511 — Conceito de Sindicato</a>
+            <a href="CLT-ART-513.html" target="painel_artigos">Art. 513 — Prerrogativas Sindicais</a>
+            <a href="CLT-ART-522.html" target="painel_artigos">Art. 522 — Administração do Sindicato</a>
+            <a href="CLT-ART-543.html" target="painel_artigos">Art. 543 — Garantia Sindical</a>
+            <a href="CLT-ART-579.html" target="painel_artigos">Art. 579 — Contribuição Sindical</a>
+
+            <!-- ─── TÍTULO VI — NEGOCIAÇÃO COLETIVA ─── -->
+            <div class="menu-group-title">Título VI — Negociação Coletiva (Arts. 611–625)</div>
+            <a href="CLT-ART-611.html"   target="painel_artigos">Art. 611 — Convenção Coletiva</a>
+            <a href="CLT-ART-611-A.html" target="painel_artigos">Art. 611-A — Prevalência do Negociado</a>
+            <a href="CLT-ART-611-B.html" target="painel_artigos">Art. 611-B — Limites à Negociação</a>
+            <a href="CLT-ART-612.html"   target="painel_artigos">Art. 612 — Acordo Coletivo</a>
+            <a href="CLT-ART-616.html"   target="painel_artigos">Art. 616 — Obrigatoriedade de Negociação</a>
+
+            <!-- ─── TÍTULO X — PROCESSO DO TRABALHO ─── -->
+            <div class="menu-group-title">Título X — Processo Judiciário do Trabalho (Arts. 763–910)</div>
+            <a href="CLT-ART-763.html"  target="painel_artigos">Art. 763 — Jurisdição Trabalhista</a>
+            <a href="CLT-ART-769.html"  target="painel_artigos">Art. 769 — Aplicação do CPC</a>
+            <a href="CLT-ART-791.html"  target="painel_artigos">Art. 791 — Jus Postulandi</a>
+            <a href="CLT-ART-791-A.html" target="painel_artigos">Art. 791-A — Honorários Advocatícios</a>
+            <a href="CLT-ART-793-A.html" target="painel_artigos">Arts. 793-A a 793-D — Litigância de Má-fé</a>
+            <a href="CLT-ART-796.html"  target="painel_artigos">Art. 796 — Exceções Processuais</a>
+            <a href="CLT-ART-818.html"  target="painel_artigos">Art. 818 — Ônus da Prova</a>
+            <a href="CLT-ART-840.html"  target="painel_artigos">Art. 840 — Petição Inicial</a>
+            <a href="CLT-ART-843.html"  target="painel_artigos">Art. 843 — Presença em Audiência</a>
+            <a href="CLT-ART-852-A.html" target="painel_artigos">Art. 852-A — Rito Sumaríssimo</a>
+            <a href="CLT-ART-876.html"  target="painel_artigos">Art. 876 — Títulos Executivos</a>
+            <a href="CLT-ART-878.html"  target="painel_artigos">Art. 878 — Execução de Ofício</a>
+            <a href="CLT-ART-882.html"  target="painel_artigos">Art. 882 — Garantia do Juízo</a>
+            <a href="CLT-ART-899.html"  target="painel_artigos">Art. 899 — Recursos — Depósito Recursal</a>
+
+            <!-- ─── LEGISLAÇÃO ESPECIAL ─── -->
+            <div class="menu-group-title">Legislação Extravagante e Súmulas TST</div>
+            <a href="CLT-ART-SUMULAS.html" target="painel_artigos">Súmulas e OJs do TST — Seleção</a>
+            <a href="CLT-ART-LEI8036.html" target="painel_artigos">Lei 8.036/90 — FGTS</a>
+            <a href="CLT-ART-LEI12506.html" target="painel_artigos">Lei 12.506/11 — Aviso Prévio Proporcional</a>
+
+        </nav>
+    </aside>
+
+    <main class="content-area">
+        <iframe
+            id="painel_artigos"
+            src="CLT-ART-1.html"
+            name="painel_artigos"
+            title="Painel de artigos da CLT">
+        </iframe>
+    </main>
+
+    <script src="script.js"></script>
+
+    <script>
+        (function () {
+            const iframe = document.getElementById('painel_artigos');
+            if (!iframe) return;
+
+            function getIframeDocument() {
+                return iframe.contentDocument || iframe.contentWindow.document;
+            }
+
+            function calcularAlturaReal(doc) {
+                const html = doc.documentElement, body = doc.body;
+                if (!html || !body) return window.innerHeight;
+                return Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+            }
+
+            function ajustarAlturaIframe() {
+                try {
+                    const doc = getIframeDocument();
+                    const altura = calcularAlturaReal(doc);
+                    iframe.classList.add('auto-height');
+                    iframe.style.setProperty('--iframe-height', altura + 'px');
+                    document.documentElement.style.setProperty('--iframe-height', altura + 'px');
+                } catch (erro) {
+                    iframe.classList.remove('auto-height');
+                    iframe.style.removeProperty('--iframe-height');
+                }
+            }
+
+            function prepararObservador() {
+                try {
+                    const doc = getIframeDocument();
+                    ajustarAlturaIframe();
+                    if (doc.fonts && doc.fonts.ready) doc.fonts.ready.then(ajustarAlturaIframe);
+                    const ro = new ResizeObserver(ajustarAlturaIframe);
+                    if (doc.documentElement) ro.observe(doc.documentElement);
+                    if (doc.body) ro.observe(doc.body);
+                    const mo = new MutationObserver(ajustarAlturaIframe);
+                    if (doc.body) mo.observe(doc.body, { childList:true, subtree:true, attributes:true, characterData:true });
+                    setTimeout(ajustarAlturaIframe, 150);
+                    setTimeout(ajustarAlturaIframe, 500);
+                    setTimeout(ajustarAlturaIframe, 1000);
+                } catch (erro) { /* cross-origin */ }
+            }
+
+            iframe.addEventListener('load', function () {
+                prepararObservador();
+                const area = document.querySelector('.content-area');
+                if (area) area.scrollTo({ top: 0, behavior: 'auto' });
+            });
+
+            window.addEventListener('load',        ajustarAlturaIframe);
+            window.addEventListener('resize',      ajustarAlturaIframe);
+            window.addEventListener('beforeprint', ajustarAlturaIframe);
+
+            document.querySelectorAll('.menu-artigos a[target="painel_artigos"]').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    document.querySelectorAll('.menu-artigos a').forEach(function (item) { item.classList.remove('active'); });
+                    link.classList.add('active');
+                    setTimeout(ajustarAlturaIframe, 250);
+                    setTimeout(ajustarAlturaIframe, 700);
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>

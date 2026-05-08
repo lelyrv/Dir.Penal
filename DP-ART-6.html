@@ -607,70 +607,95 @@
 </style>
 </head>
 <body>
-<!-- ═══════════ VM STUDY BAR ═══════════ -->
-<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<!-- VM-STUDY-BAR-START -->
 <style id="vm-bar-css">
+html,body{-webkit-transform:none!important;transform:none!important;overflow-x:hidden;}
+#vm-study-bar *{box-sizing:border-box;margin:0;padding:0;}
 #vm-study-bar{
-  position:fixed;top:0;left:0;right:0;z-index:10000;
-  background:#0a1520;border-bottom:2px solid #c8960c;
-  display:flex;align-items:center;gap:0;padding:0 0.6rem;
-  height:50px;font-family:'Source Serif 4',Georgia,serif;
-  box-shadow:0 2px 16px rgba(0,0,0,0.4);
+  position:fixed!important;top:0!important;left:0!important;right:0!important;
+  z-index:2147483647!important;
+  -webkit-transform:translateZ(0);transform:translateZ(0);
+  will-change:transform;-webkit-backface-visibility:hidden;backface-visibility:hidden;
+  background:linear-gradient(180deg,#0d1b2a 0%,#0a1520 100%);
+  border-bottom:2px solid #c8960c;
+  box-shadow:0 2px 20px rgba(0,0,0,.55);
+  font-family:'Source Serif 4',Georgia,serif;
+  display:flex;flex-direction:column;
+  user-select:none;-webkit-user-select:none;
 }
-#vm-study-bar .vm-back{
-  color:#e8b84b;text-decoration:none;font-size:0.72rem;font-weight:700;
-  letter-spacing:0.5px;white-space:nowrap;padding:0 0.7rem;
-  border-right:1px solid rgba(200,150,12,0.3);margin-right:0.6rem;
-  display:flex;align-items:center;gap:0.3rem;height:100%;
+.vm-row1{
+  display:flex;align-items:center;padding:0 .5rem;min-height:48px;
+  border-bottom:1px solid rgba(200,150,12,.2);
 }
-#vm-study-bar .vm-back:hover{color:#fff;}
-#vm-study-bar .vm-info{font-size:0.7rem;color:rgba(255,255,255,0.6);white-space:nowrap;margin-right:0.8rem;}
-#vm-study-bar .vm-info strong{color:#e8b84b;font-weight:700;}
-#vm-study-bar .vm-timer-wrap{display:flex;align-items:center;gap:0.5rem;margin-right:auto;}
-#vm-study-bar .vm-timer{
+.vm-back{
+  display:flex;align-items:center;gap:.25rem;color:#e8b84b;text-decoration:none;
+  font-size:.82rem;font-weight:700;padding:0 .7rem 0 .2rem;min-height:48px;
+  border-right:1px solid rgba(200,150,12,.25);white-space:nowrap;flex-shrink:0;
+  -webkit-tap-highlight-color:transparent;
+}
+.vm-back:active{color:#fff;}
+.vm-info{
+  font-size:.72rem;color:rgba(255,255,255,.65);padding:0 .6rem;flex:1;
+  min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.vm-info strong{color:#e8b84b;font-weight:700;}
+.vm-completed-wrap{
+  display:flex;align-items:center;height:100%;
+  padding-left:.55rem;border-left:1px solid rgba(200,150,12,.2);flex-shrink:0;
+}
+.vm-completed-wrap label{
+  display:flex;align-items:center;gap:.4rem;font-size:.68rem;
+  color:rgba(255,255,255,.5);cursor:pointer;white-space:nowrap;padding:0 .15rem;
+}
+#vm-check{width:18px;height:18px;accent-color:#2ecc71;cursor:pointer;flex-shrink:0;}
+#vm-check-label{transition:color .2s;}
+.vm-row2{display:flex;align-items:center;padding:0 .5rem;min-height:48px;gap:.5rem;}
+.vm-timer-block{display:flex;align-items:center;gap:.4rem;flex-shrink:0;}
+.vm-timer{
   font-family:'JetBrains Mono','Courier New',monospace;
-  font-size:1.1rem;font-weight:700;color:#e8b84b;letter-spacing:1px;
-  min-width:70px;text-align:center;
+  font-size:1.18rem;font-weight:700;color:#e8b84b;letter-spacing:1.5px;
+  min-width:84px;text-align:center;line-height:1;
 }
-#vm-study-bar .vm-pause-timer{font-size:0.65rem;color:#fc8181;min-width:50px;}
-#vm-study-bar .vm-status{
-  font-size:0.63rem;letter-spacing:0.8px;text-transform:uppercase;
-  padding:0.2rem 0.6rem;border-radius:10px;font-weight:700;
+.vm-pause-timer{font-size:.66rem;color:#fc8181;min-width:54px;font-weight:600;}
+.vm-status{
+  font-size:.6rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;
+  padding:.25rem .55rem;border-radius:10px;white-space:nowrap;flex-shrink:0;
+  transition:background .2s,color .2s;
 }
-.vm-status-idle{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.4);}
-.vm-status-reading{background:rgba(46,204,113,0.2);color:#2ecc71;}
-.vm-status-paused{background:rgba(252,129,74,0.2);color:#fc894a;}
-.vm-status-done{background:rgba(116,185,255,0.2);color:#74b9ff;}
-#vm-study-bar .vm-btns{display:flex;gap:0.4rem;margin-right:0.6rem;}
-#vm-study-bar .vm-btn{
-  font-family:'Source Serif 4',serif;font-size:0.68rem;font-weight:700;
-  letter-spacing:0.3px;padding:0.3rem 0.7rem;border-radius:3px;cursor:pointer;
-  border:1px solid;transition:all .15s;white-space:nowrap;
+.vm-status-idle   {background:rgba(255,255,255,.08); color:rgba(255,255,255,.38);}
+.vm-status-reading{background:rgba(46,204,113,.18);  color:#2ecc71;}
+.vm-status-paused {background:rgba(252,137,74,.18);  color:#fc894a;}
+.vm-status-done   {background:rgba(116,185,255,.18); color:#74b9ff;}
+.vm-spacer{flex:1;}
+.vm-btns{display:flex;gap:.35rem;flex-shrink:0;}
+.vm-btn{
+  font-family:'Source Serif 4',Georgia,serif;font-size:.72rem;font-weight:700;
+  padding:0 .65rem;height:36px;min-width:36px;border-radius:4px;border:1.5px solid;
+  cursor:pointer;white-space:nowrap;transition:background .15s,transform .1s;
+  display:flex;align-items:center;justify-content:center;gap:.2rem;
+  -webkit-tap-highlight-color:transparent;
 }
-#vm-btn-start{background:rgba(46,204,113,0.2);border-color:rgba(46,204,113,0.5);color:#2ecc71;}
-#vm-btn-start:hover:not(:disabled){background:rgba(46,204,113,0.35);}
-#vm-btn-start:disabled{opacity:0.3;cursor:default;}
-#vm-btn-pause{background:rgba(230,126,34,0.2);border-color:rgba(230,126,34,0.5);color:#fc894a;}
-#vm-btn-pause:hover:not(:disabled){background:rgba(230,126,34,0.35);}
-#vm-btn-pause:disabled{opacity:0.3;cursor:default;}
-#vm-btn-end{background:rgba(116,185,255,0.2);border-color:rgba(116,185,255,0.5);color:#74b9ff;}
-#vm-btn-end:hover:not(:disabled){background:rgba(116,185,255,0.35);}
-#vm-btn-end:disabled{opacity:0.3;cursor:default;}
-#vm-study-bar .vm-completed-wrap{
-  display:flex;align-items:center;gap:0.4rem;
-  border-left:1px solid rgba(200,150,12,0.25);padding-left:0.7rem;
+.vm-btn:active{transform:scale(.94);}
+.vm-btn:disabled{opacity:.25;cursor:default;pointer-events:none;}
+#vm-btn-start{background:rgba(46,204,113,.18);border-color:rgba(46,204,113,.55);color:#2ecc71;}
+#vm-btn-start:not(:disabled):active{background:rgba(46,204,113,.35);}
+#vm-btn-pause{background:rgba(230,126,34,.18);border-color:rgba(230,126,34,.55);color:#fc894a;}
+#vm-btn-pause:not(:disabled):active{background:rgba(230,126,34,.35);}
+#vm-btn-end{background:rgba(116,185,255,.18);border-color:rgba(116,185,255,.55);color:#74b9ff;}
+#vm-btn-end:not(:disabled):active{background:rgba(116,185,255,.35);}
+body{padding-top:96px!important;}
+.tabs-wrap,#top-nav{top:96px!important;}
+@media(min-width:700px){
+  #vm-study-bar{flex-direction:row;align-items:stretch;height:50px;}
+  .vm-row1{border-bottom:none;min-height:50px;padding:0;}
+  .vm-row2{min-height:50px;padding:0 .6rem 0 0;}
+  body{padding-top:50px!important;}
+  .tabs-wrap,#top-nav{top:50px!important;}
 }
-#vm-study-bar .vm-completed-wrap label{
-  font-size:0.65rem;color:rgba(255,255,255,0.5);cursor:pointer;
-  display:flex;align-items:center;gap:0.35rem;white-space:nowrap;
-}
-#vm-check{width:14px;height:14px;accent-color:#2ecc71;cursor:pointer;}
-#vm-check:checked + span{color:#2ecc71;font-weight:700;}
-body{padding-top:50px!important;}
-@media(max-width:640px){
-  #vm-study-bar .vm-info{display:none;}
-  #vm-study-bar .vm-timer{font-size:0.95rem;min-width:55px;}
-  #vm-study-bar .vm-btn{font-size:0.6rem;padding:0.25rem 0.5rem;}
+@media(max-width:360px){
+  .vm-timer{font-size:1rem;min-width:70px;}
+  .vm-btn{font-size:.62rem;padding:0 .45rem;height:34px;}
+  .vm-info{font-size:.64rem;}
 }
 </style>
 
@@ -679,188 +704,104 @@ body{padding-top:50px!important;}
   data-subject="Cód. Penal"
   data-subject-id="CP"
   data-article-num="6">
-
-  <a class="vm-back" href="index.html">← Início</a>
-  <div class="vm-info"><strong>Cód. Penal</strong> · Art. 6</div>
-
-  <div class="vm-timer-wrap">
-    <div class="vm-timer" id="vm-timer">00:00:00</div>
-    <div class="vm-pause-timer" id="vm-pause-timer"></div>
+  <div class="vm-row1">
+    <a class="vm-back" href="index.html">&#8592; Início</a>
+    <div class="vm-info"><strong>Cód. Penal</strong> &middot; Art.&nbsp;6</div>
+    <div class="vm-completed-wrap">
+      <label>
+        <input type="checkbox" id="vm-check" onchange="vmToggleCompleted()">
+        <span id="vm-check-label">Concluído</span>
+      </label>
+    </div>
+  </div>
+  <div class="vm-row2">
+    <div class="vm-timer-block">
+      <div class="vm-timer" id="vm-timer">00:00:00</div>
+      <div class="vm-pause-timer" id="vm-pause-timer"></div>
+    </div>
     <div class="vm-status vm-status-idle" id="vm-status">Parado</div>
-  </div>
-
-  <div class="vm-btns">
-    <button class="vm-btn" id="vm-btn-start" onclick="vmStartResume()">▶ Iniciar Leitura</button>
-    <button class="vm-btn" id="vm-btn-pause" onclick="vmPause()" disabled>⏸ Pausar</button>
-    <button class="vm-btn" id="vm-btn-end"   onclick="vmEnd()"   disabled>✅ Concluir</button>
-  </div>
-
-  <div class="vm-completed-wrap">
-    <label>
-      <input type="checkbox" id="vm-check" onchange="vmToggleCompleted()">
-      <span id="vm-check-label">Estudo Concluído</span>
-    </label>
+    <div class="vm-spacer"></div>
+    <div class="vm-btns">
+      <button class="vm-btn" id="vm-btn-start" onclick="vmStartResume()">&#9654; Iniciar</button>
+      <button class="vm-btn" id="vm-btn-pause" onclick="vmPause()"       disabled>&#9646;&#9646; Pausa</button>
+      <button class="vm-btn" id="vm-btn-end"   onclick="vmEnd()"         disabled>&#10003; Fim</button>
+    </div>
   </div>
 </div>
 
 <script src="study-tracker.js"></script>
 <script>
-(function() {
-  var ARTICLE_ID  = 'DP-ART-6';
-  var SUBJECT     = 'Cód. Penal';
-  var SUBJECT_ID  = 'CP';
-  var ARTICLE_NUM = 6;
-
-  var state = 'idle'; // idle | reading | paused | done
-  var timerInterval = null;
-  var pauseInterval = null;
-  var sessionStartTs = 0;
-  var pauseStartTs   = 0;
-  var accStudyMs     = 0; // accumulated study ms before this pause
-  var accPauseMs     = 0;
-
-  // ── UI Elements ──────────────────────────────────────────────────────────────
-  function $ (id) { return document.getElementById(id); }
-  var elTimer      = $('vm-timer');
-  var elPauseTimer = $('vm-pause-timer');
-  var elStatus     = $('vm-status');
-  var btnStart     = $('vm-btn-start');
-  var btnPause     = $('vm-btn-pause');
-  var btnEnd       = $('vm-btn-end');
-  var chkCompleted = $('vm-check');
-  var lblCompleted = $('vm-check-label');
-
-  function pad(n) { return String(Math.floor(n)).padStart(2,'0'); }
-  function fmtMs(ms) {
-    var s = Math.floor(ms/1000), h = Math.floor(s/3600);
-    return pad(h)+':'+pad((s%3600)/60)+':'+pad(s%60);
-  }
-  function fmtMsShort(ms) {
-    var m = Math.round(ms/60000), h = Math.floor(m/60);
-    return pad(h)+':'+pad(m%60);
-  }
-
-  function setStatus(text, cls) {
-    elStatus.textContent = text;
-    elStatus.className   = 'vm-status '+cls;
-  }
-
-  // ── Timer loops ──────────────────────────────────────────────────────────────
-  function startStudyTimer() {
-    clearInterval(timerInterval);
-    timerInterval = setInterval(function() {
-      elTimer.textContent = fmtMs(accStudyMs + (Date.now() - sessionStartTs));
-    }, 1000);
-  }
-  function stopStudyTimer() { clearInterval(timerInterval); }
-
-  function startPauseTimer() {
-    clearInterval(pauseInterval);
-    pauseInterval = setInterval(function() {
-      elPauseTimer.textContent = '⏸ '+fmtMsShort(Date.now() - pauseStartTs);
-    }, 1000);
-  }
-  function stopPauseTimer() { clearInterval(pauseInterval); elPauseTimer.textContent=''; }
-
-  // ── State transitions ────────────────────────────────────────────────────────
-  window.vmStartResume = function() {
-    if (state === 'idle') {
-      // Start new session
-      VMTracker.startSession(ARTICLE_ID, SUBJECT, SUBJECT_ID, ARTICLE_NUM);
-      sessionStartTs = Date.now();
-      accStudyMs = 0; accPauseMs = 0;
-      state = 'reading';
-      setStatus('Estudando', 'vm-status-reading');
-      btnStart.disabled = true; btnPause.disabled = false; btnEnd.disabled = false;
-      btnPause.textContent = '⏸ Pausar';
-      startStudyTimer();
-    } else if (state === 'paused') {
-      // Resume
-      VMTracker.resumeSession();
-      var pauseMs = Date.now() - pauseStartTs;
-      accPauseMs += pauseMs;
-      sessionStartTs = Date.now();
-      state = 'reading';
-      setStatus('Estudando', 'vm-status-reading');
-      btnStart.disabled = true; btnPause.disabled = false; btnEnd.disabled = false;
-      btnPause.textContent = '⏸ Pausar';
-      stopPauseTimer();
-      startStudyTimer();
+(function(){
+  var ARTICLE_ID='DP-ART-6',SUBJECT='Cód. Penal',SUBJECT_ID='CP',ARTICLE_NUM=6;
+  var state='idle',timerIv=null,pauseIv=null,sessTs=0,pauseTs=0,accStudy=0,accPause=0;
+  function $(id){return document.getElementById(id);}
+  var elTimer=$('vm-timer'),elPause=$('vm-pause-timer'),elStatus=$('vm-status');
+  var btnS=$('vm-btn-start'),btnP=$('vm-btn-pause'),btnE=$('vm-btn-end');
+  var chk=$('vm-check'),lbl=$('vm-check-label');
+  function pad(n){return String(Math.floor(n)).padStart(2,'0');}
+  function fmtMs(ms){var s=Math.floor(ms/1000),h=Math.floor(s/3600);return pad(h)+':'+pad((s%3600)/60)+':'+pad(s%60);}
+  function fmtShort(ms){var m=Math.round(ms/60000);return pad(Math.floor(m/60))+':'+pad(m%60);}
+  function setStatus(t,c){elStatus.textContent=t;elStatus.className='vm-status '+c;}
+  function startStudyIv(){clearInterval(timerIv);timerIv=setInterval(function(){elTimer.textContent=fmtMs(accStudy+(Date.now()-sessTs));},500);}
+  function stopStudyIv(){clearInterval(timerIv);}
+  function startPauseIv(){clearInterval(pauseIv);pauseIv=setInterval(function(){elPause.textContent='\u23F8 '+fmtShort(Date.now()-pauseTs);},500);}
+  function stopPauseIv(){clearInterval(pauseIv);elPause.textContent='';}
+  window.vmStartResume=function(){
+    if(state==='idle'){
+      VMTracker.startSession(ARTICLE_ID,SUBJECT,SUBJECT_ID,ARTICLE_NUM);
+      sessTs=Date.now();accStudy=0;accPause=0;state='reading';
+      setStatus('Estudando','vm-status-reading');
+      btnS.disabled=true;btnP.disabled=false;btnE.disabled=false;
+      startStudyIv();
+    }else if(state==='paused'){
+      VMTracker.resumeSession();accPause+=Date.now()-pauseTs;sessTs=Date.now();state='reading';
+      setStatus('Estudando','vm-status-reading');
+      btnS.disabled=true;btnP.disabled=false;btnE.disabled=false;
+      stopPauseIv();startStudyIv();
     }
   };
-
-  window.vmPause = function() {
-    if (state !== 'reading') return;
-    VMTracker.pauseSession();
-    accStudyMs += Date.now() - sessionStartTs;
-    pauseStartTs = Date.now();
-    state = 'paused';
-    setStatus('Pausado', 'vm-status-paused');
-    btnStart.disabled = false; btnStart.textContent = '▶ Retomar';
-    btnPause.disabled = true;
-    stopStudyTimer();
-    startPauseTimer();
+  window.vmPause=function(){
+    if(state!=='reading')return;
+    VMTracker.pauseSession();accStudy+=Date.now()-sessTs;pauseTs=Date.now();stopStudyIv();
+    state='paused';setStatus('Pausado','vm-status-paused');
+    btnS.textContent='\u25BA Retomar';btnS.disabled=false;btnP.disabled=true;btnE.disabled=false;
+    startPauseIv();
   };
-
-  window.vmEnd = function() {
-    if (state !== 'reading' && state !== 'paused') return;
-    if (state === 'reading') accStudyMs += Date.now() - sessionStartTs;
-    var session = VMTracker.endSession();
-    stopStudyTimer(); stopPauseTimer();
-    state = 'done';
-    elTimer.textContent = fmtMs(accStudyMs);
-    setStatus('Concluído ✓', 'vm-status-done');
-    btnStart.textContent = '↺ Nova Sessão'; btnStart.disabled = false;
-    btnStart.onclick = function() { state='idle'; accStudyMs=0; accPauseMs=0; elTimer.textContent='00:00:00'; setStatus('Parado','vm-status-idle'); btnStart.textContent='▶ Iniciar Leitura'; btnStart.onclick=window.vmStartResume; btnPause.disabled=true; btnEnd.disabled=true; };
-    btnPause.disabled = true; btnEnd.disabled = true;
+  window.vmEnd=function(){
+    if(state!=='reading'&&state!=='paused')return;
+    if(state==='reading')accStudy+=Date.now()-sessTs;
+    VMTracker.endSession();stopStudyIv();stopPauseIv();state='done';
+    elTimer.textContent=fmtMs(accStudy);setStatus('Conclu\u00EDdo \u2713','vm-status-done');
+    btnS.textContent='\u21BA Nova';btnS.disabled=false;
+    btnS.onclick=function(){
+      state='idle';accStudy=0;accPause=0;elTimer.textContent='00:00:00';
+      setStatus('Parado','vm-status-idle');
+      btnS.textContent='\u25BA Iniciar';btnS.onclick=window.vmStartResume;
+      btnP.disabled=true;btnE.disabled=true;
+    };
+    btnP.disabled=true;btnE.disabled=true;
   };
-
-  window.vmToggleCompleted = function() {
-    if (chkCompleted.checked) {
-      VMTracker.markArticleCompleted(ARTICLE_ID, SUBJECT, SUBJECT_ID, ARTICLE_NUM);
-      lblCompleted.textContent = '✓ Concluído!';
-      lblCompleted.style.color = '#2ecc71';
-    } else {
-      VMTracker.unmarkArticleCompleted(ARTICLE_ID);
-      lblCompleted.textContent = 'Estudo Concluído';
-      lblCompleted.style.color = '';
-    }
+  window.vmToggleCompleted=function(){
+    if(chk.checked){VMTracker.markArticleCompleted(ARTICLE_ID,SUBJECT,SUBJECT_ID,ARTICLE_NUM);lbl.textContent='\u2713 Feito!';lbl.style.color='#2ecc71';}
+    else{VMTracker.unmarkArticleCompleted(ARTICLE_ID);lbl.textContent='Conclu\u00EDdo';lbl.style.color='';}
   };
-
-  // ── Restore state on page load ────────────────────────────────────────────────
-  document.addEventListener('DOMContentLoaded', function() {
-    // Check if article is completed
-    if (VMTracker.isArticleCompleted(ARTICLE_ID)) {
-      chkCompleted.checked = true;
-      lblCompleted.textContent = '✓ Concluído!';
-      lblCompleted.style.color = '#2ecc71';
-    }
-    // Check if there's an active session for THIS article
-    var active = VMTracker.getActiveSession();
-    if (active && active.articleFile === ARTICLE_ID) {
-      if (active.state === 'reading') {
-        sessionStartTs = active.startTs;
-        accStudyMs = 0;
-        state = 'reading';
-        setStatus('Estudando', 'vm-status-reading');
-        btnStart.disabled = true; btnPause.disabled = false; btnEnd.disabled = false;
-        btnPause.textContent = '⏸ Pausar';
-        startStudyTimer();
-      } else if (active.state === 'paused') {
-        var lastPause = active.pauses[active.pauses.length-1];
-        pauseStartTs = lastPause.pauseStartTs;
-        accStudyMs = active.pauseTotalMs; // approximate
-        state = 'paused';
-        setStatus('Pausado', 'vm-status-paused');
-        btnStart.disabled = false; btnStart.textContent = '▶ Retomar';
-        btnPause.disabled = true; btnEnd.disabled = false;
-        startPauseTimer();
+  document.addEventListener('DOMContentLoaded',function(){
+    if(VMTracker.isArticleCompleted(ARTICLE_ID)){chk.checked=true;lbl.textContent='\u2713 Feito!';lbl.style.color='#2ecc71';}
+    var active=VMTracker.getActiveSession();
+    if(active&&active.articleFile===ARTICLE_ID){
+      if(active.state==='reading'){
+        sessTs=active.startTs;accStudy=0;state='reading';setStatus('Estudando','vm-status-reading');
+        btnS.disabled=true;btnP.disabled=false;btnE.disabled=false;startStudyIv();
+      }else if(active.state==='paused'){
+        var lp=active.pauses[active.pauses.length-1];pauseTs=lp?lp.pauseStartTs:Date.now();
+        accStudy=active.pauseTotalMs||0;state='paused';setStatus('Pausado','vm-status-paused');
+        btnS.textContent='\u25BA Retomar';btnS.disabled=false;btnP.disabled=true;btnE.disabled=false;startPauseIv();
       }
     }
   });
 })();
 </script>
-<!-- ═══════════ /VM STUDY BAR ═══════════ -->
+<!-- VM-STUDY-BAR-END -->
 
 
 <!-- NAV -->

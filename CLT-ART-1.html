@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 1º CLT — Introdução da CLT | Magistratura e ENAM</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Source+Serif+4:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+--navy:#0d1b2a;
+--navy2:#1b263b;
+--gold:#c8960c;
+--gold2:#e8b84b;
+--cream:#faf7f2;
+--text:#1f1f1f;
+--border:#dbc89f;
+--green:#1f6b42;
+--red:#8b1e1e;
+--blue:#214e7a;
+--purple:#533483;
+--shadow:0 4px 24px rgba(0,0,0,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+font-family:'Source Serif 4',serif;
+background:var(--cream);
+color:var(--text);
+line-height:1.7;
+padding-top:58px;
+}
+
+
+
+#top-nav{
+position:sticky;
+top:58px;
+z-index:999;
+background:var(--navy2);
+border-bottom:2px solid var(--gold);
+display:flex;
+overflow-x:auto;
+scrollbar-width:none;
+padding:0 .7rem;
+}
+#top-nav::-webkit-scrollbar{display:none;}
+#top-nav a{
+color:rgba(255,255,255,.75);
+text-decoration:none;
+padding:1rem .75rem;
+font-size:.72rem;
+font-weight:700;
+letter-spacing:.8px;
+text-transform:uppercase;
+white-space:nowrap;
+}
+#top-nav a:hover{color:var(--gold2);}
+.hero{
+background:linear-gradient(135deg,var(--navy),#243b55);
+color:white;
+padding:3rem 2rem;
+text-align:center;
+}
+.hero .badge{
+display:inline-block;
+padding:.4rem 1rem;
+border:1px solid rgba(255,255,255,.3);
+color:var(--gold2);
+margin-bottom:1rem;
+font-size:.72rem;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:3rem;
+margin-bottom:.7rem;
+}
+.hero h1 span{color:var(--gold2);}
+.hero .subtitle{
+max-width:1100px;
+margin:auto;
+font-size:1rem;
+opacity:.88;
+}
+.hero .law-box{
+margin:2rem auto 0;
+max-width:1200px;
+background:rgba(255,255,255,.06);
+padding:1.4rem;
+border-left:5px solid var(--gold);
+text-align:left;
+font-style:italic;
+}
+.wrapper{
+padding:2rem clamp(1rem,3vw,4rem) 5rem;
+}
+.section{
+margin-top:3rem;
+scroll-margin-top:120px;
+}
+.section-header{
+display:flex;
+align-items:center;
+gap:1rem;
+margin-bottom:1.4rem;
+border-bottom:2px solid var(--border);
+padding-bottom:.7rem;
+}
+.section-num{
+font-size:2rem;
+font-family:'Playfair Display',serif;
+font-weight:900;
+color:var(--gold);
+}
+.section-title{
+font-family:'Playfair Display',serif;
+font-size:1.5rem;
+font-weight:700;
+color:var(--navy);
+}
+.grid{
+display:grid;
+gap:1rem;
+}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr));}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
+.card{
+background:white;
+border:1px solid #eadfc4;
+border-radius:8px;
+padding:1.4rem;
+box-shadow:var(--shadow);
+}
+.card h3{
+font-family:'Playfair Display',serif;
+margin-bottom:.8rem;
+font-size:1.05rem;
+}
+.card p,.card li{font-size:.92rem;}
+.card ul{padding-left:1.1rem;}
+.red{border-top:4px solid var(--red);}
+.blue{border-top:4px solid var(--blue);}
+.green{border-top:4px solid var(--green);}
+.gold{border-top:4px solid var(--gold);}
+.purple{border-top:4px solid var(--purple);}
+.flow{
+background:white;
+padding:2rem;
+border-radius:8px;
+box-shadow:var(--shadow);
+overflow-x:auto;
+}
+.node{
+padding:.9rem 1.2rem;
+border-radius:6px;
+text-align:center;
+font-weight:700;
+font-size:.84rem;
+margin:.5rem auto;
+max-width:900px;
+}
+.start{background:var(--navy);color:white;}
+.navy{background:#edf3fb;border-left:5px solid var(--blue);}
+.end-green{background:var(--green);color:white;border-radius:50px;}
+.end-red{background:var(--red);color:white;border-radius:50px;}
+.end-gold{background:var(--gold);color:var(--navy);border-radius:50px;}
+.arrow{text-align:center;font-size:1.3rem;color:#777;}
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+box-shadow:var(--shadow);
+overflow:hidden;
+border-radius:8px;
+}
+th{
+background:var(--navy);
+color:white;
+padding:.9rem;
+font-size:.82rem;
+text-align:left;
+}
+td{
+padding:.9rem;
+border-bottom:1px solid #eee;
+vertical-align:top;
+font-size:.88rem;
+}
+.alert{
+padding:1rem 1.2rem;
+border-radius:6px;
+margin-top:1rem;
+font-size:.9rem;
+}
+.alert-gold{background:#fff4d8;border:1px solid #e0bf61;}
+.alert-red{background:#fdecec;border:1px solid #df9a9a;}
+.prova{
+background:var(--navy);
+color:white;
+padding:2rem;
+border-radius:8px;
+margin-top:3rem;
+}
+.prova h2{
+font-family:'Playfair Display',serif;
+color:var(--gold2);
+margin-bottom:1rem;
+}
+.prova-item{
+background:rgba(255,255,255,.06);
+border-left:4px solid var(--gold);
+padding:1rem;
+margin-bottom:1rem;
+}
+footer{
+background:var(--navy);
+color:rgba(255,255,255,.65);
+text-align:center;
+padding:2rem;
+margin-top:4rem;
+}
+@media print{
+#vm-study-bar,#top-nav{display:none;}
+body{padding-top:0;}
+.section{page-break-inside:avoid;}
+}
+</style>
+</head>
+<body>
+<!-- VM-STUDY-BAR-START -->
+<style id="vm-bar-css">
+html,body{-webkit-transform:none!important;transform:none!important;overflow-x:hidden;}
+#vm-study-bar *{box-sizing:border-box;margin:0;padding:0;}
+#vm-study-bar{
+  position:fixed!important;top:0!important;left:0!important;right:0!important;
+  z-index:2147483647!important;
+  -webkit-transform:translateZ(0);transform:translateZ(0);
+  will-change:transform;-webkit-backface-visibility:hidden;backface-visibility:hidden;
+  background:linear-gradient(180deg,#0d1b2a 0%,#0a1520 100%);
+  border-bottom:2px solid #c8960c;
+  box-shadow:0 2px 20px rgba(0,0,0,.55);
+  font-family:'Source Serif 4',Georgia,serif;
+  display:flex;flex-direction:column;
+  user-select:none;-webkit-user-select:none;
+}
+.vm-row1{
+  display:flex;align-items:center;padding:0 .5rem;min-height:48px;
+  border-bottom:1px solid rgba(200,150,12,.2);
+}
+.vm-back{
+  display:flex;align-items:center;gap:.25rem;color:#e8b84b;text-decoration:none;
+  font-size:.82rem;font-weight:700;padding:0 .7rem 0 .2rem;min-height:48px;
+  border-right:1px solid rgba(200,150,12,.25);white-space:nowrap;flex-shrink:0;
+  -webkit-tap-highlight-color:transparent;
+}
+.vm-back:active{color:#fff;}
+.vm-info{
+  font-size:.72rem;color:rgba(255,255,255,.65);padding:0 .6rem;flex:1;
+  min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.vm-info strong{color:#e8b84b;font-weight:700;}
+.vm-completed-wrap{
+  display:flex;align-items:center;height:100%;
+  padding-left:.55rem;border-left:1px solid rgba(200,150,12,.2);flex-shrink:0;
+}
+.vm-completed-wrap label{
+  display:flex;align-items:center;gap:.4rem;font-size:.68rem;
+  color:rgba(255,255,255,.5);cursor:pointer;white-space:nowrap;padding:0 .15rem;
+}
+#vm-check{width:18px;height:18px;accent-color:#2ecc71;cursor:pointer;flex-shrink:0;}
+#vm-check-label{transition:color .2s;}
+.vm-row2{display:flex;align-items:center;padding:0 .5rem;min-height:48px;gap:.5rem;}
+.vm-timer-block{display:flex;align-items:center;gap:.4rem;flex-shrink:0;}
+.vm-timer{
+  font-family:'JetBrains Mono','Courier New',monospace;
+  font-size:1.18rem;font-weight:700;color:#e8b84b;letter-spacing:1.5px;
+  min-width:84px;text-align:center;line-height:1;
+}
+.vm-pause-timer{font-size:.66rem;color:#fc8181;min-width:54px;font-weight:600;}
+.vm-status{
+  font-size:.6rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;
+  padding:.25rem .55rem;border-radius:10px;white-space:nowrap;flex-shrink:0;
+  transition:background .2s,color .2s;
+}
+.vm-status-idle   {background:rgba(255,255,255,.08); color:rgba(255,255,255,.38);}
+.vm-status-reading{background:rgba(46,204,113,.18);  color:#2ecc71;}
+.vm-status-paused {background:rgba(252,137,74,.18);  color:#fc894a;}
+.vm-status-done   {background:rgba(116,185,255,.18); color:#74b9ff;}
+.vm-spacer{flex:1;}
+.vm-btns{display:flex;gap:.35rem;flex-shrink:0;}
+.vm-btn{
+  font-family:'Source Serif 4',Georgia,serif;font-size:.72rem;font-weight:700;
+  padding:0 .65rem;height:36px;min-width:36px;border-radius:4px;border:1.5px solid;
+  cursor:pointer;white-space:nowrap;transition:background .15s,transform .1s;
+  display:flex;align-items:center;justify-content:center;gap:.2rem;
+  -webkit-tap-highlight-color:transparent;
+}
+.vm-btn:active{transform:scale(.94);}
+.vm-btn:disabled{opacity:.25;cursor:default;pointer-events:none;}
+#vm-btn-start{background:rgba(46,204,113,.18);border-color:rgba(46,204,113,.55);color:#2ecc71;}
+#vm-btn-start:not(:disabled):active{background:rgba(46,204,113,.35);}
+#vm-btn-pause{background:rgba(230,126,34,.18);border-color:rgba(230,126,34,.55);color:#fc894a;}
+#vm-btn-pause:not(:disabled):active{background:rgba(230,126,34,.35);}
+#vm-btn-end{background:rgba(116,185,255,.18);border-color:rgba(116,185,255,.55);color:#74b9ff;}
+#vm-btn-end:not(:disabled):active{background:rgba(116,185,255,.35);}
+body{padding-top:96px!important;}
+.tabs-wrap,#top-nav{top:96px!important;}
+@media(min-width:700px){
+  #vm-study-bar{flex-direction:row;align-items:stretch;height:50px;}
+  .vm-row1{border-bottom:none;min-height:50px;padding:0;}
+  .vm-row2{min-height:50px;padding:0 .6rem 0 0;}
+  body{padding-top:50px!important;}
+  .tabs-wrap,#top-nav{top:50px!important;}
+}
+@media(max-width:360px){
+  .vm-timer{font-size:1rem;min-width:70px;}
+  .vm-btn{font-size:.62rem;padding:0 .45rem;height:34px;}
+  .vm-info{font-size:.64rem;}
+}
+</style>
+
+<div id="vm-study-bar"
+  data-article-id="CLT-ART-1"
+  data-subject="CLT"
+  data-subject-id="CLT"
+  data-article-num="1">
+  <div class="vm-row1">
+    <a class="vm-back" href="index.html">&#8592; Início</a>
+    <div class="vm-info"><strong>CLT</strong> &middot; Art.&nbsp;1</div>
+    <div class="vm-completed-wrap">
+      <label>
+        <input type="checkbox" id="vm-check" onchange="vmToggleCompleted()">
+        <span id="vm-check-label">Concluído</span>
+      </label>
+    </div>
+  </div>
+  <div class="vm-row2">
+    <div class="vm-timer-block">
+      <div class="vm-timer" id="vm-timer">00:00:00</div>
+      <div class="vm-pause-timer" id="vm-pause-timer"></div>
+    </div>
+    <div class="vm-status vm-status-idle" id="vm-status">Parado</div>
+    <div class="vm-spacer"></div>
+    <div class="vm-btns">
+      <button class="vm-btn" id="vm-btn-start" onclick="vmStartResume()">&#9654; Iniciar</button>
+      <button class="vm-btn" id="vm-btn-pause" onclick="vmPause()"       disabled>&#9646;&#9646; Pausa</button>
+      <button class="vm-btn" id="vm-btn-end"   onclick="vmEnd()"         disabled>&#10003; Fim</button>
+    </div>
+  </div>
+</div>
+
+<script src="study-tracker.js"></script>
+<script>
+(function(){
+  var ARTICLE_ID='CLT-ART-1',SUBJECT='CLT',SUBJECT_ID='CLT',ARTICLE_NUM=1;
+  var state='idle',timerIv=null,pauseIv=null,sessTs=0,pauseTs=0,accStudy=0,accPause=0;
+  function $(id){return document.getElementById(id);}
+  var elTimer=$('vm-timer'),elPause=$('vm-pause-timer'),elStatus=$('vm-status');
+  var btnS=$('vm-btn-start'),btnP=$('vm-btn-pause'),btnE=$('vm-btn-end');
+  var chk=$('vm-check'),lbl=$('vm-check-label');
+  function pad(n){return String(Math.floor(n)).padStart(2,'0');}
+  function fmtMs(ms){var s=Math.floor(ms/1000),h=Math.floor(s/3600);return pad(h)+':'+pad((s%3600)/60)+':'+pad(s%60);}
+  function fmtShort(ms){var m=Math.round(ms/60000);return pad(Math.floor(m/60))+':'+pad(m%60);}
+  function setStatus(t,c){elStatus.textContent=t;elStatus.className='vm-status '+c;}
+  function startStudyIv(){clearInterval(timerIv);timerIv=setInterval(function(){elTimer.textContent=fmtMs(accStudy+(Date.now()-sessTs));},500);}
+  function stopStudyIv(){clearInterval(timerIv);}
+  function startPauseIv(){clearInterval(pauseIv);pauseIv=setInterval(function(){elPause.textContent='\u23F8 '+fmtShort(Date.now()-pauseTs);},500);}
+  function stopPauseIv(){clearInterval(pauseIv);elPause.textContent='';}
+  window.vmStartResume=function(){
+    if(state==='idle'){
+      VMTracker.startSession(ARTICLE_ID,SUBJECT,SUBJECT_ID,ARTICLE_NUM);
+      sessTs=Date.now();accStudy=0;accPause=0;state='reading';
+      setStatus('Estudando','vm-status-reading');
+      btnS.disabled=true;btnP.disabled=false;btnE.disabled=false;
+      startStudyIv();
+    }else if(state==='paused'){
+      VMTracker.resumeSession();accPause+=Date.now()-pauseTs;sessTs=Date.now();state='reading';
+      setStatus('Estudando','vm-status-reading');
+      btnS.disabled=true;btnP.disabled=false;btnE.disabled=false;
+      stopPauseIv();startStudyIv();
+    }
+  };
+  window.vmPause=function(){
+    if(state!=='reading')return;
+    VMTracker.pauseSession();accStudy+=Date.now()-sessTs;pauseTs=Date.now();stopStudyIv();
+    state='paused';setStatus('Pausado','vm-status-paused');
+    btnS.textContent='\u25BA Retomar';btnS.disabled=false;btnP.disabled=true;btnE.disabled=false;
+    startPauseIv();
+  };
+  window.vmEnd=function(){
+    if(state!=='reading'&&state!=='paused')return;
+    if(state==='reading')accStudy+=Date.now()-sessTs;
+    VMTracker.endSession();stopStudyIv();stopPauseIv();state='done';
+    elTimer.textContent=fmtMs(accStudy);setStatus('Conclu\u00EDdo \u2713','vm-status-done');
+    btnS.textContent='\u21BA Nova';btnS.disabled=false;
+    btnS.onclick=function(){
+      state='idle';accStudy=0;accPause=0;elTimer.textContent='00:00:00';
+      setStatus('Parado','vm-status-idle');
+      btnS.textContent='\u25BA Iniciar';btnS.onclick=window.vmStartResume;
+      btnP.disabled=true;btnE.disabled=true;
+    };
+    btnP.disabled=true;btnE.disabled=true;
+  };
+  window.vmToggleCompleted=function(){
+    if(chk.checked){VMTracker.markArticleCompleted(ARTICLE_ID,SUBJECT,SUBJECT_ID,ARTICLE_NUM);lbl.textContent='\u2713 Feito!';lbl.style.color='#2ecc71';}
+    else{VMTracker.unmarkArticleCompleted(ARTICLE_ID);lbl.textContent='Conclu\u00EDdo';lbl.style.color='';}
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    if(VMTracker.isArticleCompleted(ARTICLE_ID)){chk.checked=true;lbl.textContent='\u2713 Feito!';lbl.style.color='#2ecc71';}
+    var active=VMTracker.getActiveSession();
+    if(active&&active.articleFile===ARTICLE_ID){
+      if(active.state==='reading'){
+        sessTs=active.startTs;accStudy=0;state='reading';setStatus('Estudando','vm-status-reading');
+        btnS.disabled=true;btnP.disabled=false;btnE.disabled=false;startStudyIv();
+      }else if(active.state==='paused'){
+        var lp=active.pauses[active.pauses.length-1];pauseTs=lp?lp.pauseStartTs:Date.now();
+        accStudy=active.pauseTotalMs||0;state='paused';setStatus('Pausado','vm-status-paused');
+        btnS.textContent='\u25BA Retomar';btnS.disabled=false;btnP.disabled=true;btnE.disabled=false;startPauseIv();
+      }
+    }
+  });
+})();
+</script>
+<!-- VM-STUDY-BAR-END -->
+
+
+<div class="timer">00:00:00</div>
+</div>
+
+<nav id="top-nav">
+<a href="#visao">Visão Geral</a>
+<a href="#texto">Texto Legal</a>
+<a href="#estrutura">Estrutura</a>
+<a href="#relacoes">Relações de Trabalho</a>
+<a href="#constitucional">Base Constitucional</a>
+<a href="#reforma">Lei 13.467/2017</a>
+<a href="#juris">STF/TST/OJs</a>
+<a href="#fluxograma">Fluxograma</a>
+<a href="#doutrina">Doutrina</a>
+<a href="#prova">Prova</a>
+<a href="#fontes">Fontes</a>
+</nav>
+
+<header class="hero">
+<div class="badge">Direito do Trabalho · Introdução da CLT · Atualizado em Maio/2026</div>
+<h1>Art. 1º da <span>CLT</span></h1>
+<p class="subtitle">Norma introdutória da Consolidação das Leis do Trabalho · Relações individuais e coletivas · Interpretação sistemática · Constitucionalização do Direito do Trabalho · Reforma Trabalhista · Magistratura e ENAM</p>
+<div class="law-box">
+<strong>Texto legal — art. 1º da CLT</strong><br><br>
+“Esta Consolidação estatui as normas que regulam as relações individuais e coletivas de trabalho, nelas previstas.”
+</div>
+</header>
+
+<div class="wrapper">
+
+<section class="section" id="visao">
+<div class="section-header">
+<div class="section-num">01</div>
+<div class="section-title">Visão Geral do Art. 1º da CLT</div>
+</div>
+
+<div class="grid grid-3">
+<div class="card blue">
+<h3>📘 Norma de abertura da CLT</h3>
+<p>O art. 1º possui natureza introdutória e estrutural. Ele delimita o campo de incidência material da CLT, indicando que a Consolidação regula relações individuais e coletivas de trabalho.</p>
+</div>
+
+<div class="card gold">
+<h3>⚖️ Centralidade dogmática</h3>
+<p>O dispositivo funciona como porta de entrada interpretativa para todo o Direito do Trabalho infraconstitucional. Serve como fundamento hermenêutico para aplicação sistemática dos arts. 2º, 3º, 8º, 9º e 444 da CLT.</p>
+</div>
+
+<div class="card red">
+<h3>🎯 Pegadinha de prova</h3>
+<p>O art. 1º fala em “relações de trabalho”, mas a CLT tradicionalmente disciplina principalmente a relação de emprego. A ampliação constitucional do art. 114 da CF alterou a leitura clássica do dispositivo.</p>
+</div>
+</div>
+
+<div class="alert alert-gold">
+<strong>Ponto-chave para magistratura:</strong> a EC 45/2004 ampliou a competência material da Justiça do Trabalho para “relações de trabalho”, superando leitura estritamente empregatícia do sistema clássico da CLT.
+</div>
+</section>
+
+<section class="section" id="texto">
+<div class="section-header">
+<div class="section-num">02</div>
+<div class="section-title">Texto Legal e Leitura Técnica</div>
+</div>
+
+<div class="grid grid-2">
+<div class="card green">
+<h3>📜 “Esta Consolidação...”</h3>
+<ul>
+<li>A CLT foi instituída pelo Decreto-Lei nº 5.452/1943.</li>
+<li>Possui natureza de consolidação legislativa.</li>
+<li>Integra o microssistema trabalhista brasileiro.</li>
+<li>Deve ser interpretada em conformidade com a Constituição Federal.</li>
+</ul>
+</div>
+
+<div class="card purple">
+<h3>🧩 “Relações individuais e coletivas”</h3>
+<ul>
+<li>Relação individual: empregado ↔ empregador.</li>
+<li>Relação coletiva: sindicatos, categorias, negociação coletiva, greve.</li>
+<li>Base para interpretação sistêmica do Direito Coletivo do Trabalho.</li>
+<li>Dialoga com os arts. 7º, 8º e 114 da CF.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="section" id="estrutura">
+<div class="section-header">
+<div class="section-num">03</div>
+<div class="section-title">Estrutura Sistêmica do Art. 1º</div>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Função</th>
+<th>Consequência prática</th>
+<th>Cobrança em prova</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Relação de trabalho</td>
+<td>Categoria ampla</td>
+<td>Abrange múltiplas formas de prestação laboral</td>
+<td>Diferenciar relação de trabalho × relação de emprego</td>
+</tr>
+<tr>
+<td>Relação de emprego</td>
+<td>Espécie</td>
+<td>Subordinação, pessoalidade, onerosidade e não eventualidade</td>
+<td>Arts. 2º e 3º da CLT</td>
+</tr>
+<tr>
+<td>Relações coletivas</td>
+<td>Autonomia coletiva</td>
+<td>Sindicatos, ACT, CCT e greve</td>
+<td>Reforma trabalhista e Tema 1046 STF</td>
+</tr>
+<tr>
+<td>Interpretação constitucional</td>
+<td>Compatibilização com CF/88</td>
+<td>Proteção do trabalho humano e dignidade</td>
+<td>Princípios constitucionais trabalhistas</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="section" id="relacoes">
+<div class="section-header">
+<div class="section-num">04</div>
+<div class="section-title">Relação de Trabalho × Relação de Emprego</div>
+</div>
+
+<div class="grid grid-2">
+<div class="card blue">
+<h3>👨‍⚖️ Relação de trabalho</h3>
+<p>Expressão ampla que engloba qualquer prestação humana de trabalho lícito: autônomo, eventual, avulso, estágio, cooperado, representante comercial e relação empregatícia.</p>
+</div>
+
+<div class="card red">
+<h3>📌 Relação de emprego</h3>
+<p>Espécie qualificada de relação de trabalho, caracterizada pelos requisitos dos arts. 2º e 3º da CLT: pessoalidade, onerosidade, subordinação jurídica e não eventualidade.</p>
+</div>
+</div>
+
+<div class="alert alert-red">
+<strong>Pegadinha clássica:</strong> nem toda relação de trabalho gera vínculo empregatício. A competência da Justiça do Trabalho pode existir mesmo sem relação de emprego.
+</div>
+</section>
+
+<section class="section" id="constitucional">
+<div class="section-header">
+<div class="section-num">05</div>
+<div class="section-title">Base Constitucional</div>
+</div>
+
+<div class="grid grid-3">
+<div class="card gold">
+<h3>📖 Art. 1º, IV, CF</h3>
+<p>Valor social do trabalho como fundamento da República.</p>
+</div>
+
+<div class="card green">
+<h3>📖 Art. 7º, CF</h3>
+<p>Direitos fundamentais dos trabalhadores urbanos e rurais.</p>
+</div>
+
+<div class="card purple">
+<h3>📖 Art. 114, CF</h3>
+<p>Competência material ampliada da Justiça do Trabalho após a EC 45/2004.</p>
+</div>
+</div>
+
+<div class="alert alert-gold">
+A EC 45/2004 alterou profundamente a compreensão do art. 1º da CLT ao ampliar a competência da Justiça do Trabalho para abranger relações de trabalho, e não apenas relações de emprego.
+</div>
+</section>
+
+<section class="section" id="reforma">
+<div class="section-header">
+<div class="section-num">06</div>
+<div class="section-title">Lei 13.467/2017 e Impactos Sistêmicos</div>
+</div>
+
+<div class="grid grid-2">
+<div class="card blue">
+<h3>⚙️ Reforma Trabalhista</h3>
+<ul>
+<li>Fortalecimento da negociação coletiva.</li>
+<li>Prestígio à autonomia privada coletiva.</li>
+<li>Inserção do trabalho intermitente.</li>
+<li>Teletrabalho.</li>
+<li>Prevalência do negociado sobre o legislado em hipóteses específicas.</li>
+</ul>
+</div>
+
+<div class="card red">
+<h3>⚖️ Controle constitucional</h3>
+<ul>
+<li>STF validou diversos dispositivos da reforma.</li>
+<li>Tema 1046 STF: negociação coletiva pode limitar direitos, desde que respeitados direitos absolutamente indisponíveis.</li>
+<li>Necessidade de interpretação conforme direitos fundamentais sociais.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="section" id="juris">
+<div class="section-header">
+<div class="section-num">07</div>
+<div class="section-title">Jurisprudência, Teses e OJs</div>
+</div>
+
+<div class="grid grid-2">
+<div class="card green">
+<h3>🏛️ STF — Tema 1046</h3>
+<p>São constitucionais os acordos e convenções coletivas que limitam ou afastam direitos trabalhistas, desde que respeitados direitos absolutamente indisponíveis.</p>
+</div>
+
+<div class="card purple">
+<h3>🏛️ STF — Competência da JT</h3>
+<p>Após a EC 45/2004, a Justiça do Trabalho passou a possuir competência mais ampla sobre relações de trabalho.</p>
+</div>
+
+<div class="card blue">
+<h3>📚 Súmula 207/TST (cancelada)</h3>
+<p>A antiga súmula previa aplicação da lei do local da prestação de serviços. Tema importante historicamente para territorialidade trabalhista.</p>
+</div>
+
+<div class="card gold">
+<h3>📌 OJs relevantes</h3>
+<p>As OJs relacionadas à competência material, terceirização, pejotização e fraude dialogam indiretamente com o art. 1º da CLT ao definir o alcance das relações de trabalho.</p>
+</div>
+</div>
+</section>
+
+<section class="section" id="doutrina">
+<div class="section-header">
+<div class="section-num">08</div>
+<div class="section-title">Doutrina Essencial</div>
+</div>
+
+<div class="grid grid-3">
+<div class="card gold">
+<h3>📚 Maurício Godinho Delgado</h3>
+<p>O art. 1º funciona como cláusula introdutória do sistema trabalhista e deve ser lido sob a ótica constitucional da valorização do trabalho humano.</p>
+</div>
+
+<div class="card blue">
+<h3>📚 Vólia Bomfim Cassar</h3>
+<p>Destaca a diferença entre relação de trabalho e relação de emprego como tema central para concursos e magistratura.</p>
+</div>
+
+<div class="card red">
+<h3>📚 Gustavo Filipe Barbosa Garcia</h3>
+<p>Ressalta a necessidade de leitura integrada entre CLT, Constituição Federal e jurisprudência constitucional do STF.</p>
+</div>
+</div>
+</section>
+
+<section class="section" id="fluxograma">
+<div class="section-header">
+<div class="section-num">09</div>
+<div class="section-title">Fluxograma Completo — Art. 1º CLT</div>
+</div>
+
+<div class="flow">
+<div class="node start">INÍCIO → EXISTE PRESTAÇÃO DE TRABALHO HUMANO?</div>
+<div class="arrow">▼</div>
+<div class="node navy">Identificar se há relação de trabalho em sentido amplo.</div>
+<div class="arrow">▼</div>
+<div class="node navy">Há pessoalidade + onerosidade + subordinação + não eventualidade?</div>
+<div class="arrow">▼</div>
+<div class="grid grid-2">
+<div>
+<div class="node end-green">SIM → RELAÇÃO DE EMPREGO → aplicação integral da CLT</div>
+</div>
+<div>
+<div class="node end-red">NÃO → outra relação de trabalho → verificar competência da JT e legislação específica</div>
+</div>
+</div>
+<div class="arrow">▼</div>
+<div class="node navy">Existe negociação coletiva válida?</div>
+<div class="arrow">▼</div>
+<div class="node end-gold">Aplicar CF/88 + CLT + Reforma Trabalhista + jurisprudência STF/TST</div>
+</div>
+</section>
+
+<section class="prova" id="prova">
+<h2>Pontos Mais Cobrados em Magistratura e ENAM</h2>
+
+<div class="prova-item">
+<strong>1.</strong> Diferença entre relação de trabalho e relação de emprego.
+</div>
+
+<div class="prova-item">
+<strong>2.</strong> Impacto da EC 45/2004 na competência material da Justiça do Trabalho.
+</div>
+
+<div class="prova-item">
+<strong>3.</strong> Tema 1046 do STF e negociação coletiva.
+</div>
+
+<div class="prova-item">
+<strong>4.</strong> Interpretação constitucional do Direito do Trabalho.
+</div>
+
+<div class="prova-item">
+<strong>5.</strong> Princípios constitucionais trabalhistas: dignidade humana, valor social do trabalho e proteção ao trabalhador.
+</div>
+
+<div class="prova-item">
+<strong>6.</strong> Leitura sistemática dos arts. 1º, 2º, 3º, 8º e 9º da CLT.
+</div>
+
+<div class="prova-item">
+<strong>7.</strong> Reforma trabalhista e prevalência do negociado sobre o legislado.
+</div>
+</section>
+
+<section class="section" id="fontes">
+<div class="section-header">
+<div class="section-num">10</div>
+<div class="section-title">Fontes Legislativas e Jurisprudenciais</div>
+</div>
+
+<div class="card">
+<ul>
+<li>Constituição Federal — arts. 1º, IV; 7º; 8º; 114.</li>
+<li>CLT — arts. 1º, 2º, 3º, 8º, 9º e 444.</li>
+<li>Lei 13.467/2017.</li>
+<li>Tema 1046 do STF.</li>
+<li>Jurisprudência do STF e TST sobre competência material, negociação coletiva e relações de trabalho.</li>
+<li>Doutrina especializada de Maurício Godinho Delgado, Vólia Bomfim Cassar e Gustavo Filipe Barbosa Garcia.</li>
+</ul>
+</div>
+</section>
+
+</div>
+
+<footer>
+Material estruturado para Magistratura do Trabalho, Magistratura Estadual com Direito do Trabalho e ENAM · Layout premium padronizado.
+</footer>
+
+</body>
+</html>
+
