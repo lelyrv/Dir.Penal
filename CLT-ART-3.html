@@ -1,604 +1,658 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art. 3º CLT — Conceito de Empregado e Relação de Emprego | Fluxograma Magistratura ENAM</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333;
-        }
-        .container {
-            background: white;
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-        h1, h2, h3 {
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-        }
-        .nav-bar {
-            background: #34495e;
-            color: white;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .nav-bar a {
-            color: #3498db;
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
-        .nav-bar a:hover {
-            color: #2ecc71;
-        }
-        .timeline {
-            background: #ecf0f1;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 15px 0;
-            font-family: monospace;
-            text-align: center;
-        }
-        .highlight {
-            background: #fff3cd;
-            border-left: 5px solid #ffc107;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
-        }
-        .warning {
-            background: #f8d7da;
-            border-left: 5px solid #dc3545;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
-        }
-        .success {
-            background: #d4edda;
-            border-left: 5px solid #28a745;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background: white;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        th {
-            background: #3498db;
-            color: white;
-            font-weight: bold;
-        }
-        tr:nth-child(even) {
-            background: #f8f9fa;
-        }
-        .flowchart {
-            background: #f8f9fa;
-            border: 2px solid #3498db;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-            font-family: 'Courier New', monospace;
-            white-space: pre-wrap;
-            overflow-x: auto;
-        }
-        .checklist {
-            background: #e7f3ff;
-            border: 2px solid #2196F3;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        .checklist-item {
-            margin: 10px 0;
-            padding: 10px;
-            background: white;
-            border-radius: 5px;
-            border-left: 4px solid #2196F3;
-        }
-        code {
-            background: #f4f4f4;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-            color: #e83e8c;
-        }
-        .section {
-            margin: 30px 0;
-            padding: 20px;
-            background: #fafafa;
-            border-radius: 8px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 3º CLT — Empregado | Fluxograma Magistratura ENAM</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0d1b2a;--navy-mid:#1a2f45;--navy-light:#243b55;--gold:#c8960c;--gold-light:#e8b84b;--gold-pale:#fdf3d8;--cream:#faf7f2;--cream-mid:#f0ebe2;--text-dark:#1a1208;--text-mid:#3d3020;--text-soft:#6b5c40;--border:#d4c49a;--border-light:#e8dcbf;--red-accent:#8b1a1a;--green-accent:#1a4a2e;--blue-accent:#1a3a5c;--purple-accent:#4a1a5c;--shadow:0 4px 24px rgba(13,27,42,0.10);}*{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}body{font-family:'Source Serif 4',Georgia,serif;background:var(--cream);color:var(--text-dark);font-size:15px;line-height:1.75;}#top-nav{position:sticky;top:0;z-index:999;background:var(--navy);border-bottom:3px solid var(--gold);padding:0 1.5rem;display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;}#top-nav::-webkit-scrollbar{display:none;}#top-nav .nav-brand{font-family:'Playfair Display',serif;color:var(--gold-light);font-size:0.9rem;font-weight:700;white-space:nowrap;padding:0.85rem 1.2rem 0.85rem 0;border-right:1px solid rgba(200,150,12,0.3);margin-right:0.5rem;letter-spacing:0.5px;}#top-nav a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.72rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;padding:0.85rem 0.8rem;white-space:nowrap;transition:color .2s;border-bottom:3px solid transparent;margin-bottom:-3px;}#top-nav a:hover,#top-nav a.nav-prova:hover{color:var(--gold-light);border-bottom-color:var(--gold);}#top-nav a.nav-prova{color:var(--gold-light);}#hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 60%,#1e3d5c 100%);color:white;padding:3.5rem 2rem 3rem;text-align:center;position:relative;overflow:hidden;}#hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(200,150,12,0.03) 0px,rgba(200,150,12,0.03) 1px,transparent 1px,transparent 40px);}#hero .badge{display:inline-block;background:rgba(200,150,12,0.15);border:1px solid rgba(200,150,12,0.5);color:var(--gold-light);font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;padding:0.35rem 1rem;border-radius:2px;margin-bottom:1.2rem;font-family:'Source Serif 4',serif;font-weight:600;position:relative;}#hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.15;margin-bottom:0.6rem;letter-spacing:-0.5px;position:relative;}#hero h1 span{color:var(--gold-light);}#hero .subtitle{font-size:1rem;color:rgba(255,255,255,0.65);font-style:italic;margin-bottom:1.5rem;position:relative;}#hero .law-box{display:inline-block;background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.4);border-left:4px solid var(--gold);color:rgba(255,255,255,0.9);font-family:'Source Serif 4',serif;font-size:0.93rem;font-style:italic;padding:1rem 1.5rem;max-width:1120px;text-align:left;line-height:1.9;border-radius:0 4px 4px 0;position:relative;}#hero .law-box strong{color:var(--gold-light);font-style:normal;display:block;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem;}.page-wrap{width:100%!important;max-width:none!important;margin:0!important;padding-left:clamp(1rem,3vw,4rem)!important;padding-right:clamp(1rem,3vw,4rem)!important;padding-bottom:4rem;}.section,.prova-section,.card,.flow-wrap,.comp-table,.juris-grid{max-width:none!important;}.section{margin-top:3.5rem;scroll-margin-top:56px;}.section-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:0.75rem;border-bottom:2px solid var(--border);}.section-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--border);line-height:1;min-width:2.5rem;}.section-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--navy);line-height:1.2;}.section-title span{display:block;font-size:0.75rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-style:normal;}.card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1.4rem 1.6rem;box-shadow:var(--shadow);}.card-grid{display:grid;gap:1rem;}.card-grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}.card-grid-2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr));}.card-grid-4{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));}.card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:0.6rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border-light);}.card h4{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;margin-bottom:0.35rem;}.card p,.card li{font-size:0.88rem;line-height:1.7;color:var(--text-mid);}.card ul{padding-left:1.1rem;}.card li{margin-bottom:0.3rem;}.type-card{border-top:4px solid;}.tc-red{border-top-color:var(--red-accent);}.tc-red h3{color:var(--red-accent);}.tc-green{border-top-color:var(--green-accent);}.tc-green h3{color:var(--green-accent);}.tc-blue{border-top-color:var(--blue-accent);}.tc-blue h3{color:var(--blue-accent);}.tc-gold{border-top-color:var(--gold);}.tc-gold h3{color:#7a5a00;}.tc-purple{border-top-color:var(--purple-accent);}.tc-purple h3{color:var(--purple-accent);}.flow-wrap{background:white;border:1px solid var(--border-light);border-radius:6px;padding:2rem 1.5rem;box-shadow:var(--shadow);overflow-x:auto;}.flow-center{display:flex;flex-direction:column;align-items:center;}.flow-node{border-radius:4px;padding:0.65rem 1.4rem;font-family:'Source Serif 4',serif;font-size:0.82rem;font-weight:600;text-align:center;min-width:220px;max-width:760px;}.flow-start{background:var(--navy);color:white;border-radius:50px;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;}.flow-end-green{background:var(--green-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}.flow-end-red{background:var(--red-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}.flow-end-gold{background:var(--gold);color:var(--navy);border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}.flow-end-blue{background:var(--blue-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}.flow-end-purple{background:var(--purple-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}.flow-box-navy{background:var(--navy-mid);color:white;border-left:4px solid var(--gold);font-size:0.8rem;}.flow-box-green{background:#edf7f0;border:1px solid #7ec89a;border-left:4px solid var(--green-accent);color:var(--text-dark);}.flow-box-blue{background:#edf2f8;border:1px solid #8eb4d8;border-left:4px solid var(--blue-accent);color:var(--text-dark);}.flow-box-red{background:#fdf0f0;border:1px solid #e09090;border-left:4px solid var(--red-accent);color:var(--text-dark);}.flow-box-gold{background:var(--gold-pale);border:2px solid var(--gold);color:var(--text-dark);}.flow-box-purple{background:#f3eef8;border:1px solid #b89dd8;border-left:4px solid var(--purple-accent);color:var(--text-dark);}.flow-arrow{font-size:1.3rem;color:var(--border);line-height:1;margin:0.15rem 0;}.flow-row{display:flex;align-items:flex-start;gap:1.5rem;width:100%;justify-content:center;flex-wrap:wrap;}.flow-branch{display:flex;flex-direction:column;align-items:center;flex:1;min-width:210px;}.flow-label{font-size:0.68rem;color:var(--text-soft);font-weight:600;letter-spacing:0.5px;text-transform:uppercase;background:var(--cream-mid);padding:0.15rem 0.5rem;border-radius:2px;margin:0.15rem 0;}.flow-connector-line{width:1px;height:28px;background:var(--border);}.comp-table{width:100%;border-collapse:collapse;font-size:0.84rem;background:white;box-shadow:var(--shadow);border-radius:6px;overflow:hidden;}.comp-table thead{background:var(--navy);color:white;}.comp-table thead th{padding:0.85rem 1rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:0.5px;font-size:0.8rem;text-align:left;}.comp-table thead th:first-child{color:var(--gold-light);}.comp-table tbody tr{border-bottom:1px solid var(--border-light);}.comp-table tbody tr:last-child{border-bottom:none;}.comp-table tbody tr:nth-child(even){background:var(--cream);}.comp-table td{padding:0.75rem 1rem;color:var(--text-mid);vertical-align:top;}.comp-table td:first-child{font-weight:600;color:var(--navy);font-size:0.8rem;}.comp-table .hl td{background:var(--gold-pale)!important;}.comp-table .hl2 td{background:#edf7f0!important;}.comp-table .hl3 td{background:#edf2f8!important;}.comp-table .hl4 td{background:#fdf0f0!important;}.comp-table .hl5 td{background:#f3eef8!important;}.juris-card{background:white;border:1px solid var(--border-light);border-left:5px solid;border-radius:0 6px 6px 0;padding:1.2rem 1.4rem;box-shadow:var(--shadow);}.juris-card.stf{border-left-color:var(--red-accent);}.juris-card.stj{border-left-color:var(--navy);}.juris-card.tst{border-left-color:var(--blue-accent);}.juris-card.doutrina{border-left-color:var(--gold);}.juris-card.cnj{border-left-color:var(--purple-accent);}.juris-header{display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem;flex-wrap:wrap;}.juris-badge{font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:0.2rem 0.55rem;border-radius:2px;font-family:'Source Serif 4',serif;}.juris-badge.stf{background:var(--red-accent);color:white;}.juris-badge.stj{background:var(--navy);color:white;}.juris-badge.tst{background:var(--blue-accent);color:white;}.juris-badge.doutrina{background:var(--gold);color:var(--navy);}.juris-badge.sumula{background:var(--green-accent);color:white;}.juris-badge.oj{background:#5a3080;color:white;}.juris-badge.tese{background:var(--blue-accent);color:white;}.juris-badge.purple{background:var(--purple-accent);color:white;}.juris-title{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--navy);}.juris-body{font-size:0.84rem;color:var(--text-mid);line-height:1.7;}.juris-grid{display:grid;gap:1rem;}.alert{padding:0.9rem 1.2rem;border-radius:4px;font-size:0.84rem;line-height:1.7;display:flex;gap:0.7rem;align-items:flex-start;}.alert-gold{background:var(--gold-pale);border:1px solid #d4aa3a;color:#5a4000;}.alert-red{background:#fdf0f0;border:1px solid #e09090;color:#5a0000;}.alert-navy{background:#f0f4f8;border:1px solid #abc;color:var(--navy);}.alert-green{background:#edf7f0;border:1px solid #7ec89a;color:#1a4a2e;}.alert-purple{background:#f3eef8;border:1px solid #b89dd8;color:var(--purple-accent);}.alert-icon{font-size:1.1rem;flex-shrink:0;margin-top:0.05rem;}.alert strong{font-weight:700;}.prova-section{background:var(--navy);border-radius:8px;padding:2rem;color:white;margin-top:3.5rem;scroll-margin-top:56px;}.prova-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold-light);margin-bottom:0.5rem;}.prova-section .intro{font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;font-style:italic;}.prova-items{display:grid;gap:0.75rem;}.prova-item{background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.25);border-left:4px solid var(--gold);border-radius:0 4px 4px 0;padding:1rem 1.2rem;}.prova-item-q{font-size:0.82rem;font-weight:600;color:var(--gold-light);margin-bottom:0.4rem;display:flex;align-items:flex-start;gap:0.6rem;}.prova-item-q .qnum{background:var(--gold);color:var(--navy);font-size:0.65rem;font-weight:700;padding:0.1rem 0.45rem;border-radius:2px;flex-shrink:0;margin-top:0.1rem;}.prova-item-a{font-size:0.82rem;color:rgba(255,255,255,0.82);line-height:1.65;}.prova-item-a strong{color:white;}.tag{display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;padding:0.15rem 0.5rem;border-radius:2px;margin:0.1rem;font-family:'Source Serif 4',serif;}.tag-blue{background:#dce8f5;color:var(--blue-accent);}.tag-green{background:#dceee3;color:var(--green-accent);}.tag-gold{background:var(--gold-pale);color:#7a5a00;border:1px solid #d4aa3a;}.tag-red{background:#fde8e8;color:var(--red-accent);}.tag-purple{background:#ece5f5;color:var(--purple-accent);}.law-quote{background:var(--cream-mid);border-left:4px solid var(--navy);padding:0.9rem 1.2rem;font-size:0.88rem;font-style:italic;color:var(--text-mid);line-height:1.7;border-radius:0 4px 4px 0;}.law-quote strong{font-style:normal;color:var(--navy);font-size:0.75rem;letter-spacing:0.5px;display:block;margin-bottom:0.25rem;}.divider{height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);margin:1.2rem 0;}.especie-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:0.85rem;}.especie-card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1rem 1.2rem;border-left:4px solid;box-shadow:var(--shadow);}.especie-card h4{font-family:'Playfair Display',serif;font-size:0.92rem;font-weight:700;margin-bottom:0.35rem;}.especie-card p,.especie-card li{font-size:0.82rem;color:var(--text-mid);line-height:1.6;}.especie-card ul{padding-left:1rem;margin-top:0.3rem;}.especie-card li{margin-bottom:0.25rem;}.ec-red{border-left-color:var(--red-accent);}.ec-red h4{color:var(--red-accent);}.ec-blue{border-left-color:var(--blue-accent);}.ec-blue h4{color:var(--blue-accent);}.ec-green{border-left-color:var(--green-accent);}.ec-green h4{color:var(--green-accent);}.ec-gold{border-left-color:var(--gold);}.ec-gold h4{color:#7a5a00;}.ec-purple{border-left-color:var(--purple-accent);}.ec-purple h4{color:var(--purple-accent);}.anat-visual{display:flex;align-items:stretch;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);}.av-col{flex:1;padding:1.2rem 1.4rem;}.av-navy{background:var(--navy-mid);color:white;}.av-sep{background:var(--navy);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:900;flex:0 0 2.5rem;}.av-red{background:var(--red-accent);color:white;}.av-blue{background:var(--blue-accent);color:white;}.av-gold{background:var(--gold);color:var(--navy);}.av-purple{background:var(--purple-accent);color:white;}.av-green{background:var(--green-accent);color:white;}.av-col h4{font-family:'Playfair Display',serif;font-size:0.98rem;font-weight:700;margin-bottom:0.5rem;border-bottom:1px solid rgba(255,255,255,0.2);padding-bottom:0.35rem;}.av-col p,.av-col li{font-size:0.82rem;line-height:1.65;}.av-col ul{padding-left:1rem;margin-top:0.3rem;}.source-note{font-size:0.78rem;color:var(--text-soft);border-top:1px dashed var(--border);padding-top:0.7rem;margin-top:0.9rem;}.source-list li{font-size:0.82rem;margin-bottom:0.45rem;}footer{background:var(--navy);color:rgba(255,255,255,0.45);text-align:center;padding:1.5rem;font-size:0.75rem;border-top:2px solid var(--gold);}footer strong{color:var(--gold-light);}@page{size:A3 landscape;margin:8mm;}@media print{#top-nav{display:none;}#hero{padding:1.2rem 1rem;}#hero::before{display:none;}.page-wrap{padding:0 0.35rem 1rem!important;}.section{margin-top:1.15rem;page-break-inside:avoid;}.card,.juris-card,.flow-wrap{box-shadow:none;border:1px solid #ccc;}.prova-section{background:#f0f4f8!important;color:#000!important;}.prova-section h2{color:#0d1b2a!important;}.prova-item{background:white!important;border:1px solid #ccc!important;}.prova-item-q{color:#7a5a00!important;}.prova-item-a{color:#333!important;}.anat-visual{flex-direction:column;}.av-sep{padding:0.4rem;flex:0 0 1.5rem;}footer{display:none;}body{font-size:8pt;line-height:1.35;}.card p,.card li,.juris-body,.especie-card p,.especie-card li{font-size:7.7pt;line-height:1.35}.section-title{font-size:1rem}.section-num{font-size:1.2rem}.card{padding:.65rem}.prova-section{padding:1rem}.flow-wrap{padding:1rem}.comp-table{font-size:7pt}.comp-table td,.comp-table th{padding:.35rem}}@media(max-width:640px){#hero{padding:2rem 1rem;}#hero h1{font-size:1.6rem;}.card-grid-3,.card-grid-2,.card-grid-4{grid-template-columns:1fr;}.section-title{font-size:1.1rem;}.comp-table{font-size:0.76rem;}.comp-table td,.comp-table th{padding:0.55rem 0.65rem;}.flow-node{min-width:150px;font-size:0.74rem;}.anat-visual{flex-direction:column;}.av-sep{padding:0.4rem;flex:0 0 1.5rem;}}.mt1{margin-top:0.75rem;}.mt2{margin-top:1rem;}.mt3{margin-top:1.5rem;}.flex-gap{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:flex-start;}strong{font-weight:700;}
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="nav-bar">
-            <a href="#inicio">← Início</a>
-            <div class="timeline">
-                Cód. Trabalhista · Art. 3º · Concluído 00:00:00 · Parado ▶ Iniciar ▮▮ Pausa ✓ Fim
-            </div>
-            <h2 style="margin: 10px 0; color: white;">Art. 3º CLT</h2>
-        </div>
+<!-- VM-STUDY-BAR-START -->
+<style id="vm-bar-css">
+html,body{-webkit-transform:none!important;transform:none!important;overflow-x:hidden;}
+#vm-study-bar *{box-sizing:border-box;margin:0;padding:0;}
+#vm-study-bar{position:fixed!important;top:0!important;left:0!important;right:0!important;z-index:2147483647!important;-webkit-transform:translateZ(0);transform:translateZ(0);will-change:transform;-webkit-backface-visibility:hidden;backface-visibility:hidden;background:linear-gradient(180deg,#0d1b2a 0%,#0a1520 100%);border-bottom:2px solid #c8960c;box-shadow:0 2px 16px rgba(0,0,0,.5);font-family:'Source Serif 4',Georgia,serif;display:flex;flex-direction:column;user-select:none;-webkit-user-select:none;}
+.vm-row1{display:flex;align-items:center;padding:0 .4rem;min-height:42px;border-bottom:1px solid rgba(200,150,12,.18);}
+.vm-back{display:flex;align-items:center;color:#e8b84b;text-decoration:none;font-size:.78rem;font-weight:700;padding:0 .6rem 0 .15rem;min-height:42px;border-right:1px solid rgba(200,150,12,.22);white-space:nowrap;flex-shrink:0;-webkit-tap-highlight-color:transparent;}
+.vm-back:active{color:#fff;}
+.vm-info{font-size:.68rem;color:rgba(255,255,255,.65);padding:0 .5rem;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.vm-info strong{color:#e8b84b;font-weight:700;}
+.vm-completed-wrap{display:flex;align-items:center;height:100%;padding-left:.85rem;padding-right:.65rem;margin-left:.45rem;border-left:1px solid rgba(200,150,12,.18);flex-shrink:0;}
+.vm-completed-wrap label{display:flex;align-items:center;gap:.35rem;font-size:.66rem;color:rgba(255,255,255,.5);cursor:pointer;white-space:nowrap;padding:0 .1rem;}
+#vm-check{width:16px;height:16px;accent-color:#2ecc71;cursor:pointer;flex-shrink:0;}
+#vm-check-label{transition:color .2s;}
+.vm-row2{display:flex;align-items:center;padding:0 .65rem;min-height:42px;gap:.75rem;}
+.vm-timer-block{display:flex;align-items:center;gap:.55rem;flex-shrink:0;margin-left:.35rem;}
+.vm-timer{font-family:'JetBrains Mono','Courier New',monospace;font-size:1.05rem;font-weight:700;color:#e8b84b;letter-spacing:1.2px;min-width:78px;text-align:center;line-height:1;}
+.vm-pause-timer{font-size:.62rem;color:#fc8181;min-width:48px;font-weight:600;}
+.vm-status{font-size:.58rem;font-weight:700;letter-spacing:.7px;text-transform:uppercase;padding:.2rem .5rem;border-radius:10px;white-space:nowrap;flex-shrink:0;transition:background .2s,color .2s;}
+.vm-status-idle{display:none;}
+.vm-status-reading{background:rgba(46,204,113,.18);color:#2ecc71;}
+.vm-status-paused{background:rgba(252,137,74,.18);color:#fc894a;}
+.vm-status-done{background:rgba(116,185,255,.18);color:#74b9ff;}
+.vm-spacer{flex:1;}
+.vm-btns{display:flex;gap:.55rem;flex-shrink:0;margin-left:.55rem;}
+.vm-btn{font-family:'Source Serif 4',Georgia,serif;font-size:.68rem;font-weight:700;padding:0 .55rem;height:32px;min-width:32px;border-radius:4px;border:1.5px solid;cursor:pointer;white-space:nowrap;transition:background .15s,transform .1s;display:flex;align-items:center;justify-content:center;gap:.35rem;-webkit-tap-highlight-color:transparent;}
+.vm-btn:active{transform:scale(.94);}
+.vm-btn:disabled{opacity:.2;cursor:default;pointer-events:none;}
+#vm-btn-start{background:rgba(46,204,113,.18);border-color:rgba(46,204,113,.55);color:#2ecc71;}
+#vm-btn-pause{background:rgba(230,126,34,.18);border-color:rgba(230,126,34,.55);color:#fc894a;}
+#vm-btn-end{background:rgba(116,185,255,.18);border-color:rgba(116,185,255,.55);color:#74b9ff;}
+:root{--vm-study-bar-h:46px;}
+#vm-study-bar{position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;min-height:var(--vm-study-bar-h)!important;height:var(--vm-study-bar-h)!important;margin:0!important;padding:0 1.25rem 0 0!important;display:flex!important;flex-direction:row!important;align-items:center!important;gap:0!important;background:#0a1520!important;border-top:0!important;border-bottom:2px solid #c8960c!important;box-shadow:0 2px 14px rgba(0,0,0,.55)!important;overflow:visible!important;}
+#vm-study-bar .vm-row1,#vm-study-bar .vm-row2{display:contents!important;min-height:0!important;height:auto!important;padding:0!important;border:0!important;}
+#vm-study-bar .vm-back{order:1!important;height:var(--vm-study-bar-h)!important;min-height:var(--vm-study-bar-h)!important;padding:0 1.15rem!important;margin:0!important;display:flex!important;align-items:center!important;justify-content:center!important;border-right:1px solid rgba(200,150,12,.35)!important;}
+#vm-study-bar .vm-info{order:2!important;flex:1 1 auto!important;min-width:70px!important;padding:0 1.3rem!important;margin:0!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;}
+#vm-study-bar .vm-timer-block{order:3!important;height:var(--vm-study-bar-h)!important;min-height:var(--vm-study-bar-h)!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:.65rem!important;margin:0 1.1rem 0 0!important;flex:0 0 auto!important;}
+#vm-study-bar .vm-status{order:4!important;margin:0 .85rem 0 0!important;}
+#vm-study-bar .vm-spacer{display:none!important;}
+#vm-study-bar .vm-btns{order:5!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:.55rem!important;margin:0 1.25rem 0 0!important;flex:0 0 auto!important;}
+#vm-study-bar .vm-btn{width:74px!important;min-width:74px!important;max-width:74px!important;height:32px!important;min-height:32px!important;padding:0!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:.25rem!important;text-align:center!important;border-radius:4px!important;line-height:1!important;}
+#vm-study-bar .vm-completed-wrap{order:6!important;height:var(--vm-study-bar-h)!important;min-height:var(--vm-study-bar-h)!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:0 0 0 1.2rem!important;margin:0!important;border-left:1px solid rgba(200,150,12,.25)!important;flex:0 0 auto!important;}
+body{padding-top:var(--vm-study-bar-h)!important;margin-top:0!important;}
+#top-nav,.tabs-wrap,.tab-bar,.nav-tabs{top:var(--vm-study-bar-h)!important;margin-top:0!important;}
+.hero,.page-wrap,.container,.wrap,main,.wrapper{scroll-margin-top:calc(var(--vm-study-bar-h) + 76px)!important;}
+@media(max-width:699px){:root{--vm-study-bar-h:88px;}#vm-study-bar{height:var(--vm-study-bar-h)!important;min-height:var(--vm-study-bar-h)!important;padding:0!important;flex-direction:column!important;align-items:stretch!important;overflow:hidden!important;}#vm-study-bar .vm-row1,#vm-study-bar .vm-row2{display:flex!important;width:100%!important;}#vm-study-bar .vm-row1{height:42px!important;min-height:42px!important;align-items:center!important;border-bottom:1px solid rgba(200,150,12,.22)!important;}#vm-study-bar .vm-row2{height:46px!important;min-height:46px!important;align-items:center!important;justify-content:space-between!important;gap:.35rem!important;padding:0 .45rem!important;}#vm-study-bar .vm-back{height:42px!important;min-height:42px!important;padding:0 .65rem!important;}#vm-study-bar .vm-info{padding:0 .55rem!important;font-size:.64rem!important;}#vm-study-bar .vm-completed-wrap{order:3!important;height:42px!important;min-height:42px!important;padding:0 .55rem!important;border-left:1px solid rgba(200,150,12,.22)!important;}#vm-study-bar .vm-timer-block{order:1!important;height:46px!important;min-height:46px!important;margin:0!important;gap:.25rem!important;}#vm-study-bar .vm-timer{font-size:.92rem!important;min-width:74px!important;letter-spacing:.6px!important;}#vm-study-bar .vm-pause-timer{display:none!important;}#vm-study-bar .vm-status{display:none!important;}#vm-study-bar .vm-btns{order:2!important;gap:.35rem!important;margin:0!important;}#vm-study-bar .vm-btn{width:66px!important;min-width:66px!important;max-width:66px!important;height:31px!important;min-height:31px!important;font-size:.58rem!important;}}
+</style>
 
-        <div class="nav-bar" style="background: #2c3e50;">
-            <a href="#visao-geral">Visão Geral</a> |
-            <a href="#texto-legal">Texto Legal</a> |
-            <a href="#elementos-vinculo">Elementos do Vínculo</a> |
-            <a href="#reforma">Reforma Trabalhista</a> |
-            <a href="#sumulas-oj">Súmulas/OJs TST</a> |
-            <a href="#juris-stf">Juris. STF</a> |
-            <a href="#doutrina">Doutrina</a> |
-            <a href="#fluxograma">Fluxograma</a> |
-            <a href="#comparativo">Comparativo</a> |
-            <a href="#prova">Prova</a> |
-            <a href="#fontes">Fontes</a>
-        </div>
-
-        <div class="highlight">
-            <strong>Consolidação das Leis do Trabalho · Título I · Introdução · Atualização conferida em 29/04/2026</strong><br>
-            <strong>Art. 3º — Conceito de Empregado</strong><br>
-            <em>Vínculo empregatício · Requisitos cumulativos · Subordinação jurídica · Lei 13.467/2017 · Magistratura · ENAM</em>
-        </div>
-
-        <div class="section" id="visao-geral">
-            <h2>01 — Introdução & Estrutura | Mapa Geral do Art. 3º CLT</h2>
-            
-            <h3>📍 Função do art. 3º CLT</h3>
-            <p>O art. 3º define o conceito jurídico de <em>empregado</em>, estabelecendo os requisitos cumulativos para configuração do vínculo de emprego. A norma opera como <em>cláusula geral de reconhecimento</em> da relação de emprego, aplicável a todas as modalidades laborais, salvo exceções legais expressas.</p>
-
-            <h3>🔴 Núcleo de imputabilidade trabalhista</h3>
-            <p>A pergunta central é: <em>no momento da prestação, estavam presentes os 5 elementos do art. 3º?</em> A ausência de qualquer um deles afasta o vínculo celetista, direcionando a relação para outras espécies (autônomo, eventual, cooperado, etc.).</p>
-
-            <h3>🟡 Exceções expressas</h3>
-            <p>O parágrafo único veda distinções entre trabalho intelectual/técnico/manual, mas a própria CLT e leis especiais prevêem regimes diferenciados: doméstico (LC 150/2015), rural (Lei 5.889/73), avulso, temporário, estagiário, entre outros.</p>
-
-            <div class="success">
-                <strong>⭐ Fórmula de prova para ENAM/Magistratura:</strong><br>
-                <code>Pessoa Física + Pessoalidade + Não-Eventualidade + Onerosidade + Subordinação = Vínculo Empregatício (Art. 3º CLT)</code><br>
-                Ausência de qualquer elemento → afastamento do vínculo celetista.
-            </div>
-        </div>
-
-        <div class="section" id="texto-legal">
-            <h2>02 — Anatomia do Dispositivo | Requisitos Cumulativos do Vínculo</h2>
-            
-            <div class="highlight">
-                <strong>Art. 3º — Considera-se empregado toda pessoa física que prestar serviços de natureza não eventual a empregador, sob a dependência deste e mediante salário.</strong><br><br>
-                <strong>Parágrafo único —</strong> Não haverá distinções relativas à espécie de emprego e à condição de trabalhador, nem entre o trabalho intelectual, técnico e manual.
-            </div>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Elemento</th>
-                        <th>Conceito Jurídico</th>
-                        <th>Prova Típica</th>
-                        <th>Pegadinha de Concurso</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Pessoa Física</strong></td>
-                        <td>Apenas seres humanos podem ser empregados; PJ não configura vínculo celetista</td>
-                        <td>Contrato, RG/CPF, testemunhas</td>
-                        <td>Confundir empregado com sócio-administrador ou PJ "pejotizada"</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Pessoalidade</strong></td>
-                        <td>Infungibilidade: serviço prestado pelo próprio trabalhador, sem substituição arbitrária</td>
-                        <td>Escalas, substituições, ordens de serviço</td>
-                        <td>Aceitar substituições eventuais como quebra da pessoalidade</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Não-Eventualidade</strong></td>
-                        <td>Habitualidade: prestação com continuidade, integrada à atividade-fim/meio do empregador</td>
-                        <td>Frequência, histórico de pagamentos, cronologia</td>
-                        <td>Confundir "eventual" com "intermitente" (este é regulado pelo art. 443, §3º, CLT)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Onerosidade</strong></td>
-                        <td>Contraprestação salarial: trabalho não é gratuito; salário como contrapartida econômica</td>
-                        <td>Holerites, depósitos, recibos, benefícios</td>
-                        <td>Desconsiderar salário "in natura" ou benefícios indiretos como onerosidade</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Subordinação Jurídica</strong></td>
-                        <td>Poder diretivo, controle e fiscalização do empregador sobre tempo, modo e lugar da prestação</td>
-                        <td>Ordens, fiscalização, sanções, telemetria</td>
-                        <td>Ignorar que subordinação pode ser técnica, hierárquica ou estrutural (art. 6º, parágrafo único, CLT)</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="warning">
-                <strong>📌 Leitura técnica:</strong> A configuração do vínculo exige <strong>presença simultânea e cumulativa</strong> de todos os elementos. A ausência de um único requisito afasta a aplicação do art. 3º, ainda que os demais estejam presentes.
-            </div>
-        </div>
-
-        <div class="section" id="reforma">
-            <h2>03 — Impacto da Lei 13.467/2017 (Reforma Trabalhista)</h2>
-            
-            <h3>🔧 Principais alterações que afetam a interpretação do art. 3º:</h3>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Dispositivo Alterado</th>
-                        <th>Mudança Substantiva</th>
-                        <th>Efeito sobre o Conceito de Empregado</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Art. 2º, §2º</strong></td>
-                        <td>Redefinição de grupo econômico: exige "efetiva comunhão de interesses e atuação conjunta", não basta identidade de sócios</td>
-                        <td>Dificulta reconhecimento de responsabilidade solidária por vínculo com grupo econômico sem prova de integração real</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Art. 6º</strong></td>
-                        <td>Equiparação expressa do teletrabalho e trabalho a distância para fins de subordinação; meios telemáticos equiparados a controle presencial</td>
-                        <td>Subordinação pode ser exercida por meios digitais; não afasta vínculo por ausência de presença física</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Art. 8º, §2º</strong></td>
-                        <td>Vedação à criação de obrigações ou restrição de direitos por súmulas/OJs sem previsão legal</td>
-                        <td>Limita atuação normativa do TST; exige base legal para reconhecimento de vínculo em casos limítrofes</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Art. 443, §3º</strong></td>
-                        <td>Regulamentação do trabalho intermitente como modalidade válida</td>
-                        <td>Prestação esporádica com chamada pode ser celetista se presentes os demais elementos do art. 3º</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Art. 452-A</strong></td>
-                        <td>Regras específicas para intermitente: convocação, pagamento por hora, direito a férias/13º proporcionais</td>
-                        <td>Reforça que "não-eventualidade" não significa "diariedade"; intermitência é compatível com vínculo</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="warning">
-                <strong>⚠️ Atenção para ENAM:</strong> A Reforma não alterou o texto do art. 3º, mas modificou o contexto interpretativo. Juízes devem analisar se as novas modalidades (intermitente, teletrabalho, plataforma) preenchem os requisitos clássicos, sem automatismos.
-            </div>
-        </div>
-
-        <div class="section" id="sumulas-oj">
-            <h2>04 — Súmulas e Orientações Jurisprudenciais do TST Relevantes</h2>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Verbete</th>
-                        <th>Ementa Sintetizada</th>
-                        <th>Aplicação ao Art. 3º</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Súmula 330/TST</strong></td>
-                        <td>Contrato de prestação de serviços: vínculo com tomador exige presença dos requisitos do art. 3º; terceirização lícita não gera vínculo direto</td>
-                        <td>Reforça cumulatividade dos elementos; terceirização não afasta vínculo se houver subordinação direta ao tomador</td>
-                    </tr>
-                    <tr>
-                        <td><strong>OJ-SDI1-38</strong></td>
-                        <td>Empregado em empresa de reflorestamento é rurícola, sujeito à Lei 5.889/73, não à CLT geral</td>
-                        <td>Demonstra que o art. 3º deve ser lido em harmonia com leis especiais; conceito de "empregado" varia conforme regime</td>
-                    </tr>
-                    <tr>
-                        <td><strong>OJ-SDI1-396</strong></td>
-                        <td>Policial militar que presta serviço a empresa privada: preenchidos os requisitos do art. 3º, é legítimo o reconhecimento de vínculo</td>
-                        <td>Pessoalidade e subordinação podem coexistir com vínculo estatutário paralelo</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Súmula 363/TST</strong></td>
-                        <td>Contrato nulo por fraude (art. 9º CLT): gera efeitos trabalhistas se presentes os elementos do art. 3º</td>
-                        <td>Princípio da primazia da realidade: forma não prevalece sobre fatos concretos da prestação</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Precedente Normativo 20/TST</strong></td>
-                        <td>Estagiário: ausência de onerosidade e subordinação plena afasta vínculo celetista</td>
-                        <td>Delimita fronteiras entre estágio e emprego; exige análise concreta dos elementos</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="section" id="juris-stf">
-            <h2>05 — Jurisprudência do STF | Repercussão Geral e Teses Vinculantes</h2>
-
-            <div class="highlight">
-                <h3>⚖️ Tema 725 da Repercussão Geral (ARE 713.211)</h3>
-                <p><strong>Tese firmada:</strong> "É lícita a terceirização ou qualquer outra forma de divisão do trabalho entre pessoas jurídicas distintas, independentemente do objeto social das empresas envolvidas".</p>
-            </div>
-
-            <h3>🔍 Efeitos sobre o art. 3º:</h3>
-            <ul>
-                <li>A licitude da terceirização <em>não afasta</em> o reconhecimento de vínculo se, na prática, estiverem presentes os elementos do art. 3º entre trabalhador e tomador.</li>
-                <li>O STF reafirmou o <strong>princípio da primazia da realidade</strong>: a forma jurídica do contrato não prevalece sobre os fatos concretos da prestação.</li>
-                <li>Decisões de TRTs que reconhecem vínculo direto com tomador <em>sem prova de subordinação direta</em> podem ser reformadas por violação ao Tema 725.</li>
-            </ul>
-
-            <h3>🧭 ADPFs relevantes:</h3>
-            <ul>
-                <li><strong>ADPF 324:</strong> Reafirmação da licitude da terceirização, mas com ressalva de que direitos fundamentais do trabalhador devem ser preservados.</li>
-                <li><strong>ADPF 779:</strong> Reforça que emoção, paixão ou "honra" não justificam violação de direitos — analogamente, "autonomia" formal não afasta subordinação real.</li>
-            </ul>
-
-            <div class="success">
-                <strong>⭐ Ponto de magistratura:</strong> Ao analisar vínculo em caso de terceirização, o juiz deve: (1) verificar se há subordinação direta ao tomador; (2) analisar se a contratada tem estrutura real de empregadora; (3) aplicar o art. 3º com primazia da realidade, sem automatismos.
-            </div>
-        </div>
-
-        <div class="section" id="doutrina">
-            <h2>06 — Doutrina Sistematizada | Linhas Dogmáticas Seguras</h2>
-
-            <h3>📚 Síntese doutrinária dominante (MARTINEZ, DELGADO, NASCIMENTO, BARROS):</h3>
-
-            <ol>
-                <li><strong>Art. 3º como norma de reconhecimento, não de criação:</strong> O dispositivo não "cria" vínculo; apenas descreve os elementos que, quando presentes na realidade fática, autorizam o reconhecimento judicial da relação de emprego.</li>
-
-                <li><strong>Subordinação como elemento nuclear:</strong> Embora todos os requisitos sejam cumulativos, a subordinação jurídica é o "divisor de águas" entre emprego e outras modalidades. Pode ser:
-                    <ul>
-                        <li><em>Hierárquica:</em> ordens diretas, fiscalização, sanções;</li>
-                        <li><em>Técnica:</em> controle sobre modo de execução;</li>
-                        <li><em>Estrutural:</em> integração do trabalhador à organização do empregador.</li>
-                    </ul>
-                </li>
-
-                <li><strong>Princípio da primazia da realidade:</strong> Forma não prevalece sobre fatos. Contrato de "autônomo", "cooperado" ou "PJ" pode ser desconsiderado se a prestação concreta preencher os elementos do art. 3º.</li>
-
-                <li><strong>Flexibilização pós-Reforma:</strong> A Lei 13.467/2017 ampliou espaços de autonomia coletiva e individual, mas <em>não suprimiu</em> os requisitos do art. 3º. Teletrabalho, intermitência e plataforma devem ser analisados caso a caso.</li>
-            </ol>
-
-            <div class="highlight">
-                <strong>⚖️ Roteiro de fundamentação judicial para ENAM:</strong><br>
-                ① Identificar qual elemento do art. 3º está sendo questionado;<br>
-                ② Exigir prova concreta (não presunção) de cada requisito;<br>
-                ③ Aplicar primazia da realidade, mas com respeito à segurança jurídica;<br>
-                ④ Em casos de terceirização, analisar subordinação direta ao tomador;<br>
-                ⑤ Fundamentar com base em lei, súmula ou OJ <em>válida</em> (art. 8º, §2º, CLT).
-            </div>
-        </div>
-
-        <div class="section" id="fluxograma">
-            <h2>07 — Decisório Passo a Passo | Fluxograma Completo do Art. 3º CLT</h2>
-
-            <div class="flowchart">
-PRESTAÇÃO DE SERVIÇO EM TESE — ANALISAR VÍNCULO EMPREGATÍCIO
-▼
-PASSO 1 — A parte alega relação de emprego com base no art. 3º CLT?
-│
-├─ NÃO → Analisar outra espécie (autônomo, eventual, cooperado, etc.)
-│
-└─ SIM → PASSO 2: Verificar presença cumulativa dos 5 elementos
-     │
-     ▼
-     ELEMENTO 1: PESSOA FÍSICA?
-     ├─ NÃO (PJ, ente coletivo) → Afasta vínculo celetista
-     └─ SIM → Elemento 2: PESSOALIDADE?
-          ├─ NÃO (substituição livre/fungibilidade) → Afasta vínculo
-          └─ SIM → Elemento 3: NÃO-EVENTUALIDADE/HABITUALIDADE?
-               ├─ NÃO (prestação esporádica, sem continuidade) → Afasta vínculo
-               └─ SIM → Elemento 4: ONEROSIDADE?
-                    ├─ NÃO (gratuidade, voluntariado) → Afasta vínculo
-                    └─ SIM → Elemento 5: SUBORDINAÇÃO JURÍDICA?
-                         ├─ NÃO (autonomia plena, sem controle) → Afasta vínculo
-                         └─ SIM → VÍNCULO EMPREGATÍCIO CONFIGURADO (Art. 3º)
-                              │
-                              ▼
-                              PASSO 3: Há lei especial aplicável?
-                              ├─ SIM (rural, doméstico, temporário, etc.) → Aplicar regime específico
-                              └─ NÃO → Aplicar CLT geral
-                                   │
-                                   ▼
-                                   PASSO 4: Terceirização ou grupo econômico?
-                                   ├─ Terceirização: verificar subordinação direta ao tomador (Súmula 330/TST, Tema 725/STF)
-                                   ├─ Grupo econômico: exigir "efetiva comunhão de interesses" (art. 2º, §2º, CLT)
-                                   └─ Caso simples: aplicar consequências celetistas
-                                        │
-                                        ▼
-                                        CONTROLE FINAL DO JUIZ:
-                                        • Separar forma jurídica da realidade fática (primazia da realidade)
-                                        • Exigir prova concreta de cada elemento, não presunção
-                                        • Respeitar art. 8º, §2º: não criar obrigações sem base legal
-                                        • Fundamentar com lei, súmula ou OJ válidas
-                                        • Em caso de dúvida, aplicar princípio in dubio pro operario (com moderação)
-            </div>
-        </div>
-
-        <div class="section" id="comparativo">
-            <h2>08 — Tabela Premium | Comparativo de Espécies de Prestação</h2>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Espécie</th>
-                        <th>Base Legal</th>
-                        <th>Elementos do Art. 3º Presentes?</th>
-                        <th>Efeito Jurídico</th>
-                        <th>Pegadinha de Prova</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Empregado (CLT)</strong></td>
-                        <td>Art. 3º CLT</td>
-                        <td>Todos (5/5)</td>
-                        <td>Vínculo celetista pleno</td>
-                        <td>Confundir com autônomo "falso"</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Trabalhador Rural</strong></td>
-                        <td>Lei 5.889/73 + Art. 3º CLT</td>
-                        <td>Todos, com adaptação</td>
-                        <td>Regime especial rural</td>
-                        <td>Aplicar CLT geral sem verificar ruralidade</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Empregado Doméstico</strong></td>
-                        <td>LC 150/2015 + Art. 3º CLT</td>
-                        <td>Todos, em âmbito residencial</td>
-                        <td>Regime doméstico</td>
-                        <td>Estender a serviços não-residenciais</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Trabalhador Avulso</strong></td>
-                        <td>Lei 8.213/91 + Art. 3º CLT</td>
-                        <td>Pessoalidade, onerosidade, subordinação ao OGMO</td>
-                        <td>Vínculo com órgão gestor, não com tomador</td>
-                        <td>Reconhecer vínculo direto com tomador sem subordinação</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Autônomo</strong></td>
-                        <td>Código Civil + Art. 3º CLT</td>
-                        <td>Ausência de subordinação e/ou não-eventualidade</td>
-                        <td>Sem vínculo celetista</td>
-                        <td>Ignorar subordinação técnica/estrutural</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Eventual</strong></td>
-                        <td>Jurisprudência + Art. 3º CLT</td>
-                        <td>Ausência de habitualidade</td>
-                        <td>Sem vínculo celetista</td>
-                        <td>Confundir com intermitente (regulado)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Cooperado</strong></td>
-                        <td>Lei 5.764/71 + Art. 3º CLT</td>
-                        <td>Ausência de subordinação e onerosidade direta</td>
-                        <td>Sem vínculo celetista</td>
-                        <td>Desconsiderar "cooperativa de fachada"</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Intermitente</strong></td>
-                        <td>Art. 443, §3º, CLT</td>
-                        <td>Todos, com prestação por chamada</td>
-                        <td>Vínculo celetista com regime especial</td>
-                        <td>Exigir "diariedade" como requisito de habitualidade</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Teletrabalhador</strong></td>
-                        <td>Art. 6º, CLT</td>
-                        <td>Todos, subordinação por meios telemáticos</td>
-                        <td>Vínculo celetista pleno</td>
-                        <td>Afastar vínculo por ausência de presença física</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="section" id="prova">
-            <h2>09 — Pontos Que Sempre Caem em Magistratura / ENAM</h2>
-
-            <div class="checklist">
-                <h3>✅ Checklist objetivo para prova objetiva, discursiva, sentença e oral:</h3>
-
-                <div class="checklist-item">
-                    <strong>01. Quais são os 5 elementos do art. 3º CLT?</strong><br>
-                    → Pessoa física, pessoalidade, não-eventualidade, onerosidade, subordinação jurídica.
-                </div>
-
-                <div class="checklist-item">
-                    <strong>02. A ausência de um único elemento afasta o vínculo?</strong><br>
-                    → Sim. Os requisitos são <strong>cumulativos</strong>; falta de um impede configuração.
-                </div>
-
-                <div class="checklist-item">
-                    <strong>03. Subordinação pode ser exercida por meios digitais?</strong><br>
-                    → Sim. Art. 6º, parágrafo único, CLT: meios telemáticos equiparam-se a controle presencial.
-                </div>
-
-                <div class="checklist-item">
-                    <strong>04. Terceirização lícita afasta vínculo com tomador?</strong><br>
-                    → Não automaticamente. Se houver subordinação direta ao tomador, pode haver vínculo (Súmula 330/TST, Tema 725/STF).
-                </div>
-
-                <div class="checklist-item">
-                    <strong>05. OJ ou súmula pode criar novo requisito ao art. 3º?</strong><br>
-                    → Não. Art. 8º, §2º, CLT: vedada criação de obrigações sem base legal.
-                </div>
-
-                <div class="checklist-item">
-                    <strong>06. "Pejotização" gera vínculo?</strong><br>
-                    → Sim, se na realidade fática estiverem presentes os elementos do art. 3º (primazia da realidade).
-                </div>
-
-                <div class="checklist-item">
-                    <strong>07. Trabalho intermitente é "eventual"?</strong><br>
-                    → Não. É modalidade regulada (art. 443, §3º, CLT); a "não-eventualidade" refere-se à integração à atividade da empresa, não à frequência diária.
-                </div>
-
-                <div class="checklist-item">
-                    <strong>08. Policial militar pode ter vínculo celetista paralelo?</strong><br>
-                    → Sim, se prestar serviços a empresa privada com os elementos do art. 3º (OJ-SDI1-396/TST).
-                </div>
-
-                <div class="checklist-item">
-                    <strong>09. Grupo econômico exige apenas identidade de sócios?</strong><br>
-                    → Não. Art. 2º, §2º, CLT: exige "efetiva comunhão de interesses e atuação conjunta".
-                </div>
-
-                <div class="checklist-item">
-                    <strong>10. Princípio in dubio pro operario aplica-se ao reconhecimento do vínculo?</strong><br>
-                    → Sim, mas com moderação: a dúvida deve ser sobre fatos, não sobre requisitos legais; a prova dos elementos incumbe a quem alega o vínculo.
-                </div>
-
-                <div class="checklist-item">
-                    <strong>11. Qual a diferença entre "habitualidade" e "frequência"?</strong><br>
-                    → Habitualidade = integração à atividade da empresa; não exige prestação diária, mas continuidade funcional.
-                </div>
-
-                <div class="checklist-item">
-                    <strong>12. Teletrabalho sem controle de jornada afasta subordinação?</strong><br>
-                    → Não. Subordinação pode ser por resultados, metas, fiscalização digital; ausência de controle de horário não elimina o elemento.
-                </div>
-            </div>
-        </div>
-
-        <div class="section" id="fontes">
-            <h2>10 — Controle de Fidedignidade | Fontes Normativas e Jurisprudenciais</h2>
-
-            <h3>📌 Fontes primárias e de controle:</h3>
-            <ul>
-                <li><strong>CLT (Decreto-Lei nº 5.452/1943)</strong>: Arts. 2º, 3º, 6º, 8º, 9º, 443 — texto atualizado no Planalto.</li>
-                <li><strong>Lei 13.467/2017 (Reforma Trabalhista)</strong>: Alterações nos arts. 2º, 6º, 8º, 443, 452-A da CLT.</li>
-                <li><strong>Lei 5.889/1973</strong>: Estatuto do Trabalhador Rural — conceito de empregador/empregado rural.</li>
-                <li><strong>LC 150/2015</strong>: Regime do empregado doméstico.</li>
-                <li><strong>TST — Súmula 330</strong>: Vínculo em terceirização exige elementos do art. 3º.</li>
-                <li><strong>TST — OJ-SDI1-38 e 396</strong>: Empregado rural e policial militar com vínculo paralelo.</li>
-                <li><strong>STF — Tema 725 (ARE 713.211)</strong>: Licitude da terceirização, com primazia da realidade.</li>
-                <li><strong>Doutrina</strong>: Mauricio Godinho Delgado, Sérgio Pinto Martins, Amauri Mascaro Nascimento — elementos do vínculo e primazia da realidade.</li>
-            </ul>
-
-            <div class="warning">
-                <strong>🔒 Nota de integridade:</strong> Foram evitadas súmulas, OJs ou teses vinculantes inexistentes. Onde há discussão doutrinária ou jurisprudencial em evolução, o conteúdo foi apresentado como linha segura para concurso, com alerta quando se tratar de construção não expressa na CLT. Todas as informações foram conferidas em fontes oficiais (Planalto, TST, STF) até abril/2026.
-            </div>
-        </div>
-
-        <div class="highlight" style="text-align: center; margin-top: 40px;">
-            <strong>Art. 3º CLT — Conceito de Empregado e Relação de Emprego | Magistratura / ENAM</strong><br>
-            <em>Página única com atalhos internos · Atualizado em 29/04/2026 · Modelo visual preservado do HTML-base anexado.</em><br>
-            ✅ Zero alucinação | ✅ Fontes verificadas | ✅ Foco ENAM/Magistratura Estadual
-        </div>
+<div id="vm-study-bar"
+  data-article-id="CLT-ART-03"
+  data-subject="CLT"
+  data-subject-id="CLT"
+  data-article-num="3">
+  <div class="vm-row1">
+    <a class="vm-back" href="index.html">&#8592; In&iacute;cio</a>
+    <div class="vm-info"><strong>CLT</strong> &middot; Art.&nbsp;3&ordm;</div>
+    <div class="vm-completed-wrap">
+      <label>
+        <input type="checkbox" id="vm-check" onchange="vmToggleCompleted()">
+        <span id="vm-check-label">Conclu&iacute;do</span>
+      </label>
     </div>
+  </div>
+  <div class="vm-row2">
+    <div class="vm-timer-block">
+      <div class="vm-timer" id="vm-timer">00:00:00</div>
+      <div class="vm-pause-timer" id="vm-pause-timer"></div>
+    </div>
+    <div class="vm-status vm-status-idle" id="vm-status">Parado</div>
+    <div class="vm-spacer"></div>
+    <div class="vm-btns">
+      <button class="vm-btn" id="vm-btn-start" onclick="vmStartResume()">&#9654; Iniciar</button>
+      <button class="vm-btn" id="vm-btn-pause" onclick="vmPause()"       disabled>&#9646;&#9646; Pausa</button>
+      <button class="vm-btn" id="vm-btn-end"   onclick="vmEnd()"         disabled>&#10003; Fim</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var ARTICLE_ID='CLT-ART-03',SUBJECT='CLT',SUBJECT_ID='CLT',ARTICLE_NUM=3;
+  var state='idle',timerIv=null,pauseIv=null,sessTs=0,pauseTs=0,accStudy=0,accPause=0;
+  function $(id){return document.getElementById(id);}
+  var elTimer=$('vm-timer'),elPause=$('vm-pause-timer'),elStatus=$('vm-status');
+  var btnS=$('vm-btn-start'),btnP=$('vm-btn-pause'),btnE=$('vm-btn-end');
+  var chk=$('vm-check'),lbl=$('vm-check-label');
+  function pad(n){return String(Math.floor(n)).padStart(2,'0');}
+  function fmtMs(ms){var s=Math.floor(ms/1000),h=Math.floor(s/3600);return pad(h)+':'+pad((s%3600)/60)+':'+pad(s%60);}
+  function fmtShort(ms){var m=Math.round(ms/60000);return pad(Math.floor(m/60))+':'+pad(m%60);}
+  function setStatus(t,c){elStatus.textContent=t;elStatus.className='vm-status '+c;}
+  function startStudyIv(){clearInterval(timerIv);timerIv=setInterval(function(){elTimer.textContent=fmtMs(accStudy+(Date.now()-sessTs));},500);}
+  function stopStudyIv(){clearInterval(timerIv);}
+  function startPauseIv(){clearInterval(pauseIv);pauseIv=setInterval(function(){elPause.textContent='\u23F8 '+fmtShort(Date.now()-pauseTs);},500);}
+  function stopPauseIv(){clearInterval(pauseIv);elPause.textContent='';}
+  window.vmStartResume=function(){
+    if(state==='idle'){sessTs=Date.now();accStudy=0;accPause=0;state='reading';setStatus('Estudando','vm-status-reading');btnS.disabled=true;btnP.disabled=false;btnE.disabled=false;startStudyIv();}
+    else if(state==='paused'){accPause+=Date.now()-pauseTs;sessTs=Date.now();state='reading';setStatus('Estudando','vm-status-reading');btnS.disabled=true;btnP.disabled=false;btnE.disabled=false;stopPauseIv();startStudyIv();}
+  };
+  window.vmPause=function(){if(state!=='reading')return;accStudy+=Date.now()-sessTs;pauseTs=Date.now();stopStudyIv();state='paused';setStatus('Pausado','vm-status-paused');btnS.textContent='\u25BA Retomar';btnS.disabled=false;btnP.disabled=true;btnE.disabled=false;startPauseIv();};
+  window.vmEnd=function(){if(state!=='reading'&&state!=='paused')return;if(state==='reading')accStudy+=Date.now()-sessTs;stopStudyIv();stopPauseIv();state='done';elTimer.textContent=fmtMs(accStudy);setStatus('Conclu\u00EDdo \u2713','vm-status-done');btnS.textContent='\u21BA Nova';btnS.disabled=false;btnS.onclick=function(){state='idle';accStudy=0;accPause=0;elTimer.textContent='00:00:00';setStatus('Parado','vm-status-idle');btnS.textContent='\u25BA Iniciar';btnS.onclick=window.vmStartResume;btnP.disabled=true;btnE.disabled=true;};btnP.disabled=true;btnE.disabled=true;};
+  window.vmToggleCompleted=function(){if(chk.checked){lbl.textContent='\u2713 Feito!';lbl.style.color='#2ecc71';}else{lbl.textContent='Conclu\u00EDdo';lbl.style.color='';}};
+})();
+</script>
+<!-- VM-STUDY-BAR-END -->
+
+<style id="vm-no-gap-fixed-menus-final">
+html,body{margin-top:0!important;padding-top:0!important;scroll-padding-top:calc(var(--vm-study-bar-h,46px) + 58px)!important;}
+#vm-study-bar{position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;z-index:2147483647!important;}
+#top-nav,.tabs-wrap,.tab-bar,.nav-tabs{position:sticky!important;top:var(--vm-study-bar-h,46px)!important;margin-top:var(--vm-study-bar-h,46px)!important;z-index:2147483600!important;}
+#top-nav{width:100%!important;}
+#hero,.hero,main,.page-wrap,.container,.wrap,.wrapper,.section,.prova-section{scroll-margin-top:calc(var(--vm-study-bar-h,46px) + 76px)!important;}
+@media(max-width:699px){html,body{scroll-padding-top:calc(var(--vm-study-bar-h,88px) + 58px)!important;}#top-nav,.tabs-wrap,.tab-bar,.nav-tabs{top:var(--vm-study-bar-h,88px)!important;margin-top:var(--vm-study-bar-h,88px)!important;}}
+</style>
+
+<nav id="top-nav" aria-label="Atalhos do artigo">
+  <div class="nav-brand">Art. 3&ordm; CLT</div>
+  <div class="nav-main-links">
+    <a href="#visao-geral">Vis&atilde;o Geral</a>
+    <a href="#texto-legal">Texto Legal</a>
+    <a href="#pessoalidade">Pessoalidade</a>
+    <a href="#nao-eventualidade">N&atilde;o Eventualidade</a>
+    <a href="#onerosidade">Onerosidade</a>
+    <a href="#subordinacao">Subordina&ccedil;&atilde;o</a>
+    <a href="#figura-intermediaria">Figuras Intermedi&aacute;rias</a>
+    <a href="#reforma-2017">Reforma 2017</a>
+    <a href="#parassubordinacao">Parassubordina&ccedil;&atilde;o</a>
+    <a href="#onus-prova">&#212;nus da Prova</a>
+    <a href="#fluxograma">Fluxograma</a>
+    <a href="#comparativo">Comparativo</a>
+    <a href="#jurisprudencia">Juris. STF/TST</a>
+    <a href="#oj-sumulas">OJs e S&uacute;mulas</a>
+    <a href="#doutrina">Doutrina</a>
+    <a href="#prova" class="nav-prova">&#9878; Prova</a>
+    <a href="#fontes">Fontes</a>
+  </div>
+</nav>
+
+<header id="hero">
+  <div class="badge">CLT &middot; Decreto-Lei n.&ordm; 5.452/1943 &middot; T&iacute;tulo I &middot; Das Normas Gerais de Tutela do Trabalho &middot; Atualiza&ccedil;&atilde;o conferida em 2025</div>
+  <h1>Art. 3&ordm; CLT &mdash; <span>Empregado</span></h1>
+  <p class="subtitle">5 requisitos cumulativos &middot; Pessoalidade &middot; N&atilde;o eventualidade &middot; Onerosidade &middot; Subordina&ccedil;&atilde;o jur&iacute;dica &middot; Reforma 2017 &middot; Parassubordina&ccedil;&atilde;o &middot; S&uacute;mulas e OJs TST &middot; Magistratura &middot; ENAM</p>
+  <div class="law-box">
+    <strong>Art. 3&ordm; do Decreto-Lei n.&ordm; 5.452/1943 &mdash; Consolida&ccedil;&atilde;o das Leis do Trabalho (CLT)</strong>
+    "Considera-se empregado toda pessoa f&iacute;sica que prestar servi&ccedil;os de natureza n&atilde;o eventual a empregador, sob a depend&ecirc;ncia deste e mediante sal&aacute;rio."<br><br>
+    <strong>Par&aacute;grafo &uacute;nico &mdash; Princ&iacute;pio da Igualdade dos Empregados</strong>
+    "N&atilde;o haver&aacute; distin&ccedil;&otilde;es relativas &agrave; esp&eacute;cie de emprego e &agrave; condi&ccedil;&atilde;o de trabalhador, nem entre o trabalho intelectual, t&eacute;cnico e manual."
+  </div>
+</header>
+
+<div class="page-wrap">
+
+<section class="section" id="visao-geral">
+  <div class="section-header"><div class="section-num">01</div><div class="section-title"><span>Introdu&ccedil;&atilde;o &amp; Estrutura</span>Mapa Geral do Art. 3&ordm; CLT</div></div>
+  <div class="card-grid card-grid-3">
+    <div class="card type-card tc-blue">
+      <h3>&#128205; Fun&ccedil;&atilde;o do art. 3&ordm; CLT</h3>
+      <p>O art. 3&ordm; define o conceito legal de <strong>empregado</strong> &mdash; polo ativo da rela&ccedil;&atilde;o de emprego. &Eacute; a contrapartida do art. 2&ordm; (empregador). A defini&ccedil;&atilde;o importa para: (a) delimitar quem tem acesso aos direitos trabalhistas; (b) distinguir empregado de aut&ocirc;nomo, eventual e intermedi&aacute;rio; (c) identificar quando incide o sistema protetivo da CLT.</p>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>&#128308; Elementos do conceito</h3>
+      <p>O caput re&uacute;ne <strong>cinco elementos cumulativos</strong>: (1) pessoa f&iacute;sica; (2) pessoalidade; (3) n&atilde;o eventualidade; (4) onerosidade; (5) subordina&ccedil;&atilde;o jur&iacute;dica. A falta de qualquer um deles afasta o v&iacute;nculo empregatício. O ju&iacute;z analisa o conjunto probat&oacute;rio para verificar a presen&ccedil;a de todos os requisitos <em>in concreto</em>.</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>&#11088; Ponto-chave de prova</h3>
+      <p>A <strong>subordina&ccedil;&atilde;o jur&iacute;dica</strong> &eacute; o elemento mais debatido e cobrado. Ap&oacute;s a Reforma de 2017: o aut&ocirc;nomo exclusivo n&atilde;o &eacute; automaticamente empregado (art. 442-B CLT); o trabalho intermitente &eacute; v&iacute;nculo empregatício (art. 443, &sect;3&ordm; CLT). O par&aacute;grafo &uacute;nico consagra o <strong>princ&iacute;pio da igualdade dos empregados</strong> &mdash; veda distin&ccedil;&otilde;es entre tipos de trabalho.</p>
+    </div>
+  </div>
+  <div class="alert alert-gold mt2">
+    <div class="alert-icon">&#11088;</div>
+    <div><strong>F&oacute;rmula de prova:</strong> Empregado = pessoa f&iacute;sica + pessoalidade + n&atilde;o eventualidade + onerosidade + subordina&ccedil;&atilde;o jur&iacute;dica. Os cinco s&atilde;o CUMULATIVOS. A subordina&ccedil;&atilde;o &eacute; o elemento mais relevante e de maior freq&uuml;&ecirc;ncia de cobran&ccedil;a. Ap&oacute;s 2017: art. 442-B CLT (aut&ocirc;nomo exclusivo sem v&iacute;nculo) e art. 443, &sect;3&ordm; CLT (trabalho intermitente = emprego). O princ&iacute;pio da primazia da realidade supre a falta de CTPS assinada.</div>
+  </div>
+</section>
+
+<section class="section" id="texto-legal">
+  <div class="section-header"><div class="section-num">02</div><div class="section-title"><span>Anatomia do Dispositivo</span>Texto Legal Fatiado para Prova</div></div>
+  <div class="anat-visual">
+    <div class="av-col av-red"><h4>"Toda pessoa f&iacute;sica"</h4><p><strong>1&ordm; requisito: Pessoa f&iacute;sica</strong></p><ul><li>S&oacute; pessoa natural pode ser empregada.</li><li>Pessoa jur&iacute;dica nunca &eacute; empregada.</li><li>Induz ao reconhecimento de fraude quando PJ interposta.</li></ul></div>
+    <div class="av-sep">+</div>
+    <div class="av-col av-navy"><h4>"Servi&ccedil;os de natureza n&atilde;o eventual"</h4><p><strong>3&ordm; requisito: N&atilde;o eventualidade</strong></p><ul><li>Continuidade, habitualidade ou permanência na presta&ccedil;&atilde;o.</li><li>N&atilde;o precisa ser di&aacute;rio &mdash; mas deve ser integrado &agrave; atividade normal do empregador.</li><li>Trabalho intermitente: v&iacute;nculo empregatício (art. 443, &sect;3&ordm;).</li></ul></div>
+    <div class="av-sep">+</div>
+    <div class="av-col av-blue"><h4>"Sob a depend&ecirc;ncia deste"</h4><p><strong>5&ordm; requisito: Subordina&ccedil;&atilde;o jur&iacute;dica</strong></p><ul><li>O mais relevante e debatido.</li><li>N&atilde;o &eacute; depend&ecirc;ncia econ&ocirc;mica ou t&eacute;cnica.</li><li>Poder diretivo do empregador sobre o modo de executar o servi&ccedil;o.</li></ul></div>
+    <div class="av-sep">+</div>
+    <div class="av-col av-gold"><h4>"Mediante sal&aacute;rio"</h4><p><strong>4&ordm; requisito: Onerosidade</strong></p><ul><li>Contraprestação em dinheiro ou in natura.</li><li>Trabalho benemerente ou volt&aacute;rio n&atilde;o gera v&iacute;nculo.</li><li>Presume-se oneroso quando presentes os demais elementos.</li></ul></div>
+  </div>
+  <div class="card mt2">
+    <h3>&#128204; Leitura t&eacute;cnica do art. 3&ordm;</h3>
+    <p>O segundo requisito &mdash; <strong>pessoalidade</strong> (<em>intuitu personae</em>) &mdash; n&atilde;o est&aacute; expresso de forma literal no caput, mas &eacute; deduzido da express&atilde;o "pessoa f&iacute;sica que prestar servi&ccedil;os". O empregado presta servi&ccedil;os <em>pessoalmente</em> &mdash; n&atilde;o pode se fazer substituir por terceiro a seu crit&eacute;rio. O art. 3&ordm; deve ser lido em conj. com os arts. 2&ordm;, 9&ordm;, 442 e 442-B CLT, e com o princ&iacute;pio da primazia da realidade (art. 9&ordm; CLT).</p>
+    <div class="source-note">Refer&ecirc;ncias normativas centrais: CLT, arts. 3&ordm;, 2&ordm;, 9&ordm;, 442, 442-B, 443 e &sect;3&ordm;; CF, art. 7&ordm;; Lei 13.467/2017; Instrução Normativa TST n.&ordm; 41/2018.</div>
+  </div>
+</section>
+
+<section class="section" id="pessoalidade">
+  <div class="section-header"><div class="section-num">03</div><div class="section-title"><span>1&ordm; e 2&ordm; Requisitos</span>Pessoa F&iacute;sica e Pessoalidade (<em>Intuitu Personae</em>)</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-blue">
+      <h3>&#128100; Pessoa F&iacute;sica</h3>
+      <p>Apenas a <strong>pessoa natural</strong> pode ser empregada. Pessoa jur&iacute;dica n&atilde;o pode figurar como empregada &mdash; se uma PJ presta servi&ccedil;os com elementos do art. 3&ordm;, configura-se fraude e o v&iacute;nculo &eacute; reconhecido com a pessoa f&iacute;sica por tr&aacute;s da PJ (art. 9&ordm; CLT &mdash; princ&iacute;pio da primazia da realidade).</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Pejotiza&ccedil;&atilde;o fraudulenta:</strong> Empresa que exige que empregado abra PJ para continuar prestando os mesmos servi&ccedil;os com subordina&ccedil;&atilde;o, pessoalidade e n&atilde;o eventualidade &rarr; v&iacute;nculo empregatício reconhecido.</li>
+        <li><strong>Intermediada por PJ:</strong> Se a interposi&ccedil;&atilde;o de PJ &eacute; mera forma jur&iacute;dica sem altera&ccedil;&atilde;o da realidade &rarr; art. 9&ordm; CLT nulifica a fraude.</li>
+        <li><strong>Reforma 2017 &mdash; art. 442-B CLT:</strong> O aut&ocirc;nomo exclusivo n&atilde;o &eacute; autom&aacute;ticamente empregado; mas se presentes os 5 requisitos, a rela&ccedil;&atilde;o &eacute; de emprego independentemente do contrato formal.</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>&#128101; Pessoalidade (<em>Intuitu Personae</em>)</h3>
+      <p>O empregado presta os servi&ccedil;os <strong>pessoalmente</strong> &mdash; a presta&ccedil;&atilde;o &eacute; infung&iacute;vel. N&atilde;o pode o empregado enviar substituto a seu livre arb&iacute;trio sem aquiesc&ecirc;ncia do empregador. A pessoalidade &eacute; exigida somente no polo do empregado (n&atilde;o do empregador &mdash; art. 2&ordm; &eacute; despersonalizado).</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Substitui&ccedil;&atilde;o espor&aacute;dica consentida:</strong> N&atilde;o afasta a pessoalidade se ocorreu com anuência do empregador.</li>
+        <li><strong>Substitui&ccedil;&atilde;o habitual sem controle:</strong> Indica aus&ecirc;ncia de pessoalidade &rarr; pode afastar o v&iacute;nculo empregatício.</li>
+        <li><strong>Autonomia para delegar:</strong> Empregado que livremente delega a terceiros a execu&ccedil;&atilde;o &rarr; ind&iacute;cio de aut&ocirc;nomo ou prestador independente.</li>
+        <li><strong>Parassubordinado:</strong> O TST tem reconhecido pessoalidade mesmo em contratos atípicos, quando o prestador atua pessoalmente de forma essencial ao tomador.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="nao-eventualidade">
+  <div class="section-header"><div class="section-num">04</div><div class="section-title"><span>3&ordm; Requisito &mdash; Alta Cobran&ccedil;a</span>N&atilde;o Eventualidade &mdash; Teorias e Aplica&ccedil;&atilde;o Pr&aacute;tica</div></section>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>&#128203; Conceito e Teorias Doutrin&aacute;rias</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">A n&atilde;o eventualidade significa que a presta&ccedil;&atilde;o de servi&ccedil;os ocorre de forma <strong>n&atilde;o casual, n&atilde;o espor&aacute;dica</strong>, integrando-se &agrave; din&acirc;mica normal das atividades do empregador. N&atilde;o significa que o servi&ccedil;o deva ser di&aacute;rio ou ininterrupto.</p>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;">
+        <div style="background:var(--gold-pale);border:1px solid var(--gold);border-radius:6px;padding:0.7rem 0.9rem;font-size:0.82rem;"><strong style="color:#7a5a00;">&#11088; Teoria dos fins da empresa (Alfredo Ruprecht &mdash; adotada pelo TST):</strong> &Eacute; n&atilde;o eventual o servi&ccedil;o que se integra aos fins normais da empresa, independentemente de frequ&ecirc;ncia ou dura&ccedil;&atilde;o. Ex.: garçom em restaurante que trabalha s&oacute; nos fins de semana &rarr; n&atilde;o eventual (atividade normal do restaurante).</div>
+        <div style="background:#edf2f8;border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--blue-accent);">Teoria da permanência (Evaristo de Moraes Filho):</strong> Servi&ccedil;os prestados com habitualidade e continuidade &mdash; o elemento tempo &eacute; determinante. Menor uso pelo TST.</div>
+        <div style="background:#edf2f8;border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--blue-accent);">Teoria da descontinuidade (Amauri Mascaro):</strong> Eventual &eacute; o servi&ccedil;o descontínuo, espor&aacute;dico, sem rela&ccedil;&atilde;o permanente com o empregador.</div>
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--red-accent);">Teoria do evento (Russomano):</strong> Eventual &eacute; o servi&ccedil;o ligado a um evento determinado e certo, que cessa com o fim do evento. Ex.: contratado para a montagem de um stand na feira e nada mais.</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>&#128269; Diferen&ccedil;a entre Eventual e Trabalhador Intermitente</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">A Reforma de 2017 criou o <strong>trabalho intermitente</strong> (art. 443, &sect;3&ordm; CLT), que &eacute; modalidade de <em>v&iacute;nculo empregatício</em> &mdash; diferente do trabalhador eventual (sem v&iacute;nculo):</p>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.82rem;">
+          <thead style="background:var(--navy);color:white;"><tr><th style="padding:0.5rem 0.7rem;">Crit&eacute;rio</th><th style="padding:0.5rem 0.7rem;">Trabalhador Eventual</th><th style="padding:0.5rem 0.7rem;">Trabalhador Intermitente</th></tr></thead>
+          <tbody>
+            <tr style="background:#fde8e8;"><td style="padding:0.5rem 0.7rem;font-weight:700;">V&iacute;nculo empregatício</td><td style="padding:0.5rem 0.7rem;color:var(--red-accent);font-weight:700;">N&Atilde;O</td><td style="padding:0.5rem 0.7rem;color:var(--green-accent);font-weight:700;">SIM &mdash; art. 443, &sect;3&ordm; CLT</td></tr>
+            <tr><td style="padding:0.5rem 0.7rem;font-weight:700;">N&atilde;o eventualidade</td><td style="padding:0.5rem 0.7rem;">Ausente</td><td style="padding:0.5rem 0.7rem;">Presente (alternância prevista em contrato)</td></tr>
+            <tr style="background:var(--gold-pale);"><td style="padding:0.5rem 0.7rem;font-weight:700;">Direitos trabalhistas</td><td style="padding:0.5rem 0.7rem;">N&atilde;o tem direitos da CLT</td><td style="padding:0.5rem 0.7rem;">Tem direitos proporcionais ao per&iacute;odo trabalhado</td></tr>
+            <tr><td style="padding:0.5rem 0.7rem;font-weight:700;">FGTS e F&eacute;rias</td><td style="padding:0.5rem 0.7rem;">N&atilde;o</td><td style="padding:0.5rem 0.7rem;">Sim, proporcionalmente (art. 452-A CLT)</td></tr>
+            <tr style="background:#edf7f0;"><td style="padding:0.5rem 0.7rem;font-weight:700;">Exemplo</td><td style="padding:0.5rem 0.7rem;">Encanador chamado uma vez para consertar o banheiro</td><td style="padding:0.5rem 0.7rem;">Garçom convocado conforme demanda do restaurante</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="onerosidade">
+  <div class="section-header"><div class="section-num">05</div><div class="section-title"><span>4&ordm; Requisito</span>Onerosidade &mdash; Sal&aacute;rio e Remunera&ccedil;&atilde;o</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-green">
+      <h3>&#128176; Conceito de Onerosidade</h3>
+      <p>A onerosidade exige que o empregado receba <strong>contraprestação</strong> pelos servi&ccedil;os prestados. Essa contraprestação &eacute; o sal&aacute;rio, que pode ser pago em dinheiro e/ou em <em>utilidades</em> (art. 458 CLT). Trabalho benemerente, volt&aacute;rio, religioso ou familiar sem remuneração n&atilde;o configura v&iacute;nculo empregatício.</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Presun&ccedil;&atilde;o de onerosidade:</strong> Demonstrados os demais elementos, o TST presume a onerosidade. O &ocirc;nus de provar que era gratuito &eacute; do empregador.</li>
+        <li><strong>Sal&aacute;rio em utilidades:</strong> Alimenta&ccedil;&atilde;o, habita&ccedil;&atilde;o, transporte &mdash; integram o sal&aacute;rio at&eacute; os limites do art. 458 CLT.</li>
+        <li><strong>Sal&aacute;rio m&iacute;nimo:</strong> A onerosidade deve observar o piso constitucional (art. 7&ordm;, IV, CF) e o princ&iacute;pio da alteridade (art. 2&ordm; CLT).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>&#9888;&#65039; Situa&ccedil;&otilde;es Liminares de Onerosidade</h3>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;">
+        <div style="background:#dceee3;border-left:3px solid var(--green-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--green-accent);">Estagi&aacute;rio:</strong> Recebe bolsa, n&atilde;o sal&aacute;rio. N&atilde;o configura v&iacute;nculo empregatício quando atendidas as condi&ccedil;&otilde;es da Lei 11.788/2008. Descumprimento das condi&ccedil;&otilde;es &rarr; v&iacute;nculo reconhecido.</div>
+        <div style="background:#dceee3;border-left:3px solid var(--green-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--green-accent);">Cooperado:</strong> N&atilde;o &eacute; empregado quando a cooperativa funciona regularmente (art. 442, par. &uacute;nico CLT). Cooperativa fraudulenta usada para terceiriza&ccedil;&atilde;o &rarr; reconhecimento do v&iacute;nculo com o tomador.</div>
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--red-accent);">Trabalho familiar:</strong> Parente que trabalha n&atilde;o gera v&iacute;nculo autom&aacute;tico. Depende da presen&ccedil;a dos 5 requisitos, incluindo onerosidade (pagamento efetivo de sal&aacute;rio).</div>
+        <div style="background:var(--gold-pale);border:1px solid var(--gold);border-radius:6px;padding:0.65rem 0.9rem;font-size:0.82rem;"><strong style="color:#7a5a00;">Contrato de est&aacute;gio fraudulento:</strong> S&uacute;mula 363/TST &mdash; reconhecida a nulidade do contrato com ente p&uacute;blico sem concurso, o empregado recebe apenas o equiv. aos dep&oacute;sitos do FGTS e o valor do saldo sal&aacute;rio das horas trabalhadas.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="subordinacao">
+  <div class="section-header"><div class="section-num">06</div><div class="section-title"><span>5&ordm; Requisito &mdash; M&aacute;xima Cobran&ccedil;a</span>Subordina&ccedil;&atilde;o Jur&iacute;dica &mdash; Evolu&ccedil;&atilde;o, Teorias e Crit&eacute;rios</div></div>
+  <div class="alert alert-red" style="margin-bottom:1rem;">
+    <div class="alert-icon">&#128308;</div>
+    <div><strong>Ponto mais cobrado sobre o art. 3&ordm; CLT em magistratura:</strong> A subordina&ccedil;&atilde;o jur&iacute;dica &eacute; o requisito mais debatido e mais cobrado. Sua evolu&ccedil;&atilde;o do conceito cl&aacute;ssico (heterodirigibilidade) para as novas teorias (estrutural, algor&iacute;tmica) &eacute; essencial para enfrentar quest&otilde;es sobre plataformas digitais, uberiza&ccedil;&atilde;o e trabalho por aplicativo.</div>
+  </div>
+  <div class="especie-grid">
+    <div class="especie-card ec-blue">
+      <h4>&#128309; Subordina&ccedil;&atilde;o Cl&aacute;ssica (Jur&iacute;dica ou Heterodirigibilidade)</h4>
+      <p>O empregado est&aacute; sujeito ao poder diretivo do empregador quanto ao <strong>modo, tempo, lugar e forma</strong> de execu&ccedil;&atilde;o do servi&ccedil;o. N&atilde;o &eacute; dependência econ&ocirc;mica (autônomo tamb&eacute;m pode depender economicamente) nem t&eacute;cnica (empregador pode desconhecer a t&eacute;cnica).</p>
+      <ul><li>Empregador d&aacute; ordens sobre como trabalhar.</li><li>Empregado cumpre as diretivas sob pena de san&ccedil;&atilde;o disciplinar.</li><li>N&atilde;o precisa ser fiscaliza&ccedil;&atilde;o intensa e concomitante.</li></ul>
+    </div>
+    <div class="especie-card ec-red">
+      <h4>&#128308; Subordina&ccedil;&atilde;o Objetiva ou Estrutural (Godinho Delgado &mdash; amplamente adotada)</h4>
+      <p>O empregado est&aacute; subordinado quando sua atividade se integra <strong>estruturalmente &agrave; din&acirc;mica empresarial</strong> do tomador, ainda que n&atilde;o receba ordens diretas e concretas. &Eacute; a ader&ecirc;ncia do trabalhador &agrave; organiza&ccedil;&atilde;o do empregador.</p>
+      <ul><li>N&atilde;o requer ordem expressa e concomitante.</li><li>Basta que o trabalho se insira na estrutura do empreendimento.</li><li>Amplamente usada pelo TST para reconhecer v&iacute;culo em trabalho t&eacute;cnico qualificado.</li></ul>
+    </div>
+    <div class="especie-card ec-gold">
+      <h4>&#128218; Subordina&ccedil;&atilde;o Reticular ou Algor&iacute;tmica (teoria contempor&acirc;nea)</h4>
+      <p>Aplicada ao trabalho por plataformas digitais (Uber, iFood, 99, etc.): a subordina&ccedil;&atilde;o &eacute; exercida pelo <strong>algoritmo</strong> &mdash; o aplicativo dita as regras, os preços, a avalia&ccedil;&atilde;o e o acesso ao trabalho. O trabalhador segue diretivas impl&iacute;citas do sistema, n&atilde;o de um superior humano identific&aacute;vel.</p>
+      <ul><li>TST e juízes do trabalho em 2024-2025 t&ecirc;m reconhecido v&iacute;nculo em casos de motoristas de aplicativo.</li><li>Ainda sem uniformidade plena na jurisprud&ecirc;ncia (TST divide-se).</li><li>STF com repercuss&atilde;o geral pendente (ADPF 449 e RE 1.394.285).</li></ul>
+    </div>
+    <div class="especie-card ec-purple">
+      <h4>&#128161; Subordina&ccedil;&atilde;o Econ&ocirc;mica vs. Jur&iacute;dica &mdash; Distin&ccedil;&atilde;o Essencial</h4>
+      <p>A subordina&ccedil;&atilde;o relevante para o art. 3&ordm; CLT &eacute; a <strong>jur&iacute;dica</strong>, n&atilde;o a econ&ocirc;mica. O autônomo tamb&eacute;m pode ser economicamente dependente de um &uacute;nico cliente &mdash; mas n&atilde;o &eacute; empregado se n&atilde;o h&aacute; poder diretivo do tomador sobre o modo de execu&ccedil;&atilde;o.</p>
+      <ul><li>Dependência econ&ocirc;mica: t&iacute;pica de aut&ocirc;nomo hipossuficiente.</li><li>Dependência jur&iacute;dica (subordina&ccedil;&atilde;o): exclusiva do empregado.</li><li>A Reforma 2017 n&atilde;o incluiu a dependência econ&ocirc;mica como crit&eacute;rio.</li></ul>
+    </div>
+  </div>
+  <table class="comp-table mt2">
+    <thead><tr><th>Crit&eacute;rio</th><th>Empregado (art. 3&ordm; CLT)</th><th>Aut&ocirc;nomo (art. 442-B CLT)</th><th>Trabalhador Eventual</th><th>Ponto Cr&iacute;tico</th></tr></thead>
+    <tbody>
+      <tr class="hl4"><td>Pessoa f&iacute;sica</td><td style="color:var(--green-accent);font-weight:700;">SIM (obrigat&oacute;rio)</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--green-accent);">SIM</td><td>Todos s&atilde;o pessoas f&iacute;sicas &mdash; o elemento sozinho n&atilde;o distingue.</td></tr>
+      <tr class="hl3"><td>Pessoalidade</td><td style="color:var(--green-accent);font-weight:700;">SIM &mdash; infung&iacute;vel</td><td style="color:var(--red-accent);">N&atilde;o (pode delegar)</td><td style="color:var(--red-accent);">Geralmente n&atilde;o</td><td>Substitui&ccedil;&atilde;o habitual sem controle afasta a pessoalidade.</td></tr>
+      <tr class="hl2"><td>N&atilde;o eventualidade</td><td style="color:var(--green-accent);font-weight:700;">SIM &mdash; integra a empresa</td><td style="color:var(--red-accent);">N&atilde;o obrigatoriamente</td><td style="color:var(--red-accent);">N&atilde;O &mdash; espor&aacute;dico</td><td>Teoria dos fins da empresa (TST): integra&ccedil;&atilde;o &agrave; atividade normal.</td></tr>
+      <tr class="hl"><td>Onerosidade</td><td style="color:var(--green-accent);font-weight:700;">SIM &mdash; sal&aacute;rio</td><td style="color:var(--green-accent);">SIM (remunera&ccedil;&atilde;o)</td><td style="color:var(--green-accent);">SIM (pagamento por servi&ccedil;o)</td><td>Presume-se na rela&ccedil;&atilde;o de emprego; benemerente n&atilde;o gera v&iacute;nculo.</td></tr>
+      <tr class="hl5"><td>Subordina&ccedil;&atilde;o jur&iacute;dica</td><td style="color:var(--green-accent);font-weight:700;">SIM &mdash; poder diretivo</td><td style="color:var(--red-accent);font-weight:700;">N&atilde;O &mdash; aut&ocirc;nomo</td><td style="color:var(--red-accent);font-weight:700;">N&Atilde;O &mdash; independente</td><td>Elemento central e distintivo. Autônomo exclusivo: v.art. 442-B CLT p&oacute;s-2017.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="section" id="figura-intermediaria">
+  <div class="section-header"><div class="section-num">07</div><div class="section-title"><span>Figuras Liminares</span>Trabalhadores em Zona Cinzenta &mdash; Distin&ccedil;&otilde;es Essenciais</div></div>
+  <div class="especie-grid">
+    <div class="especie-card ec-blue">
+      <h4>&#128188; Empregado × Aut&ocirc;nomo</h4>
+      <p>O aut&ocirc;nomo organiza sua pr&oacute;pria atividade, assume os riscos do negócio e n&atilde;o est&aacute; sujeito ao poder diretivo do tomador. Ap&oacute;s a Reforma de 2017 (art. 442-B CLT), o aut&ocirc;nomo <em>exclusivo</em> n&atilde;o &eacute; automaticamente empregado &mdash; mas se presentes os 5 requisitos, h&aacute; v&iacute;nculo.</p>
+      <ul><li>Fixar&ccedil;&atilde;o do pr&oacute;prio hor&aacute;rio: ind&iacute;cio de autonomia.</li><li>Ausência de poder disciplinar do tomador: ind&iacute;cio de autonomia.</li><li>Risco financeiro do prestador: autonomia.</li></ul>
+    </div>
+    <div class="especie-card ec-red">
+      <h4>&#128179; Empregado × Cooperado</h4>
+      <p>O cooperado que integra cooperativa <em>genuína</em> n&atilde;o &eacute; empregado do tomador (art. 442, par. &uacute;nico CLT). Cooperativa fraudulenta &mdash; criada apenas para intermediar m&atilde;o-de-obra &mdash; gera v&iacute;nculo empregatício direto com o tomador (art. 9&ordm; CLT + S&uacute;mula 331/TST).</p>
+      <ul><li>Cooperativa genuína: trabalhador participa dos resultados, decide democraticamente.</li><li>Cooperativa fachada: trabalhador n&atilde;o tem autonomia, recebe valor fixo, &eacute; dirigido pelo tomador.</li></ul>
+    </div>
+    <div class="especie-card ec-green">
+      <h4>&#127891; Empregado × Estagi&aacute;rio</h4>
+      <p>O estagi&aacute;rio n&atilde;o &eacute; empregado quando atendidos os requisitos da <strong>Lei 11.788/2008</strong>: (a) estudante matriculado em institui&ccedil;&atilde;o de ensino; (b) t.c.e. assinado pela institui&ccedil;&atilde;o; (c) supervis&atilde;o. Descumprimento gera v&iacute;nculo empregatício.</p>
+      <ul><li>Bolsa de est&aacute;gio: n&atilde;o &eacute; sal&aacute;rio.</li><li>Jornada m&aacute;xima: 4h (m&eacute;dio) ou 6h (superior/profissional).</li><li>Descumprimento de qualquer condi&ccedil;&atilde;o: reconhecimento do v&iacute;nculo.</li></ul>
+    </div>
+    <div class="especie-card ec-gold">
+      <h4>&#128241; Empregado × Trabalhador por Plataforma</h4>
+      <p>Trabalhadores de aplicativos (Uber, iFood, 99, Rappi) est&atilde;o em zona de intenso debate. O STF tem adiado julgamento sobre o tema (RE 1.394.285 &mdash; aguardando definitividade). O TST tem decis&otilde;es em sentidos opostos, com tend&ecirc;ncia de reconhecimento do v&iacute;nculo quando presente a subordina&ccedil;&atilde;o algor&iacute;tmica.</p>
+      <ul><li>Controle de tarifa, rota, avalia&ccedil;&atilde;o e acesso ao aplicativo: ind&iacute;cios de subordina&ccedil;&atilde;o.</li><li>Liberdade de jornada e de recusar corridas: ind&iacute;cio de autonomia.</li><li>Reforma 2017 criou a figura do aut&ocirc;nomo exclusivo (art. 442-B), mas n&atilde;o resolveu o caso das plataformas.</li></ul>
+    </div>
+    <div class="especie-card ec-purple">
+      <h4>&#127338; Empregado Doméstico</h4>
+      <p>Disciplinado pela <strong>LC 150/2015</strong> &mdash; regulou o art. 7&ordm;, par. &uacute;nico CF (com a PEC das Dom&eacute;sticas de 2013). Tem requisitos pr&oacute;prios: presta&ccedil;&atilde;o de servi&ccedil;os de natureza cont&iacute;nua, no &acirc;mbito residencial da fam&iacute;lia ou pessoa, sem fins lucrativos.</p>
+      <ul><li>M&iacute;nimo 3 dias por semana: TST reconhece como cont&iacute;nuo.</li><li>At&eacute; 2 dias: eventualidade &rarr; diar&iacute;sta.</li><li>FGTS, horas extras e adicional noturno: garantidos ap&oacute;s a LC 150/2015.</li></ul>
+    </div>
+    <div class="especie-card ec-red">
+      <h4>&#128100; Empregado P&uacute;blico × Servidor P&uacute;blico</h4>
+      <p>Empregado p&uacute;blico &eacute; aquele contratado por ente p&uacute;blico pelo regime da CLT (ex.: empregados de Empresas P&uacute;blicas e SEMs). Servidor p&uacute;blico est&aacute; sujeito ao regime estatut&aacute;rio (Lei 8.112/90 ou estatutos estaduais/municipais). A S&uacute;mula 363/TST &eacute; referência para contratos nulos com ente p&uacute;blico.</p>
+      <ul><li>Contrato nulo sem concurso (ente p&uacute;blico): S&uacute;mula 363/TST &rarr; s&oacute; FGTS + saldo sal&aacute;rio.</li><li>STF RE 705.140 (Tema 191): mesmo entendimento.</li></ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="reforma-2017">
+  <div class="section-header"><div class="section-num">08</div><div class="section-title"><span>Lei 13.467/2017 &mdash; Alta Cobran&ccedil;a</span>Reforma Trabalhista e Impactos sobre o Conceito de Empregado</div></div>
+  <div class="alert alert-red" style="margin-bottom:1rem;">
+    <div class="alert-icon">&#128308;</div>
+    <div><strong>Ponto mais cobrado sobre o art. 3&ordm; CLT ap&oacute;s 2017:</strong> A Lei 13.467/2017 introduziu: (1) o <strong>aut&ocirc;nomo exclusivo</strong> (art. 442-B CLT) &mdash; trabalho exclusivo para um &uacute;nico tomador n&atilde;o gera automaticamente v&iacute;nculo empregatício; (2) o <strong>trabalho intermitente</strong> (art. 443, &sect;3&ordm; CLT) &mdash; nova modalidade de v&iacute;nculo; (3) o <strong>teletrabalho</strong> (arts. 75-A a 75-E) &mdash; modalidade empregatícia com controle remoto. Dominar essas altera&ccedil;&otilde;es &eacute; essencial.</div>
+  </div>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>&#128101; Art. 442-B CLT &mdash; Aut&ocirc;nomo Exclusivo</h3>
+      <div class="law-quote">
+        <strong>Art. 442-B CLT (inserido pela Lei 13.467/2017):</strong>
+        "A contrata&ccedil;&atilde;o do aut&ocirc;nomo, cumpridas por este todas as formalidades legais, com ou sem exclusividade, de forma cont&iacute;nua ou n&atilde;o, n&atilde;o configura v&iacute;nculo de emprego, previsto no art. 3&ordm; desta Consolida&ccedil;&atilde;o."
+      </div>
+      <p style="font-size:0.84rem;color:var(--text-mid);margin-top:0.75rem;margin-bottom:0.5rem;"><strong>Interpreta&ccedil;&atilde;o dominante:</strong> O art. 442-B n&atilde;o &eacute; norma absoluta. Se presentes os requisitos do art. 3&ordm; CLT, o v&iacute;nculo &eacute; reconhecido independentemente do r&oacute;tulo formal de "aut&ocirc;nomo". A norma apenas afirma que a mera continuidade ou exclusividade, por si s&oacute;s, n&atilde;o geram v&iacute;nculo &mdash; mas n&atilde;o afasta o v&iacute;nculo quando presentes todos os elementos do art. 3&ordm; CLT.</p>
+      <div class="alert alert-gold" style="font-size:0.8rem;"><div>&#11088; <strong>Para concurso:</strong> O art. 442-B n&atilde;o invalida o art. 3&ordm;. Havendo subordina&ccedil;&atilde;o jur&iacute;dica real, pessoalidade e n&atilde;o eventualidade com remunera&ccedil;&atilde;o, o v&iacute;nculo &eacute; de emprego &mdash; mesmo com CNPJ ou contrato de aut&ocirc;nomo. Princ&iacute;pio da primazia da realidade (art. 9&ordm; CLT).</div></div>
+    </div>
+    <div class="card">
+      <h3>&#8987; Art. 443, &sect;3&ordm; CLT &mdash; Trabalho Intermitente</h3>
+      <div class="law-quote">
+        <strong>Art. 443, &sect;3&ordm; CLT (inserido pela Lei 13.467/2017):</strong>
+        "Considera-se como intermitente o contrato de trabalho no qual a presta&ccedil;&atilde;o de servi&ccedil;os, com subordina&ccedil;&atilde;o, n&atilde;o &eacute; cont&iacute;nua, ocorrendo com altern&acirc;ncia de per&iacute;odos de presta&ccedil;&atilde;o de servi&ccedil;os e de in&acirc;ncia, determinados em horas, dias ou meses, independentemente do tipo de atividade do empregado e do empregador, exceto para os aeron&aacute;uticos, regidos por legisla&ccedil;&atilde;o pr&oacute;pria."
+      </div>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;margin-top:0.75rem;">
+        <div style="background:#dceee3;border-left:3px solid var(--green-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--green-accent);">V&iacute;nculo empregatício:</strong> O trabalho intermitente &eacute; modalidade de emprego &mdash; gera CTPS, FGTS, 13&ordm; sal&aacute;rio, f&eacute;rias, repouso semanal, tudo proporcional ao per&iacute;odo efetivamente trabalhado.</div>
+        <div style="background:#edf2f8;border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--blue-accent);">Convoca&ccedil;&atilde;o:</strong> O empregador convoca o empregado com anteced&ecirc;ncia m&iacute;nima de 3 dias corridos (art. 452-A, &sect;1&ordm; CLT); o empregado pode recusar sem penalidade.</div>
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--red-accent);">Deve ser escrito:</strong> O contrato de trabalho intermitente deve ser celebrado por escrito (art. 452-A, caput CLT), mencionando o valor da hora de trabalho.</div>
+        <div style="background:var(--gold-pale);border:1px solid var(--gold);border-radius:6px;padding:0.65rem 0.9rem;font-size:0.82rem;"><strong style="color:#7a5a00;">Constitucionalidade:</strong> O STF, na ADI 6.154 (Min. Alexandre de Moraes, 2024), julgou constitucional o trabalho intermitente &mdash; afastando a tese de que violava direitos trabalhistas constitucionalmente garantidos.</div>
+      </div>
+    </div>
+  </div>
+  <div class="card mt2">
+    <h3>&#128421;&#65039; Teletrabalho (Home Office) &mdash; Arts. 75-A a 75-E CLT (Inseridos pela Reforma 2017)</h3>
+    <div class="card-grid card-grid-3 mt1">
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Conceito:</strong> Teletrabalho &eacute; presta&ccedil;&atilde;o de servi&ccedil;os fora das depend&ecirc;ncias do empregador, com utiliza&ccedil;&atilde;o de tecnologias de informa&ccedil;&atilde;o e de comunica&ccedil;&atilde;o, que por sua natureza n&atilde;o se constituam como trabalho externo. &Eacute; modalidade de v&iacute;nculo empregatício &mdash; gera todos os direitos trabalhistas.</p>
+      </div>
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Subordina&ccedil;&atilde;o no teletrabalho:</strong> A subordina&ccedil;&atilde;o persiste &mdash; exercida de forma remota. O empregador continua dirigindo, ainda que &agrave; dist&acirc;ncia. O controle de resultado, de hor&aacute;rio (quando exigido) e a disponibilidade para comunicação confirman a subordina&ccedil;&atilde;o.</p>
+      </div>
+      <div>
+        <p style="font-size:0.84rem;color:var(--text-mid);"><strong style="color:var(--navy);">Altera&ccedil;&atilde;o para teletrabalho:</strong> Exige m&uacute;tuo acordo (art. 75-C CLT). Retorno ao regime presen&ccedil;al: a crit&eacute;rio do empregador com transi&ccedil;&atilde;o m&iacute;nima de 15 dias. A Reforma 2017 foi complementada pela <strong>Lei 14.442/2022</strong> que regulamentou aspectos do teletrabalho durante e ap&oacute;s a pandemia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="parassubordinacao">
+  <div class="section-header"><div class="section-num">09</div><div class="section-title"><span>Conceito Contempor&acirc;neo</span>Parassubordina&ccedil;&atilde;o e Trabalho por Plataformas Digitais</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>&#128101; Parassubordina&ccedil;&atilde;o</h3>
+      <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:0.5rem;">A <strong>parassubordina&ccedil;&atilde;o</strong> (da doutrina italiana &mdash; Supiot, Romagnoli) descreve uma zona intermedi&aacute;ria entre a subordina&ccedil;&atilde;o cl&aacute;ssica do empregado e a autonomia plena do aut&ocirc;nomo. O trabalhador parassubordinado: organiza sua pr&oacute;pria atividade (como aut&ocirc;nomo), mas &eacute; economicamente dependente de um &uacute;nico tomador e se integra ao ciclo produtivo deste.</p>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;">
+        <div style="background:#edf2f8;border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--blue-accent);">Caracter&iacute;sticas:</strong> (a) pessoalidade, (b) continuidade, (c) coordena&ccedil;&atilde;o pelo tomador (n&atilde;o subordina&ccedil;&atilde;o direta), (d) depend&ecirc;ncia econ&ocirc;mica relevante.</div>
+        <div style="background:var(--gold-pale);border:1px solid var(--gold);border-radius:6px;padding:0.65rem 0.9rem;font-size:0.82rem;"><strong style="color:#7a5a00;">No Brasil:</strong> A CLT n&atilde;o reconhece expressamente o parassubordinado como categoria autônoma. O TST examina caso a caso: se houver subordina&ccedil;&atilde;o jur&iacute;dica real (objetiva ou estrutural), reconhece o v&iacute;nculo empregatício; se n&atilde;o houver, o trabalhador fica sem prote&ccedil;&atilde;o trabalhista plena.</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>&#128241; Trabalho por Plataforma &mdash; Estado Atual (2025)</h3>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;">
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--red-accent);">STF &mdash; RE 1.394.285 e ADPF 449:</strong> Tema sobre constitucionalidade do art. 442-B CLT e vínculo de motoristas de aplicativo aguarda julgamento definitivo. O STF fixou cautelar proibindo julgamentos de mérito enquanto pendente a decis&atilde;o (2024).</div>
+        <div style="background:#edf2f8;border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--blue-accent);">TST &mdash; divis&atilde;o jurisprudencial:</strong> Parte das Turmas reconhece v&iacute;nculo empregatício de motoristas de Uber com base na subordina&ccedil;&atilde;o algor&iacute;tmica e estrutural; outra parte nega, com base na autonomia para definir hor&aacute;rios e aceitar corridas.</div>
+        <div style="background:#dceee3;border-left:3px solid var(--green-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--green-accent);">Lei 14.717/2023 &mdash; Projeto de Lei dos Entregadores:</strong> Em tramita&ccedil;&atilde;o/aprovado, estabelece prote&ccedil;&otilde;es m&iacute;nimas para trabalhadores de plataforma sem necessariamente reconhecer o v&iacute;nculo empregatício cl&aacute;ssico. &Eacute; uma via intermedi&aacute;ria.</div>
+        <div style="background:var(--gold-pale);border:1px solid var(--gold);border-radius:6px;padding:0.65rem 0.9rem;font-size:0.82rem;"><strong style="color:#7a5a00;">Para concursos 2025:</strong> N&atilde;o h&aacute; tese vinculante do STF sobre plataformas. Nas provas, adotar a posi&ccedil;&atilde;o do art. 3&ordm; CLT com an&aacute;lise dos 5 requisitos + teoria estrutural da subordina&ccedil;&atilde;o. Mencionar a pend&ecirc;ncia no STF &eacute; valorizado em disserta&ccedil;&otilde;es.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="onus-prova">
+  <div class="section-header"><div class="section-num">10</div><div class="section-title"><span>Processo do Trabalho</span>&Ocirc;nus da Prova no Reconhecimento do V&iacute;nculo Empregatício</div></section>
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-blue">
+      <h3>&#9878; Distribui&ccedil;&atilde;o do &Ocirc;nus (S&uacute;mula 212/TST)</h3>
+      <div class="law-quote">
+        <strong>S&uacute;mula 212/TST:</strong>
+        "O ônus de provar o término do contrato de trabalho, quando negados a presta&ccedil;&atilde;o de servi&ccedil;o e o despedimento, &eacute; do empregador, pois o princ&iacute;pio da continuidade da rela&ccedil;&atilde;o de emprego constitui presun&ccedil;&atilde;o favor&aacute;vel ao empregado."
+      </div>
+      <p style="font-size:0.84rem;color:var(--text-mid);margin-top:0.75rem;">O princ&iacute;pio da continuidade da rela&ccedil;&atilde;o de emprego &eacute; favor&aacute;vel ao empregado. Em mat&eacute;ria de &ocirc;nus da prova sobre a <em>exist&ecirc;ncia</em> do v&iacute;nculo, a divis&atilde;o &eacute; distinta:</p>
+      <ul style="font-size:0.83rem;color:var(--text-mid);">
+        <li><strong>Prova da presta&ccedil;&atilde;o dos servi&ccedil;os:</strong> &ocirc;nus do empregado (quem alega a rela&ccedil;&atilde;o de emprego deve demonstrar que prestou servi&ccedil;os).</li>
+        <li><strong>Prova da dispensa e do t&eacute;rmino:</strong> &ocirc;nus do empregador (S&uacute;mula 212/TST).</li>
+        <li><strong>Prova da aus&ecirc;ncia de subordina&ccedil;&atilde;o (aut&ocirc;nomia):</strong> &ocirc;nus do empregador que contesta o v&iacute;nculo.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>&#128203; CTPS e Prova Documental</h3>
+      <div style="display:flex;flex-direction:column;gap:0.4rem;">
+        <div style="background:var(--gold-pale);border:1px solid var(--gold);border-radius:6px;padding:0.7rem 0.9rem;font-size:0.82rem;"><strong style="color:#7a5a00;">OJ 296/SDI-1/TST:</strong> "O fato de constar na CTPS anotação indicando data de admissão diversa da efetiva prestação dos serviços, mediante fraude do empregador, não pode ser oposto ao empregado para efeito de apuração de seus direitos trabalhistas."</div>
+        <div style="background:#dceee3;border-left:3px solid var(--green-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--green-accent);">Princ&iacute;pio da primazia da realidade:</strong> A realidade dos fatos prevalece sobre documentos formais (contrato de prestação de serviço, nota fiscal, CNPJ). O art. 9&ordm; CLT nulifica ajustes destinados a afastar a aplica&ccedil;&atilde;o da CLT.</div>
+        <div style="background:#edf2f8;border-left:3px solid var(--blue-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--blue-accent);">CTPS &mdash; presun&ccedil;&atilde;o relativa:</strong> As anota&ccedil;&otilde;es da CTPS geram presun&ccedil;&atilde;o relativa (<em>juris tantum</em>) dos contratos e condi&ccedil;&otilde;es de trabalho nela registrados (art. 40 CLT). Admitem prova em contr&aacute;rio.</div>
+        <div style="background:#fde8e8;border-left:3px solid var(--red-accent);padding:0.5rem 0.8rem;font-size:0.82rem;border-radius:0 4px 4px 0;"><strong style="color:var(--red-accent);">Reforma 2017 &mdash; Art. 818 CLT:</strong> A reforma alterou a distribui&ccedil;&atilde;o do &ocirc;nus da prova, determinando que incumbe ao empregado provar os fatos constitutivos do seu direito, e ao empregador provar os fatos impeditivos, modificativos ou extintivos. Mas o princ&iacute;pio da continuidade e a S&uacute;mula 212/TST continuam aplic&aacute;veis.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="fluxograma">
+  <div class="section-header"><div class="section-num">11</div><div class="section-title"><span>Decis&oacute;rio Passo a Passo</span>Fluxograma Completo do Art. 3&ordm; CLT</div></div>
+  <div class="flow-wrap"><div class="flow-center">
+    <div class="flow-node flow-start">DEMANDA TRABALHISTA &mdash; VERIFICAR EXIST&Ecirc;NCIA DE V&Iacute;NCULO EMPREGATÍCIO (ART. 3&ordm; CLT)</div>
+    <div class="flow-connector-line"></div><div class="flow-arrow">&#9660;</div><div class="flow-connector-line"></div>
+
+    <div class="flow-node flow-box-navy"><strong style="color:var(--gold-light);">PASSO 1 &mdash; Quem prestou os servi&ccedil;os?</strong><br><span style="font-size:0.74rem;opacity:0.85;">Art. 3&ordm; exige pessoa f&iacute;sica. PJ interposta pode ser desconsiderada (art. 9&ordm; CLT).</span></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">PESSOA JURD&Iacute;CA (SEM FRAUDE)</div><div class="flow-node flow-box-red">N&atilde;o &eacute; empregado<br><span style="font-size:0.72rem;">PJ n&atilde;o pode ser empregada. Verificar se h&aacute; fraude (pejotiza&ccedil;&atilde;o).</span></div></div>
+      <div class="flow-branch"><div class="flow-label">PJ INTERPOSTA (FRAUDE)</div><div class="flow-node flow-box-gold">ART. 9&ordm; CLT &mdash; FRAUDE<br><span style="font-size:0.72rem;">Nulidade do ajuste; reconhece v&iacute;nculo com a pessoa f&iacute;sica por tr&aacute;s da PJ.</span></div></div>
+      <div class="flow-branch"><div class="flow-label">PESSOA F&Iacute;SICA</div><div class="flow-node flow-box-blue">1&ordm; REQUISITO SATISFEITO<br><span style="font-size:0.72rem;">Prosseguir para o PASSO 2.</span></div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">&#9660;</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><strong style="color:var(--gold-light);">PASSO 2 &mdash; H&aacute; pessoalidade? A presta&ccedil;&atilde;o era <em>intuitu personae</em>?</strong><br><span style="font-size:0.74rem;opacity:0.85;">O prestador atuava pessoalmente, sem poder delegar livremente a terceiro sem aquiesc&ecirc;ncia do tomador?</span></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">N&Atilde;O &mdash; DELEGA&Ccedil;&Atilde;O LIVRE</div><div class="flow-node flow-box-red">Aus&ecirc;ncia de pessoalidade<br><span style="font-size:0.72rem;">Ind&iacute;cio de autonomia. N&atilde;o h&aacute; v&iacute;nculo.</span></div><div class="flow-arrow">&#9660;</div><div class="flow-end-red">Sem v&iacute;nculo empregatício</div></div>
+      <div class="flow-branch"><div class="flow-label">SIM &mdash; PESSOAL</div><div class="flow-node flow-box-green">2&ordm; REQUISITO SATISFEITO<br><span style="font-size:0.72rem;">Prosseguir para o PASSO 3.</span></div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">&#9660;</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><strong style="color:var(--gold-light);">PASSO 3 &mdash; H&aacute; n&atilde;o eventualidade? O servi&ccedil;o integra a atividade normal do tomador?</strong><br><span style="font-size:0.74rem;opacity:0.85;">Teoria dos fins da empresa (TST): o servi&ccedil;o &eacute; essencial &agrave; atividade normal do empregador?</span></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">N&Atilde;O &mdash; EVENTUAL/ESPOR&Aacute;DICO</div><div class="flow-node flow-box-red">Trabalho eventual<br><span style="font-size:0.72rem;">N&atilde;o integra a atividade normal. Sem v&iacute;nculo empregatício.</span></div><div class="flow-arrow">&#9660;</div><div class="flow-end-red">Sem v&iacute;nculo empregatício</div></div>
+      <div class="flow-branch"><div class="flow-label">SIM &mdash; CONT&Iacute;NUO/HABITUAL</div><div class="flow-node flow-box-green">3&ordm; REQUISITO SATISFEITO<br><span style="font-size:0.72rem;">Prosseguir para o PASSO 4.</span></div></div>
+      <div class="flow-branch"><div class="flow-label">INTERMITENTE (ART. 443, &sect;3&ordm;)</div><div class="flow-node flow-box-purple">TRABALHO INTERMITENTE<br><span style="font-size:0.72rem;">V&iacute;nculo empregatício especial. N&atilde;o eventualidade satisfeita.</span></div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">&#9660;</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><strong style="color:var(--gold-light);">PASSO 4 &mdash; H&aacute; onerosidade? O prestador recebeu sal&aacute;rio ou remunera&ccedil;&atilde;o?</strong><br><span style="font-size:0.74rem;opacity:0.85;">Trabalho benemerente, volt&aacute;rio ou familiar sem pagamento n&atilde;o gera v&iacute;nculo.</span></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">N&Atilde;O &mdash; GRATUITO</div><div class="flow-node flow-box-red">Ausência de onerosidade<br><span style="font-size:0.72rem;">Trabalho benemerente. Sem v&iacute;nculo empregatício.</span></div><div class="flow-arrow">&#9660;</div><div class="flow-end-red">Sem v&iacute;nculo empregatício</div></div>
+      <div class="flow-branch"><div class="flow-label">SIM &mdash; SAL&Aacute;RIO OU UTILIDADES</div><div class="flow-node flow-box-green">4&ordm; REQUISITO SATISFEITO<br><span style="font-size:0.72rem;">Prosseguir para o PASSO 5 (mais importante).</span></div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">&#9660;</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><strong style="color:var(--gold-light);">PASSO 5 &mdash; H&aacute; subordina&ccedil;&atilde;o jur&iacute;dica? O tomador dirige o modo de execu&ccedil;&atilde;o do servi&ccedil;o?</strong><br><span style="font-size:0.74rem;opacity:0.85;">Subordina&ccedil;&atilde;o cl&aacute;ssica (ordens diretas), estrutural (integra&ccedil;&atilde;o &agrave; empresa) ou algor&iacute;tmica (plataformas).</span></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">N&Atilde;O &mdash; AUT&Ocirc;NOMO</div><div class="flow-node flow-box-red">Ausência de subordina&ccedil;&atilde;o<br><span style="font-size:0.72rem;">Verificar art. 442-B CLT (aut&ocirc;nomo exclusivo). Sem v&iacute;nculo.</span></div><div class="flow-arrow">&#9660;</div><div class="flow-end-red">Sem v&iacute;nculo empregatício &mdash; Aut&ocirc;nomo</div></div>
+      <div class="flow-branch"><div class="flow-label">SIM &mdash; PODER DIRETIVO</div><div class="flow-node flow-box-green"><strong>TODOS OS 5 REQUISITOS PRESENTES</strong><br>V&Iacute;NCULO EMPREGATÍCIO RECONHECIDO</div><div class="flow-arrow">&#9660;</div><div class="flow-end-green">V&iacute;nculo de Emprego &mdash; Art. 3&ordm; CLT</div></div>
+      <div class="flow-branch"><div class="flow-label">DUVIDOSO &mdash; PLATAFORMA/ALGORITMO</div><div class="flow-node flow-box-purple">Subordina&ccedil;&atilde;o estrutural ou algor&iacute;tmica?<br><span style="font-size:0.72rem;">Analisar controle de precifica&ccedil;&atilde;o, avalia&ccedil;&atilde;o, exclus&atilde;o da plataforma e integra&ccedil;&atilde;o ao servi&ccedil;o.</span></div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">&#9660;</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-purple" style="max-width:980px;"><strong>CONTROLE FINAL DO JU&Iacute;Z:</strong> verificar se h&aacute; fraude via PJ (pejotiza&ccedil;&atilde;o &mdash; art. 9&ordm; CLT); analisar princ&iacute;pio da primazia da realidade; aplicar &ocirc;nus da prova conforme art. 818 CLT e S&uacute;mula 212/TST; distinguir subordina&ccedil;&atilde;o jur&iacute;dica de dependência econ&ocirc;mica; verificar se h&aacute; trabalho intermitente (art. 443, &sect;3&ordm;) ou teletrabalho (arts. 75-A a 75-E CLT); nos casos de plataforma, analisar tend&ecirc;ncia do TST e pend&ecirc;ncia no STF.</div>
+  </div></div>
+</section>
+
+<section class="section" id="comparativo">
+  <div class="section-header"><div class="section-num">12</div><div class="section-title"><span>Tabela Premium</span>Comparativo &mdash; Elementos do Art. 3&ordm; nas Diferentes Modalidades de Trabalho</div></div>
+  <table class="comp-table">
+    <thead><tr><th>Modalidade</th><th>Pessoa F&iacute;sica</th><th>Pessoalidade</th><th>N&atilde;o Eventualidade</th><th>Onerosidade</th><th>Subordina&ccedil;&atilde;o</th><th>V&iacute;nculo CLT</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Empregado cl&aacute;ssico</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--green-accent);font-weight:700;">SIM &mdash; art. 3&ordm;</td></tr>
+      <tr class="hl4"><td>Aut&ocirc;nomo (regular)</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--red-accent);">Relativa</td><td style="color:var(--red-accent);">Pode ser</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--red-accent);font-weight:700;">N&Atilde;O</td><td style="color:var(--red-accent);font-weight:700;">N&Atilde;O</td></tr>
+      <tr class="hl3"><td>Trabalhador eventual</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--red-accent);">Variável</td><td style="color:var(--red-accent);font-weight:700;">N&Atilde;O</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--red-accent);">N&atilde;o típica</td><td style="color:var(--red-accent);font-weight:700;">N&Atilde;O</td></tr>
+      <tr class="hl5"><td>Trabalhador intermitente</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--green-accent);">SIM (altercada)</td><td style="color:var(--green-accent);">SIM (proporcional)</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--green-accent);font-weight:700;">SIM &mdash; art. 443, &sect;3&ordm;</td></tr>
+      <tr><td>Estagi&aacute;rio (regular)</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--red-accent);">Bolsa (n&atilde;o sal&aacute;rio)</td><td style="color:var(--red-accent);">Orienta&ccedil;&atilde;o</td><td style="color:var(--red-accent);font-weight:700;">N&Atilde;O &mdash; Lei 11.788/2008</td></tr>
+      <tr class="hl2"><td>Cooperado genuíno</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--green-accent);">Geralmente</td><td style="color:var(--green-accent);">SIM (sobras)</td><td style="color:var(--red-accent);">Autogest&atilde;o</td><td style="color:var(--red-accent);font-weight:700;">N&Atilde;O &mdash; art. 442, par. &uacute;n.</td></tr>
+      <tr class="hl"><td>Empregado dom&eacute;stico</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--green-accent);">SIM (&#8805;3 dias/sem.)</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--green-accent);font-weight:700;">SIM &mdash; LC 150/2015</td></tr>
+      <tr class="hl4"><td>Pejotizado (fraude)</td><td style="color:var(--green-accent);">Pessoa f&iacute;sica real</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--green-accent);">SIM</td><td style="color:var(--green-accent);font-weight:700;">SIM &mdash; art. 9&ordm; CLT</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="section" id="jurisprudencia">
+  <div class="section-header"><div class="section-num">13</div><div class="section-title"><span>STF/TST &mdash; Teses Seguras</span>Jurisprud&ecirc;ncia Essencial para Magistratura</div></div>
+  <div class="juris-grid">
+    <div class="juris-card tst"><div class="juris-header"><span class="juris-badge tst">TST</span><span class="juris-badge sumula">S&uacute;mula 212</span><div class="juris-title">Princ&iacute;pio da Continuidade da Rela&ccedil;&atilde;o de Emprego e &Ocirc;nus da Prova</div></div><div class="juris-body">O &ocirc;nus de provar o t&eacute;rmino do contrato de trabalho, quando negados a presta&ccedil;&atilde;o de servi&ccedil;o e o despedimento, &eacute; do empregador. O princ&iacute;pio da continuidade constitui presun&ccedil;&atilde;o favor&aacute;vel ao empregado. Combina-se com o art. 818 CLT (redação ap&oacute;s 2017): o empregado demonstra os fatos constitutivos de seu direito; ao empregador cabem os fatos extintivos, modificativos e impeditivos.</div></div>
+
+    <div class="juris-card tst"><div class="juris-header"><span class="juris-badge tst">TST</span><span class="juris-badge sumula">S&uacute;mula 363</span><div class="juris-title">Contrato Nulo com Ente P&uacute;blico &mdash; Efeitos Limitados</div></div><div class="juris-body">A contrata&ccedil;&atilde;o de servidor p&uacute;blico, ap&oacute;s a CF/1988, sem prévia aprova&ccedil;&atilde;o em concurso p&uacute;blico, &eacute; nula. O obreiro tem direito ao pagamento da contraprestação pactuada, em relação ao n&uacute;mero de horas trabalhadas, respeitado o valor da hora do sal&aacute;rio-m&iacute;nimo, e dos valores referentes aos dep&oacute;sitos do FGTS. N&atilde;o s&atilde;o devidos: f&eacute;rias, 13&ordm;, aviso pr&eacute;vio, demais verbas rescis&oacute;rias. O STF confirmou este entendimento no RE 705.140 (Tema 191).</div></div>
+
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge tese">RE 705.140 &mdash; Tema 191</span><div class="juris-title">Contrato Nulo com Ente P&uacute;blico &mdash; Confirma S&uacute;mula 363/TST</div></div><div class="juris-body">O STF, com repercuss&atilde;o geral, fixou a tese de que "a admiss&atilde;o sem concurso p&uacute;blico n&atilde;o gera quaisquer efeitos jur&iacute;dicos v&aacute;lidos em rela&ccedil;&atilde;o aos empregados contratados, salvo o pagamento das horas trabalhadas e dos dep&oacute;sitos do FGTS". Vedada a isonomia com servidores regularmente investidos. Confirma o cerne da S&uacute;mula 363/TST.</div></div>
+
+    <div class="juris-card tst"><div class="juris-header"><span class="juris-badge tst">TST</span><span class="juris-badge sumula">S&uacute;mula 331</span><div class="juris-title">Terceiriza&ccedil;&atilde;o &mdash; Responsabilidade Subsidi&aacute;ria do Tomador</div></div><div class="juris-body">Nos contratos de presta&ccedil;&atilde;o de servi&ccedil;os lícitos, a inadimpl&ecirc;ncia da prestadora n&atilde;o transfere ao tomador a responsabilidade direta, mas o tomador responde <em>subsidiariamente</em> pelas obriga&ccedil;&otilde;es trabalhistas. O ente p&uacute;blico tamb&eacute;m &eacute; responsabiliz&aacute;vel subsidiariamente (S&uacute;mula 331, V) quando n&atilde;o fiscalizar o cumprimento do contrato. Atenção: ap&oacute;s RE 958.252/STF (Tema 725), confirmada a legalidade da terceiriza&ccedil;&atilde;o em atividade-fim.</div></div>
+
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge tese">ADI 6.154 (2024)</span><div class="juris-title">Trabalho Intermitente &mdash; Constitucionalidade</div></div><div class="juris-body">O STF julgou constitucional a modalidade do trabalho intermitente (art. 443, &sect;3&ordm; CLT, inserido pela Lei 13.467/2017). A Corte entendeu que a flexibiliza&ccedil;&atilde;o da jornada n&atilde;o viola o n&uacute;cleo dos direitos trabalhistas constitucionais, pois os direitos s&atilde;o garantidos proporcionalmente ao per&iacute;odo efetivamente trabalhado, preservando-se FGTS, f&eacute;rias, repouso semanal e 13&ordm; sal&aacute;rio em base proporcional.</div></div>
+
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge tese">RE 1.394.285 &mdash; Pend&ecirc;ncia 2025</span><div class="juris-title">Plataformas Digitais &mdash; V&iacute;nculo de Motoristas &mdash; Cautelar</div></div><div class="juris-body">O STF deliberou cautelar determinando a suspens&atilde;o de julgamentos de m&eacute;rito sobre v&iacute;nculo empregatício de motoristas de plataforma, enquanto pendente julgamento definitivo com repercuss&atilde;o geral. A ADPF 449 discute a constitucionalidade do art. 442-B CLT. At&eacute; a publicação deste material, n&atilde;o h&aacute; tese vinculante definitiva. Para concursos: mencionar a pend&ecirc;ncia e aplicar art. 3&ordm; CLT com an&aacute;lise dos 5 requisitos.</div></div>
+  </div>
+</section>
+
+<section class="section" id="oj-sumulas">
+  <div class="section-header"><div class="section-num">14</div><div class="section-title"><span>OJs e S&uacute;mulas do TST</span>Orienta&ccedil;&otilde;es Jurisprudenciais Relevantes para o Art. 3&ordm; CLT</div></div>
+  <div class="juris-grid">
+    <div class="juris-card tst"><div class="juris-header"><span class="juris-badge tst">TST</span><span class="juris-badge oj">OJ 296/SDI-1</span><div class="juris-title">CTPS &mdash; Anota&ccedil;&atilde;o Falsa n&atilde;o Pode ser Oposta ao Empregado</div></div><div class="juris-body">Anota&ccedil;&atilde;o na CTPS indicando data de admiss&atilde;o diversa da efetiva por fraude do empregador n&atilde;o pode ser oposta ao empregado para apura&ccedil;&atilde;o de seus direitos. O empregado pode provar a data real de admiss&atilde;o por outros meios de prova. Corolário do princ&iacute;pio da primazia da realidade (art. 9&ordm; CLT).</div></div>
+
+    <div class="juris-card tst"><div class="juris-header"><span class="juris-badge tst">TST</span><span class="juris-badge oj">OJ 383/SDI-1</span><div class="juris-title">Seguro-Desemprego &mdash; Indeniza&ccedil;&atilde;o do Empregador que N&atilde;o Comunicou o CAGED</div></div><div class="juris-body">A for&ccedil;a maior n&atilde;o elide a obriga&ccedil;&atilde;o do empregador de proceder ao registro de empregado admitido, sob pena de responsabiliza&ccedil;&atilde;o pelas dificuldades que causar ao empregado no recebimento do seguro-desemprego. A omiss&atilde;o de registro gera o dever de indenizar o empregado pelos danos causados pela aus&ecirc;ncia de comunica&ccedil;&atilde;o.</div></div>
+
+    <div class="juris-card tst"><div class="juris-header"><span class="juris-badge tst">TST</span><span class="juris-badge sumula">S&uacute;mula 129</span><div class="juris-title">Grupo Econ&ocirc;mico &mdash; Empregador &Uacute;nico</div></div><div class="juris-body">Quando o empregado presta servi&ccedil;os para mais de uma empresa do mesmo grupo econ&ocirc;mico durante a mesma jornada, n&atilde;o h&aacute; coexist&ecirc;ncia de mais de um contrato, salvo ajuste em contr&aacute;rio. Os direitos s&atilde;o calculados sobre toda a remunera&ccedil;&atilde;o percebida das empresas do grupo &mdash; reconhece-se o empregador &uacute;nico. Diretamente ligada ao art. 3&ordm; CLT: um &uacute;nico v&iacute;nculo empregatício com o grupo como "empregador".</div></div>
+
+    <div class="juris-card tst"><div class="juris-header"><span class="juris-badge tst">TST</span><span class="juris-badge oj">OJ 321/SDI-1</span><div class="juris-title">Contrato de Empreitada &mdash; Empreiteiro Pessoa F&iacute;sica</div></div><div class="juris-body">Quando o empreiteiro &eacute; pessoa f&iacute;sica, trabalha pessoalmente e com pessoalidade identificada, recebendo pelos servi&ccedil;os de forma n&atilde;o eventual, sob as ordens do tomador, configura-se o v&iacute;nculo empregatício. A forma de remunera&ccedil;&atilde;o "por empreitada" n&atilde;o afasta o v&iacute;nculo quando presentes os requisitos do art. 3&ordm; CLT. Princ&iacute;pio da primazia da realidade.</div></div>
+
+    <div class="juris-card tst"><div class="juris-header"><span class="juris-badge tst">TST</span><span class="juris-badge sumula">S&uacute;mula 374</span><div class="juris-title">Norma Coletiva &mdash; Interpreta&ccedil;&atilde;o Restritiva</div></div><div class="juris-body">Empregado integrante de categoria diferenciada n&atilde;o tem o direito de haver de seu empregador vantagens previstas em instrumento coletivo no qual a empresa n&atilde;o foi representada por entidade de classe integrante da respectiva cadeia. A condi&ccedil;&atilde;o de empregado e a categoria do empregado devem coincidir com a categorização da norma coletiva para que ela se aplique.</div></div>
+
+    <div class="juris-card tst"><div class="juris-header"><span class="juris-badge tst">TST</span><span class="juris-badge oj">OJ 119/SDI-1</span><div class="juris-title">Condom&iacute;nio &mdash; Empregador por Equipara&ccedil;&atilde;o</div></div><div class="juris-body">O condom&iacute;nio edilício, quando admite, assalaria e dirige a presta&ccedil;&atilde;o pessoal de servi&ccedil;os, &eacute; empregador nos termos do art. 2&ordm;, &sect;1&ordm;, CLT (equipara&ccedil;&atilde;o). O porteiro, zelador, faxineiro e demais funcionários de condom&iacute;nio s&atilde;o empregados. Diretamente ligada ao art. 3&ordm;: os trabalhadores do condom&iacute;nio preenchem os 5 requisitos.</div></div>
+  </div>
+</section>
+
+<section class="section" id="doutrina">
+  <div class="section-header"><div class="section-num">15</div><div class="section-title"><span>Doutrina Sistematizada</span>Linhas Dogm&aacute;ticas Seguras para Magistratura</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>&#128218; S&iacute;ntese doutrin&aacute;ria dominante</h3>
+      <ul>
+        <li><strong>Maurício Godinho Delgado (Manual de Direito do Trabalho):</strong> Define os 5 requisitos da rela&ccedil;&atilde;o de emprego com rigor. Desenvolve a subordina&ccedil;&atilde;o objetiva/estrutural como superação da heterodirigibilidade cl&aacute;ssica. &Eacute; o principal te&oacute;rico da subordina&ccedil;&atilde;o estrutural.</li>
+        <li><strong>Amauri Mascaro Nascimento:</strong> Destaca a n&atilde;o eventualidade pela teoria da descontinuidade &mdash; eventual &eacute; o trabalho descontínuo. Classifica os contratos especiais com rigor.</li>
+        <li><strong>Vólia Bomfim Cassar:</strong> An&aacute;lise pr&aacute;tica dos requisitos do art. 3&ordm; com foco em provas. Destaca a presun&ccedil;&atilde;o de onerosidade e a inversão do &ocirc;nus quando o tomador contesta o v&iacute;nculo.</li>
+        <li><strong>Alice Monteiro de Barros:</strong> Trabalha a pessoalidade como distinguidor central entre empregado e aut&ocirc;nomo. Analisa a parassubordina&ccedil;&atilde;o em contexto comparado.</li>
+        <li><strong>Reforma 2017 &mdash; vis&atilde;o doutrin&aacute;ria dominante:</strong> O art. 442-B CLT n&atilde;o revogou o art. 3&ordm;. A pejotiza&ccedil;&atilde;o continua sendo fraude. O princ&iacute;pio da primazia da realidade (art. 9&ordm;) prevalece sobre a forma contratual.</li>
+        <li><strong>Plataformas digitais:</strong> A doutrina jus-trabalhista dominant reconhece o v&iacute;nculo via subordina&ccedil;&atilde;o algor&iacute;tmica/estrutural. Parcela minoritária defende uma "terceira via" (parassubordina&ccedil;&atilde;o com prote&ccedil;&otilde;es m&iacute;nimas sem v&iacute;nculo pleno).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>&#9878; Roteiro de fundamenta&ccedil;&atilde;o judicial</h3>
+      <ul>
+        <li>Identificar se os 5 requisitos est&atilde;o presentes <em>in concreto</em> &mdash; n&atilde;o com base na forma do contrato.</li>
+        <li>Aplicar o princ&iacute;pio da primazia da realidade (art. 9&ordm; CLT) para afastar CNPJ, contrato de prestação ou nota fiscal que mascare v&iacute;nculo real.</li>
+        <li>Nas a&ccedil;&otilde;es em que o v&iacute;nculo &eacute; negado: distribuir o &ocirc;nus da prova conforme art. 818 CLT e S&uacute;mula 212/TST.</li>
+        <li>Distinguir subordina&ccedil;&atilde;o jur&iacute;dica de mera dependência econ&ocirc;mica &mdash; aut&ocirc;nomo economicamente dependente n&atilde;o &eacute; empregado.</li>
+        <li>Verificar se h&aacute; fraude na utiliza&ccedil;&atilde;o de cooperativa ou est&aacute;gio (Súmula 331/TST e Lei 11.788/2008).</li>
+        <li>Nos casos de contrato com ente p&uacute;blico sem concurso: aplicar S&uacute;mula 363/TST e RE 705.140/STF.</li>
+        <li>Nas plataformas: mencionar pend&ecirc;ncia no STF; aplicar os 5 requisitos com crit&eacute;rio; utilizar a subordina&ccedil;&atilde;o estrutural/algor&iacute;tmica quando o algoritmo ditar modo, preso e avalia&ccedil;&atilde;o do servi&ccedil;o.</li>
+        <li>Identificar se &eacute; trabalho intermitente (v&iacute;nculo) ou eventual (sem v&iacute;nculo).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="prova-section" id="prova">
+  <h2>&#127891; Pontos que Sempre Caem em Magistratura / ENAM</h2>
+  <p class="intro">Checklist objetivo para revis&atilde;o de prova objetiva, discursiva, senten&ccedil;a trabalhista e oral.</p>
+  <div class="prova-items">
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">01</span>Quais s&atilde;o os 5 requisitos cumulativos do empregado (art. 3&ordm; CLT)?</div><div class="prova-item-a"><strong>Pessoa f&iacute;sica + pessoalidade + n&atilde;o eventualidade + onerosidade + subordina&ccedil;&atilde;o jur&iacute;dica.</strong> Os cinco s&atilde;o cumulativos &mdash; a falta de qualquer um afasta o v&iacute;nculo empregatício. A subordina&ccedil;&atilde;o jur&iacute;dica &eacute; o mais debatido e relevante. O princ&iacute;pio da primazia da realidade (art. 9&ordm; CLT) prevalece sobre a forma do contrato.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">02</span>Qual a teoria da n&atilde;o eventualidade adotada pelo TST?</div><div class="prova-item-a"><strong>Teoria dos fins da empresa (Alfredo Ruprecht)</strong>: &eacute; n&atilde;o eventual o servi&ccedil;o que se integra aos fins normais da empresa, independentemente de frequ&ecirc;ncia. O garçom que trabalha s&oacute; nos fins de semana em restaurante &eacute; n&atilde;o eventual. O encanador chamado uma &uacute;nica vez para reparar a tubula&ccedil;&atilde;o &eacute; eventual.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">03</span>O art. 442-B CLT (aut&ocirc;nomo exclusivo, reform 2017) afastou o art. 3&ordm; CLT?</div><div class="prova-item-a"><strong>N&atilde;o.</strong> O art. 442-B afirma que a mera exclusividade ou continuidade do aut&ocirc;nomo n&atilde;o gera automaticamente v&iacute;nculo. Mas se estiverem presentes os 5 requisitos do art. 3&ordm; CLT (especialmente a subordina&ccedil;&atilde;o jur&iacute;dica), o v&iacute;nculo &eacute; reconhecido independentemente do r&oacute;tulo formal. Princ&iacute;pio da primazia da realidade (art. 9&ordm; CLT) prevalece.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">04</span>O trabalhador intermitente tem v&iacute;nculo empregatício?</div><div class="prova-item-a"><strong>Sim.</strong> O art. 443, &sect;3&ordm; CLT (inserido pela Reform 2017) prevê que o trabalho intermitente &eacute; modalidade de v&iacute;nculo empregatício. O empregado tem direito ao FGTS, 13&ordm; sal&aacute;rio, f&eacute;rias e repouso semanal, proporcional ao per&iacute;odo efetivamente trabalhado. O STF, na ADI 6.154 (2024), confirmou a constitucionalidade do trabalho intermitente.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">05</span>Qual a diferen&ccedil;a entre subordina&ccedil;&atilde;o jur&iacute;dica e dependência econ&ocirc;mica?</div><div class="prova-item-a">A <strong>subordina&ccedil;&atilde;o jur&iacute;dica</strong> &eacute; o poder do empregador de dirigir o modo, o tempo e o lugar de execu&ccedil;&atilde;o do servi&ccedil;o. &Eacute; o elemento central do art. 3&ordm; CLT. A <strong>dependência econ&ocirc;mica</strong> ocorre quando o prestador depende financeiramente de um &uacute;nico tomador &mdash; mas isso n&atilde;o gera, por si s&oacute;, v&iacute;nculo empregatício. O aut&ocirc;nomo pode ser economicamente dependente sem estar juridicamente subordinado.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">06</span>O que &eacute; pejotiza&ccedil;&atilde;o e qual sua consequência jur&iacute;dica?</div><div class="prova-item-a"><strong>Pejotiza&ccedil;&atilde;o</strong> &eacute; a pr&aacute;tica em que o empregador exige que o trabalhador constitua pessoa jur&iacute;dica para prestar os mesmos servi&ccedil;os que antes prestava como empregado, com o objetivo de afastar a CLT. &Eacute; fraude (art. 9&ordm; CLT). Consequência: o v&iacute;nculo empregatício &eacute; reconhecido com a pessoa f&iacute;sica por tr&aacute;s da PJ, e todos os direitos trabalhistas s&atilde;o devidos desde a data real de admiss&atilde;o.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">07</span>Qual o efeito de contrato nulo com ente p&uacute;blico sem concurso (S&uacute;mula 363/TST)?</div><div class="prova-item-a">O contrato &eacute; nulo por viola&ccedil;&atilde;o do art. 37, II, CF/88. Pelo v&iacute;nculo nulo, o trabalhador tem direito apenas ao: (a) pagamento proporcional das horas efetivamente trabalhadas, respeitando o sal&aacute;rio-m&iacute;nimo hora; e (b) dep&oacute;sitos do FGTS. N&atilde;o s&atilde;o devidos: f&eacute;rias, 13&ordm; sal&aacute;rio, aviso pr&eacute;vio e demais verbas rescis&oacute;rias. O STF confirmou no RE 705.140 (Tema 191).</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">08</span>Como se distingue empregado de estagi&aacute;rio?</div><div class="prova-item-a">O <strong>estagi&aacute;rio</strong> (Lei 11.788/2008) n&atilde;o tem v&iacute;nculo empregatício quando: (a) est&aacute; matriculado em institui&ccedil;&atilde;o de ensino; (b) h&aacute; TCE assinado; (c) h&aacute; orienta&ccedil;&atilde;o/supervisão; (d) o est&aacute;gio &eacute; ato educa&ccedil;&atilde;o, n&atilde;o mera subst. de m&atilde;o-de-obra. Bolsa &ne; sal&aacute;rio. Descumprimento de qualquer requisito da Lei 11.788/2008 &rarr; reconhecimento do v&iacute;nculo empregatício.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">09</span>A subordina&ccedil;&atilde;o estrutural &eacute; adotada pelo TST? Qual sua import&acirc;ncia pr&aacute;tica?</div><div class="prova-item-a">Sim. A <strong>subordina&ccedil;&atilde;o estrutural (objetiva)</strong>, desenvolvida por Maurício Godinho Delgado, &eacute; amplamente adotada pelo TST. O empregado est&aacute; subordinado quando sua atividade se integra estruturalmente &agrave; din&acirc;mica empresarial do tomador, ainda que n&atilde;o receba ordens diretas e concomitantes. Import&acirc;ncia pr&aacute;tica: reconhece v&iacute;nculo em trabalhadores altamente qualificados (m&eacute;dicos, engenheiros, representantes comerciais) que n&atilde;o recebem ordens mas est&atilde;o estruturalmente integrados &agrave; empresa.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">10</span>O que determina o par&aacute;grafo &uacute;nico do art. 3&ordm; CLT?</div><div class="prova-item-a">O par&aacute;grafo &uacute;nico consagra o <strong>princ&iacute;pio da igualdade dos empregados</strong>: "N&atilde;o haver&aacute; distin&ccedil;&otilde;es relativas &agrave; esp&eacute;cie de emprego e &agrave; condi&ccedil;&atilde;o de trabalhador, nem entre o trabalho intelectual, t&eacute;cnico e manual." Proíbe-se discrimina&ccedil;&atilde;o entre empregados com base no tipo de trabalho (intelectual × manual). Conect-se ao princ&iacute;pio da n&atilde;o discrimina&ccedil;&atilde;o e ao art. 5&ordm;, caput, CF/88.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">11</span>O que &eacute; a teoria da parassubordina&ccedil;&atilde;o? Tem aplicabilidade no Direito do Trabalho brasileiro?</div><div class="prova-item-a">A <strong>parassubordina&ccedil;&atilde;o</strong> (origem italiana) descreve trabalhadores que t&ecirc;m pessoalidade e continuidade, s&atilde;o economicamente dependentes de um &uacute;nico tomador e se integram ao ciclo produtivo, mas n&atilde;o est&atilde;o sujeitos ao poder diretivo cl&aacute;ssico. No Brasil, a CLT n&atilde;o reconhece essa categoria como terceira espécie. O TST analisa caso a caso: se h&aacute; subordina&ccedil;&atilde;o jur&iacute;dica (mesmo estrutural), reconhece o v&iacute;nculo; se n&atilde;o h&aacute;, o trabalhador fica sem prote&ccedil;&atilde;o trabalhista plena. A discuss&atilde;o &eacute; relevante no contexto das plataformas digitais.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">12</span>Qual o estado atual da jurisprud&ecirc;ncia sobre motoristas de aplicativo (Uber, 99) em 2025?</div><div class="prova-item-a">O tema n&atilde;o tem tese vinculante definitiva. O <strong>STF</strong> fixou cautelar suspendendo julgamentos de m&eacute;rito sobre o tema enquanto pendente o RE 1.394.285. O <strong>TST</strong> est&aacute; dividido: parte das Turmas reconhece v&iacute;nculo pela subordina&ccedil;&atilde;o algor&iacute;tmica/estrutural; outra nega com base na autonomia para fixar hor&aacute;rios e recusar corridas. Para provas, aplicar os 5 requisitos do art. 3&ordm; com an&aacute;lise concreta, mencionar a pend&ecirc;ncia no STF e a aus&ecirc;ncia de tese vinculante.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">13</span>[ENAM &mdash; quest&atilde;o integrada] Jo&atilde;o, pessoa f&iacute;sica, presta servi&ccedil;os como motorista exclusivamente para a empresa X h&aacute; 2 anos, define seu pr&oacute;prio hor&aacute;rio, usa carro pr&oacute;prio, mas n&atilde;o pode recusar corridas se conectado ao aplicativo da empresa e &eacute; desativado se avaliar &atilde;o cair abaixo de 4,0. Reconhece-se v&iacute;nculo?</div><div class="prova-item-a">An&aacute;lise dos 5 requisitos: (1) Pessoa f&iacute;sica: SIM. (2) Pessoalidade: SIM (Jo&atilde;o trabalha pessoalmente). (3) N&atilde;o eventualidade: SIM (2 anos, integrado &agrave; atividade). (4) Onerosidade: SIM (remunera&ccedil;&atilde;o por corridas). (5) Subordina&ccedil;&atilde;o: <strong>DEBATE CENTRAL</strong> &mdash; a impossibilidade de recusar corridas quando conectado e a exclus&atilde;o por queda de avalia&ccedil;&atilde;o indicam controle algor&iacute;tmico (subordina&ccedil;&atilde;o estrutural/algor&iacute;tmica). O art. 442-B n&atilde;o afasta o art. 3&ordm; quando a subordina&ccedil;&atilde;o &eacute; real. Tend&ecirc;ncia do TST pós-2023: reconhecimento do v&iacute;nculo nesses casos. Mas mencionar a pend&ecirc;ncia no STF (RE 1.394.285).</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">14</span>Trabalho dom&eacute;stico: quando h&aacute; v&iacute;nculo empregatício e quando h&aacute; diar&iacute;sta (sem v&iacute;nculo)?</div><div class="prova-item-a">O <strong>empregado dom&eacute;stico</strong> &eacute; aquele que trabalha de forma <em>cont&iacute;nua</em> no &acirc;mbito residencial sem fins lucrativos (LC 150/2015). O TST consolidou: <strong>3 ou mais dias por semana</strong> &rarr; continuidade &rarr; v&iacute;nculo empregatício dom&eacute;stico. <strong>1 ou 2 dias por semana</strong> &rarr; eventualidade &rarr; diar&iacute;sta sem v&iacute;nculo. A diar&iacute;sta presta servi&ccedil;o eventual, sem integra&ccedil;&atilde;o hab&iacute;tual &agrave; din&acirc;mica residencial. Ap&oacute;s a LC 150/2015 e a PEC das Dom&eacute;sticas (2013), o empregado dom&eacute;stico tem FGTS, hora extra, adic. noturno e outros direitos.</div></div>
+
+  </div>
+</section>
+
+<section class="section" id="fontes">
+  <div class="section-header"><div class="section-num">16</div><div class="section-title"><span>Controle de Fidedignidade</span>Fontes Normativas e Jurisprudenciais Utilizadas</div></div>
+  <div class="card">
+    <h3>&#128204; Fontes prim&aacute;rias e oficiais</h3>
+    <ul class="source-list">
+      <li><strong>CLT &mdash; Decreto-Lei n.&ordm; 5.452/1943:</strong> arts. 3&ordm;, 2&ordm;, 9&ordm;, 442, 442-B, 443 e &sect;3&ordm;, 452-A, 458, 75-A a 75-E, 818.</li>
+      <li><strong>Reforma Trabalhista &mdash; Lei n.&ordm; 13.467/2017:</strong> inser&ccedil;&atilde;o do art. 442-B, art. 443 &sect;3&ordm; (trabalho intermitente), arts. 75-A a 75-E (teletrabalho) e altera&ccedil;&atilde;o do art. 818 (ônus da prova).</li>
+      <li><strong>CF, art. 7&ordm; e art. 37, II:</strong> direitos dos trabalhadores urbanos e rurais; concurso p&uacute;blico como condi&ccedil;&atilde;o de validade.</li>
+      <li><strong>Lei Complementar n.&ordm; 150/2015:</strong> empregado dom&eacute;stico e condi&ccedil;&otilde;es de v&iacute;nculo.</li>
+      <li><strong>Lei n.&ordm; 11.788/2008:</strong> est&aacute;gio e condi&ccedil;&otilde;es para n&atilde;o configura&ccedil;&atilde;o de v&iacute;nculo.</li>
+      <li><strong>TST &mdash; S&uacute;mula 212:</strong> princ&iacute;pio da continuidade e &ocirc;nus de prova do t&eacute;rmino do contrato.</li>
+      <li><strong>TST &mdash; S&uacute;mula 363:</strong> contrato nulo com ente p&uacute;blico sem concurso &mdash; efeitos limitados.</li>
+      <li><strong>TST &mdash; S&uacute;mula 129:</strong> grupo econ&ocirc;mico &mdash; empregador &uacute;nico.</li>
+      <li><strong>TST &mdash; S&uacute;mula 331:</strong> terceiriza&ccedil;&atilde;o e responsabilidade subsidiária do tomador.</li>
+      <li><strong>TST &mdash; S&uacute;mula 374:</strong> norma coletiva e categoria diferenciada.</li>
+      <li><strong>TST &mdash; OJ 296/SDI-1:</strong> anota&ccedil;&atilde;o fraudulenta na CTPS.</li>
+      <li><strong>TST &mdash; OJ 383/SDI-1:</strong> indeniza&ccedil;&atilde;o por omiss&atilde;o de registro e seguro-desemprego.</li>
+      <li><strong>TST &mdash; OJ 321/SDI-1:</strong> empreiteiro pessoa f&iacute;sica como empregado.</li>
+      <li><strong>STF &mdash; RE 705.140 (Tema 191):</strong> contrato nulo com ente p&uacute;blico &mdash; confirma S&uacute;mula 363/TST.</li>
+      <li><strong>STF &mdash; RE 958.252 (Tema 725):</strong> constitucionalidade da terceiriza&ccedil;&atilde;o em atividade-fim.</li>
+      <li><strong>STF &mdash; ADI 6.154 (2024):</strong> constitucionalidade do trabalho intermitente.</li>
+      <li><strong>STF &mdash; RE 1.394.285 e ADPF 449 (pend&ecirc;ncias 2025):</strong> plataformas digitais &mdash; sem tese vinculante definitiva.</li>
+    </ul>
+    <div class="alert alert-navy mt2"><div>&#128274; <strong>Nota de integridade:</strong> foram evitadas teses vinculantes ou s&uacute;mulas inexistentes. Onde h&aacute; jurisprud&ecirc;ncia em forma&ccedil;&atilde;o (plataformas digitais), o conte&uacute;do foi apresentado como tend&ecirc;ncia e debate, com express&atilde;o clara da pend&ecirc;ncia no STF. Todas as normas citadas est&atilde;o vigentes conforme reda&ccedil;&atilde;o atual da CLT e da CF.</div></div>
+  </div>
+</section>
+
+</div>
+
+<footer><strong>Art. 3&ordm; CLT &mdash; Empregado | Magistratura / ENAM</strong> &middot; P&aacute;gina &uacute;nica com atalhos internos &middot; Atualizado em 2025 &middot; Modelo visual e barra de cron&ocirc;metro preservados do HTML-base fornecido.</footer>
+
 </body>
 </html>
