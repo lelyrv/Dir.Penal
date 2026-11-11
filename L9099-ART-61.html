@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 61 da Lei 9.099/1995 — Infrações de Menor Potencial Ofensivo | Fluxograma de Atuação em Audiência</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0d1b2a;--navy-mid:#1a2f45;--navy-light:#243b55;
+  --gold:#c8960c;--gold-light:#e8b84b;--gold-pale:#fdf3d8;
+  --cream:#faf7f2;--cream-mid:#f0ebe2;
+  --text-dark:#1a1208;--text-mid:#3d3020;--text-soft:#6b5c40;
+  --border:#d4c49a;--border-light:#e8dcbf;
+  --red-accent:#8b1a1a;--green-accent:#1a4a2e;--blue-accent:#1a3a5c;--purple-accent:#4a1a5c;
+  --shadow:0 4px 24px rgba(13,27,42,0.10);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Source Serif 4',Georgia,serif;background:var(--cream);color:var(--text-dark);font-size:15px;line-height:1.75;}
+a{color:var(--blue-accent);}
+strong{font-weight:700;}
+
+/* ---------- Navegação ---------- */
+#top-nav{position:sticky;top:0;z-index:999;background:var(--navy);border-bottom:3px solid var(--gold);padding:0 1.5rem;display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;}
+#top-nav::-webkit-scrollbar{display:none;}
+#top-nav .nav-brand{font-family:'Playfair Display',serif;color:var(--gold-light);font-size:0.9rem;font-weight:700;white-space:nowrap;padding:0.85rem 1.2rem 0.85rem 0;border-right:1px solid rgba(200,150,12,0.3);margin-right:0.5rem;letter-spacing:0.5px;}
+#top-nav .nav-main-links{display:flex;align-items:center;}
+#top-nav a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.72rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;padding:0.85rem 0.8rem;white-space:nowrap;transition:color .2s;border-bottom:3px solid transparent;margin-bottom:-3px;}
+#top-nav a:hover,#top-nav a.active{color:var(--gold-light);border-bottom-color:var(--gold);}
+#top-nav a.nav-prova{color:var(--gold-light);}
+
+/* ---------- Cabeçalho ---------- */
+#hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 60%,#1e3d5c 100%);color:white;padding:3.5rem 2rem 3rem;text-align:center;position:relative;overflow:hidden;}
+#hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(200,150,12,0.03) 0px,rgba(200,150,12,0.03) 1px,transparent 1px,transparent 40px);}
+#hero .badge{display:inline-block;background:rgba(200,150,12,0.15);border:1px solid rgba(200,150,12,0.5);color:var(--gold-light);font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;padding:0.35rem 1rem;border-radius:2px;margin-bottom:1.2rem;font-weight:600;position:relative;}
+#hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.15;margin-bottom:0.6rem;letter-spacing:-0.5px;position:relative;}
+#hero h1 span{color:var(--gold-light);}
+#hero .subtitle{font-size:1rem;color:rgba(255,255,255,0.65);font-style:italic;margin-bottom:1.5rem;position:relative;}
+#hero .law-box{display:inline-block;background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.4);border-left:4px solid var(--gold);color:rgba(255,255,255,0.9);font-size:0.93rem;font-style:italic;padding:1rem 1.5rem;max-width:1120px;text-align:left;line-height:1.9;border-radius:0 4px 4px 0;position:relative;}
+#hero .law-box strong{color:var(--gold-light);font-style:normal;display:block;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem;}
+
+/* ---------- Estrutura ---------- */
+.page-wrap{width:100%;margin:0;padding:0 clamp(1rem,3vw,4rem) 4rem;}
+.section{margin-top:3.5rem;scroll-margin-top:56px;}
+.section-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:0.75rem;border-bottom:2px solid var(--border);}
+.section-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--border);line-height:1;min-width:2.5rem;}
+.section-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--navy);line-height:1.2;}
+.section-title span{display:block;font-size:0.75rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);}
+.sub-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin:1.6rem 0 0.7rem;padding-left:0.7rem;border-left:4px solid var(--gold);}
+
+/* ---------- Cartões ---------- */
+.card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1.4rem 1.6rem;box-shadow:var(--shadow);}
+.card-grid{display:grid;gap:1rem;}
+.card-grid-2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr));}
+.card-grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
+.card-grid-4{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));}
+.card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:0.6rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border-light);color:var(--navy);}
+.card h4{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;margin:0.8rem 0 0.35rem;color:var(--navy);}
+.card p,.card li{font-size:0.88rem;line-height:1.7;color:var(--text-mid);}
+.card p + p{margin-top:0.55rem;}
+.card ul,.card ol{padding-left:1.1rem;}
+.card li{margin-bottom:0.3rem;}
+.type-card{border-top:4px solid;}
+.tc-red{border-top-color:var(--red-accent);}.tc-red h3{color:var(--red-accent);}
+.tc-green{border-top-color:var(--green-accent);}.tc-green h3{color:var(--green-accent);}
+.tc-blue{border-top-color:var(--blue-accent);}.tc-blue h3{color:var(--blue-accent);}
+.tc-gold{border-top-color:var(--gold);}.tc-gold h3{color:#7a5a00;}
+.tc-purple{border-top-color:var(--purple-accent);}.tc-purple h3{color:var(--purple-accent);}
+
+/* ---------- Fluxograma ---------- */
+.flow-wrap{background:white;border:1px solid var(--border-light);border-radius:6px;padding:2rem 1.5rem;box-shadow:var(--shadow);overflow-x:auto;}
+.flow-center{display:flex;flex-direction:column;align-items:center;}
+.flow-node{border-radius:4px;padding:0.65rem 1.4rem;font-size:0.82rem;font-weight:600;text-align:center;min-width:220px;max-width:760px;line-height:1.55;}
+.flow-node small{display:block;font-weight:400;font-size:0.74rem;opacity:0.9;margin-top:0.2rem;}
+.flow-start{background:var(--navy);color:white;border-radius:50px;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;}
+.flow-end-green{background:var(--green-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-red{background:var(--red-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-gold{background:var(--gold);color:var(--navy);border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-blue{background:var(--blue-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-purple{background:var(--purple-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-box-navy{background:var(--navy-mid);color:white;border-left:4px solid var(--gold);font-size:0.8rem;}
+.flow-box-navy b{color:var(--gold-light);}
+.flow-box-green{background:#edf7f0;border:1px solid #7ec89a;border-left:4px solid var(--green-accent);color:var(--text-dark);}
+.flow-box-blue{background:#edf2f8;border:1px solid #8eb4d8;border-left:4px solid var(--blue-accent);color:var(--text-dark);}
+.flow-box-red{background:#fdf0f0;border:1px solid #e09090;border-left:4px solid var(--red-accent);color:var(--text-dark);}
+.flow-box-gold{background:var(--gold-pale);border:2px solid var(--gold);color:var(--text-dark);}
+.flow-box-purple{background:#f3eef8;border:1px solid #b89dd8;border-left:4px solid var(--purple-accent);color:var(--text-dark);}
+.flow-arrow{font-size:1.3rem;color:var(--border);line-height:1;margin:0.15rem 0;}
+.flow-row{display:flex;align-items:flex-start;gap:1.5rem;width:100%;justify-content:center;flex-wrap:wrap;}
+.flow-branch{display:flex;flex-direction:column;align-items:center;flex:1;min-width:210px;}
+.flow-label{font-size:0.68rem;color:var(--text-soft);font-weight:600;letter-spacing:0.5px;text-transform:uppercase;background:var(--cream-mid);padding:0.15rem 0.5rem;border-radius:2px;margin:0.15rem 0;text-align:center;}
+.flow-connector-line{width:1px;height:28px;background:var(--border);}
+
+/* ---------- Tabelas ---------- */
+.tbl-scroll{overflow-x:auto;border-radius:6px;box-shadow:var(--shadow);}
+.comp-table{width:100%;border-collapse:collapse;font-size:0.84rem;background:white;}
+.comp-table thead{background:var(--navy);color:white;}
+.comp-table thead th{padding:0.85rem 1rem;font-weight:600;letter-spacing:0.5px;font-size:0.8rem;text-align:left;}
+.comp-table thead th:first-child{color:var(--gold-light);}
+.comp-table tbody tr{border-bottom:1px solid var(--border-light);}
+.comp-table tbody tr:last-child{border-bottom:none;}
+.comp-table tbody tr:nth-child(even){background:var(--cream);}
+.comp-table td{padding:0.75rem 1rem;color:var(--text-mid);vertical-align:top;}
+.comp-table td:first-child{font-weight:600;color:var(--navy);font-size:0.8rem;}
+.comp-table .hl td{background:var(--gold-pale)!important;}
+.comp-table .hl2 td{background:#edf7f0!important;}
+.comp-table .hl3 td{background:#edf2f8!important;}
+.comp-table .hl4 td{background:#fdf0f0!important;}
+.comp-table .hl5 td{background:#f3eef8!important;}
+
+/* ---------- Jurisprudência ---------- */
+.juris-grid{display:grid;gap:1rem;}
+.juris-card{background:white;border:1px solid var(--border-light);border-left:5px solid;border-radius:0 6px 6px 0;padding:1.2rem 1.4rem;box-shadow:var(--shadow);}
+.juris-card.stf{border-left-color:var(--red-accent);}
+.juris-card.stj{border-left-color:var(--navy);}
+.juris-card.doutrina{border-left-color:var(--gold);}
+.juris-card.fonaje{border-left-color:var(--purple-accent);}
+.juris-header{display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem;flex-wrap:wrap;}
+.juris-badge{font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:0.2rem 0.55rem;border-radius:2px;}
+.juris-badge.stf{background:var(--red-accent);color:white;}
+.juris-badge.stj{background:var(--navy);color:white;}
+.juris-badge.doutrina{background:var(--gold);color:var(--navy);}
+.juris-badge.sumula{background:var(--green-accent);color:white;}
+.juris-badge.tese{background:var(--blue-accent);color:white;}
+.juris-badge.purple{background:var(--purple-accent);color:white;}
+.juris-title{font-family:'Playfair Display',serif;font-size:0.92rem;font-weight:700;color:var(--navy);}
+.juris-body{font-size:0.84rem;color:var(--text-mid);line-height:1.7;}
+.juris-body .quote{display:block;margin:0.4rem 0;padding:0.5rem 0.8rem;background:var(--cream-mid);border-left:3px solid var(--border);font-style:italic;}
+.vb{display:inline-block;font-size:0.6rem;font-weight:700;letter-spacing:0.9px;text-transform:uppercase;padding:0.12rem 0.45rem;border-radius:2px;margin-left:auto;}
+.vb-of{background:#dceee3;color:var(--green-accent);border:1px solid #7ec89a;}
+.vb-sec{background:#fdf3d8;color:#7a5a00;border:1px solid #d4aa3a;}
+.vb-pr{background:#ece5f5;color:var(--purple-accent);border:1px solid #b89dd8;}
+
+/* ---------- Alertas e citações ---------- */
+.alert{padding:0.9rem 1.2rem;border-radius:4px;font-size:0.84rem;line-height:1.7;display:flex;gap:0.7rem;align-items:flex-start;}
+.alert .alert-tag{flex-shrink:0;font-size:0.62rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:0.2rem 0.5rem;border-radius:2px;margin-top:0.2rem;}
+.alert-gold{background:var(--gold-pale);border:1px solid #d4aa3a;color:#5a4000;}.alert-gold .alert-tag{background:#d4aa3a;color:#3a2800;}
+.alert-red{background:#fdf0f0;border:1px solid #e09090;color:#5a0000;}.alert-red .alert-tag{background:var(--red-accent);color:white;}
+.alert-navy{background:#f0f4f8;border:1px solid #aabbcc;color:var(--navy);}.alert-navy .alert-tag{background:var(--navy);color:white;}
+.alert-green{background:#edf7f0;border:1px solid #7ec89a;color:#1a4a2e;}.alert-green .alert-tag{background:var(--green-accent);color:white;}
+.alert-purple{background:#f3eef8;border:1px solid #b89dd8;color:var(--purple-accent);}.alert-purple .alert-tag{background:var(--purple-accent);color:white;}
+.law-quote{background:var(--cream-mid);border-left:4px solid var(--navy);padding:0.9rem 1.2rem;font-size:0.88rem;font-style:italic;color:var(--text-mid);line-height:1.7;border-radius:0 4px 4px 0;}
+.law-quote strong{font-style:normal;color:var(--navy);font-size:0.75rem;letter-spacing:0.5px;display:block;margin-bottom:0.25rem;}
+.law-quote + .law-quote{margin-top:0.7rem;}
+.divider{height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);margin:1.2rem 0;}
+.mt1{margin-top:0.75rem;}.mt2{margin-top:1rem;}.mt3{margin-top:1.5rem;}
+.ref{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--text-soft);}
+.source-note{font-size:0.78rem;color:var(--text-soft);border-top:1px dashed var(--border);padding-top:0.7rem;margin-top:0.9rem;}
+.source-list li{font-size:0.82rem;margin-bottom:0.45rem;}
+.tag{display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;padding:0.15rem 0.5rem;border-radius:2px;margin:0.1rem;}
+.tag-blue{background:#dce8f5;color:var(--blue-accent);}
+.tag-green{background:#dceee3;color:var(--green-accent);}
+.tag-gold{background:var(--gold-pale);color:#7a5a00;border:1px solid #d4aa3a;}
+.tag-red{background:#fde8e8;color:var(--red-accent);}
+.tag-purple{background:#ece5f5;color:var(--purple-accent);}
+
+/* ---------- Anatomia do dispositivo ---------- */
+.anat-visual{display:flex;align-items:stretch;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);}
+.av-col{flex:1;padding:1.2rem 1.4rem;}
+.av-navy{background:var(--navy-mid);color:white;}
+.av-sep{background:var(--navy);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:900;flex:0 0 2.2rem;}
+.av-red{background:var(--red-accent);color:white;}
+.av-blue{background:var(--blue-accent);color:white;}
+.av-gold{background:var(--gold);color:var(--navy);}
+.av-purple{background:var(--purple-accent);color:white;}
+.av-col h4{font-family:'Playfair Display',serif;font-size:0.98rem;font-weight:700;margin-bottom:0.5rem;border-bottom:1px solid rgba(255,255,255,0.2);padding-bottom:0.35rem;}
+.av-col p,.av-col li{font-size:0.82rem;line-height:1.65;}
+.av-col ul{padding-left:1rem;margin-top:0.3rem;}
+
+/* ---------- Pontos recorrentes ---------- */
+.prova-section{background:var(--navy);border-radius:8px;padding:2rem;color:white;margin-top:3.5rem;scroll-margin-top:56px;}
+.prova-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold-light);margin-bottom:0.5rem;}
+.prova-section .intro{font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;font-style:italic;}
+.prova-items{display:grid;gap:0.75rem;}
+.prova-item{background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.25);border-left:4px solid var(--gold);border-radius:0 4px 4px 0;padding:1rem 1.2rem;}
+.prova-item-q{font-size:0.84rem;font-weight:600;color:var(--gold-light);margin-bottom:0.4rem;display:flex;align-items:flex-start;gap:0.6rem;}
+.prova-item-q .qnum{background:var(--gold);color:var(--navy);font-size:0.65rem;font-weight:700;padding:0.1rem 0.45rem;border-radius:2px;flex-shrink:0;margin-top:0.1rem;}
+.prova-item-a{font-size:0.82rem;color:rgba(255,255,255,0.84);line-height:1.65;}
+.prova-item-a strong{color:white;}
+.prova-item-a .ref{color:var(--gold-light);}
+.prova-group{font-family:'Playfair Display',serif;font-size:1rem;color:var(--gold-light);margin:1.4rem 0 0.2rem;padding-bottom:0.3rem;border-bottom:1px solid rgba(200,150,12,0.3);}
+
+footer{background:var(--navy);color:rgba(255,255,255,0.5);text-align:center;padding:1.5rem;font-size:0.75rem;border-top:2px solid var(--gold);}
+footer strong{color:var(--gold-light);}
+#to-top{position:fixed;right:1.2rem;bottom:1.2rem;z-index:998;background:var(--navy);color:var(--gold-light);border:1px solid var(--gold);border-radius:3px;padding:0.45rem 0.8rem;font-size:0.72rem;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;text-decoration:none;opacity:0;pointer-events:none;transition:opacity .2s;}
+#to-top.show{opacity:1;pointer-events:auto;}
+
+@page{size:A4 landscape;margin:8mm;}
+@media print{
+  #top-nav,#to-top,footer{display:none;}
+  #hero{padding:1.2rem 1rem;}#hero::before{display:none;}
+  .page-wrap{padding:0 0.35rem 1rem;}
+  .section{margin-top:1.15rem;}
+  .card,.juris-card,.flow-wrap,.prova-item,.comp-table tr{page-break-inside:avoid;}
+  .card,.juris-card,.flow-wrap{box-shadow:none;border:1px solid #ccc;}
+  .prova-section{background:#f0f4f8!important;color:#000!important;}
+  .prova-section h2,.prova-group{color:#0d1b2a!important;}
+  .prova-item{background:white!important;border:1px solid #ccc!important;}
+  .prova-item-q{color:#7a5a00!important;}.prova-item-a{color:#333!important;}.prova-item-a .ref{color:#555!important;}
+  body{font-size:8.5pt;line-height:1.4;}
+  .card p,.card li,.juris-body{font-size:8pt;line-height:1.4;}
+  .comp-table{font-size:7.5pt;}.comp-table td,.comp-table th{padding:.35rem;}
+}
+@media(max-width:700px){
+  #hero{padding:2rem 1rem;}#hero h1{font-size:1.6rem;}
+  .card-grid-2,.card-grid-3,.card-grid-4{grid-template-columns:1fr;}
+  .section-title{font-size:1.1rem;}
+  .comp-table{font-size:0.76rem;min-width:560px;}.comp-table td,.comp-table th{padding:0.55rem 0.65rem;}
+  .flow-node{min-width:150px;font-size:0.74rem;}
+  .anat-visual{flex-direction:column;}.av-sep{padding:0.4rem;flex:0 0 1.5rem;}
+}
+</style>
+</head>
+<body>
+
+<nav id="top-nav" aria-label="Atalhos do artigo">
+  <div class="nav-brand">Art. 61 · Lei 9.099/95</div>
+  <div class="nav-main-links">
+    <a href="#panorama">Panorama</a>
+    <a href="#texto-legal">Texto Legal</a>
+    <a href="#criterio">Critério dos 2 Anos</a>
+    <a href="#contravencoes">Contravenções</a>
+    <a href="#tipos">Quadro de Infrações</a>
+    <a href="#exclusoes">Exclusões</a>
+    <a href="#competencia">Competência</a>
+    <a href="#audiencia-preliminar">Audiência Preliminar</a>
+    <a href="#instrucao">Instrução e Julgamento</a>
+    <a href="#sursis">Suspensão do Processo</a>
+    <a href="#fluxograma">Fluxograma</a>
+    <a href="#prazos">Prazos</a>
+    <a href="#atendimento">Atendimento e Negociação</a>
+    <a href="#jurisprudencia">Juris. STF/STJ</a>
+    <a href="#doutrina">Doutrina</a>
+    <a href="#recorrentes" class="nav-prova">Pontos Recorrentes</a>
+    <a href="#fontes">Fontes</a>
+  </div>
+</nav>
+
+<header id="hero">
+  <div class="badge">Lei nº 9.099/1995 · Capítulo III — Dos Juizados Especiais Criminais · Conferência normativa em 11/11/2026</div>
+  <h1>Art. 61 — <span>Infrações Penais de Menor Potencial Ofensivo</span></h1>
+  <p class="subtitle">Contravenções e crimes com pena máxima não superior a 2 anos · Competência · Audiência preliminar · Composição dos danos civis · Transação penal · Rito sumaríssimo · Suspensão condicional do processo</p>
+  <div class="law-box">
+    <strong>Art. 61 da Lei nº 9.099, de 26 de setembro de 1995 (redação da Lei nº 11.313/2006)</strong>
+    “Consideram-se infrações penais de menor potencial ofensivo, para os efeitos desta Lei, as contravenções penais e os crimes a que a lei comine pena máxima não superior a 2 (dois) anos, cumulada ou não com multa.”
+  </div>
+</header>
+
+<div class="page-wrap">
+
+<!-- ============ 01 ============ -->
+<section class="section" id="panorama">
+  <div class="section-header"><div class="section-num">01</div><div class="section-title"><span>Introdução e Estrutura</span>Panorama do Art. 61</div></div>
+
+  <div class="card-grid card-grid-3">
+    <div class="card type-card tc-blue">
+      <h3>Função do dispositivo</h3>
+      <p>O art. 61 não tipifica conduta nem comina pena. Ele <strong>define o campo de incidência</strong> do sistema dos Juizados Especiais Criminais: determina quais infrações seguem o rito sumaríssimo e admitem a composição dos danos civis e a transação penal. A base constitucional é o art. 98, I, da CF, que prevê juizados competentes para “infrações penais de menor potencial ofensivo”, com procedimento oral e sumariíssimo e transação nas hipóteses legais.</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>Dois critérios alternativos</h3>
+      <p><strong>(1) Contravenção penal:</strong> qualquer contravenção, sem limite de pena, é infração de menor potencial ofensivo pela letra do art. 61.</p>
+      <p><strong>(2) Crime:</strong> apenas aquele cuja <strong>pena máxima cominada</strong> não seja superior a 2 anos, com ou sem multa cumulada. Contravenção e crime são alternativos, não cumulativos.</p>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>Por que importa na prática</h3>
+      <p>Enquadrar o fato no art. 61 define, ao mesmo tempo: a competência do JECrim; a realização de audiência preliminar; a possibilidade de acordo civil com efeito extintivo; a oferta de transação penal; e o rito oral, sem inquérito policial (termo circunstanciado). Errar o enquadramento significa errar toda a estratégia da audiência.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Evolução legislativa do conceito</h3>
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Marco</th><th>Redação / efeito</th><th>Consequência prática</th></tr></thead>
+    <tbody>
+      <tr class="hl4"><td>Lei 9.099/1995 (redação original do art. 61)</td><td>Contravenções e crimes com pena máxima não superior a <strong>1 ano</strong>, “excetuados os casos em que a lei preveja procedimento especial”.</td><td>Crimes de procedimento especial ficavam fora do conceito, ainda que a pena fosse baixa.</td></tr>
+      <tr class="hl"><td>Lei 10.259/2001 (Juizados Federais)</td><td>Definiu, para os Juizados Federais Criminais, crimes com pena máxima não superior a <strong>2 anos, ou multa</strong> (redação original do parágrafo único do art. 2º).</td><td>Passaram a coexistir dois conceitos: 1 ano na Justiça estadual e 2 anos na federal.</td></tr>
+      <tr class="hl2"><td>Lei 11.313/2006</td><td>Deu nova redação aos arts. 60 e 61 da Lei 9.099 e ao art. 2º da Lei 10.259: <strong>2 anos, cumulada ou não com multa</strong>; suprimiu a ressalva dos procedimentos especiais; incluiu as regras de conexão e continência (art. 60) com preservação da transação e da composição.</td><td>Unificou o conceito. Crimes de rito especial com pena máxima de até 2 anos passaram ao JECrim.</td></tr>
+      <tr class="hl3"><td>Leis posteriores (2021 a 2026)</td><td>Não alteraram o art. 61 (o texto compilado do Planalto registra como única alteração a da Lei 11.313/2006). Alteraram penas de tipos penais (por exemplo, Leis 14.994/2024 e 15.397/2026) e criaram vedações de aplicação da Lei 9.099 (Lei 15.163/2025), o que retira infrações do JECrim sem mexer no conceito.</td><td>O conceito é estável. O risco atual está nas exclusões e no aumento de penas de tipos específicos (seções 05 e 06).</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="alert alert-gold mt2"><span class="alert-tag">Resumo</span><div>Fato é contravenção <strong>ou</strong> crime com pena máxima de até 2 anos (somadas majorantes e qualificadoras, conforme seção 03) → infração de menor potencial ofensivo → <strong>desde que não incida exclusão legal</strong> (Lei Maria da Penha, Estatuto da Pessoa Idosa, ECA art. 230, Justiça Militar) e não haja complexidade que desloque o feito ao juízo comum.</div></div>
+
+  <div class="alert alert-navy mt2"><span class="alert-tag">Legenda</span><div>Cada informação relevante traz o grau de verificação: <span class="vb vb-of" style="margin-left:0">Oficial</span> texto lido diretamente em fonte oficial (Planalto, STJ, STF) na conferência de 11/11/2026; <span class="vb vb-sec" style="margin-left:0">Secundária</span> confirmado em fonte não oficial, conferir antes de citar em peça; <span class="vb vb-pr" style="margin-left:0">Prática</span> orientação de atuação, não é fonte normativa. A seção 17 detalha o que foi e o que não foi possível verificar.</div></div>
+</section>
+
+<!-- ============ 02 ============ -->
+<section class="section" id="texto-legal">
+  <div class="section-header"><div class="section-num">02</div><div class="section-title"><span>Anatomia do Dispositivo</span>Texto Legal Decomposto</div></div>
+
+  <div class="anat-visual">
+    <div class="av-col av-navy"><h4>“Contravenções penais”</h4><p><strong>Sem limite de pena</strong></p><ul><li>Entram pelo simples fato de serem contravenções.</li><li>Ex.: jogo de azar (LCP, art. 50): prisão simples de 3 meses a 1 ano e multa.</li></ul></div>
+    <div class="av-sep">+</div>
+    <div class="av-col av-blue"><h4>“Crimes a que a lei comine”</h4><p><strong>Pena cominada em abstrato</strong></p><ul><li>Olha-se o preceito secundário do tipo, não a pena aplicável ao caso concreto.</li><li>Tipos derivados e causas de aumento/diminuição alteram a pena cominada.</li></ul></div>
+    <div class="av-sep">→</div>
+    <div class="av-col av-red"><h4>“Pena máxima não superior a 2 anos”</h4><p><strong>Limite de 2 anos inclusive</strong></p><ul><li>Exatamente 2 anos entra (ex.: calúnia, desacato).</li><li>Mais de 2 anos, ainda que por 1 dia, sai.</li></ul></div>
+    <div class="av-sep">+</div>
+    <div class="av-col av-gold"><h4>“Cumulada ou não com multa”</h4><p><strong>Multa é neutra</strong></p><ul><li>A multa não altera o enquadramento.</li><li>Multa alternativa à privativa também não impede os institutos (STJ, seção 14).</li></ul></div>
+  </div>
+
+  <h3 class="sub-title">Textos correlatos (transcrição literal do Planalto) <span class="vb vb-of" style="margin-left:0.5rem">Oficial</span></h3>
+  <div class="card-grid card-grid-2">
+    <div>
+      <div class="law-quote"><strong>Art. 61 — redação vigente (Lei 11.313/2006)</strong>“Consideram-se infrações penais de menor potencial ofensivo, para os efeitos desta Lei, as contravenções penais e os crimes a que a lei comine pena máxima não superior a 2 (dois) anos, cumulada ou não com multa.”</div>
+      <div class="law-quote"><strong>Art. 61 — redação original de 1995 (superada)</strong>“Consideram-se infrações penais de menor potencial ofensivo, para os efeitos desta Lei, as contravenções penais e os crimes a que a lei comine pena máxima não superior a um ano, excetuados os casos em que a lei preveja procedimento especial.”</div>
+      <div class="law-quote"><strong>Art. 62 — critérios do processo (redação da Lei 13.603/2018)</strong>“O processo perante o Juizado Especial orientar-se-á pelos critérios da oralidade, simplicidade, informalidade, economia processual e celeridade, objetivando, sempre que possível, a reparação dos danos sofridos pela vítima e a aplicação de pena não privativa de liberdade.”</div>
+    </div>
+    <div>
+      <div class="law-quote"><strong>Art. 60 — competência (redação da Lei 11.313/2006)</strong>“O Juizado Especial Criminal, provido por juízes togados ou togados e leigos, tem competência para a conciliação, o julgamento e a execução das infrações penais de menor potencial ofensivo, respeitadas as regras de conexão e continência.”<br>
+      <em>Parágrafo único.</em> “Na reunião de processos, perante o juízo comum ou o tribunal do júri, decorrentes da aplicação das regras de conexão e continência, observar-se-ão os institutos da transação penal e da composição dos danos civis.”</div>
+      <div class="law-quote"><strong>Constituição Federal, art. 98, I</strong>“juizados especiais, providos por juízes togados, ou togados e leigos, competentes para a conciliação, o julgamento e a execução de causas cíveis de menor complexidade e infrações penais de menor potencial ofensivo, mediante os procedimentos oral e sumariíssimo, permitidos, nas hipóteses previstas em lei, a transação e o julgamento de recursos por turmas de juízes de primeiro grau;”</div>
+      <div class="law-quote"><strong>CPP, art. 394, § 1º, III</strong>“sumaríssimo, para as infrações penais de menor potencial ofensivo, na forma da lei.”</div>
+    </div>
+  </div>
+  <div class="source-note">Fontes: Planalto — Lei 9.099/1995 (texto compilado), Lei 11.313/2006, Lei 10.259/2001, CF/1988 e CPP, lidos em 11/11/2026. Após a Lei 11.313/2006, o parágrafo único do art. 2º da Lei 10.259 passou a tratar de conexão e continência; o conceito de menor potencial ofensivo é o do art. 61 da Lei 9.099 (leitura sistemática, ver STJ — JT 96, tese 1).</div>
+</section>
+
+<!-- ============ 03 ============ -->
+<section class="section" id="criterio">
+  <div class="section-header"><div class="section-num">03</div><div class="section-title"><span>Aferição da Pena</span>Como Aplicar o Limite de 2 Anos</div></div>
+
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Ponto</th><th>Regra de aferição</th><th>Fundamento</th><th>Verificação</th></tr></thead>
+    <tbody>
+      <tr class="hl"><td>Parâmetro</td><td>Pena <strong>máxima cominada em abstrato</strong> ao tipo, e não a pena que seria aplicada ao caso concreto.</td><td>Art. 61: “a que a lei comine pena máxima”.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl2"><td>Contravenção</td><td>Sempre menor potencial ofensivo, ainda que a pena máxima supere 2 anos.</td><td>Art. 61 (critério autônomo).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Multa alternativa</td><td>Quando a multa é prevista <strong>alternativamente</strong> à privativa, cabem transação penal e suspensão condicional do processo, ainda que o preceito secundário ultrapasse os parâmetros dos institutos.</td><td>STJ, Jurisprudência em Teses nº 96, tese 2.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl4"><td>Concurso de crimes</td><td>Somam-se as penas máximas no concurso material; aplica-se a exasperação no concurso formal e no crime continuado. Se o resultado superar 2 anos, <strong>afasta-se a competência do JECrim</strong>.</td><td>STJ, JT 96, tese 10 (HC 530268/SP; AgRg no REsp 1752559/SP; RHC 102381/BA, entre outros).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl5"><td>Divergência: FONAJE</td><td>O Enunciado 120 do FONAJE (XXIX Encontro, Bonito/MS) afirma que o concurso de infrações de menor potencial ofensivo <strong>não afasta</strong> a competência do JECrim, ainda que o somatório ultrapasse 2 anos.</td><td>FONAJE, Enunciado 120 (orientação não vinculante).</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr><td>Qualificadoras e tipos derivados</td><td>Vale a pena do tipo derivado. Ex.: dano qualificado (CP, art. 163, parágrafo único): detenção de 6 meses a 3 anos e multa, fora do art. 61; o dano simples (caput) é detenção de 1 a 6 meses ou multa, dentro.</td><td>CP, art. 163, caput e parágrafo único.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl"><td>Majorantes e minorantes</td><td>Para fixar a pena máxima em abstrato, a orientação usual é aplicar a causa de aumento no <strong>maior</strong> patamar e a de diminuição no <strong>menor</strong>. Exemplo aritmético: calúnia (6 meses a 2 anos) com a majorante de 1/3 do art. 141 chega a 2 anos e 8 meses e deixa o art. 61.</td><td>Majorante do art. 141 do CP (texto oficial); regra de aferição pelo maior aumento extraída da prática forense.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl2"><td>Agravantes e atenuantes</td><td>Não alteram a pena cominada; operam apenas na dosimetria. Reincidência e antecedentes <strong>não</strong> afastam o art. 61: repercutem só nos requisitos da transação (art. 76, § 2º).</td><td>Leitura do art. 61 (pena “cominada”) combinada com o art. 76, § 2º.</td><td><span class="vb vb-pr" style="margin-left:0">Prática</span></td></tr>
+      <tr class="hl3"><td>Art. 61 × art. 89</td><td>A ampliação para 2 anos <strong>não</strong> alterou o requisito da suspensão condicional do processo: pena <strong>mínima</strong> igual ou inferior a 1 ano.</td><td>STJ, JT 96, tese 1; Lei 9.099, art. 89.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="alert alert-red mt2"><span class="alert-tag">Ponto de atenção</span><div>A divergência entre a tese do STJ (afasta o JECrim quando a soma ou a exasperação supera 2 anos) e o Enunciado 120 do FONAJE (não afasta) é real. Em audiência, o que vale é a orientação do juízo e da Turma Recursal local. Para peça escrita, citar o STJ e, se a tese local for a do FONAJE, registrar a divergência.</div></div>
+
+  <h3 class="sub-title">Teste rápido em cinco perguntas</h3>
+  <div class="card-grid card-grid-4">
+    <div class="card"><h4>1. Contravenção?</h4><p>Se sim, o art. 61 está atendido sem limite de pena. Vá à pergunta 4.</p></div>
+    <div class="card"><h4>2. Pena máxima do tipo?</h4><p>Some qualificadoras e majorantes no maior patamar. Passou de 2 anos: fora do art. 61.</p></div>
+    <div class="card"><h4>3. Há concurso?</h4><p>Concurso material: somar máximos. Formal ou continuidade: exasperar. Acima de 2 anos, afasta o JECrim (STJ).</p></div>
+    <div class="card"><h4>4. Há exclusão legal?</h4><p>Violência doméstica contra a mulher, Estatuto da Pessoa Idosa, ECA art. 230, Justiça Militar (seção 06).</p></div>
+  </div>
+  <div class="alert alert-navy mt1"><span class="alert-tag">5</span><div><strong>Há conexão com crime comum ou do júri?</strong> O feito segue ao juízo comum ou ao júri, mas devem ser observadas a transação penal e a composição dos danos civis quanto à infração de menor potencial ofensivo (art. 60, parágrafo único; STF, ADI 5264).</div></div>
+</section>
+
+<!-- ============ 04 ============ -->
+<section class="section" id="contravencoes">
+  <div class="section-header"><div class="section-num">04</div><div class="section-title"><span>Critério Autônomo</span>Contravenções Penais</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-green">
+      <h3>Regra</h3>
+      <p>Toda contravenção penal é infração de menor potencial ofensivo (art. 61). A pena é prisão simples e/ou multa. O exame do limite de 2 anos é desnecessário para a contravenção.</p>
+      <div class="divider"></div>
+      <ul>
+        <li>Transação penal: cabível se preenchidos os requisitos do art. 76.</li>
+        <li>Suspensão condicional do processo: art. 89 exige pena mínima de até 1 ano. O FONAJE, no Enunciado 128 (XLII Encontro, Curitiba/PR), estabelece prazo de suspensão de 1 a 3 anos para contravenção, na forma do art. 11 do Decreto-Lei 3.688/1941 (conferir o art. 11 da LCP antes de citar).</li>
+        <li>Prazo prescricional: CP, art. 109 (ver seção 12).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Contravenções frequentes (texto oficial da LCP) <span class="vb vb-of">Oficial</span></h3>
+      <div class="tbl-scroll"><table class="comp-table">
+        <thead><tr><th>Dispositivo</th><th>Pena</th><th>Observação</th></tr></thead>
+        <tbody>
+          <tr><td>LCP, art. 21 — vias de fato</td><td>Prisão simples de 15 dias a 3 meses, ou multa, se o fato não constitui crime.</td><td>§ 1º: aumento de 1/3 até a metade se a vítima é maior de 60 anos. § 2º (Lei 14.994/2024): pena em triplo se praticada contra a mulher por razões da condição do sexo feminino. O FONAJE (Enunciado 76) entende que depende de representação.</td></tr>
+          <tr><td>LCP, art. 42 — perturbação do trabalho ou do sossego</td><td>Prisão simples de 15 dias a 3 meses, ou multa.</td><td>Incisos I a IV (gritaria, profissão incômoda, instrumentos sonoros, animal).</td></tr>
+          <tr><td>LCP, art. 50 — jogo de azar</td><td>Prisão simples de 3 meses a 1 ano e multa.</td><td>Exemplo de contravenção com pena mais severa, ainda no art. 61.</td></tr>
+          <tr><td>LCP, art. 65 — perturbação da tranquilidade</td><td>—</td><td>Revogado pela Lei 14.132/2021. Hoje a conduta reiterada pode configurar o crime de perseguição (CP, art. 147-A), tema fora do art. 61 por pena.</td></tr>
+        </tbody>
+      </table></div>
+      <div class="alert alert-gold mt1"><span class="alert-tag">Atenção</span><div>Contravenção praticada contra a mulher em contexto doméstico e familiar sai da Lei 9.099 pela Lei Maria da Penha. As Súmulas 588 e 589 do STJ referem-se expressamente a “crime ou contravenção penal” no ambiente doméstico (seção 14).</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 ============ -->
+<section class="section" id="tipos">
+  <div class="section-header"><div class="section-num">05</div><div class="section-title"><span>Aplicação ao Caso Concreto</span>Quadro de Infrações Frequentes e o Art. 61</div></div>
+  <div class="alert alert-navy"><span class="alert-tag">Método</span><div>Penas transcritas do texto compilado dos diplomas no Planalto (CP, LCP, CTB, Lei 11.343/2006, Lei 9.605/1998, Lei 7.716/1989) em 11/11/2026. O CP compilado já incorpora leis de 2025 e 2026. Em cada caso, aplicar ainda os filtros das seções 03 e 06.</div></div>
+
+  <h3 class="sub-title">A. Dentro do art. 61 (pena máxima até 2 anos)</h3>
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Infração</th><th>Pena cominada</th><th>Ação penal</th><th>Notas de atuação</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Ameaça — CP, art. 147</td><td>Detenção de 1 a 6 meses, ou multa.</td><td>Representação (art. 147, § 2º).</td><td>§ 1º (Lei 14.994/2024): pena em dobro se contra a mulher por razões da condição do sexo feminino; nesse caso a ação é incondicionada (§ 2º, parte final). Contexto doméstico: art. 41 da Lei 11.340.</td></tr>
+      <tr class="hl2"><td>Injúria — CP, art. 140, caput</td><td>Detenção de 1 a 6 meses, ou multa.</td><td>Queixa (art. 145).</td><td>O § 3º (religião, condição de pessoa idosa ou com deficiência) é reclusão de 1 a 3 anos e multa, fora do art. 61. Injúria racial (Lei 7.716, art. 2º-A): reclusão de 2 a 5 anos e multa, fora do art. 61.</td></tr>
+      <tr class="hl2"><td>Difamação — CP, art. 139</td><td>Detenção de 3 meses a 1 ano e multa.</td><td>Queixa (art. 145).</td><td>Majorante de 1/3 do art. 141: máximo de 1 ano e 4 meses, ainda dentro.</td></tr>
+      <tr class="hl"><td>Calúnia — CP, art. 138</td><td>Detenção de 6 meses a 2 anos e multa.</td><td>Queixa (art. 145).</td><td>No limite exato de 2 anos. Com a majorante de 1/3 do art. 141 (2 anos e 8 meses), sai do art. 61 pelo critério do maior aumento.</td></tr>
+      <tr class="hl2"><td>Lesão corporal leve — CP, art. 129, caput</td><td>Detenção de 3 meses a 1 ano.</td><td>Representação (Lei 9.099, art. 88).</td><td>Se doméstica: art. 129, § 9º (reclusão de 2 a 5 anos), fora do art. 61 e da Lei 9.099. Conferir majorantes do § 12.</td></tr>
+      <tr class="hl2"><td>Lesão corporal culposa — CP, art. 129, § 6º</td><td>Detenção de 2 meses a 1 ano.</td><td>Representação (Lei 9.099, art. 88).</td><td>No trânsito, aplica-se o CTB (art. 303).</td></tr>
+      <tr class="hl2"><td>Constrangimento ilegal — CP, art. 146</td><td>Detenção de 3 meses a 1 ano, ou multa.</td><td>Pública incondicionada (regra do art. 100 do CP).</td><td>§ 1º: penas cumulativas e em dobro com mais de 3 pessoas ou emprego de arma.</td></tr>
+      <tr class="hl2"><td>Violação de domicílio — CP, art. 150, caput</td><td>Detenção de 1 a 3 meses, ou multa.</td><td>Pública incondicionada.</td><td>§ 1º (noite, local ermo, violência, arma ou concurso): detenção de 6 meses a 2 anos, além da pena da violência (concurso).</td></tr>
+      <tr class="hl2"><td>Dano — CP, art. 163, caput</td><td>Detenção de 1 a 6 meses, ou multa.</td><td>Queixa (art. 167).</td><td>Dano qualificado (parágrafo único): 6 meses a 3 anos e multa, fora do art. 61.</td></tr>
+      <tr class="hl2"><td>Resistência — CP, art. 329, caput</td><td>Detenção de 2 meses a 2 anos.</td><td>Pública incondicionada.</td><td>§ 1º (ato não executado): reclusão de 1 a 3 anos, fora do art. 61.</td></tr>
+      <tr class="hl2"><td>Desobediência — CP, art. 330</td><td>Detenção de 15 dias a 6 meses e multa.</td><td>Pública incondicionada.</td><td>—</td></tr>
+      <tr class="hl2"><td>Desacato — CP, art. 331</td><td>Detenção de 6 meses a 2 anos, ou multa.</td><td>Pública incondicionada.</td><td>No limite exato de 2 anos.</td></tr>
+      <tr class="hl2"><td>Receptação culposa — CP, art. 180, § 3º</td><td>Detenção de 1 mês a 1 ano, ou multa, ou ambas.</td><td>Pública incondicionada.</td><td>A receptação dolosa (caput) é reclusão de 2 a 6 anos e multa (Lei 15.397/2026), fora do art. 61.</td></tr>
+      <tr class="hl3"><td>CTB, art. 303, caput — lesão culposa na direção</td><td>Detenção de 6 meses a 2 anos e suspensão ou proibição de habilitação.</td><td>Representação (art. 291, § 1º, remete aos arts. 74, 76 e 88 da Lei 9.099).</td><td>Os benefícios do art. 291, § 1º são excluídos, entre outras hipóteses do próprio parágrafo, se o agente estiver sob influência de álcool ou substância psicoativa que determine dependência, ou em racha ou exibição não autorizada. O § 2º do art. 303 prevê reclusão de 2 a 5 anos para a condução com capacidade psicomotora alterada (conferir os demais elementos do tipo no texto).</td></tr>
+      <tr class="hl3"><td>CTB, arts. 307, 309, 310, 311 e 312</td><td>Art. 307: detenção de 6 meses a 1 ano e multa. Arts. 309, 310, 311 e 312: detenção de 6 meses a 1 ano, ou multa.</td><td>Pública incondicionada.</td><td>Art. 291, caput, manda aplicar a Lei 9.099 “no que couber”. O FONAJE (Enunciado 67) registra que a possibilidade de suspensão ou proibição de habilitação não afasta a competência do JECrim.</td></tr>
+      <tr class="hl5"><td>Lei 11.343/2006, art. 28 — posse para consumo pessoal</td><td>Advertência, prestação de serviços à comunidade, medida educativa (art. 28, I a III). Sem pena privativa.</td><td>Pública incondicionada.</td><td>Art. 48, § 1º: processado e julgado na forma dos arts. 60 e seguintes da Lei 9.099, salvo concurso com os arts. 33 a 37. STJ: competência do Juizado Especial estadual; admite transação e suspensão (JT 96, teses 11 e 12).</td></tr>
+      <tr class="hl5"><td>Lei 9.605/1998, art. 29 — fauna silvestre</td><td>Detenção de 6 meses a 1 ano e multa.</td><td>Pública incondicionada.</td><td>Art. 27: a transação penal depende de prévia composição do dano ambiental, salvo impossibilidade comprovada. O art. 28 regula o art. 89 da Lei 9.099 com modificações próprias (conferir o texto).</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 class="sub-title">B. Fora do art. 61, mas frequentemente confundidos na triagem</h3>
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Infração</th><th>Pena cominada</th><th>Consequência</th></tr></thead>
+    <tbody>
+      <tr class="hl4"><td>Furto simples — CP, art. 155, caput</td><td>Reclusão de 1 a 6 anos e multa (redação da Lei 15.397/2026).</td><td>Fora do art. 61. Pena mínima de 1 ano: em tese, cabe suspensão condicional do processo (art. 89). Antes da Lei 15.397/2026 o máximo era de 4 anos; não presumir que o tipo mantém a pena anterior.</td></tr>
+      <tr class="hl4"><td>Apropriação indébita — CP, art. 168</td><td>Reclusão de 1 a 4 anos e multa.</td><td>Fora do art. 61. Suspensão do processo em tese cabível (mínimo de 1 ano).</td></tr>
+      <tr class="hl4"><td>Estelionato — CP, art. 171, caput</td><td>Reclusão de 1 a 5 anos e multa (redação da Lei 15.397/2026).</td><td>Fora do art. 61. Suspensão do processo em tese cabível pela pena mínima; verificar ANPP (CPP, art. 28-A) e Súmula 243/STJ se houver concurso.</td></tr>
+      <tr class="hl4"><td>Lesão corporal doméstica — CP, art. 129, § 9º; § 13</td><td>Reclusão de 2 a 5 anos (Lei 14.994/2024; § 9º com nova redação do caput pela Lei 15.455/2026).</td><td>Fora do art. 61. Sem suspensão do processo (mínimo de 2 anos) e sem Lei 9.099 (Lei 11.340, art. 41).</td></tr>
+      <tr class="hl4"><td>Direção sob influência de álcool — CTB, art. 306</td><td>Detenção de 6 meses a 3 anos, multa e suspensão ou proibição de habilitação.</td><td>Fora do art. 61 (máximo de 3 anos). O FONAJE (Enunciado 54) entende que as medidas despenalizadoras, por força do art. 291, parágrafo único (hoje § 1º), não são processadas no JECrim.</td></tr>
+      <tr class="hl4"><td>Injúria qualificada — CP, art. 140, § 3º</td><td>Reclusão de 1 a 3 anos e multa.</td><td>Fora do art. 61. Suspensão do processo em tese cabível (mínimo de 1 ano).</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="source-note">Quando o tipo está fora do art. 61, as medidas ainda possíveis são a suspensão condicional do processo (pena mínima de até 1 ano, art. 89) e o acordo de não persecução penal (CPP, art. 28-A: pena mínima inferior a 4 anos, sem violência ou grave ameaça, com confissão). Ver comparativo na seção 10.</div>
+</section>
+
+<!-- ============ 06 ============ -->
+<section class="section" id="exclusoes">
+  <div class="section-header"><div class="section-num">06</div><div class="section-title"><span>Limites ao Art. 61</span>Quando a Lei 9.099 Não se Aplica Mesmo com Pena até 2 Anos</div></div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-red">
+      <h3>Violência doméstica e familiar contra a mulher</h3>
+      <div class="law-quote"><strong>Lei 11.340/2006, art. 41 <span class="vb vb-of" style="margin-left:0.4rem">Oficial</span></strong>“Aos crimes praticados com violência doméstica e familiar contra a mulher, independentemente da pena prevista, não se aplica a Lei nº 9.099, de 26 de setembro de 1995.”</div>
+      <ul class="mt1">
+        <li><strong>Súmula 536/STJ:</strong> a suspensão condicional do processo e a transação penal não se aplicam aos delitos sujeitos ao rito da Lei Maria da Penha.</li>
+        <li><strong>Súmula 542/STJ:</strong> a ação penal por lesão corporal resultante de violência doméstica contra a mulher é pública incondicionada.</li>
+        <li><strong>Súmula 588/STJ:</strong> crime ou contravenção com violência ou grave ameaça no ambiente doméstico impossibilita a substituição da pena privativa por restritiva de direitos.</li>
+        <li><strong>Súmula 589/STJ:</strong> inaplicável a insignificância a crimes ou contravenções praticados contra a mulher em relações domésticas.</li>
+        <li><strong>Súmula 600/STJ:</strong> a configuração da violência doméstica não exige coabitação.</li>
+        <li><strong>STF, ADI 4424 (09/02/2012):</strong> julgada procedente, por 10 votos a 1, quanto aos arts. 12, I, 16 e 41 da Lei 11.340; o STF esclareceu que não compete aos Juizados Especiais julgar crimes no âmbito da Lei Maria da Penha.</li>
+      </ul>
+      <div class="source-note">Textos das súmulas conforme STJ, Jurisprudência em Teses nº 209. ADI 4424 conforme notícia oficial do STF de 09/02/2012.</div>
+    </div>
+    <div class="card type-card tc-purple">
+      <h3>Estatuto da Pessoa Idosa e ECA</h3>
+      <div class="law-quote"><strong>Lei 10.741/2003, art. 94 e parágrafo único (Lei 15.163/2025) <span class="vb vb-of" style="margin-left:0.4rem">Oficial</span></strong>“Aos crimes previstos nesta Lei aplicam-se, no que couber, as disposições do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), e do Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal).<br>Parágrafo único. Aos crimes previstos nesta Lei e aos crimes praticados com violência contra a pessoa idosa, independentemente da pena prevista, não se aplica a Lei nº 9.099, de 26 de setembro de 1995.”</div>
+      <div class="law-quote"><strong>ECA, art. 230, § 2º (incluído pela Lei 15.163/2025) <span class="vb vb-of" style="margin-left:0.4rem">Oficial</span></strong>“Ao crime previsto neste artigo não se aplica a Lei nº 9.099, de 26 de setembro de 1995.”</div>
+      <p class="mt1">Antes da Lei 15.163/2025 (publicada em 4/7/2025), o art. 94 do Estatuto mandava aplicar o procedimento da Lei 9.099 aos crimes com pena máxima de até 4 anos, e o STF, na ADI 3096 (julgada em 16/06/2010, conforme fonte secundária), deu interpretação conforme para restringir a aplicação ao procedimento sumaríssimo, sem medidas despenalizadoras. Para fatos posteriores à vigência da Lei 15.163/2025, o texto atual exclui a Lei 9.099 por completo. Para fatos anteriores, conferir a discussão de direito intertemporal.</p>
+    </div>
+    <div class="card type-card tc-blue">
+      <h3>Justiça Militar</h3>
+      <div class="law-quote"><strong>Lei 9.099/1995, art. 90-A (incluído pela Lei 9.839/1999) <span class="vb vb-of" style="margin-left:0.4rem">Oficial</span></strong>“As disposições desta Lei não se aplicam no âmbito da Justiça Militar.”</div>
+      <p class="mt1">O STJ registra a constitucionalidade do art. 90-A (Jurisprudência em Teses nº 96, tese 9; RHC 81728/PA; AgRg no AREsp 1104239/MG; RHC 75753/DF).</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>Acordo de não persecução penal (ANPP)</h3>
+      <p>O CPP, art. 28-A, § 2º, exclui o ANPP quando for <strong>cabível a transação penal</strong> de competência dos Juizados Especiais Criminais (inciso I) e nos crimes praticados no âmbito de violência doméstica ou familiar, ou contra a mulher por razões da condição do sexo feminino, em favor do agressor (inciso IV). Também exclui quem foi beneficiado nos 5 anos anteriores por ANPP, transação penal ou suspensão condicional do processo (inciso III).</p>
+      <div class="source-note">Transcrição do texto compilado do CPP no Planalto, com a nota “Vide ADI 6.298” aposta pelo próprio site.</div>
+    </div>
+  </div>
+
+  <div class="alert alert-gold mt2"><span class="alert-tag">Alterações recentes</span><div><strong>Lei 14.994/2024:</strong> aumentou penas de crimes contra a mulher por razões da condição do sexo feminino (lesão corporal, § 13 do art. 129, e ameaça em dobro, entre outros). <strong>Lei 15.438, de 18/06/2026:</strong> ampliou para 12 meses o prazo decadencial da queixa e da representação em crimes de violência doméstica e familiar contra a mulher (CP, art. 103, parágrafo único; CPP, art. 38, § 2º; Lei 11.340, art. 16-A). <strong>Lei 15.455/2026:</strong> deu nova redação ao § 9º do art. 129 do CP para incluir expressamente a pessoa com relação de trabalho doméstico. A aplicação temporal da Lei 15.438 a fatos anteriores a 19/06/2026 é tema aberto; conferir a jurisprudência mais recente antes de fixar o prazo.</div></div>
+</section>
+
+<!-- ============ 07 ============ -->
+<section class="section" id="competencia">
+  <div class="section-header"><div class="section-num">07</div><div class="section-title"><span>Juízo Competente</span>Competência e Deslocamentos</div></div>
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Situação</th><th>Regra</th><th>Fundamento</th><th>Verificação</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Regra geral</td><td>O JECrim tem competência para a conciliação, o julgamento e a execução das infrações de menor potencial ofensivo.</td><td>CF, art. 98, I; Lei 9.099, art. 60.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl"><td>Natureza da competência</td><td>Relativa, no que toca à conexão e à continência: a Constituição não torna o JECrim instância exclusiva, mas garante o procedimento célere e os institutos despenalizadores. O STF julgou improcedente, por unanimidade, a ADI 5264 (sessão virtual encerrada em 4/12/2020, Rel. Min. Cármen Lúcia), proposta pela PGR contra os arts. 1º e 2º da Lei 11.313/2006.</td><td>STF, ADI 5264; Lei 9.099, art. 60, caput e parágrafo único.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Conexão ou continência com crime comum ou do júri</td><td>O feito é reunido no juízo comum ou no tribunal do júri, mas “observar-se-ão os institutos da transação penal e da composição dos danos civis” quanto à infração de menor potencial ofensivo.</td><td>Art. 60, parágrafo único; ADI 5264. O FONAJE (Enunciado 10) registra que, havendo conexão, prevalece a competência do juízo penal comum.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr><td>Foro</td><td>“A competência do Juizado será determinada pelo lugar em que foi praticada a infração penal.”</td><td>Art. 63.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl4"><td>Acusado não encontrado para citação</td><td>“O Juiz encaminhará as peças existentes ao Juízo comum para adoção do procedimento previsto em lei.” Segundo o FONAJE, a remessa exaure a competência do JECrim, que não se restabelece com a localização do acusado (Enunciado 51). O Enunciado 64 trata do caso em que a certidão do oficial de justiça é anterior à denúncia. O Enunciado 110 admite citação por hora certa no JECrim.</td><td>Art. 66, parágrafo único; FONAJE, Enunciados 51, 64 e 110.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span> <span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl4"><td>Complexidade ou circunstâncias que impeçam a denúncia oral</td><td>O MP pode requerer o encaminhamento das peças ao juízo comum (art. 77, § 2º; queixa: § 3º). Para o FONAJE, a remessa exaure a competência do JECrim, ainda que afastada depois a complexidade (Enunciado 52); nesses casos as peças vão antes à delegacia para as diligências (Enunciado 18).</td><td>Art. 77, §§ 2º e 3º; FONAJE, Enunciados 18 e 52.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span> <span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl5"><td>Recurso</td><td>Apelação à Turma de três juízes de primeiro grau, reunida na sede do Juizado (art. 82). Habeas corpus contra acórdão de Turma Recursal compete aos Tribunais de Justiça ou aos Tribunais Regionais Federais.</td><td>Art. 82; STJ, JT 93, tese 1 (AgRg no RHC 137285/SP; AgRg no HC 421161/SP).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr><td>Uso de droga (Lei 11.343/2006, art. 28)</td><td>Competência do Juizado Especial estadual, pois a conduta não está prevista em tratado internacional e a lei não a incluiu entre as de competência da Justiça Federal.</td><td>STJ, JT 96, tese 11 (CC 172464/MS; CC 169477/MT; CC 144910/MS).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr><td>Execução das penas da transação</td><td>Competente o JECrim, salvo se houver central ou vara de penas e medidas alternativas com competência específica.</td><td>FONAJE, Enunciado 87.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr><td>Justiça Federal</td><td>Aplica-se a Lei 9.099 no que não conflitar com a Lei 10.259 (art. 1º); compete ao Juizado Especial Federal Criminal processar e julgar as infrações de menor potencial ofensivo de competência federal, respeitadas a conexão e a continência (art. 2º).</td><td>Lei 10.259/2001, arts. 1º e 2º (redação da Lei 11.313/2006).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ============ 08 ============ -->
+<section class="section" id="audiencia-preliminar">
+  <div class="section-header"><div class="section-num">08</div><div class="section-title"><span>Fase Preliminar — Arts. 69 a 76</span>Termo Circunstanciado, Composição Civil e Transação Penal</div></div>
+
+  <h3 class="sub-title">Antes da audiência: termo circunstanciado e intimação</h3>
+  <div class="card-grid card-grid-3">
+    <div class="card type-card tc-blue">
+      <h3>Termo circunstanciado (art. 69)</h3>
+      <p>A autoridade policial que tomar conhecimento da ocorrência lavra o termo circunstanciado e o encaminha imediatamente ao Juizado, com o autor do fato e a vítima, providenciando as requisições dos exames periciais necessários. Quem é encaminhado ou assume o compromisso de comparecer não sofre prisão em flagrante nem lhe é exigida fiança.</p>
+      <p class="source-note">O FONAJE (Enunciado 34) admite o termo lavrado pela Polícia Civil ou Militar, conforme as peculiaridades locais.</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>Intimação (arts. 67 e 68)</h3>
+      <p>O ato de intimação do autor do fato deve constar a necessidade de comparecimento <strong>acompanhado de advogado</strong>, com a advertência de que, na falta, será designado defensor público (art. 68). A intimação pode ser por correspondência com aviso de recebimento, por oficial de justiça ou por qualquer meio idôneo de comunicação (art. 67).</p>
+      <p class="source-note">O FONAJE (Enunciado 129, 43º Encontro) considera válidas as intimações por telefone, e-mail ou aplicativo de mensagens, desde que precedidas de adesão expressa do interessado.</p>
+    </div>
+    <div class="card type-card tc-green">
+      <h3>Provas e peças a reunir</h3>
+      <p>O Enunciado 42 do FONAJE admite que a oitiva informal dos envolvidos e de testemunhas, colhida no âmbito do JECrim, seja usada como peça de informação. Para a denúncia oral, o art. 77, § 1º, dispensa o exame de corpo de delito quando a materialidade estiver aferida por boletim médico ou prova equivalente.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Na audiência preliminar (arts. 70 a 73)</h3>
+  <div class="law-quote"><strong>Art. 72 <span class="vb vb-of" style="margin-left:0.4rem">Oficial</span></strong>“Na audiência preliminar, presente o representante do Ministério Público, o autor do fato e a vítima e, se possível, o responsável civil, acompanhados por seus advogados, o Juiz esclarecerá sobre a possibilidade da composição dos danos e da aceitação da proposta de aplicação imediata de pena não privativa de liberdade.”</div>
+  <div class="card-grid card-grid-2 mt1">
+    <div class="card">
+      <h3>Condução e comparecimento</h3>
+      <ul>
+        <li><strong>Conciliação</strong> conduzida pelo juiz ou por conciliador sob sua orientação, recrutado preferencialmente entre bacharéis em Direito (art. 73). O FONAJE entende que o conciliador ou o juiz leigo pode presidir a audiência preliminar e encaminhar a proposta de transação (Enunciados 70 e 71).</li>
+        <li><strong>Audiência individual:</strong> Enunciado 106 do FONAJE.</li>
+        <li><strong>Falta de comparecimento de qualquer dos envolvidos:</strong> a Secretaria providencia nova intimação e, se for o caso, a do responsável civil (art. 71). Se não for possível a audiência imediata, designa-se data próxima, da qual ambos saem cientes (art. 70).</li>
+        <li><strong>Ausência injustificada do autor do fato:</strong> vista ao MP para o procedimento cabível (FONAJE, Enunciado 1); o art. 77 autoriza a denúncia oral quando não houve aplicação de pena pela ausência do autor.</li>
+        <li><strong>Ausência da vítima, intimada ou não localizada:</strong> renúncia tácita à representação, segundo o FONAJE (Enunciado 117). Confrontar com o art. 75, parágrafo único, que diz que o não oferecimento da representação na audiência não implica decadência do direito, exercível no prazo legal.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Ordem recomendada de trabalho</h3>
+      <ol>
+        <li>Conferir qualificação, tipo penal imputado e ação penal (queixa, representação ou incondicionada).</li>
+        <li>Tentar a composição dos danos civis (art. 74).</li>
+        <li>Se não houver acordo e a ação for condicionada, colher a representação (art. 75).</li>
+        <li>Se houver representação, ou se a ação for incondicionada, e não for caso de arquivamento, o MP pode propor a transação penal (art. 76).</li>
+        <li>Sem transação, o MP oferece denúncia oral (art. 77) e designa-se a instrução.</li>
+      </ol>
+      <div class="source-note"><span class="vb vb-pr" style="margin-left:0">Prática</span> A ordem acima decorre da sequência dos arts. 72 a 77.</div>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Composição dos danos civis (arts. 74 e 75)</h3>
+  <div class="card-grid card-grid-2">
+    <div>
+      <div class="law-quote"><strong>Art. 74 <span class="vb vb-of" style="margin-left:0.4rem">Oficial</span></strong>“A composição dos danos civis será reduzida a escrito e, homologada pelo Juiz mediante sentença irrecorrível, terá eficácia de título a ser executado no juízo civil competente.<br><em>Parágrafo único.</em> Tratando-se de ação penal de iniciativa privada ou de ação penal pública condicionada à representação, o acordo homologado acarreta a renúncia ao direito de queixa ou representação.”</div>
+      <div class="law-quote"><strong>Art. 75 <span class="vb vb-of" style="margin-left:0.4rem">Oficial</span></strong>“Não obtida a composição dos danos civis, será dada imediatamente ao ofendido a oportunidade de exercer o direito de representação verbal, que será reduzida a termo.<br><em>Parágrafo único.</em> O não oferecimento da representação na audiência preliminar não implica decadência do direito, que poderá ser exercido no prazo previsto em lei.”</div>
+    </div>
+    <div class="card">
+      <h3>Efeitos e orientações do FONAJE <span class="vb vb-sec">Secundária</span></h3>
+      <ul>
+        <li><strong>Valor e matéria:</strong> o acordo civil pode versar sobre qualquer valor ou matéria (Enunciado 37); havendo solução possível para o litígio subjacente, de qualquer valor ou matéria, o acordo pode ser reduzido a termo no JECrim e encaminhado ao juízo competente (Enunciado 89).</li>
+        <li><strong>Obrigação de fazer ou não fazer:</strong> deve conter cláusula penal em valor certo, para facilitar a execução cível (Enunciado 43).</li>
+        <li><strong>Prescrição e decadência</strong> não impedem a homologação da composição civil (Enunciado 74).</li>
+        <li><strong>Justa causa:</strong> havendo vítima determinada, em caso de desinteresse ou de composição civil, deixa de existir justa causa para a ação penal (Enunciado 99).</li>
+        <li><strong>Extinção da punibilidade</strong> até a sentença, pela renúncia expressa da vítima à representação ou pela conciliação (Enunciado 113).</li>
+        <li><strong>Mediação:</strong> é possível no JECrim (Enunciado 119); na transação, observar a justiça restaurativa e a proporcionalidade (Enunciado 116).</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Transação penal (art. 76)</h3>
+  <div class="law-quote"><strong>Art. 76, caput <span class="vb vb-of" style="margin-left:0.4rem">Oficial</span></strong>“Havendo representação ou tratando-se de crime de ação penal pública incondicionada, não sendo caso de arquivamento, o Ministério Público poderá propor a aplicação imediata de pena restritiva de direitos ou multas, a ser especificada na proposta.”</div>
+  <div class="tbl-scroll mt1">
+  <table class="comp-table">
+    <thead><tr><th>Dispositivo</th><th>Conteúdo</th><th>Leitura para a audiência</th></tr></thead>
+    <tbody>
+      <tr class="hl3"><td>§ 1º</td><td>Sendo a multa a única pena aplicável, o Juiz pode reduzi-la até a metade.</td><td>A multa é fixada em dias-multa (FONAJE, Enunciado 8, com base no art. 92 da Lei 9.099).</td></tr>
+      <tr class="hl4"><td>§ 2º, I</td><td>Não se admite a proposta se comprovado ter sido o autor da infração condenado, pela prática de crime, à pena privativa de liberdade, por sentença definitiva.</td><td>Conferir certidões e a folha de antecedentes antes da audiência.</td></tr>
+      <tr class="hl4"><td>§ 2º, II</td><td>Não se admite se o agente foi beneficiado anteriormente, no prazo de cinco anos, pela aplicação de pena restritiva ou multa, nos termos do art. 76.</td><td>O registro da transação existe apenas para impedir novo benefício em 5 anos (§ 4º). O STJ aplica, por analogia, o prazo de 5 anos ao sursis processual (JT 93, tese 9).</td></tr>
+      <tr class="hl4"><td>§ 2º, III</td><td>Não se admite se os antecedentes, a conduta social e a personalidade do agente, bem como os motivos e as circunstâncias, não indicarem ser necessária e suficiente a adoção da medida.</td><td>É o campo de argumentação da defesa e do MP: ausência de reiteração, reparação do dano, primariedade.</td></tr>
+      <tr class="hl2"><td>§ 3º</td><td>Aceita a proposta pelo autor da infração <strong>e seu defensor</strong>, será submetida à apreciação do Juiz.</td><td>Exige a concordância do autor e do defensor. O FONAJE destaca a ampla defesa também na fase da transação (Enunciado 111).</td></tr>
+      <tr class="hl2"><td>§ 4º</td><td>Acolhida a proposta, o Juiz aplica a pena restritiva ou multa, que <strong>não importa reincidência</strong>, sendo registrada apenas para impedir novamente o mesmo benefício no prazo de cinco anos.</td><td>Ver STJ, JT 93, tese 7: a transação não tem natureza de condenação criminal, não gera efeitos de reincidência e maus antecedentes e não significa reconhecimento da culpabilidade nem da responsabilidade civil.</td></tr>
+      <tr class="hl3"><td>§ 5º</td><td>Da sentença do § 4º cabe a apelação do art. 82.</td><td>Prazo de 10 dias (art. 82, § 1º).</td></tr>
+      <tr class="hl3"><td>§ 6º</td><td>A sanção não consta de certidão de antecedentes criminais (salvo para o fim do § 4º) e <strong>não tem efeitos civis</strong>, cabendo aos interessados propor a ação cabível no juízo cível.</td><td>STF, Tema 187: os efeitos do art. 91 do CP decorrem de sentença condenatória, e a sentença da transação é meramente homologatória.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card type-card tc-red">
+      <h3>Descumprimento da transação</h3>
+      <p><strong>Súmula Vinculante 35 (DJe 24/04/2014):</strong> “A homologação da transação penal prevista no artigo 76 da Lei 9.099/1995 não faz coisa julgada material e, descumpridas suas cláusulas, retoma-se a situação anterior, possibilitando-se ao Ministério Público a continuidade da persecução penal mediante oferecimento de denúncia ou requisição de inquérito policial.” Origem: RE 602.072 QO-RG (Tema 238).</p>
+      <p>Prescrição na transação homologada e não cumprida: o decurso do prazo prescricional provoca a declaração de extinção da punibilidade pela prescrição da pretensão punitiva (FONAJE, Enunciado 44, nova redação, XXXVII Encontro).</p>
+      <span class="vb vb-of" style="margin-left:0">Oficial</span> <span class="vb vb-sec" style="margin-left:0">Secundária</span>
+    </div>
+    <div class="card type-card tc-purple">
+      <h3>Momento, recusa do MP e controle judicial</h3>
+      <ul>
+        <li><strong>Momento:</strong> opera-se a preclusão se a proposta de transação ou de sursis for oferecida após a prolação da sentença condenatória (STJ, JT 96, tese 5). O FONAJE admite a proposta até o final da instrução (Enunciado 114).</li>
+        <li><strong>MP não propõe:</strong> aplica-se, por analogia, o art. 28 do CPP (FONAJE, Enunciado 86; para o sursis, STF, Súmula 696). Ler a remissão à luz da redação do art. 28 do CPP dada pela Lei 13.964/2019 e conferir o mecanismo adotado no foro.</li>
+        <li><strong>Homologação:</strong> o juiz pode deixar de homologar a transação por atipicidade, prescrição ou falta de justa causa, o que equivale à rejeição da denúncia ou queixa (FONAJE, Enunciado 73).</li>
+        <li><strong>Conteúdo:</strong> proposta e sentença homologatória devem conter o tipo infracional imputado, independentemente da capitulação do termo circunstanciado (Enunciado 72). O juiz pode alterar a destinação das medidas (77) e adequar, no juízo deprecado ou da execução, as condições (92). As restritivas são fungíveis entre si (102).</li>
+        <li><strong>Ação privada:</strong> cabem transação e suspensão do processo mediante proposta do MP (Enunciado 112).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 09 ============ -->
+<section class="section" id="instrucao">
+  <div class="section-header"><div class="section-num">09</div><div class="section-title"><span>Rito Sumaríssimo — Arts. 77 a 87</span>Denúncia Oral, Audiência de Instrução e Julgamento e Recursos</div></div>
+
+  <div class="card-grid card-grid-3">
+    <div class="card type-card tc-blue">
+      <h3>Denúncia oral (art. 77)</h3>
+      <p>Na ação penal pública, não havendo aplicação de pena (por ausência do autor do fato ou por inocorrência da transação), o MP oferece <strong>denúncia oral</strong>, de imediato, se não houver necessidade de diligências imprescindíveis. A denúncia é elaborada com base no termo circunstanciado, com dispensa do inquérito policial (§ 1º). Se a complexidade impedir, requer o encaminhamento ao juízo comum (§ 2º). Na ação privada, a queixa também pode ser oral (§ 3º).</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>Citação e ciência (art. 78)</h3>
+      <p>Oferecida a denúncia ou queixa, é reduzida a termo e entregue cópia ao acusado, que com ela fica <strong>citado</strong> e cientificado de dia e hora da audiência de instrução e julgamento. O acusado deve trazer suas testemunhas ou apresentar requerimento para intimação, <strong>no mínimo cinco dias antes</strong> da audiência (§ 1º). Ofendido e responsável civil ausentes serão intimados (§ 2º).</p>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>Audiência una (arts. 79 e 80)</h3>
+      <p>Se na fase preliminar não houve possibilidade de tentativa de conciliação e de proposta do MP, procede-se, no dia da instrução, nos termos dos arts. 72 a 75 (art. 79). <strong>Nenhum ato será adiado</strong>, determinando o Juiz, quando imprescindível, a condução coercitiva de quem deva comparecer (art. 80).</p>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Sequência da audiência de instrução e julgamento (art. 81)</h3>
+  <div class="flow-wrap"><div class="flow-center">
+    <div class="flow-node flow-box-navy"><b>1.</b> Palavra ao defensor para <b>responder à acusação</b><small>Art. 81, caput. O FONAJE entende que o art. 396 do CPP não se aplica ao JECrim, que tem regra própria (Enunciado 108), e que, no sursis, o recebimento da denúncia deve ser precedido da resposta do art. 81 (Enunciado 53).</small></div>
+    <div class="flow-arrow">▼</div>
+    <div class="flow-node flow-box-gold"><b>2.</b> Juiz recebe, ou não, a denúncia ou queixa</div>
+    <div class="flow-arrow">▼</div>
+    <div class="flow-node flow-box-blue"><b>3.</b> Oitiva da vítima e das testemunhas de acusação e defesa<small>O FONAJE reconhece o direito do réu de assistir à inquirição das testemunhas antes do seu interrogatório (Enunciado 66).</small></div>
+    <div class="flow-arrow">▼</div>
+    <div class="flow-node flow-box-blue"><b>4.</b> Interrogatório do acusado, se presente</div>
+    <div class="flow-arrow">▼</div>
+    <div class="flow-node flow-box-purple"><b>5.</b> Debates orais e sentença na própria audiência<small>Sentença dispensado o relatório, mencionando os elementos de convicção do Juiz (§ 3º). Termo com breve resumo dos fatos relevantes e a sentença (§ 2º).</small></div>
+  </div></div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card">
+      <h3>Provas e condução da audiência</h3>
+      <ul>
+        <li><strong>Todas as provas</strong> são produzidas na audiência, podendo o juiz limitar ou excluir as excessivas, impertinentes ou protelatórias (§ 1º).</li>
+        <li><strong>Dignidade da vítima</strong> (§ 1º-A, Lei 14.245/2021): todas as partes e demais sujeitos presentes devem respeitar a dignidade da vítima, sob pena de responsabilização civil, penal e administrativa, cabendo ao juiz garantir o cumprimento. São vedadas a manifestação sobre circunstâncias ou elementos alheios aos fatos objeto de apuração e a utilização de linguagem, informações ou material que ofendam a dignidade da vítima ou de testemunhas.</li>
+        <li><strong>Registro:</strong> apenas atos essenciais são registrados por escrito; os atos de audiência podem ser gravados (art. 65, § 3º). O FONAJE admite fundamentação oral, com gravação, consignando por escrito somente a dosimetria e o dispositivo (Enunciado 127).</li>
+        <li><strong>Nulidades:</strong> não se pronuncia nulidade sem prejuízo (art. 65, § 1º).</li>
+        <li><strong>Intimação do defensor público:</strong> não se exige a intimação pessoal; admite-se na sessão de julgamento ou pela imprensa oficial (STJ, JT 93, tese 3).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Sentença, recursos e execução</h3>
+      <ul>
+        <li><strong>Apelação</strong> da decisão de rejeição da denúncia ou queixa e da sentença, no prazo de <strong>10 dias</strong>, por petição escrita com razões; resposta em 10 dias; julgamento por Turma de três juízes de primeiro grau (art. 82, §§ 1º e 2º). Se a sentença for confirmada pelos próprios fundamentos, a súmula do julgamento serve de acórdão (§ 5º).</li>
+        <li><strong>Embargos de declaração</strong> por escrito ou oralmente, em <strong>5 dias</strong>; interrompem o prazo para recurso (art. 83, § 1º e § 2º, redação da Lei 13.105/2015). Erros materiais podem ser corrigidos de ofício (§ 3º).</li>
+        <li><strong>Recurso em sentido estrito</strong> é incabível no JECrim (FONAJE, Enunciado 48).</li>
+        <li><strong>Multa:</strong> pagamento na Secretaria do Juizado; efetuado, extingue-se a punibilidade (art. 84). Não paga, converte-se nos termos previstos em lei (art. 85). Despesas processuais reduzidas na homologação do acordo civil e na aplicação de pena do art. 76, § 4º (art. 87).</li>
+        <li><strong>Representação</strong> exigida na lesão corporal leve e na lesão culposa, além das hipóteses do CP e da legislação especial (art. 88).</li>
+      </ul>
+    </div>
+  </div>
+  <div class="source-note">Todos os dispositivos legais desta seção foram conferidos no texto compilado do Planalto (Lei 9.099/1995). Enunciados do FONAJE: compilação de terceiros atualizada até 06/02/2024 (49º Encontro); ver seção 17.</div>
+</section>
+
+<!-- ============ 10 ============ -->
+<section class="section" id="sursis">
+  <div class="section-header"><div class="section-num">10</div><div class="section-title"><span>Art. 89</span>Suspensão Condicional do Processo e Comparativo dos Institutos</div></div>
+
+  <div class="law-quote"><strong>Art. 89, caput <span class="vb vb-of" style="margin-left:0.4rem">Oficial</span></strong>“Nos crimes em que a pena mínima cominada for igual ou inferior a um ano, abrangidas ou não por esta Lei, o Ministério Público, ao oferecer a denúncia, poderá propor a suspensão do processo, por dois a quatro anos, desde que o acusado não esteja sendo processado ou não tenha sido condenado por outro crime, presentes os demais requisitos que autorizariam a suspensão condicional da pena (art. 77 do Código Penal).”</div>
+
+  <div class="card-grid card-grid-2 mt1">
+    <div class="card">
+      <h3>Condições e vida do instituto</h3>
+      <ul>
+        <li><strong>Condições legais (§ 1º):</strong> reparação do dano, salvo impossibilidade; proibição de frequentar determinados lugares; proibição de ausentar-se da comarca sem autorização; comparecimento pessoal e obrigatório mensal para informar e justificar atividades.</li>
+        <li><strong>Outras condições (§ 2º):</strong> o juiz pode especificar outras, adequadas ao fato e à situação pessoal do acusado. O STJ admite obrigações equivalentes, na prática, a sanções (prestação de serviços ou pecuniária) como simples condições do sursis (JT 93, tese 4, Tema 930), e a perda do valor da fiança como condição legítima (tese 5).</li>
+        <li><strong>Revogação obrigatória (§ 3º):</strong> processo por outro crime ou falta de reparação do dano sem motivo justificado. <strong>Facultativa (§ 4º):</strong> processo por contravenção ou descumprimento de outra condição.</li>
+        <li><strong>Efeitos:</strong> expirado o prazo sem revogação, extingue-se a punibilidade (§ 5º); não corre a prescrição durante a suspensão (§ 6º). Se o acusado não aceita, o processo prossegue (§ 7º).</li>
+        <li><strong>Descumprimento após o prazo:</strong> o benefício pode ser revogado, mesmo ultrapassado o prazo legal, desde que o descumprimento se refira a fato ocorrido durante sua vigência (STJ, JT 96, tese 4, Tema 920). O FONAJE (Enunciado 123) afirma que o mero decurso do prazo sem cumprimento integral não extingue automaticamente a punibilidade.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Tetos, concurso e recusa do MP</h3>
+      <ul>
+        <li><strong>Pena mínima de até 1 ano:</strong> a ampliação do conceito de menor potencial ofensivo para 2 anos não alterou esse requisito (STJ, JT 96, tese 1).</li>
+        <li><strong>Concurso material, concurso formal e continuidade delitiva:</strong> o sursis não é aplicável quando a pena mínima, pelo somatório ou pela majorante, ultrapassa 1 ano (Súmula 243/STJ, conforme JT 96, tese 6). Para o crime continuado, a Súmula 723/STF afasta o sursis se a soma da pena mínima da infração mais grave com o aumento mínimo de 1/6 for superior a 1 ano.</li>
+        <li><strong>Desclassificação e procedência parcial:</strong> é cabível a suspensão (Súmula 337/STJ); os autos vão ao MP para manifestar-se sobre o sursis ou a transação (JT 93, teses 10 e 11).</li>
+        <li><strong>Natureza:</strong> não é direito subjetivo, mas poder-dever do MP, que deve decidir de forma fundamentada (JT 96, tese 3). Havendo requisitos e recusa do promotor, o juiz, dissentindo, remete ao Procurador-Geral por analogia ao art. 28 do CPP (Súmula 696/STF).</li>
+        <li><strong>Inquérito em curso</strong> não é circunstância idônea para obstar a proposta (JT 96, tese 7). A extinção da punibilidade por sursis anterior não pode ser valorada como maus antecedentes, personalidade ou conduta social (tese 8).</li>
+        <li><strong>Multa alternativa:</strong> o sursis e a transação são cabíveis (JT 96, tese 2).</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Comparativo: transação penal × suspensão condicional do processo × ANPP</h3>
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Aspecto</th><th>Transação penal — Lei 9.099, art. 76</th><th>Suspensão do processo — Lei 9.099, art. 89</th><th>ANPP — CPP, art. 28-A</th></tr></thead>
+    <tbody>
+      <tr class="hl"><td>Teto de pena</td><td>Infração de menor potencial ofensivo (art. 61): contravenção ou crime com máximo até 2 anos.</td><td>Pena mínima igual ou inferior a 1 ano, abrangidas ou não pela Lei 9.099.</td><td>Pena mínima inferior a 4 anos; considera-se, para a aferição, as causas de aumento e diminuição aplicáveis ao caso concreto (§ 1º).</td></tr>
+      <tr><td>Momento</td><td>Audiência preliminar, antes da denúncia. Preclusão após sentença condenatória (STJ).</td><td>Ao oferecer a denúncia. Preclusão após sentença condenatória (STJ).</td><td>Antes do oferecimento da denúncia, “não sendo caso de arquivamento”.</td></tr>
+      <tr class="hl3"><td>Exigência quanto à confissão</td><td>Não exige confissão; a aceitação não significa reconhecimento de culpabilidade (STJ, JT 93, tese 7).</td><td>Não prevista no art. 89.</td><td>Confissão formal e circunstanciada.</td></tr>
+      <tr><td>Quem propõe</td><td>Ministério Público; aceitação pelo autor e pelo defensor (§ 3º).</td><td>Ministério Público; aceitação pelo acusado e pelo defensor, na presença do juiz (§ 1º).</td><td>Ministério Público; formalizado por escrito com o investigado e o defensor; homologação em audiência (§§ 3º e 4º).</td></tr>
+      <tr class="hl3"><td>Impedimentos</td><td>Condenação definitiva por crime a pena privativa de liberdade; benefício igual nos 5 anos anteriores; antecedentes e circunstâncias não indicando suficiência (§ 2º).</td><td>Acusado em processo ou condenado por outro crime; demais requisitos do art. 77 do CP.</td><td>Reincidência ou conduta habitual; benefício nos 5 anos anteriores (ANPP, transação, sursis); cabimento de transação do JECrim; violência doméstica ou contra a mulher por razões do sexo feminino (§ 2º).</td></tr>
+      <tr><td>Conteúdo</td><td>Pena restritiva de direitos ou multa especificada na proposta.</td><td>Período de prova de 2 a 4 anos, com condições.</td><td>Condições cumulativas ou alternativas: reparação do dano, renúncia a bens, serviço à comunidade, prestação pecuniária, outra condição proporcional (incisos I a V).</td></tr>
+      <tr class="hl2"><td>Efeitos</td><td>Não gera reincidência; registro só para o impedimento de 5 anos; fora da certidão de antecedentes; sem efeitos civis.</td><td>Cumprido o prazo, extingue-se a punibilidade; a prescrição não corre.</td><td>Conforme o art. 28-A (consultar os demais parágrafos para os efeitos do cumprimento).</td></tr>
+      <tr class="hl4"><td>Violência doméstica contra a mulher</td><td>Não se aplica (Lei 11.340, art. 41; Súmula 536/STJ).</td><td>Não se aplica (idem).</td><td>Vedado em favor do agressor (§ 2º, IV).</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="source-note">Células do ANPP restritas ao que foi lido no caput e nos §§ 1º a 5º do art. 28-A do CPP (texto compilado do Planalto, que traz a nota “Vide ADI 6.298”). Os demais parágrafos do art. 28-A não foram transcritos nesta página.</div>
+</section>
+
+<!-- ============ 11 ============ -->
+<section class="section" id="fluxograma">
+  <div class="section-header"><div class="section-num">11</div><div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma Completo do Art. 61 até a Sentença</div></div>
+  <div class="flow-wrap"><div class="flow-center">
+
+    <div class="flow-node flow-start">Fato com aparência de infração penal — termo circunstanciado</div>
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+
+    <div class="flow-node flow-box-navy"><b>PASSO 1 — Qualificar o fato (art. 61)</b><small>É contravenção penal? Se for crime, qual a pena máxima do tipo, com qualificadoras e majorantes no maior patamar?</small></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">Contravenção</div><div class="flow-node flow-box-green">Menor potencial ofensivo<small>Segue ao Passo 2.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Crime com pena máxima até 2 anos</div><div class="flow-node flow-box-green">Menor potencial ofensivo<small>Verificar concurso: soma ou exasperação acima de 2 anos afasta o JECrim (STJ, JT 96, tese 10).</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Crime com pena máxima acima de 2 anos</div><div class="flow-node flow-box-red">Fora do art. 61<small>Rito comum. Avaliar suspensão do processo (art. 89, pena mínima até 1 ano) e ANPP (CPP, art. 28-A).</small></div><div class="flow-arrow">▼</div><div class="flow-node flow-end-red">Juízo comum</div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 2 — Há exclusão legal ou deslocamento?</b><small>Violência doméstica contra a mulher (Lei 11.340, art. 41) · Estatuto da Pessoa Idosa (art. 94, parágrafo único) · ECA art. 230, § 2º · Justiça Militar (art. 90-A) · conexão com crime comum ou do júri (art. 60) · complexidade ou citação impossível (arts. 66, parágrafo único, e 77, § 2º)</small></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">Exclusão legal</div><div class="flow-node flow-end-red">Lei 9.099 não se aplica<small>Sem transação nem sursis nos casos de violência doméstica (Súmula 536/STJ).</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Conexão com crime comum ou júri</div><div class="flow-node flow-end-blue">Juízo comum ou júri<small>Preservadas a transação e a composição dos danos civis (art. 60, parágrafo único).</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Complexidade ou citação impossível</div><div class="flow-node flow-end-purple">Remessa ao juízo comum<small>Art. 66, parágrafo único; art. 77, § 2º.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Nenhuma exclusão</div><div class="flow-node flow-box-green">Segue no JECrim</div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 3 — Audiência preliminar (arts. 70 a 72)</b><small>Autor do fato, vítima, MP e advogados. Conferir ação penal: queixa, representação ou incondicionada.</small></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">Autor ausente</div><div class="flow-node flow-box-gold">Vista ao MP (FONAJE 1)<small>Denúncia oral possível (art. 77).</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Vítima ausente</div><div class="flow-node flow-box-gold">Renúncia tácita à representação (FONAJE 117)<small>Ver art. 75, parágrafo único.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Ambos presentes</div><div class="flow-node flow-box-blue">Passo 4</div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 4 — Composição dos danos civis (art. 74)</b><small>Acordo reduzido a escrito e homologado por sentença irrecorrível; título executivo no juízo cível.</small></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">Acordo e ação privada ou condicionada</div><div class="flow-node flow-end-green">Renúncia a queixa ou representação<small>Art. 74, parágrafo único. Extinção da punibilidade.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Acordo e ação pública incondicionada</div><div class="flow-node flow-box-gold">Reparação civil resolvida<small>O art. 74, parágrafo único, não alcança a ação incondicionada; o MP segue ao Passo 6. Ver FONAJE 99 sobre justa causa.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Sem acordo</div><div class="flow-node flow-box-blue">Passo 5</div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 5 — Representação (art. 75)</b><small>Ação condicionada: oferecimento verbal, reduzido a termo. Não oferecida na audiência, a decadência não ocorre de imediato; vale o prazo legal (art. 75, parágrafo único).</small></div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 6 — Transação penal (art. 76)</b><small>Cabível se houver representação ou ação incondicionada, não sendo caso de arquivamento. Conferir os impedimentos do § 2º, I a III.</small></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">MP propõe e autor com defensor aceitam</div><div class="flow-node flow-box-green">Homologação (§ 4º)<small>Sem reincidência; sem certidão; sem efeitos civis.</small></div><div class="flow-arrow">▼</div><div class="flow-node flow-box-gold">Cumprimento</div><div class="flow-arrow">▼</div><div class="flow-node flow-end-green">Extinção da punibilidade</div></div>
+      <div class="flow-branch"><div class="flow-label">Descumprimento</div><div class="flow-node flow-box-red">Retoma-se a situação anterior<small>Súmula Vinculante 35: denúncia ou requisição de inquérito.</small></div><div class="flow-arrow">▼</div><div class="flow-node flow-box-blue">Passo 7</div></div>
+      <div class="flow-branch"><div class="flow-label">MP não propõe ou autor recusa</div><div class="flow-node flow-box-gold">Se o MP não propõe: analogia ao art. 28 do CPP (FONAJE 86)</div><div class="flow-arrow">▼</div><div class="flow-node flow-box-blue">Passo 7</div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 7 — Denúncia oral e designação da instrução (arts. 77 e 78)</b><small>Sem inquérito policial. Acusado citado na audiência. Testemunhas: trazer ou requerer intimação com pelo menos 5 dias de antecedência.</small></div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 8 — Suspensão condicional do processo (art. 89)?</b><small>Pena mínima de até 1 ano; conferir concurso (Súmula 243/STJ; Súmula 723/STF). O MP propõe ao oferecer a denúncia; recusa fundamentada.</small></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">Aceita</div><div class="flow-node flow-box-green">Período de prova de 2 a 4 anos<small>Prescrição não corre.</small></div><div class="flow-arrow">▼</div><div class="flow-node flow-end-green">Extinção da punibilidade (§ 5º)</div></div>
+      <div class="flow-branch"><div class="flow-label">Revogação</div><div class="flow-node flow-box-red">§ 3º (obrigatória) ou § 4º (facultativa)<small>Processo prossegue.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Não cabe ou não aceita</div><div class="flow-node flow-box-blue">Passo 9</div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 9 — Audiência de instrução e julgamento (arts. 79 a 81)</b><small>Resposta à acusação → recebimento → vítima e testemunhas → interrogatório → debates → sentença. Nenhum ato é adiado (art. 80).</small></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">Absolvição</div><div class="flow-node flow-end-green">Fim do feito</div></div>
+      <div class="flow-branch"><div class="flow-label">Desclassificação ou procedência parcial</div><div class="flow-node flow-box-gold">Súmula 337/STJ<small>Autos ao MP para sursis ou transação.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Condenação</div><div class="flow-node flow-box-red">Apelação em 10 dias; embargos em 5 dias<small>Arts. 82 e 83. Execução: arts. 84 a 86.</small></div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-purple" style="max-width:980px;"><strong>CONTROLE FINAL DO ADVOGADO:</strong> confirmar a pena máxima do tipo e as majorantes; excluir contexto de violência doméstica, idoso e ECA; checar antecedentes e benefício anterior nos últimos 5 anos; definir se o cliente quer compor, representar, transigir ou discutir o mérito; preparar prova documental do dano e testemunhas com antecedência mínima de 5 dias; conferir prazos de decadência e prescrição.</div>
+  </div></div>
+</section>
+
+<!-- ============ 12 ============ -->
+<section class="section" id="prazos">
+  <div class="section-header"><div class="section-num">12</div><div class="section-title"><span>Tempo e Preclusão</span>Prazos, Decadência e Prescrição</div></div>
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Prazo</th><th>Regra</th><th>Fundamento</th></tr></thead>
+    <tbody>
+      <tr class="hl4"><td>Decadência — queixa e representação</td><td>6 meses, contados do dia em que o ofendido soube quem é o autor do crime (ou, no caso do art. 29 do CPP, do dia em que se esgota o prazo para a denúncia).</td><td>CP, art. 103; CPP, art. 38, § 1º e caput.</td></tr>
+      <tr class="hl4"><td>Decadência — violência doméstica e familiar contra a mulher</td><td>12 meses (Lei 15.438, de 18/06/2026). Fora do JECrim por força do art. 41 da Lei 11.340, mas relevante na triagem do atendimento.</td><td>CP, art. 103, parágrafo único; CPP, art. 38, § 2º; Lei 11.340, art. 16-A.</td></tr>
+      <tr class="hl"><td>Representação na audiência</td><td>O não oferecimento na audiência preliminar não implica decadência. Qualquer manifestação da vítima que denote a intenção de representar vale como tal para o art. 88 (FONAJE, Enunciado 25).</td><td>Lei 9.099, art. 75, parágrafo único; FONAJE, Enunciado 25.</td></tr>
+      <tr class="hl2"><td>Prescrição da pretensão punitiva (antes do trânsito em julgado)</td><td>Máximo da pena inferior a 1 ano: 3 anos. Máximo igual a 1 ano ou, sendo superior, até 2 anos: 4 anos.</td><td>CP, art. 109, VI e V (redação da Lei 12.234/2010).</td></tr>
+      <tr class="hl5"><td>Prescrição virtual (pena hipotética)</td><td>O FONAJE admite o reconhecimento da prescrição da pretensão punitiva pela projeção da pena a ser aplicada (Enunciado 75). O STJ, na Súmula 438, a considera inadmissível: “É inadmissível a extinção da punibilidade pela prescrição da pretensão punitiva com fundamento em pena hipotética, independentemente da existência ou sorte do processo penal.” Em audiência no JECrim, não confiar na tese do FONAJE sem confirmar a orientação local.</td><td>FONAJE, Enunciado 75; STJ, Súmula 438.</td></tr>
+      <tr><td>Suspensão do processo</td><td>Não corre a prescrição durante o prazo de suspensão (art. 89, § 6º).</td><td>Lei 9.099, art. 89, § 6º.</td></tr>
+      <tr><td>Novo benefício</td><td>Cinco anos entre transações (art. 76, § 2º, II e § 4º), com aplicação por analogia ao sursis (STJ, JT 93, tese 9).</td><td>Lei 9.099, art. 76; STJ, JT 93, tese 9.</td></tr>
+      <tr class="hl3"><td>Testemunhas</td><td>Trazer ou requerer intimação com pelo menos 5 dias de antecedência da audiência de instrução e julgamento.</td><td>Lei 9.099, art. 78, § 1º.</td></tr>
+      <tr class="hl3"><td>Recursos</td><td>Apelação e resposta: 10 dias. Embargos de declaração: 5 dias, interrompendo o prazo para outros recursos.</td><td>Lei 9.099, arts. 82, §§ 1º e 2º, e 83, §§ 1º e 2º.</td></tr>
+      <tr><td>Suspensão — contravenção</td><td>Prazo de 1 a 3 anos para a suspensão do processo, segundo o FONAJE.</td><td>FONAJE, Enunciado 128 (XLII Encontro).</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="alert alert-navy mt2"><span class="alert-tag">Fonte</span><div>CP e CPP: texto compilado do Planalto, conferido em 11/11/2026. Súmula 438/STJ: texto e data conferidos em fonte secundária (Damásio e dossiê no arquivo do STJ); o site de súmulas do STJ bloqueou a consulta automatizada nesta conferência.</div></div>
+</section>
+
+<!-- ============ 13 ============ -->
+<section class="section" id="atendimento">
+  <div class="section-header"><div class="section-num">13</div><div class="section-title"><span>Roteiro de Atuação — Orientação Prática</span>Atendimento, Conciliação e Negociação com o Cliente</div></div>
+  <div class="alert alert-navy"><span class="alert-tag">Natureza</span><div>Esta seção organiza uma abordagem de atuação. Cada orientação traz, entre parênteses, a norma ou o precedente que a sustenta. O que não tem apoio normativo vem identificado como estratégia, a ser ajustada pelo advogado ao caso.</div></div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card type-card tc-blue">
+      <h3>Cliente é o autor do fato</h3>
+      <h4>Antes de decidir qualquer coisa</h4>
+      <ul>
+        <li>Fixar o <strong>tipo e a pena máxima</strong> e confirmar que o fato está de fato no art. 61, sem exclusão legal (seções 03 e 06).</li>
+        <li>Verificar a <strong>ação penal</strong>: se depende de queixa ou representação, há prazo decadencial de 6 meses (CP, art. 103) e a vítima pode ser a chave da solução.</li>
+        <li>Examinar <strong>atipicidade, prescrição, decadência e justa causa</strong> antes de aceitar uma transação; o juiz pode não homologar por esses motivos (FONAJE, Enunciado 73).</li>
+        <li>Levantar <strong>antecedentes e benefício nos últimos 5 anos</strong> (art. 76, § 2º, I e II).</li>
+      </ul>
+      <h4>O que explicar ao cliente sobre a transação</h4>
+      <ul>
+        <li>Aceitar a transação <strong>não é condenação</strong>, não gera reincidência nem maus antecedentes e não significa reconhecimento de culpa nem de responsabilidade civil (STJ, JT 93, tese 7; art. 76, § 4º).</li>
+        <li>Não consta da <strong>certidão de antecedentes</strong> e não tem <strong>efeitos civis</strong> (art. 76, § 6º; STF, Tema 187). Ficará registrada para impedir novo benefício por 5 anos.</li>
+        <li><strong>Descumprir</strong> a transação reabre a persecução penal, com denúncia ou inquérito (Súmula Vinculante 35).</li>
+        <li>A proposta exige a aceitação <strong>do cliente e do advogado</strong> (art. 76, § 3º). Recusar leva à denúncia oral e à instrução (arts. 77 e 78).</li>
+        <li>Se o MP recusar propor sem razão, há a via da analogia ao art. 28 do CPP (FONAJE, Enunciado 86).</li>
+      </ul>
+      <h4>Alavancas de negociação</h4>
+      <ul>
+        <li><strong>Reparação do dano antes da proposta:</strong> o acordo civil homologado, na ação privada ou condicionada, importa renúncia ao direito de queixa ou representação (art. 74, parágrafo único) e, segundo o FONAJE, retira a justa causa quando há vítima determinada (Enunciado 99).</li>
+        <li><strong>Forma e espécie da pena:</strong> a proposta é restritiva de direitos ou multa “a ser especificada na proposta” (art. 76, caput); as restritivas são fungíveis (FONAJE, 102) e pode ser pedida a substituição de uma pela outra (FONAJE, 68). Estratégia: antecipar ao MP o perfil do cliente (trabalho, residência, capacidade de pagar) para que a proposta seja exequível.</li>
+        <li><strong>Multa única:</strong> o juiz pode reduzi-la até a metade (art. 76, § 1º).</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-green">
+      <h3>Cliente é a vítima ou ofendido</h3>
+      <h4>Antes de decidir qualquer coisa</h4>
+      <ul>
+        <li>Identificar a <strong>ação penal</strong> (queixa, representação, incondicionada) e a <strong>data em que soube quem é o autor</strong>, para controlar a decadência de 6 meses (CP, art. 103; CPP, art. 38).</li>
+        <li>Documentar o dano: orçamentos, notas, laudos, fotografias, comprovantes, mensagens e testemunhas. O boletim médico ou prova equivalente supre o exame de corpo de delito para a denúncia (art. 77, § 1º).</li>
+        <li>Confirmar que o caso não envolve violência doméstica contra a mulher ou pessoa idosa, hipóteses em que a Lei 9.099 não se aplica (seção 06).</li>
+      </ul>
+      <h4>O que explicar ao cliente sobre o acordo civil</h4>
+      <ul>
+        <li>O acordo homologado vale como <strong>título executivo</strong>, executado no juízo cível (art. 74).</li>
+        <li>Na ação privada ou condicionada, o acordo homologado <strong>acarreta renúncia</strong> ao direito de queixa ou representação (art. 74, parágrafo único). É decisão grave: o cliente deve saber que, cumprido ou não o acordo, não poderá reabrir a via penal. Por isso convém prever garantias e cláusula penal.</li>
+        <li>O acordo pode versar sobre <strong>qualquer valor ou matéria</strong> (FONAJE, Enunciado 37) e, se envolver obrigação de fazer ou não fazer, deve ter cláusula penal em valor certo (Enunciado 43).</li>
+        <li>A <strong>transação penal</strong> do autor não substitui a reparação: ela não tem efeitos civis e o ofendido deve propor a ação cabível no juízo cível (art. 76, § 6º).</li>
+        <li><strong>Ausência</strong> da vítima intimada ou não localizada pode ser lida como renúncia tácita à representação (FONAJE, Enunciado 117). Não faltar.</li>
+      </ul>
+      <h4>Alavancas de negociação</h4>
+      <ul>
+        <li>A <strong>representação</strong> e o interesse da vítima são o eixo da negociação nas ações condicionadas e privadas: é nelas que o acordo tem efeito extintivo.</li>
+        <li>Estratégia: apresentar planilha do dano e proposta de pagamento (valor, prazo, forma, garantia) já na audiência, para que o acordo seja redigido e homologado no ato (art. 74).</li>
+        <li>Prazo de execução: o título é executado no juízo cível competente (art. 74); avaliar a solvência do devedor antes de renunciar.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Perguntas que o cliente sempre faz</h3>
+  <div class="card-grid card-grid-2">
+    <div class="card"><h4>“Vou ficar com ficha criminal?”</h4><p>Na transação penal homologada, a sanção não importa reincidência e não consta da certidão de antecedentes, exceto para impedir novo benefício em 5 anos (art. 76, §§ 4º e 6º). A aceitação não é condenação (STJ, JT 93, tese 7). No sursis, cumprido o prazo, extingue-se a punibilidade (art. 89, § 5º), e a extinção não pode ser valorada como maus antecedentes (STJ, JT 96, tese 8).</p></div>
+    <div class="card"><h4>“Se eu aceitar, estou admitindo a culpa?”</h4><p>Não. A transação é submissão voluntária à sanção, sem reconhecimento de culpabilidade nem de responsabilidade civil (STJ, JT 93, tese 7). A confissão é exigência do ANPP (CPP, art. 28-A), e não da transação.</p></div>
+    <div class="card"><h4>“Posso ser obrigado a pagar a vítima por causa da transação?”</h4><p>A transação não tem efeitos civis; a vítima pode ajuizar a ação cível cabível (art. 76, § 6º). Se o cliente quiser encerrar o conflito, o caminho é o acordo civil do art. 74.</p></div>
+    <div class="card"><h4>“E se eu não cumprir o combinado?”</h4><p>Transação descumprida: retoma-se a situação anterior e o MP pode denunciar ou requisitar inquérito (Súmula Vinculante 35). Sursis descumprido: possível revogação (art. 89, §§ 3º e 4º), mesmo após o prazo se o fato ocorreu durante a vigência (STJ, Tema 920).</p></div>
+    <div class="card"><h4>“Preciso ir à audiência?”</h4><p>Sim. O autor do fato deve comparecer acompanhado de advogado (art. 68). A ausência injustificada leva à vista ao MP (FONAJE, Enunciado 1) e à possibilidade de denúncia oral. A vítima ausente pode ser considerada como renunciante tácita (FONAJE, Enunciado 117).</p></div>
+    <div class="card"><h4>“Quanto tempo leva?”</h4><p>O rito é oral e concentrado: a sentença é proferida na audiência de instrução e julgamento, e nenhum ato será adiado (arts. 80 e 81). Os recursos têm prazos de 10 dias (apelação) e 5 dias (embargos).</p></div>
+  </div>
+  <div class="card mt2">
+    <h3>Checklist de preparação (24 horas antes)</h3>
+    <div class="card-grid card-grid-3">
+      <ul>
+        <li>Termo circunstanciado e tipo imputado conferidos (FONAJE, 72).</li>
+        <li>Pena máxima do tipo e majorantes calculadas.</li>
+        <li>Exclusões afastadas: LMP, pessoa idosa, ECA, militar.</li>
+        <li>Ação penal e prazo decadencial verificados.</li>
+      </ul>
+      <ul>
+        <li>Certidões e histórico de benefícios (5 anos).</li>
+        <li>Procuração com poderes para transigir e aceitar proposta.</li>
+        <li>Planilha do dano e documentos, ou defesa preliminar pronta.</li>
+        <li>Posição do cliente definida: compor, transigir, recusar.</li>
+      </ul>
+      <ul>
+        <li>Testemunhas arroladas com 5 dias de antecedência.</li>
+        <li>Minuta de acordo civil com cláusula penal e garantia.</li>
+        <li>Contraproposta de pena (espécie, valor, prazo) pronta.</li>
+        <li>Orientação local do juízo sobre concurso, FONAJE e prescrição.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 14 ============ -->
+<section class="section" id="jurisprudencia">
+  <div class="section-header"><div class="section-num">14</div><div class="section-title"><span>STF e STJ</span>Jurisprudência, Súmulas, Teses e Enunciados</div></div>
+  <div class="alert alert-navy"><span class="alert-tag">Aviso do STJ</span><div>As edições da Jurisprudência em Teses do STJ trazem a ressalva de que as teses foram elaboradas pela Secretaria de Jurisprudência mediante pesquisa na base do Tribunal e “não consistindo em repositórios oficiais da jurisprudência deste Tribunal”. As súmulas citadas nelas têm texto próprio; conferir sempre o acórdão ou o enunciado antes de citar em peça.</div></div>
+
+  <h3 class="sub-title">Supremo Tribunal Federal</h3>
+  <div class="juris-grid">
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge sumula">Súmula Vinculante 35</span><span class="juris-title">Transação penal não faz coisa julgada material</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><span class="quote">“A homologação da transação penal prevista no artigo 76 da Lei 9.099/1995 não faz coisa julgada material e, descumpridas suas cláusulas, retoma-se a situação anterior, possibilitando-se ao Ministério Público a continuidade da persecução penal mediante oferecimento de denúncia ou requisição de inquérito policial.”</span>Publicação: DJe de 24/04/2014. Origem: RE 602.072 QO-RG (Tema 238, Rel. Min. Cezar Peluso, Plenário, 19/11/2009; DJe 26/02/2010).</div></div>
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge tese">Tema 187</span><span class="juris-title">RE 795.567 — transação penal e efeitos de sentença condenatória</span><span class="vb vb-of">Oficial</span></div><div class="juris-body">Os efeitos do art. 91 do Código Penal decorrem de sentença penal condenatória; a sentença que homologa a transação penal tem natureza meramente homologatória. Rel. Min. Teori Zavascki, julgado em 28/05/2015 (Plenário); acórdão publicado em 09/09/2015. Reforça o art. 76, § 6º, da Lei 9.099.</div></div>
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge tese">ADI 5264</span><span class="juris-title">Competência dos Juizados e conexão e continência</span><span class="vb vb-of">Oficial</span></div><div class="juris-body">Em sessão virtual encerrada em 4/12/2020, o Plenário julgou improcedente, por unanimidade, a ação da PGR contra os arts. 1º e 2º da Lei 11.313/2006. Rel. Min. Cármen Lúcia: a Constituição não torna o JECrim instância exclusiva; confere-lhe competência relativa, mas garante o procedimento célere e os institutos despenalizadores. Se o feito for deslocado ao juízo comum ou ao júri, aplicam-se a transação penal e a composição dos danos civis à infração de menor potencial ofensivo.</div></div>
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge tese">ADI 4424</span><span class="juris-title">Lei Maria da Penha, arts. 12, I; 16 e 41</span><span class="vb vb-of">Oficial</span></div><div class="juris-body">Julgada procedente em 09/02/2012, por 10 votos a 1 (Rel. Min. Marco Aurélio; vencido o Min. Cezar Peluso), quanto aos arts. 12, I, 16 e 41 da Lei 11.340/2006: possibilidade de o MP iniciar a ação penal por lesão corporal no contexto da Lei Maria da Penha sem representação da vítima. O STF esclareceu que não compete aos Juizados Especiais julgar os crimes cometidos no âmbito da Lei Maria da Penha. A ADC 19 foi julgada na mesma ocasião (referência secundária; conferir o acórdão).</div></div>
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge tese">ADI 3096</span><span class="juris-title">Estatuto do Idoso, art. 94 (texto anterior à Lei 15.163/2025)</span><span class="vb vb-sec">Secundária</span></div><div class="juris-body">Julgada em 16/06/2010 (Rel. Min. Cármen Lúcia), parcialmente procedente, com interpretação conforme: aplicação apenas do procedimento sumaríssimo da Lei 9.099, em benefício do idoso, com a celeridade processual, e impossibilidade de aplicar medidas despenalizadoras. Contexto atual: a Lei 15.163/2025 deu nova redação ao art. 94 e excluiu por completo a Lei 9.099 dos crimes do Estatuto e dos praticados com violência contra a pessoa idosa. Útil para fatos anteriores à vigência da nova lei.</div></div>
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge sumula">Súmula 696</span><span class="juris-title">Recusa do MP em propor a suspensão condicional do processo</span><span class="vb vb-sec">Secundária</span></div><div class="juris-body"><span class="quote">“Reunidos os pressupostos legais permissivos da suspensão condicional do processo, mas se recusando o promotor a propô-la, o juiz, dissentindo, remeterá a questão ao Procurador-Geral, aplicando-se por analogia o art. 28 do Código de Processo Penal.”</span>Aprovada em 24/09/2003 (fontes secundárias, texto idêntico entre elas). Ler a remissão ao art. 28 do CPP à luz da Lei 13.964/2019.</div></div>
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge sumula">Súmula 723</span><span class="juris-title">Crime continuado e suspensão condicional do processo</span><span class="vb vb-sec">Secundária</span></div><div class="juris-body"><span class="quote">“Não se admite a suspensão condicional do processo por crime continuado, se a soma da pena mínima da infração mais grave com o aumento mínimo de um sexto for superior a um ano.”</span>Publicada em 26/11/2003 (fonte secundária; conferir no portal do STF).</div></div>
+  </div>
+
+  <h3 class="sub-title">Superior Tribunal de Justiça</h3>
+  <div class="juris-grid">
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">JT 96, tese 10</span><span class="juris-title">Concurso de infrações e competência do JECrim</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><span class="quote">“Na hipótese de apuração de delitos de menor potencial ofensivo, deve-se considerar a soma das penas máximas em abstrato em concurso material, ou, ainda, a devida exasperação, no caso de crime continuado ou de concurso formal, e ao se verificar que o resultado da adição é superior a dois anos, afasta-se a competência do Juizado Especial Criminal.”</span>Julgados: HC 530268/SP (Rel. Min. Nefi Cordeiro, 03/12/2019); AgRg no REsp 1752559/SP (Rel. Min. Joel Ilan Paciornik, 05/09/2019); RHC 102381/BA; RHC 84633/RJ; RHC 71928/MG; RHC 46646/SP.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">JT 96, tese 1</span><span class="juris-title">Art. 61 não alterou o requisito do art. 89</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><span class="quote">“A ampliação do conceito de crime de menor potencial ofensivo a que a lei comine pena máxima não superior a dois anos não alterou o requisito objetivo exigido para a suspensão condicional do processo, que só pode ser concedida em delitos com pena mínima igual ou inferior a um ano.”</span>Julgados: AgRg no REsp 1826584/SC (22/09/2020); RHC 63027/SP; RHC 28236/PR; AgRg no RHC 19294/SP; HC 153580/SP; RHC 74943/SC.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">JT 96, tese 2</span><span class="juris-title">Multa alternativa e institutos despenalizadores</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><span class="quote">“É cabível a suspensão condicional do processo e a transação penal aos delitos que preveem a pena de multa alternativamente à privativa de liberdade, ainda que o preceito secundário da norma legal ultrapasse os parâmetros mínimo e máximo exigidos em lei para a incidência dos institutos em comento.”</span>Julgados: RHC 118353/PB (22/10/2019); RHC 83320/DF; RHC 54429/SP, entre outros.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge sumula">Súmula 243</span><span class="juris-title">Concurso de crimes e suspensão do processo</span><span class="vb vb-of">Oficial (tese 6 do JT 96)</span></div><div class="juris-body"><span class="quote">“O benefício da suspensão do processo não é aplicável em relação às infrações penais cometidas em concurso material, concurso formal ou continuidade delitiva, quando a pena mínima cominada, seja pelo somatório, seja pela incidência da majorante, ultrapassar o limite de um ano (Súmula n. 243/STJ).”</span>Redação reproduzida pelo STJ na tese 6 da JT 96. Julgados: REsp 1891923/SC (14/02/2023); AgRg no AREsp 1815689/PR; AgRg no RHC 74943/SC.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge sumula">Súmula 337</span><span class="juris-title">Desclassificação e procedência parcial</span><span class="vb vb-of">Oficial (tese 10 do JT 93)</span></div><div class="juris-body"><span class="quote">“É cabível a suspensão condicional do processo na desclassificação do crime e na procedência parcial da pretensão punitiva.”</span>Os autos devem ser encaminhados ao MP para que se manifeste sobre o sursis ou a transação (JT 93, tese 11). Julgado de destaque: REsp 1978078/SP (Rel. Min. Sebastião Reis Júnior, 14/03/2023).</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">JT 96, tese 3</span><span class="juris-title">Sursis: poder-dever do MP</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><span class="quote">“A suspensão condicional do processo não é direito subjetivo do acusado, mas sim um poder-dever do Ministério Público, titular da ação penal, a quem cabe, com exclusividade, analisar a possibilidade de aplicação do referido instituto, desde que o faça de forma fundamentada.”</span>Julgados: AgRg no HC 585728/SC (Rel. Min. Rogerio Schietti Cruz, 13/03/2023); REsp 1891923/SC (14/02/2023).</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">JT 93, teses 7, 8 e 9</span><span class="juris-title">Natureza e efeitos da transação penal</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><strong>Tese 7:</strong> a transação penal não tem natureza de condenação criminal, não gera efeitos de reincidência e maus antecedentes e, por ser submissão voluntária à sanção penal, não significa reconhecimento da culpabilidade nem da responsabilidade civil. <strong>Tese 8:</strong> repete a SV 35. <strong>Tese 9:</strong> aplica-se, por analogia, o prazo de 5 anos da transação (art. 76, § 2º, II) ao sursis. Julgados da tese 7: HC 390038/SP; HC 363497/SP; REsp 1327897/MA; AgInt no REsp 1453461/GO, entre outros.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">JT 96, teses 4, 5 e 7</span><span class="juris-title">Sursis: revogação tardia, preclusão e inquérito em curso</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><strong>Tese 4 (Tema 920):</strong> descumpridas as condições, o benefício pode ser revogado mesmo ultrapassado o prazo, desde que referente a fato ocorrido durante sua vigência. <strong>Tese 5:</strong> opera-se a preclusão se a proposta de sursis ou de transação ocorre após a sentença condenatória. <strong>Tese 7:</strong> inquérito policial em curso não é circunstância idônea para obstar a proposta de sursis.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">JT 96, teses 11 e 12</span><span class="juris-title">Uso de droga (Lei 11.343, art. 28)</span><span class="vb vb-of">Oficial</span></div><div class="juris-body">Compete ao Juizado Especial estadual apreciar o uso de entorpecente para consumo próprio; a conduta admite tanto a transação penal quanto a suspensão condicional do processo (HC 722148/PR; RHC 77554/SP; CC 172464/MS; CC 169477/MT).</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge sumula">Súmulas 536, 542, 588, 589 e 600</span><span class="juris-title">Violência doméstica e Lei 9.099</span><span class="vb vb-of">Oficial (JT 209)</span></div><div class="juris-body"><strong>536:</strong> “A suspensão condicional do processo e a transação penal não se aplicam na hipótese de delitos sujeitos ao rito da Lei Maria da Penha.” <strong>542:</strong> “A ação penal relativa ao crime de lesão corporal resultante de violência doméstica contra a mulher é pública incondicionada.” <strong>588:</strong> “A prática de crime ou contravenção penal contra a mulher com violência ou grave ameaça no ambiente doméstico impossibilita a substituição da pena privativa de liberdade por restritiva de direitos.” <strong>589:</strong> “É inaplicável o princípio da insignificância nos crimes ou contravenções penais praticados contra a mulher no âmbito das relações domésticas.” <strong>600:</strong> para a configuração da violência doméstica e familiar do art. 5º da Lei Maria da Penha não se exige a coabitação entre autor e vítima. Redação conforme a Jurisprudência em Teses nº 209 (24/03/2023).</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">JT 93, teses 1 a 6</span><span class="juris-title">Competência recursal, defensor público e condições do sursis</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><strong>1:</strong> HC contra acórdão de Turma Recursal: TJ ou TRF. <strong>2:</strong> a aceitação do sursis não prejudica a análise de HC de trancamento. <strong>3:</strong> não se exige intimação pessoal do defensor público no JECrim. <strong>4 (Tema 930):</strong> condições do art. 89, § 2º, podem equivaler a sanções penais na prática sem caracterizar pena. <strong>5:</strong> a perda do valor da fiança é condição legítima do sursis. <strong>6:</strong> repete a Súmula 536/STJ.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge sumula">Súmula 438</span><span class="juris-title">Prescrição com base em pena hipotética</span><span class="vb vb-sec">Secundária</span></div><div class="juris-body"><span class="quote">“É inadmissível a extinção da punibilidade pela prescrição da pretensão punitiva com fundamento em pena hipotética, independentemente da existência ou sorte do processo penal.”</span>Contraponto ao Enunciado 75 do FONAJE. Texto conferido em fontes secundárias.</div></div>
+  </div>
+
+  <h3 class="sub-title">FONAJE — Enunciados criminais de maior uso <span class="vb vb-sec" style="margin-left:0.4rem">Secundária</span></h3>
+  <div class="alert alert-gold"><span class="alert-tag">Natureza</span><div>Os enunciados do Fórum Nacional dos Juizados Especiais são orientações interpretativas não vinculantes. A compilação consultada (Evinis Talon, atualizada em 06/02/2024) vai até o Enunciado 130 (49º Encontro, Rio de Janeiro/RJ). Podem existir encontros posteriores; conferir a versão vigente no portal do CNJ ou do FONAJE antes de citar.</div></div>
+  <div class="juris-grid mt1">
+    <div class="juris-card fonaje"><div class="juris-header"><span class="juris-badge purple">FONAJE</span><span class="juris-title">Audiência, composição e transação</span></div><div class="juris-body"><strong>1:</strong> ausência injustificada do autor: vista ao MP. <strong>2:</strong> proposta de transação independentemente do comparecimento da vítima, oferecida a representação. <strong>8:</strong> multa em dias-multa. <strong>9:</strong> advertência da necessidade de advogado na intimação. <strong>37:</strong> acordo civil sobre qualquer valor ou matéria. <strong>43:</strong> cláusula penal em obrigação de fazer. <strong>44:</strong> prescrição na transação descumprida. <strong>68, 77, 92, 102:</strong> fungibilidade, destinação e adequação das medidas. <strong>72:</strong> tipo imputado na proposta e na homologação. <strong>73:</strong> não homologação por atipicidade, prescrição ou falta de justa causa. <strong>86:</strong> analogia ao art. 28 do CPP. <strong>99:</strong> justa causa e desinteresse da vítima. <strong>106:</strong> audiência individual. <strong>111:</strong> ampla defesa na transação. <strong>112:</strong> ação privada. <strong>113, 114, 117:</strong> extinção até a sentença, proposta até o fim da instrução e renúncia tácita.</div></div>
+    <div class="juris-card fonaje"><div class="juris-header"><span class="juris-badge purple">FONAJE</span><span class="juris-title">Competência, instrução e outros</span></div><div class="juris-body"><strong>10, 18, 51, 52, 64:</strong> conexão e remessa ao juízo comum. <strong>48:</strong> não cabe recurso em sentido estrito. <strong>53, 108:</strong> resposta do art. 81 e inaplicabilidade do art. 396 do CPP. <strong>66:</strong> direito de assistir às testemunhas. <strong>75:</strong> prescrição pela pena projetada (confrontar com a Súmula 438/STJ). <strong>120:</strong> concurso não afasta o JECrim (confrontar com o STJ, JT 96, tese 10). <strong>121:</strong> medidas cautelares do art. 319 do CPP, exceto fiança, às infrações com pena privativa. <strong>122:</strong> medidas despenalizadoras do art. 94 do Estatuto do Idoso (texto anterior à Lei 15.163/2025). <strong>123, 128:</strong> sursis. <strong>127:</strong> fundamentação oral. <strong>129, 130:</strong> intimação por aplicativo e balcão virtual.</div></div>
+  </div>
+</section>
+
+<!-- ============ 15 ============ -->
+<section class="section" id="doutrina">
+  <div class="section-header"><div class="section-num">15</div><div class="section-title"><span>Doutrina Sistematizada</span>Linhas Dogmáticas e Controvérsias</div></div>
+  <div class="alert alert-navy"><span class="alert-tag">Critério</span><div>As correntes abaixo são sínteses das discussões que aparecem nos tribunais e nos manuais, sem atribuição de passagens a autores específicos. Para citar doutrina em peça, localizar a página e a edição na obra. As obras de referência estão listadas ao final desta seção.</div></div>
+  <div class="card-grid card-grid-2 mt1">
+    <div class="card"><h3>Finalidade do sistema</h3><ul><li>O art. 62 impõe como critérios a oralidade, a simplicidade, a informalidade, a economia processual e a celeridade, com o objetivo de reparar os danos da vítima e aplicar pena não privativa de liberdade sempre que possível.</li><li>O art. 61 é o filtro de entrada nesse sistema consensual: define as infrações que se submetem à lógica da reparação e da pena alternativa.</li><li>A CF, art. 98, I, autoriza expressamente a transação nas hipóteses previstas em lei.</li></ul></div>
+    <div class="card"><h3>Natureza jurídica da transação penal</h3><ul><li><strong>Leitura de discricionariedade regrada:</strong> o MP avalia a conveniência da proposta, dentro dos requisitos legais.</li><li><strong>Leitura de direito subjetivo:</strong> preenchidos os requisitos do art. 76, o autor do fato teria direito à proposta.</li><li>Para o sursis, a posição do STJ é de poder-dever do MP, com exigência de fundamentação (JT 96, tese 3), e a via de controle é a analogia ao art. 28 do CPP (Súmula 696/STF; FONAJE, Enunciado 86, para a transação).</li><li>O STF e o STJ afastam a natureza de condenação: a sentença é homologatória (Tema 187; JT 93, tese 7).</li></ul></div>
+    <div class="card"><h3>Competência: absoluta ou relativa?</h3><ul><li>A tese da competência material absoluta do JECrim foi sustentada pela PGR na ADI 5264 e rejeitada pelo STF, que reconheceu a competência relativa para fins de conexão e continência.</li><li>O deslocamento ao juízo comum ou ao júri não suprime os institutos despenalizadores (art. 60, parágrafo único).</li></ul></div>
+    <div class="card"><h3>Pena máxima, concurso e majorantes</h3><ul><li>A aferição pelo máximo em abstrato é pacífica. A controvérsia está no concurso: o STJ soma ou exaspera e afasta o JECrim se passar de 2 anos (JT 96, tese 10); o FONAJE, no Enunciado 120, afirma o contrário.</li><li>A orientação usual para majorantes e minorantes é aplicar o maior aumento e a menor diminuição ao fixar o máximo abstrato.</li></ul></div>
+    <div class="card"><h3>Críticas recorrentes ao modelo</h3><ul><li>Preocupação com a aceitação da transação sem instrução e com o risco de pressão sobre o autor do fato. Respostas institucionais: exigência de aceitação também do defensor (art. 76, § 3º), ampla defesa na transação (FONAJE, 111) e possibilidade de não homologação (FONAJE, 73).</li><li>Discussão sobre a descaracterização do rito quando há complexidade e remessa ao juízo comum (arts. 66, parágrafo único, e 77, § 2º).</li><li>Limites éticos e legais em casos de violência doméstica, hoje retirados da Lei 9.099 (art. 41 da Lei 11.340).</li></ul></div>
+    <div class="card"><h3>Justiça restaurativa e mediação</h3><ul><li>O FONAJE admite a mediação no JECrim (Enunciado 119) e orienta que a transação observe os princípios da justiça restaurativa, da proporcionalidade e da dignidade (Enunciado 116).</li><li>O art. 62 da Lei 9.099 já aponta para a reparação do dano como finalidade do processo.</li></ul></div>
+  </div>
+  <div class="card mt2">
+    <h3>Obras de referência para consulta</h3>
+    <ul class="source-list">
+      <li>GRINOVER, Ada Pellegrini; GOMES FILHO, Antonio Magalhães; FERNANDES, Antonio Scarance; GOMES, Luiz Flávio. <em>Juizados Especiais Criminais: comentários à Lei 9.099, de 26.09.1995</em>. São Paulo: Revista dos Tribunais.</li>
+      <li>JESUS, Damásio E. de. <em>Lei dos Juizados Especiais Criminais Anotada</em>. São Paulo: Saraiva.</li>
+      <li>LIMA, Renato Brasileiro de. <em>Legislação Criminal Especial Comentada</em>. Salvador: JusPodivm.</li>
+      <li>NUCCI, Guilherme de Souza. <em>Leis Penais e Processuais Penais Comentadas</em>. Rio de Janeiro: Forense.</li>
+      <li>BITENCOURT, Cezar Roberto. <em>Juizados Especiais Criminais e Alternativas à Pena de Prisão</em>. Porto Alegre: Livraria do Advogado.</li>
+      <li>TOURINHO NETO, Fernando da Costa; FIGUEIRA JÚNIOR, Joel Dias. <em>Juizados Especiais Estaduais Cíveis e Criminais: comentários à Lei 9.099/1995</em>. São Paulo: Revista dos Tribunais.</li>
+    </ul>
+    <div class="source-note">Indicação bibliográfica de obras de referência da matéria, sem transcrição de trechos. Edições e anos variam; usar a edição mais recente disponível e conferir a numeração de página antes de citar.</div>
+  </div>
+</section>
+
+<!-- ============ 16 ============ -->
+<section class="prova-section" id="recorrentes">
+  <h2>Pontos que Sempre Aparecem nas Audiências</h2>
+  <p class="intro">Respostas objetivas, com a base legal ou jurisprudencial indicada em cada item, para consulta rápida durante a audiência e no atendimento ao cliente.</p>
+  <div class="prova-items">
+
+    <div class="prova-group">Comparecimento e formalidades</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">01</span>O autor do fato não compareceu. O que acontece?</div><div class="prova-item-a"><strong>Vista ao MP para o procedimento cabível</strong> (FONAJE, Enunciado 1). Não havendo aplicação de pena pela ausência do autor, o MP pode oferecer denúncia oral (art. 77). <span class="ref">Lei 9.099, art. 77</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">02</span>A vítima faltou à audiência.</div><div class="prova-item-a">Se foi intimada ou não localizada, o FONAJE entende que há <strong>renúncia tácita à representação</strong> (Enunciado 117). O art. 75, parágrafo único, diz que o não oferecimento da representação na audiência não implica decadência. Confirmar a orientação local. <span class="ref">Art. 75, p. único; FONAJE 117</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">03</span>O autor do fato veio sem advogado.</div><div class="prova-item-a">A intimação deve advertir da necessidade de advogado, e na falta será designado <strong>defensor público</strong>. <span class="ref">Art. 68; FONAJE 9</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">04</span>Quem conduz a audiência preliminar?</div><div class="prova-item-a">O <strong>juiz ou o conciliador</strong>, sob orientação do juiz. O conciliador ou juiz leigo pode encaminhar a proposta de transação. A audiência é individual. <span class="ref">Art. 73; FONAJE 70, 71, 106</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">05</span>Como é a intimação? Pode ser por WhatsApp?</div><div class="prova-item-a">Por correspondência com AR, oficial de justiça ou qualquer meio idôneo (art. 67). O FONAJE admite telefone, e-mail ou aplicativo, <strong>desde que haja adesão expressa prévia</strong> do interessado. <span class="ref">Art. 67; FONAJE 129</span></div></div>
+
+    <div class="prova-group">Composição dos danos civis</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">06</span>Qual o efeito do acordo civil?</div><div class="prova-item-a"><strong>Título executivo</strong> no juízo cível e, na ação privada ou condicionada, <strong>renúncia à queixa ou representação</strong>. <span class="ref">Art. 74 e p. único</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">07</span>O acordo pode ir além do valor do dano ou tratar de outra matéria?</div><div class="prova-item-a">Sim, <strong>qualquer valor ou matéria</strong>; obrigação de fazer ou não fazer deve ter cláusula penal certa. <span class="ref">FONAJE 37, 43, 89</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">08</span>Prescrição ou decadência impedem a homologação do acordo?</div><div class="prova-item-a">Segundo o FONAJE, <strong>não impedem</strong>. <span class="ref">FONAJE 74</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">09</span>Até quando a vítima pode desistir ou compor?</div><div class="prova-item-a">Até a <strong>sentença</strong>, com declaração de extinção da punibilidade pela renúncia expressa ou pela conciliação (FONAJE 113). <span class="ref">FONAJE 113</span></div></div>
+
+    <div class="prova-group">Transação penal</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">10</span>Quando o MP pode propor a transação?</div><div class="prova-item-a">Havendo <strong>representação</strong> ou tratando-se de ação pública incondicionada, não sendo caso de arquivamento. <span class="ref">Art. 76, caput</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">11</span>Quem não tem direito à transação?</div><div class="prova-item-a">Condenado por crime a pena privativa de liberdade por sentença definitiva; beneficiado nos <strong>últimos 5 anos</strong> por pena restritiva ou multa; quem tem antecedentes, conduta social, personalidade, motivos e circunstâncias que não indiquem a medida como necessária e suficiente. <span class="ref">Art. 76, § 2º, I a III</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">12</span>É possível propor depois da audiência preliminar?</div><div class="prova-item-a">O FONAJE admite <strong>até o final da instrução</strong> (114); o STJ reconhece <strong>preclusão após a sentença condenatória</strong>. <span class="ref">FONAJE 114; STJ JT 96, tese 5</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">13</span>Quem precisa aceitar?</div><div class="prova-item-a">O <strong>autor do fato e o defensor</strong>. A ampla defesa vale também na fase da transação. O juiz pode deixar de homologar por atipicidade, prescrição ou falta de justa causa. <span class="ref">Art. 76, § 3º; FONAJE 73, 111</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">14</span>O MP não quis propor. E agora?</div><div class="prova-item-a">Aplica-se, por analogia, o <strong>art. 28 do CPP</strong> (FONAJE 86); para o sursis, Súmula 696/STF. Conferir o mecanismo local após a Lei 13.964/2019. <span class="ref">FONAJE 86; Súmula 696/STF</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">15</span>A transação gera reincidência, antecedentes ou certidão?</div><div class="prova-item-a"><strong>Não.</strong> Não importa reincidência, só impede novo benefício por 5 anos, não consta de certidão de antecedentes e não tem efeitos civis. <span class="ref">Art. 76, §§ 4º e 6º; STJ JT 93, tese 7; STF Tema 187</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">16</span>E se o cliente descumprir?</div><div class="prova-item-a">Retoma-se a situação anterior e o MP pode denunciar ou requisitar inquérito. <span class="ref">Súmula Vinculante 35</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">17</span>A transação é cabível se a lei prevê só multa?</div><div class="prova-item-a">Sim: a proposta de pena restritiva de direitos é cabível mesmo quando o tipo comporta apenas multa (FONAJE 20), e a multa alternativa não impede transação nem sursis (STJ). <span class="ref">FONAJE 20; STJ JT 96, tese 2</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">18</span>Qual o tipo penal que vale: o do termo circunstanciado ou outro?</div><div class="prova-item-a">A proposta e a sentença homologatória devem conter o <strong>tipo infracional imputado</strong>, independentemente da capitulação do termo circunstanciado. <span class="ref">FONAJE 72</span></div></div>
+
+    <div class="prova-group">Rito sumaríssimo e instrução</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">19</span>Precisa de inquérito policial?</div><div class="prova-item-a"><strong>Não.</strong> A denúncia oral é elaborada com base no termo circunstanciado, e o boletim médico ou prova equivalente supre o exame de corpo de delito. <span class="ref">Art. 77, § 1º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">20</span>Quando levar as testemunhas?</div><div class="prova-item-a">O acusado deve trazê-las ou requerer a intimação <strong>no mínimo cinco dias antes</strong> da audiência. <span class="ref">Art. 78, § 1º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">21</span>Dá para adiar a audiência de instrução?</div><div class="prova-item-a">A lei diz que <strong>nenhum ato será adiado</strong>, determinando o juiz a condução coercitiva quando imprescindível. <span class="ref">Art. 80</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">22</span>Qual a ordem dos atos?</div><div class="prova-item-a">Resposta do defensor → recebimento da denúncia → vítima e testemunhas → interrogatório → debates → sentença. <span class="ref">Art. 81, caput</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">23</span>O que mudou quanto à postura com a vítima na audiência?</div><div class="prova-item-a">Todos devem <strong>respeitar a dignidade da vítima</strong>, sob pena de responsabilização civil, penal e administrativa; são vedadas manifestações alheias aos fatos e linguagem ofensiva. <span class="ref">Art. 81, § 1º-A (Lei 14.245/2021)</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">24</span>Quais os prazos de recurso?</div><div class="prova-item-a">Apelação: <strong>10 dias</strong>, com resposta em 10. Embargos de declaração: <strong>5 dias</strong>, interrompendo o prazo. Não cabe recurso em sentido estrito (FONAJE 48). <span class="ref">Arts. 82 e 83</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">25</span>O réu não é encontrado para citação.</div><div class="prova-item-a">O juiz encaminha as peças ao <strong>juízo comum</strong>. <span class="ref">Art. 66, p. único; FONAJE 51, 64</span></div></div>
+
+    <div class="prova-group">Suspensão condicional do processo</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">26</span>Qual o requisito de pena?</div><div class="prova-item-a">Pena <strong>mínima</strong> igual ou inferior a 1 ano (art. 89). O limite de 2 anos do art. 61 não se aplica ao sursis (STJ, JT 96, tese 1). <span class="ref">Art. 89; Súmula 243/STJ; Súmula 723/STF</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">27</span>Há concurso de crimes. Cabe sursis?</div><div class="prova-item-a">Só se a pena mínima, pelo somatório ou pela majorante, <strong>não passar de 1 ano</strong>. <span class="ref">Súmula 243/STJ; Súmula 723/STF</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">28</span>O crime foi desclassificado na sentença.</div><div class="prova-item-a">Cabe a suspensão (Súmula 337/STJ): os autos vão ao MP para manifestar-se sobre o sursis ou a transação. <span class="ref">Súmula 337/STJ; STJ JT 93, teses 10 e 11</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">29</span>Qual o prazo e as condições?</div><div class="prova-item-a">De <strong>2 a 4 anos</strong>, com reparação do dano, proibição de frequentar lugares, proibição de ausentar-se da comarca e comparecimento mensal, além de condições adicionais do juiz. <span class="ref">Art. 89, §§ 1º e 2º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">30</span>O que revoga o sursis?</div><div class="prova-item-a">Obrigatória: processo por outro crime ou falta de reparação do dano sem motivo. Facultativa: processo por contravenção ou descumprimento de condição. <span class="ref">Art. 89, §§ 3º e 4º; Tema 920/STJ</span></div></div>
+
+    <div class="prova-group">Exclusões e deslocamentos</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">31</span>Violência doméstica contra a mulher entra no JECrim?</div><div class="prova-item-a"><strong>Não.</strong> A Lei 9.099 não se aplica, independentemente da pena. Sem transação nem sursis. <span class="ref">Lei 11.340, art. 41; Súmula 536/STJ; STF, ADI 4424</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">32</span>E se a vítima for pessoa idosa?</div><div class="prova-item-a">Desde a <strong>Lei 15.163/2025</strong>, a Lei 9.099 não se aplica aos crimes do Estatuto nem aos praticados com violência contra a pessoa idosa, independentemente da pena. <span class="ref">Lei 10.741, art. 94, p. único</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">33</span>O concurso de infrações supera 2 anos. O JECrim continua competente?</div><div class="prova-item-a">Para o STJ, <strong>não</strong>. Para o FONAJE (Enunciado 120), sim. Confirmar a orientação do juízo. <span class="ref">STJ JT 96, tese 10; FONAJE 120</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">34</span>Há conexão com crime mais grave?</div><div class="prova-item-a">O feito vai ao <strong>juízo comum ou ao júri</strong>, com preservação da transação e da composição dos danos civis. <span class="ref">Art. 60, p. único; STF, ADI 5264</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">35</span>Contravenção penal tem limite de pena para entrar no JECrim?</div><div class="prova-item-a"><strong>Não.</strong> Toda contravenção é de menor potencial ofensivo, ressalvadas as exclusões legais. <span class="ref">Art. 61</span></div></div>
+  </div>
+</section>
+
+<!-- ============ 17 ============ -->
+<section class="section" id="fontes">
+  <div class="section-header"><div class="section-num">17</div><div class="section-title"><span>Controle de Fidedignidade</span>Fontes, Verificação e Ressalvas</div></div>
+  <div class="card">
+    <h3>Fontes consultadas e grau de verificação (conferência de 11/11/2026)</h3>
+    <div class="tbl-scroll">
+    <table class="comp-table">
+      <thead><tr><th>Fonte</th><th>Uso nesta página</th><th>Situação</th></tr></thead>
+      <tbody>
+        <tr class="hl2"><td>Planalto — Lei 9.099/1995, texto compilado</td><td>Arts. 60 a 92: transcrições e prazos. Única alteração do art. 61: Lei 11.313/2006.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido na íntegra</span></td></tr>
+        <tr class="hl2"><td>Planalto — Leis 11.313/2006, 10.259/2001, 14.994/2024, 15.163/2025, 15.438/2026, 15.455/2026</td><td>Conceito, competência, penas, vedações, decadência de 12 meses, § 9º do art. 129.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido</span></td></tr>
+        <tr class="hl2"><td>Planalto — CP, CPP, CTB, LCP, Leis 11.340, 10.741, 11.343, 9.605, 7.716 e CF</td><td>Penas, ação penal, art. 28-A, prescrição, CF art. 98, I.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, trechos lidos</span></td></tr>
+        <tr class="hl2"><td>STJ — Jurisprudência em Teses nºs 93, 96 e 209 (PDF do próprio STJ)</td><td>Teses e súmulas 243, 337, 536, 542, 588, 589 e 600 (redações como reproduzidas pelo STJ).</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido</span></td></tr>
+        <tr class="hl2"><td>STF — SV 35; Temas 187 e 238; notícias oficiais sobre ADI 5264 e ADI 4424</td><td>Teses e resultados de julgamento.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido</span></td></tr>
+        <tr class="hl"><td>FONAJE — compilação de Evinis Talon (atualizada em 06/02/2024)</td><td>Enunciados criminais 1 a 130.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+        <tr class="hl"><td>STF — ADI 3096; Súmulas 696 e 723</td><td>Resultado e textos.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+        <tr class="hl"><td>STJ — Súmula 438</td><td>Texto da súmula.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+        <tr class="hl3"><td>Doutrina (seção 15)</td><td>Síntese de correntes e bibliografia de referência.</td><td><span class="vb vb-pr" style="margin-left:0">Síntese; conferir na obra</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 class="mt2">Limites desta conferência</h3>
+    <ul class="source-list">
+      <li><strong>Site de súmulas do STJ (scon.stj.jus.br)</strong> recusou a consulta automatizada (HTTP 403). Por isso as Súmulas 243, 337, 536, 542, 588, 589 e 600 foram reproduzidas conforme os PDFs oficiais da Jurisprudência em Teses, e a Súmula 438 por fonte secundária. Conferir o texto no site do STJ antes de citar em peça.</li>
+      <li><strong>Súmulas 696 e 723 do STF</strong> e o resultado da <strong>ADI 3096</strong> foram confirmados em fontes secundárias. O portal de jurisprudência do STF não pôde ser lido nesta conferência.</li>
+      <li><strong>ADC 19</strong> é mencionada apenas como julgada na mesma ocasião da ADI 4424 (referência secundária). O acórdão não foi lido.</li>
+      <li><strong>Enunciados do FONAJE:</strong> compilação de terceiros; não vinculam tribunais. Podem ter sido editados novos encontros após fevereiro de 2024.</li>
+      <li><strong>Art. 28-A do CPP:</strong> transcrito apenas o caput e os §§ 1º a 5º. O texto traz a nota “Vide ADI 6.298” no Planalto; não foi analisado o resultado dessa ação.</li>
+      <li><strong>Lei 15.438/2026 e fatos anteriores:</strong> a aplicação temporal do prazo de 12 meses é tema em debate; não foi localizada jurisprudência consolidada.</li>
+      <li><strong>Regra do maior aumento e da menor diminuição</strong> para aferir a pena máxima com majorantes: orientação usual na prática forense, sustentada em fontes secundárias; conferir o precedente do tribunal local.</li>
+      <li><strong>Jurisprudência posterior a 2023:</strong> não foi possível pesquisar sistematicamente os acórdãos de 2024 a 2026 no site do STJ e do STF. Recomenda-se uma busca complementar no portal do tribunal para o tipo penal específico do caso.</li>
+    </ul>
+    <h3 class="mt2">Endereços das fontes oficiais</h3>
+    <ul class="source-list">
+      <li><a href="https://www.planalto.gov.br/ccivil_03/leis/l9099.htm" target="_blank" rel="noopener">Lei 9.099/1995 — Planalto</a></li>
+      <li><a href="https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11313.htm" target="_blank" rel="noopener">Lei 11.313/2006 — Planalto</a></li>
+      <li><a href="https://www.stj.jus.br/docs_internet/jurisprudencia/jurisprudenciaemteses/Jurisprudencia%20em%20Teses%2093%20-%20Juizados%20Especiais%20Criminais%20-%20I.pdf" target="_blank" rel="noopener">STJ — Jurisprudência em Teses 93 (JECrim I)</a></li>
+      <li><a href="https://www.stj.jus.br/docs_internet/jurisprudencia/jurisprudenciaemteses/Jurisprudencia%20em%20Teses%2096%20-%20Juizados%20Especiais%20Criminais%20-%20II.pdf" target="_blank" rel="noopener">STJ — Jurisprudência em Teses 96 (JECrim II)</a></li>
+      <li><a href="https://www.stj.jus.br/docs_internet/jurisprudencia/jurisprudenciaemteses/Jurisprudencia%20em%20Teses%20209%20-%20Julgamentos%20Com%20Perspectiva%20de%20Genero.pdf" target="_blank" rel="noopener">STJ — Jurisprudência em Teses 209 (perspectiva de gênero)</a></li>
+      <li><a href="https://noticias.stf.jus.br/?p=52154" target="_blank" rel="noopener">STF — notícia sobre a ADI 5264</a></li>
+      <li><a href="https://noticias.stf.jus.br/?p=30361" target="_blank" rel="noopener">STF — notícia sobre a ADI 4424</a></li>
+      <li><a href="https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=26&amp;sumula=1953" target="_blank" rel="noopener">STF — Súmula Vinculante 35</a></li>
+    </ul>
+    <div class="alert alert-red mt2"><span class="alert-tag">Nota de integridade</span><div>Não foram criadas súmulas, teses ou precedentes. Onde não foi possível confirmar a fonte primária, a página identifica a informação como secundária ou como orientação prática. Antes de transcrever qualquer trecho em peça, conferir o texto na fonte oficial.</div></div>
+  </div>
+</section>
+
+</div>
+
+<footer><strong>Art. 61 da Lei 9.099/1995 — Infrações Penais de Menor Potencial Ofensivo</strong> · Página única com atalhos internos · Conferência normativa em 11/11/2026 · Material de apoio à atuação; não substitui a consulta às fontes oficiais.</footer>
+
+<a id="to-top" href="#top-nav">Topo</a>
+
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('#top-nav a[href^="#"]'));
+  var map={};
+  links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  var ids=Object.keys(map);
+  var toTop=document.getElementById('to-top');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    var current=null;
+    ids.forEach(function(id){
+      var el=document.getElementById(id);
+      if(el && el.getBoundingClientRect().top<=90){current=id;}
+    });
+    links.forEach(function(a){a.classList.remove('active');});
+    if(current && map[current]){
+      var a=map[current], nav=document.getElementById('top-nav');
+      a.classList.add('active');
+      if(nav){
+        var left=a.offsetLeft-(nav.clientWidth/2)+(a.offsetWidth/2);
+        nav.scrollLeft=left;
+      }
+    }
+    if(toTop){toTop.classList.toggle('show',y>600);}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>
