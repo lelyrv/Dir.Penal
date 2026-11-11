@@ -246,6 +246,7 @@
   .mc-proc-civil{border-left-color:#2471a3;}.mc-proc-civil .materia-nome{color:#2471a3;}.mc-proc-civil::before{background:#2471a3;}
   .mc-civil{border-left-color:var(--gold);}.mc-civil .materia-nome{color:#7a5a00;}.mc-civil::before{background:var(--gold);}
   .mc-clt{border-left-color:#145a32;}.mc-clt .materia-nome{color:#145a32;}.mc-clt::before{background:#145a32;}
+  .mc-jecrim{border-left-color:#0f6e6e;}.mc-jecrim .materia-nome{color:#0f6e6e;}.mc-jecrim::before{background:#0f6e6e;}
 
   /* ── ALERTS ── */
   .alert{padding:0.9rem 1.2rem;border-radius:4px;font-size:0.84rem;line-height:1.7;display:flex;gap:0.7rem;align-items:flex-start;}
@@ -319,6 +320,7 @@
   .materia-card:nth-child(9){animation-delay:.45s;}
   .materia-card:nth-child(10){animation-delay:.5s;}
   .materia-card:nth-child(11){animation-delay:.55s;}
+  .materia-card:nth-child(12){animation-delay:.6s;}
 
   @media print{
     #dashboard{display:none;}
@@ -375,6 +377,7 @@
       <option value="CC">Cód. Civil</option>
       <option value="CPC">Cód. Proc. Civil</option>
       <option value="CLT">CLT</option>
+      <option value="L9099">Lei 9.099/95 (JECrim)</option>
     </select>
   </div>
 
@@ -388,7 +391,7 @@
     <div class="db-stat-card green">
       <div class="db-stat-label">Artigos Concluídos</div>
       <div class="db-stat-value green" id="db-completed">0</div>
-      <div class="db-stat-sub" id="db-completed-pct">de 5.211 artigos totais</div>
+      <div class="db-stat-sub" id="db-completed-pct">de 5.308 artigos totais</div>
     </div>
     <div class="db-stat-card blue">
       <div class="db-stat-label">Dias Estudados</div>
@@ -542,6 +545,25 @@
         <div class="materia-progress">
           <div class="mp-bar-bg"><div class="mp-bar-fill" id="prog-CPP" style="width:0%;background:#c0392b;"></div></div>
           <div class="mp-label"><span id="prog-CPP-label">0 / 811 artigos</span><span id="prog-CPP-pct">0%</span></div>
+        </div>
+      </a>
+
+      <!-- 2-A. LEI 9.099/95 — JUIZADOS ESPECIAIS CRIMINAIS -->
+      <a class="materia-card mc-jecrim" href="index-jecrim.html">
+        <div class="materia-icon">⚖️</div>
+        <div class="materia-nome">Lei 9.099/95 — Juizados Especiais Criminais</div>
+        <div class="materia-desc">Infrações de menor potencial ofensivo, audiência preliminar, composição dos danos civis, transação penal, rito sumaríssimo e suspensão condicional do processo.</div>
+        <div class="materia-footer">
+          <div class="materia-tags">
+            <span class="tag tag-navy">Lei 9.099</span>
+            <span class="tag tag-navy">JECrim</span>
+            <span class="tag tag-navy">STJ/STF</span>
+          </div>
+          <span class="materia-arrow">→</span>
+        </div>
+        <div class="materia-progress">
+          <div class="mp-bar-bg"><div class="mp-bar-fill" id="prog-L9099" style="width:0%;background:#0f6e6e;"></div></div>
+          <div class="mp-label"><span id="prog-L9099-label">0 / 97 artigos</span><span id="prog-L9099-pct">0%</span></div>
         </div>
       </a>
 
@@ -833,12 +855,12 @@ function dbRefresh() {
   document.getElementById('db-total-hours').textContent   = VMTracker.msToHHMM(totalStudyMs);
   document.getElementById('db-total-sessions').textContent = sessions.length + ' sessão(ões) no período';
   document.getElementById('db-completed').textContent     = totalCompleted;
-  document.getElementById('db-completed-pct').textContent = 'de 5.211 artigos totais';
+  document.getElementById('db-completed-pct').textContent = 'de 5.308 artigos totais';
   document.getElementById('db-days').textContent          = uniqueDays;
   document.getElementById('db-avg').textContent           = 'média ' + VMTracker.msToHHMM(avgMs) + ' por dia';
   document.getElementById('db-pause-hours').textContent   = VMTracker.msToHHMM(totalPauseMs);
 
-  const totalPct = ((totalCompleted / 5211) * 100).toFixed(1).replace('.',',');
+  const totalPct = ((totalCompleted / 5308) * 100).toFixed(1).replace('.',',');
   document.getElementById('db-progress-pct').textContent  = totalPct + '%';
 
   // Charts
@@ -970,9 +992,9 @@ function buildSummaryTable(summary) {
     </tr>`).join('') +
     `<tr style="border-top:2px solid rgba(200,150,12,0.3);font-weight:700;">
       <td style="color:var(--gold-light)">TOTAL GERAL</td>
-      <td>5.211</td>
+      <td>5.308</td>
       <td style="color:#2ecc71;">${totalConc}</td>
-      <td>${((totalConc/5211)*100).toFixed(1)}%</td>
+      <td>${((totalConc/5308)*100).toFixed(1)}%</td>
       <td style="color:#74b9ff;">${VMTracker.msToHHMM(totalStudy*60000)}</td>
       <td>${new Set(VMTracker.getSessions().filter(s=>s.state==='done').map(s=>s.date)).size}</td>
     </tr>`;
@@ -1006,6 +1028,11 @@ function updateProgressBars() {
   const cppW = Math.min(100, (cpp.completedCount||0) / (cpp.totalArticles||811) * 100);
   const cppEl = document.getElementById('prog-CPP');
   if (cppEl) { cppEl.style.width = cppW + '%'; document.getElementById('prog-CPP-label').textContent = (cpp.completedCount||0) + ' / 811 artigos'; document.getElementById('prog-CPP-pct').textContent = (cppW).toFixed(1) + '%'; }
+
+  const jec = summary['L9099'] || {};
+  const jecW = Math.min(100, (jec.completedCount||0) / (jec.totalArticles||97) * 100);
+  const jecEl = document.getElementById('prog-L9099');
+  if (jecEl) { jecEl.style.width = jecW + '%'; document.getElementById('prog-L9099-label').textContent = (jec.completedCount||0) + ' / 97 artigos'; document.getElementById('prog-L9099-pct').textContent = (jecW).toFixed(1) + '%'; }
 
   // Progress grid
   buildProgressGrid(summary);

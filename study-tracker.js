@@ -16,6 +16,7 @@
     'CC':  { name: 'Cód. Civil',          totalArticles: 2046, color: '#b8922a', colorLight: '#fdf3d8' },
     'CPC': { name: 'Cód. de Proc. Civil', totalArticles: 1071, color: '#2471a3', colorLight: '#dce8f5' },
     'CLT': { name: 'CLT',                 totalArticles: 922,  color: '#145a32', colorLight: '#dceee3' },
+    'L9099': { name: 'Lei 9.099/95 (JECrim)', totalArticles: 97, color: '#0f6e6e', colorLight: '#d9eeee' },
   };
 
   const DAYS_PT = ['domingo','segunda-feira','terça-feira','quarta-feira','quinta-feira','sexta-feira','sábado'];

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vade Mecum Magistratura | 2026</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ============================================================
+           AJUSTE AUTOMÁTICO DA ÁREA PRINCIPAL / IFRAME
+           ============================================================ */
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .content-area {
+            padding: 0 !important;
+            overflow: auto !important;
+            background: var(--bg-main, #f7f2ea);
+        }
+
+        iframe#painel_artigos {
+            width: 100%;
+            height: 100dvh;
+            min-height: 100dvh;
+            border: none;
+            display: block;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        iframe#painel_artigos.auto-height {
+            height: var(--iframe-height, 100dvh) !important;
+            min-height: var(--iframe-height, 100dvh) !important;
+        }
+
+        @media print {
+            html,
+            body {
+                width: 100% !important;
+                height: auto !important;
+                min-height: auto !important;
+                overflow: visible !important;
+                background: #fff !important;
+            }
+
+            .sidebar,
+            .menu-toggle {
+                display: none !important;
+            }
+
+            .content-area {
+                position: static !important;
+                inset: auto !important;
+                width: 100% !important;
+                height: auto !important;
+                min-height: auto !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow: visible !important;
+                display: block !important;
+                background: #fff !important;
+            }
+
+            iframe#painel_artigos {
+                width: 100% !important;
+                height: var(--iframe-height, auto) !important;
+                min-height: var(--iframe-height, auto) !important;
+                border: none !important;
+                overflow: visible !important;
+                display: block !important;
+                background: #fff !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="menu-toggle" onclick="toggleMenu()" title="Ocultar/Mostrar Menu">☰</button>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>LEI 9.099/95</h2>
+            <p>JUIZADOS ESPECIAIS CRIMINAIS</p>
+        </div>
+
+        <a href="index.html" style="display:block;padding:0.5rem 1.2rem;font-size:0.78rem;color:var(--gold-light,#e8b84b);text-decoration:none;border-bottom:1px solid rgba(200,150,12,0.2);letter-spacing:1px;font-weight:600;">← VOLTAR AO ÍNDICE</a>
+        <nav class="menu-artigos">
+            <div class="menu-group-title">Disposições Gerais — Juizados Criminais (Arts. 60–62)</div>
+            <a href="L9099-ART-61.html" target="painel_artigos">Art. 61 - Infrações de Menor Potencial Ofensivo</a>
+        </nav>
+    </aside>
+
+    <main class="content-area">
+        <iframe
+            id="painel_artigos"
+            src="L9099-ART-61.html"
+            name="painel_artigos"
+            title="Painel de artigos da Lei 9.099/95">
+        </iframe>
+    </main>
+
+    <script src="script.js"></script>
+
+    <script>
+        /* ============================================================
+           ALTURA AUTOMÁTICA DO IFRAME
+           ============================================================ */
+        (function () {
+            const iframe = document.getElementById('painel_artigos');
+
+            if (!iframe) return;
+
+            function getIframeDocument() {
+                return iframe.contentDocument || iframe.contentWindow.document;
+            }
+
+            function calcularAlturaReal(doc) {
+                const html = doc.documentElement;
+                const body = doc.body;
+
+                if (!html || !body) return window.innerHeight;
+
+                return Math.max(
+                    body.scrollHeight,
+                    body.offsetHeight,
+                    html.clientHeight,
+                    html.scrollHeight,
+                    html.offsetHeight
+                );
+            }
+
+            function ajustarAlturaIframe() {
+                try {
+                    const doc = getIframeDocument();
+                    const altura = calcularAlturaReal(doc);
+
+                    iframe.classList.add('auto-height');
+                    iframe.style.setProperty('--iframe-height', altura + 'px');
+
+                    document.documentElement.style.setProperty('--iframe-height', altura + 'px');
+                } catch (erro) {
+                    iframe.classList.remove('auto-height');
+                    iframe.style.removeProperty('--iframe-height');
+
+                    console.warn(
+                        'Não foi possível ajustar automaticamente o iframe. Verifique se o conteúdo está no mesmo domínio/origem.',
+                        erro
+                    );
+                }
+            }
+
+            function prepararObservador() {
+                try {
+                    const doc = getIframeDocument();
+
+                    ajustarAlturaIframe();
+
+                    if (doc.fonts && doc.fonts.ready) {
+                        doc.fonts.ready.then(ajustarAlturaIframe);
+                    }
+
+                    const observer = new ResizeObserver(ajustarAlturaIframe);
+
+                    if (doc.documentElement) observer.observe(doc.documentElement);
+                    if (doc.body) observer.observe(doc.body);
+
+                    const mutationObserver = new MutationObserver(ajustarAlturaIframe);
+
+                    if (doc.body) {
+                        mutationObserver.observe(doc.body, {
+                            childList: true,
+                            subtree: true,
+                            attributes: true,
+                            characterData: true
+                        });
+                    }
+
+                    setTimeout(ajustarAlturaIframe, 150);
+                    setTimeout(ajustarAlturaIframe, 500);
+                    setTimeout(ajustarAlturaIframe, 1000);
+                } catch (erro) {
+                    console.warn('Não foi possível observar alterações no iframe.', erro);
+                }
+            }
+
+            iframe.addEventListener('load', function () {
+                prepararObservador();
+
+                const area = document.querySelector('.content-area');
+                if (area) area.scrollTo({ top: 0, behavior: 'auto' });
+            });
+
+            window.addEventListener('load', ajustarAlturaIframe);
+            window.addEventListener('resize', ajustarAlturaIframe);
+            window.addEventListener('beforeprint', ajustarAlturaIframe);
+
+            document.querySelectorAll('.menu-artigos a[target="painel_artigos"]').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    document.querySelectorAll('.menu-artigos a').forEach(function (item) {
+                        item.classList.remove('active');
+                    });
+
+                    link.classList.add('active');
+
+                    setTimeout(ajustarAlturaIframe, 250);
+                    setTimeout(ajustarAlturaIframe, 700);
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
