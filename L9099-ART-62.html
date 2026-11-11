@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 62 da Lei 9.099/1995 — Critérios Orientadores do Processo | Fluxograma de Atuação em Audiência</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0d1b2a;--navy-mid:#1a2f45;--navy-light:#243b55;
+  --gold:#c8960c;--gold-light:#e8b84b;--gold-pale:#fdf3d8;
+  --cream:#faf7f2;--cream-mid:#f0ebe2;
+  --text-dark:#1a1208;--text-mid:#3d3020;--text-soft:#6b5c40;
+  --border:#d4c49a;--border-light:#e8dcbf;
+  --red-accent:#8b1a1a;--green-accent:#1a4a2e;--blue-accent:#1a3a5c;--purple-accent:#4a1a5c;
+  --shadow:0 4px 24px rgba(13,27,42,0.10);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Source Serif 4',Georgia,serif;background:var(--cream);color:var(--text-dark);font-size:15px;line-height:1.75;}
+a{color:var(--blue-accent);}
+strong{font-weight:700;}
+
+/* ---------- Navegação ---------- */
+#top-nav{position:sticky;top:0;z-index:999;background:var(--navy);border-bottom:3px solid var(--gold);padding:0 1.5rem;display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;}
+#top-nav::-webkit-scrollbar{display:none;}
+#top-nav .nav-brand{font-family:'Playfair Display',serif;color:var(--gold-light);font-size:0.9rem;font-weight:700;white-space:nowrap;padding:0.85rem 1.2rem 0.85rem 0;border-right:1px solid rgba(200,150,12,0.3);margin-right:0.5rem;letter-spacing:0.5px;}
+#top-nav .nav-main-links{display:flex;align-items:center;}
+#top-nav a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.72rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;padding:0.85rem 0.8rem;white-space:nowrap;transition:color .2s;border-bottom:3px solid transparent;margin-bottom:-3px;}
+#top-nav a:hover,#top-nav a.active{color:var(--gold-light);border-bottom-color:var(--gold);}
+#top-nav a.nav-prova{color:var(--gold-light);}
+
+/* ---------- Cabeçalho ---------- */
+#hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 60%,#1e3d5c 100%);color:white;padding:3.5rem 2rem 3rem;text-align:center;position:relative;overflow:hidden;}
+#hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(200,150,12,0.03) 0px,rgba(200,150,12,0.03) 1px,transparent 1px,transparent 40px);}
+#hero .badge{display:inline-block;background:rgba(200,150,12,0.15);border:1px solid rgba(200,150,12,0.5);color:var(--gold-light);font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;padding:0.35rem 1rem;border-radius:2px;margin-bottom:1.2rem;font-weight:600;position:relative;}
+#hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.15;margin-bottom:0.6rem;letter-spacing:-0.5px;position:relative;}
+#hero h1 span{color:var(--gold-light);}
+#hero .subtitle{font-size:1rem;color:rgba(255,255,255,0.65);font-style:italic;margin-bottom:1.5rem;position:relative;}
+#hero .law-box{display:inline-block;background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.4);border-left:4px solid var(--gold);color:rgba(255,255,255,0.9);font-size:0.93rem;font-style:italic;padding:1rem 1.5rem;max-width:1120px;text-align:left;line-height:1.9;border-radius:0 4px 4px 0;position:relative;}
+#hero .law-box strong{color:var(--gold-light);font-style:normal;display:block;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem;}
+
+/* ---------- Estrutura ---------- */
+.page-wrap{width:100%;margin:0;padding:0 clamp(1rem,3vw,4rem) 4rem;}
+.section{margin-top:3.5rem;scroll-margin-top:56px;}
+.section-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:0.75rem;border-bottom:2px solid var(--border);}
+.section-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--border);line-height:1;min-width:2.5rem;}
+.section-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--navy);line-height:1.2;}
+.section-title span{display:block;font-size:0.75rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);}
+.sub-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin:1.6rem 0 0.7rem;padding-left:0.7rem;border-left:4px solid var(--gold);}
+
+/* ---------- Cartões ---------- */
+.card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1.4rem 1.6rem;box-shadow:var(--shadow);}
+.card-grid{display:grid;gap:1rem;}
+.card-grid-2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr));}
+.card-grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
+.card-grid-4{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));}
+.card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:0.6rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border-light);color:var(--navy);}
+.card h4{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;margin:0.8rem 0 0.35rem;color:var(--navy);}
+.card p,.card li{font-size:0.88rem;line-height:1.7;color:var(--text-mid);}
+.card p + p{margin-top:0.55rem;}
+.card ul,.card ol{padding-left:1.1rem;}
+.card li{margin-bottom:0.3rem;}
+.type-card{border-top:4px solid;}
+.tc-red{border-top-color:var(--red-accent);}.tc-red h3{color:var(--red-accent);}
+.tc-green{border-top-color:var(--green-accent);}.tc-green h3{color:var(--green-accent);}
+.tc-blue{border-top-color:var(--blue-accent);}.tc-blue h3{color:var(--blue-accent);}
+.tc-gold{border-top-color:var(--gold);}.tc-gold h3{color:#7a5a00;}
+.tc-purple{border-top-color:var(--purple-accent);}.tc-purple h3{color:var(--purple-accent);}
+
+/* ---------- Fluxograma ---------- */
+.flow-wrap{background:white;border:1px solid var(--border-light);border-radius:6px;padding:2rem 1.5rem;box-shadow:var(--shadow);overflow-x:auto;}
+.flow-center{display:flex;flex-direction:column;align-items:center;}
+.flow-node{border-radius:4px;padding:0.65rem 1.4rem;font-size:0.82rem;font-weight:600;text-align:center;min-width:220px;max-width:760px;line-height:1.55;}
+.flow-node small{display:block;font-weight:400;font-size:0.74rem;opacity:0.9;margin-top:0.2rem;}
+.flow-start{background:var(--navy);color:white;border-radius:50px;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;}
+.flow-end-green{background:var(--green-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-red{background:var(--red-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-gold{background:var(--gold);color:var(--navy);border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-blue{background:var(--blue-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-purple{background:var(--purple-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-box-navy{background:var(--navy-mid);color:white;border-left:4px solid var(--gold);font-size:0.8rem;}
+.flow-box-navy b{color:var(--gold-light);}
+.flow-box-green{background:#edf7f0;border:1px solid #7ec89a;border-left:4px solid var(--green-accent);color:var(--text-dark);}
+.flow-box-blue{background:#edf2f8;border:1px solid #8eb4d8;border-left:4px solid var(--blue-accent);color:var(--text-dark);}
+.flow-box-red{background:#fdf0f0;border:1px solid #e09090;border-left:4px solid var(--red-accent);color:var(--text-dark);}
+.flow-box-gold{background:var(--gold-pale);border:2px solid var(--gold);color:var(--text-dark);}
+.flow-box-purple{background:#f3eef8;border:1px solid #b89dd8;border-left:4px solid var(--purple-accent);color:var(--text-dark);}
+.flow-arrow{font-size:1.3rem;color:var(--border);line-height:1;margin:0.15rem 0;}
+.flow-row{display:flex;align-items:flex-start;gap:1.5rem;width:100%;justify-content:center;flex-wrap:wrap;}
+.flow-branch{display:flex;flex-direction:column;align-items:center;flex:1;min-width:210px;}
+.flow-label{font-size:0.68rem;color:var(--text-soft);font-weight:600;letter-spacing:0.5px;text-transform:uppercase;background:var(--cream-mid);padding:0.15rem 0.5rem;border-radius:2px;margin:0.15rem 0;text-align:center;}
+.flow-connector-line{width:1px;height:28px;background:var(--border);}
+
+/* ---------- Tabelas ---------- */
+.tbl-scroll{overflow-x:auto;border-radius:6px;box-shadow:var(--shadow);}
+.comp-table{width:100%;border-collapse:collapse;font-size:0.84rem;background:white;}
+.comp-table thead{background:var(--navy);color:white;}
+.comp-table thead th{padding:0.85rem 1rem;font-weight:600;letter-spacing:0.5px;font-size:0.8rem;text-align:left;}
+.comp-table thead th:first-child{color:var(--gold-light);}
+.comp-table tbody tr{border-bottom:1px solid var(--border-light);}
+.comp-table tbody tr:last-child{border-bottom:none;}
+.comp-table tbody tr:nth-child(even){background:var(--cream);}
+.comp-table td{padding:0.75rem 1rem;color:var(--text-mid);vertical-align:top;}
+.comp-table td:first-child{font-weight:600;color:var(--navy);font-size:0.8rem;}
+.comp-table .hl td{background:var(--gold-pale)!important;}
+.comp-table .hl2 td{background:#edf7f0!important;}
+.comp-table .hl3 td{background:#edf2f8!important;}
+.comp-table .hl4 td{background:#fdf0f0!important;}
+.comp-table .hl5 td{background:#f3eef8!important;}
+
+/* ---------- Jurisprudência ---------- */
+.juris-grid{display:grid;gap:1rem;}
+.juris-card{background:white;border:1px solid var(--border-light);border-left:5px solid;border-radius:0 6px 6px 0;padding:1.2rem 1.4rem;box-shadow:var(--shadow);}
+.juris-card.stf{border-left-color:var(--red-accent);}
+.juris-card.stj{border-left-color:var(--navy);}
+.juris-card.doutrina{border-left-color:var(--gold);}
+.juris-card.fonaje{border-left-color:var(--purple-accent);}
+.juris-header{display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem;flex-wrap:wrap;}
+.juris-badge{font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:0.2rem 0.55rem;border-radius:2px;}
+.juris-badge.stf{background:var(--red-accent);color:white;}
+.juris-badge.stj{background:var(--navy);color:white;}
+.juris-badge.doutrina{background:var(--gold);color:var(--navy);}
+.juris-badge.sumula{background:var(--green-accent);color:white;}
+.juris-badge.tese{background:var(--blue-accent);color:white;}
+.juris-badge.purple{background:var(--purple-accent);color:white;}
+.juris-title{font-family:'Playfair Display',serif;font-size:0.92rem;font-weight:700;color:var(--navy);}
+.juris-body{font-size:0.84rem;color:var(--text-mid);line-height:1.7;}
+.juris-body .quote{display:block;margin:0.4rem 0;padding:0.5rem 0.8rem;background:var(--cream-mid);border-left:3px solid var(--border);font-style:italic;}
+.vb{display:inline-block;font-size:0.6rem;font-weight:700;letter-spacing:0.9px;text-transform:uppercase;padding:0.12rem 0.45rem;border-radius:2px;margin-left:auto;}
+.vb-of{background:#dceee3;color:var(--green-accent);border:1px solid #7ec89a;}
+.vb-sec{background:#fdf3d8;color:#7a5a00;border:1px solid #d4aa3a;}
+.vb-pr{background:#ece5f5;color:var(--purple-accent);border:1px solid #b89dd8;}
+
+/* ---------- Alertas e citações ---------- */
+.alert{padding:0.9rem 1.2rem;border-radius:4px;font-size:0.84rem;line-height:1.7;display:flex;gap:0.7rem;align-items:flex-start;}
+.alert .alert-tag{flex-shrink:0;font-size:0.62rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:0.2rem 0.5rem;border-radius:2px;margin-top:0.2rem;}
+.alert-gold{background:var(--gold-pale);border:1px solid #d4aa3a;color:#5a4000;}.alert-gold .alert-tag{background:#d4aa3a;color:#3a2800;}
+.alert-red{background:#fdf0f0;border:1px solid #e09090;color:#5a0000;}.alert-red .alert-tag{background:var(--red-accent);color:white;}
+.alert-navy{background:#f0f4f8;border:1px solid #aabbcc;color:var(--navy);}.alert-navy .alert-tag{background:var(--navy);color:white;}
+.alert-green{background:#edf7f0;border:1px solid #7ec89a;color:#1a4a2e;}.alert-green .alert-tag{background:var(--green-accent);color:white;}
+.alert-purple{background:#f3eef8;border:1px solid #b89dd8;color:var(--purple-accent);}.alert-purple .alert-tag{background:var(--purple-accent);color:white;}
+.law-quote{background:var(--cream-mid);border-left:4px solid var(--navy);padding:0.9rem 1.2rem;font-size:0.88rem;font-style:italic;color:var(--text-mid);line-height:1.7;border-radius:0 4px 4px 0;}
+.law-quote strong{font-style:normal;color:var(--navy);font-size:0.75rem;letter-spacing:0.5px;display:block;margin-bottom:0.25rem;}
+.law-quote + .law-quote{margin-top:0.7rem;}
+.divider{height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);margin:1.2rem 0;}
+.mt1{margin-top:0.75rem;}.mt2{margin-top:1rem;}.mt3{margin-top:1.5rem;}
+.ref{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--text-soft);}
+.source-note{font-size:0.78rem;color:var(--text-soft);border-top:1px dashed var(--border);padding-top:0.7rem;margin-top:0.9rem;}
+.source-list li{font-size:0.82rem;margin-bottom:0.45rem;}
+.tag{display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;padding:0.15rem 0.5rem;border-radius:2px;margin:0.1rem;}
+.tag-blue{background:#dce8f5;color:var(--blue-accent);}
+.tag-green{background:#dceee3;color:var(--green-accent);}
+.tag-gold{background:var(--gold-pale);color:#7a5a00;border:1px solid #d4aa3a;}
+.tag-red{background:#fde8e8;color:var(--red-accent);}
+.tag-purple{background:#ece5f5;color:var(--purple-accent);}
+
+/* ---------- Anatomia do dispositivo ---------- */
+.anat-visual{display:flex;align-items:stretch;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);}
+.av-col{flex:1;padding:1.2rem 1.4rem;}
+.av-navy{background:var(--navy-mid);color:white;}
+.av-sep{background:var(--navy);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:900;flex:0 0 2.2rem;}
+.av-red{background:var(--red-accent);color:white;}
+.av-blue{background:var(--blue-accent);color:white;}
+.av-gold{background:var(--gold);color:var(--navy);}
+.av-purple{background:var(--purple-accent);color:white;}
+.av-col h4{font-family:'Playfair Display',serif;font-size:0.98rem;font-weight:700;margin-bottom:0.5rem;border-bottom:1px solid rgba(255,255,255,0.2);padding-bottom:0.35rem;}
+.av-col p,.av-col li{font-size:0.82rem;line-height:1.65;}
+.av-col ul{padding-left:1rem;margin-top:0.3rem;}
+
+/* ---------- Pontos recorrentes ---------- */
+.prova-section{background:var(--navy);border-radius:8px;padding:2rem;color:white;margin-top:3.5rem;scroll-margin-top:56px;}
+.prova-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold-light);margin-bottom:0.5rem;}
+.prova-section .intro{font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;font-style:italic;}
+.prova-items{display:grid;gap:0.75rem;}
+.prova-item{background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.25);border-left:4px solid var(--gold);border-radius:0 4px 4px 0;padding:1rem 1.2rem;}
+.prova-item-q{font-size:0.84rem;font-weight:600;color:var(--gold-light);margin-bottom:0.4rem;display:flex;align-items:flex-start;gap:0.6rem;}
+.prova-item-q .qnum{background:var(--gold);color:var(--navy);font-size:0.65rem;font-weight:700;padding:0.1rem 0.45rem;border-radius:2px;flex-shrink:0;margin-top:0.1rem;}
+.prova-item-a{font-size:0.82rem;color:rgba(255,255,255,0.84);line-height:1.65;}
+.prova-item-a strong{color:white;}
+.prova-item-a .ref{color:var(--gold-light);}
+.prova-group{font-family:'Playfair Display',serif;font-size:1rem;color:var(--gold-light);margin:1.4rem 0 0.2rem;padding-bottom:0.3rem;border-bottom:1px solid rgba(200,150,12,0.3);}
+
+footer{background:var(--navy);color:rgba(255,255,255,0.5);text-align:center;padding:1.5rem;font-size:0.75rem;border-top:2px solid var(--gold);}
+footer strong{color:var(--gold-light);}
+#to-top{position:fixed;right:1.2rem;bottom:1.2rem;z-index:998;background:var(--navy);color:var(--gold-light);border:1px solid var(--gold);border-radius:3px;padding:0.45rem 0.8rem;font-size:0.72rem;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;text-decoration:none;opacity:0;pointer-events:none;transition:opacity .2s;}
+#to-top.show{opacity:1;pointer-events:auto;}
+
+@page{size:A4 landscape;margin:8mm;}
+@media print{
+  #top-nav,#to-top,footer{display:none;}
+  #hero{padding:1.2rem 1rem;}#hero::before{display:none;}
+  .page-wrap{padding:0 0.35rem 1rem;}
+  .section{margin-top:1.15rem;}
+  .card,.juris-card,.flow-wrap,.prova-item,.comp-table tr{page-break-inside:avoid;}
+  .card,.juris-card,.flow-wrap{box-shadow:none;border:1px solid #ccc;}
+  .prova-section{background:#f0f4f8!important;color:#000!important;}
+  .prova-section h2,.prova-group{color:#0d1b2a!important;}
+  .prova-item{background:white!important;border:1px solid #ccc!important;}
+  .prova-item-q{color:#7a5a00!important;}.prova-item-a{color:#333!important;}.prova-item-a .ref{color:#555!important;}
+  body{font-size:8.5pt;line-height:1.4;}
+  .card p,.card li,.juris-body{font-size:8pt;line-height:1.4;}
+  .comp-table{font-size:7.5pt;}.comp-table td,.comp-table th{padding:.35rem;}
+}
+@media(max-width:700px){
+  #hero{padding:2rem 1rem;}#hero h1{font-size:1.6rem;}
+  .card-grid-2,.card-grid-3,.card-grid-4{grid-template-columns:1fr;}
+  .section-title{font-size:1.1rem;}
+  .comp-table{font-size:0.76rem;min-width:560px;}.comp-table td,.comp-table th{padding:0.55rem 0.65rem;}
+  .flow-node{min-width:150px;font-size:0.74rem;}
+  .anat-visual{flex-direction:column;}.av-sep{padding:0.4rem;flex:0 0 1.5rem;}
+}
+</style>
+</head>
+<body>
+<!-- VM-STUDY-BAR-START -->
+<style id="vm-bar-css">
+html,body{-webkit-transform:none!important;transform:none!important;overflow-x:hidden;}
+#vm-study-bar *{box-sizing:border-box;margin:0;padding:0;}
+#vm-study-bar{
+  position:fixed!important;top:0!important;left:0!important;right:0!important;
+  z-index:2147483647!important;
+  -webkit-transform:translateZ(0);transform:translateZ(0);
+  will-change:transform;-webkit-backface-visibility:hidden;backface-visibility:hidden;
+  background:linear-gradient(180deg,#0d1b2a 0%,#0a1520 100%);
+  border-bottom:2px solid #c8960c;
+  box-shadow:0 2px 16px rgba(0,0,0,.5);
+  font-family:'Source Serif 4',Georgia,serif;
+  display:flex;flex-direction:column;
+  user-select:none;-webkit-user-select:none;
+}
+.vm-row1{
+  display:flex;align-items:center;padding:0 .4rem;min-height:42px;
+  border-bottom:1px solid rgba(200,150,12,.18);
+}
+.vm-back{
+  display:flex;align-items:center;color:#e8b84b;text-decoration:none;
+  font-size:.78rem;font-weight:700;padding:0 .6rem 0 .15rem;min-height:42px;
+  border-right:1px solid rgba(200,150,12,.22);white-space:nowrap;flex-shrink:0;
+  -webkit-tap-highlight-color:transparent;
+}
+.vm-back:active{color:#fff;}
+.vm-info{
+  font-size:.68rem;color:rgba(255,255,255,.65);padding:0 .5rem;flex:1;
+  min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.vm-info strong{color:#e8b84b;font-weight:700;}
+.vm-completed-wrap{
+  display:flex;align-items:center;height:100%;
+  padding-left:.85rem;padding-right:.65rem;
+  margin-left:.45rem;
+  border-left:1px solid rgba(200,150,12,.18);flex-shrink:0;
+}
+.vm-completed-wrap label{
+  display:flex;align-items:center;gap:.35rem;font-size:.66rem;
+  color:rgba(255,255,255,.5);cursor:pointer;white-space:nowrap;padding:0 .1rem;
+}
+#vm-check{width:16px;height:16px;accent-color:#2ecc71;cursor:pointer;flex-shrink:0;}
+#vm-check-label{transition:color .2s;}
+.vm-row2{display:flex;align-items:center;padding:0 .65rem;min-height:42px;gap:.75rem;}
+.vm-timer-block{display:flex;align-items:center;gap:.55rem;flex-shrink:0;margin-left:.35rem;}
+.vm-timer{
+  font-family:'JetBrains Mono','Courier New',monospace;
+  font-size:1.05rem;font-weight:700;color:#e8b84b;letter-spacing:1.2px;
+  min-width:78px;text-align:center;line-height:1;
+}
+.vm-pause-timer{font-size:.62rem;color:#fc8181;min-width:48px;font-weight:600;}
+/* Status pill: visível apenas quando ativo (leitura/pausa/concluído) */
+.vm-status{
+  font-size:.58rem;font-weight:700;letter-spacing:.7px;text-transform:uppercase;
+  padding:.2rem .5rem;border-radius:10px;white-space:nowrap;flex-shrink:0;
+  transition:background .2s,color .2s;
+}
+.vm-status-idle   {display:none;}
+.vm-status-reading{background:rgba(46,204,113,.18);  color:#2ecc71;}
+.vm-status-paused {background:rgba(252,137,74,.18);  color:#fc894a;}
+.vm-status-done   {background:rgba(116,185,255,.18); color:#74b9ff;}
+.vm-spacer{flex:1;}
+.vm-btns{display:flex;gap:.55rem;flex-shrink:0;margin-left:.55rem;}
+.vm-btn{
+  font-family:'Source Serif 4',Georgia,serif;font-size:.68rem;font-weight:700;
+  padding:0 .55rem;height:32px;min-width:32px;border-radius:4px;border:1.5px solid;
+  cursor:pointer;white-space:nowrap;transition:background .15s,transform .1s;
+  display:flex;align-items:center;justify-content:center;gap:.35rem;
+  -webkit-tap-highlight-color:transparent;
+}
+.vm-btn:active{transform:scale(.94);}
+.vm-btn:disabled{opacity:.2;cursor:default;pointer-events:none;}
+#vm-btn-start{background:rgba(46,204,113,.18);border-color:rgba(46,204,113,.55);color:#2ecc71;}
+#vm-btn-start:not(:disabled):active{background:rgba(46,204,113,.35);}
+#vm-btn-pause{background:rgba(230,126,34,.18);border-color:rgba(230,126,34,.55);color:#fc894a;}
+#vm-btn-pause:not(:disabled):active{background:rgba(230,126,34,.35);}
+#vm-btn-end{background:rgba(116,185,255,.18);border-color:rgba(116,185,255,.55);color:#74b9ff;}
+#vm-btn-end:not(:disabled):active{background:rgba(116,185,255,.35);}
+body{padding-top:84px!important;}
+.tabs-wrap,#top-nav{top:84px!important;margin-top:-84px!important;}
+.hero,.page-wrap,.container,.wrap,main{scroll-margin-top:140px;}
+@media(min-width:520px){
+  #vm-study-bar{flex-direction:row;align-items:stretch;height:46px;gap:.95rem;padding-right:.75rem;}
+  .vm-row1{border-bottom:none;min-height:46px;padding:0;}
+  .vm-row2{min-height:46px;padding:0 .5rem 0 0;gap:.85rem;}
+  body{padding-top:46px!important;}
+  .tabs-wrap,#top-nav{top:46px!important;margin-top:-46px!important;}
+}
+
+@media(max-width:360px){
+  .vm-timer{font-size:.9rem;min-width:68px;}
+  .vm-btn{font-size:.6rem;padding:0 .38rem;height:30px;}
+  .vm-info{font-size:.61rem;}
+}
+
+
+/* === AJUSTE FINAL: BARRA SUPERIOR PADRONIZADA / SEM FAIXA BRANCA === */
+:root{--vm-study-bar-h:46px;}
+#vm-study-bar{
+  position:fixed!important;
+  top:0!important;left:0!important;right:0!important;
+  width:100%!important;
+  min-height:var(--vm-study-bar-h)!important;
+  height:var(--vm-study-bar-h)!important;
+  margin:0!important;
+  padding:0 1.25rem 0 0!important;
+  display:flex!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  gap:0!important;
+  background:#0a1520!important;
+  border-top:0!important;
+  border-bottom:2px solid #c8960c!important;
+  box-shadow:0 2px 14px rgba(0,0,0,.55)!important;
+  overflow:visible!important;
+}
+#vm-study-bar .vm-row1,
+#vm-study-bar .vm-row2{
+  display:contents!important;
+  min-height:0!important;
+  height:auto!important;
+  padding:0!important;
+  border:0!important;
+}
+#vm-study-bar .vm-back{
+  order:1!important;
+  height:var(--vm-study-bar-h)!important;
+  min-height:var(--vm-study-bar-h)!important;
+  padding:0 1.15rem!important;
+  margin:0!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  border-right:1px solid rgba(200,150,12,.35)!important;
+}
+#vm-study-bar .vm-info{
+  order:2!important;
+  flex:1 1 auto!important;
+  min-width:70px!important;
+  padding:0 1.3rem!important;
+  margin:0!important;
+  white-space:nowrap!important;
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+}
+#vm-study-bar .vm-timer-block{
+  order:3!important;
+  height:var(--vm-study-bar-h)!important;
+  min-height:var(--vm-study-bar-h)!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:.65rem!important;
+  margin:0 1.1rem 0 0!important;
+  flex:0 0 auto!important;
+}
+#vm-study-bar .vm-status{
+  order:4!important;
+  margin:0 .85rem 0 0!important;
+}
+#vm-study-bar .vm-spacer{display:none!important;}
+#vm-study-bar .vm-btns{
+  order:5!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:.55rem!important;
+  margin:0 1.25rem 0 0!important;
+  flex:0 0 auto!important;
+}
+#vm-study-bar .vm-btn{
+  width:74px!important;
+  min-width:74px!important;
+  max-width:74px!important;
+  height:32px!important;
+  min-height:32px!important;
+  padding:0!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:.25rem!important;
+  text-align:center!important;
+  border-radius:4px!important;
+  line-height:1!important;
+}
+#vm-study-bar .vm-completed-wrap{
+  order:6!important;
+  height:var(--vm-study-bar-h)!important;
+  min-height:var(--vm-study-bar-h)!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  padding:0 0 0 1.2rem!important;
+  margin:0!important;
+  border-left:1px solid rgba(200,150,12,.25)!important;
+  flex:0 0 auto!important;
+}
+body{
+  padding-top:var(--vm-study-bar-h)!important;
+  margin-top:0!important;
+}
+#top-nav,.tabs-wrap,.tab-bar,.nav-tabs{
+  top:var(--vm-study-bar-h)!important;
+  margin-top:0!important;
+}
+.hero,.page-wrap,.container,.wrap,main,.wrapper{
+  scroll-margin-top:calc(var(--vm-study-bar-h) + 76px)!important;
+}
+
+@media(max-width:699px){
+  :root{--vm-study-bar-h:88px;}
+  #vm-study-bar{
+    height:var(--vm-study-bar-h)!important;
+    min-height:var(--vm-study-bar-h)!important;
+    padding:0!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    overflow:hidden!important;
+  }
+  #vm-study-bar .vm-row1,
+  #vm-study-bar .vm-row2{
+    display:flex!important;
+    width:100%!important;
+  }
+  #vm-study-bar .vm-row1{
+    height:42px!important;
+    min-height:42px!important;
+    align-items:center!important;
+    border-bottom:1px solid rgba(200,150,12,.22)!important;
+  }
+  #vm-study-bar .vm-row2{
+    height:46px!important;
+    min-height:46px!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:.35rem!important;
+    padding:0 .45rem!important;
+  }
+  #vm-study-bar .vm-back{
+    height:42px!important;
+    min-height:42px!important;
+    padding:0 .65rem!important;
+  }
+  #vm-study-bar .vm-info{
+    padding:0 .55rem!important;
+    font-size:.64rem!important;
+  }
+  #vm-study-bar .vm-completed-wrap{
+    order:3!important;
+    height:42px!important;
+    min-height:42px!important;
+    padding:0 .55rem!important;
+    border-left:1px solid rgba(200,150,12,.22)!important;
+  }
+  #vm-study-bar .vm-timer-block{
+    order:1!important;
+    height:46px!important;
+    min-height:46px!important;
+    margin:0!important;
+    gap:.25rem!important;
+  }
+  #vm-study-bar .vm-timer{
+    font-size:.92rem!important;
+    min-width:74px!important;
+    letter-spacing:.6px!important;
+  }
+  #vm-study-bar .vm-pause-timer{display:none!important;}
+  #vm-study-bar .vm-status{display:none!important;}
+  #vm-study-bar .vm-btns{
+    order:2!important;
+    gap:.35rem!important;
+    margin:0!important;
+  }
+  #vm-study-bar .vm-btn{
+    width:66px!important;
+    min-width:66px!important;
+    max-width:66px!important;
+    height:31px!important;
+    min-height:31px!important;
+    font-size:.58rem!important;
+  }
+}
+
+@media(max-width:380px){
+  #vm-study-bar .vm-btn{width:60px!important;min-width:60px!important;max-width:60px!important;font-size:.54rem!important;}
+  #vm-study-bar .vm-timer{font-size:.82rem!important;min-width:66px!important;}
+  #vm-study-bar .vm-info{font-size:.58rem!important;}
+}
+</style>
+
+<div id="vm-study-bar"
+  data-article-id="L9099-ART-62"
+  data-subject="Lei 9.099/95"
+  data-subject-id="L9099"
+  data-article-num="62">
+  <div class="vm-row1">
+    <a class="vm-back" href="index.html">&#8592; Início</a>
+    <div class="vm-info"><strong>Lei 9.099/95</strong> &middot; Art.&nbsp;62</div>
+    <div class="vm-completed-wrap">
+      <label>
+        <input type="checkbox" id="vm-check" onchange="vmToggleCompleted()">
+        <span id="vm-check-label">Concluído</span>
+      </label>
+    </div>
+  </div>
+  <div class="vm-row2">
+    <div class="vm-timer-block">
+      <div class="vm-timer" id="vm-timer">00:00:00</div>
+      <div class="vm-pause-timer" id="vm-pause-timer"></div>
+    </div>
+    <div class="vm-status vm-status-idle" id="vm-status">Parado</div>
+    <div class="vm-spacer"></div>
+    <div class="vm-btns">
+      <button class="vm-btn" id="vm-btn-start" onclick="vmStartResume()">&#9654; Iniciar</button>
+      <button class="vm-btn" id="vm-btn-pause" onclick="vmPause()"       disabled>&#9646;&#9646; Pausa</button>
+      <button class="vm-btn" id="vm-btn-end"   onclick="vmEnd()"         disabled>&#10003; Fim</button>
+    </div>
+  </div>
+</div>
+
+<script src="study-tracker.js"></script>
+<script>
+(function(){
+  var ARTICLE_ID='L9099-ART-62',SUBJECT='Lei 9.099/95',SUBJECT_ID='L9099',ARTICLE_NUM=62;
+  var state='idle',timerIv=null,pauseIv=null,sessTs=0,pauseTs=0,accStudy=0,accPause=0;
+  function $(id){return document.getElementById(id);}
+  var elTimer=$('vm-timer'),elPause=$('vm-pause-timer'),elStatus=$('vm-status');
+  var btnS=$('vm-btn-start'),btnP=$('vm-btn-pause'),btnE=$('vm-btn-end');
+  var chk=$('vm-check'),lbl=$('vm-check-label');
+  function pad(n){return String(Math.floor(n)).padStart(2,'0');}
+  function fmtMs(ms){var s=Math.floor(ms/1000),h=Math.floor(s/3600);return pad(h)+':'+pad((s%3600)/60)+':'+pad(s%60);}
+  function fmtShort(ms){var m=Math.round(ms/60000);return pad(Math.floor(m/60))+':'+pad(m%60);}
+  function setStatus(t,c){elStatus.textContent=t;elStatus.className='vm-status '+c;}
+  function startStudyIv(){clearInterval(timerIv);timerIv=setInterval(function(){elTimer.textContent=fmtMs(accStudy+(Date.now()-sessTs));},500);}
+  function stopStudyIv(){clearInterval(timerIv);}
+  function startPauseIv(){clearInterval(pauseIv);pauseIv=setInterval(function(){elPause.textContent='\u23F8 '+fmtShort(Date.now()-pauseTs);},500);}
+  function stopPauseIv(){clearInterval(pauseIv);elPause.textContent='';}
+  window.vmStartResume=function(){
+    if(state==='idle'){
+      VMTracker.startSession(ARTICLE_ID,SUBJECT,SUBJECT_ID,ARTICLE_NUM);
+      sessTs=Date.now();accStudy=0;accPause=0;state='reading';
+      setStatus('Estudando','vm-status-reading');
+      btnS.disabled=true;btnP.disabled=false;btnE.disabled=false;
+      startStudyIv();
+    }else if(state==='paused'){
+      VMTracker.resumeSession();accPause+=Date.now()-pauseTs;sessTs=Date.now();state='reading';
+      setStatus('Estudando','vm-status-reading');
+      btnS.disabled=true;btnP.disabled=false;btnE.disabled=false;
+      stopPauseIv();startStudyIv();
+    }
+  };
+  window.vmPause=function(){
+    if(state!=='reading')return;
+    VMTracker.pauseSession();accStudy+=Date.now()-sessTs;pauseTs=Date.now();stopStudyIv();
+    state='paused';setStatus('Pausado','vm-status-paused');
+    btnS.textContent='\u25BA Retomar';btnS.disabled=false;btnP.disabled=true;btnE.disabled=false;
+    startPauseIv();
+  };
+  window.vmEnd=function(){
+    if(state!=='reading'&&state!=='paused')return;
+    if(state==='reading')accStudy+=Date.now()-sessTs;
+    VMTracker.endSession();stopStudyIv();stopPauseIv();state='done';
+    elTimer.textContent=fmtMs(accStudy);setStatus('Conclu\u00EDdo \u2713','vm-status-done');
+    btnS.textContent='\u21BA Nova';btnS.disabled=false;
+    btnS.onclick=function(){
+      state='idle';accStudy=0;accPause=0;elTimer.textContent='00:00:00';
+      setStatus('Parado','vm-status-idle');
+      btnS.textContent='\u25BA Iniciar';btnS.onclick=window.vmStartResume;
+      btnP.disabled=true;btnE.disabled=true;
+    };
+    btnP.disabled=true;btnE.disabled=true;
+  };
+  window.vmToggleCompleted=function(){
+    if(chk.checked){VMTracker.markArticleCompleted(ARTICLE_ID,SUBJECT,SUBJECT_ID,ARTICLE_NUM);lbl.textContent='\u2713 Feito!';lbl.style.color='#2ecc71';}
+    else{VMTracker.unmarkArticleCompleted(ARTICLE_ID);lbl.textContent='Conclu\u00EDdo';lbl.style.color='';}
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    if(VMTracker.isArticleCompleted(ARTICLE_ID)){chk.checked=true;lbl.textContent='\u2713 Feito!';lbl.style.color='#2ecc71';}
+    var active=VMTracker.getActiveSession();
+    if(active&&active.articleFile===ARTICLE_ID){
+      if(active.state==='reading'){
+        sessTs=active.startTs;accStudy=0;state='reading';setStatus('Estudando','vm-status-reading');
+        btnS.disabled=true;btnP.disabled=false;btnE.disabled=false;startStudyIv();
+      }else if(active.state==='paused'){
+        var lp=active.pauses[active.pauses.length-1];pauseTs=lp?lp.pauseStartTs:Date.now();
+        accStudy=active.pauseTotalMs||0;state='paused';setStatus('Pausado','vm-status-paused');
+        btnS.textContent='\u25BA Retomar';btnS.disabled=false;btnP.disabled=true;btnE.disabled=false;startPauseIv();
+      }
+    }
+  });
+})();
+</script>
+<!-- VM-STUDY-BAR-END -->
+
+<style id="vm-no-gap-fixed-menus-final">
+/* CORREÇÃO DEFINITIVA: remove faixa branca e fixa menu abaixo do cronômetro */
+html, body{
+  margin-top:0!important;
+  padding-top:0!important;
+  scroll-padding-top:calc(var(--vm-study-bar-h,46px) + 58px)!important;
+}
+#vm-study-bar{
+  position:fixed!important;
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  width:100%!important;
+  z-index:2147483647!important;
+}
+#top-nav,.tabs-wrap,.tab-bar,.nav-tabs{
+  position:sticky!important;
+  top:var(--vm-study-bar-h,46px)!important;
+  margin-top:var(--vm-study-bar-h,46px)!important;
+  z-index:2147483600!important;
+}
+#top-nav{
+  width:100%!important;
+}
+#hero,.hero,main,.page-wrap,.container,.wrap,.wrapper,.section,.prova-section{
+  scroll-margin-top:calc(var(--vm-study-bar-h,46px) + 76px)!important;
+}
+@media(max-width:699px){
+  html, body{
+    scroll-padding-top:calc(var(--vm-study-bar-h,88px) + 58px)!important;
+  }
+  #top-nav,.tabs-wrap,.tab-bar,.nav-tabs{
+    top:var(--vm-study-bar-h,88px)!important;
+    margin-top:var(--vm-study-bar-h,88px)!important;
+  }
+}
+</style>
+<style id="nav-wrap-fix">
+/* Menu de atalhos: quebra em linhas (sem corte lateral) e margem de rolagem para menu + barra */
+@media(min-width:700px){
+  #top-nav{overflow:visible!important;flex-wrap:nowrap!important;align-items:center!important;}
+  #top-nav .nav-brand{padding:0.55rem 1rem 0.55rem 0!important;flex:0 0 auto;}
+  #top-nav .nav-main-links{display:flex;flex-wrap:wrap;align-items:center;flex:1 1 0;min-width:0;}
+  #top-nav a{padding:0.55rem 0.6rem!important;font-size:0.68rem!important;letter-spacing:0.4px!important;}
+}
+.section,.prova-section{scroll-margin-top:calc(var(--vm-study-bar-h,46px) + 112px)!important;}
+@media(max-width:699px){.section,.prova-section{scroll-margin-top:calc(var(--vm-study-bar-h,88px) + 72px)!important;}}
+</style>
+
+<nav id="top-nav" aria-label="Atalhos do artigo">
+  <div class="nav-brand">Art. 62 · Lei 9.099/95</div>
+  <div class="nav-main-links">
+    <a href="#panorama">Panorama</a>
+    <a href="#texto-legal">Texto Legal</a>
+    <a href="#natureza">Natureza</a>
+    <a href="#oralidade">Oralidade</a>
+    <a href="#informalidade">Informalidade</a>
+    <a href="#economia">Economia</a>
+    <a href="#celeridade">Celeridade</a>
+    <a href="#reparacao">Reparação</a>
+    <a href="#pena-alternativa">Pena Alternativa</a>
+    <a href="#digital">Atos Digitais</a>
+    <a href="#fluxograma">Fluxograma</a>
+    <a href="#atendimento">Atendimento</a>
+    <a href="#jurisprudencia">STF/STJ</a>
+    <a href="#doutrina">Doutrina</a>
+    <a href="#recorrentes" class="nav-prova">Recorrentes</a>
+    <a href="#fontes">Fontes</a>
+  </div>
+</nav>
+
+<header id="hero">
+  <div class="badge">Lei nº 9.099/1995 · Capítulo III — Dos Juizados Especiais Criminais · Disposições Gerais · Conferência normativa em 11/11/2026</div>
+  <h1>Art. 62 — <span>Critérios Orientadores do Processo Criminal Especial</span></h1>
+  <p class="subtitle">Oralidade · Simplicidade · Informalidade · Economia processual · Celeridade · Reparação dos danos · Pena não privativa de liberdade</p>
+  <div class="law-box">
+    <strong>Art. 62 da Lei nº 9.099, de 26 de setembro de 1995 (redação da Lei nº 13.603/2018)</strong>
+    “O processo perante o Juizado Especial orientar-se-á pelos critérios da oralidade, simplicidade, informalidade, economia processual e celeridade, objetivando, sempre que possível, a reparação dos danos sofridos pela vítima e a aplicação de pena não privativa de liberdade.”
+  </div>
+</header>
+
+<div class="page-wrap">
+
+<!-- ============ 01 ============ -->
+<section class="section" id="panorama">
+  <div class="section-header"><div class="section-num">01</div><div class="section-title"><span>Introdução e Estrutura</span>Panorama do Art. 62</div></div>
+
+  <div class="card-grid card-grid-3">
+    <div class="card type-card tc-blue">
+      <h3>Função do dispositivo</h3>
+      <p>Se o art. 61 define <strong>quais</strong> infrações pertencem ao sistema dos Juizados Especiais Criminais, o art. 62 define <strong>como</strong> o processo deve ser conduzido e <strong>para quê</strong>. Ele não cria ato, prazo ou recurso. Enuncia cinco critérios de condução (oralidade, simplicidade, informalidade, economia processual e celeridade) e duas finalidades preferenciais (reparação do dano à vítima e pena não privativa de liberdade).</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>Onde ele atua na prática</h3>
+      <p>O art. 62 funciona como <strong>vetor de interpretação</strong> e como <strong>parâmetro de validade dos atos</strong>: o art. 65 diz que os atos processuais são válidos sempre que cumprirem suas finalidades, “atendidos os critérios indicados no art. 62”, e que nenhuma nulidade se pronuncia sem prejuízo (art. 65, § 1º). É a base do discurso do juiz, do MP e da defesa sobre forma, prova, intimação, prazo e acordo.</p>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>Por que importa na audiência</h3>
+      <p>Quase todo incidente de audiência no JECrim (falta de formalidade, oitiva sem transcrição, intimação por aplicativo, pedido de adiamento, proposta de pena alternativa, pressão por acordo) se resolve por uma pergunta: <strong>o ato atende ao critério do art. 62 sem retirar garantia da parte?</strong> Conhecer o alcance e o limite do artigo evita tanto a nulidade tardia quanto a concordância ingênua com “procedimento informal”.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Os cinco critérios e as duas finalidades</h3>
+  <div class="card-grid card-grid-4">
+    <div class="card"><h4>Oralidade</h4><p>Atos praticados de viva voz: representação verbal, denúncia e queixa orais, defesa, debates e sentença na audiência, embargos orais. Registro escrito apenas dos atos essenciais (art. 65, § 3º).</p></div>
+    <div class="card"><h4>Simplicidade</h4><p>Linguagem e rito descomplicados. Incluída expressamente no art. 62 pela Lei 13.603/2018; já constava do art. 2º da Lei 9.099.</p></div>
+    <div class="card"><h4>Informalidade</h4><p>Validade pela finalidade, e não pela forma (art. 65, caput), sem nulidade sem prejuízo (§ 1º). Comunicação por qualquer meio idôneo (art. 67).</p></div>
+    <div class="card"><h4>Economia processual</h4><p>Dispensa de inquérito, provas numa só audiência, sentença sem relatório, súmula de julgamento como acórdão.</p></div>
+    <div class="card"><h4>Celeridade</h4><p>Audiência concentrada, “nenhum ato será adiado” (art. 80), prazos curtos (10 e 5 dias). Eco do art. 5º, LXXVIII, da CF.</p></div>
+    <div class="card tc-green type-card"><h4>Finalidade 1 — Reparação do dano</h4><p>“Sempre que possível”, o processo busca reparar os danos sofridos pela vítima (arts. 72, 74, 76, § 6º, e 89, § 1º, I).</p></div>
+    <div class="card tc-purple type-card"><h4>Finalidade 2 — Pena não privativa</h4><p>“Sempre que possível”, aplica-se pena restritiva de direitos ou multa (art. 76), reservando a privativa de liberdade aos casos em que a lei a impuser.</p></div>
+    <div class="card tc-gold type-card"><h4>Cláusula “sempre que possível”</h4><p>As finalidades são <strong>preferenciais</strong>: orientam o processo, mas não obrigam a reparação nem a pena alternativa em qualquer hipótese.</p></div>
+  </div>
+
+  <h3 class="sub-title">Evolução do texto</h3>
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Marco</th><th>Redação / efeito</th><th>Consequência prática</th></tr></thead>
+    <tbody>
+      <tr class="hl4"><td>Lei 9.099/1995 (redação original do art. 62)</td><td>“O processo perante o Juizado Especial orientar-se-á pelos critérios da oralidade, informalidade, economia processual e celeridade, objetivando, sempre que possível, a reparação dos danos sofridos pela vítima e a aplicação de pena não privativa de liberdade.”</td><td>Quatro critérios. O art. 2º, de aplicação geral ao diploma, já continha também a simplicidade.</td></tr>
+      <tr class="hl2"><td>Lei 13.603, de 9/1/2018 (DOU de 10/1/2018)</td><td>Alterou o art. 62 “a fim de incluir a simplicidade como critério orientador do processo perante os Juizados Especiais Criminais”, passando a vigorar a redação atual.</td><td>Os cinco critérios do art. 62 coincidem com os do art. 2º. Alteração de texto e de clareza, sem criação de regra procedimental nova.</td></tr>
+      <tr class="hl3"><td>Leis posteriores</td><td>Nenhuma alterou o art. 62. Lei 13.994/2020 alterou os arts. 22 e 23 (conciliação não presencial nos Juizados <strong>Cíveis</strong>). Lei 14.245/2021 incluiu o § 1º-A do art. 81 (dignidade da vítima na audiência).</td><td>O art. 62 permanece estável. O que muda é o contexto: audiências telepresenciais (CNJ) e deveres de respeito à vítima (art. 81, § 1º-A).</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="source-note">Fontes: Planalto — Lei 9.099/1995 (texto compilado, que registra a redação original e a da Lei 13.603/2018) e Lei 13.603/2018, lidas em 11/11/2026.</div>
+
+  <div class="alert alert-gold mt2"><span class="alert-tag">Resumo</span><div>Art. 62 = <strong>critérios</strong> (oralidade, simplicidade, informalidade, economia, celeridade) + <strong>finalidades preferenciais</strong> (reparação do dano e pena não privativa). Não afasta o devido processo legal: a validade do ato depende de cumprir sua finalidade e de não causar prejuízo à parte (art. 65, caput e § 1º).</div></div>
+
+  <div class="alert alert-navy mt2"><span class="alert-tag">Legenda</span><div>Cada informação relevante traz o grau de verificação: <span class="vb vb-of" style="margin-left:0">Oficial</span> texto lido diretamente em fonte oficial (Planalto, STJ, STF, CNJ) na conferência de 11/11/2026; <span class="vb vb-sec" style="margin-left:0">Secundária</span> confirmado em fonte não oficial, conferir antes de citar em peça; <span class="vb vb-pr" style="margin-left:0">Prática</span> orientação de atuação, não é fonte normativa. A seção 16 detalha o que foi e o que não foi possível verificar.</div></div>
+</section>
+
+<!-- ============ 02 ============ -->
+<section class="section" id="texto-legal">
+  <div class="section-header"><div class="section-num">02</div><div class="section-title"><span>Anatomia do Dispositivo</span>Texto Legal Decomposto</div></div>
+
+  <div class="anat-visual">
+    <div class="av-col av-navy"><h4>“O processo perante o Juizado Especial”</h4><p><strong>Âmbito</strong></p><ul><li>Vale para o processo do JECrim em todas as suas fases: preliminar, sumaríssima, recursal e de execução.</li><li>Dialoga com o art. 98, I, da CF.</li></ul></div>
+    <div class="av-sep">→</div>
+    <div class="av-col av-blue"><h4>“orientar-se-á pelos critérios”</h4><p><strong>Vetores, não regras</strong></p><ul><li>Oralidade, simplicidade, informalidade, economia processual e celeridade.</li><li>Operam por meio das regras específicas e do art. 65.</li></ul></div>
+    <div class="av-sep">+</div>
+    <div class="av-col av-gold"><h4>“objetivando, sempre que possível”</h4><p><strong>Finalidade preferencial</strong></p><ul><li>Não impõe o resultado.</li><li>Orienta escolhas do juiz e do MP, e o discurso de negociação.</li></ul></div>
+    <div class="av-sep">→</div>
+    <div class="av-col av-red"><h4>“reparação dos danos ... pena não privativa”</h4><p><strong>Duas finalidades</strong></p><ul><li>Reparar a vítima.</li><li>Evitar a pena privativa quando for possível.</li></ul></div>
+  </div>
+
+  <h3 class="sub-title">Textos correlatos (transcrição literal) <span class="vb vb-of" style="margin-left:0.5rem">Oficial</span></h3>
+  <div class="card-grid card-grid-2">
+    <div>
+      <div class="law-quote"><strong>Art. 62 — redação vigente (Lei 13.603/2018)</strong>“O processo perante o Juizado Especial orientar-se-á pelos critérios da oralidade, simplicidade, informalidade, economia processual e celeridade, objetivando, sempre que possível, a reparação dos danos sofridos pela vítima e a aplicação de pena não privativa de liberdade.”</div>
+      <div class="law-quote"><strong>Art. 62 — redação original de 1995 (superada)</strong>“O processo perante o Juizado Especial orientar-se-á pelos critérios da oralidade, informalidade, economia processual e celeridade, objetivando, sempre que possível, a reparação dos danos sofridos pela vítima e a aplicação de pena não privativa de liberdade.”</div>
+      <div class="law-quote"><strong>Art. 2º (critérios gerais do diploma)</strong>“O processo orientar-se-á pelos critérios da oralidade, simplicidade, informalidade, economia processual e celeridade, buscando, sempre que possível, a conciliação ou a transação.”</div>
+      <div class="law-quote"><strong>Lei 13.603/2018, art. 1º</strong>“Esta Lei altera o art. 62 da Lei nº 9.099, de 26 de setembro de 1995, que dispõe sobre os Juizados Especiais Cíveis e Criminais e dá outras providências, a fim de incluir a simplicidade como critério orientador do processo perante os Juizados Especiais Criminais.”</div>
+      <div class="law-quote"><strong>Art. 92</strong>“Aplicam-se subsidiariamente as disposições dos Códigos Penal e de Processo Penal, no que não forem incompatíveis com esta Lei.”</div>
+    </div>
+    <div>
+      <div class="law-quote"><strong>Art. 65 — validade dos atos</strong>“Os atos processuais serão válidos sempre que preencherem as finalidades para as quais foram realizados, atendidos os critérios indicados no art. 62 desta Lei.<br>§ 1º Não se pronunciará qualquer nulidade sem que tenha havido prejuízo.<br>§ 2º A prática de atos processuais em outras comarcas poderá ser solicitada por qualquer meio hábil de comunicação.<br>§ 3º Serão objeto de registro escrito exclusivamente os atos havidos por essenciais. Os atos realizados em audiência de instrução e julgamento poderão ser gravados em fita magnética ou equivalente.”</div>
+      <div class="law-quote"><strong>Art. 64</strong>“Os atos processuais serão públicos e poderão realizar-se em horário noturno e em qualquer dia da semana, conforme dispuserem as normas de organização judiciária.”</div>
+      <div class="law-quote"><strong>Art. 67</strong>“A intimação far-se-á por correspondência, com aviso de recebimento pessoal ou, tratando-se de pessoa jurídica ou firma individual, mediante entrega ao encarregado da recepção, que será obrigatoriamente identificado, ou, sendo necessário, por oficial de justiça, independentemente de mandado ou carta precatória, ou ainda por qualquer meio idôneo de comunicação.<br><em>Parágrafo único.</em> Dos atos praticados em audiência considerar-se-ão desde logo cientes as partes, os interessados e defensores.”</div>
+      <div class="law-quote"><strong>CF, art. 5º, LXXVIII (EC 45/2004)</strong>“a todos, no âmbito judicial e administrativo, são assegurados a razoável duração do processo e os meios que garantam a celeridade de sua tramitação.”</div>
+      <div class="law-quote"><strong>CF, art. 98, I</strong>“juizados especiais, providos por juízes togados, ou togados e leigos, competentes para a conciliação, o julgamento e a execução de causas cíveis de menor complexidade e infrações penais de menor potencial ofensivo, mediante os procedimentos oral e sumariíssimo, permitidos, nas hipóteses previstas em lei, a transação e o julgamento de recursos por turmas de juízes de primeiro grau;”</div>
+    </div>
+  </div>
+  <div class="source-note">Fontes: Planalto — Lei 9.099/1995 (texto compilado), Lei 13.603/2018 e CF/1988, lidos em 11/11/2026. A Lei 9.099 traz regra equivalente à do art. 65 para o cível no art. 13.</div>
+</section>
+
+<!-- ============ 03 ============ -->
+<section class="section" id="natureza">
+  <div class="section-header"><div class="section-num">03</div><div class="section-title"><span>Leitura Técnica</span>Natureza Jurídica e Alcance do Art. 62</div></div>
+
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Questão</th><th>Resposta</th><th>Base</th><th>Verificação</th></tr></thead>
+    <tbody>
+      <tr class="hl"><td>O art. 62 cria direitos ou ritos?</td><td>Não. Enuncia critérios e finalidades. Os direitos e atos concretos estão nas regras específicas (arts. 63 a 92).</td><td>Texto do art. 62; arts. 63 a 92.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl2"><td>Qual o efeito de “sempre que possível”?</td><td>As finalidades (reparação do dano e pena não privativa) são buscadas preferencialmente. Não há obrigação legal de alcançá-las em todo caso.</td><td>Art. 62, parte final.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Como o art. 62 se liga à validade dos atos?</td><td>O ato é válido se cumprir a finalidade para a qual foi realizado, atendidos os critérios do art. 62. Mesmo se defeituoso, só se declara nulidade com prejuízo.</td><td>Art. 65, caput e § 1º; CPP, art. 563.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl4"><td>Informalidade dispensa a forma?</td><td>Não. A forma é flexibilizada quando a finalidade é atingida e não há prejuízo. Mas há atos cuja forma protege garantia (citação, ampla defesa, presença do defensor).</td><td>Art. 65; arts. 66 a 68; STF, Súmula 523 (defesa); STJ, JT 69, tese 1.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl5"><td>E quando a Lei 9.099 é omissa?</td><td>Aplicam-se subsidiariamente o CP e o CPP, no que não forem incompatíveis. O FONAJE afirma que o art. 396 do CPP não se aplica ao JECrim, que tem regra própria, e que a multa deve ser fixada em dias-multa por força do art. 92.</td><td>Art. 92; FONAJE, Enunciados 8 e 108.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span> <span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr><td>O art. 62 afasta garantias constitucionais?</td><td>Não. O STF, ao julgar a ADI 5264, afirmou que “as garantias fundamentais é que devem ser asseguradas, independentemente do juízo em que tramitarem as infrações penais”, e que a Constituição garante ao tipo de crime o procedimento célere e os institutos despenalizadores.</td><td>STF, ADI 5264 (notícia oficial de 11/12/2020).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr><td>Vale também para o cível?</td><td>O cível tem regra própria: art. 2º (critérios) e art. 13 (validade dos atos). A conciliação não presencial é prevista só nos Juizados Cíveis (arts. 22 e 23, Lei 13.994/2020).</td><td>Arts. 2º, 13, 22 e 23.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card type-card tc-green">
+      <h3>O que o art. 62 autoriza</h3>
+      <ul>
+        <li>Atos de viva voz e registro resumido, com gravação dos atos de audiência.</li>
+        <li>Comunicação por meio idôneo, com ciência imediata dos atos praticados em audiência.</li>
+        <li>Concentração de atos e provas numa mesma audiência.</li>
+        <li>Priorizar a reparação do dano e a pena restritiva ou multa.</li>
+        <li>Convalidar o ato que atingiu sua finalidade sem causar prejuízo.</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>O que o art. 62 não autoriza</h3>
+      <ul>
+        <li>Dispensar defensor, citação válida ou possibilidade real de defesa.</li>
+        <li>Impor acordo civil ou transação: ambos dependem da aceitação das partes (art. 74; art. 76, § 3º).</li>
+        <li>Ofender a dignidade da vítima ou de testemunhas por “informalidade” de linguagem (art. 81, § 1º-A).</li>
+        <li>Transformar a celeridade em adiamento vedado ou em cerceamento de prova pertinente.</li>
+        <li>Criar nulidade sem prejuízo, nem impedi-la quando houver prejuízo comprovado.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 ============ -->
+<section class="section" id="oralidade">
+  <div class="section-header"><div class="section-num">04</div><div class="section-title"><span>Critério 1</span>Oralidade</div></div>
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Manifestação</th><th>Regra</th><th>Observação de atuação</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Representação verbal</td><td>Não obtida a composição dos danos civis, “será dada imediatamente ao ofendido a oportunidade de exercer o direito de representação verbal, que será reduzida a termo” (art. 75).</td><td>O não oferecimento na audiência preliminar não implica decadência (art. 75, parágrafo único). Qualquer manifestação da vítima que denote intenção de representar vale como tal (FONAJE, Enunciado 25).</td></tr>
+      <tr class="hl2"><td>Denúncia e queixa orais</td><td>O MP oferece denúncia oral, de imediato (art. 77, caput). Na ação privada, cabe queixa oral (§ 3º). Oferecida, é reduzida a termo e entregue cópia ao acusado (art. 78).</td><td>Conferir se o termo reproduz o tipo imputado (FONAJE, Enunciado 72, para a transação).</td></tr>
+      <tr class="hl2"><td>Resposta, debates e sentença</td><td>Aberta a audiência, palavra ao defensor para responder à acusação, depois recebimento, prova, interrogatório, debates orais e sentença (art. 81). A sentença dispensa relatório (§ 3º).</td><td>O FONAJE admite fundamentação oral, com gravação, consignando-se por escrito apenas a dosimetria e o dispositivo (Enunciado 127).</td></tr>
+      <tr class="hl3"><td>Embargos de declaração</td><td>Opostos por escrito ou oralmente, em 5 dias (art. 83, § 1º).</td><td>Interrompem o prazo para outro recurso (art. 83, § 2º, redação da Lei 13.105/2015).</td></tr>
+      <tr class="hl"><td>Registro dos atos</td><td>Apenas os atos essenciais têm registro escrito; os de audiência podem ser gravados (art. 65, § 3º). Do ocorrido na audiência lavra-se termo com breve resumo dos fatos relevantes e a sentença (art. 81, § 2º). As partes podem requerer a transcrição da gravação (art. 82, § 3º).</td><td><span class="vb vb-pr" style="margin-left:0">Prática</span> Se o ponto é relevante (proposta recusada, protesto, objeção a pergunta), pedir que conste do termo. O resumo é “breve”.</td></tr>
+      <tr class="hl3"><td>Registro audiovisual (CPP)</td><td>Sempre que possível, o registro de depoimentos é feito por gravação, inclusive audiovisual, e a cópia é enviada às partes sem necessidade de transcrição (CPP, art. 405, §§ 1º e 2º).</td><td>Aplicável subsidiariamente (art. 92), no que não for incompatível com a Lei 9.099.</td></tr>
+      <tr class="hl3"><td>Oitiva informal e precatória</td><td>A oitiva informal colhida no JECrim pode ser usada como peça de informação (FONAJE, Enunciado 42). É cabível, quando necessário, o interrogatório por carta precatória, por não ferir os princípios da Lei 9.099 (Enunciado 17).</td><td>Se a precatória for usada, ela deve vir com cópia dos depoimentos de que terá ciência o réu (Enunciado 66).</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="source-note">Dispositivos legais conferidos no Planalto (Lei 9.099 e CPP). Enunciados do FONAJE: compilação de terceiros atualizada até 06/02/2024 (49º Encontro); ver seção 16.</div>
+</section>
+
+<!-- ============ 05 ============ -->
+<section class="section" id="informalidade">
+  <div class="section-header"><div class="section-num">05</div><div class="section-title"><span>Critérios 2 e 3</span>Simplicidade e Informalidade</div></div>
+
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Manifestação</th><th>Regra</th><th>Fundamento</th><th>Verificação</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Validade pela finalidade</td><td>O ato é válido quando preenche a finalidade para a qual foi realizado.</td><td>Art. 65, caput.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl4"><td>Princípio do prejuízo</td><td>Nenhum ato é declarado nulo se não resultar prejuízo para a acusação ou para a defesa. Não se declara nulidade de ato que não influiu na apuração da verdade substancial ou na decisão da causa.</td><td>Art. 65, § 1º; CPP, arts. 563 e 566. STJ, JT 69, tese 1: a decretação da nulidade exige prova inequívoca do prejuízo, em face do princípio pas de nullité sans grief.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl4"><td>Defesa técnica</td><td>“No processo penal, a falta da defesa constitui nulidade absoluta, mas a sua deficiência só o anulará se houver prova de prejuízo para o réu.”</td><td>STF, Súmula 523.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl5"><td>Sanatória</td><td>Algumas nulidades consideram-se sanadas se não arguidas em tempo oportuno, se o ato praticado por outra forma atingiu o fim, ou se a parte, ainda que tacitamente, aceitou seus efeitos.</td><td>CPP, art. 572, I a III (nulidades do art. 564, III, d e e, segunda parte, g e h, e IV).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Atos em outras comarcas</td><td>Podem ser solicitados por qualquer meio hábil de comunicação.</td><td>Art. 65, § 2º.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Intimação</td><td>Por correspondência com AR, oficial de justiça sem mandado ou qualquer meio idôneo; ciência imediata dos atos praticados em audiência. O FONAJE admite telefone, e-mail ou aplicativo com adesão expressa prévia (Enunciado 129).</td><td>Art. 67 e parágrafo único; FONAJE, Enunciado 129.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span> <span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl3"><td>Defensor público</td><td>No JECrim, não se exige a intimação pessoal do defensor público; admite-se na sessão de julgamento ou pela imprensa oficial. Em processo penal comum, a ausência de intimação pessoal da Defensoria ou do defensor dativo gera, via de regra, nulidade.</td><td>STJ, JT 93, tese 3 (JECrim); JT 69, tese 4 (regra geral, edição de 2016).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl"><td>Citação</td><td>Pessoal, no próprio Juizado sempre que possível, ou por mandado (art. 66). Não encontrado o acusado, as peças vão ao juízo comum. A citação por hora certa é constitucional (STF, Tema 613) e o FONAJE a admite no JECrim (Enunciado 110).</td><td>Art. 66; STF, Tema 613 (RE 635.145); FONAJE, Enunciado 110.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span> <span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl"><td>Termo circunstanciado</td><td>A autoridade policial lavra o termo e o encaminha ao Juizado, sem inquérito. O FONAJE admite a lavratura pela Polícia Civil ou Militar (Enunciado 34).</td><td>Art. 69; FONAJE, Enunciado 34.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span> <span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr><td>Publicidade e horário</td><td>Atos públicos, podendo ser em horário noturno e em qualquer dia da semana, conforme a organização judiciária.</td><td>Art. 64.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl5"><td>Dignidade da vítima</td><td>A informalidade não autoriza linguagem, informações ou material que ofendam a dignidade da vítima ou de testemunhas, sob pena de responsabilização civil, penal e administrativa.</td><td>Art. 81, § 1º-A (Lei 14.245/2021).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="alert alert-red mt2"><span class="alert-tag">Ponto de atenção</span><div>As teses do STJ sobre intimação do defensor público divergem conforme o contexto: JT 93, tese 3, é específica do JECrim e dispensa a intimação pessoal; JT 69, tese 4, trata do processo penal em geral e considera a falta de intimação pessoal causa, via de regra, de nulidade. A JT 69 foi publicada em 2016, com julgados até 19/08/2016. Para audiência no JECrim, vale a tese do JECrim, mas é prudente requerer a intimação pessoal quando o defensor público atua.</div></div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card">
+      <h3>Como arguir um vício de forma</h3>
+      <ul>
+        <li>Identificar qual a garantia atingida (defesa, contraditório, publicidade, dignidade) e qual o <strong>prejuízo concreto</strong>.</li>
+        <li>Arguir na <strong>primeira oportunidade</strong> e pedir que a arguição e a decisão constem do termo de audiência (art. 81, § 2º).</li>
+        <li>Se o ato foi repetido ou refeito por outra forma e atingiu o fim, a nulidade tende a ser considerada sanada (CPP, art. 572, II).</li>
+        <li>Não aceitar tacitamente os efeitos do ato defeituoso sem ressalva (CPP, art. 572, III).</li>
+      </ul>
+      <div class="source-note"><span class="vb vb-pr" style="margin-left:0">Prática</span> A exigência de arguição “logo depois de aberta a audiência” aparece no CPP para o processo sumário e para o rito do Capítulo VII (art. 571, III e IV). Para o JECrim, é aplicação por analogia e não regra expressa da Lei 9.099.</div>
+    </div>
+    <div class="card">
+      <h3>Como usar a informalidade a favor do cliente</h3>
+      <ul>
+        <li>Pedir <strong>audiência individual</strong> quando o conflito for sensível (FONAJE, Enunciado 106).</li>
+        <li>Requerer a <strong>transcrição</strong> da gravação, se necessário ao recurso (art. 82, § 3º).</li>
+        <li>Combinar com o juízo <strong>meio e prova de intimação</strong> do cliente e das testemunhas (art. 67; FONAJE, Enunciado 129).</li>
+        <li>Aproveitar a <strong>conciliação</strong> e a proposta de transação para resolver o conflito sem instrução (arts. 72 a 76).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 ============ -->
+<section class="section" id="economia">
+  <div class="section-header"><div class="section-num">06</div><div class="section-title"><span>Critério 4</span>Economia Processual</div></div>
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Manifestação</th><th>Regra</th><th>Fundamento</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Sem inquérito policial</td><td>A denúncia oral é elaborada com base no termo circunstanciado, “com dispensa do inquérito policial”, e prescinde do exame de corpo de delito quando a materialidade estiver aferida por boletim médico ou prova equivalente.</td><td>Art. 77, § 1º.</td></tr>
+      <tr class="hl2"><td>Concentração de provas</td><td>Todas as provas são produzidas na audiência de instrução e julgamento, podendo o juiz limitar ou excluir as excessivas, impertinentes ou protelatórias.</td><td>Art. 81, § 1º. No CPP comum, regra semelhante: provas numa só audiência (art. 400, § 1º).</td></tr>
+      <tr class="hl2"><td>Audiência una</td><td>Se na fase preliminar não houve tentativa de conciliação e proposta do MP, procede-se, no dia da instrução, nos termos dos arts. 72 a 75.</td><td>Art. 79.</td></tr>
+      <tr class="hl3"><td>Sentença enxuta</td><td>A sentença, dispensado o relatório, menciona os elementos de convicção do juiz. A audiência gera termo com breve resumo.</td><td>Art. 81, §§ 2º e 3º.</td></tr>
+      <tr class="hl3"><td>Julgamento recursal simplificado</td><td>A apelação é julgada por turma de três juízes de primeiro grau, reunida na sede do Juizado. Se a sentença for confirmada pelos próprios fundamentos, a súmula do julgamento serve de acórdão.</td><td>Art. 82, caput e § 5º.</td></tr>
+      <tr class="hl3"><td>Correção de ofício</td><td>Os erros materiais podem ser corrigidos de ofício.</td><td>Art. 83, § 3º.</td></tr>
+      <tr class="hl"><td>Execução e custos</td><td>A multa exclusiva é paga na Secretaria do Juizado, extinguindo-se a punibilidade (art. 84). Nos casos de acordo civil homologado e de pena do art. 76, § 4º, as despesas processuais são reduzidas conforme lei estadual (art. 87).</td><td>Arts. 84 e 87.</td></tr>
+      <tr class="hl4"><td>Orientações do FONAJE</td><td>O art. 396 do CPP não se aplica ao JECrim (Enunciado 108). No sursis, o recebimento da denúncia deve ser precedido da resposta do art. 81 (Enunciado 53). O relator, na Turma Recursal, pode negar seguimento a recurso manifestamente inadmissível ou julgar extinta a punibilidade, com recurso interno em 5 dias (Enunciado 81). A execução administrativa da multa pode ser feita de ofício pela Secretaria (Enunciado 103). É dispensável a intimação do autor ou do réu das sentenças que extinguem a punibilidade (Enunciado 105).</td><td>FONAJE, Enunciados 53, 81, 103, 105 e 108.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="alert alert-gold mt2"><span class="alert-tag">Atenção</span><div>A economia processual tem como limite a <strong>complexidade</strong>: se o caso não comporta denúncia oral imediata, o MP pode requerer a remessa das peças ao juízo comum (art. 77, § 2º), e o FONAJE entende que a remessa exaure a competência do JECrim (Enunciado 52). Isso afeta a perspectiva de transação, e deve ser considerado antes de aceitar ou propor “resolver rápido”.</div></div>
+</section>
+
+<!-- ============ 07 ============ -->
+<section class="section" id="celeridade">
+  <div class="section-header"><div class="section-num">07</div><div class="section-title"><span>Critério 5</span>Celeridade e Prazos</div></div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-blue">
+      <h3>Base constitucional e legal</h3>
+      <p>A CF assegura, no art. 5º, LXXVIII, “a razoável duração do processo e os meios que garantam a celeridade de sua tramitação”, e o art. 98, I, prevê procedimentos oral e sumariíssimo para as infrações de menor potencial ofensivo. A Lei 9.099 traduz isso em regras concretas:</p>
+      <ul>
+        <li><strong>Art. 70:</strong> não sendo possível audiência imediata, designa-se data próxima.</li>
+        <li><strong>Art. 77:</strong> denúncia oral imediata.</li>
+        <li><strong>Art. 78:</strong> citação na própria audiência e ciência de dia e hora da instrução.</li>
+        <li><strong>Art. 80:</strong> “Nenhum ato será adiado, determinando o Juiz, quando imprescindível, a condução coercitiva de quem deva comparecer.”</li>
+        <li><strong>Art. 81:</strong> debates e sentença em seguida à prova.</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>Celeridade não é supressão de garantia</h3>
+      <p>O STF fixou, no RE 635.145 (Tema 613), que a citação por hora certa é constitucional e que a ocultação do réu para ser citado infringe o devido processo legal e viola o acesso à justiça e a razoável duração do processo. Já na ADI 5264, afirmou que a Constituição garante às infrações de menor potencial ofensivo o “procedimento célere” e os institutos despenalizadores, e que as garantias fundamentais devem ser asseguradas em qualquer juízo.</p>
+      <p>O STJ reconhece preclusão quando a proposta de transação ou de sursis se dá após a sentença condenatória (JT 96, tese 5): a celeridade tem custo de oportunidade para a negociação.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Quadro de prazos e marcos de tempo</h3>
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Marco</th><th>Prazo</th><th>Fundamento</th></tr></thead>
+    <tbody>
+      <tr class="hl4"><td>Decadência da queixa e da representação</td><td>6 meses, contados do dia em que o ofendido soube quem é o autor do crime. Em violência doméstica e familiar contra a mulher: 12 meses (Lei 15.438/2026), hipótese fora do JECrim pelo art. 41 da Lei 11.340.</td><td>CP, art. 103 e parágrafo único; CPP, art. 38.</td></tr>
+      <tr class="hl4"><td>Prescrição (pena máxima de até 2 anos)</td><td>Pena máxima inferior a 1 ano: 3 anos. Igual a 1 ano ou, sendo superior, até 2 anos: 4 anos.</td><td>CP, art. 109, VI e V.</td></tr>
+      <tr class="hl4"><td>Prescrição com base em pena hipotética</td><td>O FONAJE admite o reconhecimento pela projeção da pena (Enunciado 75). O STJ, na Súmula 438, a considera inadmissível: “É inadmissível a extinção da punibilidade pela prescrição da pretensão punitiva com fundamento em pena hipotética, independentemente da existência ou sorte do processo penal.”</td><td>FONAJE, Enunciado 75; STJ, Súmula 438 (fonte secundária).</td></tr>
+      <tr class="hl2"><td>Testemunhas</td><td>Trazer ou requerer intimação com <strong>no mínimo 5 dias</strong> de antecedência da audiência de instrução.</td><td>Art. 78, § 1º.</td></tr>
+      <tr class="hl3"><td>Apelação e resposta</td><td>10 dias, contados da ciência da sentença.</td><td>Art. 82, §§ 1º e 2º.</td></tr>
+      <tr class="hl3"><td>Embargos de declaração</td><td>5 dias; interrompem o prazo para o recurso.</td><td>Art. 83, §§ 1º e 2º.</td></tr>
+      <tr><td>Impedimento a novo benefício</td><td>5 anos entre transações; mesmo prazo, por analogia, para o sursis.</td><td>Art. 76, § 2º, II, e § 4º; STJ, JT 93, tese 9.</td></tr>
+      <tr><td>Período de prova do sursis</td><td>2 a 4 anos, sem curso da prescrição. Para contravenção, o FONAJE indica prazo de 1 a 3 anos (Enunciado 128).</td><td>Art. 89, caput e § 6º; FONAJE, Enunciado 128.</td></tr>
+      <tr class="hl5"><td>Transação descumprida</td><td>O decurso do prazo prescricional provoca a declaração de extinção da punibilidade pela prescrição da pretensão punitiva (FONAJE, Enunciado 44).</td><td>FONAJE, Enunciado 44.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="source-note">CP e CPP: texto compilado do Planalto em 11/11/2026. Súmula 438/STJ: fonte secundária (o site de súmulas do STJ bloqueou a consulta automatizada).</div>
+</section>
+
+<!-- ============ 08 ============ -->
+<section class="section" id="reparacao">
+  <div class="section-header"><div class="section-num">08</div><div class="section-title"><span>Finalidade 1</span>Reparação dos Danos Sofridos pela Vítima</div></div>
+
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Momento / instituto</th><th>Como a reparação entra</th><th>Fundamento</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Audiência preliminar</td><td>O juiz esclarece sobre a possibilidade da composição dos danos e da aceitação da proposta de pena não privativa.</td><td>Art. 72.</td></tr>
+      <tr class="hl2"><td>Composição dos danos civis</td><td>Acordo reduzido a escrito e homologado por sentença irrecorrível, com eficácia de título executivo no juízo civil. Na ação privada ou condicionada, acarreta renúncia ao direito de queixa ou representação.</td><td>Art. 74 e parágrafo único.</td></tr>
+      <tr class="hl3"><td>Transação penal</td><td>Não substitui a reparação: a sanção “não terá efeitos civis”, cabendo ao interessado propor a ação cabível no juízo cível. O STF fixou (Tema 187) que os efeitos do art. 91 do CP decorrem de sentença condenatória e que a sentença da transação é homologatória.</td><td>Art. 76, § 6º; STF, Tema 187 (RE 795.567).</td></tr>
+      <tr class="hl"><td>Suspensão condicional do processo</td><td>A reparação do dano é condição do período de prova, salvo impossibilidade; a falta de reparação sem motivo justificado é causa de revogação obrigatória. O juiz pode impor outras condições, inclusive equivalentes a sanções na prática. O FONAJE recomenda intimar a vítima para a audiência do sursis, como forma de facilitar a reparação (Enunciado 32).</td><td>Art. 89, §§ 1º, I, 2º e 3º; STJ, JT 93, tese 4 (Tema 930); FONAJE, Enunciado 32.</td></tr>
+      <tr class="hl4"><td>Crimes ambientais</td><td>A proposta de transação, nos crimes ambientais de menor potencial ofensivo, somente pode ser formulada desde que tenha havido a prévia composição do dano ambiental, salvo comprovada impossibilidade.</td><td>Lei 9.605/1998, art. 27.</td></tr>
+      <tr class="hl4"><td>Trânsito</td><td>Aplicam-se aos crimes de trânsito de lesão corporal culposa os arts. 74, 76 e 88 da Lei 9.099, com exceções (influência de álcool ou substância psicoativa, racha, entre outras do § 1º).</td><td>CTB, art. 291, § 1º.</td></tr>
+      <tr class="hl5"><td>Justiça restaurativa</td><td>A Resolução CNJ 225/2016 considera que os arts. 72, 77 e 89 da Lei 9.099 permitem homologar acordos celebrados sob os fundamentos da Justiça Restaurativa (composição civil, transação penal ou condição do sursis). Exige consentimento livre e espontâneo dos participantes, com retratação até a homologação, e reconhecimento dos fatos essenciais sem que isso implique admissão de culpa em eventual retorno ao processo.</td><td>CNJ, Res. 225/2016 (consideranda e art. 2º, §§ 1º e 2º). Alterada pelas Res. 300/2019, 458/2022 e 592/2024.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card">
+      <h3>Orientações do FONAJE sobre o acordo civil <span class="vb vb-sec">Secundária</span></h3>
+      <ul>
+        <li>Pode versar sobre qualquer valor ou matéria (Enunciado 37) e ser reduzido a termo no JECrim para solucionar o litígio subjacente, encaminhando-se ao juízo competente (Enunciado 89).</li>
+        <li>Obrigação de fazer ou não fazer: cláusula penal em valor certo (Enunciado 43).</li>
+        <li>Prescrição e decadência não impedem a homologação (Enunciado 74).</li>
+        <li>Havendo vítima determinada, desinteresse ou composição civil retiram a justa causa (Enunciado 99); a extinção pode ser declarada até a sentença (Enunciado 113).</li>
+        <li>Mediação é possível (Enunciado 119); a transação deve observar justiça restaurativa, proporcionalidade e dignidade (Enunciado 116).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Estrutura recomendável do termo de acordo <span class="vb vb-pr">Prática</span></h3>
+      <ul>
+        <li><strong>Partes e qualificação</strong> e menção ao fato objeto do termo circunstanciado.</li>
+        <li><strong>Obrigação:</strong> valor, prazo, forma (parcelas, conta, comprovante) e atualização.</li>
+        <li><strong>Cláusula penal</strong> em valor certo para obrigações de fazer ou não fazer (FONAJE, 43).</li>
+        <li><strong>Renúncia expressa</strong> ao direito de queixa ou representação, quando for o caso (art. 74, parágrafo único), com ciência dos efeitos.</li>
+        <li><strong>Garantia</strong> e <strong>consequência do inadimplemento</strong>: execução no juízo cível (art. 74).</li>
+        <li><strong>Homologação</strong> por sentença irrecorrível.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 09 ============ -->
+<section class="section" id="pena-alternativa">
+  <div class="section-header"><div class="section-num">09</div><div class="section-title"><span>Finalidade 2</span>Aplicação de Pena Não Privativa de Liberdade</div></div>
+
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Aspecto</th><th>Regra</th><th>Fundamento</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Transação penal</td><td>O MP pode propor a aplicação imediata de pena restritiva de direitos ou multas, “a ser especificada na proposta”.</td><td>Art. 76, caput.</td></tr>
+      <tr class="hl2"><td>Redução da multa</td><td>Sendo a multa a única pena aplicável, o juiz pode reduzi-la até a metade.</td><td>Art. 76, § 1º.</td></tr>
+      <tr class="hl3"><td>Sem efeitos penais acessórios</td><td>A pena aplicada na transação não importa reincidência, é registrada apenas para impedir novo benefício em 5 anos e não consta de certidão de antecedentes, salvo para essa finalidade.</td><td>Art. 76, §§ 4º e 6º.</td></tr>
+      <tr class="hl3"><td>Multa e execução</td><td>Aplicada exclusivamente a multa, o pagamento é feito na Secretaria do Juizado; efetuado, extingue-se a punibilidade e a condenação deixa de constar dos registros criminais, exceto para requisição judicial. Não paga, converte-se nos termos previstos em lei.</td><td>Arts. 84 e 85.</td></tr>
+      <tr class="hl"><td>Multa alternativa</td><td>A suspensão condicional do processo e a transação são cabíveis aos delitos que preveem multa alternativamente à privativa de liberdade, ainda que o preceito secundário ultrapasse os parâmetros legais.</td><td>STJ, JT 96, tese 2.</td></tr>
+      <tr class="hl5"><td>Orientações do FONAJE</td><td>Multa em dias-multa (Enunciado 8). Proposta de pena restritiva cabível mesmo quando o tipo só comporta multa (Enunciado 20). Cláusula de renúncia à propriedade do objeto apreendido (58). Prestação pecuniária: o Conselho da Comunidade e entidades beneficiárias, com contrapartida de apoio à execução de penas alternativas (62 e 63). Substituição de uma restritiva por outra (68), fungibilidade (102), alteração da destinação pelo juiz (77) e adequação no juízo deprecado ou da execução (92). Execução da transação no JECrim, salvo central de penas alternativas (87).</td><td>FONAJE, Enunciados 8, 20, 58, 62, 63, 68, 77, 87, 92 e 102.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="alert alert-gold mt2"><span class="alert-tag">Atenção</span><div>A finalidade “pena não privativa” se realiza dentro do JECrim pelo art. 76. Fora dele, em violência doméstica contra a mulher, a Lei 9.099 não se aplica (Lei 11.340, art. 41) e a Súmula 588 do STJ impede a substituição da pena privativa por restritiva em crime ou contravenção com violência ou grave ameaça no ambiente doméstico (redação reproduzida pela JT 209 do STJ). Não transpor o raciocínio do art. 62 para essas hipóteses.</div></div>
+</section>
+
+<!-- ============ 10 ============ -->
+<section class="section" id="digital">
+  <div class="section-header"><div class="section-num">10</div><div class="section-title"><span>Informalidade e Tecnologia</span>Audiência Telepresencial, Gravação e Comunicação Eletrônica</div></div>
+  <div class="alert alert-navy"><span class="alert-tag">Fonte</span><div>Texto compilado da Resolução CNJ nº 354, de 19/11/2020 (redação dada pelas Resoluções 481/2022 e 508/2023 e 679/2026), lido no portal de atos do CNJ em 11/11/2026. A resolução regulamenta audiências e sessões por videoconferência e telepresenciais nas unidades de primeira e segunda instâncias da Justiça dos Estados, Federal, Trabalhista, Militar e Eleitoral, e tribunais superiores (exceto o STF). Não é norma específica do JECrim, mas incide sobre as audiências de seus juízos.</div></div>
+  <div class="tbl-scroll mt1">
+  <table class="comp-table">
+    <thead><tr><th>Tema</th><th>Regra</th><th>Fundamento</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Conceitos</td><td>Videoconferência: comunicação à distância realizada em ambientes de unidades judiciárias. Telepresenciais: audiências e sessões realizadas a partir de ambiente físico externo às unidades judiciárias.</td><td>Res. 354, art. 2º.</td></tr>
+      <tr class="hl2"><td>Quando cabe a audiência telepresencial</td><td>Só a pedido da parte (com as ressalvas do § 1º e do art. 185, § 2º, I a IV, do CPP), cabendo ao juiz decidir pela conveniência de realizá-la no modo presencial. O juiz deve estar presente na unidade judiciária. De ofício, o juiz pode determinar, excepcionalmente: urgência; substituição ou designação de magistrado com sede funcional diversa; mutirão ou projeto específico; conciliação ou mediação nos Cejusc; indisponibilidade temporária do foro, calamidade pública ou força maior; atos em Pontos de Inclusão Digital.</td><td>Res. 354, art. 3º, caput e § 1º, I a VI.</td></tr>
+      <tr class="hl3"><td>Oposição</td><td>A oposição à audiência telepresencial deve ser fundamentada, submetendo-se ao controle judicial.</td><td>Res. 354, art. 3º, § 2º.</td></tr>
+      <tr class="hl4"><td>Violência doméstica contra a mulher</td><td>A oitiva da vítima deve, como regra, ser presencial, em ambiente adequado à escuta qualificada. A audiência telepresencial é excepcional e exige, cumulativamente, requerimento ou anuência expressa da vítima, decisão judicial fundamentada e condições de livre manifestação.</td><td>Res. 354, art. 3º-A (Res. 679/2026, em vigor desde 4/5/2026).</td></tr>
+      <tr class="hl"><td>Ofendido, testemunha e perito fora da sede</td><td>Salvo requerimento de apresentação espontânea, são inquiridos por videoconferência na sede do foro do seu domicílio. Deve-se evitar a carta precatória inquiritória, salvo impossibilidade técnica ou dificuldade de comunicação.</td><td>Res. 354, art. 4º e § 2º.</td></tr>
+      <tr class="hl"><td>Equiparação e regras do ato</td><td>As oitivas telepresenciais ou por videoconferência são equiparadas às presenciais para todos os fins legais; testemunhas inquiridas separadamente; <strong>gravação</strong> do ato, com arquivo audiovisual juntado aos autos ou disponibilizado em repositório oficial; publicidade assegurada; mesma liturgia dos atos presenciais, inclusive vestimentas; possível repetição do ato, em decisão fundamentada, se houve obstáculo técnico justificado.</td><td>Res. 354, art. 7º, I, II, IV, V, VI e VII.</td></tr>
+      <tr class="hl3"><td>Intimação por meio eletrônico</td><td>Onde cabível a intimação por correio, oficial de justiça ou escrivão, o ato pode ser cumprido por meio eletrônico que assegure o conhecimento do conteúdo, com comprovação do envio e do recebimento ou certidão detalhada. É vedado, salvo ocultação, o cumprimento por mensagens públicas.</td><td>Res. 354, arts. 8º e 10 e § 2º.</td></tr>
+      <tr class="hl5"><td>Conciliação não presencial (cível)</td><td>“É cabível a conciliação não presencial conduzida pelo Juizado mediante o emprego dos recursos tecnológicos disponíveis de transmissão de sons e imagens em tempo real.” A lei refere-se aos Juizados Especiais Cíveis.</td><td>Lei 9.099, art. 22, § 2º (Lei 13.994/2020).</td></tr>
+      <tr class="hl5"><td>FONAJE</td><td>Intimações por telefone, e-mail ou aplicativo, com adesão expressa prévia (Enunciado 129). Balcão Virtual para comparecimentos periódicos em juízo (Enunciado 130, 49º Encontro, atualizado em 06/02/2024).</td><td>FONAJE, Enunciados 129 e 130.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="alert alert-gold mt2"><span class="alert-tag">Atenção</span><div>A norma do CNJ não torna a audiência telepresencial a regra no JECrim: depende, em geral, de pedido da parte ou de hipótese excepcional, com possibilidade de oposição fundamentada. Confirmar a regulamentação do tribunal local (art. 13 da Res. 354) e o formato designado na intimação. A Resolução CNJ 345/2020 (Juízo 100% Digital) é mencionada no art. 14 da Res. 354, que não a altera nem derroga; seu conteúdo não foi analisado aqui.</div></div>
+</section>
+
+<!-- ============ 11 ============ -->
+<section class="section" id="fluxograma">
+  <div class="section-header"><div class="section-num">11</div><div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma de Aplicação do Art. 62 ao Caso Concreto</div></div>
+  <div class="flow-wrap"><div class="flow-center">
+
+    <div class="flow-node flow-start">Incidente na audiência ou no processo: forma, prova, comunicação, prazo ou proposta de acordo</div>
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+
+    <div class="flow-node flow-box-navy"><b>PASSO 1 — Qual vetor do art. 62 está em jogo?</b><small>Identificar o critério (ou a finalidade) invocado pelo juízo, pelo MP ou pela parte.</small></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">Oralidade</div><div class="flow-node flow-box-blue">Ato verbal e registro resumido<small>Arts. 65, § 3º; 75; 77; 81.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Simplicidade / informalidade</div><div class="flow-node flow-box-blue">Forma flexível, finalidade e prejuízo<small>Arts. 65 e 67.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Economia / celeridade</div><div class="flow-node flow-box-blue">Concentração e prazos<small>Arts. 77, 79, 80, 81, 82, 83.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Reparação / pena alternativa</div><div class="flow-node flow-box-blue">Acordo ou transação<small>Arts. 72, 74, 76 e 89.</small></div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 2 — Há regra específica na Lei 9.099?</b><small>Consultar arts. 63 a 92. Se a lei for omissa, aplica-se o CP e o CPP no que não for incompatível (art. 92). Verificar enunciado do FONAJE e regulamentação local.</small></div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 3 — O ato cumpriu a finalidade para a qual foi realizado? (art. 65, caput)</b></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">Sim</div><div class="flow-node flow-end-green">Ato válido<small>Seguir. Se for o caso, registrar ressalva no termo.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Não ou incerto</div><div class="flow-node flow-box-gold">Passo 4</div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 4 — Houve prejuízo concreto à acusação ou à defesa? (art. 65, § 1º; CPP, arts. 563 e 566)</b><small>O prejuízo precisa ser demonstrado. Verificar se a garantia atingida é de defesa técnica (Súmula 523/STF), citação, contraditório ou dignidade da vítima.</small></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">Sem prejuízo</div><div class="flow-node flow-end-blue">Sem nulidade<small>Pas de nullité sans grief. Eventual ressalva fica registrada.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Com prejuízo</div><div class="flow-node flow-box-red">Arguir na primeira oportunidade<small>Pedir que a arguição e a decisão constem do termo. Cuidar da sanatória (CPP, art. 572).</small></div><div class="flow-arrow">▼</div><div class="flow-node flow-end-red">Nulidade pronunciada<small>Refazimento ou retificação do ato e dos que dele dependam (CPP, art. 573).</small></div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 5 — Finalidades: reparar o dano e evitar pena privativa</b><small>Verificar se cabe, nesta fase, composição civil (art. 74), transação (art. 76) ou suspensão do processo (art. 89), e qual a vontade do cliente.</small></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">Acordo civil possível</div><div class="flow-node flow-box-green">Termo escrito e homologação<small>Título executivo (art. 74). Renúncia à queixa ou representação, se privada ou condicionada.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Proposta do MP</div><div class="flow-node flow-box-gold">Transação (art. 76) ou sursis (art. 89)<small>Aceitação do autor e do defensor.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Sem acordo</div><div class="flow-node flow-box-blue">Denúncia oral e instrução<small>Arts. 77 a 81.</small></div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 6 — Pedido de adiamento, remessa ou outro incidente de celeridade</b><small>“Nenhum ato será adiado” (art. 80). Se houver complexidade ou citação impossível: arts. 66, parágrafo único, e 77, § 2º. Se audiência telepresencial: Res. CNJ 354/2020.</small></div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-purple" style="max-width:980px;"><strong>CONTROLE FINAL DO ADVOGADO:</strong> identificar qual vetor do art. 62 o juízo invoca; checar se há regra específica ou enunciado local; sempre perguntar se o ato atingiu a finalidade e se há prejuízo; não aceitar informalidade que suprima defesa, citação ou dignidade da vítima; registrar no termo o que for relevante; preparar proposta de acordo e de pena alternativa antes da audiência; respeitar prazos de 5, 10 e 5 dias e a decadência; confirmar o formato da audiência (presencial ou telepresencial).</div>
+  </div></div>
+</section>
+
+<!-- ============ 12 ============ -->
+<section class="section" id="atendimento">
+  <div class="section-header"><div class="section-num">12</div><div class="section-title"><span>Roteiro de Atuação — Orientação Prática</span>Atendimento, Conciliação e Negociação com o Cliente</div></div>
+  <div class="alert alert-navy"><span class="alert-tag">Natureza</span><div>Esta seção organiza uma abordagem de atuação a partir do art. 62. Cada orientação traz, entre parênteses, a norma ou o precedente que a sustenta. O que não tem apoio normativo vem identificado como estratégia, a ser ajustada pelo advogado ao caso.</div></div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card type-card tc-blue">
+      <h3>Cliente é o autor do fato</h3>
+      <h4>Como explicar o rito ao cliente</h4>
+      <ul>
+        <li>O processo é <strong>oral, concentrado e rápido</strong>: a sentença pode sair na própria audiência de instrução e julgamento (art. 81). Nenhum ato será adiado (art. 80), então o comparecimento é indispensável.</li>
+        <li>“Informal” não significa “sem consequências”: é processo penal, com defensor obrigatório (art. 68) e possibilidade de condenação.</li>
+        <li>A <strong>finalidade do sistema</strong> é, sempre que possível, reparar a vítima e aplicar pena que não seja privativa de liberdade (art. 62). Isso abre espaço para composição e transação.</li>
+      </ul>
+      <h4>Preparação</h4>
+      <ul>
+        <li>Conferir o tipo imputado e a pena (art. 61) e o contexto (exclusões da seção 06 do art. 61).</li>
+        <li>Levantar antecedentes e benefício nos últimos 5 anos (art. 76, § 2º).</li>
+        <li>Preparar <strong>proposta de reparação</strong> (valor, prazo, forma), com apoio documental.</li>
+        <li>Se o cliente pretender discutir o mérito: arrolar testemunhas com ao menos 5 dias de antecedência (art. 78, § 1º) e planejar a prova a ser produzida numa só audiência (art. 81, § 1º).</li>
+      </ul>
+      <h4>Alavancas de negociação</h4>
+      <ul>
+        <li><strong>Reparar primeiro:</strong> o acordo civil homologado, na ação privada ou condicionada, importa renúncia ao direito de queixa ou representação (art. 74, parágrafo único) e, segundo o FONAJE, retira a justa causa quando há vítima determinada (Enunciado 99).</li>
+        <li><strong>Pena alternativa adequada:</strong> a proposta do MP é pena restritiva ou multa “a ser especificada” (art. 76); as restritivas são fungíveis (FONAJE, 102) e podem ser substituídas por outra (68). <span class="vb vb-pr" style="margin-left:0">Prática</span> Apresentar ao MP o perfil do cliente (trabalho, residência, capacidade de pagamento) para propor medida exequível.</li>
+        <li><strong>Multa única:</strong> o juiz pode reduzi-la até a metade (art. 76, § 1º).</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-green">
+      <h3>Cliente é a vítima ou ofendido</h3>
+      <h4>Como explicar o rito ao cliente</h4>
+      <ul>
+        <li>A audiência preliminar é o momento de <strong>tentar acordo e de decidir sobre a representação</strong> (arts. 72 a 75). A vítima será ouvida e pode ser assistida por advogado.</li>
+        <li>O acordo homologado é <strong>título executivo</strong> no cível, mas, na ação privada ou condicionada, <strong>importa renúncia</strong> ao direito de queixa ou representação (art. 74). É decisão sem volta; por isso pedir garantias e cláusula penal (FONAJE, 43).</li>
+        <li>Faltar à audiência pode ser interpretado como renúncia tácita (FONAJE, 117); a lei, porém, diz que o não oferecimento da representação na audiência preliminar não implica decadência (art. 75, parágrafo único). Não depender dessa discussão: comparecer.</li>
+      </ul>
+      <h4>Preparação</h4>
+      <ul>
+        <li>Identificar a ação penal (queixa, representação, incondicionada) e a data em que soube quem é o autor, para controlar a decadência de 6 meses (CP, art. 103).</li>
+        <li>Documentar o dano: orçamentos, notas, laudos, fotografias, mensagens, testemunhas. O boletim médico ou prova equivalente supre o exame de corpo de delito para a denúncia (art. 77, § 1º).</li>
+        <li>Preparar planilha do dano e <strong>proposta de acordo</strong> para ser redigida e homologada no ato.</li>
+      </ul>
+      <h4>Alavancas de negociação</h4>
+      <ul>
+        <li>A representação e o interesse da vítima são o eixo nas ações condicionadas e privadas: é nelas que o acordo tem efeito extintivo.</li>
+        <li>O acordo pode abranger <strong>qualquer valor ou matéria</strong> (FONAJE, 37), inclusive obrigações de fazer ou não fazer.</li>
+        <li>A transação do autor <strong>não gera efeitos civis</strong> (art. 76, § 6º): a reparação segue pelo acordo civil ou por ação no cível.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Perguntas que o cliente sempre faz</h3>
+  <div class="card-grid card-grid-2">
+    <div class="card"><h4>“Por que é tudo tão rápido e informal?”</h4><p>Porque o art. 62 e o art. 98, I, da CF determinam um processo oral, simples e célere nas infrações de menor potencial ofensivo. Rapidez não retira o direito à defesa técnica nem a exigência de prova e de fundamentação da sentença (art. 81, § 3º).</p></div>
+    <div class="card"><h4>“A audiência pode ser por vídeo?”</h4><p>Depende. Pela Resolução CNJ 354/2020, a audiência telepresencial é a pedido da parte ou nas hipóteses excepcionais do art. 3º, § 1º, e a oposição fundamentada se submete ao controle judicial. Na violência doméstica contra a mulher, a oitiva da vítima é presencial como regra (art. 3º-A). Conferir a intimação e a regulamentação local.</p></div>
+    <div class="card"><h4>“Preciso ir mesmo?”</h4><p>Sim. O autor do fato deve comparecer acompanhado de advogado (art. 68), e “nenhum ato será adiado” (art. 80). A ausência injustificada do autor leva à vista ao MP (FONAJE, 1) e a vítima ausente pode ser vista como renunciante tácita (FONAJE, 117).</p></div>
+    <div class="card"><h4>“Vão gravar tudo?”</h4><p>Os atos de audiência podem ser gravados e só os essenciais têm registro escrito (art. 65, § 3º). Em audiência telepresencial ou por videoconferência a gravação é regra (Res. CNJ 354, art. 7º, IV). Se um ponto é importante, pedir que conste do termo.</p></div>
+    <div class="card"><h4>“Posso ser obrigado a fazer acordo?”</h4><p>Não. O acordo civil e a transação dependem da aceitação das partes (art. 74; art. 76, § 3º). A informalidade e a busca por reparação (art. 62) orientam o juiz, mas não retiram o direito de recusar e de discutir o mérito.</p></div>
+    <div class="card"><h4>“O que acontece se eu aceitar a transação?”</h4><p>Não é condenação, não gera reincidência nem antecedentes e não implica reconhecimento de culpa nem de responsabilidade civil (STJ, JT 93, tese 7). Descumprida, retoma-se a persecução penal (SV 35).</p></div>
+  </div>
+
+  <div class="card mt2">
+    <h3>Checklist de preparação (24 horas antes)</h3>
+    <div class="card-grid card-grid-3">
+      <ul>
+        <li>Termo circunstanciado e tipo imputado conferidos.</li>
+        <li>Formato da audiência (presencial ou telepresencial) confirmado.</li>
+        <li>Meio de intimação e dados de contato atualizados.</li>
+        <li>Procuração com poderes para transigir e aceitar proposta.</li>
+      </ul>
+      <ul>
+        <li>Planilha do dano e documentos, ou prova da defesa.</li>
+        <li>Minuta de acordo com cláusula penal e garantia.</li>
+        <li>Contraproposta de pena alternativa pronta.</li>
+        <li>Posição do cliente definida: compor, transigir, discutir o mérito.</li>
+      </ul>
+      <ul>
+        <li>Testemunhas arroladas com ao menos 5 dias de antecedência.</li>
+        <li>Prazos de decadência e prescrição verificados.</li>
+        <li>Exclusões (LMP, pessoa idosa, ECA, militar) afastadas.</li>
+        <li>Orientação local sobre FONAJE, concurso e prescrição checada.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 13 ============ -->
+<section class="section" id="jurisprudencia">
+  <div class="section-header"><div class="section-num">13</div><div class="section-title"><span>STF e STJ</span>Jurisprudência, Súmulas, Teses e Atos Normativos</div></div>
+  <div class="alert alert-navy"><span class="alert-tag">Aviso do STJ</span><div>As edições da Jurisprudência em Teses do STJ trazem a ressalva de que as teses foram elaboradas pela Secretaria de Jurisprudência mediante pesquisa na base do Tribunal e “não consistindo em repositórios oficiais da jurisprudência deste Tribunal”. Conferir sempre o acórdão antes de citar em peça.</div></div>
+
+  <h3 class="sub-title">Supremo Tribunal Federal</h3>
+  <div class="juris-grid">
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge tese">ADI 5264</span><span class="juris-title">Procedimento célere, institutos despenalizadores e garantias</span><span class="vb vb-of">Oficial</span></div><div class="juris-body">Em sessão virtual encerrada em 4/12/2020, o Plenário julgou improcedente, por unanimidade, a ação da PGR contra os arts. 1º e 2º da Lei 11.313/2006. Rel. Min. Cármen Lúcia: a Constituição não torna o JECrim instância exclusiva, mas garante às infrações de menor potencial ofensivo a observância do procedimento célere e dos institutos despenalizadores da Lei 9.099; “as garantias fundamentais é que devem ser asseguradas, independentemente do juízo em que tramitarem as infrações penais”.</div></div>
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge sumula">Súmula Vinculante 35</span><span class="juris-title">Transação penal e coisa julgada</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><span class="quote">“A homologação da transação penal prevista no artigo 76 da Lei 9.099/1995 não faz coisa julgada material e, descumpridas suas cláusulas, retoma-se a situação anterior, possibilitando-se ao Ministério Público a continuidade da persecução penal mediante oferecimento de denúncia ou requisição de inquérito policial.”</span>DJe de 24/04/2014. Origem: RE 602.072 QO-RG (Tema 238).</div></div>
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge tese">Tema 187</span><span class="juris-title">RE 795.567 — transação penal e efeitos civis</span><span class="vb vb-of">Oficial</span></div><div class="juris-body">Os efeitos do art. 91 do Código Penal decorrem de sentença penal condenatória; a sentença que homologa a transação penal tem natureza meramente homologatória. Rel. Min. Teori Zavascki, julgado em 28/05/2015 (Plenário); acórdão publicado em 09/09/2015. Dialoga com o art. 76, § 6º.</div></div>
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge tese">Tema 613</span><span class="juris-title">RE 635.145 — citação por hora certa</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><strong>Tese:</strong> “1. É constitucional a citação por hora certa, prevista no art. 362, do Código de Processo Penal. 2. A ocultação do réu para ser citado infringe cláusulas constitucionais do devido processo legal e viola as garantias constitucionais do acesso à justiça e da razoável duração do processo.” Rel. min. Marco Aurélio, red. p/ o ac. min. Luiz Fux, Plenário, julgado em 1º/8/2016, DJe de 13/9/2017. Conforme a página oficial da Súmula 523 no portal do STF.</div></div>
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge sumula">Súmula 523</span><span class="juris-title">Falta e deficiência de defesa</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><span class="quote">“No processo penal, a falta da defesa constitui nulidade absoluta, mas a sua deficiência só o anulará se houver prova de prejuízo para o réu.”</span>Texto conforme a página oficial do STF. Base do equilíbrio entre informalidade e defesa técnica.</div></div>
+  </div>
+
+  <h3 class="sub-title">Superior Tribunal de Justiça</h3>
+  <div class="juris-grid">
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">JT 69, tese 1</span><span class="juris-title">Pas de nullité sans grief</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><span class="quote">“A decretação da nulidade de ato processual requer prova inequívoca do prejuízo suportado pela parte, em face do princípio pas de nullité sans grief, previsto no art. 563 do Código de Processo Penal.”</span>Julgados: HC 339971/PR (18/08/2016); HC 359592/CE; RHC 44871/PA; HC 354841/SC; RHC 62410/MG; RHC 62397/SC. Edição publicada em 03/11/2016, com julgados até 19/08/2016 (Nulidades no Processo Penal).</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">JT 93, tese 3</span><span class="juris-title">Intimação do defensor público no JECrim</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><span class="quote">“No âmbito dos Juizados Especiais Criminais, não se exige a intimação pessoal do defensor público, admitindo-se a intimação na sessão de julgamento ou pela imprensa oficial.”</span>Julgados: AgRg no HC 721564/SP (19/04/2022); EDcl no RHC 54206/SP; RHC 79148/MG; HC 241735/SP; HC 105548/ES. Contraste com a JT 69, tese 4 (processo penal comum).</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">JT 93, teses 4, 5, 7, 8 e 9</span><span class="juris-title">Reparação, sursis e transação</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><strong>Tese 4 (Tema 930):</strong> não há óbice a que se estabeleçam, no uso do art. 89, § 2º, obrigações equivalentes, na prática, a sanções penais (prestação de serviços ou pecuniária), que para o sursis se apresentam apenas como condições. <strong>Tese 5:</strong> a perda do valor da fiança é condição legítima do sursis. <strong>Tese 7:</strong> a transação penal não tem natureza de condenação criminal, não gera reincidência e maus antecedentes e não significa reconhecimento da culpabilidade nem da responsabilidade civil. <strong>Tese 8:</strong> repete a SV 35. <strong>Tese 9:</strong> aplica-se, por analogia, o prazo de 5 anos da transação ao sursis.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">JT 96, teses 2 e 5</span><span class="juris-title">Multa alternativa e momento da proposta</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><strong>Tese 2:</strong> é cabível a suspensão condicional do processo e a transação penal aos delitos que preveem a pena de multa alternativamente à privativa de liberdade, ainda que o preceito secundário ultrapasse os parâmetros legais. <strong>Tese 5:</strong> opera-se a preclusão se a proposta de sursis ou de transação ocorre após a sentença penal condenatória.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge sumula">Súmula 438</span><span class="juris-title">Prescrição com base em pena hipotética</span><span class="vb vb-sec">Secundária</span></div><div class="juris-body"><span class="quote">“É inadmissível a extinção da punibilidade pela prescrição da pretensão punitiva com fundamento em pena hipotética, independentemente da existência ou sorte do processo penal.”</span>Contraponto ao Enunciado 75 do FONAJE. Texto conferido em fontes secundárias.</div></div>
+  </div>
+
+  <h3 class="sub-title">Atos normativos do CNJ <span class="vb vb-of" style="margin-left:0.4rem">Oficial</span></h3>
+  <div class="juris-grid">
+    <div class="juris-card doutrina"><div class="juris-header"><span class="juris-badge doutrina">CNJ</span><span class="juris-title">Resolução 354/2020 (compilada)</span></div><div class="juris-body">Audiências e sessões por videoconferência e telepresenciais; comunicação de atos processuais por meio eletrônico. Texto compilado conforme as Resoluções 481/2022, 508/2023 e 679/2026. Detalhes na seção 10.</div></div>
+    <div class="juris-card doutrina"><div class="juris-header"><span class="juris-badge doutrina">CNJ</span><span class="juris-title">Resolução 225/2016</span></div><div class="juris-body">Política Nacional de Justiça Restaurativa no Poder Judiciário. Considera que os arts. 72, 77 e 89 da Lei 9.099/1995 permitem homologar acordos celebrados sob os fundamentos da Justiça Restaurativa (composição civil, transação penal ou condição do sursis). O portal do CNJ registra alterações pelas Resoluções 300/2019, 458/2022 e 592/2024.</div></div>
+  </div>
+
+  <h3 class="sub-title">FONAJE — Enunciados criminais relacionados ao art. 62 <span class="vb vb-sec" style="margin-left:0.4rem">Secundária</span></h3>
+  <div class="alert alert-gold"><span class="alert-tag">Natureza</span><div>Os enunciados do Fórum Nacional dos Juizados Especiais são orientações interpretativas não vinculantes. A compilação consultada (Evinis Talon, atualizada em 06/02/2024) vai até o Enunciado 130. Podem existir encontros posteriores; conferir a versão vigente.</div></div>
+  <div class="juris-grid mt1">
+    <div class="juris-card fonaje"><div class="juris-header"><span class="juris-badge purple">FONAJE</span><span class="juris-title">Oralidade, forma e comunicação</span></div><div class="juris-body"><strong>8:</strong> multa em dias-multa (art. 92). <strong>17:</strong> interrogatório por precatória. <strong>25:</strong> representação. <strong>27:</strong> em regra não se expedem ofícios a órgãos públicos para localizar partes e testemunhas. <strong>34:</strong> termo circunstanciado pela Polícia Civil ou Militar. <strong>42:</strong> oitiva informal como peça de informação. <strong>66:</strong> réu assiste às testemunhas antes do interrogatório. <strong>106:</strong> audiência individual. <strong>108:</strong> art. 396 do CPP inaplicável. <strong>110:</strong> citação por hora certa. <strong>125:</strong> intimação por edital da sentença condenatória quando o réu não é localizado. <strong>127:</strong> fundamentação oral. <strong>129 e 130:</strong> intimação por aplicativo e Balcão Virtual.</div></div>
+    <div class="juris-card fonaje"><div class="juris-header"><span class="juris-badge purple">FONAJE</span><span class="juris-title">Reparação e pena não privativa</span></div><div class="juris-body"><strong>32:</strong> intimar a vítima para a audiência do sursis. <strong>37, 43, 74, 89:</strong> acordo civil. <strong>58, 62, 63, 68, 77, 87, 92, 102:</strong> conteúdo e execução da transação. <strong>99, 113:</strong> justa causa e extinção pela composição. <strong>116:</strong> justiça restaurativa. <strong>119:</strong> mediação. <strong>20:</strong> restritiva mesmo quando o tipo só comporta multa.</div></div>
+  </div>
+</section>
+
+<!-- ============ 14 ============ -->
+<section class="section" id="doutrina">
+  <div class="section-header"><div class="section-num">14</div><div class="section-title"><span>Doutrina Sistematizada</span>Linhas Dogmáticas e Controvérsias</div></div>
+  <div class="alert alert-navy"><span class="alert-tag">Critério</span><div>As correntes abaixo são sínteses das discussões que aparecem nos tribunais e nos manuais, sem atribuição de passagens a autores específicos, salvo quando indicado como fonte secundária. Para citar doutrina em peça, localizar a página e a edição na obra. As obras de referência estão listadas ao final.</div></div>
+  <div class="card-grid card-grid-2 mt1">
+    <div class="card"><h3>Natureza principiológica do art. 62</h3><ul><li>O art. 62 enuncia critérios que orientam a interpretação e a aplicação das regras do JECrim, sem criar sanção própria. A concretização está nas regras específicas e na cláusula de validade do art. 65.</li><li>A expressão “sempre que possível” é lida como finalidade preferencial, e não como dever absoluto.</li><li>A Lei 13.603/2018 apenas incluiu a simplicidade, já presente no art. 2º da lei. Comentário publicado pela Editora JusPodivm atribui a Guilherme de Souza Nucci a leitura de que a omissão no art. 62 deveria ser suprida por interpretação harmônica do diploma (fonte secundária; conferir na obra).</li></ul></div>
+    <div class="card"><h3>Informalidade e devido processo legal</h3><ul><li>A informalidade flexibiliza a forma, não as garantias. O STF, na ADI 5264, afirmou que as garantias fundamentais devem ser asseguradas independentemente do juízo em que tramitem as infrações.</li><li>O equilíbrio opera pelo prejuízo: nulidade só com prejuízo (art. 65, § 1º; CPP, art. 563; STJ, JT 69, tese 1) e deficiência de defesa só anula com prova de prejuízo (STF, Súmula 523).</li><li>Para a defesa, o risco prático é a <strong>nulidade de algibeira</strong> ou a arguição tardia: arguir na primeira oportunidade e registrar no termo.</li></ul></div>
+    <div class="card"><h3>Consensualidade e justiça negociada</h3><ul><li>A reparação do dano e a pena não privativa fazem do JECrim um espaço de justiça penal consensual, com institutos como a composição civil, a transação e o sursis.</li><li>Discute-se o risco de aceitação da transação sem instrução e sob pressão do ritmo do rito. Respostas institucionais: aceitação do autor e do defensor (art. 76, § 3º), ampla defesa na transação (FONAJE, 111) e possibilidade de o juiz não homologar (FONAJE, 73).</li><li>A Resolução CNJ 225/2016 acrescenta, para a Justiça Restaurativa, o consentimento livre e espontâneo, a retratação até a homologação e a ausência de admissão de culpa pelo reconhecimento dos fatos essenciais.</li></ul></div>
+    <div class="card"><h3>Celeridade, prescrição e preclusão</h3><ul><li>O art. 80 (“nenhum ato será adiado”) e os prazos curtos concretizam a celeridade, mas o tempo também joga a favor ou contra a pretensão punitiva: prazos de 3 e 4 anos de prescrição nas infrações de menor potencial ofensivo (CP, art. 109, V e VI).</li><li>O reconhecimento da prescrição pela pena projetada é divergente: admitido no FONAJE (Enunciado 75), vedado na Súmula 438 do STJ.</li><li>O STJ reconhece preclusão da proposta de transação e de sursis após a sentença condenatória (JT 96, tese 5).</li></ul></div>
+    <div class="card"><h3>Oralidade e prova</h3><ul><li>A oralidade favorece a imediatidade e a concentração, mas exige registro fidedigno: gravação dos atos de audiência (art. 65, § 3º; CPP, art. 405; Res. CNJ 354, art. 7º, IV) e termo com resumo dos fatos relevantes (art. 81, § 2º).</li><li>Teses de defesa que dependem de detalhe de depoimento devem ser registradas, já que o termo é “breve resumo”.</li></ul></div>
+    <div class="card"><h3>Tecnologia e informalidade</h3><ul><li>A Resolução CNJ 354/2020 equipara oitivas telepresenciais e por videoconferência às presenciais para todos os fins legais, com gravação e publicidade, e prevê oposição fundamentada.</li><li>Em violência doméstica contra a mulher, a Resolução 679/2026 fixou a oitiva presencial como regra, com exceções cumulativas.</li><li>A Lei 13.994/2020 autorizou a conciliação não presencial nos Juizados Cíveis; a conciliação criminal depende das normas do CNJ e do tribunal.</li></ul></div>
+  </div>
+  <div class="card mt2">
+    <h3>Obras de referência para consulta</h3>
+    <ul class="source-list">
+      <li>GRINOVER, Ada Pellegrini; GOMES FILHO, Antonio Magalhães; FERNANDES, Antonio Scarance; GOMES, Luiz Flávio. <em>Juizados Especiais Criminais: comentários à Lei 9.099, de 26.09.1995</em>. São Paulo: Revista dos Tribunais.</li>
+      <li>JESUS, Damásio E. de. <em>Lei dos Juizados Especiais Criminais Anotada</em>. São Paulo: Saraiva.</li>
+      <li>LIMA, Renato Brasileiro de. <em>Legislação Criminal Especial Comentada</em>. Salvador: JusPodivm.</li>
+      <li>NUCCI, Guilherme de Souza. <em>Leis Penais e Processuais Penais Comentadas</em>. Rio de Janeiro: Forense.</li>
+      <li>BITENCOURT, Cezar Roberto. <em>Juizados Especiais Criminais e Alternativas à Pena de Prisão</em>. Porto Alegre: Livraria do Advogado.</li>
+      <li>TOURINHO NETO, Fernando da Costa; FIGUEIRA JÚNIOR, Joel Dias. <em>Juizados Especiais Estaduais Cíveis e Criminais: comentários à Lei 9.099/1995</em>. São Paulo: Revista dos Tribunais.</li>
+    </ul>
+    <div class="source-note">Indicação bibliográfica de obras de referência da matéria, sem transcrição de trechos. Edições e anos variam; usar a edição mais recente disponível e conferir a numeração de página antes de citar.</div>
+  </div>
+</section>
+
+<!-- ============ 15 ============ -->
+<section class="prova-section" id="recorrentes">
+  <h2>Pontos que Sempre Aparecem nas Audiências</h2>
+  <p class="intro">Respostas objetivas, com a base legal ou jurisprudencial indicada em cada item, para consulta rápida durante a audiência e no atendimento ao cliente.</p>
+  <div class="prova-items">
+
+    <div class="prova-group">Informalidade, forma e nulidade</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">01</span>“Aqui é tudo informal.” Posso abrir mão da defesa técnica?</div><div class="prova-item-a"><strong>Não.</strong> O autor deve comparecer acompanhado de advogado ou será designado defensor público. A informalidade não dispensa a defesa. <span class="ref">Art. 68; STF, Súmula 523</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">02</span>O ato foi feito fora da forma. É nulo?</div><div class="prova-item-a">Só se houve <strong>prejuízo</strong>. O ato é válido quando cumpre a finalidade, e nenhuma nulidade é pronunciada sem prejuízo. <span class="ref">Art. 65, caput e § 1º; CPP, arts. 563 e 566; STJ JT 69, tese 1</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">03</span>Quando arguir a nulidade?</div><div class="prova-item-a">Na <strong>primeira oportunidade</strong>, pedindo que conste do termo. A lei não prevê o momento para o JECrim; o CPP exige arguição logo após aberta a audiência em ritos orais (analogia). Cuidado com a sanatória. <span class="ref">CPP, arts. 571, III e IV, e 572</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">04</span>O defensor público precisa ser intimado pessoalmente?</div><div class="prova-item-a">No JECrim, o STJ <strong>dispensa</strong> a intimação pessoal (admite sessão de julgamento ou imprensa oficial). No processo penal comum, a falta de intimação pessoal gera, via de regra, nulidade. <span class="ref">STJ JT 93, tese 3; JT 69, tese 4</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">05</span>Como são feitas as intimações?</div><div class="prova-item-a">Por correspondência, oficial de justiça ou <strong>qualquer meio idôneo</strong>; as partes e defensores ficam cientes dos atos de audiência. Aplicativos exigem adesão expressa prévia (FONAJE). <span class="ref">Art. 67 e p. único; FONAJE 129</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">06</span>O réu se esconde para não ser citado.</div><div class="prova-item-a">A citação por hora certa é <strong>constitucional</strong> e o FONAJE a admite no JECrim. Se o acusado não for encontrado, as peças vão ao juízo comum. <span class="ref">STF Tema 613; FONAJE 110; art. 66, p. único</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">07</span>Posso ofender, ironizar ou expor a vítima “porque é informal”?</div><div class="prova-item-a"><strong>Não.</strong> Todos devem respeitar a dignidade da vítima, sob pena de responsabilização civil, penal e administrativa. <span class="ref">Art. 81, § 1º-A (Lei 14.245/2021)</span></div></div>
+
+    <div class="prova-group">Oralidade e registro</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">08</span>A audiência é gravada? Vai ter transcrição?</div><div class="prova-item-a">Os atos podem ser gravados e só os essenciais têm registro escrito. A transcrição pode ser requerida. Na telepresencial, a gravação é regra. <span class="ref">Art. 65, § 3º; art. 82, § 3º; Res. CNJ 354, art. 7º, IV</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">09</span>O que consta do termo de audiência?</div><div class="prova-item-a">“Breve resumo dos fatos relevantes” e a sentença. Se o ponto é importante (proposta, protesto, objeção), <strong>pedir que conste</strong>. <span class="ref">Art. 81, § 2º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">10</span>A sentença pode ser oral?</div><div class="prova-item-a">Sim, na própria audiência, dispensado o relatório. O FONAJE admite fundamentação oral, com gravação, e por escrito só a dosimetria e o dispositivo. <span class="ref">Art. 81, § 3º; FONAJE 127</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">11</span>A representação pode ser feita ali mesmo?</div><div class="prova-item-a">Sim, <strong>verbalmente</strong>, reduzida a termo. Se não for feita na audiência preliminar, não há decadência imediata; vale o prazo legal. <span class="ref">Art. 75 e p. único</span></div></div>
+
+    <div class="prova-group">Economia e celeridade</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">12</span>Precisa de inquérito policial?</div><div class="prova-item-a"><strong>Não.</strong> A denúncia oral usa o termo circunstanciado; o boletim médico ou prova equivalente supre o exame de corpo de delito. <span class="ref">Art. 77, § 1º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">13</span>Posso pedir adiamento da audiência de instrução?</div><div class="prova-item-a">A regra é que <strong>nenhum ato será adiado</strong>, com condução coercitiva quando imprescindível. Pedido deve ser fundamentado e a decisão é do juiz. <span class="ref">Art. 80</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">14</span>Quando levar testemunhas?</div><div class="prova-item-a">Trazer ou requerer a intimação <strong>no mínimo 5 dias antes</strong>. <span class="ref">Art. 78, § 1º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">15</span>Posso produzir qualquer prova na audiência?</div><div class="prova-item-a">Todas as provas são produzidas na audiência, e o juiz pode limitar as excessivas, impertinentes ou protelatórias. <span class="ref">Art. 81, § 1º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">16</span>Quais os prazos de recurso?</div><div class="prova-item-a">Apelação e resposta: <strong>10 dias</strong>. Embargos de declaração: <strong>5 dias</strong>, interrompendo o prazo. Não cabe recurso em sentido estrito (FONAJE). <span class="ref">Arts. 82 e 83; FONAJE 48</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">17</span>Dá para reconhecer prescrição pela pena provável?</div><div class="prova-item-a">O FONAJE admite (75), mas o STJ <strong>veda</strong> a prescrição com base em pena hipotética (Súmula 438). Não apostar nessa tese sem confirmar a orientação local. <span class="ref">FONAJE 75; STJ, Súmula 438</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">18</span>A proposta de transação pode ser feita depois da audiência preliminar?</div><div class="prova-item-a">O FONAJE admite até o final da instrução; o STJ reconhece <strong>preclusão após a sentença condenatória</strong>. <span class="ref">FONAJE 114; STJ JT 96, tese 5</span></div></div>
+
+    <div class="prova-group">Reparação do dano e pena não privativa</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">19</span>O que o juiz esclarece na audiência preliminar?</div><div class="prova-item-a">A possibilidade de <strong>composição dos danos</strong> e de aceitação da proposta de pena não privativa. <span class="ref">Art. 72</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">20</span>Qual o efeito do acordo civil?</div><div class="prova-item-a"><strong>Título executivo</strong> no cível e, na ação privada ou condicionada, <strong>renúncia</strong> à queixa ou representação. <span class="ref">Art. 74 e p. único</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">21</span>O acordo pode tratar de qualquer valor ou matéria?</div><div class="prova-item-a">Sim, segundo o FONAJE; obrigação de fazer ou não fazer deve ter cláusula penal certa. <span class="ref">FONAJE 37, 43, 89</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">22</span>Reparei o dano. A ação penal acaba?</div><div class="prova-item-a">Na ação privada ou condicionada, o acordo homologado acarreta renúncia. Em geral, havendo vítima determinada, o FONAJE entende que o acordo retira a justa causa (99). <span class="ref">Art. 74, p. único; FONAJE 99</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">23</span>A transação penal gera efeito civil?</div><div class="prova-item-a"><strong>Não.</strong> A vítima propõe a ação cabível no cível. <span class="ref">Art. 76, § 6º; STF, Tema 187</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">24</span>A transação é condenação? Gera reincidência?</div><div class="prova-item-a"><strong>Não.</strong> Não gera reincidência nem maus antecedentes e não significa reconhecimento de culpa; impede novo benefício por 5 anos. <span class="ref">Art. 76, § 4º; STJ JT 93, tese 7</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">25</span>E se o cliente descumprir a transação?</div><div class="prova-item-a">Retoma-se a situação anterior e o MP pode denunciar ou requisitar inquérito. <span class="ref">Súmula Vinculante 35</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">26</span>O sursis tem reparação do dano?</div><div class="prova-item-a">Sim, como condição do período de prova (salvo impossibilidade); a falta, sem motivo justificado, revoga o benefício. <span class="ref">Art. 89, §§ 1º, I, e 3º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">27</span>Pena de multa: como se paga?</div><div class="prova-item-a">Na Secretaria do Juizado; paga, extingue-se a punibilidade. Em dias-multa (FONAJE). <span class="ref">Art. 84; FONAJE 8</span></div></div>
+
+    <div class="prova-group">Audiência telepresencial e meios digitais</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">28</span>A audiência será por vídeo?</div><div class="prova-item-a">Em regra, só a pedido da parte ou nas hipóteses excepcionais do § 1º do art. 3º, e a oposição fundamentada é controlada pelo juiz. <span class="ref">Res. CNJ 354/2020, art. 3º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">29</span>E se a vítima for mulher em violência doméstica?</div><div class="prova-item-a">A oitiva da vítima é <strong>presencial como regra</strong>; a telepresencial exige requerimento ou anuência expressa, decisão fundamentada e livre manifestação. <span class="ref">Res. CNJ 354, art. 3º-A (Res. 679/2026); Lei 11.340, art. 41</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">30</span>Caiu a conexão durante a audiência virtual.</div><div class="prova-item-a">O juiz pode, em decisão fundamentada, repetir os atos de que a parte não conseguiu participar por obstáculo técnico justificado. <span class="ref">Res. CNJ 354, art. 7º, VII</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">31</span>A conciliação não presencial vale no JECrim?</div><div class="prova-item-a">A Lei 13.994/2020 trata dos Juizados <strong>Cíveis</strong>. No criminal, depende das normas do CNJ e do tribunal. <span class="ref">Art. 22, § 2º; Res. CNJ 354</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">32</span>Como comprovar o comparecimento periódico do sursis?</div><div class="prova-item-a">O FONAJE admite meios digitais, como o Balcão Virtual. <span class="ref">FONAJE 130</span></div></div>
+  </div>
+</section>
+
+<!-- ============ 16 ============ -->
+<section class="section" id="fontes">
+  <div class="section-header"><div class="section-num">16</div><div class="section-title"><span>Controle de Fidedignidade</span>Fontes, Verificação e Ressalvas</div></div>
+  <div class="card">
+    <h3>Fontes consultadas e grau de verificação (conferência de 11/11/2026)</h3>
+    <div class="tbl-scroll">
+    <table class="comp-table">
+      <thead><tr><th>Fonte</th><th>Uso nesta página</th><th>Situação</th></tr></thead>
+      <tbody>
+        <tr class="hl2"><td>Planalto — Lei 9.099/1995, texto compilado</td><td>Arts. 2º, 13, 62 a 92; redação original e atual do art. 62.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido na íntegra</span></td></tr>
+        <tr class="hl2"><td>Planalto — Leis 13.603/2018 e 13.994/2020; CP, CPP, CF, Leis 9.605 e CTB (trechos)</td><td>Origem da alteração do art. 62; conciliação não presencial no cível; arts. 563 a 573 do CPP; art. 405 do CPP; CP arts. 103 e 109; CF arts. 5º, LXXVIII, e 98, I.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido</span></td></tr>
+        <tr class="hl2"><td>CNJ — Resolução 354/2020 (texto compilado até a Res. 679/2026) e Resolução 225/2016</td><td>Audiências telepresenciais, gravação, intimação eletrônica; justiça restaurativa.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido (portal de atos do CNJ)</span></td></tr>
+        <tr class="hl2"><td>STJ — Jurisprudência em Teses nºs 69, 93 e 96 (PDF do próprio STJ)</td><td>Teses sobre nulidades, JECrim, transação e sursis.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido</span></td></tr>
+        <tr class="hl2"><td>STF — SV 35, Temas 187, 238 e 613, Súmula 523; notícia oficial da ADI 5264</td><td>Teses e resultados de julgamento.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido</span></td></tr>
+        <tr class="hl"><td>FONAJE — compilação de Evinis Talon (atualizada em 06/02/2024)</td><td>Enunciados criminais 1 a 130.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+        <tr class="hl"><td>STJ — Súmula 438</td><td>Texto da súmula.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+        <tr class="hl"><td>Comentário sobre a Lei 13.603/2018 (Editora JusPodivm), com referência a Nucci</td><td>Leitura doutrinária sobre a omissão da simplicidade no art. 62.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+        <tr class="hl3"><td>Doutrina (seção 14)</td><td>Síntese de correntes e bibliografia de referência.</td><td><span class="vb vb-pr" style="margin-left:0">Síntese; conferir na obra</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 class="mt2">Limites desta conferência</h3>
+    <ul class="source-list">
+      <li><strong>Site de súmulas do STJ (scon.stj.jus.br)</strong> recusou a consulta automatizada (HTTP 403). A Súmula 438 foi conferida em fonte secundária. Conferir o texto no site do STJ antes de citar.</li>
+      <li><strong>Enunciados do FONAJE:</strong> compilação de terceiros; não vinculam tribunais. Podem ter sido editados novos encontros após fevereiro de 2024.</li>
+      <li><strong>Jurisprudência em Teses nº 69</strong> tem julgados até 19/08/2016. Teses do STJ sobre nulidades podem ter evoluído desde então; conferir o acórdão recente do tema.</li>
+      <li><strong>Não foi localizado</strong> precedente específico do STF ou do STJ que interprete o art. 62 isoladamente. A jurisprudência desta página aplica o artigo por meio do art. 65, das regras de nulidade, da ADI 5264 e das teses sobre JECrim. Se houver precedente específico, ele não foi identificado nas fontes consultadas.</li>
+      <li><strong>Resolução CNJ 345/2020</strong> (Juízo 100% Digital) é apenas mencionada; seu conteúdo não foi analisado. A regulamentação de cada tribunal (art. 13 da Res. 354) não foi consultada.</li>
+      <li><strong>Regra de arguição de nulidade no JECrim:</strong> a Lei 9.099 não fixa o momento; a referência ao art. 571 do CPP é aplicação por analogia, indicada como orientação prática.</li>
+      <li><strong>Jurisprudência posterior a 2023:</strong> não foi possível pesquisar sistematicamente os acórdãos de 2024 a 2026 no site do STJ e do STF. Recomenda-se busca complementar no portal do tribunal.</li>
+    </ul>
+    <h3 class="mt2">Endereços das fontes oficiais</h3>
+    <ul class="source-list">
+      <li><a href="https://www.planalto.gov.br/ccivil_03/leis/l9099.htm" target="_blank" rel="noopener">Lei 9.099/1995 — Planalto</a></li>
+      <li><a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13603.htm" target="_blank" rel="noopener">Lei 13.603/2018 — Planalto</a></li>
+      <li><a href="https://atos.cnj.jus.br/atos/detalhar/3579" target="_blank" rel="noopener">CNJ — Resolução 354/2020 (texto compilado)</a></li>
+      <li><a href="https://atos.cnj.jus.br/atos/detalhar/2289" target="_blank" rel="noopener">CNJ — Resolução 225/2016</a></li>
+      <li><a href="https://www.stj.jus.br/internet_docs/jurisprudencia/jurisprudenciaemteses/Jurisprud%C3%AAncia%20em%20teses%2069%20-%20Nulidades%20no%20Processo%20Penal.pdf" target="_blank" rel="noopener">STJ — Jurisprudência em Teses 69 (Nulidades no Processo Penal)</a></li>
+      <li><a href="https://www.stj.jus.br/docs_internet/jurisprudencia/jurisprudenciaemteses/Jurisprudencia%20em%20Teses%2093%20-%20Juizados%20Especiais%20Criminais%20-%20I.pdf" target="_blank" rel="noopener">STJ — Jurisprudência em Teses 93 (JECrim I)</a></li>
+      <li><a href="https://www.stj.jus.br/docs_internet/jurisprudencia/jurisprudenciaemteses/Jurisprudencia%20em%20Teses%2096%20-%20Juizados%20Especiais%20Criminais%20-%20II.pdf" target="_blank" rel="noopener">STJ — Jurisprudência em Teses 96 (JECrim II)</a></li>
+      <li><a href="https://noticias.stf.jus.br/?p=52154" target="_blank" rel="noopener">STF — notícia sobre a ADI 5264</a></li>
+      <li><a href="https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&amp;sumula=2729" target="_blank" rel="noopener">STF — Súmula 523 (inclui a tese do Tema 613)</a></li>
+    </ul>
+    <div class="alert alert-red mt2"><span class="alert-tag">Nota de integridade</span><div>Não foram criadas súmulas, teses ou precedentes. Onde não foi possível confirmar a fonte primária, a página identifica a informação como secundária ou como orientação prática. Antes de transcrever qualquer trecho em peça, conferir o texto na fonte oficial.</div></div>
+  </div>
+</section>
+
+</div>
+
+<footer><strong>Art. 62 da Lei 9.099/1995 — Critérios Orientadores do Processo Criminal Especial</strong> · Página única com atalhos internos · Conferência normativa em 11/11/2026 · Material de apoio à atuação; não substitui a consulta às fontes oficiais.</footer>
+
+<a id="to-top" href="#top-nav">Topo</a>
+
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('#top-nav a[href^="#"]'));
+  var map={};
+  links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  var ids=Object.keys(map);
+  var toTop=document.getElementById('to-top');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    var current=null;
+    ids.forEach(function(id){
+      var el=document.getElementById(id);
+      if(el && el.getBoundingClientRect().top<=160){current=id;}
+    });
+    links.forEach(function(a){a.classList.remove('active');});
+    if(current && map[current]){
+      var a=map[current], nav=document.getElementById('top-nav');
+      a.classList.add('active');
+      if(nav){
+        var left=a.offsetLeft-(nav.clientWidth/2)+(a.offsetWidth/2);
+        nav.scrollLeft=left;
+      }
+    }
+    if(toTop){toTop.classList.toggle('show',y>600);}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>

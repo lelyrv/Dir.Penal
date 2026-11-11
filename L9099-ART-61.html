@@ -645,6 +645,17 @@ html, body{
   }
 }
 </style>
+<style id="nav-wrap-fix">
+/* Menu de atalhos: quebra em linhas (sem corte lateral) e margem de rolagem para menu + barra */
+@media(min-width:700px){
+  #top-nav{overflow:visible!important;flex-wrap:nowrap!important;align-items:center!important;}
+  #top-nav .nav-brand{padding:0.55rem 1rem 0.55rem 0!important;flex:0 0 auto;}
+  #top-nav .nav-main-links{display:flex;flex-wrap:wrap;align-items:center;flex:1 1 0;min-width:0;}
+  #top-nav a{padding:0.55rem 0.6rem!important;font-size:0.68rem!important;letter-spacing:0.4px!important;}
+}
+.section,.prova-section{scroll-margin-top:calc(var(--vm-study-bar-h,46px) + 112px)!important;}
+@media(max-width:699px){.section,.prova-section{scroll-margin-top:calc(var(--vm-study-bar-h,88px) + 72px)!important;}}
+</style>
 
 
 <nav id="top-nav" aria-label="Atalhos do artigo">
@@ -652,20 +663,20 @@ html, body{
   <div class="nav-main-links">
     <a href="#panorama">Panorama</a>
     <a href="#texto-legal">Texto Legal</a>
-    <a href="#criterio">Critério dos 2 Anos</a>
+    <a href="#criterio">Critério</a>
     <a href="#contravencoes">Contravenções</a>
-    <a href="#tipos">Quadro de Infrações</a>
+    <a href="#tipos">Infrações</a>
     <a href="#exclusoes">Exclusões</a>
     <a href="#competencia">Competência</a>
-    <a href="#audiencia-preliminar">Audiência Preliminar</a>
-    <a href="#instrucao">Instrução e Julgamento</a>
-    <a href="#sursis">Suspensão do Processo</a>
+    <a href="#audiencia-preliminar">Audiência</a>
+    <a href="#instrucao">Instrução</a>
+    <a href="#sursis">Sursis</a>
     <a href="#fluxograma">Fluxograma</a>
     <a href="#prazos">Prazos</a>
-    <a href="#atendimento">Atendimento e Negociação</a>
-    <a href="#jurisprudencia">Juris. STF/STJ</a>
+    <a href="#atendimento">Atendimento</a>
+    <a href="#jurisprudencia">STF/STJ</a>
     <a href="#doutrina">Doutrina</a>
-    <a href="#recorrentes" class="nav-prova">Pontos Recorrentes</a>
+    <a href="#recorrentes" class="nav-prova">Recorrentes</a>
     <a href="#fontes">Fontes</a>
   </div>
 </nav>

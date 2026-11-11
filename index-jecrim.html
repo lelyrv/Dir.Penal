@@ -96,6 +96,7 @@
         <nav class="menu-artigos">
             <div class="menu-group-title">Disposições Gerais — Juizados Criminais (Arts. 60–62)</div>
             <a href="L9099-ART-61.html" target="painel_artigos">Art. 61 - Infrações de Menor Potencial Ofensivo</a>
+            <a href="L9099-ART-62.html" target="painel_artigos">Art. 62 - Critérios do Processo Criminal Especial</a>
         </nav>
     </aside>
 
@@ -112,109 +113,42 @@
 
     <script>
         /* ============================================================
-           ALTURA AUTOMÁTICA DO IFRAME
+           ROLAGEM INTERNA DO ARTIGO
+           O artigo desta matéria rola dentro do próprio quadro, de modo
+           que a barra do cronômetro e o menu de atalhos permanecem sempre
+           visíveis. A altura automática do quadro (script.js) é desativada
+           aqui; ela só é aplicada na impressão.
            ============================================================ */
         (function () {
-            const iframe = document.getElementById('painel_artigos');
-
+            var iframe = document.getElementById('painel_artigos');
             if (!iframe) return;
 
-            function getIframeDocument() {
-                return iframe.contentDocument || iframe.contentWindow.document;
+            var original = window.ajustarAlturaIframe;
+            if (original) {
+                window.removeEventListener('load', original);
+                window.removeEventListener('resize', original);
+                window.removeEventListener('beforeprint', original);
             }
 
-            function calcularAlturaReal(doc) {
-                const html = doc.documentElement;
-                const body = doc.body;
-
-                if (!html || !body) return window.innerHeight;
-
-                return Math.max(
-                    body.scrollHeight,
-                    body.offsetHeight,
-                    html.clientHeight,
-                    html.scrollHeight,
-                    html.offsetHeight
-                );
+            function desativarAlturaAutomatica() {
+                iframe.classList.remove('auto-height');
+                iframe.style.removeProperty('--iframe-height');
+                document.documentElement.style.removeProperty('--iframe-height');
             }
 
-            function ajustarAlturaIframe() {
+            window.ajustarAlturaIframe = desativarAlturaAutomatica;
+            desativarAlturaAutomatica();
+
+            window.addEventListener('beforeprint', function () {
                 try {
-                    const doc = getIframeDocument();
-                    const altura = calcularAlturaReal(doc);
-
+                    var doc = iframe.contentDocument || iframe.contentWindow.document;
+                    var altura = Math.ceil(doc.body.getBoundingClientRect().height);
                     iframe.classList.add('auto-height');
                     iframe.style.setProperty('--iframe-height', altura + 'px');
-
                     document.documentElement.style.setProperty('--iframe-height', altura + 'px');
-                } catch (erro) {
-                    iframe.classList.remove('auto-height');
-                    iframe.style.removeProperty('--iframe-height');
-
-                    console.warn(
-                        'Não foi possível ajustar automaticamente o iframe. Verifique se o conteúdo está no mesmo domínio/origem.',
-                        erro
-                    );
-                }
-            }
-
-            function prepararObservador() {
-                try {
-                    const doc = getIframeDocument();
-
-                    ajustarAlturaIframe();
-
-                    if (doc.fonts && doc.fonts.ready) {
-                        doc.fonts.ready.then(ajustarAlturaIframe);
-                    }
-
-                    const observer = new ResizeObserver(ajustarAlturaIframe);
-
-                    if (doc.documentElement) observer.observe(doc.documentElement);
-                    if (doc.body) observer.observe(doc.body);
-
-                    const mutationObserver = new MutationObserver(ajustarAlturaIframe);
-
-                    if (doc.body) {
-                        mutationObserver.observe(doc.body, {
-                            childList: true,
-                            subtree: true,
-                            attributes: true,
-                            characterData: true
-                        });
-                    }
-
-                    setTimeout(ajustarAlturaIframe, 150);
-                    setTimeout(ajustarAlturaIframe, 500);
-                    setTimeout(ajustarAlturaIframe, 1000);
-                } catch (erro) {
-                    console.warn('Não foi possível observar alterações no iframe.', erro);
-                }
-            }
-
-            iframe.addEventListener('load', function () {
-                prepararObservador();
-
-                const area = document.querySelector('.content-area');
-                if (area) area.scrollTo({ top: 0, behavior: 'auto' });
+                } catch (e) { /* sem acesso ao conteúdo: mantém rolagem interna */ }
             });
-
-            window.addEventListener('load', ajustarAlturaIframe);
-            window.addEventListener('resize', ajustarAlturaIframe);
-            window.addEventListener('beforeprint', ajustarAlturaIframe);
-
-            document.querySelectorAll('.menu-artigos a[target="painel_artigos"]').forEach(function (link) {
-                link.addEventListener('click', function () {
-                    document.querySelectorAll('.menu-artigos a').forEach(function (item) {
-                        item.classList.remove('active');
-                    });
-
-                    link.classList.add('active');
-
-                    setTimeout(ajustarAlturaIframe, 250);
-                    setTimeout(ajustarAlturaIframe, 700);
-                });
-            });
+            window.addEventListener('afterprint', desativarAlturaAutomatica);
         })();
     </script>
 
