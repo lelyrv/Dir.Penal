@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 60 da Lei 9.099/1995 — Competência dos Juizados Especiais Criminais | Fluxograma de Atuação em Audiência</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0d1b2a;--navy-mid:#1a2f45;--navy-light:#243b55;
+  --gold:#c8960c;--gold-light:#e8b84b;--gold-pale:#fdf3d8;
+  --cream:#faf7f2;--cream-mid:#f0ebe2;
+  --text-dark:#1a1208;--text-mid:#3d3020;--text-soft:#6b5c40;
+  --border:#d4c49a;--border-light:#e8dcbf;
+  --red-accent:#8b1a1a;--green-accent:#1a4a2e;--blue-accent:#1a3a5c;--purple-accent:#4a1a5c;
+  --shadow:0 4px 24px rgba(13,27,42,0.10);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Source Serif 4',Georgia,serif;background:var(--cream);color:var(--text-dark);font-size:15px;line-height:1.75;}
+a{color:var(--blue-accent);}
+strong{font-weight:700;}
+
+/* ---------- Navegação ---------- */
+#top-nav{position:sticky;top:0;z-index:999;background:var(--navy);border-bottom:3px solid var(--gold);padding:0 1.5rem;display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;}
+#top-nav::-webkit-scrollbar{display:none;}
+#top-nav .nav-brand{font-family:'Playfair Display',serif;color:var(--gold-light);font-size:0.9rem;font-weight:700;white-space:nowrap;padding:0.85rem 1.2rem 0.85rem 0;border-right:1px solid rgba(200,150,12,0.3);margin-right:0.5rem;letter-spacing:0.5px;}
+#top-nav .nav-main-links{display:flex;align-items:center;}
+#top-nav a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.72rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;padding:0.85rem 0.8rem;white-space:nowrap;transition:color .2s;border-bottom:3px solid transparent;margin-bottom:-3px;}
+#top-nav a:hover,#top-nav a.active{color:var(--gold-light);border-bottom-color:var(--gold);}
+#top-nav a.nav-prova{color:var(--gold-light);}
+
+/* ---------- Cabeçalho ---------- */
+#hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 60%,#1e3d5c 100%);color:white;padding:3.5rem 2rem 3rem;text-align:center;position:relative;overflow:hidden;}
+#hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(200,150,12,0.03) 0px,rgba(200,150,12,0.03) 1px,transparent 1px,transparent 40px);}
+#hero .badge{display:inline-block;background:rgba(200,150,12,0.15);border:1px solid rgba(200,150,12,0.5);color:var(--gold-light);font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;padding:0.35rem 1rem;border-radius:2px;margin-bottom:1.2rem;font-weight:600;position:relative;}
+#hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.15;margin-bottom:0.6rem;letter-spacing:-0.5px;position:relative;}
+#hero h1 span{color:var(--gold-light);}
+#hero .subtitle{font-size:1rem;color:rgba(255,255,255,0.65);font-style:italic;margin-bottom:1.5rem;position:relative;}
+#hero .law-box{display:inline-block;background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.4);border-left:4px solid var(--gold);color:rgba(255,255,255,0.9);font-size:0.93rem;font-style:italic;padding:1rem 1.5rem;max-width:1120px;text-align:left;line-height:1.9;border-radius:0 4px 4px 0;position:relative;}
+#hero .law-box strong{color:var(--gold-light);font-style:normal;display:block;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem;}
+
+/* ---------- Estrutura ---------- */
+.page-wrap{width:100%;margin:0;padding:0 clamp(1rem,3vw,4rem) 4rem;}
+.section{margin-top:3.5rem;scroll-margin-top:56px;}
+.section-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:0.75rem;border-bottom:2px solid var(--border);}
+.section-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--border);line-height:1;min-width:2.5rem;}
+.section-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--navy);line-height:1.2;}
+.section-title span{display:block;font-size:0.75rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);}
+.sub-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin:1.6rem 0 0.7rem;padding-left:0.7rem;border-left:4px solid var(--gold);}
+
+/* ---------- Cartões ---------- */
+.card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1.4rem 1.6rem;box-shadow:var(--shadow);}
+.card-grid{display:grid;gap:1rem;}
+.card-grid-2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr));}
+.card-grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
+.card-grid-4{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));}
+.card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:0.6rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border-light);color:var(--navy);}
+.card h4{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;margin:0.8rem 0 0.35rem;color:var(--navy);}
+.card p,.card li{font-size:0.88rem;line-height:1.7;color:var(--text-mid);}
+.card p + p{margin-top:0.55rem;}
+.card ul,.card ol{padding-left:1.1rem;}
+.card li{margin-bottom:0.3rem;}
+.type-card{border-top:4px solid;}
+.tc-red{border-top-color:var(--red-accent);}.tc-red h3{color:var(--red-accent);}
+.tc-green{border-top-color:var(--green-accent);}.tc-green h3{color:var(--green-accent);}
+.tc-blue{border-top-color:var(--blue-accent);}.tc-blue h3{color:var(--blue-accent);}
+.tc-gold{border-top-color:var(--gold);}.tc-gold h3{color:#7a5a00;}
+.tc-purple{border-top-color:var(--purple-accent);}.tc-purple h3{color:var(--purple-accent);}
+
+/* ---------- Fluxograma ---------- */
+.flow-wrap{background:white;border:1px solid var(--border-light);border-radius:6px;padding:2rem 1.5rem;box-shadow:var(--shadow);overflow-x:auto;}
+.flow-center{display:flex;flex-direction:column;align-items:center;}
+.flow-node{border-radius:4px;padding:0.65rem 1.4rem;font-size:0.82rem;font-weight:600;text-align:center;min-width:220px;max-width:760px;line-height:1.55;}
+.flow-node small{display:block;font-weight:400;font-size:0.74rem;opacity:0.9;margin-top:0.2rem;}
+.flow-start{background:var(--navy);color:white;border-radius:50px;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;}
+.flow-end-green{background:var(--green-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-red{background:var(--red-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-gold{background:var(--gold);color:var(--navy);border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-blue{background:var(--blue-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-purple{background:var(--purple-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-box-navy{background:var(--navy-mid);color:white;border-left:4px solid var(--gold);font-size:0.8rem;}
+.flow-box-navy b{color:var(--gold-light);}
+.flow-box-green{background:#edf7f0;border:1px solid #7ec89a;border-left:4px solid var(--green-accent);color:var(--text-dark);}
+.flow-box-blue{background:#edf2f8;border:1px solid #8eb4d8;border-left:4px solid var(--blue-accent);color:var(--text-dark);}
+.flow-box-red{background:#fdf0f0;border:1px solid #e09090;border-left:4px solid var(--red-accent);color:var(--text-dark);}
+.flow-box-gold{background:var(--gold-pale);border:2px solid var(--gold);color:var(--text-dark);}
+.flow-box-purple{background:#f3eef8;border:1px solid #b89dd8;border-left:4px solid var(--purple-accent);color:var(--text-dark);}
+.flow-arrow{font-size:1.3rem;color:var(--border);line-height:1;margin:0.15rem 0;}
+.flow-row{display:flex;align-items:flex-start;gap:1.5rem;width:100%;justify-content:center;flex-wrap:wrap;}
+.flow-branch{display:flex;flex-direction:column;align-items:center;flex:1;min-width:210px;}
+.flow-label{font-size:0.68rem;color:var(--text-soft);font-weight:600;letter-spacing:0.5px;text-transform:uppercase;background:var(--cream-mid);padding:0.15rem 0.5rem;border-radius:2px;margin:0.15rem 0;text-align:center;}
+.flow-connector-line{width:1px;height:28px;background:var(--border);}
+
+/* ---------- Tabelas ---------- */
+.tbl-scroll{overflow-x:auto;border-radius:6px;box-shadow:var(--shadow);}
+.comp-table{width:100%;border-collapse:collapse;font-size:0.84rem;background:white;}
+.comp-table thead{background:var(--navy);color:white;}
+.comp-table thead th{padding:0.85rem 1rem;font-weight:600;letter-spacing:0.5px;font-size:0.8rem;text-align:left;}
+.comp-table thead th:first-child{color:var(--gold-light);}
+.comp-table tbody tr{border-bottom:1px solid var(--border-light);}
+.comp-table tbody tr:last-child{border-bottom:none;}
+.comp-table tbody tr:nth-child(even){background:var(--cream);}
+.comp-table td{padding:0.75rem 1rem;color:var(--text-mid);vertical-align:top;}
+.comp-table td:first-child{font-weight:600;color:var(--navy);font-size:0.8rem;}
+.comp-table .hl td{background:var(--gold-pale)!important;}
+.comp-table .hl2 td{background:#edf7f0!important;}
+.comp-table .hl3 td{background:#edf2f8!important;}
+.comp-table .hl4 td{background:#fdf0f0!important;}
+.comp-table .hl5 td{background:#f3eef8!important;}
+
+/* ---------- Jurisprudência ---------- */
+.juris-grid{display:grid;gap:1rem;}
+.juris-card{background:white;border:1px solid var(--border-light);border-left:5px solid;border-radius:0 6px 6px 0;padding:1.2rem 1.4rem;box-shadow:var(--shadow);}
+.juris-card.stf{border-left-color:var(--red-accent);}
+.juris-card.stj{border-left-color:var(--navy);}
+.juris-card.doutrina{border-left-color:var(--gold);}
+.juris-card.fonaje{border-left-color:var(--purple-accent);}
+.juris-header{display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem;flex-wrap:wrap;}
+.juris-badge{font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:0.2rem 0.55rem;border-radius:2px;}
+.juris-badge.stf{background:var(--red-accent);color:white;}
+.juris-badge.stj{background:var(--navy);color:white;}
+.juris-badge.doutrina{background:var(--gold);color:var(--navy);}
+.juris-badge.sumula{background:var(--green-accent);color:white;}
+.juris-badge.tese{background:var(--blue-accent);color:white;}
+.juris-badge.purple{background:var(--purple-accent);color:white;}
+.juris-title{font-family:'Playfair Display',serif;font-size:0.92rem;font-weight:700;color:var(--navy);}
+.juris-body{font-size:0.84rem;color:var(--text-mid);line-height:1.7;}
+.juris-body .quote{display:block;margin:0.4rem 0;padding:0.5rem 0.8rem;background:var(--cream-mid);border-left:3px solid var(--border);font-style:italic;}
+.vb{display:inline-block;font-size:0.6rem;font-weight:700;letter-spacing:0.9px;text-transform:uppercase;padding:0.12rem 0.45rem;border-radius:2px;margin-left:auto;}
+.vb-of{background:#dceee3;color:var(--green-accent);border:1px solid #7ec89a;}
+.vb-sec{background:#fdf3d8;color:#7a5a00;border:1px solid #d4aa3a;}
+.vb-pr{background:#ece5f5;color:var(--purple-accent);border:1px solid #b89dd8;}
+
+/* ---------- Alertas e citações ---------- */
+.alert{padding:0.9rem 1.2rem;border-radius:4px;font-size:0.84rem;line-height:1.7;display:flex;gap:0.7rem;align-items:flex-start;}
+.alert .alert-tag{flex-shrink:0;font-size:0.62rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:0.2rem 0.5rem;border-radius:2px;margin-top:0.2rem;}
+.alert-gold{background:var(--gold-pale);border:1px solid #d4aa3a;color:#5a4000;}.alert-gold .alert-tag{background:#d4aa3a;color:#3a2800;}
+.alert-red{background:#fdf0f0;border:1px solid #e09090;color:#5a0000;}.alert-red .alert-tag{background:var(--red-accent);color:white;}
+.alert-navy{background:#f0f4f8;border:1px solid #aabbcc;color:var(--navy);}.alert-navy .alert-tag{background:var(--navy);color:white;}
+.alert-green{background:#edf7f0;border:1px solid #7ec89a;color:#1a4a2e;}.alert-green .alert-tag{background:var(--green-accent);color:white;}
+.alert-purple{background:#f3eef8;border:1px solid #b89dd8;color:var(--purple-accent);}.alert-purple .alert-tag{background:var(--purple-accent);color:white;}
+.law-quote{background:var(--cream-mid);border-left:4px solid var(--navy);padding:0.9rem 1.2rem;font-size:0.88rem;font-style:italic;color:var(--text-mid);line-height:1.7;border-radius:0 4px 4px 0;}
+.law-quote strong{font-style:normal;color:var(--navy);font-size:0.75rem;letter-spacing:0.5px;display:block;margin-bottom:0.25rem;}
+.law-quote + .law-quote{margin-top:0.7rem;}
+.divider{height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);margin:1.2rem 0;}
+.mt1{margin-top:0.75rem;}.mt2{margin-top:1rem;}.mt3{margin-top:1.5rem;}
+.ref{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--text-soft);}
+.source-note{font-size:0.78rem;color:var(--text-soft);border-top:1px dashed var(--border);padding-top:0.7rem;margin-top:0.9rem;}
+.source-list li{font-size:0.82rem;margin-bottom:0.45rem;}
+.tag{display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;padding:0.15rem 0.5rem;border-radius:2px;margin:0.1rem;}
+.tag-blue{background:#dce8f5;color:var(--blue-accent);}
+.tag-green{background:#dceee3;color:var(--green-accent);}
+.tag-gold{background:var(--gold-pale);color:#7a5a00;border:1px solid #d4aa3a;}
+.tag-red{background:#fde8e8;color:var(--red-accent);}
+.tag-purple{background:#ece5f5;color:var(--purple-accent);}
+
+/* ---------- Anatomia do dispositivo ---------- */
+.anat-visual{display:flex;align-items:stretch;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);}
+.av-col{flex:1;padding:1.2rem 1.4rem;}
+.av-navy{background:var(--navy-mid);color:white;}
+.av-sep{background:var(--navy);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:900;flex:0 0 2.2rem;}
+.av-red{background:var(--red-accent);color:white;}
+.av-blue{background:var(--blue-accent);color:white;}
+.av-gold{background:var(--gold);color:var(--navy);}
+.av-purple{background:var(--purple-accent);color:white;}
+.av-col h4{font-family:'Playfair Display',serif;font-size:0.98rem;font-weight:700;margin-bottom:0.5rem;border-bottom:1px solid rgba(255,255,255,0.2);padding-bottom:0.35rem;}
+.av-col p,.av-col li{font-size:0.82rem;line-height:1.65;}
+.av-col ul{padding-left:1rem;margin-top:0.3rem;}
+
+/* ---------- Pontos recorrentes ---------- */
+.prova-section{background:var(--navy);border-radius:8px;padding:2rem;color:white;margin-top:3.5rem;scroll-margin-top:56px;}
+.prova-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold-light);margin-bottom:0.5rem;}
+.prova-section .intro{font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;font-style:italic;}
+.prova-items{display:grid;gap:0.75rem;}
+.prova-item{background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.25);border-left:4px solid var(--gold);border-radius:0 4px 4px 0;padding:1rem 1.2rem;}
+.prova-item-q{font-size:0.84rem;font-weight:600;color:var(--gold-light);margin-bottom:0.4rem;display:flex;align-items:flex-start;gap:0.6rem;}
+.prova-item-q .qnum{background:var(--gold);color:var(--navy);font-size:0.65rem;font-weight:700;padding:0.1rem 0.45rem;border-radius:2px;flex-shrink:0;margin-top:0.1rem;}
+.prova-item-a{font-size:0.82rem;color:rgba(255,255,255,0.84);line-height:1.65;}
+.prova-item-a strong{color:white;}
+.prova-item-a .ref{color:var(--gold-light);}
+.prova-group{font-family:'Playfair Display',serif;font-size:1rem;color:var(--gold-light);margin:1.4rem 0 0.2rem;padding-bottom:0.3rem;border-bottom:1px solid rgba(200,150,12,0.3);}
+
+footer{background:var(--navy);color:rgba(255,255,255,0.5);text-align:center;padding:1.5rem;font-size:0.75rem;border-top:2px solid var(--gold);}
+footer strong{color:var(--gold-light);}
+#to-top{position:fixed;right:1.2rem;bottom:1.2rem;z-index:998;background:var(--navy);color:var(--gold-light);border:1px solid var(--gold);border-radius:3px;padding:0.45rem 0.8rem;font-size:0.72rem;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;text-decoration:none;opacity:0;pointer-events:none;transition:opacity .2s;}
+#to-top.show{opacity:1;pointer-events:auto;}
+
+@page{size:A4 landscape;margin:8mm;}
+@media print{
+  #top-nav,#to-top,footer{display:none;}
+  #hero{padding:1.2rem 1rem;}#hero::before{display:none;}
+  .page-wrap{padding:0 0.35rem 1rem;}
+  .section{margin-top:1.15rem;}
+  .card,.juris-card,.flow-wrap,.prova-item,.comp-table tr{page-break-inside:avoid;}
+  .card,.juris-card,.flow-wrap{box-shadow:none;border:1px solid #ccc;}
+  .prova-section{background:#f0f4f8!important;color:#000!important;}
+  .prova-section h2,.prova-group{color:#0d1b2a!important;}
+  .prova-item{background:white!important;border:1px solid #ccc!important;}
+  .prova-item-q{color:#7a5a00!important;}.prova-item-a{color:#333!important;}.prova-item-a .ref{color:#555!important;}
+  body{font-size:8.5pt;line-height:1.4;}
+  .card p,.card li,.juris-body{font-size:8pt;line-height:1.4;}
+  .comp-table{font-size:7.5pt;}.comp-table td,.comp-table th{padding:.35rem;}
+}
+@media(max-width:700px){
+  #hero{padding:2rem 1rem;}#hero h1{font-size:1.6rem;}
+  .card-grid-2,.card-grid-3,.card-grid-4{grid-template-columns:1fr;}
+  .section-title{font-size:1.1rem;}
+  .comp-table{font-size:0.76rem;min-width:560px;}.comp-table td,.comp-table th{padding:0.55rem 0.65rem;}
+  .flow-node{min-width:150px;font-size:0.74rem;}
+  .anat-visual{flex-direction:column;}.av-sep{padding:0.4rem;flex:0 0 1.5rem;}
+}
+</style>
+</head>
+<body>
+<!-- VM-STUDY-BAR-START -->
+<style id="vm-bar-css">
+html,body{-webkit-transform:none!important;transform:none!important;overflow-x:hidden;}
+#vm-study-bar *{box-sizing:border-box;margin:0;padding:0;}
+#vm-study-bar{
+  position:fixed!important;top:0!important;left:0!important;right:0!important;
+  z-index:2147483647!important;
+  -webkit-transform:translateZ(0);transform:translateZ(0);
+  will-change:transform;-webkit-backface-visibility:hidden;backface-visibility:hidden;
+  background:linear-gradient(180deg,#0d1b2a 0%,#0a1520 100%);
+  border-bottom:2px solid #c8960c;
+  box-shadow:0 2px 16px rgba(0,0,0,.5);
+  font-family:'Source Serif 4',Georgia,serif;
+  display:flex;flex-direction:column;
+  user-select:none;-webkit-user-select:none;
+}
+.vm-row1{
+  display:flex;align-items:center;padding:0 .4rem;min-height:42px;
+  border-bottom:1px solid rgba(200,150,12,.18);
+}
+.vm-back{
+  display:flex;align-items:center;color:#e8b84b;text-decoration:none;
+  font-size:.78rem;font-weight:700;padding:0 .6rem 0 .15rem;min-height:42px;
+  border-right:1px solid rgba(200,150,12,.22);white-space:nowrap;flex-shrink:0;
+  -webkit-tap-highlight-color:transparent;
+}
+.vm-back:active{color:#fff;}
+.vm-info{
+  font-size:.68rem;color:rgba(255,255,255,.65);padding:0 .5rem;flex:1;
+  min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.vm-info strong{color:#e8b84b;font-weight:700;}
+.vm-completed-wrap{
+  display:flex;align-items:center;height:100%;
+  padding-left:.85rem;padding-right:.65rem;
+  margin-left:.45rem;
+  border-left:1px solid rgba(200,150,12,.18);flex-shrink:0;
+}
+.vm-completed-wrap label{
+  display:flex;align-items:center;gap:.35rem;font-size:.66rem;
+  color:rgba(255,255,255,.5);cursor:pointer;white-space:nowrap;padding:0 .1rem;
+}
+#vm-check{width:16px;height:16px;accent-color:#2ecc71;cursor:pointer;flex-shrink:0;}
+#vm-check-label{transition:color .2s;}
+.vm-row2{display:flex;align-items:center;padding:0 .65rem;min-height:42px;gap:.75rem;}
+.vm-timer-block{display:flex;align-items:center;gap:.55rem;flex-shrink:0;margin-left:.35rem;}
+.vm-timer{
+  font-family:'JetBrains Mono','Courier New',monospace;
+  font-size:1.05rem;font-weight:700;color:#e8b84b;letter-spacing:1.2px;
+  min-width:78px;text-align:center;line-height:1;
+}
+.vm-pause-timer{font-size:.62rem;color:#fc8181;min-width:48px;font-weight:600;}
+/* Status pill: visível apenas quando ativo (leitura/pausa/concluído) */
+.vm-status{
+  font-size:.58rem;font-weight:700;letter-spacing:.7px;text-transform:uppercase;
+  padding:.2rem .5rem;border-radius:10px;white-space:nowrap;flex-shrink:0;
+  transition:background .2s,color .2s;
+}
+.vm-status-idle   {display:none;}
+.vm-status-reading{background:rgba(46,204,113,.18);  color:#2ecc71;}
+.vm-status-paused {background:rgba(252,137,74,.18);  color:#fc894a;}
+.vm-status-done   {background:rgba(116,185,255,.18); color:#74b9ff;}
+.vm-spacer{flex:1;}
+.vm-btns{display:flex;gap:.55rem;flex-shrink:0;margin-left:.55rem;}
+.vm-btn{
+  font-family:'Source Serif 4',Georgia,serif;font-size:.68rem;font-weight:700;
+  padding:0 .55rem;height:32px;min-width:32px;border-radius:4px;border:1.5px solid;
+  cursor:pointer;white-space:nowrap;transition:background .15s,transform .1s;
+  display:flex;align-items:center;justify-content:center;gap:.35rem;
+  -webkit-tap-highlight-color:transparent;
+}
+.vm-btn:active{transform:scale(.94);}
+.vm-btn:disabled{opacity:.2;cursor:default;pointer-events:none;}
+#vm-btn-start{background:rgba(46,204,113,.18);border-color:rgba(46,204,113,.55);color:#2ecc71;}
+#vm-btn-start:not(:disabled):active{background:rgba(46,204,113,.35);}
+#vm-btn-pause{background:rgba(230,126,34,.18);border-color:rgba(230,126,34,.55);color:#fc894a;}
+#vm-btn-pause:not(:disabled):active{background:rgba(230,126,34,.35);}
+#vm-btn-end{background:rgba(116,185,255,.18);border-color:rgba(116,185,255,.55);color:#74b9ff;}
+#vm-btn-end:not(:disabled):active{background:rgba(116,185,255,.35);}
+body{padding-top:84px!important;}
+.tabs-wrap,#top-nav{top:84px!important;margin-top:-84px!important;}
+.hero,.page-wrap,.container,.wrap,main{scroll-margin-top:140px;}
+@media(min-width:520px){
+  #vm-study-bar{flex-direction:row;align-items:stretch;height:46px;gap:.95rem;padding-right:.75rem;}
+  .vm-row1{border-bottom:none;min-height:46px;padding:0;}
+  .vm-row2{min-height:46px;padding:0 .5rem 0 0;gap:.85rem;}
+  body{padding-top:46px!important;}
+  .tabs-wrap,#top-nav{top:46px!important;margin-top:-46px!important;}
+}
+
+@media(max-width:360px){
+  .vm-timer{font-size:.9rem;min-width:68px;}
+  .vm-btn{font-size:.6rem;padding:0 .38rem;height:30px;}
+  .vm-info{font-size:.61rem;}
+}
+
+
+/* === AJUSTE FINAL: BARRA SUPERIOR PADRONIZADA / SEM FAIXA BRANCA === */
+:root{--vm-study-bar-h:46px;}
+#vm-study-bar{
+  position:fixed!important;
+  top:0!important;left:0!important;right:0!important;
+  width:100%!important;
+  min-height:var(--vm-study-bar-h)!important;
+  height:var(--vm-study-bar-h)!important;
+  margin:0!important;
+  padding:0 1.25rem 0 0!important;
+  display:flex!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  gap:0!important;
+  background:#0a1520!important;
+  border-top:0!important;
+  border-bottom:2px solid #c8960c!important;
+  box-shadow:0 2px 14px rgba(0,0,0,.55)!important;
+  overflow:visible!important;
+}
+#vm-study-bar .vm-row1,
+#vm-study-bar .vm-row2{
+  display:contents!important;
+  min-height:0!important;
+  height:auto!important;
+  padding:0!important;
+  border:0!important;
+}
+#vm-study-bar .vm-back{
+  order:1!important;
+  height:var(--vm-study-bar-h)!important;
+  min-height:var(--vm-study-bar-h)!important;
+  padding:0 1.15rem!important;
+  margin:0!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  border-right:1px solid rgba(200,150,12,.35)!important;
+}
+#vm-study-bar .vm-info{
+  order:2!important;
+  flex:1 1 auto!important;
+  min-width:70px!important;
+  padding:0 1.3rem!important;
+  margin:0!important;
+  white-space:nowrap!important;
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+}
+#vm-study-bar .vm-timer-block{
+  order:3!important;
+  height:var(--vm-study-bar-h)!important;
+  min-height:var(--vm-study-bar-h)!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:.65rem!important;
+  margin:0 1.1rem 0 0!important;
+  flex:0 0 auto!important;
+}
+#vm-study-bar .vm-status{
+  order:4!important;
+  margin:0 .85rem 0 0!important;
+}
+#vm-study-bar .vm-spacer{display:none!important;}
+#vm-study-bar .vm-btns{
+  order:5!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:.55rem!important;
+  margin:0 1.25rem 0 0!important;
+  flex:0 0 auto!important;
+}
+#vm-study-bar .vm-btn{
+  width:74px!important;
+  min-width:74px!important;
+  max-width:74px!important;
+  height:32px!important;
+  min-height:32px!important;
+  padding:0!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:.25rem!important;
+  text-align:center!important;
+  border-radius:4px!important;
+  line-height:1!important;
+}
+#vm-study-bar .vm-completed-wrap{
+  order:6!important;
+  height:var(--vm-study-bar-h)!important;
+  min-height:var(--vm-study-bar-h)!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  padding:0 0 0 1.2rem!important;
+  margin:0!important;
+  border-left:1px solid rgba(200,150,12,.25)!important;
+  flex:0 0 auto!important;
+}
+body{
+  padding-top:var(--vm-study-bar-h)!important;
+  margin-top:0!important;
+}
+#top-nav,.tabs-wrap,.tab-bar,.nav-tabs{
+  top:var(--vm-study-bar-h)!important;
+  margin-top:0!important;
+}
+.hero,.page-wrap,.container,.wrap,main,.wrapper{
+  scroll-margin-top:calc(var(--vm-study-bar-h) + 76px)!important;
+}
+
+@media(max-width:699px){
+  :root{--vm-study-bar-h:88px;}
+  #vm-study-bar{
+    height:var(--vm-study-bar-h)!important;
+    min-height:var(--vm-study-bar-h)!important;
+    padding:0!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    overflow:hidden!important;
+  }
+  #vm-study-bar .vm-row1,
+  #vm-study-bar .vm-row2{
+    display:flex!important;
+    width:100%!important;
+  }
+  #vm-study-bar .vm-row1{
+    height:42px!important;
+    min-height:42px!important;
+    align-items:center!important;
+    border-bottom:1px solid rgba(200,150,12,.22)!important;
+  }
+  #vm-study-bar .vm-row2{
+    height:46px!important;
+    min-height:46px!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:.35rem!important;
+    padding:0 .45rem!important;
+  }
+  #vm-study-bar .vm-back{
+    height:42px!important;
+    min-height:42px!important;
+    padding:0 .65rem!important;
+  }
+  #vm-study-bar .vm-info{
+    padding:0 .55rem!important;
+    font-size:.64rem!important;
+  }
+  #vm-study-bar .vm-completed-wrap{
+    order:3!important;
+    height:42px!important;
+    min-height:42px!important;
+    padding:0 .55rem!important;
+    border-left:1px solid rgba(200,150,12,.22)!important;
+  }
+  #vm-study-bar .vm-timer-block{
+    order:1!important;
+    height:46px!important;
+    min-height:46px!important;
+    margin:0!important;
+    gap:.25rem!important;
+  }
+  #vm-study-bar .vm-timer{
+    font-size:.92rem!important;
+    min-width:74px!important;
+    letter-spacing:.6px!important;
+  }
+  #vm-study-bar .vm-pause-timer{display:none!important;}
+  #vm-study-bar .vm-status{display:none!important;}
+  #vm-study-bar .vm-btns{
+    order:2!important;
+    gap:.35rem!important;
+    margin:0!important;
+  }
+  #vm-study-bar .vm-btn{
+    width:66px!important;
+    min-width:66px!important;
+    max-width:66px!important;
+    height:31px!important;
+    min-height:31px!important;
+    font-size:.58rem!important;
+  }
+}
+
+@media(max-width:380px){
+  #vm-study-bar .vm-btn{width:60px!important;min-width:60px!important;max-width:60px!important;font-size:.54rem!important;}
+  #vm-study-bar .vm-timer{font-size:.82rem!important;min-width:66px!important;}
+  #vm-study-bar .vm-info{font-size:.58rem!important;}
+}
+</style>
+
+<div id="vm-study-bar"
+  data-article-id="L9099-ART-60"
+  data-subject="Lei 9.099/95"
+  data-subject-id="L9099"
+  data-article-num="60">
+  <div class="vm-row1">
+    <a class="vm-back" href="index.html">&#8592; Início</a>
+    <div class="vm-info"><strong>Lei 9.099/95</strong> &middot; Art.&nbsp;60</div>
+    <div class="vm-completed-wrap">
+      <label>
+        <input type="checkbox" id="vm-check" onchange="vmToggleCompleted()">
+        <span id="vm-check-label">Concluído</span>
+      </label>
+    </div>
+  </div>
+  <div class="vm-row2">
+    <div class="vm-timer-block">
+      <div class="vm-timer" id="vm-timer">00:00:00</div>
+      <div class="vm-pause-timer" id="vm-pause-timer"></div>
+    </div>
+    <div class="vm-status vm-status-idle" id="vm-status">Parado</div>
+    <div class="vm-spacer"></div>
+    <div class="vm-btns">
+      <button class="vm-btn" id="vm-btn-start" onclick="vmStartResume()">&#9654; Iniciar</button>
+      <button class="vm-btn" id="vm-btn-pause" onclick="vmPause()"       disabled>&#9646;&#9646; Pausa</button>
+      <button class="vm-btn" id="vm-btn-end"   onclick="vmEnd()"         disabled>&#10003; Fim</button>
+    </div>
+  </div>
+</div>
+
+<script src="study-tracker.js"></script>
+<script>
+(function(){
+  var ARTICLE_ID='L9099-ART-60',SUBJECT='Lei 9.099/95',SUBJECT_ID='L9099',ARTICLE_NUM=60;
+  var state='idle',timerIv=null,pauseIv=null,sessTs=0,pauseTs=0,accStudy=0,accPause=0;
+  function $(id){return document.getElementById(id);}
+  var elTimer=$('vm-timer'),elPause=$('vm-pause-timer'),elStatus=$('vm-status');
+  var btnS=$('vm-btn-start'),btnP=$('vm-btn-pause'),btnE=$('vm-btn-end');
+  var chk=$('vm-check'),lbl=$('vm-check-label');
+  function pad(n){return String(Math.floor(n)).padStart(2,'0');}
+  function fmtMs(ms){var s=Math.floor(ms/1000),h=Math.floor(s/3600);return pad(h)+':'+pad((s%3600)/60)+':'+pad(s%60);}
+  function fmtShort(ms){var m=Math.round(ms/60000);return pad(Math.floor(m/60))+':'+pad(m%60);}
+  function setStatus(t,c){elStatus.textContent=t;elStatus.className='vm-status '+c;}
+  function startStudyIv(){clearInterval(timerIv);timerIv=setInterval(function(){elTimer.textContent=fmtMs(accStudy+(Date.now()-sessTs));},500);}
+  function stopStudyIv(){clearInterval(timerIv);}
+  function startPauseIv(){clearInterval(pauseIv);pauseIv=setInterval(function(){elPause.textContent='\u23F8 '+fmtShort(Date.now()-pauseTs);},500);}
+  function stopPauseIv(){clearInterval(pauseIv);elPause.textContent='';}
+  window.vmStartResume=function(){
+    if(state==='idle'){
+      VMTracker.startSession(ARTICLE_ID,SUBJECT,SUBJECT_ID,ARTICLE_NUM);
+      sessTs=Date.now();accStudy=0;accPause=0;state='reading';
+      setStatus('Estudando','vm-status-reading');
+      btnS.disabled=true;btnP.disabled=false;btnE.disabled=false;
+      startStudyIv();
+    }else if(state==='paused'){
+      VMTracker.resumeSession();accPause+=Date.now()-pauseTs;sessTs=Date.now();state='reading';
+      setStatus('Estudando','vm-status-reading');
+      btnS.disabled=true;btnP.disabled=false;btnE.disabled=false;
+      stopPauseIv();startStudyIv();
+    }
+  };
+  window.vmPause=function(){
+    if(state!=='reading')return;
+    VMTracker.pauseSession();accStudy+=Date.now()-sessTs;pauseTs=Date.now();stopStudyIv();
+    state='paused';setStatus('Pausado','vm-status-paused');
+    btnS.textContent='\u25BA Retomar';btnS.disabled=false;btnP.disabled=true;btnE.disabled=false;
+    startPauseIv();
+  };
+  window.vmEnd=function(){
+    if(state!=='reading'&&state!=='paused')return;
+    if(state==='reading')accStudy+=Date.now()-sessTs;
+    VMTracker.endSession();stopStudyIv();stopPauseIv();state='done';
+    elTimer.textContent=fmtMs(accStudy);setStatus('Conclu\u00EDdo \u2713','vm-status-done');
+    btnS.textContent='\u21BA Nova';btnS.disabled=false;
+    btnS.onclick=function(){
+      state='idle';accStudy=0;accPause=0;elTimer.textContent='00:00:00';
+      setStatus('Parado','vm-status-idle');
+      btnS.textContent='\u25BA Iniciar';btnS.onclick=window.vmStartResume;
+      btnP.disabled=true;btnE.disabled=true;
+    };
+    btnP.disabled=true;btnE.disabled=true;
+  };
+  window.vmToggleCompleted=function(){
+    if(chk.checked){VMTracker.markArticleCompleted(ARTICLE_ID,SUBJECT,SUBJECT_ID,ARTICLE_NUM);lbl.textContent='\u2713 Feito!';lbl.style.color='#2ecc71';}
+    else{VMTracker.unmarkArticleCompleted(ARTICLE_ID);lbl.textContent='Conclu\u00EDdo';lbl.style.color='';}
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    if(VMTracker.isArticleCompleted(ARTICLE_ID)){chk.checked=true;lbl.textContent='\u2713 Feito!';lbl.style.color='#2ecc71';}
+    var active=VMTracker.getActiveSession();
+    if(active&&active.articleFile===ARTICLE_ID){
+      if(active.state==='reading'){
+        sessTs=active.startTs;accStudy=0;state='reading';setStatus('Estudando','vm-status-reading');
+        btnS.disabled=true;btnP.disabled=false;btnE.disabled=false;startStudyIv();
+      }else if(active.state==='paused'){
+        var lp=active.pauses[active.pauses.length-1];pauseTs=lp?lp.pauseStartTs:Date.now();
+        accStudy=active.pauseTotalMs||0;state='paused';setStatus('Pausado','vm-status-paused');
+        btnS.textContent='\u25BA Retomar';btnS.disabled=false;btnP.disabled=true;btnE.disabled=false;startPauseIv();
+      }
+    }
+  });
+})();
+</script>
+<!-- VM-STUDY-BAR-END -->
+
+<style id="vm-no-gap-fixed-menus-final">
+/* CORREÇÃO DEFINITIVA: remove faixa branca e fixa menu abaixo do cronômetro */
+html, body{
+  margin-top:0!important;
+  padding-top:0!important;
+  scroll-padding-top:calc(var(--vm-study-bar-h,46px) + 58px)!important;
+}
+#vm-study-bar{
+  position:fixed!important;
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  width:100%!important;
+  z-index:2147483647!important;
+}
+#top-nav,.tabs-wrap,.tab-bar,.nav-tabs{
+  position:sticky!important;
+  top:var(--vm-study-bar-h,46px)!important;
+  margin-top:var(--vm-study-bar-h,46px)!important;
+  z-index:2147483600!important;
+}
+#top-nav{
+  width:100%!important;
+}
+#hero,.hero,main,.page-wrap,.container,.wrap,.wrapper,.section,.prova-section{
+  scroll-margin-top:calc(var(--vm-study-bar-h,46px) + 76px)!important;
+}
+@media(max-width:699px){
+  html, body{
+    scroll-padding-top:calc(var(--vm-study-bar-h,88px) + 58px)!important;
+  }
+  #top-nav,.tabs-wrap,.tab-bar,.nav-tabs{
+    top:var(--vm-study-bar-h,88px)!important;
+    margin-top:var(--vm-study-bar-h,88px)!important;
+  }
+}
+</style>
+<style id="nav-wrap-fix">
+/* Menu de atalhos: quebra em linhas (sem corte lateral) e margem de rolagem para menu + barra */
+@media(min-width:700px){
+  #top-nav{overflow:visible!important;flex-wrap:nowrap!important;align-items:center!important;}
+  #top-nav .nav-brand{padding:0.55rem 1rem 0.55rem 0!important;flex:0 0 auto;}
+  #top-nav .nav-main-links{display:flex;flex-wrap:wrap;align-items:center;flex:1 1 0;min-width:0;}
+  #top-nav a{padding:0.55rem 0.6rem!important;font-size:0.68rem!important;letter-spacing:0.4px!important;}
+}
+.section,.prova-section{scroll-margin-top:calc(var(--vm-study-bar-h,46px) + 112px)!important;}
+@media(max-width:699px){.section,.prova-section{scroll-margin-top:calc(var(--vm-study-bar-h,88px) + 72px)!important;}}
+</style>
+
+<nav id="top-nav" aria-label="Atalhos do artigo">
+  <div class="nav-brand">Art. 60 · Lei 9.099/95</div>
+  <div class="nav-main-links">
+    <a href="#panorama">Panorama</a>
+    <a href="#texto-legal">Texto Legal</a>
+    <a href="#criterios">Critérios</a>
+    <a href="#funcoes">Funções</a>
+    <a href="#territorio">Território</a>
+    <a href="#conexao">Conexão</a>
+    <a href="#paragrafo-unico">Par. Único</a>
+    <a href="#remessa">Remessa</a>
+    <a href="#concurso">Concurso</a>
+    <a href="#exclusoes">Exclusões</a>
+    <a href="#recursos">Recursos</a>
+    <a href="#fluxograma">Fluxograma</a>
+    <a href="#atendimento">Atendimento</a>
+    <a href="#jurisprudencia">STF/STJ</a>
+    <a href="#doutrina">Doutrina</a>
+    <a href="#recorrentes" class="nav-prova">Recorrentes</a>
+    <a href="#fontes">Fontes</a>
+  </div>
+</nav>
+
+<header id="hero">
+  <div class="badge">Lei nº 9.099/1995 · Capítulo III — Dos Juizados Especiais Criminais · Disposições Gerais · Conferência normativa em 11/11/2026</div>
+  <h1>Art. 60 — <span>Competência dos Juizados Especiais Criminais</span></h1>
+  <p class="subtitle">Conciliação, julgamento e execução · Conexão e continência · Reunião de processos no juízo comum e no júri · Transação penal e composição dos danos civis · Remessa, exclusões e recursos</p>
+  <div class="law-box">
+    <strong>Art. 60 da Lei nº 9.099, de 26 de setembro de 1995 (redação da Lei nº 11.313/2006)</strong>
+    “O Juizado Especial Criminal, provido por juízes togados ou togados e leigos, tem competência para a conciliação, o julgamento e a execução das infrações penais de menor potencial ofensivo, respeitadas as regras de conexão e continência.”<br><br>
+    <strong>Parágrafo único</strong>
+    “Na reunião de processos, perante o juízo comum ou o tribunal do júri, decorrentes da aplicação das regras de conexão e continência, observar-se-ão os institutos da transação penal e da composição dos danos civis.”
+  </div>
+</header>
+
+<div class="page-wrap">
+
+<!-- ============ 01 ============ -->
+<section class="section" id="panorama">
+  <div class="section-header"><div class="section-num">01</div><div class="section-title"><span>Introdução e Estrutura</span>Panorama do Art. 60</div></div>
+
+  <div class="card-grid card-grid-3">
+    <div class="card type-card tc-blue">
+      <h3>Função do dispositivo</h3>
+      <p>O art. 60 é a norma de <strong>competência</strong> do sistema criminal da Lei 9.099. Atribui ao Juizado Especial Criminal três funções sobre as infrações de menor potencial ofensivo (definidas no art. 61): <strong>conciliar, julgar e executar</strong>. O mesmo artigo ressalva as regras de conexão e continência e, no parágrafo único, garante que a transação penal e a composição dos danos civis sejam observadas mesmo quando o processo for reunido no juízo comum ou no tribunal do júri.</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>Dois comandos distintos</h3>
+      <p><strong>Caput:</strong> define quem tem competência (o Juizado), sobre o quê (infrações de menor potencial ofensivo) e o que ele faz (conciliação, julgamento e execução), com a ressalva de conexão e continência.</p>
+      <p><strong>Parágrafo único:</strong> define o que sobrevive à reunião de processos: os institutos despenalizadores da transação e da composição civil.</p>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>Por que importa na audiência</h3>
+      <p>Antes de qualquer proposta, é preciso saber <strong>qual juízo</strong> está conduzindo o ato e <strong>se o caso pode sair do Juizado</strong>: por conexão com crime comum ou doloso contra a vida, por complexidade, por réu não encontrado ou por desclassificação. Cada deslocamento muda o rito, o juiz, o momento da transação e o recurso cabível.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Evolução do texto</h3>
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Marco</th><th>Redação / efeito</th><th>Consequência prática</th></tr></thead>
+    <tbody>
+      <tr class="hl4"><td>Lei 9.099/1995 (redação original do art. 60)</td><td>“O Juizado Especial Criminal, provido por Juízes togados ou togados e leigos, tem competência para a conciliação, o julgamento e a execução das infrações penais de menor potencial ofensivo.” Sem ressalva expressa de conexão e continência e sem parágrafo único.</td><td>A relação com crimes de competência do juízo comum ou do júri ficava para a interpretação e gerou controvérsia sobre a natureza da competência.</td></tr>
+      <tr class="hl2"><td>Lei 11.313, de 28/6/2006 (DOU de 29/6/2006)</td><td>Deu nova redação ao art. 60 (“respeitadas as regras de conexão e continência”) e incluiu o parágrafo único (“observar-se-ão os institutos da transação penal e da composição dos danos civis”). A mesma lei alterou o art. 61 (limite de 2 anos) e o art. 2º da Lei 10.259/2001, para os Juizados Federais.</td><td>Passou a prever expressamente a reunião de processos e a preservação dos institutos despenalizadores. Unificou o tratamento nos Juizados estaduais e federais.</td></tr>
+      <tr class="hl3"><td>STF, ADI 5264 (4/12/2020)</td><td>O Plenário julgou improcedente, por unanimidade, a ação da PGR contra os arts. 1º e 2º da Lei 11.313/2006 e declarou constitucional o deslocamento ao juízo comum ou ao júri.</td><td>Consolidou a leitura de competência <strong>relativa</strong> do Juizado para fins de conexão e continência.</td></tr>
+      <tr class="hl5"><td>Leis posteriores</td><td>Nenhuma lei posterior alterou o art. 60 (o texto compilado do Planalto registra como única alteração a da Lei 11.313/2006). Alterações recentes do CPP e de leis especiais afetam o <strong>entorno</strong> da competência (ex.: art. 78, I, do CPP, pela Lei 15.358/2026; Lei 15.163/2025, que exclui a Lei 9.099 dos crimes contra a pessoa idosa).</td><td>O texto do art. 60 é estável. As mudanças relevantes estão nas regras vizinhas (seções 06 e 10).</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="source-note">Fontes: Planalto — Lei 9.099/1995 (texto compilado, que registra a redação original e a da Lei 11.313/2006) e Lei 11.313/2006, lidas em 11/11/2026; STF, notícia oficial de 11/12/2020 sobre a ADI 5264.</div>
+
+  <div class="alert alert-gold mt2"><span class="alert-tag">Resumo</span><div>Art. 60 = Juizado Especial Criminal <strong>concilia, julga e executa</strong> as infrações do art. 61, <strong>ressalvadas</strong> a conexão e a continência. Se o processo for reunido no juízo comum ou no júri, a <strong>transação penal e a composição dos danos civis</strong> continuam obrigatórias quanto à infração de menor potencial ofensivo.</div></div>
+
+  <div class="alert alert-navy mt2"><span class="alert-tag">Legenda</span><div>Cada informação relevante traz o grau de verificação: <span class="vb vb-of" style="margin-left:0">Oficial</span> texto lido diretamente em fonte oficial (Planalto, STJ, STF) na conferência de 11/11/2026; <span class="vb vb-sec" style="margin-left:0">Secundária</span> confirmado em fonte não oficial, conferir antes de citar em peça; <span class="vb vb-pr" style="margin-left:0">Prática</span> orientação de atuação, não é fonte normativa. A seção 17 detalha o que foi e o que não foi possível verificar.</div></div>
+</section>
+
+<!-- ============ 02 ============ -->
+<section class="section" id="texto-legal">
+  <div class="section-header"><div class="section-num">02</div><div class="section-title"><span>Anatomia do Dispositivo</span>Texto Legal Decomposto</div></div>
+
+  <div class="anat-visual">
+    <div class="av-col av-navy"><h4>“provido por juízes togados ou togados e leigos”</h4><p><strong>Composição</strong></p><ul><li>Dialoga com o art. 98, I, da CF.</li><li>O juiz leigo é auxiliar da Justiça (art. 7º); a conciliação pode ser conduzida por conciliador (art. 73).</li></ul></div>
+    <div class="av-sep">→</div>
+    <div class="av-col av-blue"><h4>“conciliação, julgamento e execução”</h4><p><strong>Três funções</strong></p><ul><li>Fase preliminar (arts. 69 a 76).</li><li>Rito sumaríssimo (arts. 77 a 83).</li><li>Execução (arts. 84 a 86).</li></ul></div>
+    <div class="av-sep">→</div>
+    <div class="av-col av-gold"><h4>“infrações penais de menor potencial ofensivo”</h4><p><strong>Matéria definida no art. 61</strong></p><ul><li>Contravenções e crimes com pena máxima de até 2 anos.</li></ul></div>
+    <div class="av-sep">+</div>
+    <div class="av-col av-red"><h4>“respeitadas as regras de conexão e continência”</h4><p><strong>Ressalva</strong></p><ul><li>CPP, arts. 76 a 82.</li><li>Reunião no juízo comum ou no júri, com preservação da transação e da composição (parágrafo único).</li></ul></div>
+  </div>
+
+  <h3 class="sub-title">Textos correlatos (transcrição literal) <span class="vb vb-of" style="margin-left:0.5rem">Oficial</span></h3>
+  <div class="card-grid card-grid-2">
+    <div>
+      <div class="law-quote"><strong>Art. 60 — redação vigente (Lei 11.313/2006)</strong>“O Juizado Especial Criminal, provido por juízes togados ou togados e leigos, tem competência para a conciliação, o julgamento e a execução das infrações penais de menor potencial ofensivo, respeitadas as regras de conexão e continência.<br><em>Parágrafo único.</em> Na reunião de processos, perante o juízo comum ou o tribunal do júri, decorrentes da aplicação das regras de conexão e continência, observar-se-ão os institutos da transação penal e da composição dos danos civis.”</div>
+      <div class="law-quote"><strong>Art. 60 — redação original de 1995 (superada)</strong>“O Juizado Especial Criminal, provido por Juízes togados ou togados e leigos, tem competência para a conciliação, o julgamento e a execução das infrações penais de menor potencial ofensivo.”</div>
+      <div class="law-quote"><strong>Lei 11.313/2006 — ementa</strong>“Altera os arts. 60 e 61 da Lei nº 9.099, de 26 de setembro de 1995, e o art. 2º da Lei nº 10.259, de 12 de julho de 2001, pertinentes à competência dos Juizados Especiais Criminais, no âmbito da Justiça Estadual e da Justiça Federal.”</div>
+      <div class="law-quote"><strong>Art. 63</strong>“A competência do Juizado será determinada pelo lugar em que foi praticada a infração penal.”</div>
+      <div class="law-quote"><strong>Art. 66, parágrafo único</strong>“Não encontrado o acusado para ser citado, o Juiz encaminhará as peças existentes ao Juízo comum para adoção do procedimento previsto em lei.”</div>
+      <div class="law-quote"><strong>Art. 77, §§ 2º e 3º</strong>“§ 2º Se a complexidade ou circunstâncias do caso não permitirem a formulação da denúncia, o Ministério Público poderá requerer ao Juiz o encaminhamento das peças existentes, na forma do parágrafo único do art. 66 desta Lei. § 3º Na ação penal de iniciativa do ofendido poderá ser oferecida queixa oral, cabendo ao Juiz verificar se a complexidade e as circunstâncias do caso determinam a adoção das providências previstas no parágrafo único do art. 66 desta Lei.”</div>
+    </div>
+    <div>
+      <div class="law-quote"><strong>Lei 10.259/2001, art. 2º (Juizados Federais; redação da Lei 11.313/2006)</strong>“Compete ao Juizado Especial Federal Criminal processar e julgar os feitos de competência da Justiça Federal relativos às infrações de menor potencial ofensivo, respeitadas as regras de conexão e continência.<br><em>Parágrafo único.</em> Na reunião de processos, perante o juízo comum ou o tribunal do júri, decorrente da aplicação das regras de conexão e continência, observar-se-ão os institutos da transação penal e da composição dos danos civis.”</div>
+      <div class="law-quote"><strong>Lei 10.259/2001, arts. 1º e 20</strong>“Art. 1º São instituídos os Juizados Especiais Cíveis e Criminais da Justiça Federal, aos quais se aplica, no que não conflitar com esta Lei, o disposto na Lei nº 9.099, de 26 de setembro de 1995.” “Art. 20. Onde não houver Vara Federal, a causa poderá ser proposta no Juizado Especial Federal mais próximo do foro definido no art. 4º da Lei nº 9.099, de 26 de setembro de 1995, vedada a aplicação desta Lei no juízo estadual.”</div>
+      <div class="law-quote"><strong>Arts. 93 e 95 (Lei 9.099)</strong>“Art. 93. Lei Estadual disporá sobre o Sistema de Juizados Especiais Cíveis e Criminais, sua organização, composição e competência.” “Art. 95. Os Estados, Distrito Federal e Territórios criarão e instalarão os Juizados Especiais no prazo de seis meses, a contar da vigência desta Lei. Parágrafo único. No prazo de 6 (seis) meses, contado da publicação desta Lei, serão criados e instalados os Juizados Especiais Itinerantes, que deverão dirimir, prioritariamente, os conflitos existentes nas áreas rurais ou nos locais de menor concentração populacional.”</div>
+      <div class="law-quote"><strong>Constituição Federal, art. 98, I e § 1º</strong>“I - juizados especiais, providos por juízes togados, ou togados e leigos, competentes para a conciliação, o julgamento e a execução de causas cíveis de menor complexidade e infrações penais de menor potencial ofensivo, mediante os procedimentos oral e sumariíssimo, permitidos, nas hipóteses previstas em lei, a transação e o julgamento de recursos por turmas de juízes de primeiro grau;” “§ 1º Lei federal disporá sobre a criação de juizados especiais no âmbito da Justiça Federal.”</div>
+      <div class="law-quote"><strong>CPP, art. 394, § 1º, III</strong>“sumaríssimo, para as infrações penais de menor potencial ofensivo, na forma da lei.”</div>
+    </div>
+  </div>
+  <div class="source-note">Fontes: Planalto — Lei 9.099/1995 (texto compilado), Lei 11.313/2006, Lei 10.259/2001, CF/1988 e CPP, lidos em 11/11/2026.</div>
+</section>
+
+<!-- ============ 03 ============ -->
+<section class="section" id="criterios">
+  <div class="section-header"><div class="section-num">03</div><div class="section-title"><span>Mapa da Competência</span>Critérios que Definem Quem Julga</div></div>
+
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Critério</th><th>Regra</th><th>Fundamento</th><th>Verificação</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Em razão da infração</td><td>Contravenções e crimes com pena máxima de até 2 anos, cumulada ou não com multa.</td><td>Lei 9.099, art. 61; CF, art. 98, I.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl2"><td>Funcional</td><td>Conciliação, julgamento e execução. Recursos: turma de três juízes de primeiro grau, na sede do Juizado.</td><td>Art. 60, caput; art. 82.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Territorial</td><td>Lugar em que foi praticada a infração penal.</td><td>Art. 63. No CPP comum, a competência é, de regra, o lugar da consumação (art. 70).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Organização judiciária</td><td>Cada Estado disciplina por lei o sistema de Juizados, sua organização, composição e competência; os Juizados Federais dependem de lei federal.</td><td>Art. 93; CF, art. 98, § 1º; Lei 10.259.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl"><td>Modificação por conexão ou continência</td><td>A infração de menor potencial ofensivo pode ser julgada no juízo comum ou no tribunal do júri, com preservação da transação e da composição civil.</td><td>Art. 60, caput e parágrafo único; CPP, arts. 76 a 82; STF, ADI 5264.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl4"><td>Modificação por complexidade</td><td>O MP pode requerer a remessa das peças ao juízo comum quando a complexidade ou as circunstâncias do caso não permitirem a denúncia oral.</td><td>Art. 77, §§ 2º e 3º.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl4"><td>Modificação por réu não encontrado</td><td>O juiz encaminha as peças ao juízo comum.</td><td>Art. 66, parágrafo único.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl5"><td>Exclusões legais</td><td>Violência doméstica contra a mulher, crimes do Estatuto da Pessoa Idosa e contra a pessoa idosa com violência, ECA art. 230, Justiça Militar.</td><td>Lei 11.340, art. 41; Lei 10.741, art. 94, p. único; ECA, art. 230, § 2º; Lei 9.099, art. 90-A.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="alert alert-gold mt2"><span class="alert-tag">Natureza</span><div>O STF julgou, na ADI 5264, que o Juizado Especial Criminal tem competência <strong>relativa</strong> para o julgamento das infrações de menor potencial ofensivo: a Constituição garante o procedimento célere e os institutos despenalizadores, mas não a exclusividade do órgão. A PGR sustentava competência material absoluta; a tese foi rejeitada por unanimidade. Ver seção 06.</div></div>
+</section>
+
+<!-- ============ 04 ============ -->
+<section class="section" id="funcoes">
+  <div class="section-header"><div class="section-num">04</div><div class="section-title"><span>Caput do Art. 60</span>Conciliação, Julgamento e Execução</div></div>
+
+  <div class="card-grid card-grid-3">
+    <div class="card type-card tc-green">
+      <h3>1. Conciliação</h3>
+      <ul>
+        <li><strong>Fase preliminar:</strong> termo circunstanciado (art. 69), audiência preliminar (arts. 70 a 72), composição dos danos civis (art. 74), representação (art. 75) e transação penal (art. 76).</li>
+        <li><strong>Quem conduz:</strong> o juiz ou conciliador sob sua orientação, recrutado preferencialmente entre bacharéis em Direito, excluídos os que exerçam funções na administração da Justiça Criminal (art. 73).</li>
+        <li><strong>FONAJE:</strong> o conciliador ou o juiz leigo pode presidir a audiência preliminar e encaminhar a proposta de transação (Enunciados 70 e 71); não estão incompatibilizados nem impedidos de exercer a advocacia, exceto perante o próprio Juizado em que atuem ou se pertencerem aos quadros do Judiciário (Enunciado 31).</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-blue">
+      <h3>2. Julgamento</h3>
+      <ul>
+        <li><strong>Rito sumaríssimo:</strong> denúncia oral, citação e ciência na audiência, instrução e julgamento (arts. 77 a 81), com sentença dispensado o relatório (art. 81, § 3º).</li>
+        <li><strong>Recursos:</strong> apelação a turma de três juízes de primeiro grau, em exercício, reunida na sede do Juizado (art. 82); embargos de declaração (art. 83).</li>
+        <li><strong>Juiz leigo:</strong> o art. 7º define juízes leigos como auxiliares da Justiça, recrutados entre advogados com mais de cinco anos de experiência, impedidos de advogar perante os Juizados enquanto no exercício. O art. 40, que trata da decisão do juiz leigo submetida ao juiz togado, está no capítulo dos Juizados Cíveis.</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-purple">
+      <h3>3. Execução</h3>
+      <ul>
+        <li><strong>Multa exclusiva:</strong> paga na Secretaria do Juizado; efetuado o pagamento, extingue-se a punibilidade (art. 84). Não paga, converte-se nos termos previstos em lei (art. 85).</li>
+        <li><strong>Privativa de liberdade, restritivas e multa cumulada:</strong> a execução é processada perante o órgão competente, nos termos da lei (art. 86).</li>
+        <li><strong>FONAJE:</strong> o JECrim é competente para a execução das penas ou medidas da transação, salvo quando houver central ou vara de penas e medidas alternativas com competência específica (Enunciado 87); a execução administrativa da multa pode ser feita de ofício pela Secretaria (Enunciado 103).</li>
+        <li><strong>Deprecação:</strong> é possível a adequação da proposta ou das condições no juízo deprecado ou no juízo da execução (Enunciado 92).</li>
+      </ul>
+    </div>
+  </div>
+  <div class="source-note">Dispositivos legais conferidos no Planalto. Enunciados do FONAJE: compilação de terceiros atualizada até 06/02/2024 (49º Encontro); ver seção 17.</div>
+</section>
+
+<!-- ============ 05 ============ -->
+<section class="section" id="territorio">
+  <div class="section-header"><div class="section-num">05</div><div class="section-title"><span>Competência Territorial</span>Foro, Organização Judiciária e Atos Fora da Sede</div></div>
+
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Tema</th><th>Regra</th><th>Fundamento</th><th>Verificação</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Foro do Juizado</td><td>“A competência do Juizado será determinada pelo lugar em que foi praticada a infração penal.”</td><td>Art. 63.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl2"><td>Regra geral do CPP</td><td>A competência é, de regra, determinada pelo lugar em que se consumar a infração; na tentativa, pelo lugar do último ato de execução. Incerto o limite territorial, firma-se pela prevenção.</td><td>CPP, art. 70, caput e § 3º.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Flexibilização do lugar da consumação</td><td>O STJ registra que a regra do art. 70 do CPP pode ser modificada quando outro local seja melhor para a formação da verdade real.</td><td>STJ, JT 72, tese 6 (CC 131566/DF; RHC 53020/RS; CC 138537/SP, entre outros).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Organização do sistema</td><td>Lei estadual disporá sobre o Sistema de Juizados Especiais Cíveis e Criminais, sua organização, composição e competência. Os conflitos de competência e a competência recursal estão na seção 11.</td><td>Art. 93; CF, art. 125, § 1º.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl"><td>Serviços e audiências fora da sede</td><td>Os serviços de cartório podem ser prestados e as audiências realizadas fora da sede da Comarca, em bairros ou cidades a ela pertencentes, em prédios públicos, com audiências previamente anunciadas. Juizados Itinerantes dirimem, prioritariamente, conflitos em áreas rurais ou de menor concentração populacional.</td><td>Art. 94; art. 95, parágrafo único.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl4"><td>Carta precatória</td><td>O FONAJE admite o encaminhamento de proposta de transação por precatória (Enunciado 13), o interrogatório por precatória, quando necessário (17), e a citação, a defesa preliminar e a proposta de suspensão do processo no juízo deprecado, com cumprimento da suspensão no juízo deprecado (93). O juízo deprecado pode reduzir a medida do art. 76, § 1º (91) e adequar a proposta ou as condições (92).</td><td>FONAJE, Enunciados 13, 17, 91, 92 e 93.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl4"><td>Ato fora da comarca</td><td>A prática de atos processuais em outras comarcas poderá ser solicitada por qualquer meio hábil de comunicação.</td><td>Art. 65, § 2º.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="alert alert-navy mt2"><span class="alert-tag">Atenção</span><div>A competência territorial do Juizado é do <strong>lugar da infração</strong> (art. 63), e não do domicílio do autor do fato, como ocorre no Juizado Cível. Ao receber a intimação, verificar o local de ocorrência e, se for outro, avaliar a precatória para proposta de transação ou de suspensão (FONAJE, 13 e 93).</div></div>
+</section>
+
+<!-- ============ 06 ============ -->
+<section class="section" id="conexao">
+  <div class="section-header"><div class="section-num">06</div><div class="section-title"><span>Ressalva do Caput</span>Conexão e Continência</div></div>
+
+  <div class="card-grid card-grid-2">
+    <div>
+      <div class="law-quote"><strong>CPP, art. 76 — conexão <span class="vb vb-of" style="margin-left:0.4rem">Oficial</span></strong>“A competência será determinada pela conexão: I - se, ocorrendo duas ou mais infrações, houverem sido praticadas, ao mesmo tempo, por várias pessoas reunidas, ou por várias pessoas em concurso, embora diverso o tempo e o lugar, ou por várias pessoas, umas contra as outras; II - se, no mesmo caso, houverem sido umas praticadas para facilitar ou ocultar as outras, ou para conseguir impunidade ou vantagem em relação a qualquer delas; III - quando a prova de uma infração ou de qualquer de suas circunstâncias elementares influir na prova de outra infração.”</div>
+      <div class="law-quote"><strong>CPP, art. 77 — continência <span class="vb vb-of" style="margin-left:0.4rem">Oficial</span></strong>“A competência será determinada pela continência quando: I - duas ou mais pessoas forem acusadas pela mesma infração; II - no caso de infração cometida nas condições previstas nos arts. 51, § 1º, 53, segunda parte, e 54 do Código Penal.”</div>
+      <div class="law-quote"><strong>CPP, art. 78 — regras de prevalência (redação vigente) <span class="vb vb-of" style="margin-left:0.4rem">Oficial</span></strong>“I - no concurso entre a competência do júri e a de outro órgão da jurisdição comum, prevalecerá a competência do júri, salvo os casos de homicídios cometidos por membros de organizações criminosas ultraviolentas, grupo paramilitar ou milícia privada, ou sua tentativa, na forma do art. 2º da lei que institui o marco legal do combate ao crime organizado no Brasil; (Redação dada pela Lei nº 15.358, de 2026) II - no concurso de jurisdições da mesma categoria: a) preponderará a do lugar da infração, à qual for cominada a pena mais grave; b) prevalecerá a do lugar em que houver ocorrido o maior número de infrações, se as respectivas penas forem de igual gravidade; c) firmar-se-á a competência pela prevenção, nos outros casos; III - no concurso de jurisdições de diversas categorias, predominará a de maior graduação; IV - no concurso entre a jurisdição comum e a especial, prevalecerá esta.”</div>
+    </div>
+    <div>
+      <div class="law-quote"><strong>CPP, arts. 79 a 82 — unidade, separação e avocação <span class="vb vb-of" style="margin-left:0.4rem">Oficial</span></strong>“Art. 79. A conexão e a continência importarão unidade de processo e julgamento, salvo: I - no concurso entre a jurisdição comum e a militar; II - no concurso entre a jurisdição comum e a do juízo de menores.” “Art. 80. Será facultativa a separação dos processos quando as infrações tiverem sido praticadas em circunstâncias de tempo ou de lugar diferentes, ou, quando pelo excessivo número de acusados e para não lhes prolongar a prisão provisória, ou por outro motivo relevante, o juiz reputar conveniente a separação.” “Art. 81. Verificada a reunião dos processos por conexão ou continência, ainda que no processo da sua competência própria venha o juiz ou tribunal a proferir sentença absolutória ou que desclassifique a infração para outra que não se inclua na sua competência, continuará competente em relação aos demais processos.” “Art. 82. Se, não obstante a conexão ou continência, forem instaurados processos diferentes, a autoridade de jurisdição prevalente deverá avocar os processos que corram perante os outros juízes, salvo se já estiverem com sentença definitiva. Neste caso, a unidade dos processos só se dará, ulteriormente, para o efeito de soma ou de unificação das penas.”</div>
+      <div class="alert alert-gold mt1"><span class="alert-tag">Atenção</span><div>A nova redação do art. 78, I, do CPP (Lei 15.358/2026, marco legal do combate ao crime organizado) é objeto de debate de constitucionalidade em fontes secundárias, e há ADI noticiada. O ponto só interessa ao JECrim quando a infração de menor potencial ofensivo é conexa a homicídio atribuído a membro de organização criminosa ultraviolenta; conferir a jurisprudência vigente. <span class="vb vb-sec" style="margin-left:0.3rem">Secundária</span></div></div>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Como o art. 60 se encaixa nessas regras</h3>
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Situação</th><th>Juízo que conduz</th><th>Institutos preservados</th><th>Fundamento</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Infração de menor potencial ofensivo isolada</td><td>Juizado Especial Criminal.</td><td>Todos os institutos da Lei 9.099.</td><td>Art. 60, caput.</td></tr>
+      <tr class="hl3"><td>Infração de menor potencial ofensivo conexa a crime de competência do juízo comum</td><td>Juízo comum (vara criminal), com vis atractiva do crime de maior gravidade.</td><td>Transação penal e composição dos danos civis quanto à infração de menor potencial ofensivo.</td><td>Art. 60, parágrafo único; STF, ADI 5264. FONAJE, Enunciado 10.</td></tr>
+      <tr class="hl3"><td>Infração de menor potencial ofensivo conexa a crime doloso contra a vida</td><td>Tribunal do júri.</td><td>Transação penal e composição dos danos civis, quanto àquela infração.</td><td>Art. 60, parágrafo único; STF, ADI 5264.</td></tr>
+      <tr class="hl4"><td>Conexão com crime federal</td><td>Justiça Federal, com unificação do processo.</td><td>Depende da natureza do crime concorrente; contravenções seguem a Justiça Estadual (CF, art. 109, IV, excluídas as contravenções; Súmula 38/STJ).</td><td>STJ, Súmula 122 (JT 72, tese 8); JT 72, tese 9.</td></tr>
+      <tr class="hl5"><td>Concurso entre jurisdição comum e militar, ou com o juízo de menores</td><td>Não há unidade de processo.</td><td>—</td><td>CPP, art. 79, I e II; Lei 9.099, art. 90-A.</td></tr>
+      <tr class="hl"><td>Processos já instaurados em separado</td><td>A jurisdição prevalente avoca os processos, salvo os com sentença definitiva.</td><td>A unidade só se dá depois, para soma ou unificação de penas. A conexão não determina a reunião se um dos processos já foi julgado (Súmula 235/STJ).</td><td>CPP, art. 82; STJ, Súmula 235 (fonte secundária).</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card type-card tc-red">
+      <h3>STF, ADI 5264 — o que decidiu <span class="vb vb-of">Oficial</span></h3>
+      <ul>
+        <li><strong>Resultado:</strong> improcedente, por unanimidade, sessão virtual encerrada em 4/12/2020. Rel. Min. Cármen Lúcia. Ação da PGR contra os arts. 1º e 2º da Lei 11.313/2006 (art. 60 da Lei 9.099 e art. 2º da Lei 10.259).</li>
+        <li><strong>Tese da PGR:</strong> o art. 98, I, da CF conferiria ao Juizado “competência material absoluta”, que não poderia ser alterada por conexão ou continência.</li>
+        <li><strong>Fundamento do voto:</strong> a Constituição não determinou a exclusividade dos Juizados, mas “a observância do procedimento célere e dos institutos despenalizadores previstos na Lei 9.099/1995”. Os arts. 66, parágrafo único, e 77, § 2º, já preveem outras duas causas de deslocamento ao juízo comum, e, se a competência fosse absoluta, ofenderiam o juiz natural.</li>
+        <li><strong>Consequência:</strong> competência <strong>relativa</strong>. Se a infração for deslocada ao juízo comum ou ao júri, “não há óbice, senão determinação constitucional” à aplicação da transação e da composição civil.</li>
+        <li><strong>Soma de penas:</strong> o voto afirma que não se deve somar a pena máxima da infração de menor potencial ofensivo com a da infração conexa, de maior gravidade, para excluir a fase consensual.</li>
+      </ul>
+      <div class="source-note">Fonte: notícia oficial do STF de 11/12/2020 e voto da relatora (minuta do Plenário Virtual de 27/11/2020), em cópia publicada pelo Migalhas. O acórdão não foi lido.</div>
+    </div>
+    <div class="card">
+      <h3>FONAJE e conexão <span class="vb vb-sec">Secundária</span></h3>
+      <ul>
+        <li><strong>Enunciado 10:</strong> “Havendo conexão entre crimes da competência do Juizado Especial e do Juízo Penal Comum, prevalece a competência deste.”</li>
+        <li><strong>Enunciado 60:</strong> exceção da verdade e questões incidentais não afastam a competência dos Juizados Especiais, se a hipótese não for complexa.</li>
+        <li><strong>Enunciado 120:</strong> o concurso de infrações de menor potencial ofensivo não afasta a competência do JECrim, ainda que o somatório das penas ultrapasse dois anos (ver seção 09).</li>
+      </ul>
+      <p class="source-note">O Enunciado 10 coincide com o resultado da Lei 11.313/2006 e da ADI 5264. Não é a mesma questão do concurso entre infrações de menor potencial ofensivo entre si (seção 09).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 ============ -->
+<section class="section" id="paragrafo-unico">
+  <div class="section-header"><div class="section-num">07</div><div class="section-title"><span>Parágrafo Único</span>Transação Penal e Composição Civil na Reunião de Processos</div></div>
+
+  <div class="law-quote"><strong>Art. 60, parágrafo único <span class="vb vb-of" style="margin-left:0.4rem">Oficial</span></strong>“Na reunião de processos, perante o juízo comum ou o tribunal do júri, decorrentes da aplicação das regras de conexão e continência, observar-se-ão os institutos da transação penal e da composição dos danos civis.”</div>
+
+  <div class="tbl-scroll mt1">
+  <table class="comp-table">
+    <thead><tr><th>Ponto</th><th>Leitura</th><th>Fundamento</th><th>Verificação</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>O que a lei manda observar</td><td>Apenas os dois institutos citados: transação penal (art. 76) e composição dos danos civis (arts. 74 e 75). O dispositivo não menciona a suspensão condicional do processo (art. 89).</td><td>Art. 60, parágrafo único.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl2"><td>Natureza da regra</td><td>Garantia individual do acusado: “os institutos despenalizadores dos juizados constituem garantia individual do acusado. As garantias fundamentais é que devem ser asseguradas, independente do juízo em que tramitarem as infrações penais.”</td><td>Voto da relatora na ADI 5264.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Soma de penas</td><td>A pena máxima da infração de menor potencial não se soma à da infração conexa, mais grave, para impedir a transação ou a composição civil.</td><td>Voto da relatora na ADI 5264.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Momento</td><td>Doutrina citada no voto defende que, no caso de infração conexa ao júri, a audiência preliminar seja realizada antes de iniciar regularmente o processo, para a tentativa de composição civil e de transação; se malograr, as infrações tramitam juntas.</td><td>Nestor Távora e Rosmar Rodrigues Alencar, <em>Curso de Direito Processual Penal</em>, 7. ed., JusPodivm, 2012, p. 279 (conforme citado no voto).</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl4"><td>Unidade do juízo, não do processo</td><td>Pacelli sustenta que, na reunião, nada impede a adoção da transação penal no mesmo juízo para o processo originariamente da competência dos Juizados: “adotando-se, se for o caso, a unidade apenas do juízo e não do processo”.</td><td>Eugênio Pacelli de Oliveira, <em>Curso de Processo Penal</em>, 9. ed., Lumen Juris, 2012, pp. 563 e 571 (conforme citado no voto).</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl5"><td>Acordo de não persecução penal</td><td>O ANPP não se aplica quando for cabível transação penal de competência dos Juizados Especiais Criminais (CPP, art. 28-A, § 2º, I) e é vedado em violência doméstica contra a mulher (§ 2º, IV).</td><td>CPP, art. 28-A, § 2º.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr><td>Quem conduz a proposta no juízo comum</td><td>A lei não detalha o procedimento. O Ministério Público atua no feito e a proposta de transação segue o art. 76 (representação, não ser caso de arquivamento, requisitos do § 2º). Verificar a praxe do foro, pois a vara comum não tem a estrutura da audiência preliminar.</td><td>Art. 76; item 8 do voto da relatora, que reconhece a dificuldade procedimental.</td><td><span class="vb vb-pr" style="margin-left:0">Prática</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card type-card tc-green">
+      <h3>Se o cliente é o autor do fato conexo</h3>
+      <ul>
+        <li>Requerer, desde a primeira manifestação no juízo comum ou no júri, a <strong>oportunidade de transação e de composição civil</strong> quanto à infração de menor potencial ofensivo (art. 60, parágrafo único).</li>
+        <li>Verificar os impedimentos do art. 76, § 2º (condenação definitiva a pena privativa; benefício nos 5 anos anteriores; circunstâncias do § 2º, III).</li>
+        <li>Lembrar que a transação é <strong>pena restritiva ou multa</strong> e não gera reincidência nem efeitos civis (art. 76, §§ 4º e 6º).</li>
+        <li>Calcular o efeito sobre o processo conexo: a transação resolve só a infração de menor potencial ofensivo.</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-blue">
+      <h3>Se o cliente é a vítima</h3>
+      <ul>
+        <li>A <strong>composição dos danos civis</strong> continua cabível quanto à infração de menor potencial ofensivo, mesmo no juízo comum ou no júri.</li>
+        <li>Se a infração for de ação privada ou condicionada, o acordo homologado acarreta renúncia ao direito de queixa ou representação (art. 74, parágrafo único).</li>
+        <li>O acordo vale como título executivo no juízo civil (art. 74).</li>
+        <li>Preparar a prova do dano e a proposta de acordo antes da audiência.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 ============ -->
+<section class="section" id="remessa">
+  <div class="section-header"><div class="section-num">08</div><div class="section-title"><span>Saída do Juizado</span>Remessa ao Juízo Comum, Desclassificação e Incompetência</div></div>
+
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Hipótese</th><th>Regra</th><th>Fundamento</th><th>Verificação</th></tr></thead>
+    <tbody>
+      <tr class="hl4"><td>Acusado não encontrado</td><td>O juiz encaminha as peças ao juízo comum. Segundo o FONAJE, a remessa exaure a competência do Juizado, que não se restabelece com a localização do acusado (Enunciado 51); ainda que a certidão do oficial de justiça seja anterior à denúncia, a remessa ocorre após o oferecimento desta (64); nas hipóteses do art. 363, §§ 1º e 4º, do CPP, aplica-se o parágrafo único do art. 66 (109).</td><td>Art. 66, p. único; FONAJE 51, 64 e 109.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span> <span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl4"><td>Complexidade do caso</td><td>O MP requer a remessa das peças (art. 77, § 2º). Para o FONAJE, as peças vão antes à Delegacia para as diligências; retornando ao Juizado e persistindo a complexidade, seguem ao juízo comum (Enunciado 18); a remessa exaure a competência do JECrim, ainda que afastada depois a complexidade (52).</td><td>Art. 77, §§ 2º e 3º; FONAJE 18 e 52.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span> <span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl3"><td>Desclassificação no Juizado</td><td>Se a sentença der ao fato definição jurídica diversa e a infração for de competência de outro juízo, os autos são encaminhados a este. Se houver possibilidade de proposta de suspensão condicional do processo, o juiz procede de acordo com a lei.</td><td>CPP, art. 383, §§ 1º e 2º. STJ, Súmula 337 (JT 93, teses 10 e 11).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl2"><td>Desclassificação pelo júri para infração de menor potencial</td><td>“Se houver desclassificação da infração para outra, de competência do juiz singular, ao presidente do Tribunal do Júri caberá proferir sentença em seguida, aplicando-se, quando o delito resultante da nova tipificação for considerado pela lei como infração penal de menor potencial ofensivo, o disposto nos arts. 69 e seguintes da Lei nº 9.099, de 26 de setembro de 1995.” Em caso de desclassificação, o crime conexo que não seja doloso contra a vida é julgado pelo juiz presidente, aplicando-se, no que couber, o § 1º.</td><td>CPP, art. 492, §§ 1º e 2º (Lei 11.689/2008).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl5"><td>Prorrogação da competência mais graduada</td><td>Se, iniciado o processo perante um juiz, houver desclassificação para infração da competência de outro, a este será remetido o processo, salvo se mais graduada for a jurisdição do primeiro, que terá sua competência prorrogada.</td><td>CPP, art. 74, § 2º.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl"><td>Exceção de incompetência</td><td>Pode ser oposta verbalmente ou por escrito, no prazo de defesa. Se o juiz reconhecer motivo de incompetência em qualquer fase, declara-o nos autos, haja ou não alegação da parte.</td><td>CPP, arts. 108 e 109.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr><td>Efeitos da incompetência</td><td>A incompetência do juízo anula somente os atos decisórios, devendo o processo ser remetido ao juiz competente. O STJ afirma que é relativa a nulidade decorrente da inobservância da competência penal por prevenção, que deve ser alegada em momento oportuno, sob pena de preclusão.</td><td>CPP, art. 567; STJ, JT 72, tese 5.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="alert alert-red mt2"><span class="alert-tag">Ponto de atenção</span><div>A remessa ao juízo comum por <strong>complexidade</strong> ou por <strong>réu não encontrado</strong> retira a perspectiva da audiência preliminar do JECrim. Se o cliente quer transação ou composição, avaliar se os requisitos legais ainda permitem pedi-las no juízo comum e antecipar o pedido (art. 60, parágrafo único; STF, ADI 5264). Cuidado com a regra do FONAJE de que a remessa “exaure” a competência do Juizado: é enunciado não vinculante.</div></div>
+</section>
+
+<!-- ============ 09 ============ -->
+<section class="section" id="concurso">
+  <div class="section-header"><div class="section-num">09</div><div class="section-title"><span>Interface com o Art. 61</span>Concurso de Infrações e o Limite de 2 Anos</div></div>
+
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Cenário</th><th>Orientação</th><th>Fundamento</th><th>Verificação</th></tr></thead>
+    <tbody>
+      <tr class="hl4"><td>Concurso entre infrações de menor potencial ofensivo</td><td>Soma-se a pena máxima em abstrato no concurso material, ou aplica-se a devida exasperação no crime continuado e no concurso formal; se o resultado superar 2 anos, <strong>afasta-se a competência do Juizado</strong>.</td><td>STJ, JT 96, tese 10 (HC 530268/SP; AgRg no REsp 1752559/SP; RHC 102381/BA, entre outros). Também JT 72, tese 10.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl5"><td>Divergência: FONAJE</td><td>Enunciado 120 (XXIX Encontro, Bonito/MS): o concurso de infrações de menor potencial ofensivo não afasta a competência do JECrim, ainda que o somatório das penas ultrapasse dois anos.</td><td>FONAJE, Enunciado 120 (não vinculante).</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl3"><td>Infração de menor potencial conexa a crime mais grave</td><td>A pena máxima da infração de menor potencial não se soma à do crime mais grave para excluir a fase consensual (transação e composição civil).</td><td>STF, ADI 5264 (voto da relatora).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl2"><td>Crime fora do art. 61 desclassificado para infração de menor potencial</td><td>Aplicam-se a Súmula 337/STJ (suspensão do processo) e os arts. 69 e seguintes da Lei 9.099 quando a desclassificação for feita pelo júri (CPP, art. 492, § 1º).</td><td>STJ, Súmula 337; CPP, art. 492, § 1º.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="alert alert-gold mt2"><span class="alert-tag">Como conciliar</span><div>As duas orientações respondem a perguntas diferentes. No <strong>concurso entre infrações de menor potencial</strong>, o STJ fixa o limite de 2 anos pela soma ou exasperação (e o FONAJE diverge). Na <strong>conexão com crime de maior gravidade</strong>, o STF afirma que a pena do crime mais grave não é somada para excluir a transação e a composição civil. Em audiência, identificar qual das duas situações está em jogo antes de invocar um dos entendimentos.</div></div>
+</section>
+
+<!-- ============ 10 ============ -->
+<section class="section" id="exclusoes">
+  <div class="section-header"><div class="section-num">10</div><div class="section-title"><span>Fronteiras da Competência</span>Exclusões, Justiça Federal, Militar e Leis Especiais</div></div>
+
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Fronteira</th><th>Regra</th><th>Fundamento</th><th>Verificação</th></tr></thead>
+    <tbody>
+      <tr class="hl4"><td>Violência doméstica e familiar contra a mulher</td><td>“Aos crimes praticados com violência doméstica e familiar contra a mulher, independentemente da pena prevista, não se aplica a Lei nº 9.099.” Os Juizados de Violência Doméstica e Familiar contra a Mulher, órgãos da Justiça Ordinária com competência cível e criminal, podem ser criados pela União e pelos Estados; enquanto não estruturados, as varas criminais acumulam as competências. O STF esclareceu, na ADI 4424, que não compete aos Juizados Especiais julgar crimes no âmbito da Lei Maria da Penha.</td><td>Lei 11.340, arts. 14, 33 e 41; STF, ADI 4424 (notícia oficial de 09/02/2012); STJ, Súmula 536.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl4"><td>Pessoa idosa</td><td>Aos crimes do Estatuto e aos crimes praticados com violência contra a pessoa idosa, independentemente da pena, não se aplica a Lei 9.099 (redação da Lei 15.163/2025).</td><td>Lei 10.741, art. 94, p. único.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl4"><td>ECA</td><td>Ao crime do art. 230 não se aplica a Lei 9.099 (art. 230, § 2º, incluído pela Lei 15.163/2025).</td><td>ECA, art. 230, § 2º.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl5"><td>Justiça Militar</td><td>As disposições da Lei 9.099 não se aplicam no âmbito da Justiça Militar. O STJ registra a constitucionalidade do art. 90-A.</td><td>Art. 90-A; STJ, JT 96, tese 9; CPP, art. 79, I.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Justiça Federal</td><td>O Juizado Especial Federal Criminal processa e julga as infrações de menor potencial ofensivo de competência federal, respeitadas a conexão e a continência (Lei 10.259, art. 2º). Contravenções ficam fora da competência federal: o art. 109, IV, da CF refere “excluídas as contravenções”.</td><td>Lei 10.259, art. 2º; CF, art. 109, IV. STJ, Súmula 38 (fonte secundária).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span> <span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl3"><td>Crimes federais e estaduais conexos</td><td>Compete à Justiça Federal o processo e o julgamento unificado dos crimes conexos de competência federal e estadual, não se aplicando o art. 78, II, “a”, do CPP (Súmula 122/STJ). Inexistindo conexão probatória, não é da Justiça Federal a competência para os crimes de competência estadual, ainda que descobertos no mesmo contexto fático.</td><td>STJ, JT 72, teses 8 e 9.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Tratado internacional, internet e interesse da União</td><td>A mera previsão do crime em tratado não atrai a Justiça Federal sem potencialidade de ultrapassar os limites territoriais; o fato de o delito ser praticado pela internet não atrai, automaticamente, a competência federal; a ofensa indireta, genérica ou reflexa a bens, serviços ou interesse da União não atrai a competência federal.</td><td>STJ, JT 72, teses 2, 3 e 19.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl2"><td>Porte para consumo pessoal de drogas</td><td>Compete ao Juizado Especial estadual, pois a conduta não está prevista em tratado internacional e a lei não a incluiu entre as de competência da Justiça Federal. O art. 28 da Lei 11.343 é processado na forma dos arts. 60 e seguintes da Lei 9.099, salvo concurso com os arts. 33 a 37.</td><td>STJ, JT 96, tese 11; Lei 11.343, art. 48, § 1º.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl2"><td>Trânsito (CTB)</td><td>O art. 291 manda aplicar a Lei 9.099 aos crimes de trânsito “no que couber” e os arts. 74, 76 e 88 à lesão culposa, com exceções. O FONAJE entende que as medidas despenalizadoras para o crime do art. 306 não são processadas no JECrim (Enunciado 54) e que a possibilidade de suspensão ou proibição de habilitação não afasta a competência do JECrim (67).</td><td>CTB, art. 291; FONAJE 54 e 67.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span> <span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr><td>Crimes eleitorais e prerrogativa de função</td><td>Não analisados nesta página. Quando houver foro por prerrogativa ou competência eleitoral, verificar a regra específica e a jurisprudência do tribunal competente antes de invocar a Lei 9.099.</td><td>—</td><td><span class="vb vb-pr" style="margin-left:0">Prática</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ============ 11 ============ -->
+<section class="section" id="recursos">
+  <div class="section-header"><div class="section-num">11</div><div class="section-title"><span>Competência Recursal</span>Turma Recursal, Habeas Corpus e Conflitos</div></div>
+
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Tema</th><th>Regra</th><th>Fundamento</th><th>Verificação</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Recurso da sentença</td><td>Da decisão de rejeição da denúncia ou queixa e da sentença cabe apelação, que poderá ser julgada por turma composta de três juízes em exercício no primeiro grau de jurisdição, reunidos na sede do Juizado. Prazo de 10 dias; resposta em 10 dias.</td><td>Art. 82, caput e §§ 1º e 2º. Na Justiça Federal, as Turmas Recursais são instituídas por decisão do TRF (Lei 10.259, art. 21).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl2"><td>Recurso em sentido estrito</td><td>Incabível no JECrim, segundo o FONAJE.</td><td>FONAJE, Enunciado 48.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl3"><td>Habeas corpus contra acórdão de Turma Recursal</td><td>Compete aos Tribunais de Justiça ou aos Tribunais Regionais Federais processar e julgar.</td><td>STJ, JT 93, tese 1 (AgRg no RHC 137285/SP; AgRg no HC 421161/SP).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Conflito entre TJ e Turma Recursal</td><td>Não há conflito de competência entre Tribunal de Justiça e Turma Recursal de Juizado Especial Criminal do mesmo Estado, pois a Turma Recursal não possui qualidade de Tribunal e a este é subordinada administrativamente.</td><td>STJ, JT 72, tese 4 (CC 140322/PR; CC 124633/SC; CC 115079/RJ, entre outros).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Conflito entre Juizado e juízo comum</td><td>Compete ao Tribunal Regional Federal ou ao Tribunal de Justiça decidir os conflitos de competência entre juizado especial e juízo comum da mesma seção judiciária ou do mesmo Estado.</td><td>STJ, JT 72, tese 7 (CC 100389/SC; CC 124633/SC, entre outros).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl4"><td>Histórico: Súmula 690/STF</td><td>A Súmula 690 (aprovada em 24/09/2003) previa a competência originária do STF para HC contra decisão de turma recursal de juizados especiais criminais. Segundo fontes secundárias, o Plenário mudou o entendimento no HC 86.834 (2006), atribuindo ao Tribunal de Justiça. O STJ aponta hoje o TJ ou o TRF (JT 93, tese 1). A situação formal da Súmula 690 não foi verificada.</td><td>STF, notícias oficiais de 2003 e 2005; fontes secundárias sobre o HC 86.834.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl4"><td>Mandado de segurança contra Turma Recursal</td><td>Em 04/12/2003, o STF resolveu questões de ordem nos MS 24.674 e 24.691 e afastou a competência do Supremo para mandados de segurança contra atos de Turmas Recursais. O STJ tem súmula sobre o tema, cujo texto não foi verificado.</td><td>STF, notícia oficial de 04/12/2003.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span> <span class="vb vb-pr" style="margin-left:0">Texto da súmula: não verificado</span></td></tr>
+      <tr><td>Intimação do defensor público</td><td>No JECrim, não se exige a intimação pessoal do defensor público; admite-se na sessão de julgamento ou pela imprensa oficial.</td><td>STJ, JT 93, tese 3.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr><td>Decisão monocrática e arquivamento</td><td>O relator da Turma Recursal pode negar seguimento a recurso manifestamente inadmissível ou julgar extinta a punibilidade, com recurso interno em 5 dias (Enunciado 81). É irrecorrível a decisão que defere o arquivamento de termo circunstanciado a requerimento do MP (Enunciado 101).</td><td>FONAJE, Enunciados 81 e 101.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ============ 12 ============ -->
+<section class="section" id="fluxograma">
+  <div class="section-header"><div class="section-num">12</div><div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma Completo de Competência (Art. 60)</div></div>
+  <div class="flow-wrap"><div class="flow-center">
+
+    <div class="flow-node flow-start">Fato com aparência de infração penal — definir o juízo competente</div>
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+
+    <div class="flow-node flow-box-navy"><b>PASSO 1 — A infração é de menor potencial ofensivo? (art. 61)</b><small>Contravenção, ou crime com pena máxima de até 2 anos, considerando qualificadoras, majorantes e concurso (STJ, JT 96, tese 10).</small></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">Sim</div><div class="flow-node flow-box-green">Segue ao Passo 2</div></div>
+      <div class="flow-branch"><div class="flow-label">Não</div><div class="flow-node flow-end-red">Fora do Juizado<small>Juízo comum. Avaliar sursis (art. 89) e ANPP (CPP, art. 28-A).</small></div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 2 — Há exclusão legal?</b><small>Violência doméstica contra a mulher (Lei 11.340, art. 41) · pessoa idosa (Lei 10.741, art. 94, p. único) · ECA art. 230, § 2º · Justiça Militar (art. 90-A).</small></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">Sim</div><div class="flow-node flow-end-red">Lei 9.099 não se aplica<small>Juízo competente conforme a lei especial (ex.: Juizado de Violência Doméstica ou vara criminal, Lei 11.340, arts. 14 e 33).</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Não</div><div class="flow-node flow-box-green">Segue ao Passo 3</div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 3 — Qual o foro? (art. 63; CPP, art. 70)</b><small>Lugar da infração. Se justiça federal: Lei 10.259, art. 2º. Contravenção: Justiça Estadual (CF, art. 109, IV; Súmula 38/STJ).</small></div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 4 — Há conexão ou continência com infração de outro juízo? (CPP, arts. 76 a 82)</b><small>Crime comum, doloso contra a vida, crime federal.</small></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">Com crime comum</div><div class="flow-node flow-box-blue">Reunião no juízo comum<small>Observar transação e composição civil (art. 60, p. único; ADI 5264).</small></div><div class="flow-arrow">▼</div><div class="flow-node flow-end-blue">Vara criminal comum</div></div>
+      <div class="flow-branch"><div class="flow-label">Com crime doloso contra a vida</div><div class="flow-node flow-box-blue">Reunião no tribunal do júri<small>Observar transação e composição civil. CPP, art. 78, I.</small></div><div class="flow-arrow">▼</div><div class="flow-node flow-end-purple">Tribunal do júri</div></div>
+      <div class="flow-branch"><div class="flow-label">Com crime federal</div><div class="flow-node flow-box-gold">Súmula 122/STJ<small>Julgamento unificado na Justiça Federal; contravenção segue na Estadual.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Sem conexão</div><div class="flow-node flow-box-green">Juizado Especial Criminal<small>Passo 5.</small></div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 5 — No Juizado: fase preliminar (arts. 69 a 76)</b><small>Termo circunstanciado, audiência preliminar, composição dos danos civis, representação, transação penal.</small></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">Acordo ou transação cumprida</div><div class="flow-node flow-end-green">Extinção da punibilidade<small>Ou renúncia à queixa ou representação (art. 74, p. único).</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Sem acordo</div><div class="flow-node flow-box-blue">Passo 6</div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 6 — Denúncia oral viável? (art. 77)</b><small>Réu citável pessoalmente (art. 66)? Caso simples (art. 77, § 2º)?</small></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">Réu não encontrado (art. 66, p. único)</div><div class="flow-node flow-end-purple">Remessa ao juízo comum<small>FONAJE 51 e 64.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Complexidade (art. 77, § 2º)</div><div class="flow-node flow-end-purple">Remessa ao juízo comum<small>FONAJE 18 e 52.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Denúncia oral viável</div><div class="flow-node flow-box-green">Instrução e julgamento no Juizado<small>Arts. 78 a 81.</small></div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 7 — Desclassificação durante o processo?</b><small>Para crime de competência de outro juízo: remessa (CPP, art. 383, § 2º). Para infração de menor potencial vinda do júri: sentença do juiz presidente, arts. 69 e seguintes da Lei 9.099 (CPP, art. 492, § 1º).</small></div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 8 — Sentença, recurso e execução</b><small>Apelação à Turma de três juízes de 1º grau (art. 82). HC contra acórdão da Turma: TJ ou TRF (STJ, JT 93, tese 1). Execução: arts. 84 a 86; FONAJE 87.</small></div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-purple" style="max-width:980px;"><strong>CONTROLE FINAL DO ADVOGADO:</strong> confirmar que a infração está no art. 61 e fora das exclusões; identificar o juízo que conduz o ato e se há conexão ou continência; em caso de reunião, requerer expressamente a transação e a composição civil (art. 60, parágrafo único); acompanhar sinais de remessa (complexidade, réu não encontrado, desclassificação); arguir incompetência no prazo de defesa e na primeira oportunidade (CPP, art. 108); conferir competência recursal e prazo (10 e 5 dias).</div>
+  </div></div>
+</section>
+
+<!-- ============ 13 ============ -->
+<section class="section" id="atendimento">
+  <div class="section-header"><div class="section-num">13</div><div class="section-title"><span>Roteiro de Atuação — Orientação Prática</span>Atendimento, Conciliação e Negociação com o Cliente</div></div>
+  <div class="alert alert-navy"><span class="alert-tag">Natureza</span><div>Esta seção organiza uma abordagem de atuação a partir do art. 60. Cada orientação traz, entre parênteses, a norma ou o precedente que a sustenta. O que não tem apoio normativo vem identificado como estratégia, a ser ajustada pelo advogado ao caso.</div></div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card type-card tc-blue">
+      <h3>Cliente é o autor do fato</h3>
+      <h4>Explicar o juízo e o caminho do processo</h4>
+      <ul>
+        <li>O caso pode ficar no <strong>Juizado</strong> (conciliação, julgamento e execução) ou sair dele por conexão, complexidade, réu não encontrado ou desclassificação (art. 60; arts. 66 e 77).</li>
+        <li>Se o caso for para o <strong>juízo comum ou o júri</strong> por conexão, o cliente continua com direito à transação e à composição civil quanto à infração menor (art. 60, parágrafo único; STF, ADI 5264).</li>
+        <li>Se houver <strong>exclusão legal</strong> (violência doméstica, pessoa idosa, ECA, Justiça Militar), a Lei 9.099 não se aplica e as propostas do Juizado não estarão disponíveis.</li>
+      </ul>
+      <h4>Preparação</h4>
+      <ul>
+        <li>Conferir o <strong>local da infração</strong> (art. 63) e a existência de infração conexa (CPP, arts. 76 e 77).</li>
+        <li>Levantar antecedentes e benefício nos últimos 5 anos (art. 76, § 2º).</li>
+        <li>Preparar proposta de reparação (valor, prazo, forma), caso haja vítima.</li>
+        <li>Orientar o cliente a manter o endereço atualizado e a comparecer: se o acusado não for encontrado para a citação, as peças vão ao juízo comum (art. 66, p. único).</li>
+      </ul>
+      <h4>Alavancas de negociação</h4>
+      <ul>
+        <li>Pedir a <strong>transação no juízo comum</strong> quando houver conexão, citando o parágrafo único do art. 60 e a ADI 5264.</li>
+        <li>Pedir a <strong>composição dos danos civis</strong> com a vítima antes da definição do juízo.</li>
+        <li>Se o MP não propuser a transação, usar a via do art. 28 do CPP por analogia (FONAJE, Enunciado 86), conferindo o mecanismo local após a Lei 13.964/2019.</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-green">
+      <h3>Cliente é a vítima ou ofendido</h3>
+      <h4>Explicar o juízo e o caminho do processo</h4>
+      <ul>
+        <li>A <strong>audiência preliminar</strong> do Juizado é o momento de composição e de representação (arts. 72 a 75).</li>
+        <li>Se o caso for deslocado, a <strong>composição civil</strong> continua cabível quanto à infração de menor potencial (art. 60, parágrafo único).</li>
+        <li>O acordo homologado vale como título executivo e, na ação privada ou condicionada, importa renúncia ao direito de queixa ou representação (art. 74).</li>
+      </ul>
+      <h4>Preparação</h4>
+      <ul>
+        <li>Identificar a ação penal (queixa, representação, incondicionada) e a data em que soube quem é o autor, para controlar a decadência de 6 meses (CP, art. 103).</li>
+        <li>Documentar o dano: orçamentos, notas, laudos, fotografias, mensagens, testemunhas.</li>
+        <li>Confirmar o <strong>endereço para intimações</strong> e o meio de contato: a ausência da vítima pode ser tratada como renúncia tácita (FONAJE, Enunciado 117).</li>
+      </ul>
+      <h4>Alavancas de negociação</h4>
+      <ul>
+        <li>O acordo pode abranger qualquer valor ou matéria (FONAJE, 37) e deve ter cláusula penal quando houver obrigação de fazer ou não fazer (43).</li>
+        <li>Em caso de remessa ao juízo comum, preparar o pedido de audiência para tentativa de composição antes da instrução (doutrina citada no voto da relatora da ADI 5264).</li>
+        <li>A transação do autor não tem efeitos civis (art. 76, § 6º): a reparação segue pelo acordo civil ou por ação no cível.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Perguntas que o cliente sempre faz</h3>
+  <div class="card-grid card-grid-2">
+    <div class="card"><h4>“Por que meu caso foi para a vara comum ou para o júri?”</h4><p>Porque há conexão ou continência com crime de competência desse juízo (CPP, arts. 76 a 82) ou houve remessa por complexidade, réu não encontrado ou desclassificação. O art. 60, parágrafo único, assegura que a transação e a composição civil continuem disponíveis para a infração de menor potencial ofensivo.</p></div>
+    <div class="card"><h4>“Perdi o direito à transação por ter saído do Juizado?”</h4><p>Não, nos casos de conexão ou continência: o parágrafo único do art. 60 manda observar os institutos, e o STF afirmou (ADI 5264) que não há óbice à sua aplicação no juízo comum ou no júri. Em outras hipóteses de remessa, conferir a regra local e requerer expressamente.</p></div>
+    <div class="card"><h4>“Qual juiz decide e onde recorro?”</h4><p>No Juizado, o juiz togado profere a sentença e a apelação é julgada por turma de três juízes de primeiro grau (art. 82). Habeas corpus contra acórdão da Turma Recursal compete ao TJ ou ao TRF (STJ, JT 93, tese 1). No juízo comum ou no júri, valem as regras ordinárias.</p></div>
+    <div class="card"><h4>“A Lei 9.099 vale para meu caso de violência doméstica?”</h4><p>Não. O art. 41 da Lei 11.340 afasta a Lei 9.099, independentemente da pena. A competência é dos Juizados de Violência Doméstica e Familiar contra a Mulher ou, enquanto não estruturados, das varas criminais (arts. 14 e 33).</p></div>
+    <div class="card"><h4>“Meu caso é contravenção. Pode ir para a Justiça Federal?”</h4><p>Em regra, não. O art. 109, IV, da CF exclui as contravenções da competência federal, e a Súmula 38 do STJ aponta a Justiça Estadual (texto conferido em fonte secundária).</p></div>
+    <div class="card"><h4>“Posso discutir a competência?”</h4><p>Sim. A exceção de incompetência pode ser oposta verbalmente ou por escrito, no prazo de defesa (CPP, art. 108). A nulidade por inobservância de regra de competência por prevenção é relativa e sujeita a preclusão (STJ, JT 72, tese 5); por isso, arguir na primeira oportunidade.</p></div>
+  </div>
+
+  <div class="card mt2">
+    <h3>Checklist de preparação (24 horas antes)</h3>
+    <div class="card-grid card-grid-3">
+      <ul>
+        <li>Infração enquadrada no art. 61 e fora das exclusões.</li>
+        <li>Local da infração e foro conferidos (art. 63).</li>
+        <li>Existência de conexão ou continência verificada.</li>
+        <li>Juízo que conduzirá o ato confirmado na intimação.</li>
+      </ul>
+      <ul>
+        <li>Procuração com poderes para transigir e aceitar proposta.</li>
+        <li>Planilha do dano e proposta de acordo, ou defesa pronta.</li>
+        <li>Antecedentes e benefícios dos últimos 5 anos conferidos.</li>
+        <li>Pedido de transação e composição no juízo comum, se houver conexão.</li>
+      </ul>
+      <ul>
+        <li>Arguição de incompetência, se for o caso, preparada.</li>
+        <li>Competência recursal e prazos (10 e 5 dias) anotados.</li>
+        <li>Testemunhas arroladas com 5 dias de antecedência.</li>
+        <li>Orientação local sobre FONAJE 10, 51, 52, 120 checada.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 14 ============ -->
+<section class="section" id="jurisprudencia">
+  <div class="section-header"><div class="section-num">14</div><div class="section-title"><span>STF e STJ</span>Jurisprudência, Súmulas, Teses e Enunciados</div></div>
+  <div class="alert alert-navy"><span class="alert-tag">Aviso do STJ</span><div>As edições da Jurisprudência em Teses do STJ trazem a ressalva de que as teses foram elaboradas pela Secretaria de Jurisprudência mediante pesquisa na base do Tribunal e “não consistindo em repositórios oficiais da jurisprudência deste Tribunal”. A JT 72 tem julgados até 30/09/2016. Conferir sempre o acórdão antes de citar em peça.</div></div>
+
+  <h3 class="sub-title">Supremo Tribunal Federal</h3>
+  <div class="juris-grid">
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge tese">ADI 5264</span><span class="juris-title">Competência relativa do Juizado e reunião de processos</span><span class="vb vb-of">Oficial</span></div><div class="juris-body">Sessão virtual encerrada em 4/12/2020; improcedente, por unanimidade (Rel. Min. Cármen Lúcia). Ação da PGR contra os arts. 1º e 2º da Lei 11.313/2006. <span class="quote">“Dota-se, portanto, os Juizados Especiais Criminais de competência relativa para julgamento das infrações de menor potencial ofensivo, pela qual se permite que essas infrações sejam julgadas por outro juízo com vis atractiva para o crime de maior gravidade, pela conexão ou continência, observados, quanto àqueles, os institutos despenalizadores, quando cabíveis.”</span>Trecho do voto da relatora (minuta do Plenário Virtual de 27/11/2020). O voto cita, entre outros, o STJ, CC 34.586/MG (Rel. Min. Felix Fischer, Terceira Seção, DJ 17/3/2003), como exemplo da tese contrária, de competência absoluta.</div></div>
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge tese">ADI 4424</span><span class="juris-title">Lei Maria da Penha e Juizados Especiais</span><span class="vb vb-of">Oficial</span></div><div class="juris-body">Julgada procedente em 09/02/2012, por 10 votos a 1 (Rel. Min. Marco Aurélio; vencido o Min. Cezar Peluso), quanto aos arts. 12, I, 16 e 41 da Lei 11.340/2006. O STF esclareceu que não compete aos Juizados Especiais julgar os crimes cometidos no âmbito da Lei Maria da Penha. Conforme notícia oficial do STF de 09/02/2012.</div></div>
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge sumula">Súmula 690</span><span class="juris-title">HC contra decisão de turma recursal (situação não verificada)</span><span class="vb vb-sec">Secundária</span></div><div class="juris-body"><span class="quote">“Compete originariamente ao Supremo Tribunal Federal o julgamento de habeas corpus contra decisão de turma recursal de juizados especiais criminais.”</span>Texto conforme notícia oficial do STF de 06/11/2003 (aprovada em 24/09/2003). Fontes secundárias indicam que o Plenário passou a atribuir a competência ao Tribunal de Justiça no HC 86.834 (2006); o STJ aponta TJ ou TRF (JT 93, tese 1). Não foi verificado o cancelamento formal da súmula.</div></div>
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge tese">MS 24.674 e 24.691 (QO)</span><span class="juris-title">Mandado de segurança contra Turma Recursal</span><span class="vb vb-of">Oficial</span></div><div class="juris-body">Em 04/12/2003, o Plenário resolveu questões de ordem em mandados de segurança contra atos de Turmas Recursais de Juizados Especiais (Rel. Min. Marco Aurélio, vencido o relator em uma das questões) e afastou a competência do STF para esses mandados. Conforme notícia oficial do STF.</div></div>
+  </div>
+
+  <h3 class="sub-title">Superior Tribunal de Justiça</h3>
+  <div class="juris-grid">
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">JT 96, tese 10 · JT 72, tese 10</span><span class="juris-title">Concurso de infrações e competência do Juizado</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><span class="quote">“Na hipótese de apuração de delitos de menor potencial ofensivo, deve-se considerar a soma das penas máximas em abstrato em concurso material, ou, ainda, a devida exasperação, no caso de crime continuado ou de concurso formal, e ao se verificar que o resultado da adição é superior a dois anos, afasta-se a competência do Juizado Especial Criminal.”</span>Julgados da JT 96: HC 530268/SP (Rel. Min. Nefi Cordeiro, 03/12/2019); AgRg no REsp 1752559/SP (Rel. Min. Joel Ilan Paciornik, 05/09/2019); RHC 102381/BA; RHC 84633/RJ; RHC 71928/MG; RHC 46646/SP. A JT 72, tese 10, tem redação mais curta: “No concurso de infrações de menor potencial ofensivo, afasta-se a competência dos Juizados Especiais quando a soma das penas ultrapassar dois anos.”</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">JT 93, tese 1</span><span class="juris-title">HC contra acórdão de Turma Recursal</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><span class="quote">“Compete aos Tribunais de Justiça ou aos Tribunais Regionais Federais processar e julgar habeas corpus impetrado contra acórdãos de Turma Recursal dos Juizados Especiais.”</span>Julgados: AgRg no RHC 137285/SP (Rel. Min. Felix Fischer, 20/04/2021); AgRg no HC 421161/SP; RHC 33018/SP; HC 223550/PB; HC 156178/MS; HC 99878/PB.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">JT 72, teses 4 e 7</span><span class="juris-title">Conflitos de competência envolvendo Juizados</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><strong>Tese 4:</strong> “Não há conflito de competência entre Tribunal de Justiça e Turma Recursal de Juizado Especial Criminal de um mesmo Estado, já que a Turma Recursal não possui qualidade de Tribunal e a este é subordinada administrativamente.” (CC 140322/PR; CC 124633/SC; CC 115079/RJ; CC 107994/SP; CC 90072/SP). <strong>Tese 7:</strong> “Compete ao Tribunal Regional Federal ou ao Tribunal de Justiça decidir os conflitos de competência entre juizado especial e juízo comum da mesma seção judiciária ou do mesmo Estado.” (CC 100389/SC; CC 124633/SC; CC 102907/SC; CC 99259/SC, entre outros).</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">JT 72, teses 5, 6, 8 e 9</span><span class="juris-title">Prevenção, lugar da infração e conexão com crime federal</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><strong>Tese 5:</strong> é relativa a nulidade decorrente da inobservância da competência penal por prevenção, que deve ser alegada em momento oportuno, sob pena de preclusão. <strong>Tese 6:</strong> a competência é determinada pelo lugar em que se consumou a infração (CPP, art. 70), sendo possível a modificação quando outro local seja o melhor para a formação da verdade real. <strong>Tese 8 (Súmula 122/STJ):</strong> “Compete à Justiça Federal o processo e julgamento unificado dos crimes conexos de competência federal e estadual, não se aplicando a regra do art. 78, II, ‘a’, do Código de Processo Penal.” <strong>Tese 9:</strong> inexistindo conexão probatória, não é da Justiça Federal a competência para crimes de competência estadual, ainda que descobertos no mesmo contexto fático.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">JT 96, teses 9 e 11</span><span class="juris-title">Justiça Militar e uso de drogas</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><strong>Tese 9:</strong> é constitucional o art. 90-A da Lei 9.099, que veda a aplicação da lei aos crimes militares. <strong>Tese 11:</strong> compete ao Juizado Especial estadual apreciar o crime de uso de entorpecente para consumo próprio, infração de menor potencial ofensivo, pois a conduta não está prevista em tratado internacional e a lei não o incluiu entre os de competência da Justiça Federal (CC 172464/MS; CC 169477/MT; CC 144910/MS).</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge sumula">Súmula 337</span><span class="juris-title">Desclassificação e procedência parcial</span><span class="vb vb-of">Oficial (tese 10 do JT 93)</span></div><div class="juris-body"><span class="quote">“É cabível a suspensão condicional do processo na desclassificação do crime e na procedência parcial da pretensão punitiva.”</span>Os autos devem ser encaminhados ao MP para que se manifeste sobre o sursis ou a transação (JT 93, tese 11).</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge sumula">Súmulas 235 e 38</span><span class="juris-title">Conexão com processo já julgado e contravenção</span><span class="vb vb-sec">Secundária</span></div><div class="juris-body"><strong>Súmula 235:</strong> “A conexão não determina a reunião dos processos, se um deles já foi julgado.” <strong>Súmula 38:</strong> compete à Justiça Estadual comum, na vigência da Constituição de 1988, o processo por contravenção penal, ainda que praticada em detrimento de bens, serviços ou interesse da União ou de suas entidades. Textos conferidos em fontes secundárias, que registram as datas de publicação com divergência; o site de súmulas do STJ bloqueou a consulta automatizada.</div></div>
+  </div>
+
+  <h3 class="sub-title">FONAJE — Enunciados criminais relacionados ao art. 60 <span class="vb vb-sec" style="margin-left:0.4rem">Secundária</span></h3>
+  <div class="alert alert-gold"><span class="alert-tag">Natureza</span><div>Os enunciados do Fórum Nacional dos Juizados Especiais são orientações interpretativas não vinculantes. A compilação consultada (Evinis Talon, atualizada em 06/02/2024) vai até o Enunciado 130. Podem existir encontros posteriores; conferir a versão vigente.</div></div>
+  <div class="juris-grid mt1">
+    <div class="juris-card fonaje"><div class="juris-header"><span class="juris-badge purple">FONAJE</span><span class="juris-title">Conexão, remessa e competência</span></div><div class="juris-body"><strong>10:</strong> conexão com o juízo comum, prevalece este. <strong>18, 52:</strong> complexidade; remessa ao juízo comum. <strong>51, 64, 109:</strong> réu não encontrado; remessa. <strong>60:</strong> exceção da verdade e questões incidentais. <strong>87:</strong> execução da transação. <strong>120:</strong> concurso de infrações. <strong>54, 67:</strong> trânsito. <strong>122:</strong> medidas despenalizadoras do art. 94 do Estatuto do Idoso (texto anterior à Lei 15.163/2025, hoje superado pelo novo parágrafo único).</div></div>
+    <div class="juris-card fonaje"><div class="juris-header"><span class="juris-badge purple">FONAJE</span><span class="juris-title">Conciliação, precatória e execução</span></div><div class="juris-body"><strong>13, 17, 91, 92, 93:</strong> precatória e adequação no juízo deprecado. <strong>31, 70, 71:</strong> conciliador e juiz leigo. <strong>34:</strong> termo circunstanciado pela Polícia Civil ou Militar. <strong>48:</strong> recurso em sentido estrito. <strong>81, 101:</strong> Turma Recursal. <strong>86:</strong> analogia ao art. 28 do CPP. <strong>103:</strong> execução administrativa da multa. <strong>117:</strong> ausência da vítima. <strong>37, 43, 99:</strong> acordo civil.</div></div>
+  </div>
+</section>
+
+<!-- ============ 15 ============ -->
+<section class="section" id="doutrina">
+  <div class="section-header"><div class="section-num">15</div><div class="section-title"><span>Doutrina Sistematizada</span>Linhas Dogmáticas e Controvérsias</div></div>
+  <div class="alert alert-navy"><span class="alert-tag">Critério</span><div>As passagens de Pacelli, Renato Brasileiro de Lima e Távora e Alencar vêm da <strong>transcrição feita no voto da relatora da ADI 5264</strong>, e foram lidas nesse documento (cópia publicada pelo Migalhas), não nas obras. Para citar em peça, localizar a página e a edição na obra. As demais correntes são sínteses sem atribuição de passagens a autores.</div></div>
+  <div class="card-grid card-grid-2 mt1">
+    <div class="card"><h3>Competência absoluta ou relativa</h3><ul><li><strong>Corrente da competência absoluta (em razão da matéria):</strong> sustentada pela PGR na ADI 5264 e, no voto, associada a julgado do STJ (CC 34.586/MG, Terceira Seção, 2003): os institutos despenalizadores só poderiam ser aplicados pelo Juizado, e sua falta ofenderia o devido processo legal.</li><li><strong>Corrente da competência relativa:</strong> adotada pelo STF. O voto cita Renato Brasileiro de Lima, para quem, “fosse ela de natureza absoluta, não poderia ser modificada pela lei” e, como a ocultação do acusado leva os autos ao juízo comum, “temos que se trata de uma competência relativa” (<em>Competência Criminal</em>, JusPodivm, 2010, p. 526).</li><li>Há comentários críticos à posição do STF quanto ao júri, em fontes secundárias; não foram analisados.</li></ul></div>
+    <div class="card"><h3>Natureza da jurisdição dos Juizados</h3><ul><li>Pacelli, conforme o voto, afirma que não há privatividade dos Juizados para os crimes de menor potencial ofensivo nem competência material em razão do direito material: “O que é especializado nos Juizados é o rito procedimental e a possibilidade de transação penal”.</li><li>Segundo a mesma passagem, nos Juizados Criminais “não se exerce jurisdição especial”, porque o objeto é o Direito Penal comum (diferentemente da jurisdição eleitoral e da militar).</li><li>Consequência para o CPP: a regra de prevalência da jurisdição especial sobre a comum (art. 78, IV) não seria o critério para a conexão com o Juizado; a reunião ocorre fora do Juizado, segundo o art. 78 do CPP.</li></ul></div>
+    <div class="card"><h3>Reunião de processos e unidade do juízo</h3><ul><li>Pacelli: na reunião, nada impede a adoção da transação penal no mesmo juízo, “adotando-se, se for o caso, a unidade apenas do juízo e não do processo”.</li><li>Távora e Alencar, conforme o voto: havendo concorrência entre crime doloso contra a vida e infração de menor potencial ofensivo, ambos vão a júri, com oportunidade de transação e composição civil quanto a esta última; sugerem audiência preliminar antes de iniciar regularmente o processo.</li><li>O voto reconhece possível dificuldade procedimental pela estrutura dos Juizados, mas afirma que, “na ponderação entre forma e segurança jurídica e benefício ao réu acusado, estas prevalecem àquela”, isto é, a segurança jurídica e o benefício ao réu prevalecem sobre a forma.</li></ul></div>
+    <div class="card"><h3>Finalidade do Juizado: celeridade e despenalização</h3><ul><li>O voto cita Pacelli para afirmar que a Lei 9.099 deve ser interpretada no contexto de um movimento despenalizador (ou desencarcerizador), que procura afastar, quanto possível, a pena privativa de liberdade.</li><li>O art. 62 enuncia como critérios a oralidade, a simplicidade, a informalidade, a economia processual e a celeridade, e como objetivos a reparação do dano e a pena não privativa.</li></ul></div>
+    <div class="card"><h3>Concurso entre infrações de menor potencial</h3><ul><li>STJ: soma ou exasperação acima de 2 anos afasta o Juizado (JT 72, tese 10; JT 96, tese 10).</li><li>FONAJE: o concurso não afasta o Juizado (Enunciado 120).</li><li>STF, na ADI 5264: não se soma a pena da infração conexa mais grave para excluir a fase consensual (situação de conexão, e não de concurso entre infrações de menor potencial).</li></ul></div>
+    <div class="card"><h3>Execução e organização</h3><ul><li>A execução no Juizado cobre as penas aplicadas em transação e a multa (arts. 84 a 86), com possibilidade de central de penas alternativas (FONAJE, 87).</li><li>A organização do sistema é matéria de lei estadual (art. 93) e de lei federal para os Juizados Federais (CF, art. 98, § 1º; Lei 10.259); a Lei 9.099 prevê Juizados Itinerantes (art. 95, p. único).</li></ul></div>
+  </div>
+  <div class="card mt2">
+    <h3>Obras de referência para consulta</h3>
+    <ul class="source-list">
+      <li>OLIVEIRA, Eugênio Pacelli de. <em>Curso de Processo Penal</em>. Rio de Janeiro: Lumen Juris (edição citada no voto: 9. ed., 2012).</li>
+      <li>LIMA, Renato Brasileiro de. <em>Competência Criminal</em>. Salvador: JusPodivm (edição citada no voto: 2010). Também: <em>Legislação Criminal Especial Comentada</em>. Salvador: JusPodivm.</li>
+      <li>TÁVORA, Nestor; ALENCAR, Rosmar Rodrigues. <em>Curso de Direito Processual Penal</em>. Salvador: JusPodivm (edição citada no voto: 7. ed., 2012).</li>
+      <li>GRINOVER, Ada Pellegrini; GOMES FILHO, Antonio Magalhães; FERNANDES, Antonio Scarance; GOMES, Luiz Flávio. <em>Juizados Especiais Criminais: comentários à Lei 9.099, de 26.09.1995</em>. São Paulo: Revista dos Tribunais.</li>
+      <li>JESUS, Damásio E. de. <em>Lei dos Juizados Especiais Criminais Anotada</em>. São Paulo: Saraiva.</li>
+      <li>NUCCI, Guilherme de Souza. <em>Leis Penais e Processuais Penais Comentadas</em>. Rio de Janeiro: Forense.</li>
+      <li>BITENCOURT, Cezar Roberto. <em>Juizados Especiais Criminais e Alternativas à Pena de Prisão</em>. Porto Alegre: Livraria do Advogado.</li>
+      <li>TOURINHO NETO, Fernando da Costa; FIGUEIRA JÚNIOR, Joel Dias. <em>Juizados Especiais Estaduais Cíveis e Criminais: comentários à Lei 9.099/1995</em>. São Paulo: Revista dos Tribunais.</li>
+    </ul>
+    <div class="source-note">Indicação bibliográfica de obras de referência da matéria. As três primeiras são citadas no voto da relatora da ADI 5264, com as edições indicadas ali; as demais, sem trechos transcritos. Usar a edição mais recente disponível e conferir a numeração de página antes de citar.</div>
+  </div>
+</section>
+
+<!-- ============ 16 ============ -->
+<section class="prova-section" id="recorrentes">
+  <h2>Pontos que Sempre Aparecem nas Audiências</h2>
+  <p class="intro">Respostas objetivas, com a base legal ou jurisprudencial indicada em cada item, para consulta rápida durante a audiência e no atendimento ao cliente.</p>
+  <div class="prova-items">
+
+    <div class="prova-group">Qual é o juízo competente</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">01</span>Que órgão tem competência sobre as infrações de menor potencial?</div><div class="prova-item-a">O <strong>Juizado Especial Criminal</strong>, para a conciliação, o julgamento e a execução, ressalvadas a conexão e a continência. <span class="ref">Art. 60, caput; CF, art. 98, I</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">02</span>Qual o foro?</div><div class="prova-item-a">O <strong>lugar em que foi praticada a infração</strong>. <span class="ref">Art. 63</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">03</span>Quem pode conciliar na audiência preliminar?</div><div class="prova-item-a">O juiz ou o conciliador sob sua orientação; o FONAJE admite que o conciliador ou o juiz leigo encaminhe a proposta de transação. <span class="ref">Art. 73; FONAJE 70 e 71</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">04</span>O Juizado tem competência absoluta?</div><div class="prova-item-a"><strong>Não.</strong> O STF reconheceu competência relativa para conexão e continência. <span class="ref">STF, ADI 5264</span></div></div>
+
+    <div class="prova-group">Conexão, continência e reunião de processos</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">05</span>Há crime comum conexo. Vou ficar no Juizado?</div><div class="prova-item-a">O feito é reunido no <strong>juízo comum</strong>, mas a transação e a composição civil são observadas quanto à infração menor. <span class="ref">Art. 60, p. único; CPP, arts. 76 a 78; FONAJE 10</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">06</span>E se a infração for conexa a homicídio?</div><div class="prova-item-a">A reunião ocorre no <strong>tribunal do júri</strong>, observados a transação e a composição civil quanto à infração menor. A Lei 15.358/2026 criou exceção à prevalência do júri para homicídios por membros de organizações criminosas ultraviolentas. <span class="ref">Art. 60, p. único; CPP, art. 78, I</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">07</span>O MP pode somar a pena do crime grave para negar a transação?</div><div class="prova-item-a">Segundo o voto da relatora na ADI 5264, <strong>não</strong>: não se soma a pena do crime conexo mais grave para excluir a fase consensual. <span class="ref">STF, ADI 5264</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">08</span>Há concurso entre duas infrações de menor potencial. Fico no Juizado?</div><div class="prova-item-a">Para o STJ, <strong>não</strong>, se a soma ou a exasperação passar de 2 anos. Para o FONAJE (120), sim. <span class="ref">STJ JT 96, tese 10; FONAJE 120</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">09</span>Os processos correm separados, mesmo havendo conexão.</div><div class="prova-item-a">A jurisdição prevalente avoca os processos, salvo os que já têm sentença definitiva. A conexão não leva à reunião se um deles já foi julgado. <span class="ref">CPP, art. 82; STJ, Súmula 235 (fonte secundária)</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">10</span>E se houver crime federal conexo?</div><div class="prova-item-a">O processo e o julgamento são unificados na <strong>Justiça Federal</strong>, e contravenção segue na Estadual. <span class="ref">STJ, Súmula 122 (JT 72, tese 8); CF, art. 109, IV</span></div></div>
+
+    <div class="prova-group">Remessa ao juízo comum</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">11</span>O réu não foi encontrado para citação.</div><div class="prova-item-a">O juiz encaminha as peças ao <strong>juízo comum</strong>. O FONAJE entende que a competência do Juizado não se restabelece com a localização posterior. <span class="ref">Art. 66, p. único; FONAJE 51, 64</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">12</span>O MP diz que o caso é complexo.</div><div class="prova-item-a">Pode requerer a remessa das peças ao juízo comum; na ação privada, o juiz verifica a complexidade. <span class="ref">Art. 77, §§ 2º e 3º; FONAJE 18, 52</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">13</span>Qual o prazo para arguir incompetência?</div><div class="prova-item-a">A exceção pode ser oposta, verbalmente ou por escrito, <strong>no prazo de defesa</strong>. O juiz também pode declarar de ofício. <span class="ref">CPP, arts. 108 e 109</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">14</span>A incompetência anula tudo?</div><div class="prova-item-a">Anula somente os <strong>atos decisórios</strong>; o processo é remetido ao juiz competente. <span class="ref">CPP, art. 567</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">15</span>Houve desclassificação na sentença.</div><div class="prova-item-a">Se a infração for de outro juízo, remetem-se os autos. Se for possível o sursis, o juiz procede conforme a lei, e os autos vão ao MP para sursis ou transação. <span class="ref">CPP, art. 383, §§ 1º e 2º; Súmula 337/STJ</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">16</span>O júri desclassificou para infração de menor potencial.</div><div class="prova-item-a">O juiz presidente sentencia em seguida, aplicando os <strong>arts. 69 e seguintes da Lei 9.099</strong>. <span class="ref">CPP, art. 492, § 1º</span></div></div>
+
+    <div class="prova-group">Exclusões e fronteiras</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">17</span>Violência doméstica contra a mulher vai ao Juizado Especial?</div><div class="prova-item-a"><strong>Não.</strong> A Lei 9.099 não se aplica, independentemente da pena. <span class="ref">Lei 11.340, art. 41; STF, ADI 4424; Súmula 536/STJ</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">18</span>Vítima idosa?</div><div class="prova-item-a">Desde a Lei 15.163/2025, a Lei 9.099 não se aplica aos crimes do Estatuto nem aos praticados com violência contra a pessoa idosa. <span class="ref">Lei 10.741, art. 94, p. único</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">19</span>Crime militar?</div><div class="prova-item-a">A Lei 9.099 não se aplica à Justiça Militar; o art. 90-A é constitucional. <span class="ref">Art. 90-A; STJ JT 96, tese 9</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">20</span>Porte de droga para consumo pessoal.</div><div class="prova-item-a">Competência do <strong>Juizado Especial estadual</strong>; admite transação e suspensão. <span class="ref">Lei 11.343, art. 48, § 1º; STJ JT 96, teses 11 e 12</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">21</span>Contravenção contra bens da União.</div><div class="prova-item-a">Em regra, <strong>Justiça Estadual</strong>: o art. 109, IV, exclui as contravenções. <span class="ref">CF, art. 109, IV; STJ, Súmula 38 (fonte secundária)</span></div></div>
+
+    <div class="prova-group">Recursos e conflitos</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">22</span>Quem julga a apelação?</div><div class="prova-item-a">Turma de <strong>três juízes de primeiro grau</strong>, na sede do Juizado; prazo de 10 dias. <span class="ref">Art. 82</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">23</span>Onde impetro habeas corpus contra acórdão da Turma Recursal?</div><div class="prova-item-a">No <strong>Tribunal de Justiça ou no TRF</strong>, segundo o STJ. <span class="ref">STJ JT 93, tese 1</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">24</span>Pode haver conflito entre a Turma Recursal e o TJ?</div><div class="prova-item-a">Não: a Turma Recursal não tem qualidade de Tribunal. <span class="ref">STJ JT 72, tese 4</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">25</span>Conflito entre Juizado e juízo comum.</div><div class="prova-item-a">Decide o <strong>TJ ou o TRF</strong>. <span class="ref">STJ JT 72, tese 7</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">26</span>Cabe recurso em sentido estrito?</div><div class="prova-item-a">Segundo o FONAJE, <strong>não</strong>. <span class="ref">FONAJE 48</span></div></div>
+
+    <div class="prova-group">Atos na audiência</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">27</span>A execução da transação fica onde?</div><div class="prova-item-a">No JECrim, salvo existência de central ou vara de penas alternativas. A multa é paga na Secretaria. <span class="ref">FONAJE 87; art. 84</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">28</span>O ato precisa ser feito por precatória.</div><div class="prova-item-a">O FONAJE admite precatória para proposta de transação, interrogatório e proposta de suspensão. <span class="ref">FONAJE 13, 17, 93</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">29</span>Qual a primeira providência da defesa ao ver o caso migrar para a vara comum?</div><div class="prova-item-a">Requerer <strong>transação e composição civil</strong> quanto à infração menor, e conferir o prazo da exceção de incompetência. <span class="ref">Art. 60, p. único; CPP, art. 108</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">30</span>A vítima não aparece e o caso está no juízo comum.</div><div class="prova-item-a">A renúncia tácita por ausência é entendimento do FONAJE para o Juizado; no juízo comum, confirmar a praxe local e o art. 75, parágrafo único. <span class="ref">FONAJE 117; art. 75, p. único</span></div></div>
+  </div>
+</section>
+
+<!-- ============ 17 ============ -->
+<section class="section" id="fontes">
+  <div class="section-header"><div class="section-num">16</div><div class="section-title"><span>Controle de Fidedignidade</span>Fontes, Verificação e Ressalvas</div></div>
+  <div class="card">
+    <h3>Fontes consultadas e grau de verificação (conferência de 11/11/2026)</h3>
+    <div class="tbl-scroll">
+    <table class="comp-table">
+      <thead><tr><th>Fonte</th><th>Uso nesta página</th><th>Situação</th></tr></thead>
+      <tbody>
+        <tr class="hl2"><td>Planalto — Lei 9.099/1995, texto compilado</td><td>Arts. 60, 61, 63, 66, 73, 77, 82, 84 a 86, 93 a 95; redação original e atual do art. 60.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido na íntegra</span></td></tr>
+        <tr class="hl2"><td>Planalto — Leis 11.313/2006, 10.259/2001, 11.340/2006 e 15.163/2025; CPP; CF; CTB; Lei 11.343</td><td>Competência, conexão e continência (CPP arts. 69 a 83, 108, 109, 383, 492, 567), organização, exclusões.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, trechos lidos</span></td></tr>
+        <tr class="hl2"><td>STJ — Jurisprudência em Teses nºs 72, 93 e 96 (PDF do próprio STJ)</td><td>Teses sobre competência criminal, Juizados, conflitos e concurso.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido</span></td></tr>
+        <tr class="hl2"><td>STF — notícias oficiais sobre a ADI 5264, a ADI 4424, a Súmula 690 e os MS 24.674 e 24.691</td><td>Resultados de julgamento e histórico de competência recursal.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido</span></td></tr>
+        <tr class="hl"><td>Voto da relatora na ADI 5264 (minuta do Plenário Virtual, 27/11/2020), em cópia publicada pelo Migalhas</td><td>Fundamentação, doutrina citada (Pacelli, Lima, Távora e Alencar) e tese da competência relativa.</td><td><span class="vb vb-of" style="margin-left:0">Documento do STF, cópia de terceiro</span></td></tr>
+        <tr class="hl"><td>FONAJE — compilação de Evinis Talon (atualizada em 06/02/2024)</td><td>Enunciados criminais.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+        <tr class="hl"><td>STJ — Súmulas 235 e 38; STF — Súmula 690 e histórico do HC 86.834</td><td>Texto das súmulas e orientação sobre HC contra Turma Recursal.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+        <tr class="hl"><td>Lei 15.358/2026 — debate de constitucionalidade</td><td>Aviso sobre a exceção do art. 78, I, do CPP.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+        <tr class="hl3"><td>Doutrina (seção 15)</td><td>Passagens conforme transcritas no voto; síntese de correntes.</td><td><span class="vb vb-pr" style="margin-left:0">Conferir nas obras</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 class="mt2">Limites desta conferência</h3>
+    <ul class="source-list">
+      <li><strong>Site de súmulas do STJ (scon.stj.jus.br)</strong> recusou a consulta automatizada (HTTP 403). As Súmulas 235 e 38 foram conferidas em fonte secundária; a Súmula 122 e a Súmula 337 constam das teses oficiais lidas.</li>
+      <li><strong>Acórdão da ADI 5264:</strong> não foi lido; a fundamentação vem da notícia oficial e do voto da relatora (minuta). Conferir o acórdão antes de citar tese específica.</li>
+      <li><strong>Súmula 690/STF:</strong> a situação formal (vigente ou cancelada) não foi verificada. A orientação indicada para HC contra Turma Recursal é a do STJ (JT 93, tese 1). Conferir no portal do STF.</li>
+      <li><strong>Súmula do STJ sobre mandado de segurança contra Turma Recursal:</strong> o texto não foi verificado.</li>
+      <li><strong>JT 72 (competência criminal)</strong> tem julgados até 30/09/2016; a JT 93 e a JT 96 foram revisadas em 2023. As teses podem ter evoluído; conferir o acórdão recente do tema.</li>
+      <li><strong>Enunciados do FONAJE:</strong> compilação de terceiros; não vinculam tribunais. Podem ter sido editados novos encontros após fevereiro de 2024.</li>
+      <li><strong>Jurisprudência de 2024 a 2026:</strong> não foi localizado, nas fontes consultadas, acórdão recente do STJ ou do STF específico sobre a aplicação do parágrafo único do art. 60 em vara comum ou no júri. Recomenda-se busca complementar nos portais dos tribunais.</li>
+      <li><strong>Crimes eleitorais, foro por prerrogativa e Juizados em tribunais:</strong> não analisados.</li>
+      <li><strong>Lei 15.358/2026 (art. 78, I, do CPP):</strong> a constitucionalidade é discutida em fontes secundárias, com ADI noticiada; o resultado não foi verificado.</li>
+    </ul>
+    <h3 class="mt2">Endereços das fontes oficiais</h3>
+    <ul class="source-list">
+      <li><a href="https://www.planalto.gov.br/ccivil_03/leis/l9099.htm" target="_blank" rel="noopener">Lei 9.099/1995 — Planalto</a></li>
+      <li><a href="https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11313.htm" target="_blank" rel="noopener">Lei 11.313/2006 — Planalto</a></li>
+      <li><a href="https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10259.htm" target="_blank" rel="noopener">Lei 10.259/2001 — Planalto</a></li>
+      <li><a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm" target="_blank" rel="noopener">Código de Processo Penal — Planalto</a></li>
+      <li><a href="https://www.stj.jus.br/internet_docs/jurisprudencia/jurisprudenciaemteses/Jurisprud%C3%AAncia%20em%20teses%2072%20-%20Compet%C3%AAncia%20Criminal.pdf" target="_blank" rel="noopener">STJ — Jurisprudência em Teses 72 (Competência Criminal)</a></li>
+      <li><a href="https://www.stj.jus.br/docs_internet/jurisprudencia/jurisprudenciaemteses/Jurisprudencia%20em%20Teses%2093%20-%20Juizados%20Especiais%20Criminais%20-%20I.pdf" target="_blank" rel="noopener">STJ — Jurisprudência em Teses 93 (JECrim I)</a></li>
+      <li><a href="https://www.stj.jus.br/docs_internet/jurisprudencia/jurisprudenciaemteses/Jurisprudencia%20em%20Teses%2096%20-%20Juizados%20Especiais%20Criminais%20-%20II.pdf" target="_blank" rel="noopener">STJ — Jurisprudência em Teses 96 (JECrim II)</a></li>
+      <li><a href="https://noticias.stf.jus.br/?p=52154" target="_blank" rel="noopener">STF — notícia sobre a ADI 5264</a></li>
+      <li><a href="https://www.migalhas.com.br/arquivos/2020/12/40c450432198e2_votorelatora.pdf" target="_blank" rel="noopener">Voto da relatora na ADI 5264 (cópia publicada pelo Migalhas)</a></li>
+      <li><a href="https://noticias.stf.jus.br/?p=30361" target="_blank" rel="noopener">STF — notícia sobre a ADI 4424</a></li>
+    </ul>
+    <div class="alert alert-red mt2"><span class="alert-tag">Nota de integridade</span><div>Não foram criadas súmulas, teses ou precedentes. Onde não foi possível confirmar a fonte primária, a página identifica a informação como secundária ou como orientação prática. Antes de transcrever qualquer trecho em peça, conferir o texto na fonte oficial.</div></div>
+  </div>
+</section>
+
+</div>
+
+<footer><strong>Art. 60 da Lei 9.099/1995 — Competência dos Juizados Especiais Criminais</strong> · Página única com atalhos internos · Conferência normativa em 11/11/2026 · Material de apoio à atuação; não substitui a consulta às fontes oficiais.</footer>
+
+<a id="to-top" href="#top-nav">Topo</a>
+
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('#top-nav a[href^="#"]'));
+  var map={};
+  links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  var ids=Object.keys(map);
+  var toTop=document.getElementById('to-top');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    var current=null;
+    ids.forEach(function(id){
+      var el=document.getElementById(id);
+      if(el && el.getBoundingClientRect().top<=160){current=id;}
+    });
+    links.forEach(function(a){a.classList.remove('active');});
+    if(current && map[current]){
+      var a=map[current], nav=document.getElementById('top-nav');
+      a.classList.add('active');
+      if(nav){
+        var left=a.offsetLeft-(nav.clientWidth/2)+(a.offsetWidth/2);
+        nav.scrollLeft=left;
+      }
+    }
+    if(toTop){toTop.classList.toggle('show',y>600);}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>
