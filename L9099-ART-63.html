@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 63 da Lei 9.099/1995 — Competência Territorial do Juizado Especial Criminal | Fluxograma de Atuação em Audiência</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0d1b2a;--navy-mid:#1a2f45;--navy-light:#243b55;
+  --gold:#c8960c;--gold-light:#e8b84b;--gold-pale:#fdf3d8;
+  --cream:#faf7f2;--cream-mid:#f0ebe2;
+  --text-dark:#1a1208;--text-mid:#3d3020;--text-soft:#6b5c40;
+  --border:#d4c49a;--border-light:#e8dcbf;
+  --red-accent:#8b1a1a;--green-accent:#1a4a2e;--blue-accent:#1a3a5c;--purple-accent:#4a1a5c;
+  --shadow:0 4px 24px rgba(13,27,42,0.10);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Source Serif 4',Georgia,serif;background:var(--cream);color:var(--text-dark);font-size:15px;line-height:1.75;}
+a{color:var(--blue-accent);}
+strong{font-weight:700;}
+
+/* ---------- Navegação ---------- */
+#top-nav{position:sticky;top:0;z-index:999;background:var(--navy);border-bottom:3px solid var(--gold);padding:0 1.5rem;display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;}
+#top-nav::-webkit-scrollbar{display:none;}
+#top-nav .nav-brand{font-family:'Playfair Display',serif;color:var(--gold-light);font-size:0.9rem;font-weight:700;white-space:nowrap;padding:0.85rem 1.2rem 0.85rem 0;border-right:1px solid rgba(200,150,12,0.3);margin-right:0.5rem;letter-spacing:0.5px;}
+#top-nav .nav-main-links{display:flex;align-items:center;}
+#top-nav a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.72rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;padding:0.85rem 0.8rem;white-space:nowrap;transition:color .2s;border-bottom:3px solid transparent;margin-bottom:-3px;}
+#top-nav a:hover,#top-nav a.active{color:var(--gold-light);border-bottom-color:var(--gold);}
+#top-nav a.nav-prova{color:var(--gold-light);}
+
+/* ---------- Cabeçalho ---------- */
+#hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 60%,#1e3d5c 100%);color:white;padding:3.5rem 2rem 3rem;text-align:center;position:relative;overflow:hidden;}
+#hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(200,150,12,0.03) 0px,rgba(200,150,12,0.03) 1px,transparent 1px,transparent 40px);}
+#hero .badge{display:inline-block;background:rgba(200,150,12,0.15);border:1px solid rgba(200,150,12,0.5);color:var(--gold-light);font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;padding:0.35rem 1rem;border-radius:2px;margin-bottom:1.2rem;font-weight:600;position:relative;}
+#hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.15;margin-bottom:0.6rem;letter-spacing:-0.5px;position:relative;}
+#hero h1 span{color:var(--gold-light);}
+#hero .subtitle{font-size:1rem;color:rgba(255,255,255,0.65);font-style:italic;margin-bottom:1.5rem;position:relative;}
+#hero .law-box{display:inline-block;background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.4);border-left:4px solid var(--gold);color:rgba(255,255,255,0.9);font-size:0.93rem;font-style:italic;padding:1rem 1.5rem;max-width:1120px;text-align:left;line-height:1.9;border-radius:0 4px 4px 0;position:relative;}
+#hero .law-box strong{color:var(--gold-light);font-style:normal;display:block;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem;}
+
+/* ---------- Estrutura ---------- */
+.page-wrap{width:100%;margin:0;padding:0 clamp(1rem,3vw,4rem) 4rem;}
+.section{margin-top:3.5rem;scroll-margin-top:56px;}
+.section-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:0.75rem;border-bottom:2px solid var(--border);}
+.section-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--border);line-height:1;min-width:2.5rem;}
+.section-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--navy);line-height:1.2;}
+.section-title span{display:block;font-size:0.75rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);}
+.sub-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin:1.6rem 0 0.7rem;padding-left:0.7rem;border-left:4px solid var(--gold);}
+
+/* ---------- Cartões ---------- */
+.card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1.4rem 1.6rem;box-shadow:var(--shadow);}
+.card-grid{display:grid;gap:1rem;}
+.card-grid-2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr));}
+.card-grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
+.card-grid-4{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));}
+.card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:0.6rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border-light);color:var(--navy);}
+.card h4{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;margin:0.8rem 0 0.35rem;color:var(--navy);}
+.card p,.card li{font-size:0.88rem;line-height:1.7;color:var(--text-mid);}
+.card p + p{margin-top:0.55rem;}
+.card ul,.card ol{padding-left:1.1rem;}
+.card li{margin-bottom:0.3rem;}
+.type-card{border-top:4px solid;}
+.tc-red{border-top-color:var(--red-accent);}.tc-red h3{color:var(--red-accent);}
+.tc-green{border-top-color:var(--green-accent);}.tc-green h3{color:var(--green-accent);}
+.tc-blue{border-top-color:var(--blue-accent);}.tc-blue h3{color:var(--blue-accent);}
+.tc-gold{border-top-color:var(--gold);}.tc-gold h3{color:#7a5a00;}
+.tc-purple{border-top-color:var(--purple-accent);}.tc-purple h3{color:var(--purple-accent);}
+
+/* ---------- Fluxograma ---------- */
+.flow-wrap{background:white;border:1px solid var(--border-light);border-radius:6px;padding:2rem 1.5rem;box-shadow:var(--shadow);overflow-x:auto;}
+.flow-center{display:flex;flex-direction:column;align-items:center;}
+.flow-node{border-radius:4px;padding:0.65rem 1.4rem;font-size:0.82rem;font-weight:600;text-align:center;min-width:220px;max-width:760px;line-height:1.55;}
+.flow-node small{display:block;font-weight:400;font-size:0.74rem;opacity:0.9;margin-top:0.2rem;}
+.flow-start{background:var(--navy);color:white;border-radius:50px;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;}
+.flow-end-green{background:var(--green-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-red{background:var(--red-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-gold{background:var(--gold);color:var(--navy);border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-blue{background:var(--blue-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-purple{background:var(--purple-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-box-navy{background:var(--navy-mid);color:white;border-left:4px solid var(--gold);font-size:0.8rem;}
+.flow-box-navy b{color:var(--gold-light);}
+.flow-box-green{background:#edf7f0;border:1px solid #7ec89a;border-left:4px solid var(--green-accent);color:var(--text-dark);}
+.flow-box-blue{background:#edf2f8;border:1px solid #8eb4d8;border-left:4px solid var(--blue-accent);color:var(--text-dark);}
+.flow-box-red{background:#fdf0f0;border:1px solid #e09090;border-left:4px solid var(--red-accent);color:var(--text-dark);}
+.flow-box-gold{background:var(--gold-pale);border:2px solid var(--gold);color:var(--text-dark);}
+.flow-box-purple{background:#f3eef8;border:1px solid #b89dd8;border-left:4px solid var(--purple-accent);color:var(--text-dark);}
+.flow-arrow{font-size:1.3rem;color:var(--border);line-height:1;margin:0.15rem 0;}
+.flow-row{display:flex;align-items:flex-start;gap:1.5rem;width:100%;justify-content:center;flex-wrap:wrap;}
+.flow-branch{display:flex;flex-direction:column;align-items:center;flex:1;min-width:210px;}
+.flow-label{font-size:0.68rem;color:var(--text-soft);font-weight:600;letter-spacing:0.5px;text-transform:uppercase;background:var(--cream-mid);padding:0.15rem 0.5rem;border-radius:2px;margin:0.15rem 0;text-align:center;}
+.flow-connector-line{width:1px;height:28px;background:var(--border);}
+
+/* ---------- Tabelas ---------- */
+.tbl-scroll{overflow-x:auto;border-radius:6px;box-shadow:var(--shadow);}
+.comp-table{width:100%;border-collapse:collapse;font-size:0.84rem;background:white;}
+.comp-table thead{background:var(--navy);color:white;}
+.comp-table thead th{padding:0.85rem 1rem;font-weight:600;letter-spacing:0.5px;font-size:0.8rem;text-align:left;}
+.comp-table thead th:first-child{color:var(--gold-light);}
+.comp-table tbody tr{border-bottom:1px solid var(--border-light);}
+.comp-table tbody tr:last-child{border-bottom:none;}
+.comp-table tbody tr:nth-child(even){background:var(--cream);}
+.comp-table td{padding:0.75rem 1rem;color:var(--text-mid);vertical-align:top;}
+.comp-table td:first-child{font-weight:600;color:var(--navy);font-size:0.8rem;}
+.comp-table .hl td{background:var(--gold-pale)!important;}
+.comp-table .hl2 td{background:#edf7f0!important;}
+.comp-table .hl3 td{background:#edf2f8!important;}
+.comp-table .hl4 td{background:#fdf0f0!important;}
+.comp-table .hl5 td{background:#f3eef8!important;}
+
+/* ---------- Jurisprudência ---------- */
+.juris-grid{display:grid;gap:1rem;}
+.juris-card{background:white;border:1px solid var(--border-light);border-left:5px solid;border-radius:0 6px 6px 0;padding:1.2rem 1.4rem;box-shadow:var(--shadow);}
+.juris-card.stf{border-left-color:var(--red-accent);}
+.juris-card.stj{border-left-color:var(--navy);}
+.juris-card.doutrina{border-left-color:var(--gold);}
+.juris-card.fonaje{border-left-color:var(--purple-accent);}
+.juris-header{display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem;flex-wrap:wrap;}
+.juris-badge{font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:0.2rem 0.55rem;border-radius:2px;}
+.juris-badge.stf{background:var(--red-accent);color:white;}
+.juris-badge.stj{background:var(--navy);color:white;}
+.juris-badge.doutrina{background:var(--gold);color:var(--navy);}
+.juris-badge.sumula{background:var(--green-accent);color:white;}
+.juris-badge.tese{background:var(--blue-accent);color:white;}
+.juris-badge.purple{background:var(--purple-accent);color:white;}
+.juris-title{font-family:'Playfair Display',serif;font-size:0.92rem;font-weight:700;color:var(--navy);}
+.juris-body{font-size:0.84rem;color:var(--text-mid);line-height:1.7;}
+.juris-body .quote{display:block;margin:0.4rem 0;padding:0.5rem 0.8rem;background:var(--cream-mid);border-left:3px solid var(--border);font-style:italic;}
+.vb{display:inline-block;font-size:0.6rem;font-weight:700;letter-spacing:0.9px;text-transform:uppercase;padding:0.12rem 0.45rem;border-radius:2px;margin-left:auto;}
+.vb-of{background:#dceee3;color:var(--green-accent);border:1px solid #7ec89a;}
+.vb-sec{background:#fdf3d8;color:#7a5a00;border:1px solid #d4aa3a;}
+.vb-pr{background:#ece5f5;color:var(--purple-accent);border:1px solid #b89dd8;}
+
+/* ---------- Alertas e citações ---------- */
+.alert{padding:0.9rem 1.2rem;border-radius:4px;font-size:0.84rem;line-height:1.7;display:flex;gap:0.7rem;align-items:flex-start;}
+.alert .alert-tag{flex-shrink:0;font-size:0.62rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:0.2rem 0.5rem;border-radius:2px;margin-top:0.2rem;}
+.alert-gold{background:var(--gold-pale);border:1px solid #d4aa3a;color:#5a4000;}.alert-gold .alert-tag{background:#d4aa3a;color:#3a2800;}
+.alert-red{background:#fdf0f0;border:1px solid #e09090;color:#5a0000;}.alert-red .alert-tag{background:var(--red-accent);color:white;}
+.alert-navy{background:#f0f4f8;border:1px solid #aabbcc;color:var(--navy);}.alert-navy .alert-tag{background:var(--navy);color:white;}
+.alert-green{background:#edf7f0;border:1px solid #7ec89a;color:#1a4a2e;}.alert-green .alert-tag{background:var(--green-accent);color:white;}
+.alert-purple{background:#f3eef8;border:1px solid #b89dd8;color:var(--purple-accent);}.alert-purple .alert-tag{background:var(--purple-accent);color:white;}
+.law-quote{background:var(--cream-mid);border-left:4px solid var(--navy);padding:0.9rem 1.2rem;font-size:0.88rem;font-style:italic;color:var(--text-mid);line-height:1.7;border-radius:0 4px 4px 0;}
+.law-quote strong{font-style:normal;color:var(--navy);font-size:0.75rem;letter-spacing:0.5px;display:block;margin-bottom:0.25rem;}
+.law-quote + .law-quote{margin-top:0.7rem;}
+.divider{height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);margin:1.2rem 0;}
+.mt1{margin-top:0.75rem;}.mt2{margin-top:1rem;}.mt3{margin-top:1.5rem;}
+.ref{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--text-soft);}
+.source-note{font-size:0.78rem;color:var(--text-soft);border-top:1px dashed var(--border);padding-top:0.7rem;margin-top:0.9rem;}
+.source-list li{font-size:0.82rem;margin-bottom:0.45rem;}
+.tag{display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;padding:0.15rem 0.5rem;border-radius:2px;margin:0.1rem;}
+.tag-blue{background:#dce8f5;color:var(--blue-accent);}
+.tag-green{background:#dceee3;color:var(--green-accent);}
+.tag-gold{background:var(--gold-pale);color:#7a5a00;border:1px solid #d4aa3a;}
+.tag-red{background:#fde8e8;color:var(--red-accent);}
+.tag-purple{background:#ece5f5;color:var(--purple-accent);}
+
+/* ---------- Anatomia do dispositivo ---------- */
+.anat-visual{display:flex;align-items:stretch;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);}
+.av-col{flex:1;padding:1.2rem 1.4rem;}
+.av-navy{background:var(--navy-mid);color:white;}
+.av-sep{background:var(--navy);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:900;flex:0 0 2.2rem;}
+.av-red{background:var(--red-accent);color:white;}
+.av-blue{background:var(--blue-accent);color:white;}
+.av-gold{background:var(--gold);color:var(--navy);}
+.av-purple{background:var(--purple-accent);color:white;}
+.av-col h4{font-family:'Playfair Display',serif;font-size:0.98rem;font-weight:700;margin-bottom:0.5rem;border-bottom:1px solid rgba(255,255,255,0.2);padding-bottom:0.35rem;}
+.av-col p,.av-col li{font-size:0.82rem;line-height:1.65;}
+.av-col ul{padding-left:1rem;margin-top:0.3rem;}
+
+/* ---------- Pontos recorrentes ---------- */
+.prova-section{background:var(--navy);border-radius:8px;padding:2rem;color:white;margin-top:3.5rem;scroll-margin-top:56px;}
+.prova-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold-light);margin-bottom:0.5rem;}
+.prova-section .intro{font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;font-style:italic;}
+.prova-items{display:grid;gap:0.75rem;}
+.prova-item{background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.25);border-left:4px solid var(--gold);border-radius:0 4px 4px 0;padding:1rem 1.2rem;}
+.prova-item-q{font-size:0.84rem;font-weight:600;color:var(--gold-light);margin-bottom:0.4rem;display:flex;align-items:flex-start;gap:0.6rem;}
+.prova-item-q .qnum{background:var(--gold);color:var(--navy);font-size:0.65rem;font-weight:700;padding:0.1rem 0.45rem;border-radius:2px;flex-shrink:0;margin-top:0.1rem;}
+.prova-item-a{font-size:0.82rem;color:rgba(255,255,255,0.84);line-height:1.65;}
+.prova-item-a strong{color:white;}
+.prova-item-a .ref{color:var(--gold-light);}
+.prova-group{font-family:'Playfair Display',serif;font-size:1rem;color:var(--gold-light);margin:1.4rem 0 0.2rem;padding-bottom:0.3rem;border-bottom:1px solid rgba(200,150,12,0.3);}
+
+footer{background:var(--navy);color:rgba(255,255,255,0.5);text-align:center;padding:1.5rem;font-size:0.75rem;border-top:2px solid var(--gold);}
+footer strong{color:var(--gold-light);}
+#to-top{position:fixed;right:1.2rem;bottom:1.2rem;z-index:998;background:var(--navy);color:var(--gold-light);border:1px solid var(--gold);border-radius:3px;padding:0.45rem 0.8rem;font-size:0.72rem;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;text-decoration:none;opacity:0;pointer-events:none;transition:opacity .2s;}
+#to-top.show{opacity:1;pointer-events:auto;}
+
+@page{size:A4 landscape;margin:8mm;}
+@media print{
+  #top-nav,#to-top,footer{display:none;}
+  #hero{padding:1.2rem 1rem;}#hero::before{display:none;}
+  .page-wrap{padding:0 0.35rem 1rem;}
+  .section{margin-top:1.15rem;}
+  .card,.juris-card,.flow-wrap,.prova-item,.comp-table tr{page-break-inside:avoid;}
+  .card,.juris-card,.flow-wrap{box-shadow:none;border:1px solid #ccc;}
+  .prova-section{background:#f0f4f8!important;color:#000!important;}
+  .prova-section h2,.prova-group{color:#0d1b2a!important;}
+  .prova-item{background:white!important;border:1px solid #ccc!important;}
+  .prova-item-q{color:#7a5a00!important;}.prova-item-a{color:#333!important;}.prova-item-a .ref{color:#555!important;}
+  body{font-size:8.5pt;line-height:1.4;}
+  .card p,.card li,.juris-body{font-size:8pt;line-height:1.4;}
+  .comp-table{font-size:7.5pt;}.comp-table td,.comp-table th{padding:.35rem;}
+}
+@media(max-width:700px){
+  #hero{padding:2rem 1rem;}#hero h1{font-size:1.6rem;}
+  .card-grid-2,.card-grid-3,.card-grid-4{grid-template-columns:1fr;}
+  .section-title{font-size:1.1rem;}
+  .comp-table{font-size:0.76rem;min-width:560px;}.comp-table td,.comp-table th{padding:0.55rem 0.65rem;}
+  .flow-node{min-width:150px;font-size:0.74rem;}
+  .anat-visual{flex-direction:column;}.av-sep{padding:0.4rem;flex:0 0 1.5rem;}
+}
+</style>
+</head>
+<body>
+<!-- VM-STUDY-BAR-START -->
+<style id="vm-bar-css">
+html,body{-webkit-transform:none!important;transform:none!important;overflow-x:hidden;}
+#vm-study-bar *{box-sizing:border-box;margin:0;padding:0;}
+#vm-study-bar{
+  position:fixed!important;top:0!important;left:0!important;right:0!important;
+  z-index:2147483647!important;
+  -webkit-transform:translateZ(0);transform:translateZ(0);
+  will-change:transform;-webkit-backface-visibility:hidden;backface-visibility:hidden;
+  background:linear-gradient(180deg,#0d1b2a 0%,#0a1520 100%);
+  border-bottom:2px solid #c8960c;
+  box-shadow:0 2px 16px rgba(0,0,0,.5);
+  font-family:'Source Serif 4',Georgia,serif;
+  display:flex;flex-direction:column;
+  user-select:none;-webkit-user-select:none;
+}
+.vm-row1{
+  display:flex;align-items:center;padding:0 .4rem;min-height:42px;
+  border-bottom:1px solid rgba(200,150,12,.18);
+}
+.vm-back{
+  display:flex;align-items:center;color:#e8b84b;text-decoration:none;
+  font-size:.78rem;font-weight:700;padding:0 .6rem 0 .15rem;min-height:42px;
+  border-right:1px solid rgba(200,150,12,.22);white-space:nowrap;flex-shrink:0;
+  -webkit-tap-highlight-color:transparent;
+}
+.vm-back:active{color:#fff;}
+.vm-info{
+  font-size:.68rem;color:rgba(255,255,255,.65);padding:0 .5rem;flex:1;
+  min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.vm-info strong{color:#e8b84b;font-weight:700;}
+.vm-completed-wrap{
+  display:flex;align-items:center;height:100%;
+  padding-left:.85rem;padding-right:.65rem;
+  margin-left:.45rem;
+  border-left:1px solid rgba(200,150,12,.18);flex-shrink:0;
+}
+.vm-completed-wrap label{
+  display:flex;align-items:center;gap:.35rem;font-size:.66rem;
+  color:rgba(255,255,255,.5);cursor:pointer;white-space:nowrap;padding:0 .1rem;
+}
+#vm-check{width:16px;height:16px;accent-color:#2ecc71;cursor:pointer;flex-shrink:0;}
+#vm-check-label{transition:color .2s;}
+.vm-row2{display:flex;align-items:center;padding:0 .65rem;min-height:42px;gap:.75rem;}
+.vm-timer-block{display:flex;align-items:center;gap:.55rem;flex-shrink:0;margin-left:.35rem;}
+.vm-timer{
+  font-family:'JetBrains Mono','Courier New',monospace;
+  font-size:1.05rem;font-weight:700;color:#e8b84b;letter-spacing:1.2px;
+  min-width:78px;text-align:center;line-height:1;
+}
+.vm-pause-timer{font-size:.62rem;color:#fc8181;min-width:48px;font-weight:600;}
+/* Status pill: visível apenas quando ativo (leitura/pausa/concluído) */
+.vm-status{
+  font-size:.58rem;font-weight:700;letter-spacing:.7px;text-transform:uppercase;
+  padding:.2rem .5rem;border-radius:10px;white-space:nowrap;flex-shrink:0;
+  transition:background .2s,color .2s;
+}
+.vm-status-idle   {display:none;}
+.vm-status-reading{background:rgba(46,204,113,.18);  color:#2ecc71;}
+.vm-status-paused {background:rgba(252,137,74,.18);  color:#fc894a;}
+.vm-status-done   {background:rgba(116,185,255,.18); color:#74b9ff;}
+.vm-spacer{flex:1;}
+.vm-btns{display:flex;gap:.55rem;flex-shrink:0;margin-left:.55rem;}
+.vm-btn{
+  font-family:'Source Serif 4',Georgia,serif;font-size:.68rem;font-weight:700;
+  padding:0 .55rem;height:32px;min-width:32px;border-radius:4px;border:1.5px solid;
+  cursor:pointer;white-space:nowrap;transition:background .15s,transform .1s;
+  display:flex;align-items:center;justify-content:center;gap:.35rem;
+  -webkit-tap-highlight-color:transparent;
+}
+.vm-btn:active{transform:scale(.94);}
+.vm-btn:disabled{opacity:.2;cursor:default;pointer-events:none;}
+#vm-btn-start{background:rgba(46,204,113,.18);border-color:rgba(46,204,113,.55);color:#2ecc71;}
+#vm-btn-start:not(:disabled):active{background:rgba(46,204,113,.35);}
+#vm-btn-pause{background:rgba(230,126,34,.18);border-color:rgba(230,126,34,.55);color:#fc894a;}
+#vm-btn-pause:not(:disabled):active{background:rgba(230,126,34,.35);}
+#vm-btn-end{background:rgba(116,185,255,.18);border-color:rgba(116,185,255,.55);color:#74b9ff;}
+#vm-btn-end:not(:disabled):active{background:rgba(116,185,255,.35);}
+body{padding-top:84px!important;}
+.tabs-wrap,#top-nav{top:84px!important;margin-top:-84px!important;}
+.hero,.page-wrap,.container,.wrap,main{scroll-margin-top:140px;}
+@media(min-width:520px){
+  #vm-study-bar{flex-direction:row;align-items:stretch;height:46px;gap:.95rem;padding-right:.75rem;}
+  .vm-row1{border-bottom:none;min-height:46px;padding:0;}
+  .vm-row2{min-height:46px;padding:0 .5rem 0 0;gap:.85rem;}
+  body{padding-top:46px!important;}
+  .tabs-wrap,#top-nav{top:46px!important;margin-top:-46px!important;}
+}
+
+@media(max-width:360px){
+  .vm-timer{font-size:.9rem;min-width:68px;}
+  .vm-btn{font-size:.6rem;padding:0 .38rem;height:30px;}
+  .vm-info{font-size:.61rem;}
+}
+
+
+/* === AJUSTE FINAL: BARRA SUPERIOR PADRONIZADA / SEM FAIXA BRANCA === */
+:root{--vm-study-bar-h:46px;}
+#vm-study-bar{
+  position:fixed!important;
+  top:0!important;left:0!important;right:0!important;
+  width:100%!important;
+  min-height:var(--vm-study-bar-h)!important;
+  height:var(--vm-study-bar-h)!important;
+  margin:0!important;
+  padding:0 1.25rem 0 0!important;
+  display:flex!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  gap:0!important;
+  background:#0a1520!important;
+  border-top:0!important;
+  border-bottom:2px solid #c8960c!important;
+  box-shadow:0 2px 14px rgba(0,0,0,.55)!important;
+  overflow:visible!important;
+}
+#vm-study-bar .vm-row1,
+#vm-study-bar .vm-row2{
+  display:contents!important;
+  min-height:0!important;
+  height:auto!important;
+  padding:0!important;
+  border:0!important;
+}
+#vm-study-bar .vm-back{
+  order:1!important;
+  height:var(--vm-study-bar-h)!important;
+  min-height:var(--vm-study-bar-h)!important;
+  padding:0 1.15rem!important;
+  margin:0!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  border-right:1px solid rgba(200,150,12,.35)!important;
+}
+#vm-study-bar .vm-info{
+  order:2!important;
+  flex:1 1 auto!important;
+  min-width:70px!important;
+  padding:0 1.3rem!important;
+  margin:0!important;
+  white-space:nowrap!important;
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+}
+#vm-study-bar .vm-timer-block{
+  order:3!important;
+  height:var(--vm-study-bar-h)!important;
+  min-height:var(--vm-study-bar-h)!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:.65rem!important;
+  margin:0 1.1rem 0 0!important;
+  flex:0 0 auto!important;
+}
+#vm-study-bar .vm-status{
+  order:4!important;
+  margin:0 .85rem 0 0!important;
+}
+#vm-study-bar .vm-spacer{display:none!important;}
+#vm-study-bar .vm-btns{
+  order:5!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:.55rem!important;
+  margin:0 1.25rem 0 0!important;
+  flex:0 0 auto!important;
+}
+#vm-study-bar .vm-btn{
+  width:74px!important;
+  min-width:74px!important;
+  max-width:74px!important;
+  height:32px!important;
+  min-height:32px!important;
+  padding:0!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:.25rem!important;
+  text-align:center!important;
+  border-radius:4px!important;
+  line-height:1!important;
+}
+#vm-study-bar .vm-completed-wrap{
+  order:6!important;
+  height:var(--vm-study-bar-h)!important;
+  min-height:var(--vm-study-bar-h)!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  padding:0 0 0 1.2rem!important;
+  margin:0!important;
+  border-left:1px solid rgba(200,150,12,.25)!important;
+  flex:0 0 auto!important;
+}
+body{
+  padding-top:var(--vm-study-bar-h)!important;
+  margin-top:0!important;
+}
+#top-nav,.tabs-wrap,.tab-bar,.nav-tabs{
+  top:var(--vm-study-bar-h)!important;
+  margin-top:0!important;
+}
+.hero,.page-wrap,.container,.wrap,main,.wrapper{
+  scroll-margin-top:calc(var(--vm-study-bar-h) + 76px)!important;
+}
+
+@media(max-width:699px){
+  :root{--vm-study-bar-h:88px;}
+  #vm-study-bar{
+    height:var(--vm-study-bar-h)!important;
+    min-height:var(--vm-study-bar-h)!important;
+    padding:0!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    overflow:hidden!important;
+  }
+  #vm-study-bar .vm-row1,
+  #vm-study-bar .vm-row2{
+    display:flex!important;
+    width:100%!important;
+  }
+  #vm-study-bar .vm-row1{
+    height:42px!important;
+    min-height:42px!important;
+    align-items:center!important;
+    border-bottom:1px solid rgba(200,150,12,.22)!important;
+  }
+  #vm-study-bar .vm-row2{
+    height:46px!important;
+    min-height:46px!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:.35rem!important;
+    padding:0 .45rem!important;
+  }
+  #vm-study-bar .vm-back{
+    height:42px!important;
+    min-height:42px!important;
+    padding:0 .65rem!important;
+  }
+  #vm-study-bar .vm-info{
+    padding:0 .55rem!important;
+    font-size:.64rem!important;
+  }
+  #vm-study-bar .vm-completed-wrap{
+    order:3!important;
+    height:42px!important;
+    min-height:42px!important;
+    padding:0 .55rem!important;
+    border-left:1px solid rgba(200,150,12,.22)!important;
+  }
+  #vm-study-bar .vm-timer-block{
+    order:1!important;
+    height:46px!important;
+    min-height:46px!important;
+    margin:0!important;
+    gap:.25rem!important;
+  }
+  #vm-study-bar .vm-timer{
+    font-size:.92rem!important;
+    min-width:74px!important;
+    letter-spacing:.6px!important;
+  }
+  #vm-study-bar .vm-pause-timer{display:none!important;}
+  #vm-study-bar .vm-status{display:none!important;}
+  #vm-study-bar .vm-btns{
+    order:2!important;
+    gap:.35rem!important;
+    margin:0!important;
+  }
+  #vm-study-bar .vm-btn{
+    width:66px!important;
+    min-width:66px!important;
+    max-width:66px!important;
+    height:31px!important;
+    min-height:31px!important;
+    font-size:.58rem!important;
+  }
+}
+
+@media(max-width:380px){
+  #vm-study-bar .vm-btn{width:60px!important;min-width:60px!important;max-width:60px!important;font-size:.54rem!important;}
+  #vm-study-bar .vm-timer{font-size:.82rem!important;min-width:66px!important;}
+  #vm-study-bar .vm-info{font-size:.58rem!important;}
+}
+</style>
+
+<div id="vm-study-bar"
+  data-article-id="L9099-ART-63"
+  data-subject="Lei 9.099/95"
+  data-subject-id="L9099"
+  data-article-num="63">
+  <div class="vm-row1">
+    <a class="vm-back" href="index.html">&#8592; Início</a>
+    <div class="vm-info"><strong>Lei 9.099/95</strong> &middot; Art.&nbsp;63</div>
+    <div class="vm-completed-wrap">
+      <label>
+        <input type="checkbox" id="vm-check" onchange="vmToggleCompleted()">
+        <span id="vm-check-label">Concluído</span>
+      </label>
+    </div>
+  </div>
+  <div class="vm-row2">
+    <div class="vm-timer-block">
+      <div class="vm-timer" id="vm-timer">00:00:00</div>
+      <div class="vm-pause-timer" id="vm-pause-timer"></div>
+    </div>
+    <div class="vm-status vm-status-idle" id="vm-status">Parado</div>
+    <div class="vm-spacer"></div>
+    <div class="vm-btns">
+      <button class="vm-btn" id="vm-btn-start" onclick="vmStartResume()">&#9654; Iniciar</button>
+      <button class="vm-btn" id="vm-btn-pause" onclick="vmPause()"       disabled>&#9646;&#9646; Pausa</button>
+      <button class="vm-btn" id="vm-btn-end"   onclick="vmEnd()"         disabled>&#10003; Fim</button>
+    </div>
+  </div>
+</div>
+
+<script src="study-tracker.js"></script>
+<script>
+(function(){
+  var ARTICLE_ID='L9099-ART-63',SUBJECT='Lei 9.099/95',SUBJECT_ID='L9099',ARTICLE_NUM=63;
+  var state='idle',timerIv=null,pauseIv=null,sessTs=0,pauseTs=0,accStudy=0,accPause=0;
+  function $(id){return document.getElementById(id);}
+  var elTimer=$('vm-timer'),elPause=$('vm-pause-timer'),elStatus=$('vm-status');
+  var btnS=$('vm-btn-start'),btnP=$('vm-btn-pause'),btnE=$('vm-btn-end');
+  var chk=$('vm-check'),lbl=$('vm-check-label');
+  function pad(n){return String(Math.floor(n)).padStart(2,'0');}
+  function fmtMs(ms){var s=Math.floor(ms/1000),h=Math.floor(s/3600);return pad(h)+':'+pad((s%3600)/60)+':'+pad(s%60);}
+  function fmtShort(ms){var m=Math.round(ms/60000);return pad(Math.floor(m/60))+':'+pad(m%60);}
+  function setStatus(t,c){elStatus.textContent=t;elStatus.className='vm-status '+c;}
+  function startStudyIv(){clearInterval(timerIv);timerIv=setInterval(function(){elTimer.textContent=fmtMs(accStudy+(Date.now()-sessTs));},500);}
+  function stopStudyIv(){clearInterval(timerIv);}
+  function startPauseIv(){clearInterval(pauseIv);pauseIv=setInterval(function(){elPause.textContent='\u23F8 '+fmtShort(Date.now()-pauseTs);},500);}
+  function stopPauseIv(){clearInterval(pauseIv);elPause.textContent='';}
+  window.vmStartResume=function(){
+    if(state==='idle'){
+      VMTracker.startSession(ARTICLE_ID,SUBJECT,SUBJECT_ID,ARTICLE_NUM);
+      sessTs=Date.now();accStudy=0;accPause=0;state='reading';
+      setStatus('Estudando','vm-status-reading');
+      btnS.disabled=true;btnP.disabled=false;btnE.disabled=false;
+      startStudyIv();
+    }else if(state==='paused'){
+      VMTracker.resumeSession();accPause+=Date.now()-pauseTs;sessTs=Date.now();state='reading';
+      setStatus('Estudando','vm-status-reading');
+      btnS.disabled=true;btnP.disabled=false;btnE.disabled=false;
+      stopPauseIv();startStudyIv();
+    }
+  };
+  window.vmPause=function(){
+    if(state!=='reading')return;
+    VMTracker.pauseSession();accStudy+=Date.now()-sessTs;pauseTs=Date.now();stopStudyIv();
+    state='paused';setStatus('Pausado','vm-status-paused');
+    btnS.textContent='\u25BA Retomar';btnS.disabled=false;btnP.disabled=true;btnE.disabled=false;
+    startPauseIv();
+  };
+  window.vmEnd=function(){
+    if(state!=='reading'&&state!=='paused')return;
+    if(state==='reading')accStudy+=Date.now()-sessTs;
+    VMTracker.endSession();stopStudyIv();stopPauseIv();state='done';
+    elTimer.textContent=fmtMs(accStudy);setStatus('Conclu\u00EDdo \u2713','vm-status-done');
+    btnS.textContent='\u21BA Nova';btnS.disabled=false;
+    btnS.onclick=function(){
+      state='idle';accStudy=0;accPause=0;elTimer.textContent='00:00:00';
+      setStatus('Parado','vm-status-idle');
+      btnS.textContent='\u25BA Iniciar';btnS.onclick=window.vmStartResume;
+      btnP.disabled=true;btnE.disabled=true;
+    };
+    btnP.disabled=true;btnE.disabled=true;
+  };
+  window.vmToggleCompleted=function(){
+    if(chk.checked){VMTracker.markArticleCompleted(ARTICLE_ID,SUBJECT,SUBJECT_ID,ARTICLE_NUM);lbl.textContent='\u2713 Feito!';lbl.style.color='#2ecc71';}
+    else{VMTracker.unmarkArticleCompleted(ARTICLE_ID);lbl.textContent='Conclu\u00EDdo';lbl.style.color='';}
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    if(VMTracker.isArticleCompleted(ARTICLE_ID)){chk.checked=true;lbl.textContent='\u2713 Feito!';lbl.style.color='#2ecc71';}
+    var active=VMTracker.getActiveSession();
+    if(active&&active.articleFile===ARTICLE_ID){
+      if(active.state==='reading'){
+        sessTs=active.startTs;accStudy=0;state='reading';setStatus('Estudando','vm-status-reading');
+        btnS.disabled=true;btnP.disabled=false;btnE.disabled=false;startStudyIv();
+      }else if(active.state==='paused'){
+        var lp=active.pauses[active.pauses.length-1];pauseTs=lp?lp.pauseStartTs:Date.now();
+        accStudy=active.pauseTotalMs||0;state='paused';setStatus('Pausado','vm-status-paused');
+        btnS.textContent='\u25BA Retomar';btnS.disabled=false;btnP.disabled=true;btnE.disabled=false;startPauseIv();
+      }
+    }
+  });
+})();
+</script>
+<!-- VM-STUDY-BAR-END -->
+
+<style id="vm-no-gap-fixed-menus-final">
+/* CORREÇÃO DEFINITIVA: remove faixa branca e fixa menu abaixo do cronômetro */
+html, body{
+  margin-top:0!important;
+  padding-top:0!important;
+  scroll-padding-top:calc(var(--vm-study-bar-h,46px) + 58px)!important;
+}
+#vm-study-bar{
+  position:fixed!important;
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  width:100%!important;
+  z-index:2147483647!important;
+}
+#top-nav,.tabs-wrap,.tab-bar,.nav-tabs{
+  position:sticky!important;
+  top:var(--vm-study-bar-h,46px)!important;
+  margin-top:var(--vm-study-bar-h,46px)!important;
+  z-index:2147483600!important;
+}
+#top-nav{
+  width:100%!important;
+}
+#hero,.hero,main,.page-wrap,.container,.wrap,.wrapper,.section,.prova-section{
+  scroll-margin-top:calc(var(--vm-study-bar-h,46px) + 76px)!important;
+}
+@media(max-width:699px){
+  html, body{
+    scroll-padding-top:calc(var(--vm-study-bar-h,88px) + 58px)!important;
+  }
+  #top-nav,.tabs-wrap,.tab-bar,.nav-tabs{
+    top:var(--vm-study-bar-h,88px)!important;
+    margin-top:var(--vm-study-bar-h,88px)!important;
+  }
+}
+</style>
+<style id="nav-wrap-fix">
+/* Menu de atalhos: quebra em linhas (sem corte lateral) e margem de rolagem para menu + barra */
+@media(min-width:700px){
+  #top-nav{overflow:visible!important;flex-wrap:nowrap!important;align-items:center!important;}
+  #top-nav .nav-brand{padding:0.55rem 1rem 0.55rem 0!important;flex:0 0 auto;}
+  #top-nav .nav-main-links{display:flex;flex-wrap:wrap;align-items:center;flex:1 1 0;min-width:0;}
+  #top-nav a{padding:0.55rem 0.6rem!important;font-size:0.68rem!important;letter-spacing:0.4px!important;}
+}
+.section,.prova-section{scroll-margin-top:calc(var(--vm-study-bar-h,46px) + 112px)!important;}
+@media(max-width:699px){.section,.prova-section{scroll-margin-top:calc(var(--vm-study-bar-h,88px) + 72px)!important;}}
+</style>
+
+<nav id="top-nav" aria-label="Atalhos do artigo">
+  <div class="nav-brand">Art. 63 · Lei 9.099/95</div>
+  <div class="nav-main-links">
+    <a href="#panorama">Panorama</a>
+    <a href="#texto-legal">Texto Legal</a>
+    <a href="#criterio">Critério</a>
+    <a href="#teorias">Teorias</a>
+    <a href="#plurilocais">Plurilocais</a>
+    <a href="#cpp">CPP</a>
+    <a href="#fora-sede">Fora da Sede</a>
+    <a href="#incompetencia">Incompetência</a>
+    <a href="#conflitos">Conflitos</a>
+    <a href="#fluxograma">Fluxograma</a>
+    <a href="#atendimento">Atendimento</a>
+    <a href="#jurisprudencia">STF/STJ</a>
+    <a href="#doutrina">Doutrina</a>
+    <a href="#recorrentes" class="nav-prova">Recorrentes</a>
+    <a href="#fontes">Fontes</a>
+  </div>
+</nav>
+
+<header id="hero">
+  <div class="badge">Lei nº 9.099/1995 · Capítulo III — Dos Juizados Especiais Criminais · Da Competência e dos Atos Processuais · Conferência normativa em 11/11/2026</div>
+  <h1>Art. 63 — <span>Competência Territorial do Juizado Especial Criminal</span></h1>
+  <p class="subtitle">Lugar da infração penal · Teorias da atividade, do resultado e da ubiquidade · Infrações plurilocais e internet · Regras subsidiárias do CPP · Atos fora da sede · Incompetência e conflitos</p>
+  <div class="law-box">
+    <strong>Art. 63 da Lei nº 9.099, de 26 de setembro de 1995</strong>
+    “A competência do Juizado será determinada pelo lugar em que foi praticada a infração penal.”
+  </div>
+</header>
+
+<div class="page-wrap">
+
+<!-- ============ 01 ============ -->
+<section class="section" id="panorama">
+  <div class="section-header"><div class="section-num">01</div><div class="section-title"><span>Introdução e Estrutura</span>Panorama do Art. 63</div></div>
+
+  <div class="card-grid card-grid-3">
+    <div class="card type-card tc-blue">
+      <h3>Função do dispositivo</h3>
+      <p>O art. 63 é a regra de <strong>foro</strong> (competência territorial) do Juizado Especial Criminal: define <em>onde</em> corre o procedimento, depois de o art. 60 ter definido <em>quem</em> tem competência (conciliar, julgar e executar) e o art. 61, <em>sobre quais</em> infrações. Abre a Seção I do capítulo criminal (“Da Competência e dos Atos Processuais”), ao lado dos arts. 64 a 68.</p>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>Por que é controvertido</h3>
+      <p>A lei diz “lugar em que foi <strong>praticada</strong> a infração penal”, e o CPP, no art. 70, fala em lugar em que se <strong>consumar</strong> a infração. A diferença de palavras abriu discussão sobre qual teoria vale no Juizado: a da <strong>atividade</strong> (lugar da ação ou omissão), a do <strong>resultado</strong> (lugar da consumação) ou a da <strong>ubiquidade</strong> (ambos). O texto não resolve a questão.</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>Por que importa na audiência</h3>
+      <p>O foro define onde o autor do fato e a vítima devem comparecer, de que comarca vem o termo circunstanciado, se haverá precatória ou videoconferência para a proposta de transação e para a oitiva, e a quem se dirigem a exceção de incompetência e o conflito. Em infrações cometidas por telefone, aplicativo ou internet, a divergência entre conduta e resultado é frequente.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Histórico do dispositivo</h3>
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Marco</th><th>Conteúdo</th><th>Consequência prática</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Lei 9.099/1995 (redação original, em vigor)</td><td>“A competência do Juizado será determinada pelo lugar em que foi praticada a infração penal.” O texto compilado do Planalto não registra nenhuma alteração do art. 63.</td><td>A redação nunca foi alterada. A interpretação de “praticada” continua a cargo da doutrina e dos tribunais.</td></tr>
+      <tr class="hl3"><td>Lei 11.313/2006</td><td>Alterou os arts. 60 e 61 (competência e conceito), mas não o art. 63.</td><td>A regra de foro permanece a mesma para infrações de menor potencial ofensivo de qualquer natureza.</td></tr>
+      <tr class="hl5"><td>Lei 14.155/2021 (CPP, art. 70, § 4º)</td><td>Fixou, para o estelionato praticado mediante depósito, cheque sem fundos ou transferência de valores, a competência pelo local do domicílio da vítima.</td><td>Mostra que o legislador criou exceções específicas à regra do lugar da consumação. O estelionato tem pena máxima de 5 anos (fora do art. 61); a exceção não alcança, por si, as infrações do JECrim.</td></tr>
+      <tr class="hl4"><td>Res. CNJ 354/2020 (compilada, com alteração de 2026)</td><td>Regula audiências por videoconferência e telepresenciais. Prevê que ofendido, testemunha e perito residentes fora da sede sejam, em regra, ouvidos por videoconferência na sede do foro de seu domicílio.</td><td>Reduz o custo prático do foro distante, sem alterar a regra de competência territorial.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="source-note">Fontes: Planalto — Lei 9.099/1995 (texto compilado), Lei 11.313/2006 e CPP; CNJ — Resolução 354/2020 (texto compilado até a Res. 679/2026), lidos em 11/11/2026.</div>
+
+  <div class="alert alert-gold mt2"><span class="alert-tag">Resumo</span><div>Art. 63 = foro do Juizado é o <strong>lugar em que foi praticada a infração penal</strong>. O texto é ambíguo entre <strong>lugar da conduta</strong> e <strong>lugar da consumação</strong>. Na jurisprudência do STJ sobre ameaça e crimes contra a honra, o foro tem sido fixado pelo critério da <strong>consumação</strong> (ciência da vítima ou publicação), enquanto parte da doutrina do Juizado defende o <strong>lugar da ação</strong>. Em caso de dúvida, arguir cedo (CPP, art. 108) e usar precatória ou videoconferência.</div></div>
+
+  <div class="alert alert-navy mt2"><span class="alert-tag">Legenda</span><div>Cada informação relevante traz o grau de verificação: <span class="vb vb-of" style="margin-left:0">Oficial</span> texto lido diretamente em fonte oficial (Planalto, STJ, STF, CNJ) na conferência de 11/11/2026; <span class="vb vb-sec" style="margin-left:0">Secundária</span> confirmado em fonte não oficial, conferir antes de citar em peça; <span class="vb vb-pr" style="margin-left:0">Prática</span> orientação de atuação, não é fonte normativa. A seção 14 detalha o que foi e o que não foi possível verificar.</div></div>
+</section>
+
+<!-- ============ 02 ============ -->
+<section class="section" id="texto-legal">
+  <div class="section-header"><div class="section-num">02</div><div class="section-title"><span>Anatomia do Dispositivo</span>Texto Legal Decomposto</div></div>
+
+  <div class="anat-visual">
+    <div class="av-col av-navy"><h4>“A competência do Juizado”</h4><p><strong>Competência territorial</strong></p><ul><li>Já definida a matéria no art. 61 e a função no art. 60.</li><li>Regra de foro, não de matéria.</li></ul></div>
+    <div class="av-sep">→</div>
+    <div class="av-col av-blue"><h4>“será determinada”</h4><p><strong>Critério objetivo</strong></p><ul><li>Fixa-se por fato objetivo: o lugar.</li><li>Não depende do domicílio do autor do fato.</li></ul></div>
+    <div class="av-sep">→</div>
+    <div class="av-col av-gold"><h4>“pelo lugar em que foi praticada”</h4><p><strong>Ponto controvertido</strong></p><ul><li>“Praticada” (art. 63) × “consumada” (CPP, art. 70).</li><li>Ação, omissão, resultado ou ambos.</li></ul></div>
+    <div class="av-sep">→</div>
+    <div class="av-col av-red"><h4>“a infração penal”</h4><p><strong>Gênero</strong></p><ul><li>Crimes e contravenções de menor potencial ofensivo.</li></ul></div>
+  </div>
+
+  <h3 class="sub-title">Textos correlatos (transcrição literal) <span class="vb vb-of" style="margin-left:0.5rem">Oficial</span></h3>
+  <div class="card-grid card-grid-2">
+    <div>
+      <div class="law-quote"><strong>Art. 63 (Lei 9.099/1995)</strong>“A competência do Juizado será determinada pelo lugar em que foi praticada a infração penal.”</div>
+      <div class="law-quote"><strong>Art. 4º (Juizado Cível — contraste)</strong>“É competente, para as causas previstas nesta Lei, o Juizado do foro: I - do domicílio do réu ou, a critério do autor, do local onde aquele exerça atividades profissionais ou econômicas ou mantenha estabelecimento, filial, agência, sucursal ou escritório; II - do lugar onde a obrigação deva ser satisfeita; III - do domicílio do autor ou do local do ato ou fato, nas ações para reparação de dano de qualquer natureza.”</div>
+      <div class="law-quote"><strong>Art. 92</strong>“Aplicam-se subsidiariamente as disposições dos Códigos Penal e de Processo Penal, no que não forem incompatíveis com esta Lei.”</div>
+      <div class="law-quote"><strong>Código Penal, art. 6º</strong>“Considera-se praticado o crime no lugar em que ocorreu a ação ou omissão, no todo ou em parte, bem como onde se produziu ou deveria produzir-se o resultado.”</div>
+      <div class="law-quote"><strong>Código Penal, art. 14, I e II</strong>“Diz-se o crime: I - consumado, quando nele se reúnem todos os elementos de sua definição legal; II - tentado, quando, iniciada a execução, não se consuma por circunstâncias alheias à vontade do agente.”</div>
+      <div class="law-quote"><strong>ECA, art. 147, § 1º (referido pela doutrina)</strong>“Nos casos de ato infracional, será competente a autoridade do lugar da ação ou omissão, observadas as regras de conexão, continência e prevenção.”</div>
+    </div>
+    <div>
+      <div class="law-quote"><strong>CPP, art. 70, caput e § 3º</strong>“A competência será, de regra, determinada pelo lugar em que se consumar a infração, ou, no caso de tentativa, pelo lugar em que for praticado o último ato de execução. [...] § 3º Quando incerto o limite territorial entre duas ou mais jurisdições, ou quando incerta a jurisdição por ter sido a infração consumada ou tentada nas divisas de duas ou mais jurisdições, a competência firmar-se-á pela prevenção.”</div>
+      <div class="law-quote"><strong>CPP, arts. 71 a 73</strong>“Art. 71. Tratando-se de infração continuada ou permanente, praticada em território de duas ou mais jurisdições, a competência firmar-se-á pela prevenção.” “Art. 72. Não sendo conhecido o lugar da infração, a competência regular-se-á pelo domicílio ou residência do réu. § 1º Se o réu tiver mais de uma residência, a competência firmar-se-á pela prevenção. § 2º Se o réu não tiver residência certa ou for ignorado o seu paradeiro, será competente o juiz que primeiro tomar conhecimento do fato.” “Art. 73. Nos casos de exclusiva ação privada, o querelante poderá preferir o foro de domicílio ou da residência do réu, ainda quando conhecido o lugar da infração.”</div>
+      <div class="law-quote"><strong>Art. 65, § 2º; art. 66; art. 94 (Lei 9.099)</strong>“§ 2º A prática de atos processuais em outras comarcas poderá ser solicitada por qualquer meio hábil de comunicação.” “Art. 66. A citação será pessoal e far-se-á no próprio Juizado, sempre que possível, ou por mandado.” “Art. 94. Os serviços de cartório poderão ser prestados, e as audiências realizadas fora da sede da Comarca, em bairros ou cidades a ela pertencentes, ocupando instalações de prédios públicos, de acordo com audiências previamente anunciadas.”</div>
+      <div class="law-quote"><strong>Art. 69 e parágrafo único (Lei 9.099)</strong>“A autoridade policial que tomar conhecimento da ocorrência lavrará termo circunstanciado e o encaminhará imediatamente ao Juizado, com o autor do fato e a vítima, providenciando-se as requisições dos exames periciais necessários. Parágrafo único. Ao autor do fato que, após a lavratura do termo, for imediatamente encaminhado ao juizado ou assumir o compromisso de a ele comparecer, não se imporá prisão em flagrante, nem se exigirá fiança.” (O Planalto traz também a redação da Lei 10.455/2002, com a possibilidade de afastamento do lar em violência doméstica.)</div>
+    </div>
+  </div>
+  <div class="source-note">Fontes: Planalto — Lei 9.099/1995 (texto compilado), CP, CPP e ECA, lidos em 11/11/2026. O Planalto mostra, para o CPP, versões superadas ao lado das atuais; foram transcritas as redações vigentes.</div>
+</section>
+
+<!-- ============ 03 ============ -->
+<section class="section" id="criterio">
+  <div class="section-header"><div class="section-num">03</div><div class="section-title"><span>Aplicação do Art. 63</span>Como Definir o Lugar da Infração</div></div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-blue">
+      <h3>Método em quatro perguntas <span class="vb vb-pr">Prática</span></h3>
+      <ol>
+        <li><strong>Onde ocorreu a conduta?</strong> Lugar da ação ou da omissão (e, na tentativa, do último ato de execução).</li>
+        <li><strong>Onde ocorreu o resultado ou a consumação?</strong> Lugar em que se reúnem todos os elementos do tipo (CP, art. 14, I), que em crimes formais e de mera conduta, como a ameaça, pode ser onde a vítima toma conhecimento.</li>
+        <li><strong>Coincidem?</strong> Se sim, não há discussão: é o foro do Juizado desse lugar.</li>
+        <li><strong>Divergem?</strong> A infração é plurilocal. Verificar o entendimento do juízo, do tribunal local e a jurisprudência do STJ para o tipo concreto (seções 04 e 05).</li>
+      </ol>
+      <p class="source-note">A doutrina observa que, na maioria dos casos, a ação ou omissão e o resultado ocorrem no mesmo lugar; a discussão ganha relevância nas infrações plurilocais, como as praticadas pela internet (Silva, 2010, fonte secundária).</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>O que o art. 63 abrange</h3>
+      <ul>
+        <li><strong>Crimes e contravenções</strong> de menor potencial ofensivo: a lei fala em “infração penal”, gênero que as inclui (art. 61).</li>
+        <li><strong>Todas as fases</strong> do procedimento no Juizado: conciliação, julgamento e execução (art. 60), conforme o foro fixado.</li>
+        <li><strong>Competência relativa:</strong> o STF reconheceu na ADI 5264 que a competência do Juizado em relação ao juízo comum é relativa; o regime de arguição de incompetência de foro está na seção 08.</li>
+        <li><strong>Não depende do domicílio</strong> do autor do fato nem da vítima, ao contrário do Juizado Cível (art. 4º).</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Tipos de situação e foro indicado pelas fontes</h3>
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Situação</th><th>Foro / regra</th><th>Fundamento</th><th>Verificação</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Conduta e resultado no mesmo lugar</td><td>Sem divergência: Juizado do lugar da infração.</td><td>Art. 63.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Tentativa</td><td>Pelo lugar em que for praticado o último ato de execução.</td><td>CPP, art. 70, caput.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Infração continuada ou permanente em duas ou mais jurisdições</td><td>Prevenção.</td><td>CPP, art. 71; art. 83.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Limite territorial incerto, ou fato nas divisas de jurisdições</td><td>Prevenção.</td><td>CPP, art. 70, § 3º.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl4"><td>Lugar da infração desconhecido</td><td>Domicílio ou residência do réu; se tiver mais de uma residência, prevenção; sem residência certa ou com paradeiro ignorado, o juiz que primeiro tomar conhecimento do fato.</td><td>CPP, art. 72, caput, §§ 1º e 2º.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl4"><td>Ameaça (CP, art. 147) por redes sociais ou aplicativo</td><td>Consuma-se quando a vítima toma conhecimento da ameaça; o STJ fixou a comarca do local de onde a vítima tomou conhecimento, e não a de onde partiram as mensagens.</td><td>STJ, Terceira Seção, CC 156.284 (Rel. Min. Ribeiro Dantas), notícia oficial de 02/03/2018 (julgamento de medidas protetivas; a base é o art. 70 do CPP).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl5"><td>Injúria por mensagem privada na internet</td><td>Consuma-se no local em que a vítima toma conhecimento do conteúdo ofensivo.</td><td>STJ, Terceira Seção, CC 184.269/PB (Rel. Min. Laurita Vaz, 09/02/2022), conforme notícia reproduzida pelo Conjur; o conflito envolveu a 12ª Vara do Juizado Especial Criminal Federal de Brasília.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl5"><td>Crimes contra a honra com publicação visível a terceiros na internet</td><td>Consumação no local em que o conteúdo ofensivo foi incluído na rede. Se esse lugar for desconhecido, aplica-se o art. 72 do CPP.</td><td>STJ, CC 173.458/SC (Terceira Seção, 25/11/2020, Rel. Min. João Otávio de Noronha) e HC 591.218/SC (Quinta Turma), conforme fontes secundárias; a relatora do CC 184.269 registra a mesma distinção.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr><td>Infração praticada pela internet: Justiça Federal?</td><td>Não se atrai automaticamente a competência federal; é preciso demonstrar a internacionalidade da conduta ou de seus resultados.</td><td>STJ, Jurisprudência em Teses nº 72, tese 3.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr><td>Flexibilização do lugar da consumação</td><td>A competência é determinada pelo lugar da consumação (CPP, art. 70), sendo possível modificá-la quando outro local seja o melhor para a formação da verdade real.</td><td>STJ, JT 72, tese 6 (CC 131566/DF; RHC 53020/RS; CC 138537/SP, entre outros).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="alert alert-red mt2"><span class="alert-tag">Ponto de atenção</span><div>Os precedentes do STJ acima foram firmados à luz do <strong>art. 70 do CPP</strong>, com base na consumação, e não em interpretação expressa do art. 63 da Lei 9.099. Dois dos casos envolvem Juizado (CC 184.269, Juizado Especial Criminal Federal) ou procedimento da Lei Maria da Penha (CC 156.284, fora do Juizado). Não localizei, em fonte verificável, tese ou súmula do STJ que enfrente expressamente a escolha entre atividade, resultado e ubiquidade para o art. 63. Em audiência, seguir a orientação do juízo e do tribunal local.</div></div>
+</section>
+
+<!-- ============ 04 ============ -->
+<section class="section" id="teorias">
+  <div class="section-header"><div class="section-num">04</div><div class="section-title"><span>Interpretação de “Praticada”</span>Teorias do Lugar da Infração e Posições Doutrinárias</div></div>
+
+  <div class="card-grid card-grid-3">
+    <div class="card type-card tc-green">
+      <h3>Teoria da atividade</h3>
+      <p>Foro do <strong>lugar da ação ou da omissão</strong>, independentemente do resultado. Argumento: a lei diz “praticada a infração”, e o legislador do ECA adotou o lugar da ação ou omissão (art. 147, § 1º) para o ato infracional.</p>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>Teoria do resultado</h3>
+      <p>Foro do <strong>lugar da consumação</strong> (CPP, art. 70). Argumento: infração “praticada” equivale a infração realizada, executada ou consumada, e a Lei 9.099 não afastou a regra geral do CPP, aplicável subsidiariamente (art. 92).</p>
+    </div>
+    <div class="card type-card tc-purple">
+      <h3>Teoria da ubiquidade</h3>
+      <p>Foro do lugar da ação ou omissão <strong>ou</strong> do resultado, no todo ou em parte, como no art. 6º do CP. Argumento: abrange a diversidade de situações, em especial as infrações plurilocais, como as praticadas pela internet.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Quem sustenta o quê</h3>
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Autor</th><th>Posição</th><th>Obra e passagem</th><th>Verificação</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Afrânio Silva Jardim</td><td><strong>Atividade.</strong> Diz que o art. 63 “quis resolver uma controvérsia jurisprudencial, em face da interpretação do artigo 70 do Código de Processo Penal”, que o legislador “não foi feliz” e que “deveria ter dito onde foi praticada a ação”. Conclui que a melhor interpretação é a do lugar em que foi praticada a ação, ou em que se omitiu a ação devida, nos crimes omissivos.</td><td>“Juizados Especiais Criminais (Lei nº 9.099/95)”, <em>Revista do Ministério Público do Rio de Janeiro</em>, nº 5, 1997, pp. 42-43 (texto lido no PDF hospedado pelo MPRJ).</td><td><span class="vb vb-of" style="margin-left:0">Texto lido</span></td></tr>
+      <tr class="hl4"><td>Damásio E. de Jesus</td><td><strong>Consumação.</strong> Segundo Jardim, Damásio “continua sustentando” que, mesmo nos Juizados, a competência é do lugar da consumação, porque a lei fala em “praticar a infração” e não em “praticar a ação”.</td><td>Anotações à Lei 9.099, conforme referido por Jardim (1997).</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl2"><td>Ada Pellegrini Grinover, Antonio Magalhães Gomes Filho, Antonio Scarance Fernandes e Luiz Flávio Gomes</td><td><strong>Atividade.</strong> “A competência de foro será estabelecida pelo lugar em que for praticada a infração penal, ou seja, onde esgotados todos os meios ao alcance do autor do fato, independentemente do lugar em que venha a ocorrer o resultado.”</td><td><em>Juizados Especiais Criminais</em>, 5. ed., RT, 2005, p. 90 (conforme citado por Silva, 2010).</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl2"><td>Fernando da Costa Tourinho Neto e Joel Dias Figueira Júnior</td><td><strong>Atividade.</strong> “No Juizado Especial, não se aplica o disposto no art. 70 do CPP”; invocam a prevenção geral (julgar no lugar em que o delito foi cometido) e a facilidade de coleta de provas.</td><td><em>Juizados Especiais Federais Cíveis e Criminais</em>, 2. ed., RT, 2007, pp. 419-423 (conforme citado por Silva, 2010).</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl4"><td>Fernando da Costa Tourinho Filho</td><td><strong>Resultado.</strong> “Infração praticada traduz a ideia de uma infração realizada, executada, ou, em linguagem jurídico-penal, consumada.”</td><td><em>Comentários à Lei dos Juizados Especiais Criminais</em>, Saraiva, 2000, p. 36 (conforme citado por Silva, 2010).</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl5"><td>Julio Fabbrini Mirabete</td><td><strong>Ubiquidade.</strong> “A competência <em>ratione loci</em> dos Juizados Especiais é determinada pelo princípio da ubiquidade, ou seja, pelo lugar em que foram praticados um ou mais atos de execução ou em que ocorreu o resultado total ou parcial.”</td><td><em>Juizados Especiais Criminais</em>, Atlas, 1996, p. 40 (conforme citado por Silva, 2010).</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl5"><td>Marino Pazzaglini Filho, Alexandre de Moraes, Gianpaolo Poggio Smanio e Luiz Fernando Vaggione</td><td><strong>Ubiquidade.</strong></td><td><em>Juizado Especial Criminal: aspectos práticos da Lei 9.099/95</em>, 3. ed., Atlas, 1999, pp. 30-31 (conforme citado por Silva, 2010).</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl5"><td>Marco Aurélio Souza da Silva</td><td><strong>Ubiquidade</strong>, como interpretação mais coerente do art. 63, por melhor solucionar as infrações plurilocais, como as praticadas pela internet, e pelo risco de prejuízo à vítima na adoção da teoria da atividade.</td><td>“A fixação da competência do juizado especial criminal nas infrações penais plurilocais”, Jus.com.br, 21/05/2010.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="alert alert-navy mt2"><span class="alert-tag">Fonte</span><div>As posições de Grinover et al., Tourinho Neto e Figueira Júnior, Tourinho Filho, Mirabete e Pazzaglini Filho et al. foram lidas na revisão feita por Silva (2010), artigo hospedado no Jus.com.br, que traz as passagens e as notas de rodapé; não foram conferidas nas obras. A posição de Jardim foi lida diretamente no texto hospedado pelo MPRJ. Para citar em peça, localizar a página e a edição na obra.</div></div>
+</section>
+
+<!-- ============ 05 ============ -->
+<section class="section" id="plurilocais">
+  <div class="section-header"><div class="section-num">05</div><div class="section-title"><span>Casos Difíceis</span>Infrações Plurilocais, Internet e Mensagens</div></div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-blue">
+      <h3>Ameaça por telefone, aplicativo ou rede social</h3>
+      <p>O STJ, ao julgar o CC 156.284 (Terceira Seção, Rel. Min. Ribeiro Dantas), afirmou que o crime do art. 147 do CP se consuma no momento em que a vítima toma conhecimento da ameaça, e fixou a comarca de Naviraí (MS), onde a vítima recebeu as mensagens, e não Curitiba, de onde partiram. A decisão tratou de medidas protetivas de urgência e, por isso, não é decisão de Juizado; a lógica da consumação, porém, é a mesma do art. 70 do CPP.</p>
+      <p class="source-note">Fonte: notícia oficial do STJ de 02/03/2018.</p>
+      <div class="divider"></div>
+      <p><strong>Para a prática:</strong> a doutrina que adota a teoria da atividade para o art. 63 levaria ao foro de onde partiu a mensagem; a que adota resultado ou ubiquidade, ao foro onde a vítima a recebeu. Guardar prova do local de envio e do local de recebimento.</p>
+    </div>
+    <div class="card type-card tc-purple">
+      <h3>Crimes contra a honra na internet</h3>
+      <ul>
+        <li><strong>Mensagem privada</strong> (ex.: direct): consumação no local em que a vítima toma conhecimento (STJ, CC 184.269/PB, 09/02/2022).</li>
+        <li><strong>Publicação visível a terceiros</strong>: consumação no local em que o conteúdo foi incluído na rede (STJ, CC 173.458/SC, 25/11/2020; HC 591.218/SC). Se o local for desconhecido, aplica-se o art. 72 do CPP.</li>
+        <li><strong>Justiça Federal:</strong> a prática pela internet não atrai, por si só, a competência federal (STJ, JT 72, tese 3).</li>
+        <li><strong>Calúnia, difamação e injúria</strong> comuns costumam ser de ação privada: ver o foro de eleição do art. 73 do CPP (seção 06).</li>
+      </ul>
+      <p class="source-note">Os dois precedentes sobre honra vêm de fontes secundárias (Conjur, que reproduz informações do STJ; Dizer o Direito; Evinis Talon). O acórdão não foi lido.</p>
+    </div>
+  </div>
+
+  <div class="tbl-scroll mt2">
+  <table class="comp-table">
+    <thead><tr><th>Situação plurilocal</th><th>Como proceder</th><th>Base</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Conduta num Estado e vítima em outro</td><td>Confirmar onde a vítima soube do fato (ameaça, injúria privada) ou onde o conteúdo foi publicado (ofensa pública). Esses dados costumam definir o foro quando se segue a consumação.</td><td>STJ, CC 156.284 e CC 184.269; CPP, art. 70.</td></tr>
+      <tr class="hl3"><td>Fato contínuo (perseguição, ameaça reiterada) em mais de uma comarca</td><td>Prevenção entre os juízos igualmente competentes, quando a infração é continuada ou permanente.</td><td>CPP, arts. 71 e 83.</td></tr>
+      <tr class="hl3"><td>Local incerto</td><td>Domicílio ou residência do réu; várias residências: prevenção; paradeiro ignorado: o juiz que primeiro conhecer do fato.</td><td>CPP, art. 72.</td></tr>
+      <tr class="hl4"><td>Dúvida entre dois Juizados</td><td>Arguir a incompetência na primeira oportunidade e, se dois juízes se declararem incompetentes (ou competentes), suscitar o conflito.</td><td>CPP, arts. 108, 113 a 116; seção 09.</td></tr>
+      <tr class="hl5"><td>Prova do local</td><td><span class="vb vb-pr" style="margin-left:0">Prática</span> Reunir capturas de tela com data e hora, registro do aplicativo, comprovante do local de recebimento e testemunhas, para sustentar o foro que melhor atende ao cliente.</td><td>Orientação de atuação.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ============ 06 ============ -->
+<section class="section" id="cpp">
+  <div class="section-header"><div class="section-num">06</div><div class="section-title"><span>Aplicação Subsidiária — Art. 92</span>Regras do CPP sobre o Foro</div></div>
+
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Regra do CPP</th><th>Conteúdo</th><th>Leitura para o Juizado</th><th>Verificação</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Art. 69</td><td>Determinam a competência: lugar da infração, domicílio ou residência do réu, natureza da infração, distribuição, conexão ou continência, prevenção e prerrogativa de função.</td><td>O art. 63 especializa o primeiro critério para o Juizado. Os demais critérios aplicam-se no que não forem incompatíveis (art. 92).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Art. 70</td><td>Lugar da consumação; na tentativa, lugar do último ato de execução; infração iniciada no país e consumada fora, último ato de execução no Brasil; limites incertos, prevenção.</td><td>É a regra geral que a doutrina do resultado entende aplicável. A tese da atividade sustenta que o art. 63 a afastou.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Art. 70, § 4º (Lei 14.155/2021)</td><td>Estelionato por depósito, cheque sem fundos ou transferência de valores: domicílio da vítima; pluralidade de vítimas: prevenção.</td><td>Fora do art. 61 pela pena (1 a 5 anos). Útil como contraste: a exceção legal depende de previsão expressa.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl4"><td>Arts. 71 e 83</td><td>Infração continuada ou permanente em mais de uma jurisdição: prevenção. Competência por prevenção quando vários juízes são igualmente competentes e um antecedeu aos outros em ato do processo ou medida a ele relativa, ainda que anterior à denúncia ou à queixa.</td><td>Relevante para fatos reiterados e para medidas anteriores à denúncia.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl4"><td>Art. 72</td><td>Lugar desconhecido: domicílio ou residência do réu; mais de uma residência: prevenção; sem residência certa ou paradeiro ignorado: juiz que primeiro tomar conhecimento.</td><td>Aplicável quando não se sabe o lugar da infração (por exemplo, publicação na internet com origem não identificada).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl5"><td>Art. 73</td><td>“Nos casos de exclusiva ação privada, o querelante poderá preferir o foro de domicílio ou da residência do réu, ainda quando conhecido o lugar da infração.”</td><td>Foro de eleição na queixa-crime (calúnia, difamação e injúria costumam ser de ação privada, CP, art. 145). A Lei 9.099 não regula o ponto; a compatibilidade do art. 73 com o art. 63 não foi resolvida por tese ou súmula que eu tenha localizado. Conferir a orientação local antes de ajuizar ou contestar a queixa.</td><td><span class="vb vb-of" style="margin-left:0">Texto oficial</span> <span class="vb vb-pr" style="margin-left:0">Prática</span></td></tr>
+      <tr><td>Art. 75</td><td>A precedência da distribuição fixa a competência quando, na mesma circunscrição, houver mais de um juiz igualmente competente. A distribuição realizada para fiança, prisão preventiva ou diligência anterior à denúncia ou queixa previne a da ação penal.</td><td>Aplica-se onde há mais de um Juizado na mesma circunscrição.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="alert alert-gold mt2"><span class="alert-tag">Atenção</span><div>O art. 92 só autoriza a aplicação do CPP “no que não forem incompatíveis” com a Lei 9.099. Quem sustenta a teoria da atividade parte justamente de que o art. 63 é regra própria que afasta o art. 70 do CPP (Tourinho Neto e Figueira Júnior, conforme Silva, 2010). Quem sustenta a do resultado entende que o art. 63 apenas repete a regra geral. Cabe ao advogado verificar qual entendimento orienta o juízo antes de apostar na tese.</div></div>
+</section>
+
+<!-- ============ 07 ============ -->
+<section class="section" id="fora-sede">
+  <div class="section-header"><div class="section-num">07</div><div class="section-title"><span>Efeitos Práticos do Foro</span>Atos Fora da Sede, Precatória e Videoconferência</div></div>
+
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Tema</th><th>Regra</th><th>Fundamento</th><th>Verificação</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Termo circunstanciado</td><td>Lavrado pela autoridade policial que tomar conhecimento da ocorrência e encaminhado imediatamente ao Juizado, com o autor do fato e a vítima. O FONAJE admite a lavratura pela Polícia Civil ou Militar, conforme as peculiaridades locais.</td><td>Art. 69; FONAJE, Enunciado 34.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span> <span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl2"><td>Comparecimento do autor do fato</td><td>O autor do fato que for encaminhado ao Juizado ou assumir o compromisso de comparecer não sofre prisão em flagrante nem lhe é exigida fiança. A intimação deve advertir sobre a necessidade de advogado.</td><td>Art. 69, parágrafo único; arts. 67 e 68; FONAJE, Enunciado 9.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Atos em outras comarcas</td><td>Podem ser solicitados por qualquer meio hábil de comunicação.</td><td>Art. 65, § 2º.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Precatória no JECrim</td><td>O FONAJE admite o encaminhamento da proposta de transação por precatória (13); o interrogatório por precatória, quando necessário (17); a citação, a defesa preliminar e a proposta de suspensão do processo no juízo deprecado, com cumprimento da suspensão no juízo deprecado (93). O juízo deprecado pode reduzir a medida do art. 76, § 1º (91) e adequar a proposta ou as condições (92). O réu tem direito de assistir às testemunhas antes do interrogatório; se este for por precatória, esta deve ser instruída com cópia dos depoimentos (66).</td><td>FONAJE, Enunciados 13, 17, 66, 91, 92 e 93.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr class="hl4"><td>Videoconferência: ofendido, testemunha e perito fora da sede</td><td>Salvo requerimento de apresentação espontânea, são inquiridos por videoconferência, na sede do foro de seu domicílio. Salvo impossibilidade técnica ou dificuldade de comunicação, deve-se evitar a precatória inquiritória.</td><td>Res. CNJ 354/2020, art. 4º, caput e § 2º.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl4"><td>Videoconferência: parte distante da sede</td><td>No interesse da parte que residir distante da sede do juízo, o depoimento pessoal ou interrogatório será realizado por videoconferência, na sede do foro de seu domicílio.</td><td>Res. CNJ 354/2020, art. 4º, § 1º.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl4"><td>Advogados e MP por videoconferência</td><td>Advogados, públicos e privados, e membros do MP podem requerer participação própria ou de seus representados por videoconferência. O deferimento depende de viabilidade técnica e de juízo de conveniência do magistrado; é ônus do requerente comparecer na sede em caso de indeferimento ou falta de análise do requerimento.</td><td>Res. CNJ 354/2020, art. 5º.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl4"><td>Audiência telepresencial</td><td>Só a pedido da parte, com as ressalvas do art. 3º, § 1º; a oposição deve ser fundamentada e se submete ao controle judicial. O juiz deve estar presente na unidade judiciária.</td><td>Res. CNJ 354/2020, art. 3º, caput e §§ 1º e 2º.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl5"><td>Audiências fora da sede e Juizados Itinerantes</td><td>Os serviços de cartório podem ser prestados e as audiências realizadas fora da sede da Comarca, em prédios públicos, com audiências previamente anunciadas. Os Juizados Itinerantes dirimem, prioritariamente, conflitos de áreas rurais ou de menor concentração populacional.</td><td>Art. 94; art. 95, parágrafo único.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl"><td>Citação e réu não localizado</td><td>Citação pessoal, no próprio Juizado, sempre que possível, ou por mandado. Não encontrado o acusado, as peças vão ao juízo comum. O FONAJE entende que a remessa exaure a competência do Juizado e admite a citação por hora certa.</td><td>Art. 66 e parágrafo único; FONAJE, Enunciados 51, 64 e 110.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span> <span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+      <tr><td>Execução da transação</td><td>O JECrim é competente para a execução das penas ou medidas da transação, salvo central ou vara de penas e medidas alternativas com competência específica. Para o condenado que cumpre restritiva de direitos, o STJ afirma que a mudança de domicílio não modifica a competência da execução, que permanece com o juízo da condenação; deprecam-se apenas a supervisão e o acompanhamento.</td><td>FONAJE, Enunciado 87; STJ, JT 72, tese 18 (tese relativa ao condenado; aplicação à transação por analogia, orientação prática).</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span> <span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr><td>Contraste com o Juizado Cível</td><td>O art. 4º usa o domicílio do réu, o lugar da obrigação e o domicílio do autor ou local do ato, nas ações de reparação de dano. O Juizado Criminal usa o lugar da infração.</td><td>Art. 4º; art. 63.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="alert alert-navy mt2"><span class="alert-tag">Fonte</span><div>Texto compilado da Resolução CNJ nº 354/2020 (redação das Res. 481/2022, 508/2023 e 679/2026), lido no portal de atos do CNJ em 11/11/2026. Aplica-se às unidades jurisdicionais de primeiro e segundo graus da Justiça dos Estados, Federal, Trabalhista, Militar e Eleitoral; não é norma específica do JECrim. Conferir a regulamentação do tribunal local (art. 13).</div></div>
+</section>
+
+<!-- ============ 08 ============ -->
+<section class="section" id="incompetencia">
+  <div class="section-header"><div class="section-num">08</div><div class="section-title"><span>Controle da Competência</span>Exceção de Incompetência, Declinatória e Nulidade</div></div>
+
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Tema</th><th>Regra</th><th>Fundamento</th><th>Verificação</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Exceção de incompetência</td><td>Pode ser oposta, verbalmente ou por escrito, no prazo de defesa. Aceita a declinatória, ouvido o MP, o feito é remetido ao juízo competente, onde, ratificados os atos anteriores, o processo prossegue. Recusada, o juiz continua no feito, tomando por termo a declinatória, se verbal.</td><td>CPP, art. 108, caput e §§ 1º e 2º.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl2"><td>Reconhecimento de ofício</td><td>Se em qualquer fase do processo o juiz reconhecer motivo que o torne incompetente, declara-o nos autos, haja ou não alegação da parte.</td><td>CPP, art. 109.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Efeito da incompetência</td><td>A incompetência do juízo anula somente os atos decisórios, devendo o processo, declarada a nulidade, ser remetido ao juiz competente. A nulidade por incompetência é hipótese do art. 564, I.</td><td>CPP, arts. 564, I, e 567.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl3"><td>Relatividade e preclusão</td><td>O STJ afirma que é relativa a nulidade decorrente da inobservância da competência penal por <strong>prevenção</strong>, que deve ser alegada em momento oportuno, sob pena de preclusão (a tese remete à Súmula 706/STF, cujo texto não foi verificado). Para o foro por lugar da infração, a orientação é lida por analogia; confirmar a posição local.</td><td>STJ, JT 72, tese 5.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span> <span class="vb vb-pr" style="margin-left:0">Prática</span></td></tr>
+      <tr class="hl4"><td>Natureza da competência do Juizado</td><td>O STF reconheceu que o Juizado tem competência relativa em relação ao juízo comum, e que as garantias fundamentais devem ser asseguradas independentemente do juízo em que tramitarem as infrações.</td><td>STF, ADI 5264 (notícia oficial de 11/12/2020).</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span></td></tr>
+      <tr class="hl4"><td>Homologação por juízo incompetente</td><td><span class="vb vb-pr" style="margin-left:0">Prática</span> A sentença que homologa a composição civil ou a transação é ato decisório (arts. 74 e 76, § 4º). Se proferida por juízo posteriormente declarado incompetente, o art. 567 do CPP indica a anulação dos atos decisórios. Avaliar o risco antes de aceitar ou propor acordo em foro duvidoso.</td><td>Arts. 74 e 76; CPP, art. 567.</td><td><span class="vb vb-pr" style="margin-left:0">Prática</span></td></tr>
+      <tr class="hl5"><td>Remessa ao juízo comum</td><td>Hipóteses legais de saída do Juizado: réu não encontrado (art. 66, p. único) e complexidade (art. 77, § 2º). Para o FONAJE, a competência do Juizado não se restabelece depois.</td><td>Arts. 66 e 77; FONAJE, Enunciados 18, 51, 52 e 64.</td><td><span class="vb vb-of" style="margin-left:0">Oficial</span> <span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="alert alert-gold mt2"><span class="alert-tag">Como agir</span><div><span class="vb vb-pr" style="margin-left:0">Prática</span> No JECrim, a defesa oral do art. 81 ocupa o lugar da resposta escrita (o FONAJE, Enunciado 108, afasta o art. 396 do CPP). Se há dúvida sobre o foro, <strong>arguir na primeira oportunidade</strong>, já na audiência preliminar, e pedir que a exceção e a decisão constem do termo (art. 81, § 2º, e CPP, art. 108, § 2º). Cuidar do risco de preclusão.</div></div>
+</section>
+
+<!-- ============ 09 ============ -->
+<section class="section" id="conflitos">
+  <div class="section-header"><div class="section-num">09</div><div class="section-title"><span>Disputa entre Juízos</span>Conflitos de Competência Territorial</div></div>
+
+  <div class="card-grid card-grid-2">
+    <div>
+      <div class="law-quote"><strong>CPP, arts. 113 a 116 <span class="vb vb-of" style="margin-left:0.4rem">Oficial</span></strong>“Art. 113. As questões atinentes à competência resolver-se-ão não só pela exceção própria, como também pelo conflito positivo ou negativo de jurisdição.” “Art. 114. Haverá conflito de jurisdição: I - quando duas ou mais autoridades judiciárias se considerarem competentes, ou incompetentes, para conhecer do mesmo fato criminoso; II - quando entre elas surgir controvérsia sobre unidade de juízo, junção ou separação de processos.” “Art. 115. O conflito poderá ser suscitado: I - pela parte interessada; II - pelos órgãos do Ministério Público junto a qualquer dos juízos em dissídio; III - por qualquer dos juízes ou tribunais em causa.” “Art. 116 [...] § 1º Quando negativo o conflito, os juízes e tribunais poderão suscitá-lo nos próprios autos do processo.”</div>
+      <div class="law-quote"><strong>CF, art. 105, I, “d” <span class="vb vb-of" style="margin-left:0.4rem">Oficial</span></strong>“os conflitos de competência entre quaisquer tribunais, ressalvado o disposto no art. 102, I, ‘o’, bem como entre tribunal e juízes a ele não vinculados e entre juízes vinculados a tribunais diversos;”</div>
+      <div class="law-quote"><strong>CF, art. 108, I, “e” <span class="vb vb-of" style="margin-left:0.4rem">Oficial</span></strong>“os conflitos de competência entre juízes federais vinculados ao Tribunal;”</div>
+    </div>
+    <div>
+      <div class="tbl-scroll">
+      <table class="comp-table">
+        <thead><tr><th>Quem decide o conflito</th><th>Fundamento</th></tr></thead>
+        <tbody>
+          <tr class="hl3"><td>Juizado e juízo comum do mesmo Estado ou da mesma seção judiciária: <strong>TJ ou TRF</strong>.</td><td>STJ, JT 72, tese 7 (CC 100389/SC; CC 124633/SC, entre outros).</td></tr>
+          <tr class="hl3"><td>Juízes vinculados a tribunais diversos (por exemplo, Juizados de Estados diferentes): <strong>STJ</strong>.</td><td>CF, art. 105, I, “d” (leitura do texto constitucional). Exemplo: CC 156.284 (Curitiba e Naviraí, Estados diferentes) e CC 184.269 (Campina Grande/PB e Brasília).</td></tr>
+          <tr class="hl4"><td>Entre TJ e Turma Recursal do mesmo Estado: <strong>não há conflito</strong>, pois a Turma Recursal não tem qualidade de Tribunal.</td><td>STJ, JT 72, tese 4.</td></tr>
+          <tr class="hl4"><td>Há conflito de competência, e não de atribuição, quando a autoridade judiciária se pronuncia acolhendo as manifestações do MP.</td><td>STJ, JT 72, tese 16.</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="alert alert-gold mt1"><span class="alert-tag">Prática</span><div><span class="vb vb-pr" style="margin-left:0">Prática</span> A parte interessada pode suscitar o conflito por requerimento escrito e circunstanciado, com os documentos comprobatórios (CPP, art. 116). Nos exemplos do STJ, o conflito foi negativo: o primeiro juízo declinou e o segundo suscitou. Enquanto o conflito não é decidido, avaliar com o MP medidas urgentes de proteção da vítima no juízo que primeiro tomou conhecimento (CPP, art. 83).</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10 ============ -->
+<section class="section" id="fluxograma">
+  <div class="section-header"><div class="section-num">10</div><div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma Completo do Art. 63</div></div>
+  <div class="flow-wrap"><div class="flow-center">
+
+    <div class="flow-node flow-start">Infração de menor potencial ofensivo (art. 61) fora das exclusões — definir o foro</div>
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+
+    <div class="flow-node flow-box-navy"><b>PASSO 1 — Onde ocorreu a conduta e onde ocorreu o resultado ou a ciência da vítima?</b><small>Ação ou omissão, último ato de execução (tentativa), consumação (CP, art. 14, I) e, em ameaça e injúria privada, local em que a vítima soube do fato.</small></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">Mesmo lugar</div><div class="flow-node flow-end-green">Juizado do lugar da infração<small>Art. 63. Sem divergência.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Lugares diferentes (plurilocal)</div><div class="flow-node flow-box-gold">Passo 2</div></div>
+      <div class="flow-branch"><div class="flow-label">Lugar desconhecido</div><div class="flow-node flow-box-blue">Domicílio ou residência do réu<small>CPP, art. 72 e §§ 1º e 2º.</small></div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 2 — Qual critério o juízo adota para “praticada” (art. 63)?</b><small>Atividade (lugar da conduta) × resultado (lugar da consumação) × ubiquidade. Consultar a orientação do juízo e do tribunal local; o STJ, em ameaça e crimes contra a honra, tem seguido a consumação (CC 156.284; CC 184.269; CC 173.458).</small></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">Ameaça ou injúria privada</div><div class="flow-node flow-box-blue">Local em que a vítima soube<small>STJ, CC 156.284 e CC 184.269.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Ofensa pública na internet</div><div class="flow-node flow-box-blue">Local em que o conteúdo foi incluído na rede<small>STJ, CC 173.458 (fonte secundária). Local ignorado: CPP, art. 72.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Fato contínuo ou permanente</div><div class="flow-node flow-box-gold">Prevenção<small>CPP, arts. 71 e 83.</small></div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 3 — É ação exclusivamente privada?</b><small>Calúnia, difamação e injúria costumam ser de queixa (CP, art. 145). O querelante pode preferir o foro do domicílio ou da residência do réu (CPP, art. 73). A compatibilidade com o art. 63 não está resolvida em tese oficial.</small></div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 4 — Mais de um Juizado igualmente competente na circunscrição?</b><small>Distribuição e prevenção (CPP, arts. 75 e 83), inclusive por diligência anterior à denúncia ou queixa.</small></div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 5 — Partes ou testemunhas fora da sede?</b><small>Precatória (FONAJE 13, 17, 91 a 93), ato em outra comarca (art. 65, § 2º) ou videoconferência no foro do domicílio (Res. CNJ 354, art. 4º).</small></div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 6 — Há razão para arguir incompetência?</b><small>Exceção verbal ou escrita no prazo de defesa (CPP, art. 108); reconhecimento de ofício (art. 109); anulam-se só os atos decisórios (art. 567).</small></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">Declinatória aceita</div><div class="flow-node flow-box-green">Remessa ao juízo competente<small>Atos anteriores ratificados (CPP, art. 108, § 1º).</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Declinatória recusada</div><div class="flow-node flow-box-gold">Juiz continua no feito<small>Declinatória tomada por termo (CPP, art. 108, § 2º).</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Dois juízos recusam (ou disputam) o feito</div><div class="flow-node flow-end-red">Conflito de competência<small>CPP, arts. 113 a 116. Decide o TJ/TRF ou o STJ (CF, art. 105, I, “d”; JT 72, tese 7).</small></div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 7 — Juizado fixado: aplicar o art. 60 e seguintes</b><small>Conexão ou continência, complexidade e réu não encontrado podem remover o caso do Juizado (arts. 60, 66, p. único, e 77, § 2º). Audiência preliminar, composição, transação e rito sumaríssimo (arts. 69 a 83).</small></div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-purple" style="max-width:980px;"><strong>CONTROLE FINAL DO ADVOGADO:</strong> registrar onde ocorreu a conduta e onde se deu a ciência ou a publicação; confirmar o critério adotado pelo juízo para “praticada”; verificar foro de eleição em ação privada; arguir incompetência na primeira oportunidade e registrar no termo; pedir precatória ou videoconferência para parte ou testemunha fora da sede; avaliar o risco de nulidade de acordo homologado em foro duvidoso; acompanhar o conflito de competência, se instaurado.</div>
+  </div></div>
+</section>
+
+<!-- ============ 11 ============ -->
+<section class="section" id="atendimento">
+  <div class="section-header"><div class="section-num">11</div><div class="section-title"><span>Roteiro de Atuação — Orientação Prática</span>Atendimento, Conciliação e Negociação com o Cliente</div></div>
+  <div class="alert alert-navy"><span class="alert-tag">Natureza</span><div>Esta seção organiza uma abordagem de atuação a partir do art. 63. Cada orientação traz, entre parênteses, a norma ou o precedente que a sustenta. O que não tem apoio normativo vem identificado como estratégia, a ser ajustada pelo advogado ao caso.</div></div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card type-card tc-blue">
+      <h3>Cliente é o autor do fato</h3>
+      <h4>Explicar o foro ao cliente</h4>
+      <ul>
+        <li>O Juizado competente é, em regra, o do <strong>lugar em que a infração foi praticada</strong> (art. 63), e não o da cidade onde o cliente mora.</li>
+        <li>Se o fato envolveu mensagem, telefone ou internet, o foro pode ficar no lugar onde a vítima recebeu a mensagem (STJ, CC 156.284 e CC 184.269), ainda que o cliente more em outra comarca.</li>
+        <li>O cliente que for encaminhado ao Juizado ou assumir o compromisso de comparecer não é preso em flagrante nem paga fiança (art. 69, parágrafo único); a intimação deve advertir da necessidade de advogado (art. 68).</li>
+      </ul>
+      <h4>Se o cliente mora longe</h4>
+      <ul>
+        <li>Verificar a possibilidade de <strong>precatória</strong> para a proposta de transação (FONAJE, 13) e de <strong>videoconferência</strong> na sede do foro do domicílio para depoimento pessoal ou interrogatório (Res. CNJ 354, art. 4º, § 1º). O advogado também pode requerer participação por videoconferência (art. 5º).</li>
+        <li>Se houver proposta de suspensão, avaliar a precatória para cumprimento no juízo deprecado (FONAJE, 93) e a adequação das condições (92).</li>
+      </ul>
+      <h4>Alavancas de negociação</h4>
+      <ul>
+        <li><strong>Reparação antes da audiência:</strong> o acordo civil homologado, na ação privada ou condicionada, importa renúncia ao direito de queixa ou representação (art. 74, parágrafo único). O foro em que ele será homologado importa (seção 08).</li>
+        <li><strong>Foro duvidoso:</strong> usar a dúvida como argumento para que o MP e o juiz resolvam o foro antes da proposta, a fim de evitar homologação em juízo incompetente.</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-green">
+      <h3>Cliente é a vítima ou ofendido</h3>
+      <h4>Explicar o foro ao cliente</h4>
+      <ul>
+        <li>O termo circunstanciado e a audiência preliminar seguem o foro definido pelo lugar da infração (arts. 63 e 69). Em infrações pela internet, o foro pode ser o do local em que a vítima soube do fato ou o de publicação, conforme o tipo (STJ).</li>
+        <li>Se o cliente mora em comarca diferente da do Juizado, pode ser ouvido por <strong>videoconferência na sede do foro de seu domicílio</strong>, salvo requerimento de apresentação espontânea (Res. CNJ 354, art. 4º).</li>
+        <li>O acordo homologado vale como título executivo no juízo civil (art. 74); na ação privada ou condicionada, importa renúncia à queixa ou representação.</li>
+      </ul>
+      <h4>Preparação</h4>
+      <ul>
+        <li><strong>Registrar onde recebeu a mensagem</strong> (cidade, data, hora, dispositivo) e guardar as capturas de tela.</li>
+        <li>Para ofensa pública, documentar a publicação (endereço eletrônico, data, hora) e testemunhas.</li>
+        <li>Controlar a <strong>decadência</strong> de 6 meses da queixa e da representação (CP, art. 103; CPP, art. 38), contados do dia em que soube quem é o autor do crime.</li>
+        <li>Em ação privada, decidir com o cliente o foro da queixa, ciente do art. 73 do CPP e do risco de a escolha ser contestada.</li>
+      </ul>
+      <h4>Alavancas de negociação</h4>
+      <ul>
+        <li>Propor acordo civil que contenha todas as obrigações e que possa ser <strong>redigido e homologado no ato</strong> (art. 74), reduzindo a chance de questionamentos de foro.</li>
+        <li>O acordo pode abranger qualquer valor ou matéria (FONAJE, 37) e deve ter cláusula penal em obrigação de fazer ou não fazer (43).</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Perguntas que o cliente sempre faz</h3>
+  <div class="card-grid card-grid-2">
+    <div class="card"><h4>“Moro em outra cidade. Preciso viajar para a audiência?”</h4><p>Depende do ato. Para depoimento pessoal ou interrogatório da parte que reside distante, a Res. CNJ 354 prevê videoconferência na sede do foro do domicílio (art. 4º, § 1º); para ofendido, testemunha e perito fora da sede, a videoconferência é a regra salvo apresentação espontânea (art. 4º). Para a proposta de transação, o FONAJE admite precatória (Enunciado 13). Confirmar o formato na intimação.</p></div>
+    <div class="card"><h4>“Por que o processo está em outra comarca?”</h4><p>O Juizado competente é o do lugar em que foi praticada a infração (art. 63). Em infrações pela internet ou por mensagem, o lugar pode ser o do recebimento ou da publicação, conforme o STJ. Se o foro estiver errado, é possível arguir a incompetência (CPP, art. 108).</p></div>
+    <div class="card"><h4>“Posso escolher onde propor a queixa?”</h4><p>Em ação exclusivamente privada, o art. 73 do CPP permite ao querelante preferir o foro do domicílio ou da residência do réu. Não localizei tese oficial sobre sua aplicação no Juizado; conferir a orientação local antes de ajuizar.</p></div>
+    <div class="card"><h4>“O juiz pode mandar o caso para outro Juizado?”</h4><p>Sim, se reconhecer a incompetência, nos autos, de ofício ou a pedido (CPP, arts. 108 e 109). Se os juízos divergirem, cabe conflito de competência (CPP, arts. 113 a 116), decidido pelo TJ ou TRF, ou pelo STJ quando os juízes são vinculados a tribunais diversos.</p></div>
+    <div class="card"><h4>“O acordo vale se o foro estiver errado?”</h4><p>O art. 567 do CPP diz que a incompetência anula somente os atos decisórios. A homologação do acordo é ato decisório; por isso convém resolver o foro antes de homologar (orientação prática).</p></div>
+    <div class="card"><h4>“A mensagem foi enviada de outra cidade. Qual é o foro?”</h4><p>Para ameaça, o STJ fixou o foro do local em que a vítima soube (CC 156.284); para injúria por mensagem privada, igual (CC 184.269). A doutrina que adota a teoria da atividade indicaria o foro de onde partiu a mensagem. Verificar a orientação do juízo.</p></div>
+  </div>
+
+  <div class="card mt2">
+    <h3>Checklist de preparação (24 horas antes)</h3>
+    <div class="card-grid card-grid-3">
+      <ul>
+        <li>Local da conduta e local do resultado ou ciência registrados.</li>
+        <li>Critério do juízo para o art. 63 verificado.</li>
+        <li>Foro de eleição (ação privada) conferido.</li>
+        <li>Juizado e comarca confirmados na intimação.</li>
+      </ul>
+      <ul>
+        <li>Precatória ou videoconferência para parte ou testemunha fora da sede.</li>
+        <li>Procuração com poderes para transigir e aceitar proposta.</li>
+        <li>Planilha do dano e proposta de acordo.</li>
+        <li>Antecedentes e benefício nos 5 anos anteriores conferidos.</li>
+      </ul>
+      <ul>
+        <li>Arguição de incompetência preparada, se houver dúvida.</li>
+        <li>Prova do local de recebimento ou publicação.</li>
+        <li>Prazos de decadência (6 meses) e prescrição verificados.</li>
+        <li>Orientação local sobre FONAJE 13, 87, 91, 92 e 93 checada.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12 ============ -->
+<section class="section" id="jurisprudencia">
+  <div class="section-header"><div class="section-num">12</div><div class="section-title"><span>STF e STJ</span>Jurisprudência, Teses e Enunciados</div></div>
+  <div class="alert alert-navy"><span class="alert-tag">Aviso do STJ</span><div>As edições da Jurisprudência em Teses do STJ trazem a ressalva de que as teses foram elaboradas pela Secretaria de Jurisprudência mediante pesquisa na base do Tribunal e “não consistindo em repositórios oficiais da jurisprudência deste Tribunal”. A JT 72 tem julgados até 30/09/2016. Conferir sempre o acórdão antes de citar em peça.</div></div>
+
+  <h3 class="sub-title">Supremo Tribunal Federal</h3>
+  <div class="juris-grid">
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge tese">ADI 5264</span><span class="juris-title">Competência relativa e garantias independentemente do juízo</span><span class="vb vb-of">Oficial</span></div><div class="juris-body">Sessão virtual encerrada em 4/12/2020; improcedente, por unanimidade (Rel. Min. Cármen Lúcia). A Constituição não torna o Juizado instância exclusiva, mas garante a observância do procedimento célere e dos institutos despenalizadores; “as garantias fundamentais é que devem ser asseguradas, independentemente do juízo em que tramitarem as infrações penais”. Não trata de foro por lugar da infração; é a referência do STF sobre a natureza relativa da competência do Juizado.</div></div>
+  </div>
+
+  <h3 class="sub-title">Superior Tribunal de Justiça</h3>
+  <div class="juris-grid">
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">CC 156.284 (Terceira Seção)</span><span class="juris-title">Ameaça por redes sociais: foro do local em que a vítima toma conhecimento</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><span class="quote">“Nas hipóteses de ameaças por meio de redes sociais como o Facebook e aplicativos como o WhatsApp, o juízo competente para o julgamento de pedido de medidas protetivas é aquele de onde a vítima tomou conhecimento das intimidações, por ser este o local de consumação do crime previsto pelo artigo 147 do Código Penal.”</span>Rel. Min. Ribeiro Dantas. Fixada a comarca de Naviraí (MS), e não Curitiba, de onde partiram as mensagens. Fundamento: art. 70 do CPP e consumação do art. 147 do CP com a ciência da vítima. Conforme notícia oficial do STJ de 02/03/2018.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">CC 184.269/PB (Terceira Seção)</span><span class="juris-title">Injúria por mensagem privada</span><span class="vb vb-sec">Secundária</span></div><div class="juris-body">Rel. Min. Laurita Vaz, julgado em 09/02/2022, por unanimidade. O conflito envolveu a 4ª Vara Federal de Campina Grande (PB) e a 12ª Vara do Juizado Especial Criminal Federal de Brasília. O crime de injúria praticado por mensagem privada na internet (Instagram Direct, áudio) se consuma no local em que a vítima toma conhecimento do conteúdo ofensivo; fixada a competência em Brasília. A relatora distinguiu o caso das publicações visíveis a terceiros, em que a consumação se dá onde o conteúdo foi incluído na rede. Conforme notícia do Conjur, que reproduz informações do STJ.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">CC 173.458/SC · HC 591.218/SC</span><span class="juris-title">Honra na internet: crime formal, consumado com a disponibilização</span><span class="vb vb-sec">Secundária</span></div><div class="juris-body">Segundo fontes secundárias, a Terceira Seção, no CC 173.458/SC (Rel. Min. João Otávio de Noronha, 25/11/2020), firmou que os crimes contra a honra praticados pela internet são formais e se consumam no momento em que o conteúdo ofensivo é disponibilizado, sendo competente o juízo do local de publicação; o HC 591.218/SC (Quinta Turma) reproduz a tese. Se o lugar for desconhecido, aplica-se o art. 72 do CPP. Acórdãos não lidos.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">JT 72, teses 3, 4, 5 e 6</span><span class="juris-title">Internet, Turma Recursal, prevenção e lugar da consumação</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><strong>Tese 3:</strong> “O fato de o delito ser praticado pela internet não atrai, automaticamente, a competência da Justiça Federal, sendo necessário demonstrar a internacionalidade da conduta ou de seus resultados.” <strong>Tese 4:</strong> não há conflito de competência entre Tribunal de Justiça e Turma Recursal de Juizado Especial Criminal de um mesmo Estado. <strong>Tese 5:</strong> é relativa a nulidade decorrente da inobservância da competência penal por prevenção, que deve ser alegada em momento oportuno, sob pena de preclusão. <strong>Tese 6:</strong> a competência é determinada pelo lugar em que se consumou a infração (art. 70 do CPP), sendo possível a modificação quando outro local seja o melhor para a formação da verdade real. Julgados: CC 144072/PR; CC 118394/DF; CC 145938/RO (tese 3); CC 140322/PR; CC 124633/SC (tese 4); RHC 67107/MS; AgRg no AREsp 880904/RJ (tese 5); CC 131566/DF; RHC 53020/RS; CC 138537/SP (tese 6).</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">JT 72, teses 7, 16 e 18</span><span class="juris-title">Conflitos, atribuição e execução de restritivas</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><strong>Tese 7:</strong> compete ao TRF ou ao TJ decidir os conflitos de competência entre juizado especial e juízo comum da mesma seção judiciária ou do mesmo Estado. <strong>Tese 16:</strong> há conflito de competência, e não de atribuição, sempre que a autoridade judiciária se pronuncia a respeito da controvérsia, acolhendo expressamente as manifestações do MP. <strong>Tese 18:</strong> a mudança de domicílio do condenado que cumpre restritiva de direitos não modifica a competência da execução, que permanece com o juízo da condenação, sendo deprecada somente a supervisão e o acompanhamento.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">JT 93, tese 1</span><span class="juris-title">HC contra acórdão de Turma Recursal</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><span class="quote">“Compete aos Tribunais de Justiça ou aos Tribunais Regionais Federais processar e julgar habeas corpus impetrado contra acórdãos de Turma Recursal dos Juizados Especiais.”</span>Julgados: AgRg no RHC 137285/SP (Rel. Min. Felix Fischer, 20/04/2021); AgRg no HC 421161/SP; RHC 33018/SP.</div></div>
+  </div>
+
+  <h3 class="sub-title">FONAJE — Enunciados criminais relacionados ao art. 63 <span class="vb vb-sec" style="margin-left:0.4rem">Secundária</span></h3>
+  <div class="alert alert-gold"><span class="alert-tag">Natureza</span><div>Os enunciados do Fórum Nacional dos Juizados Especiais são orientações interpretativas não vinculantes. A compilação consultada (Evinis Talon, atualizada em 06/02/2024) vai até o Enunciado 130. Podem existir encontros posteriores; conferir a versão vigente. Não localizei enunciado que adote expressamente uma das teorias do art. 63.</div></div>
+  <div class="juris-grid mt1">
+    <div class="juris-card fonaje"><div class="juris-header"><span class="juris-badge purple">FONAJE</span><span class="juris-title">Foro, precatória e execução</span></div><div class="juris-body"><strong>9:</strong> advertência de advogado na intimação. <strong>13:</strong> proposta de transação por precatória. <strong>17:</strong> interrogatório por precatória. <strong>34:</strong> termo circunstanciado pela Polícia Civil ou Militar. <strong>51, 64:</strong> réu não encontrado; remessa ao juízo comum. <strong>66:</strong> direito de assistir às testemunhas; precatória com cópia dos depoimentos. <strong>87:</strong> execução da transação. <strong>91, 92:</strong> redução e adequação no juízo deprecado. <strong>93:</strong> citação, defesa preliminar e proposta de suspensão por precatória. <strong>108:</strong> art. 396 do CPP inaplicável. <strong>110:</strong> citação por hora certa. <strong>130:</strong> Balcão Virtual para comparecimentos periódicos.</div></div>
+  </div>
+
+  <h3 class="sub-title">Atos normativos do CNJ <span class="vb vb-of" style="margin-left:0.4rem">Oficial</span></h3>
+  <div class="juris-grid">
+    <div class="juris-card doutrina"><div class="juris-header"><span class="juris-badge doutrina">CNJ</span><span class="juris-title">Resolução 354/2020 (compilada)</span></div><div class="juris-body">Audiências e sessões por videoconferência e telepresenciais e comunicação eletrônica de atos processuais. Texto compilado conforme as Resoluções 481/2022, 508/2023 e 679/2026. Os arts. 3º a 5º e 7º tratam da participação de partes, ofendidos, testemunhas, advogados e MP fora da sede, da gravação e da publicidade.</div></div>
+  </div>
+</section>
+
+<!-- ============ 13 ============ -->
+<section class="section" id="doutrina">
+  <div class="section-header"><div class="section-num">13</div><div class="section-title"><span>Doutrina Sistematizada</span>Linhas Dogmáticas e Controvérsias</div></div>
+  <div class="alert alert-navy"><span class="alert-tag">Critério</span><div>A posição de Afrânio Silva Jardim foi lida diretamente no texto publicado no site do MPRJ. As posições dos demais autores foram lidas na revisão de Marco Aurélio Souza da Silva (Jus.com.br, 2010), que reproduz passagens e notas de rodapé; não foram conferidas nas obras. As demais correntes são sínteses sem atribuição de passagens. Para citar em peça, localizar a página e a edição na obra.</div></div>
+  <div class="card-grid card-grid-2 mt1">
+    <div class="card"><h3>O núcleo da controvérsia</h3><ul><li>O art. 63 usa “praticada a infração”; o CPP (art. 70) usa “consumar”. Jardim sustenta que o art. 63 quis resolver controvérsia jurisprudencial surgida da interpretação do art. 70 do CPP.</li><li>Em crimes plurilocais, a opção entre atividade, resultado e ubiquidade muda o foro. Em crimes cuja ação e resultado se dão no mesmo lugar, a discussão não tem efeito.</li><li>Jardim aponta que o legislador “deveria ter dito onde foi praticada a ação”, mostrando o que desejava; ao dizer “praticada a infração”, deixou margem a dupla interpretação.</li></ul></div>
+    <div class="card"><h3>Argumentos pela atividade</h3><ul><li>Literalidade combinada com a vontade do legislador (Jardim).</li><li>Prevenção geral e facilidade de coleta de provas e de inquirição de testemunhas no lugar em que o delito foi cometido (Tourinho Neto e Figueira Júnior, conforme Silva, 2010).</li><li>Analogia com o ECA, que fixa a competência para o ato infracional no lugar da ação ou omissão (art. 147, § 1º), como lembram Grinover et al. (conforme Silva, 2010).</li></ul></div>
+    <div class="card"><h3>Argumentos pelo resultado e pela ubiquidade</h3><ul><li>Pelo resultado: “praticada” equivale a realizada, executada, consumada (Tourinho Filho) e Damásio, segundo Jardim, lê “praticar a infração” como consumá-la.</li><li>Pela ubiquidade: abrange conduta e resultado, como o art. 6º do CP, e soluciona a diversidade de situações em infrações cometidas pela internet (Mirabete; Pazzaglini Filho et al.; Silva, 2010).</li><li>Silva (2010) afirma que a teoria da atividade, aplicada a casos como a ameaça enviada de uma cidade e recebida em outra, pode prejudicar a vítima.</li></ul></div>
+    <div class="card"><h3>O que fazem os tribunais</h3><ul><li>Nos precedentes do STJ localizados (ameaça, injúria privada, honra na internet), a consumação, entendida como ciência da vítima ou publicação, orienta o foro (art. 70 do CPP).</li><li>Fontes secundárias mencionam decisões de tribunais estaduais que aplicaram a teoria da atividade aos Juizados; não foram verificadas.</li><li>Não localizei súmula, tese de Jurisprudência em Teses ou enunciado do FONAJE que adote expressamente uma das teorias para o art. 63.</li></ul></div>
+    <div class="card"><h3>Ação privada e foro de eleição</h3><ul><li>O art. 73 do CPP prevê foro de eleição na ação exclusivamente privada. Há decisão do TJDF (referida em fonte secundária) que descreve a regra como facultativa (<em>forum electionis</em>).</li><li>A Lei 9.099 é silente. O tema é aberto quanto à compatibilidade com o art. 63.</li></ul></div>
+    <div class="card"><h3>Natureza relativa e controle</h3><ul><li>A relatora da ADI 5264 reconheceu que o Juizado tem competência relativa em face do juízo comum e que “os institutos despenalizadores dos juizados constituem garantia individual do acusado”.</li><li>A arguição de incompetência de foro segue o CPP: exceção no prazo de defesa, reconhecimento de ofício e preclusão no caso de nulidade relativa (JT 72, tese 5, quanto à prevenção).</li></ul></div>
+  </div>
+  <div class="card mt2">
+    <h3>Obras de referência para consulta</h3>
+    <ul class="source-list">
+      <li>JARDIM, Afrânio Silva. Juizados Especiais Criminais (Lei nº 9.099/95). <em>Revista do Ministério Público do Rio de Janeiro</em>, Rio de Janeiro, nº 5, 1997, pp. 42-43 (texto lido).</li>
+      <li>GRINOVER, Ada Pellegrini; GOMES FILHO, Antonio Magalhães; FERNANDES, Antonio Scarance; GOMES, Luiz Flávio. <em>Juizados Especiais Criminais: comentários à Lei 9.099, de 26.09.1995</em>. São Paulo: Revista dos Tribunais (edição citada por Silva: 5. ed., 2005).</li>
+      <li>TOURINHO FILHO, Fernando da Costa. <em>Comentários à Lei dos Juizados Especiais Criminais</em>. São Paulo: Saraiva (edição citada por Silva: 2000).</li>
+      <li>TOURINHO NETO, Fernando da Costa; FIGUEIRA JÚNIOR, Joel Dias. <em>Juizados Especiais Federais Cíveis e Criminais: comentários à Lei 10.259</em>. São Paulo: Revista dos Tribunais (edição citada por Silva: 2. ed., 2007). Também: <em>Juizados Especiais Estaduais Cíveis e Criminais: comentários à Lei 9.099/1995</em>.</li>
+      <li>MIRABETE, Julio Fabbrini. <em>Juizados Especiais Criminais: comentários, jurisprudência, legislação</em>. São Paulo: Atlas (edição citada por Silva: 1996).</li>
+      <li>PAZZAGLINI FILHO, Marino; MORAES, Alexandre de; SMANIO, Gianpaolo Poggio; VAGGIONE, Luiz Fernando. <em>Juizado Especial Criminal: aspectos práticos da Lei nº 9.099/95</em>. São Paulo: Atlas (edição citada por Silva: 3. ed., 1999).</li>
+      <li>JESUS, Damásio E. de. <em>Lei dos Juizados Especiais Criminais Anotada</em>. São Paulo: Saraiva.</li>
+      <li>SILVA, Marco Aurélio Souza da. A fixação da competência do juizado especial criminal nas infrações penais plurilocais. <em>Jus.com.br</em>, 21/05/2010 (artigo acadêmico, fonte secundária).</li>
+    </ul>
+    <div class="source-note">Edições e anos conforme as notas de rodapé de Silva (2010) ou o texto lido (Jardim). Usar a edição mais recente disponível e conferir a numeração de página antes de citar.</div>
+  </div>
+</section>
+
+<!-- ============ 14 ============ -->
+<section class="prova-section" id="recorrentes">
+  <h2>Pontos que Sempre Aparecem nas Audiências</h2>
+  <p class="intro">Respostas objetivas, com a base legal ou jurisprudencial indicada em cada item, para consulta rápida durante a audiência e no atendimento ao cliente.</p>
+  <div class="prova-items">
+
+    <div class="prova-group">Qual é o foro</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">01</span>Qual Juizado é competente?</div><div class="prova-item-a">O do <strong>lugar em que foi praticada a infração penal</strong>. <span class="ref">Art. 63</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">02</span>É o foro do domicílio do autor do fato?</div><div class="prova-item-a"><strong>Não.</strong> O Juizado Cível usa o domicílio do réu (art. 4º); o Criminal, o lugar da infração. <span class="ref">Arts. 4º e 63</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">03</span>“Praticada” é o lugar da ação ou do resultado?</div><div class="prova-item-a">O texto não diz. A doutrina se divide entre <strong>atividade, resultado e ubiquidade</strong>. <span class="ref">Art. 63; CPP, art. 70; CP, art. 6º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">04</span>O STJ definiu a teoria para o Juizado?</div><div class="prova-item-a">Não localizei tese ou súmula do STJ que resolva expressamente. Nos casos de ameaça e honra, o STJ seguiu a <strong>consumação</strong>. <span class="ref">STJ, CC 156.284; CC 184.269; CC 173.458</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">05</span>Contravenção segue a mesma regra?</div><div class="prova-item-a">Sim: o art. 63 fala em “infração penal”, que abrange crimes e contravenções. <span class="ref">Arts. 61 e 63</span></div></div>
+
+    <div class="prova-group">Mensagens, telefone e internet</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">06</span>Ameaça enviada de outra cidade por WhatsApp.</div><div class="prova-item-a">O STJ fixou o foro do local em que a <strong>vítima tomou conhecimento</strong> da ameaça. <span class="ref">STJ, CC 156.284 (medidas protetivas; fundamento no art. 70 do CPP)</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">07</span>Injúria por mensagem privada (direct).</div><div class="prova-item-a">Consuma-se onde a vítima <strong>toma conhecimento</strong> do conteúdo. <span class="ref">STJ, CC 184.269/PB (fonte secundária)</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">08</span>Ofensa publicada em rede social aberta.</div><div class="prova-item-a">Consumação onde o conteúdo foi <strong>incluído na rede</strong>; se o lugar for ignorado, domicílio ou residência do réu. <span class="ref">STJ, CC 173.458/SC (fonte secundária); CPP, art. 72</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">09</span>Crime pela internet vai para a Justiça Federal?</div><div class="prova-item-a"><strong>Não automaticamente</strong>: é preciso demonstrar a internacionalidade. <span class="ref">STJ JT 72, tese 3</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">10</span>O que guardar como prova do local?</div><div class="prova-item-a">Capturas de tela com data e hora, registro do aplicativo e local de recebimento ou publicação. <span class="ref">Prática</span></div></div>
+
+    <div class="prova-group">Regras subsidiárias do CPP</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">11</span>E se não se sabe onde a infração ocorreu?</div><div class="prova-item-a">Domicílio ou residência do réu; várias residências: prevenção; paradeiro ignorado: o juiz que primeiro tomar conhecimento. <span class="ref">CPP, art. 72</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">12</span>Fato nas divisas de duas comarcas.</div><div class="prova-item-a"><strong>Prevenção.</strong> <span class="ref">CPP, art. 70, § 3º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">13</span>Infração continuada ou permanente em duas jurisdições.</div><div class="prova-item-a"><strong>Prevenção.</strong> <span class="ref">CPP, arts. 71 e 83</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">14</span>Na queixa-crime, posso escolher o foro?</div><div class="prova-item-a">O art. 73 do CPP permite preferir o foro do domicílio ou da residência do réu em ação exclusivamente privada. No Juizado, a compatibilidade com o art. 63 não está resolvida em tese oficial. <span class="ref">CPP, art. 73</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">15</span>Tentativa: qual é o lugar?</div><div class="prova-item-a">O do <strong>último ato de execução</strong>. <span class="ref">CPP, art. 70, caput</span></div></div>
+
+    <div class="prova-group">Atos fora da sede</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">16</span>O autor do fato mora em outra comarca.</div><div class="prova-item-a">O FONAJE admite precatória para a proposta de transação; a Res. CNJ 354 prevê videoconferência na sede do foro do domicílio para depoimento pessoal ou interrogatório. <span class="ref">FONAJE 13; Res. CNJ 354, art. 4º, § 1º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">17</span>A vítima ou testemunha mora longe.</div><div class="prova-item-a">Em regra, é ouvida por <strong>videoconferência</strong> na sede do foro de seu domicílio, salvo apresentação espontânea. <span class="ref">Res. CNJ 354, art. 4º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">18</span>Posso participar por vídeo como advogado?</div><div class="prova-item-a">Pode requerer; o deferimento depende de viabilidade técnica e conveniência do juiz, e o ônus é do requerente comparecer se indeferido. <span class="ref">Res. CNJ 354, art. 5º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">19</span>Pode haver precatória para suspensão do processo?</div><div class="prova-item-a">Sim, segundo o FONAJE, para citação, defesa preliminar e proposta; a suspensão é cumprida no juízo deprecado. <span class="ref">FONAJE 93</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">20</span>Quem lavra o termo circunstanciado?</div><div class="prova-item-a">A autoridade policial que tomar conhecimento da ocorrência; o FONAJE admite a Polícia Civil ou Militar. <span class="ref">Art. 69; FONAJE 34</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">21</span>O autor do fato precisa ser preso se não comparecer?</div><div class="prova-item-a">Quem é encaminhado ao Juizado ou assume o compromisso de comparecer não sofre prisão em flagrante nem fiança. <span class="ref">Art. 69, p. único</span></div></div>
+
+    <div class="prova-group">Incompetência e conflito</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">22</span>Como arguir que o foro está errado?</div><div class="prova-item-a">Por <strong>exceção de incompetência</strong>, verbal ou escrita, no prazo de defesa. <span class="ref">CPP, art. 108</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">23</span>O juiz pode reconhecer de ofício?</div><div class="prova-item-a">Sim, em qualquer fase, declarando nos autos. <span class="ref">CPP, art. 109</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">24</span>O que acontece com os atos já praticados?</div><div class="prova-item-a">Aceita a declinatória, os atos anteriores são ratificados no juízo competente; a incompetência anula somente os atos decisórios. <span class="ref">CPP, arts. 108, § 1º, e 567</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">25</span>A nulidade por incompetência por prevenção pode ser alegada a qualquer tempo?</div><div class="prova-item-a">Não: é relativa e deve ser alegada em momento oportuno, sob pena de preclusão. <span class="ref">STJ JT 72, tese 5</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">26</span>Dois Juizados se recusam a processar. E agora?</div><div class="prova-item-a">Conflito de competência: decide o TJ ou TRF (mesmo Estado ou seção) ou o STJ (juízes de tribunais diversos). <span class="ref">CPP, arts. 113 a 116; CF, art. 105, I, “d”; JT 72, tese 7</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">27</span>Há conflito entre Turma Recursal e Tribunal de Justiça?</div><div class="prova-item-a">Não. <span class="ref">STJ JT 72, tese 4</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">28</span>Quem pode suscitar o conflito?</div><div class="prova-item-a">A parte interessada, o MP junto a qualquer dos juízos e qualquer dos juízes ou tribunais em causa. <span class="ref">CPP, art. 115</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">29</span>O acordo homologado em foro errado vale?</div><div class="prova-item-a">Há risco: o art. 567 do CPP anula os atos decisórios do juízo incompetente. Resolver o foro antes de homologar. <span class="ref">CPP, art. 567 (orientação prática)</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">30</span>O Juizado é competente mesmo havendo conexão com crime comum?</div><div class="prova-item-a">Pelo art. 60, o feito pode ser reunido no juízo comum, observadas a transação e a composição civil. <span class="ref">Art. 60 e p. único; STF, ADI 5264</span></div></div>
+  </div>
+</section>
+
+<!-- ============ 15 ============ -->
+<section class="section" id="fontes">
+  <div class="section-header"><div class="section-num">14</div><div class="section-title"><span>Controle de Fidedignidade</span>Fontes, Verificação e Ressalvas</div></div>
+  <div class="card">
+    <h3>Fontes consultadas e grau de verificação (conferência de 11/11/2026)</h3>
+    <div class="tbl-scroll">
+    <table class="comp-table">
+      <thead><tr><th>Fonte</th><th>Uso nesta página</th><th>Situação</th></tr></thead>
+      <tbody>
+        <tr class="hl2"><td>Planalto — Lei 9.099/1995 (texto compilado), CP, CPP, CF, ECA, Lei 11.313/2006</td><td>Art. 63 e dispositivos correlatos; CP arts. 6º e 14; CPP arts. 69 a 73, 75, 83, 108, 109, 113 a 116, 564 e 567; CF arts. 105 e 108.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido</span></td></tr>
+        <tr class="hl2"><td>STJ — notícia sobre o CC 156.284 (portal do STJ, 02/03/2018)</td><td>Ameaça por redes sociais e foro da ciência da vítima.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido</span></td></tr>
+        <tr class="hl2"><td>STJ — Jurisprudência em Teses nº 72 e nº 93 (PDF do próprio STJ)</td><td>Teses sobre competência criminal, conflitos, Turma Recursal, internet.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido</span></td></tr>
+        <tr class="hl2"><td>STF — notícia oficial sobre a ADI 5264</td><td>Natureza relativa da competência do Juizado.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido</span></td></tr>
+        <tr class="hl2"><td>CNJ — Resolução 354/2020 (texto compilado até a Res. 679/2026)</td><td>Videoconferência e audiências telepresenciais.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido (portal de atos do CNJ)</span></td></tr>
+        <tr class="hl2"><td>Afrânio Silva Jardim, <em>Revista do MP-RJ</em> nº 5 (1997), PDF no site do MPRJ</td><td>Interpretação do art. 63; posição de Damásio, conforme o autor.</td><td><span class="vb vb-of" style="margin-left:0">Texto lido</span></td></tr>
+        <tr class="hl"><td>Marco Aurélio Souza da Silva, Jus.com.br (2010)</td><td>Posições de Grinover et al., Tourinho Filho, Tourinho Neto e Figueira Júnior, Mirabete e Pazzaglini Filho et al.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+        <tr class="hl"><td>Conjur (reproduz o STJ); Dizer o Direito; Evinis Talon; Migalhas</td><td>CC 184.269/PB, CC 173.458/SC e HC 591.218/SC.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+        <tr class="hl"><td>FONAJE — compilação de Evinis Talon (atualizada em 06/02/2024)</td><td>Enunciados criminais.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+        <tr class="hl3"><td>Doutrina (seção 13)</td><td>Síntese de correntes e bibliografia.</td><td><span class="vb vb-pr" style="margin-left:0">Conferir nas obras</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 class="mt2">Limites desta conferência</h3>
+    <ul class="source-list">
+      <li><strong>Interpretação de “praticada” pelo STJ:</strong> não localizei tese, súmula ou acórdão que enfrente expressamente o art. 63 da Lei 9.099 (atividade, resultado ou ubiquidade) em fonte verificável. Os precedentes citados foram firmados à luz do art. 70 do CPP.</li>
+      <li><strong>CC 184.269/PB, CC 173.458/SC e HC 591.218/SC:</strong> vêm de fontes secundárias; os acórdãos não foram lidos. O site de acórdãos do STJ e o Jusbrasil bloquearam a consulta automatizada.</li>
+      <li><strong>Decisões de tribunais estaduais</strong> que, segundo fontes secundárias, aplicaram a teoria da atividade em Juizados: não verificadas.</li>
+      <li><strong>Doutrina:</strong> as passagens dos autores, exceto Jardim, vêm do artigo de Silva (2010), sem conferência nas obras.</li>
+      <li><strong>Art. 73 do CPP no Juizado:</strong> não localizei tese oficial sobre a compatibilidade com o art. 63.</li>
+      <li><strong>Súmula 706/STF:</strong> mencionada na JT 72, tese 5; o texto não foi verificado.</li>
+      <li><strong>Jurisprudência em Teses nº 280 (STJ, maio de 2026, “Direito Penal e Processual Penal em Ambiente Digital II”):</strong> a existência da edição foi confirmada por notícia secundária, que a relaciona a competência da Justiça Federal em crimes digitais transnacionais; o texto das teses não foi lido. Recomenda-se conferir se há tese específica sobre foro de crimes contra a honra e ameaça pela internet.</li>
+      <li><strong>JT 72</strong> tem julgados até 30/09/2016; a JT 93 foi revisada em 2023. As teses podem ter evoluído.</li>
+      <li><strong>Enunciados do FONAJE:</strong> compilação de terceiros; não vinculam tribunais. Podem ter sido editados novos encontros após fevereiro de 2024.</li>
+      <li><strong>Jurisprudência de 2024 a 2026:</strong> não foi localizado acórdão recente específico sobre o art. 63. Recomenda-se busca complementar nos portais dos tribunais, por tipo penal.</li>
+      <li><strong>Regulamentação local:</strong> normas de organização judiciária estaduais e regulamentos de videoconferência de cada tribunal não foram consultados.</li>
+    </ul>
+    <h3 class="mt2">Endereços das fontes oficiais</h3>
+    <ul class="source-list">
+      <li><a href="https://www.planalto.gov.br/ccivil_03/leis/l9099.htm" target="_blank" rel="noopener">Lei 9.099/1995 — Planalto</a></li>
+      <li><a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm" target="_blank" rel="noopener">Código de Processo Penal — Planalto</a></li>
+      <li><a href="https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias-antigas/2018/2018-03-02_08-14_Comarca-onde-vitima-toma-conhecimento-de-ameaca-por-redes-sociais-e-competente-para-analisar-medidas-protetivas.aspx" target="_blank" rel="noopener">STJ — notícia sobre o CC 156.284</a></li>
+      <li><a href="https://www.stj.jus.br/internet_docs/jurisprudencia/jurisprudenciaemteses/Jurisprud%C3%AAncia%20em%20teses%2072%20-%20Compet%C3%AAncia%20Criminal.pdf" target="_blank" rel="noopener">STJ — Jurisprudência em Teses 72 (Competência Criminal)</a></li>
+      <li><a href="https://www.stj.jus.br/docs_internet/jurisprudencia/jurisprudenciaemteses/Jurisprudencia%20em%20Teses%2093%20-%20Juizados%20Especiais%20Criminais%20-%20I.pdf" target="_blank" rel="noopener">STJ — Jurisprudência em Teses 93 (JECrim I)</a></li>
+      <li><a href="https://noticias.stf.jus.br/?p=52154" target="_blank" rel="noopener">STF — notícia sobre a ADI 5264</a></li>
+      <li><a href="https://atos.cnj.jus.br/atos/detalhar/3579" target="_blank" rel="noopener">CNJ — Resolução 354/2020 (texto compilado)</a></li>
+      <li><a href="https://www.mprj.mp.br/documents/20184/2852786/Afranio_Silva_Jardim.pdf" target="_blank" rel="noopener">Afrânio Silva Jardim — Juizados Especiais Criminais (MPRJ)</a></li>
+      <li><a href="https://jus.com.br/artigos/14893/a-fixacao-da-competencia-do-juizado-especial-criminal-nas-infracoes-penais-plurilocais" target="_blank" rel="noopener">Silva (2010) — competência do JECrim nas infrações plurilocais (Jus.com.br)</a></li>
+    </ul>
+    <div class="alert alert-red mt2"><span class="alert-tag">Nota de integridade</span><div>Não foram criadas súmulas, teses ou precedentes. Onde não foi possível confirmar a fonte primária, a página identifica a informação como secundária ou como orientação prática. Antes de transcrever qualquer trecho em peça, conferir o texto na fonte oficial.</div></div>
+  </div>
+</section>
+
+</div>
+
+<footer><strong>Art. 63 da Lei 9.099/1995 — Competência Territorial do Juizado Especial Criminal</strong> · Página única com atalhos internos · Conferência normativa em 11/11/2026 · Material de apoio à atuação; não substitui a consulta às fontes oficiais.</footer>
+
+<a id="to-top" href="#top-nav">Topo</a>
+
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('#top-nav a[href^="#"]'));
+  var map={};
+  links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  var ids=Object.keys(map);
+  var toTop=document.getElementById('to-top');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    var current=null;
+    ids.forEach(function(id){
+      var el=document.getElementById(id);
+      if(el && el.getBoundingClientRect().top<=160){current=id;}
+    });
+    links.forEach(function(a){a.classList.remove('active');});
+    if(current && map[current]){
+      var a=map[current], nav=document.getElementById('top-nav');
+      a.classList.add('active');
+      if(nav){
+        var left=a.offsetLeft-(nav.clientWidth/2)+(a.offsetWidth/2);
+        nav.scrollLeft=left;
+      }
+    }
+    if(toTop){toTop.classList.toggle('show',y>600);}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>
