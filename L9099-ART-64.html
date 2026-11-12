@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 64 da Lei 9.099/1995 — Publicidade, Horário e Dia dos Atos Processuais | Fluxograma de Atuação em Audiência</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0d1b2a;--navy-mid:#1a2f45;--navy-light:#243b55;
+  --gold:#c8960c;--gold-light:#e8b84b;--gold-pale:#fdf3d8;
+  --cream:#faf7f2;--cream-mid:#f0ebe2;
+  --text-dark:#1a1208;--text-mid:#3d3020;--text-soft:#6b5c40;
+  --border:#d4c49a;--border-light:#e8dcbf;
+  --red-accent:#8b1a1a;--green-accent:#1a4a2e;--blue-accent:#1a3a5c;--purple-accent:#4a1a5c;
+  --shadow:0 4px 24px rgba(13,27,42,0.10);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Source Serif 4',Georgia,serif;background:var(--cream);color:var(--text-dark);font-size:15px;line-height:1.75;}
+a{color:var(--blue-accent);}
+strong{font-weight:700;}
+
+/* ---------- Navegação ---------- */
+#top-nav{position:sticky;top:0;z-index:999;background:var(--navy);border-bottom:3px solid var(--gold);padding:0 1.5rem;display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;}
+#top-nav::-webkit-scrollbar{display:none;}
+#top-nav .nav-brand{font-family:'Playfair Display',serif;color:var(--gold-light);font-size:0.9rem;font-weight:700;white-space:nowrap;padding:0.85rem 1.2rem 0.85rem 0;border-right:1px solid rgba(200,150,12,0.3);margin-right:0.5rem;letter-spacing:0.5px;}
+#top-nav .nav-main-links{display:flex;align-items:center;}
+#top-nav a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.72rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;padding:0.85rem 0.8rem;white-space:nowrap;transition:color .2s;border-bottom:3px solid transparent;margin-bottom:-3px;}
+#top-nav a:hover,#top-nav a.active{color:var(--gold-light);border-bottom-color:var(--gold);}
+#top-nav a.nav-prova{color:var(--gold-light);}
+
+/* ---------- Cabeçalho ---------- */
+#hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 60%,#1e3d5c 100%);color:white;padding:3.5rem 2rem 3rem;text-align:center;position:relative;overflow:hidden;}
+#hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(200,150,12,0.03) 0px,rgba(200,150,12,0.03) 1px,transparent 1px,transparent 40px);}
+#hero .badge{display:inline-block;background:rgba(200,150,12,0.15);border:1px solid rgba(200,150,12,0.5);color:var(--gold-light);font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;padding:0.35rem 1rem;border-radius:2px;margin-bottom:1.2rem;font-weight:600;position:relative;}
+#hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.15;margin-bottom:0.6rem;letter-spacing:-0.5px;position:relative;}
+#hero h1 span{color:var(--gold-light);}
+#hero .subtitle{font-size:1rem;color:rgba(255,255,255,0.65);font-style:italic;margin-bottom:1.5rem;position:relative;}
+#hero .law-box{display:inline-block;background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.4);border-left:4px solid var(--gold);color:rgba(255,255,255,0.9);font-size:0.93rem;font-style:italic;padding:1rem 1.5rem;max-width:1120px;text-align:left;line-height:1.9;border-radius:0 4px 4px 0;position:relative;}
+#hero .law-box strong{color:var(--gold-light);font-style:normal;display:block;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem;}
+
+/* ---------- Estrutura ---------- */
+.page-wrap{width:100%;margin:0;padding:0 clamp(1rem,3vw,4rem) 4rem;}
+.section{margin-top:3.5rem;scroll-margin-top:56px;}
+.section-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:0.75rem;border-bottom:2px solid var(--border);}
+.section-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--border);line-height:1;min-width:2.5rem;}
+.section-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--navy);line-height:1.2;}
+.section-title span{display:block;font-size:0.75rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);}
+.sub-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin:1.6rem 0 0.7rem;padding-left:0.7rem;border-left:4px solid var(--gold);}
+
+/* ---------- Cartões ---------- */
+.card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1.4rem 1.6rem;box-shadow:var(--shadow);}
+.card-grid{display:grid;gap:1rem;}
+.card-grid-2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr));}
+.card-grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
+.card-grid-4{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));}
+.card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:0.6rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border-light);color:var(--navy);}
+.card h4{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;margin:0.8rem 0 0.35rem;color:var(--navy);}
+.card p,.card li{font-size:0.88rem;line-height:1.7;color:var(--text-mid);}
+.card p + p{margin-top:0.55rem;}
+.card ul,.card ol{padding-left:1.1rem;}
+.card li{margin-bottom:0.3rem;}
+.type-card{border-top:4px solid;}
+.tc-red{border-top-color:var(--red-accent);}.tc-red h3{color:var(--red-accent);}
+.tc-green{border-top-color:var(--green-accent);}.tc-green h3{color:var(--green-accent);}
+.tc-blue{border-top-color:var(--blue-accent);}.tc-blue h3{color:var(--blue-accent);}
+.tc-gold{border-top-color:var(--gold);}.tc-gold h3{color:#7a5a00;}
+.tc-purple{border-top-color:var(--purple-accent);}.tc-purple h3{color:var(--purple-accent);}
+
+/* ---------- Fluxograma ---------- */
+.flow-wrap{background:white;border:1px solid var(--border-light);border-radius:6px;padding:2rem 1.5rem;box-shadow:var(--shadow);overflow-x:auto;}
+.flow-center{display:flex;flex-direction:column;align-items:center;}
+.flow-node{border-radius:4px;padding:0.65rem 1.4rem;font-size:0.82rem;font-weight:600;text-align:center;min-width:220px;max-width:760px;line-height:1.55;}
+.flow-node small{display:block;font-weight:400;font-size:0.74rem;opacity:0.9;margin-top:0.2rem;}
+.flow-start{background:var(--navy);color:white;border-radius:50px;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;}
+.flow-end-green{background:var(--green-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-red{background:var(--red-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-gold{background:var(--gold);color:var(--navy);border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-blue{background:var(--blue-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-purple{background:var(--purple-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-box-navy{background:var(--navy-mid);color:white;border-left:4px solid var(--gold);font-size:0.8rem;}
+.flow-box-navy b{color:var(--gold-light);}
+.flow-box-green{background:#edf7f0;border:1px solid #7ec89a;border-left:4px solid var(--green-accent);color:var(--text-dark);}
+.flow-box-blue{background:#edf2f8;border:1px solid #8eb4d8;border-left:4px solid var(--blue-accent);color:var(--text-dark);}
+.flow-box-red{background:#fdf0f0;border:1px solid #e09090;border-left:4px solid var(--red-accent);color:var(--text-dark);}
+.flow-box-gold{background:var(--gold-pale);border:2px solid var(--gold);color:var(--text-dark);}
+.flow-box-purple{background:#f3eef8;border:1px solid #b89dd8;border-left:4px solid var(--purple-accent);color:var(--text-dark);}
+.flow-arrow{font-size:1.3rem;color:var(--border);line-height:1;margin:0.15rem 0;}
+.flow-row{display:flex;align-items:flex-start;gap:1.5rem;width:100%;justify-content:center;flex-wrap:wrap;}
+.flow-branch{display:flex;flex-direction:column;align-items:center;flex:1;min-width:210px;}
+.flow-label{font-size:0.68rem;color:var(--text-soft);font-weight:600;letter-spacing:0.5px;text-transform:uppercase;background:var(--cream-mid);padding:0.15rem 0.5rem;border-radius:2px;margin:0.15rem 0;text-align:center;}
+.flow-connector-line{width:1px;height:28px;background:var(--border);}
+
+/* ---------- Tabelas ---------- */
+.tbl-scroll{overflow-x:auto;border-radius:6px;box-shadow:var(--shadow);}
+.comp-table{width:100%;border-collapse:collapse;font-size:0.84rem;background:white;}
+.comp-table thead{background:var(--navy);color:white;}
+.comp-table thead th{padding:0.85rem 1rem;font-weight:600;letter-spacing:0.5px;font-size:0.8rem;text-align:left;}
+.comp-table thead th:first-child{color:var(--gold-light);}
+.comp-table tbody tr{border-bottom:1px solid var(--border-light);}
+.comp-table tbody tr:last-child{border-bottom:none;}
+.comp-table tbody tr:nth-child(even){background:var(--cream);}
+.comp-table td{padding:0.75rem 1rem;color:var(--text-mid);vertical-align:top;}
+.comp-table td:first-child{font-weight:600;color:var(--navy);font-size:0.8rem;}
+.comp-table .hl td{background:var(--gold-pale)!important;}
+.comp-table .hl2 td{background:#edf7f0!important;}
+.comp-table .hl3 td{background:#edf2f8!important;}
+.comp-table .hl4 td{background:#fdf0f0!important;}
+.comp-table .hl5 td{background:#f3eef8!important;}
+
+/* ---------- Jurisprudência ---------- */
+.juris-grid{display:grid;gap:1rem;}
+.juris-card{background:white;border:1px solid var(--border-light);border-left:5px solid;border-radius:0 6px 6px 0;padding:1.2rem 1.4rem;box-shadow:var(--shadow);}
+.juris-card.stf{border-left-color:var(--red-accent);}
+.juris-card.stj{border-left-color:var(--navy);}
+.juris-card.doutrina{border-left-color:var(--gold);}
+.juris-card.fonaje{border-left-color:var(--purple-accent);}
+.juris-header{display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem;flex-wrap:wrap;}
+.juris-badge{font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:0.2rem 0.55rem;border-radius:2px;}
+.juris-badge.stf{background:var(--red-accent);color:white;}
+.juris-badge.stj{background:var(--navy);color:white;}
+.juris-badge.doutrina{background:var(--gold);color:var(--navy);}
+.juris-badge.sumula{background:var(--green-accent);color:white;}
+.juris-badge.tese{background:var(--blue-accent);color:white;}
+.juris-badge.purple{background:var(--purple-accent);color:white;}
+.juris-title{font-family:'Playfair Display',serif;font-size:0.92rem;font-weight:700;color:var(--navy);}
+.juris-body{font-size:0.84rem;color:var(--text-mid);line-height:1.7;}
+.juris-body .quote{display:block;margin:0.4rem 0;padding:0.5rem 0.8rem;background:var(--cream-mid);border-left:3px solid var(--border);font-style:italic;}
+.vb{display:inline-block;font-size:0.6rem;font-weight:700;letter-spacing:0.9px;text-transform:uppercase;padding:0.12rem 0.45rem;border-radius:2px;margin-left:auto;}
+.vb-of{background:#dceee3;color:var(--green-accent);border:1px solid #7ec89a;}
+.vb-sec{background:#fdf3d8;color:#7a5a00;border:1px solid #d4aa3a;}
+.vb-pr{background:#ece5f5;color:var(--purple-accent);border:1px solid #b89dd8;}
+
+/* ---------- Alertas e citações ---------- */
+.alert{padding:0.9rem 1.2rem;border-radius:4px;font-size:0.84rem;line-height:1.7;display:flex;gap:0.7rem;align-items:flex-start;}
+.alert .alert-tag{flex-shrink:0;font-size:0.62rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:0.2rem 0.5rem;border-radius:2px;margin-top:0.2rem;}
+.alert-gold{background:var(--gold-pale);border:1px solid #d4aa3a;color:#5a4000;}.alert-gold .alert-tag{background:#d4aa3a;color:#3a2800;}
+.alert-red{background:#fdf0f0;border:1px solid #e09090;color:#5a0000;}.alert-red .alert-tag{background:var(--red-accent);color:white;}
+.alert-navy{background:#f0f4f8;border:1px solid #aabbcc;color:var(--navy);}.alert-navy .alert-tag{background:var(--navy);color:white;}
+.alert-green{background:#edf7f0;border:1px solid #7ec89a;color:#1a4a2e;}.alert-green .alert-tag{background:var(--green-accent);color:white;}
+.alert-purple{background:#f3eef8;border:1px solid #b89dd8;color:var(--purple-accent);}.alert-purple .alert-tag{background:var(--purple-accent);color:white;}
+.law-quote{background:var(--cream-mid);border-left:4px solid var(--navy);padding:0.9rem 1.2rem;font-size:0.88rem;font-style:italic;color:var(--text-mid);line-height:1.7;border-radius:0 4px 4px 0;}
+.law-quote strong{font-style:normal;color:var(--navy);font-size:0.75rem;letter-spacing:0.5px;display:block;margin-bottom:0.25rem;}
+.law-quote + .law-quote{margin-top:0.7rem;}
+.divider{height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);margin:1.2rem 0;}
+.mt1{margin-top:0.75rem;}.mt2{margin-top:1rem;}.mt3{margin-top:1.5rem;}
+.ref{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--text-soft);}
+.source-note{font-size:0.78rem;color:var(--text-soft);border-top:1px dashed var(--border);padding-top:0.7rem;margin-top:0.9rem;}
+.source-list li{font-size:0.82rem;margin-bottom:0.45rem;}
+.tag{display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;padding:0.15rem 0.5rem;border-radius:2px;margin:0.1rem;}
+.tag-blue{background:#dce8f5;color:var(--blue-accent);}
+.tag-green{background:#dceee3;color:var(--green-accent);}
+.tag-gold{background:var(--gold-pale);color:#7a5a00;border:1px solid #d4aa3a;}
+.tag-red{background:#fde8e8;color:var(--red-accent);}
+.tag-purple{background:#ece5f5;color:var(--purple-accent);}
+
+/* ---------- Anatomia do dispositivo ---------- */
+.anat-visual{display:flex;align-items:stretch;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);}
+.av-col{flex:1;padding:1.2rem 1.4rem;}
+.av-navy{background:var(--navy-mid);color:white;}
+.av-sep{background:var(--navy);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:900;flex:0 0 2.2rem;}
+.av-red{background:var(--red-accent);color:white;}
+.av-blue{background:var(--blue-accent);color:white;}
+.av-gold{background:var(--gold);color:var(--navy);}
+.av-purple{background:var(--purple-accent);color:white;}
+.av-col h4{font-family:'Playfair Display',serif;font-size:0.98rem;font-weight:700;margin-bottom:0.5rem;border-bottom:1px solid rgba(255,255,255,0.2);padding-bottom:0.35rem;}
+.av-col p,.av-col li{font-size:0.82rem;line-height:1.65;}
+.av-col ul{padding-left:1rem;margin-top:0.3rem;}
+
+/* ---------- Pontos recorrentes ---------- */
+.prova-section{background:var(--navy);border-radius:8px;padding:2rem;color:white;margin-top:3.5rem;scroll-margin-top:56px;}
+.prova-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold-light);margin-bottom:0.5rem;}
+.prova-section .intro{font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;font-style:italic;}
+.prova-items{display:grid;gap:0.75rem;}
+.prova-item{background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.25);border-left:4px solid var(--gold);border-radius:0 4px 4px 0;padding:1rem 1.2rem;}
+.prova-item-q{font-size:0.84rem;font-weight:600;color:var(--gold-light);margin-bottom:0.4rem;display:flex;align-items:flex-start;gap:0.6rem;}
+.prova-item-q .qnum{background:var(--gold);color:var(--navy);font-size:0.65rem;font-weight:700;padding:0.1rem 0.45rem;border-radius:2px;flex-shrink:0;margin-top:0.1rem;}
+.prova-item-a{font-size:0.82rem;color:rgba(255,255,255,0.84);line-height:1.65;}
+.prova-item-a strong{color:white;}
+.prova-item-a .ref{color:var(--gold-light);}
+.prova-group{font-family:'Playfair Display',serif;font-size:1rem;color:var(--gold-light);margin:1.4rem 0 0.2rem;padding-bottom:0.3rem;border-bottom:1px solid rgba(200,150,12,0.3);}
+
+footer{background:var(--navy);color:rgba(255,255,255,0.5);text-align:center;padding:1.5rem;font-size:0.75rem;border-top:2px solid var(--gold);}
+footer strong{color:var(--gold-light);}
+#to-top{position:fixed;right:1.2rem;bottom:1.2rem;z-index:998;background:var(--navy);color:var(--gold-light);border:1px solid var(--gold);border-radius:3px;padding:0.45rem 0.8rem;font-size:0.72rem;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;text-decoration:none;opacity:0;pointer-events:none;transition:opacity .2s;}
+#to-top.show{opacity:1;pointer-events:auto;}
+
+@page{size:A4 landscape;margin:8mm;}
+@media print{
+  #top-nav,#to-top,footer{display:none;}
+  #hero{padding:1.2rem 1rem;}#hero::before{display:none;}
+  .page-wrap{padding:0 0.35rem 1rem;}
+  .section{margin-top:1.15rem;}
+  .card,.juris-card,.flow-wrap,.prova-item,.comp-table tr{page-break-inside:avoid;}
+  .card,.juris-card,.flow-wrap{box-shadow:none;border:1px solid #ccc;}
+  .prova-section{background:#f0f4f8!important;color:#000!important;}
+  .prova-section h2,.prova-group{color:#0d1b2a!important;}
+  .prova-item{background:white!important;border:1px solid #ccc!important;}
+  .prova-item-q{color:#7a5a00!important;}.prova-item-a{color:#333!important;}.prova-item-a .ref{color:#555!important;}
+  body{font-size:8.5pt;line-height:1.4;}
+  .card p,.card li,.juris-body{font-size:8pt;line-height:1.4;}
+  .comp-table{font-size:7.5pt;}.comp-table td,.comp-table th{padding:.35rem;}
+}
+@media(max-width:700px){
+  #hero{padding:2rem 1rem;}#hero h1{font-size:1.6rem;}
+  .card-grid-2,.card-grid-3,.card-grid-4{grid-template-columns:1fr;}
+  .section-title{font-size:1.1rem;}
+  .comp-table{font-size:0.76rem;min-width:560px;}.comp-table td,.comp-table th{padding:0.55rem 0.65rem;}
+  .flow-node{min-width:150px;font-size:0.74rem;}
+  .anat-visual{flex-direction:column;}.av-sep{padding:0.4rem;flex:0 0 1.5rem;}
+}
+</style>
+</head>
+<body>
+<!-- VM-STUDY-BAR-START -->
+<style id="vm-bar-css">
+html,body{-webkit-transform:none!important;transform:none!important;overflow-x:hidden;}
+#vm-study-bar *{box-sizing:border-box;margin:0;padding:0;}
+#vm-study-bar{
+  position:fixed!important;top:0!important;left:0!important;right:0!important;
+  z-index:2147483647!important;
+  -webkit-transform:translateZ(0);transform:translateZ(0);
+  will-change:transform;-webkit-backface-visibility:hidden;backface-visibility:hidden;
+  background:linear-gradient(180deg,#0d1b2a 0%,#0a1520 100%);
+  border-bottom:2px solid #c8960c;
+  box-shadow:0 2px 16px rgba(0,0,0,.5);
+  font-family:'Source Serif 4',Georgia,serif;
+  display:flex;flex-direction:column;
+  user-select:none;-webkit-user-select:none;
+}
+.vm-row1{
+  display:flex;align-items:center;padding:0 .4rem;min-height:42px;
+  border-bottom:1px solid rgba(200,150,12,.18);
+}
+.vm-back{
+  display:flex;align-items:center;color:#e8b84b;text-decoration:none;
+  font-size:.78rem;font-weight:700;padding:0 .6rem 0 .15rem;min-height:42px;
+  border-right:1px solid rgba(200,150,12,.22);white-space:nowrap;flex-shrink:0;
+  -webkit-tap-highlight-color:transparent;
+}
+.vm-back:active{color:#fff;}
+.vm-info{
+  font-size:.68rem;color:rgba(255,255,255,.65);padding:0 .5rem;flex:1;
+  min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.vm-info strong{color:#e8b84b;font-weight:700;}
+.vm-completed-wrap{
+  display:flex;align-items:center;height:100%;
+  padding-left:.85rem;padding-right:.65rem;
+  margin-left:.45rem;
+  border-left:1px solid rgba(200,150,12,.18);flex-shrink:0;
+}
+.vm-completed-wrap label{
+  display:flex;align-items:center;gap:.35rem;font-size:.66rem;
+  color:rgba(255,255,255,.5);cursor:pointer;white-space:nowrap;padding:0 .1rem;
+}
+#vm-check{width:16px;height:16px;accent-color:#2ecc71;cursor:pointer;flex-shrink:0;}
+#vm-check-label{transition:color .2s;}
+.vm-row2{display:flex;align-items:center;padding:0 .65rem;min-height:42px;gap:.75rem;}
+.vm-timer-block{display:flex;align-items:center;gap:.55rem;flex-shrink:0;margin-left:.35rem;}
+.vm-timer{
+  font-family:'JetBrains Mono','Courier New',monospace;
+  font-size:1.05rem;font-weight:700;color:#e8b84b;letter-spacing:1.2px;
+  min-width:78px;text-align:center;line-height:1;
+}
+.vm-pause-timer{font-size:.62rem;color:#fc8181;min-width:48px;font-weight:600;}
+/* Status pill: visível apenas quando ativo (leitura/pausa/concluído) */
+.vm-status{
+  font-size:.58rem;font-weight:700;letter-spacing:.7px;text-transform:uppercase;
+  padding:.2rem .5rem;border-radius:10px;white-space:nowrap;flex-shrink:0;
+  transition:background .2s,color .2s;
+}
+.vm-status-idle   {display:none;}
+.vm-status-reading{background:rgba(46,204,113,.18);  color:#2ecc71;}
+.vm-status-paused {background:rgba(252,137,74,.18);  color:#fc894a;}
+.vm-status-done   {background:rgba(116,185,255,.18); color:#74b9ff;}
+.vm-spacer{flex:1;}
+.vm-btns{display:flex;gap:.55rem;flex-shrink:0;margin-left:.55rem;}
+.vm-btn{
+  font-family:'Source Serif 4',Georgia,serif;font-size:.68rem;font-weight:700;
+  padding:0 .55rem;height:32px;min-width:32px;border-radius:4px;border:1.5px solid;
+  cursor:pointer;white-space:nowrap;transition:background .15s,transform .1s;
+  display:flex;align-items:center;justify-content:center;gap:.35rem;
+  -webkit-tap-highlight-color:transparent;
+}
+.vm-btn:active{transform:scale(.94);}
+.vm-btn:disabled{opacity:.2;cursor:default;pointer-events:none;}
+#vm-btn-start{background:rgba(46,204,113,.18);border-color:rgba(46,204,113,.55);color:#2ecc71;}
+#vm-btn-start:not(:disabled):active{background:rgba(46,204,113,.35);}
+#vm-btn-pause{background:rgba(230,126,34,.18);border-color:rgba(230,126,34,.55);color:#fc894a;}
+#vm-btn-pause:not(:disabled):active{background:rgba(230,126,34,.35);}
+#vm-btn-end{background:rgba(116,185,255,.18);border-color:rgba(116,185,255,.55);color:#74b9ff;}
+#vm-btn-end:not(:disabled):active{background:rgba(116,185,255,.35);}
+body{padding-top:84px!important;}
+.tabs-wrap,#top-nav{top:84px!important;margin-top:-84px!important;}
+.hero,.page-wrap,.container,.wrap,main{scroll-margin-top:140px;}
+@media(min-width:520px){
+  #vm-study-bar{flex-direction:row;align-items:stretch;height:46px;gap:.95rem;padding-right:.75rem;}
+  .vm-row1{border-bottom:none;min-height:46px;padding:0;}
+  .vm-row2{min-height:46px;padding:0 .5rem 0 0;gap:.85rem;}
+  body{padding-top:46px!important;}
+  .tabs-wrap,#top-nav{top:46px!important;margin-top:-46px!important;}
+}
+
+@media(max-width:360px){
+  .vm-timer{font-size:.9rem;min-width:68px;}
+  .vm-btn{font-size:.6rem;padding:0 .38rem;height:30px;}
+  .vm-info{font-size:.61rem;}
+}
+
+
+/* === AJUSTE FINAL: BARRA SUPERIOR PADRONIZADA / SEM FAIXA BRANCA === */
+:root{--vm-study-bar-h:46px;}
+#vm-study-bar{
+  position:fixed!important;
+  top:0!important;left:0!important;right:0!important;
+  width:100%!important;
+  min-height:var(--vm-study-bar-h)!important;
+  height:var(--vm-study-bar-h)!important;
+  margin:0!important;
+  padding:0 1.25rem 0 0!important;
+  display:flex!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  gap:0!important;
+  background:#0a1520!important;
+  border-top:0!important;
+  border-bottom:2px solid #c8960c!important;
+  box-shadow:0 2px 14px rgba(0,0,0,.55)!important;
+  overflow:visible!important;
+}
+#vm-study-bar .vm-row1,
+#vm-study-bar .vm-row2{
+  display:contents!important;
+  min-height:0!important;
+  height:auto!important;
+  padding:0!important;
+  border:0!important;
+}
+#vm-study-bar .vm-back{
+  order:1!important;
+  height:var(--vm-study-bar-h)!important;
+  min-height:var(--vm-study-bar-h)!important;
+  padding:0 1.15rem!important;
+  margin:0!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  border-right:1px solid rgba(200,150,12,.35)!important;
+}
+#vm-study-bar .vm-info{
+  order:2!important;
+  flex:1 1 auto!important;
+  min-width:70px!important;
+  padding:0 1.3rem!important;
+  margin:0!important;
+  white-space:nowrap!important;
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+}
+#vm-study-bar .vm-timer-block{
+  order:3!important;
+  height:var(--vm-study-bar-h)!important;
+  min-height:var(--vm-study-bar-h)!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:.65rem!important;
+  margin:0 1.1rem 0 0!important;
+  flex:0 0 auto!important;
+}
+#vm-study-bar .vm-status{
+  order:4!important;
+  margin:0 .85rem 0 0!important;
+}
+#vm-study-bar .vm-spacer{display:none!important;}
+#vm-study-bar .vm-btns{
+  order:5!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:.55rem!important;
+  margin:0 1.25rem 0 0!important;
+  flex:0 0 auto!important;
+}
+#vm-study-bar .vm-btn{
+  width:74px!important;
+  min-width:74px!important;
+  max-width:74px!important;
+  height:32px!important;
+  min-height:32px!important;
+  padding:0!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:.25rem!important;
+  text-align:center!important;
+  border-radius:4px!important;
+  line-height:1!important;
+}
+#vm-study-bar .vm-completed-wrap{
+  order:6!important;
+  height:var(--vm-study-bar-h)!important;
+  min-height:var(--vm-study-bar-h)!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  padding:0 0 0 1.2rem!important;
+  margin:0!important;
+  border-left:1px solid rgba(200,150,12,.25)!important;
+  flex:0 0 auto!important;
+}
+body{
+  padding-top:var(--vm-study-bar-h)!important;
+  margin-top:0!important;
+}
+#top-nav,.tabs-wrap,.tab-bar,.nav-tabs{
+  top:var(--vm-study-bar-h)!important;
+  margin-top:0!important;
+}
+.hero,.page-wrap,.container,.wrap,main,.wrapper{
+  scroll-margin-top:calc(var(--vm-study-bar-h) + 76px)!important;
+}
+
+@media(max-width:699px){
+  :root{--vm-study-bar-h:88px;}
+  #vm-study-bar{
+    height:var(--vm-study-bar-h)!important;
+    min-height:var(--vm-study-bar-h)!important;
+    padding:0!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    overflow:hidden!important;
+  }
+  #vm-study-bar .vm-row1,
+  #vm-study-bar .vm-row2{
+    display:flex!important;
+    width:100%!important;
+  }
+  #vm-study-bar .vm-row1{
+    height:42px!important;
+    min-height:42px!important;
+    align-items:center!important;
+    border-bottom:1px solid rgba(200,150,12,.22)!important;
+  }
+  #vm-study-bar .vm-row2{
+    height:46px!important;
+    min-height:46px!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:.35rem!important;
+    padding:0 .45rem!important;
+  }
+  #vm-study-bar .vm-back{
+    height:42px!important;
+    min-height:42px!important;
+    padding:0 .65rem!important;
+  }
+  #vm-study-bar .vm-info{
+    padding:0 .55rem!important;
+    font-size:.64rem!important;
+  }
+  #vm-study-bar .vm-completed-wrap{
+    order:3!important;
+    height:42px!important;
+    min-height:42px!important;
+    padding:0 .55rem!important;
+    border-left:1px solid rgba(200,150,12,.22)!important;
+  }
+  #vm-study-bar .vm-timer-block{
+    order:1!important;
+    height:46px!important;
+    min-height:46px!important;
+    margin:0!important;
+    gap:.25rem!important;
+  }
+  #vm-study-bar .vm-timer{
+    font-size:.92rem!important;
+    min-width:74px!important;
+    letter-spacing:.6px!important;
+  }
+  #vm-study-bar .vm-pause-timer{display:none!important;}
+  #vm-study-bar .vm-status{display:none!important;}
+  #vm-study-bar .vm-btns{
+    order:2!important;
+    gap:.35rem!important;
+    margin:0!important;
+  }
+  #vm-study-bar .vm-btn{
+    width:66px!important;
+    min-width:66px!important;
+    max-width:66px!important;
+    height:31px!important;
+    min-height:31px!important;
+    font-size:.58rem!important;
+  }
+}
+
+@media(max-width:380px){
+  #vm-study-bar .vm-btn{width:60px!important;min-width:60px!important;max-width:60px!important;font-size:.54rem!important;}
+  #vm-study-bar .vm-timer{font-size:.82rem!important;min-width:66px!important;}
+  #vm-study-bar .vm-info{font-size:.58rem!important;}
+}
+</style>
+
+<div id="vm-study-bar"
+  data-article-id="L9099-ART-64"
+  data-subject="Lei 9.099/95"
+  data-subject-id="L9099"
+  data-article-num="64">
+  <div class="vm-row1">
+    <a class="vm-back" href="index.html">&#8592; Início</a>
+    <div class="vm-info"><strong>Lei 9.099/95</strong> &middot; Art.&nbsp;64</div>
+    <div class="vm-completed-wrap">
+      <label>
+        <input type="checkbox" id="vm-check" onchange="vmToggleCompleted()">
+        <span id="vm-check-label">Concluído</span>
+      </label>
+    </div>
+  </div>
+  <div class="vm-row2">
+    <div class="vm-timer-block">
+      <div class="vm-timer" id="vm-timer">00:00:00</div>
+      <div class="vm-pause-timer" id="vm-pause-timer"></div>
+    </div>
+    <div class="vm-status vm-status-idle" id="vm-status">Parado</div>
+    <div class="vm-spacer"></div>
+    <div class="vm-btns">
+      <button class="vm-btn" id="vm-btn-start" onclick="vmStartResume()">&#9654; Iniciar</button>
+      <button class="vm-btn" id="vm-btn-pause" onclick="vmPause()"       disabled>&#9646;&#9646; Pausa</button>
+      <button class="vm-btn" id="vm-btn-end"   onclick="vmEnd()"         disabled>&#10003; Fim</button>
+    </div>
+  </div>
+</div>
+
+<script src="study-tracker.js"></script>
+<script>
+(function(){
+  var ARTICLE_ID='L9099-ART-64',SUBJECT='Lei 9.099/95',SUBJECT_ID='L9099',ARTICLE_NUM=64;
+  var state='idle',timerIv=null,pauseIv=null,sessTs=0,pauseTs=0,accStudy=0,accPause=0;
+  function $(id){return document.getElementById(id);}
+  var elTimer=$('vm-timer'),elPause=$('vm-pause-timer'),elStatus=$('vm-status');
+  var btnS=$('vm-btn-start'),btnP=$('vm-btn-pause'),btnE=$('vm-btn-end');
+  var chk=$('vm-check'),lbl=$('vm-check-label');
+  function pad(n){return String(Math.floor(n)).padStart(2,'0');}
+  function fmtMs(ms){var s=Math.floor(ms/1000),h=Math.floor(s/3600);return pad(h)+':'+pad((s%3600)/60)+':'+pad(s%60);}
+  function fmtShort(ms){var m=Math.round(ms/60000);return pad(Math.floor(m/60))+':'+pad(m%60);}
+  function setStatus(t,c){elStatus.textContent=t;elStatus.className='vm-status '+c;}
+  function startStudyIv(){clearInterval(timerIv);timerIv=setInterval(function(){elTimer.textContent=fmtMs(accStudy+(Date.now()-sessTs));},500);}
+  function stopStudyIv(){clearInterval(timerIv);}
+  function startPauseIv(){clearInterval(pauseIv);pauseIv=setInterval(function(){elPause.textContent='\u23F8 '+fmtShort(Date.now()-pauseTs);},500);}
+  function stopPauseIv(){clearInterval(pauseIv);elPause.textContent='';}
+  window.vmStartResume=function(){
+    if(state==='idle'){
+      VMTracker.startSession(ARTICLE_ID,SUBJECT,SUBJECT_ID,ARTICLE_NUM);
+      sessTs=Date.now();accStudy=0;accPause=0;state='reading';
+      setStatus('Estudando','vm-status-reading');
+      btnS.disabled=true;btnP.disabled=false;btnE.disabled=false;
+      startStudyIv();
+    }else if(state==='paused'){
+      VMTracker.resumeSession();accPause+=Date.now()-pauseTs;sessTs=Date.now();state='reading';
+      setStatus('Estudando','vm-status-reading');
+      btnS.disabled=true;btnP.disabled=false;btnE.disabled=false;
+      stopPauseIv();startStudyIv();
+    }
+  };
+  window.vmPause=function(){
+    if(state!=='reading')return;
+    VMTracker.pauseSession();accStudy+=Date.now()-sessTs;pauseTs=Date.now();stopStudyIv();
+    state='paused';setStatus('Pausado','vm-status-paused');
+    btnS.textContent='\u25BA Retomar';btnS.disabled=false;btnP.disabled=true;btnE.disabled=false;
+    startPauseIv();
+  };
+  window.vmEnd=function(){
+    if(state!=='reading'&&state!=='paused')return;
+    if(state==='reading')accStudy+=Date.now()-sessTs;
+    VMTracker.endSession();stopStudyIv();stopPauseIv();state='done';
+    elTimer.textContent=fmtMs(accStudy);setStatus('Conclu\u00EDdo \u2713','vm-status-done');
+    btnS.textContent='\u21BA Nova';btnS.disabled=false;
+    btnS.onclick=function(){
+      state='idle';accStudy=0;accPause=0;elTimer.textContent='00:00:00';
+      setStatus('Parado','vm-status-idle');
+      btnS.textContent='\u25BA Iniciar';btnS.onclick=window.vmStartResume;
+      btnP.disabled=true;btnE.disabled=true;
+    };
+    btnP.disabled=true;btnE.disabled=true;
+  };
+  window.vmToggleCompleted=function(){
+    if(chk.checked){VMTracker.markArticleCompleted(ARTICLE_ID,SUBJECT,SUBJECT_ID,ARTICLE_NUM);lbl.textContent='\u2713 Feito!';lbl.style.color='#2ecc71';}
+    else{VMTracker.unmarkArticleCompleted(ARTICLE_ID);lbl.textContent='Conclu\u00EDdo';lbl.style.color='';}
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    if(VMTracker.isArticleCompleted(ARTICLE_ID)){chk.checked=true;lbl.textContent='\u2713 Feito!';lbl.style.color='#2ecc71';}
+    var active=VMTracker.getActiveSession();
+    if(active&&active.articleFile===ARTICLE_ID){
+      if(active.state==='reading'){
+        sessTs=active.startTs;accStudy=0;state='reading';setStatus('Estudando','vm-status-reading');
+        btnS.disabled=true;btnP.disabled=false;btnE.disabled=false;startStudyIv();
+      }else if(active.state==='paused'){
+        var lp=active.pauses[active.pauses.length-1];pauseTs=lp?lp.pauseStartTs:Date.now();
+        accStudy=active.pauseTotalMs||0;state='paused';setStatus('Pausado','vm-status-paused');
+        btnS.textContent='\u25BA Retomar';btnS.disabled=false;btnP.disabled=true;btnE.disabled=false;startPauseIv();
+      }
+    }
+  });
+})();
+</script>
+<!-- VM-STUDY-BAR-END -->
+
+<style id="vm-no-gap-fixed-menus-final">
+/* CORREÇÃO DEFINITIVA: remove faixa branca e fixa menu abaixo do cronômetro */
+html, body{
+  margin-top:0!important;
+  padding-top:0!important;
+  scroll-padding-top:calc(var(--vm-study-bar-h,46px) + 58px)!important;
+}
+#vm-study-bar{
+  position:fixed!important;
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  width:100%!important;
+  z-index:2147483647!important;
+}
+#top-nav,.tabs-wrap,.tab-bar,.nav-tabs{
+  position:sticky!important;
+  top:var(--vm-study-bar-h,46px)!important;
+  margin-top:var(--vm-study-bar-h,46px)!important;
+  z-index:2147483600!important;
+}
+#top-nav{
+  width:100%!important;
+}
+#hero,.hero,main,.page-wrap,.container,.wrap,.wrapper,.section,.prova-section{
+  scroll-margin-top:calc(var(--vm-study-bar-h,46px) + 76px)!important;
+}
+@media(max-width:699px){
+  html, body{
+    scroll-padding-top:calc(var(--vm-study-bar-h,88px) + 58px)!important;
+  }
+  #top-nav,.tabs-wrap,.tab-bar,.nav-tabs{
+    top:var(--vm-study-bar-h,88px)!important;
+    margin-top:var(--vm-study-bar-h,88px)!important;
+  }
+}
+</style>
+<style id="nav-wrap-fix">
+/* Menu de atalhos: quebra em linhas (sem corte lateral) e margem de rolagem para menu + barra */
+@media(min-width:700px){
+  #top-nav{overflow:visible!important;flex-wrap:nowrap!important;align-items:center!important;}
+  #top-nav .nav-brand{padding:0.55rem 1rem 0.55rem 0!important;flex:0 0 auto;}
+  #top-nav .nav-main-links{display:flex;flex-wrap:wrap;align-items:center;flex:1 1 0;min-width:0;}
+  #top-nav a{padding:0.55rem 0.6rem!important;font-size:0.68rem!important;letter-spacing:0.4px!important;}
+}
+.section,.prova-section{scroll-margin-top:calc(var(--vm-study-bar-h,46px) + 112px)!important;}
+@media(max-width:699px){.section,.prova-section{scroll-margin-top:calc(var(--vm-study-bar-h,88px) + 72px)!important;}}
+</style>
+
+<nav id="top-nav" aria-label="Atalhos do artigo">
+  <div class="nav-brand">Art. 64 · Lei 9.099/95</div>
+  <div class="nav-main-links">
+    <a href="#panorama">Panorama</a>
+    <a href="#texto-legal">Texto Legal</a>
+    <a href="#publicidade">Publicidade</a>
+    <a href="#protecao">Segredo e Vítima</a>
+    <a href="#horario">Horário e Dia</a>
+    <a href="#audiencias">Audiências</a>
+    <a href="#acesso">Acesso aos Autos</a>
+    <a href="#nulidades">Nulidades</a>
+    <a href="#fluxograma">Fluxograma</a>
+    <a href="#atendimento">Atendimento</a>
+    <a href="#jurisprudencia">STF/STJ</a>
+    <a href="#doutrina">Doutrina</a>
+    <a href="#recorrentes" class="nav-prova">Recorrentes</a>
+    <a href="#fontes">Fontes</a>
+  </div>
+</nav>
+
+<header id="hero">
+  <div class="badge">Lei nº 9.099/1995 · Capítulo III — Dos Juizados Especiais Criminais · Da Competência e dos Atos Processuais · Conferência normativa em 12/11/2026</div>
+  <h1>Art. 64 — <span>Publicidade, Horário e Dia dos Atos Processuais</span></h1>
+  <p class="subtitle">Publicidade e segredo de justiça · Horário noturno e qualquer dia da semana · Normas de organização judiciária · Audiências presenciais e telepresenciais · Registro e gravação · Acesso aos autos · Nulidades</p>
+  <div class="law-box">
+    <strong>Art. 64 da Lei nº 9.099, de 26 de setembro de 1995</strong>
+    “Os atos processuais serão públicos e poderão realizar-se em horário noturno e em qualquer dia da semana, conforme dispuserem as normas de organização judiciária.”
+  </div>
+</header>
+
+<div class="page-wrap">
+
+<!-- ============ 01 ============ -->
+<section class="section" id="panorama">
+  <div class="section-header"><div class="section-num">01</div><div class="section-title"><span>Introdução e Estrutura</span>Panorama do Art. 64</div></div>
+
+  <div class="card-grid card-grid-3">
+    <div class="card type-card tc-blue">
+      <h3>Função do dispositivo</h3>
+      <p>O art. 64 reúne em uma só frase três regras sobre os <strong>atos processuais</strong> do Juizado Especial Criminal: são, em regra, <strong>públicos</strong>; podem ser praticados em <strong>horário noturno</strong>; e podem ser praticados em <strong>qualquer dia da semana</strong>. As duas últimas dependem do que dispuserem as <strong>normas de organização judiciária</strong>. Integra a Seção I do capítulo criminal (“Da Competência e dos Atos Processuais”), entre o art. 63 (foro) e o art. 65 (validade e registro dos atos).</p>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>Por que gera dúvida</h3>
+      <p>O texto é curto e remete a norma local. Convivem com ele o CPP (art. 792, publicidade; art. 797, atos em domingos e feriados; art. 798, prazos contínuos), aplicável de forma subsidiária pelo art. 92, e o CPC (art. 212, atos em dias úteis, das 6 às 20 horas), que não foi pensado para o processo penal. Há ainda um dispositivo parecido na parte cível da própria lei (art. 12), com redação diferente, e uma regra de prazo em dias úteis (art. 12-A) posta na parte cível.</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>Por que importa na audiência</h3>
+      <p>Define se a audiência pode ser marcada à noite ou no fim de semana, quem pode assistir, quando se pede portas fechadas ou segredo de justiça, como proteger a vítima e a testemunha no ato, se o ato pode ser telepresencial, como o ato é registrado ou gravado e quando uma irregularidade de forma gera nulidade. É o artigo que o advogado mais usa na prática sem perceber: toda audiência do Juizado obedece a ele.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Histórico do dispositivo e das normas que o cercam</h3>
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Marco</th><th>Conteúdo</th><th>Consequência prática</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Lei 9.099/1995 (redação original, em vigor)</td><td>“Os atos processuais serão públicos e poderão realizar-se em horário noturno e em qualquer dia da semana, conforme dispuserem as normas de organização judiciária.” O texto compilado do Planalto não registra nenhuma alteração do art. 64.</td><td>A redação nunca foi alterada. O que mudou foi o entorno: leis de proteção da vítima, regras de prazo e normas do CNJ sobre audiências por videoconferência.</td></tr>
+      <tr class="hl3"><td>Art. 12 da Lei 9.099 (parte cível)</td><td>“Os atos processuais serão públicos e poderão realizar-se em horário noturno, conforme dispuserem as normas de organização judiciária.”</td><td>Mesma ideia, sem a expressão “em qualquer dia da semana”. O art. 64 é o que vale para o Juizado Criminal.</td></tr>
+      <tr class="hl4"><td>Lei 11.690/2008 e Lei 11.719/2008 (CPP)</td><td>Incluíram direitos do ofendido no art. 201 (espaço separado, atendimento multidisciplinar, preservação da intimidade) e o registro dos depoimentos por gravação no art. 405, § 1º.</td><td>Base das proteções à vítima e da gravação de audiências, aplicáveis ao Juizado de forma subsidiária (art. 92).</td></tr>
+      <tr class="hl5"><td>Lei 13.728/2018 (art. 12-A da Lei 9.099)</td><td>Prazos em dias contam somente os dias úteis. O dispositivo está na Seção IV do Capítulo II, que trata dos Juizados Cíveis.</td><td>Para o processo criminal, a orientação prática é contar os prazos de forma contínua (CPP, art. 798). Ver seção 05.</td></tr>
+      <tr class="hl2"><td>Lei 14.245/2021</td><td>Incluiu o art. 81, § 1º-A, na Lei 9.099 e o art. 400-A no CPP: todos os presentes na audiência devem respeitar a dignidade da vítima, sob pena de responsabilização civil, penal e administrativa, cabendo ao juiz garantir o cumprimento.</td><td>Regra que vale expressamente na audiência de instrução e julgamento do Juizado.</td></tr>
+      <tr class="hl3"><td>Lei 14.365/2022 (CPP, art. 798-A)</td><td>Suspende o curso dos prazos de 20 de dezembro a 20 de janeiro e veda audiências e sessões de julgamento no período, salvo réus presos, procedimentos da Lei Maria da Penha e medidas urgentes.</td><td>Afeta a pauta de audiências de fim de ano. A aplicação ao Juizado depende da orientação local (seção 05).</td></tr>
+      <tr class="hl4"><td>Res. CNJ 354/2020 (compilada: Res. 481/2022, 508/2023 e 679/2026)</td><td>Disciplina audiências por videoconferência e telepresenciais, a gravação, a publicidade por transmissão em tempo real e a comunicação eletrônica de atos.</td><td>Regula o formato do ato sem alterar o art. 64. Ver seção 06.</td></tr>
+      <tr class="hl5"><td>Lei 14.857/2024; Lei 15.035/2024; Lei 15.380/2026; Lei 15.438/2026</td><td>Sigilo do nome da ofendida em processos de violência doméstica (Lei 11.340, art. 17-A); regras de acesso público a dados do réu condenado em crimes sexuais (CP, art. 234-B, §§ 1º a 3º); audiência de retratação só mediante manifestação expressa da vítima (Lei 11.340, art. 16, parágrafo único); prazo de decadência de 12 meses em violência doméstica (art. 16-A).</td><td>Marcos recentes sobre publicidade e audiência em temas vizinhos. Os crimes de violência doméstica ficam fora do Juizado (Lei 11.340, art. 41).</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="source-note">Fontes: Planalto — Lei 9.099/1995 (texto compilado), Lei 11.340/2006 (texto compilado, com a Lei 15.380/2026), CP e CPP, lidos em 12/11/2026; CNJ — Resolução 354/2020 (texto compilado até a Res. 679/2026).</div>
+
+  <div class="alert alert-gold mt2"><span class="alert-tag">Resumo</span><div>Art. 64 = os atos do Juizado Criminal são <strong>públicos</strong> e podem ocorrer <strong>à noite e em qualquer dia da semana</strong>, nos termos da <strong>lei de organização judiciária</strong> do Estado ou da União. A publicidade é a regra constitucional (CF, arts. 5º, LX, e 93, IX); a restrição exige hipótese legal ou decisão fundamentada. Horário noturno e fim de semana são <strong>faculdades</strong>, e não direitos da parte. Irregularidade de forma só gera nulidade se houver <strong>prejuízo</strong> (art. 65, § 1º; CPP, art. 563).</div></div>
+
+  <div class="alert alert-navy mt2"><span class="alert-tag">Legenda</span><div>Cada informação relevante traz o grau de verificação: <span class="vb vb-of" style="margin-left:0">Oficial</span> texto lido diretamente em fonte oficial (Planalto, STJ, STF, CNJ) na conferência de 12/11/2026; <span class="vb vb-sec" style="margin-left:0">Secundária</span> confirmado em fonte não oficial, conferir antes de citar em peça; <span class="vb vb-pr" style="margin-left:0">Prática</span> orientação de atuação, não é fonte normativa. A seção 13 detalha o que foi e o que não foi possível verificar.</div></div>
+</section>
+
+<!-- ============ 02 ============ -->
+<section class="section" id="texto-legal">
+  <div class="section-header"><div class="section-num">02</div><div class="section-title"><span>Anatomia do Dispositivo</span>Texto Legal Decomposto</div></div>
+
+  <div class="anat-visual">
+    <div class="av-col av-navy"><h4>“Os atos processuais”</h4><p><strong>Objeto</strong></p><ul><li>Audiências, citações, intimações, decisões, sessões da Turma Recursal.</li><li>Vale para a fase preliminar e para o procedimento sumaríssimo.</li></ul></div>
+    <div class="av-sep">→</div>
+    <div class="av-col av-blue"><h4>“serão públicos”</h4><p><strong>Regra</strong></p><ul><li>Publicidade como princípio (CF, art. 5º, LX; art. 93, IX).</li><li>Restrição só nos casos previstos em lei ou por decisão fundamentada.</li></ul></div>
+    <div class="av-sep">→</div>
+    <div class="av-col av-gold"><h4>“poderão realizar-se em horário noturno e em qualquer dia da semana”</h4><p><strong>Faculdade</strong></p><ul><li>Amplia a janela do expediente comum.</li><li>“Poderão” não obriga nem cria direito da parte à audiência noturna ou de sábado.</li></ul></div>
+    <div class="av-sep">→</div>
+    <div class="av-col av-red"><h4>“conforme dispuserem as normas de organização judiciária”</h4><p><strong>Reserva local</strong></p><ul><li>Lei estadual (art. 93) e atos do tribunal definem se e como.</li><li>Sem norma local, prevalece o expediente normal.</li></ul></div>
+  </div>
+
+  <h3 class="sub-title">Textos correlatos (transcrição literal) <span class="vb vb-of" style="margin-left:0.5rem">Oficial</span></h3>
+  <div class="card-grid card-grid-2">
+    <div>
+      <div class="law-quote"><strong>Art. 64 (Lei 9.099/1995)</strong>“Os atos processuais serão públicos e poderão realizar-se em horário noturno e em qualquer dia da semana, conforme dispuserem as normas de organização judiciária.”</div>
+      <div class="law-quote"><strong>Art. 12 e art. 12-A (Lei 9.099, parte cível)</strong>“Art. 12. Os atos processuais serão públicos e poderão realizar-se em horário noturno, conforme dispuserem as normas de organização judiciária.” “Art. 12-A. Na contagem de prazo em dias, estabelecido por lei ou pelo juiz, para a prática de qualquer ato processual, inclusive para a interposição de recursos, computar-se-ão somente os dias úteis.”</div>
+      <div class="law-quote"><strong>Art. 62 (Lei 9.099)</strong>“O processo perante o Juizado Especial orientar-se-á pelos critérios da oralidade, simplicidade, informalidade, economia processual e celeridade, objetivando, sempre que possível, a reparação dos danos sofridos pela vítima e a aplicação de pena não privativa de liberdade.”</div>
+      <div class="law-quote"><strong>Art. 65 (Lei 9.099)</strong>“Os atos processuais serão válidos sempre que preencherem as finalidades para as quais foram realizados, atendidos os critérios indicados no art. 62 desta Lei. § 1º Não se pronunciará qualquer nulidade sem que tenha havido prejuízo. § 2º A prática de atos processuais em outras comarcas poderá ser solicitada por qualquer meio hábil de comunicação. § 3º Serão objeto de registro escrito exclusivamente os atos havidos por essenciais. Os atos realizados em audiência de instrução e julgamento poderão ser gravados em fita magnética ou equivalente.”</div>
+      <div class="law-quote"><strong>Art. 81, § 1º-A, e § 2º (Lei 9.099)</strong>“§ 1º-A. Durante a audiência, todas as partes e demais sujeitos processuais presentes no ato deverão respeitar a dignidade da vítima, sob pena de responsabilização civil, penal e administrativa, cabendo ao juiz garantir o cumprimento do disposto neste artigo, vedadas: I - a manifestação sobre circunstâncias ou elementos alheios aos fatos objeto de apuração nos autos; II - a utilização de linguagem, de informações ou de material que ofendam a dignidade da vítima ou de testemunhas.” “§ 2º De todo o ocorrido na audiência será lavrado termo, assinado pelo Juiz e pelas partes, contendo breve resumo dos fatos relevantes ocorridos em audiência e a sentença.”</div>
+      <div class="law-quote"><strong>Arts. 92, 93 e 94 (Lei 9.099)</strong>“Art. 92. Aplicam-se subsidiariamente as disposições dos Códigos Penal e de Processo Penal, no que não forem incompatíveis com esta Lei.” “Art. 93. Lei Estadual disporá sobre o Sistema de Juizados Especiais Cíveis e Criminais, sua organização, composição e competência.” “Art. 94. Os serviços de cartório poderão ser prestados, e as audiências realizadas fora da sede da Comarca, em bairros ou cidades a ela pertencentes, ocupando instalações de prédios públicos, de acordo com audiências previamente anunciadas.”</div>
+      <div class="law-quote"><strong>Art. 76, § 6º (Lei 9.099)</strong>“A imposição da sanção de que trata o § 4º deste artigo não constará de certidão de antecedentes criminais, salvo para os fins previstos no mesmo dispositivo, e não terá efeitos civis, cabendo aos interessados propor ação cabível no juízo cível.”</div>
+    </div>
+    <div>
+      <div class="law-quote"><strong>Constituição Federal, art. 5º, LX e XI</strong>“LX - a lei só poderá restringir a publicidade dos atos processuais quando a defesa da intimidade ou o interesse social o exigirem;” “XI - a casa é asilo inviolável do indivíduo, ninguém nela podendo penetrar sem consentimento do morador, salvo em caso de flagrante delito ou desastre, ou para prestar socorro, ou, durante o dia, por determinação judicial;”</div>
+      <div class="law-quote"><strong>Constituição Federal, art. 93, IX e XII</strong>“IX todos os julgamentos dos órgãos do Poder Judiciário serão públicos, e fundamentadas todas as decisões, sob pena de nulidade, podendo a lei limitar a presença, em determinados atos, às próprias partes e a seus advogados, ou somente a estes, em casos nos quais a preservação do direito à intimidade do interessado no sigilo não prejudique o interesse público à informação;” “XII a atividade jurisdicional será ininterrupta, sendo vedado férias coletivas nos juízos e tribunais de segundo grau, funcionando, nos dias em que não houver expediente forense normal, juízes em plantão permanente;”</div>
+      <div class="law-quote"><strong>Constituição Federal, art. 125, § 1º, e art. 98, I (trecho)</strong>“§ 1º A competência dos tribunais será definida na Constituição do Estado, sendo a lei de organização judiciária de iniciativa do Tribunal de Justiça.” “Art. 98. A União, no Distrito Federal e nos Territórios, e os Estados criarão: I - juizados especiais, providos por juízes togados, ou togados e leigos, competentes para a conciliação, o julgamento e a execução de causas cíveis de menor complexidade e infrações penais de menor potencial ofensivo, mediante os procedimentos oral e sumaríssimo [...]”</div>
+      <div class="law-quote"><strong>CPP, art. 792</strong>“As audiências, sessões e os atos processuais serão, em regra, públicos e se realizarão nas sedes dos juízos e tribunais, com assistência dos escrivães, do secretário, do oficial de justiça que servir de porteiro, em dia e hora certos, ou previamente designados. § 1o Se da publicidade da audiência, da sessão ou do ato processual, puder resultar escândalo, inconveniente grave ou perigo de perturbação da ordem, o juiz, ou o tribunal, câmara, ou turma, poderá, de ofício ou a requerimento da parte ou do Ministério Público, determinar que o ato seja realizado a portas fechadas, limitando o número de pessoas que possam estar presentes. § 2o As audiências, as sessões e os atos processuais, em caso de necessidade, poderão realizar-se na residência do juiz, ou em outra casa por ele especialmente designada.”</div>
+      <div class="law-quote"><strong>CPP, arts. 795, 797 e 798 (caput)</strong>“Art. 795. Os espectadores das audiências ou das sessões não poderão manifestar-se.” “Art. 797. Excetuadas as sessões de julgamento, que não serão marcadas para domingo ou dia feriado, os demais atos do processo poderão ser praticados em período de férias, em domingos e dias feriados. Todavia, os julgamentos iniciados em dia útil não se interromperão pela superveniência de feriado ou domingo.” “Art. 798. Todos os prazos correrão em cartório e serão contínuos e peremptórios, não se interrompendo por férias, domingo ou dia feriado.”</div>
+      <div class="law-quote"><strong>CPP, art. 798-A</strong>“Suspende-se o curso do prazo processual nos dias compreendidos entre 20 de dezembro e 20 de janeiro, inclusive, salvo nos seguintes casos: I - que envolvam réus presos, nos processos vinculados a essas prisões; II - nos procedimentos regidos pela Lei nº 11.340, de 7 de agosto de 2006 (Lei Maria da Penha); III - nas medidas consideradas urgentes, mediante despacho fundamentado do juízo competente. Parágrafo único. Durante o período a que se refere o caput deste artigo, fica vedada a realização de audiências e de sessões de julgamento, salvo nas hipóteses dos incisos I, II e III do caput.”</div>
+      <div class="law-quote"><strong>CPP, art. 201, §§ 4º e 6º; art. 217, caput; art. 405, §§ 1º e 2º</strong>“§ 4o Antes do início da audiência e durante a sua realização, será reservado espaço separado para o ofendido.” “§ 6o O juiz tomará as providências necessárias à preservação da intimidade, vida privada, honra e imagem do ofendido, podendo, inclusive, determinar o segredo de justiça em relação aos dados, depoimentos e outras informações constantes dos autos a seu respeito para evitar sua exposição aos meios de comunicação.” “Art. 217. Se o juiz verificar que a presença do réu poderá causar humilhação, temor, ou sério constrangimento à testemunha ou ao ofendido, de modo que prejudique a verdade do depoimento, fará a inquirição por videoconferência e, somente na impossibilidade dessa forma, determinará a retirada do réu, prosseguindo na inquirição, com a presença do seu defensor.” “Art. 405 [...] § 1o Sempre que possível, o registro dos depoimentos do investigado, indiciado, ofendido e testemunhas será feito pelos meios ou recursos de gravação magnética, estenotipia, digital ou técnica similar, inclusive audiovisual, destinada a obter maior fidelidade das informações. § 2o No caso de registro por meio audiovisual, será encaminhado às partes cópia do registro original, sem necessidade de transcrição.”</div>
+    </div>
+  </div>
+  <div class="source-note">Fontes: Planalto — Lei 9.099/1995 (texto compilado), CF, CPP, lidos em 12/11/2026. O Planalto mostra, para o CPP, versões superadas ao lado das atuais; foram transcritas as redações vigentes. As linhas em colchetes indicam supressão de trecho.</div>
+</section>
+
+<!-- ============ 03 ============ -->
+<section class="section" id="publicidade">
+  <div class="section-header"><div class="section-num">03</div><div class="section-title"><span>A Regra do Art. 64</span>Publicidade dos Atos e Hipóteses de Restrição</div></div>
+
+  <div class="card-grid card-grid-3">
+    <div class="card type-card tc-blue">
+      <h3>A regra constitucional</h3>
+      <ul>
+        <li>A lei só pode restringir a publicidade dos atos processuais quando a <strong>defesa da intimidade</strong> ou o <strong>interesse social</strong> o exigirem (CF, art. 5º, LX).</li>
+        <li>Os julgamentos são públicos, e a lei pode limitar a presença a partes e advogados, ou só a advogados, quando a intimidade do interessado no sigilo <strong>não prejudicar o interesse público à informação</strong> (CF, art. 93, IX).</li>
+        <li>No CPP, as audiências e os atos são “em regra, públicos” (art. 792).</li>
+        <li><span class="vb vb-of" style="margin-left:0">Oficial</span></li>
+      </ul>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>Publicidade geral e restrita</h3>
+      <ul>
+        <li><strong>Geral:</strong> qualquer pessoa pode assistir à audiência e consultar o processo.</li>
+        <li><strong>Restrita:</strong> só as partes e seus advogados (CF, art. 93, IX, parte final). É o efeito prático do segredo de justiça.</li>
+        <li>Mesmo na publicidade geral, os <strong>espectadores não podem se manifestar</strong> e podem ser retirados da sala (CPP, art. 795 e parágrafo único), e a ordem da audiência cabe ao juiz (art. 794).</li>
+        <li><span class="vb vb-of" style="margin-left:0">Oficial</span> (a distinção entre geral e restrita é conceito de doutrina: <span class="vb vb-pr" style="margin-left:0">Prática</span>)</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>O sigilo é exceção que precisa de fundamento</h3>
+      <ul>
+        <li>O STJ afirma que o sigilo “configura situação excepcional” e exige decisão que pondere os princípios no caso concreto; alegação genérica de segurança ou de devassa da vida privada não basta (APn 1.057, Rel. Min. Francisco Falcão).</li>
+        <li>O sigilo dos dados do processo não é direito subjetivo absoluto das partes (RMS 49.920, Quinta Turma).</li>
+        <li><span class="vb vb-of" style="margin-left:0">Oficial</span> (notícia do STJ; acórdãos não lidos)</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Quadro das hipóteses de restrição à publicidade</h3>
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Hipótese</th><th>Base</th><th>O que se restringe</th><th>Observação para o Juizado Criminal</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Escândalo, inconveniente grave ou perigo de perturbação da ordem</td><td>CPP, art. 792, § 1º</td><td>Realização do ato a portas fechadas, com limitação do número de pessoas presentes. De ofício ou a requerimento da parte ou do MP.</td><td>Aplica-se de forma subsidiária (art. 92). A decisão deve ser fundamentada e constar do termo.</td></tr>
+      <tr class="hl3"><td>Preservação da intimidade, vida privada, honra e imagem do ofendido</td><td>CPP, art. 201, § 6º</td><td>Segredo de justiça quanto a dados, depoimentos e informações do ofendido, para evitar exposição aos meios de comunicação.</td><td>O juiz tomará as providências; o advogado da vítima ou o MP podem requerer.</td></tr>
+      <tr class="hl4"><td>Crimes contra a dignidade sexual (Título VI do CP)</td><td>CP, art. 234-B, caput</td><td>O processo corre em segredo de justiça.</td><td>O Título VI inclui o ato obsceno (art. 233, detenção de 3 meses a 1 ano, ou multa) e o escrito ou objeto obsceno (art. 234, detenção de 6 meses a 2 anos, ou multa), que cabem no conceito de menor potencial ofensivo. A inclusão desses dois crimes no art. 234-B é leitura do texto <span class="vb vb-pr" style="margin-left:0">Prática</span>; não localizei decisão sobre o ponto.</td></tr>
+      <tr class="hl5"><td>Acesso público ao nome e CPF do réu condenado em certos crimes sexuais</td><td>CP, art. 234-B, §§ 1º a 3º (Lei 15.035/2024)</td><td>O sistema de consulta processual passa a mostrar nome completo, CPF e tipificação a partir da condenação em primeira instância pelos crimes dos arts. 213, 216-B, 217-A, 218-B, 227, 228, 229 e 230, salvo decisão fundamentada em contrário.</td><td>A lista não inclui os arts. 233 e 234. Aplica-se a crimes de pena alta, fora do Juizado.</td></tr>
+      <tr class="hl2"><td>Violência doméstica e familiar contra a mulher</td><td>Lei 11.340, art. 17-A (Lei 14.857/2024)</td><td>Sigilo do <strong>nome da ofendida</strong>. O sigilo não abrange o nome do autor do fato nem os demais dados do processo.</td><td>A Lei 9.099 não se aplica a esses crimes, independentemente da pena (Lei 11.340, art. 41; Súmula 536/STJ). Ver alerta abaixo.</td></tr>
+      <tr class="hl3"><td>Depoimento especial de criança ou adolescente vítima ou testemunha de violência</td><td>Lei 13.431/2017, art. 12, § 6º; art. 24</td><td>O depoimento especial tramita em segredo de justiça. É crime permitir que o depoimento seja assistido por pessoa estranha ao processo, sem autorização judicial e sem consentimento do depoente ou de seu representante legal (reclusão de 1 a 4 anos e multa).</td><td>Pode surgir em infração de menor potencial ofensivo cometida contra criança ou adolescente. <span class="vb vb-of" style="margin-left:0">Oficial, lido por paráfrase</span></td></tr>
+      <tr class="hl4"><td>Dados protegidos pela intimidade e interesse público ou social</td><td>CF, art. 5º, LX; CPC, art. 189, I e III (no processo civil)</td><td>Segredo de justiça em processos em que o exija o interesse público ou social ou em que constem dados protegidos pela intimidade; consulta restrita às partes e procuradores.</td><td>O CPC rege o processo civil. No penal, pode servir de analogia (CPP, art. 3º), com cautela. <span class="vb vb-pr" style="margin-left:0">Prática</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="source-note">Fontes: Planalto — CF, CP, CPP, Lei 11.340/2006 (compilada) e Lei 13.431/2017; CPC, art. 189, lido por resumo de agente de leitura (caput e incisos I a IV, § 1º e § 2º, sem anotação de alteração). STJ — notícia “Segredo de justiça nas ações penais: o STJ entre o direito à intimidade e o interesse público na informação” (agosto de 2024).</div>
+
+  <div class="alert alert-red mt2"><span class="alert-tag">Ponto de atenção</span><div>As proteções específicas da Lei Maria da Penha, como o sigilo do nome da ofendida e as regras da Res. CNJ 354, art. 3º-A, <strong>não são do Juizado Criminal</strong>: a Lei 9.099 não se aplica aos crimes de violência doméstica e familiar contra a mulher (Lei 11.340, art. 41; Súmula 536/STJ, citada na JT 93, tese 6). Aparecem aqui porque o advogado as encontra quando o fato é distribuído por engano ao Juizado ou corre em paralelo a processo de violência doméstica.</div></div>
+
+  <h3 class="sub-title">O que o STJ decidiu sobre publicidade e sigilo em ações penais <span class="vb vb-of" style="margin-left:0.4rem">Oficial</span></h3>
+  <div class="juris-grid">
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">APn 1.057</span><span class="juris-title">Sigilo exige ponderação concreta</span></div><div class="juris-body">Relator: Min. Francisco Falcão. A decretação de sigilo passa pela ponderação dos princípios constitucionais, caso a caso. Os réus alegaram, de forma genérica, proteção da própria segurança e o risco de terem “suas vidas publicamente devassadas”; para o relator, isso não bastava para afastar a publicidade. A notícia do STJ associa o raciocínio ao art. 5º, LX, e ao art. 93, IX, da CF.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">RMS 49.920 (Quinta Turma)</span><span class="juris-title">Nome completo do réu maior de idade</span></div><div class="juris-body">Relator: Min. Reynaldo Soares da Fonseca. Réu em ação por divulgação de pornografia infantil pediu a retirada de seu nome completo do sistema de informações da Justiça Federal. A Quinta Turma entendeu que identificar por nome completo o réu maior de idade não viola a intimidade: o interesse público em acompanhar a resposta estatal aos crimes se sobrepõe, como regra, ao direito do réu de proteger seu nome. A notícia registra que a Res. CNJ 121/2010 autoriza restringir informações em ações sigilosas, mas que a regra não pode se sobrepor à publicidade constitucional.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">RMS 55.790 (Quinta Turma)</span><span class="juris-title">Sigilo, mesmo no inquérito, depende de razões fundamentadas</span></div><div class="juris-body">Segundo a notícia, o Min. Jorge Mussi apontou que a decretação de sigilo depende de razões fundamentadas, “sob pena de inversão do princípio constitucional de ampla publicidade dos atos e das decisões administrativas e judiciais”. A notícia não informa quem foi o relator nem a data do julgamento.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">HC 148.723 (Sexta Turma, 2010)</span><span class="juris-title">Sigilo não impugnado a tempo não gera nulidade</span></div><div class="juris-body">Relatora: Min. Maria Thereza de Assis Moura. A defesa alegou nulidade por o processo ter tramitado indevidamente em segredo de justiça, mas só o fez em habeas corpus ajuizado depois do julgamento da apelação; a Sexta Turma reconheceu a preclusão. Segundo a notícia, o simples fato de o feito ter tramitado em sigilo, com a implícita concordância da defesa, “não gera qualquer nulidade”, e o trâmite sigiloso não trouxe prejuízo (a defesa teve acesso normal aos autos).</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">Sexta Turma (júri e crime sexual)</span><span class="juris-title">Segredo do art. 234-B alcança o processo como um todo</span></div><div class="juris-body">Relatora: Min. Laurita Vaz. Em processo por homicídio, estupro de vulnerável e ocultação de cadáver, o juízo havia decidido pela sessão do júri sem a presença de público; o MP pedia a retirada do público apenas durante o depoimento de uma testemunha adolescente. Segundo a notícia, o tribunal de origem seguiu a jurisprudência do STJ, de que a publicidade, embora regra, comporta restrições para preservar o interesse público ou a integridade e a intimidade das partes, e o segredo do art. 234-B do CP deve estender-se ao processo como um todo, sem distinguir réu e vítima. A notícia não traz o número do processo nem o dispositivo expresso do acórdão.</div></div>
+  </div>
+  <div class="source-note">Fonte: notícia do próprio STJ, lida em 12/11/2026 por agente de leitura (a consulta direta ao portal é bloqueada). A notícia traz as datas “09/08/2024”, “11/08/2024” e “20/08/2024” sem rótulo. Os acórdãos não foram lidos; conferir inteiro teor antes de citar.</div>
+</section>
+
+<!-- ============ 04 ============ -->
+<section class="section" id="protecao">
+  <div class="section-header"><div class="section-num">04</div><div class="section-title"><span>No Ato</span>Segredo, Proteção da Vítima e da Testemunha na Audiência</div></div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-blue">
+      <h3>Medidas previstas em lei</h3>
+      <ul>
+        <li><strong>Espaço separado para o ofendido</strong>, antes e durante a audiência (CPP, art. 201, § 4º). <span class="vb vb-of" style="margin-left:0">Oficial</span></li>
+        <li><strong>Atendimento multidisciplinar</strong>, se o juiz entender necessário, às expensas do ofensor ou do Estado (CPP, art. 201, § 5º). <span class="vb vb-of" style="margin-left:0">Oficial</span></li>
+        <li><strong>Preservação da intimidade, vida privada, honra e imagem</strong> do ofendido, com possibilidade de segredo de justiça quanto aos dados e depoimentos (CPP, art. 201, § 6º). <span class="vb vb-of" style="margin-left:0">Oficial</span></li>
+        <li><strong>Inquirição por videoconferência</strong> se a presença do réu causar humilhação, temor ou sério constrangimento à testemunha ou ao ofendido; só se impossível, retirada do réu (CPP, art. 217). <span class="vb vb-of" style="margin-left:0">Oficial</span></li>
+        <li><strong>Respeito à dignidade da vítima</strong> por todos os presentes, com vedação de manifestação sobre elementos alheios aos fatos e de linguagem ofensiva, sob pena de responsabilização; cabe ao juiz garantir (Lei 9.099, art. 81, § 1º-A; CPP, art. 400-A). <span class="vb vb-of" style="margin-left:0">Oficial</span></li>
+        <li><strong>Imagem desfocada ou desviada</strong> quando o ofendido ou a testemunha manifestar desejo de depor sem a presença de uma das partes, na forma da legislação pertinente (Res. CNJ 354, art. 7º, III). <span class="vb vb-of" style="margin-left:0">Oficial</span></li>
+      </ul>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>Como pedir e como o juiz decide</h3>
+      <ul>
+        <li><strong>Quem pede:</strong> a parte ou o MP, ou o juiz de ofício (CPP, art. 792, § 1º). A vítima pode pedir por meio do advogado ou do MP. <span class="vb vb-pr" style="margin-left:0">Prática</span></li>
+        <li><strong>Quando:</strong> na primeira oportunidade, preferencialmente antes do início do ato. No Juizado, a oralidade (art. 62) permite pedir verbalmente e fazer constar do termo. <span class="vb vb-pr" style="margin-left:0">Prática</span></li>
+        <li><strong>O que dizer:</strong> indicar o fato concreto que ameaça a intimidade ou a ordem (a exposição de dados pessoais, o risco de divulgação, a presença de terceiros hostis), não a conveniência da parte. O STJ rejeita alegação genérica (APn 1.057). <span class="vb vb-pr" style="margin-left:0">Prática</span></li>
+        <li><strong>Pedir o mínimo necessário:</strong> a retirada do público só durante o depoimento sensível pode ser preferível ao segredo de todo o processo, segundo a lógica da ponderação de CF, art. 93, IX (“não prejudique o interesse público à informação”). <span class="vb vb-pr" style="margin-left:0">Prática</span></li>
+        <li><strong>Registro:</strong> a decisão e o seu fundamento devem constar do termo (art. 81, § 2º; CPP, art. 217, parágrafo único, por analogia ao ato de afastar o réu). <span class="vb vb-pr" style="margin-left:0">Prática</span></li>
+        <li><strong>Impugnação:</strong> quem discorda deve impugnar no ato; o silêncio da defesa pode gerar preclusão (STJ, HC 148.723).</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Audiência na Lei Maria da Penha e a Resolução CNJ 679/2026 <span class="vb vb-of" style="margin-left:0.4rem">Oficial</span></h3>
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-purple">
+      <h3>Res. CNJ 354/2020, art. 3º-A (Res. 679/2026)</h3>
+      <ul>
+        <li>Nas ações de violência doméstica e familiar contra a mulher, a oitiva da vítima deve, <strong>como regra, ser presencial</strong>, em ambiente adequado à escuta qualificada.</li>
+        <li>A audiência telepresencial para a oitiva da vítima é <strong>excepcional</strong> e exige, cumulativamente: requerimento ou anuência expressa da vítima, manifestada na intimação, com ciência do direito à audiência presencial; decisão judicial fundamentada; e condições que garantam a livre manifestação, sem interferência ou coação de terceiros.</li>
+        <li>Nas audiências presenciais: separação física entre vítima e agressor, fluxos que evitem contato direto, ambiente reservado e protocolos de acolhimento.</li>
+        <li>Resolução de 4 de maio de 2026, em vigor na publicação.</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>Lei 11.340, art. 16, parágrafo único (Lei 15.380/2026)</h3>
+      <ul>
+        <li>A audiência de retratação “tem por objetivo confirmar a retratação da vítima, não a representação”.</li>
+        <li>Só será designada pelo juiz mediante <strong>manifestação expressa</strong> da vítima do desejo de se retratar, por escrito ou oralmente, antes do recebimento da denúncia, e a retratação deve ser registrada nos autos.</li>
+        <li>A Lei 15.380 é de 6 de abril de 2026 e entrou em vigor na publicação (DOU de 7/4/2026), segundo a página do Planalto. O Planalto anota “Vide ADI 7267” junto ao caput do art. 16; não verifiquei o conteúdo.</li>
+        <li>Relevância para o Juizado: estes dispositivos <strong>não se aplicam</strong> às infrações do Juizado; servem para reconhecer o caso que deve sair do Juizado por envolver violência doméstica.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="source-note">Fontes: CNJ — Resolução 354/2020, texto compilado (portal de atos do CNJ) e Resolução 679/2026; Planalto — Lei 11.340/2006 (compilada), lida em 12/11/2026; Lei 15.380/2026, página do Planalto lida por agente de leitura.</div>
+</section>
+
+<!-- ============ 05 ============ -->
+<section class="section" id="horario">
+  <div class="section-header"><div class="section-num">05</div><div class="section-title"><span>A Segunda Metade do Art. 64</span>Horário Noturno, Qualquer Dia da Semana e Prazos</div></div>
+
+  <div class="card-grid card-grid-3">
+    <div class="card type-card tc-blue">
+      <h3>O que a lei permite</h3>
+      <p>Os atos podem ocorrer à noite e em qualquer dia da semana, inclusive sábado e domingo, <strong>conforme dispuserem as normas de organização judiciária</strong>. A expressão “poderão” indica faculdade: o art. 64 não obriga o Juizado a funcionar à noite nem dá à parte direito de exigir audiência fora do expediente. <span class="vb vb-pr" style="margin-left:0">Prática</span> (leitura do texto)</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>Quem define na prática</h3>
+      <ul>
+        <li>O art. 93 da Lei 9.099 deixa à <strong>lei estadual</strong> o sistema, a organização, a composição e a competência dos Juizados.</li>
+        <li>A CF atribui ao Tribunal de Justiça a iniciativa da lei de organização judiciária (art. 125, § 1º) e prevê plantão permanente nos dias sem expediente forense normal (art. 93, XII).</li>
+        <li>Regimentos internos, portarias e atos dos tribunais definem pautas, plantões e Juizados itinerantes (Lei 9.099, art. 94 e art. 95, parágrafo único).</li>
+        <li><span class="vb vb-of" style="margin-left:0">Oficial</span></li>
+      </ul>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>O que não consegui localizar</h3>
+      <p>Não localizei lei estadual de organização judiciária nem ato de tribunal que preveja <strong>funcionamento regular noturno</strong> de Juizado Especial Criminal. Encontrei apenas um aviso do TJMG, de 03/07/2026, sobre o plantão dos Juizados Especiais de Belo Horizonte no sábado, 4/7/2026, que funcionou “excepcionalmente” no prédio do Juizado Especial Criminal, das 9h às 18h, para atendimento de urgência; o aviso não menciona horário noturno. Antes de designar ou aceitar audiência fora do expediente, conferir a norma do tribunal local.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Janela de horário e dia: Lei 9.099, CPP e CPC</h3>
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Norma</th><th>O que diz</th><th>Aplicação ao Juizado Criminal</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Lei 9.099, art. 64</td><td>Atos públicos; podem ocorrer à noite e em qualquer dia da semana, conforme a organização judiciária.</td><td>Norma específica do Juizado Criminal. Prevalece sobre as regras gerais.</td></tr>
+      <tr class="hl3"><td>CPP, art. 797</td><td>Salvo as sessões de julgamento (que não serão marcadas para domingo ou feriado), os demais atos do processo podem ser praticados em férias, domingos e feriados.</td><td>Aplicação subsidiária (art. 92). É compatível com o art. 64 e reforça que o ato fora do expediente comum não é, por si, irregular.</td></tr>
+      <tr class="hl4"><td>CPC, art. 212</td><td>Atos realizados em dias úteis, das 6 às 20 horas, com exceções para atos iniciados antes das 20 horas e para citações, intimações e penhoras em férias, feriados ou fora do horário, observado o art. 5º, XI, da CF (resumo de leitura indireta).</td><td>Regra do processo civil. No Juizado Criminal, o art. 64 é norma específica; o CPC só se aplica de forma supletiva. <span class="vb vb-pr" style="margin-left:0">Prática</span></td></tr>
+      <tr class="hl5"><td>CF, art. 5º, XI</td><td>A casa é asilo inviolável: sem consentimento do morador só se entra em flagrante, desastre, socorro ou, durante o dia, por determinação judicial.</td><td>O art. 64 não autoriza ingresso noturno em domicílio sem consentimento; a regra vale para diligência de oficial de justiça. <span class="vb vb-pr" style="margin-left:0">Prática</span></td></tr>
+      <tr class="hl2"><td>CPP, art. 798-A</td><td>De 20/12 a 20/1, prazos suspensos e audiências e sessões vedadas, salvo réus presos, Lei Maria da Penha e medidas urgentes (decisão fundamentada).</td><td>A Lei 9.099 não trata do tema. Não localizei tese oficial sobre a aplicação ao Juizado; verificar a orientação do tribunal local ao pautar audiência nesse período. <span class="vb vb-pr" style="margin-left:0">Prática</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="source-note">Fontes: Planalto — Lei 9.099/1995, CF e CPP (compilados); CPC, art. 212, lido por resumo de agente de leitura; TJMG — aviso “Belo Horizonte: plantão dos juizados especiais (4/7)”, publicado em 03/07/2026, lido por agente de leitura.</div>
+
+  <h3 class="sub-title">Prazos: dias corridos ou dias úteis?</h3>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>O que está no texto</h3>
+      <ul>
+        <li>O <strong>art. 12-A</strong> (Lei 13.728/2018) manda contar somente dias úteis, mas está na Seção IV do Capítulo II, dos Juizados <strong>Cíveis</strong>.</li>
+        <li>O CPP determina prazos <strong>contínuos e peremptórios</strong>, que não se interrompem por férias, domingo ou feriado; se terminar em domingo ou feriado, prorroga-se até o dia útil seguinte (art. 798, caput e § 3º).</li>
+        <li>No Juizado Criminal: apelação em <strong>10 dias</strong> da ciência da sentença, por petição escrita com as razões (art. 82, § 1º); resposta em 10 dias (§ 2º); embargos de declaração em <strong>5 dias</strong>, por escrito ou oralmente (art. 83, § 1º).</li>
+        <li><span class="vb vb-of" style="margin-left:0">Oficial</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>O que a jurisprudência diz e o que falta</h3>
+      <ul>
+        <li>A Sexta Turma do STJ, no <strong>AgRg no AREsp 1936753/SP</strong>, decidiu que em matéria penal ou processual penal não incidem as regras do CPC sobre contagem de prazos em dias úteis (art. 219), por haver norma específica (CPP, art. 798); recurso especial com prazo de 15 dias corridos. <span class="vb vb-sec" style="margin-left:0">Secundária</span> (ementa reproduzida por Evinis Talon, 19/10/2021; acórdão não lido).</li>
+        <li>Esse precedente trata do CPC, e não do art. 12-A da Lei 9.099. <strong>Não localizei decisão do STJ nem tese oficial sobre o art. 12-A no Juizado Criminal.</strong> Fontes de divulgação dizem que a contagem em dias úteis é inaplicável ao Juizado Criminal, sem número de acórdão.</li>
+        <li><strong>Conduta segura:</strong> contar sempre em dias corridos, protocolar com folga e, se a norma local disser o contrário, juntar a norma. <span class="vb vb-pr" style="margin-left:0">Prática</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 ============ -->
+<section class="section" id="audiencias">
+  <div class="section-header"><div class="section-num">06</div><div class="section-title"><span>Forma do Ato</span>Audiência Presencial, Telepresencial, Registro e Gravação</div></div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-blue">
+      <h3>Formato: Resolução CNJ 354/2020 (compilada)</h3>
+      <ul>
+        <li><strong>Art. 3º:</strong> as audiências só podem ser realizadas na forma <strong>telepresencial a pedido da parte</strong>, ressalvadas as hipóteses do § 1º e dos incisos I a IV do § 2º do art. 185 do CPP; cabe ao juiz decidir pela conveniência do modo presencial; em qualquer caso, o juiz deve estar presente na unidade judiciária (redação da Res. 481/2022).</li>
+        <li><strong>§ 1º:</strong> de ofício, excepcionalmente, em urgência, substituição ou designação de magistrado de sede diversa, mutirão ou projeto, conciliação ou mediação nos Cejuscs, indisponibilidade do foro, calamidade ou força maior, e atos em Pontos de Inclusão Digital (Res. 508/2023). <strong>§ 2º:</strong> a oposição à audiência telepresencial deve ser fundamentada e se submete a controle judicial.</li>
+        <li><strong>Art. 4º:</strong> salvo apresentação espontânea, ofendido, testemunha e perito residentes fora da sede são ouvidos por videoconferência na sede do foro de seu domicílio (§ 1º: depoimento pessoal ou interrogatório no interesse da parte distante; § 2º: evitar precatória inquiritória, salvo impossibilidade técnica).</li>
+        <li><strong>Art. 5º:</strong> advogados e membros do MP podem requerer participação própria ou de representados por videoconferência; o deferimento depende de viabilidade técnica e de conveniência (§ 2º); <strong>se indeferido ou sem análise, é ônus do requerente comparecer</strong> (§ 3º).</li>
+        <li><span class="vb vb-of" style="margin-left:0">Oficial</span></li>
+      </ul>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>Publicidade e gravação no ato eletrônico (art. 7º)</h3>
+      <ul>
+        <li>As oitivas telepresenciais ou por videoconferência são <strong>equiparadas às presenciais</strong> para todos os fins legais, asseguradas a publicidade e as prerrogativas processuais (inciso I).</li>
+        <li>Testemunhas inquiridas uma de cada vez, sem ouvir umas às outras (II); imagem pode ser desfocada se o ofendido ou a testemunha preferir depor sem a presença de uma das partes (III).</li>
+        <li>As oitivas são <strong>gravadas</strong>, com o arquivo juntado aos autos ou disponibilizado em repositório oficial (PJe Mídia ou do tribunal) (IV).</li>
+        <li>A publicidade será assegurada, ressalvado o segredo de justiça, por <strong>transmissão em tempo real</strong> ou meio hábil que possibilite o acompanhamento por terceiros, ainda que mediante prévio cadastro (V).</li>
+        <li>Mesma liturgia e vestimentas das audiências presenciais (VI); a critério do juiz, em decisão fundamentada, podem ser repetidos os atos de que as partes ou testemunhas não tenham conseguido participar por obstáculo técnico justificado (VII).</li>
+        <li><span class="vb vb-of" style="margin-left:0">Oficial</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub-title">Registro e gravação do ato</h3>
+  <div class="tbl-scroll">
+  <table class="comp-table">
+    <thead><tr><th>Norma</th><th>O que prevê</th><th>Efeito prático</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Lei 9.099, art. 65, § 3º</td><td>Registro escrito apenas dos atos essenciais; atos da audiência de instrução e julgamento podem ser gravados em fita magnética ou equivalente.</td><td>No Juizado, o termo é resumido e a prova oral pode ficar só na gravação.</td></tr>
+      <tr class="hl3"><td>Lei 9.099, art. 81, § 2º</td><td>De todo o ocorrido na audiência será lavrado termo, assinado pelo juiz e pelas partes, com breve resumo dos fatos relevantes e a sentença.</td><td>O que não for “fato relevante” pode não constar; peça o registro do que interessa à defesa ou à vítima antes de assinar.</td></tr>
+      <tr class="hl4"><td>Lei 9.099, art. 82, § 3º</td><td>As partes podem requerer a transcrição da gravação a que alude o art. 65, § 3º, na apelação.</td><td>Requerer a transcrição ao recorrer, quando a prova oral for decisiva.</td></tr>
+      <tr class="hl5"><td>CPP, art. 405, §§ 1º e 2º</td><td>Sempre que possível, registro dos depoimentos por gravação, inclusive audiovisual; no registro audiovisual, cópia do original às partes, sem transcrição.</td><td>Solicitar a cópia da mídia à secretaria. Aplicação subsidiária (art. 92).</td></tr>
+      <tr class="hl2"><td>FONAJE, Enunciado 127 <span class="vb vb-sec" style="margin-left:0">Secundária</span></td><td>A fundamentação da sentença ou do acórdão criminal pode ser oral, com gravação por qualquer meio eletrônico ou digital, consignando-se por escrito apenas a dosimetria da pena e o dispositivo (XL Encontro).</td><td>Sentença oral gravada é prática admitida no Juizado; conferir a norma local.</td></tr>
+      <tr class="hl3"><td>FONAJE, Enunciados 129 e 130 <span class="vb vb-sec" style="margin-left:0">Secundária</span></td><td>129: válidas as intimações por telefone, e-mail, WhatsApp ou outro aplicativo, sem prejuízo das formas convencionais, desde que precedida de adesão expressa do interessado. 130: possível o uso de meios digitais, como o Balcão Virtual, para os comparecimentos periódicos em juízo.</td><td>Confirmar no processo se há adesão expressa antes de aceitar intimação por aplicativo como válida.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="source-note">Fontes: Planalto — Lei 9.099/1995 e CPP (compilados), lidos em 12/11/2026; compilação de enunciados do FONAJE por Evinis Talon (atualizada em 06/02/2024). Os enunciados não vinculam os tribunais.</div>
+
+  <h3 class="sub-title">Local, gravação pela parte e regras sobre o acesso do público</h3>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>Local do ato</h3>
+      <ul>
+        <li>Em regra, na sede do juízo (CPP, art. 792, caput); em caso de necessidade, na residência do juiz ou em outra casa por ele designada (§ 2º).</li>
+        <li>No Juizado, as audiências podem ser realizadas fora da sede da comarca, em bairros ou cidades a ela pertencentes, em prédios públicos, em audiências previamente anunciadas (art. 94); há previsão de Juizados itinerantes (art. 95, parágrafo único). A publicidade, nesses casos, depende do aviso prévio.</li>
+        <li>Ato em outra comarca pode ser solicitado por qualquer meio hábil de comunicação (art. 65, § 2º). <span class="vb vb-of" style="margin-left:0">Oficial</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Gravação da audiência pela parte ou pelo advogado</h3>
+      <ul>
+        <li>No processo civil, o CPC permite a gravação integral por qualquer das partes, independentemente de autorização judicial (art. 367, § 6º). <span class="vb vb-of" style="margin-left:0">Oficial</span> (leitura por agente)</li>
+        <li>No processo penal, <strong>não localizei norma expressa nem tese do STJ</strong> sobre gravação por conta própria da parte no Juizado Criminal. Fontes de divulgação registram posições divergentes (inclusive juízes que proibiram a gravação e seccionais da OAB que a defendem). <span class="vb vb-sec" style="margin-left:0">Secundária</span></li>
+        <li><strong>Conduta segura:</strong> comunicar ao juiz e às partes antes de gravar e pedir que conste do termo; verificar se há norma do tribunal; não gravar ato sob segredo de justiça nem depoimento especial de criança, cuja assistência por estranhos é crime (Lei 13.431, art. 24). <span class="vb vb-pr" style="margin-left:0">Prática</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 ============ -->
+<section class="section" id="acesso">
+  <div class="section-header"><div class="section-num">07</div><div class="section-title"><span>Publicidade e Defesa</span>Acesso aos Autos, Prerrogativas e Ciência dos Atos</div></div>
+
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-blue">
+      <h3>Súmula Vinculante 14 (STF)</h3>
+      <div class="law-quote"><strong>Súmula Vinculante 14</strong>“É direito do defensor, no interesse do representado, ter acesso amplo aos elementos de prova que, já documentados em procedimento investigatório realizado por órgão com competência de polícia judiciária, digam respeito ao exercício do direito de defesa.”</div>
+      <ul>
+        <li>No Juizado, o “procedimento investigatório” é o <strong>termo circunstanciado</strong> (art. 69) e as peças que o acompanham. Pedir cópia integral antes da audiência preliminar é medida de rotina. <span class="vb vb-pr" style="margin-left:0">Prática</span></li>
+        <li>O STF registra, como precedente representativo, o HC 88.190 (voto do Min. Cezar Peluso, 2ª Turma, julgado em 29/8/2006): o sigilo não pode subtrair ao defensor a documentação do resultado das diligências. <span class="vb vb-of" style="margin-left:0">Oficial</span> (página do STF)</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>Estatuto da Advocacia (Lei 8.906/1994, art. 7º)</h3>
+      <ul>
+        <li><strong>Inciso XIII</strong> (Lei 13.793/2019): examinar autos findos ou em andamento, mesmo sem procuração, desde que <strong>não sujeitos a sigilo ou segredo de justiça</strong>; obter cópias e tomar apontamentos.</li>
+        <li><strong>Inciso XIV</strong> (Lei 13.245/2016): examinar autos de flagrante e de investigações de qualquer natureza, findos ou em andamento, ainda que conclusos à autoridade; § 10: nos autos sujeitos a sigilo, o advogado deve apresentar procuração; § 11: a autoridade pode limitar o acesso a diligências em andamento ainda não documentadas; § 12: o descumprimento do inciso XIV implica responsabilização por abuso de autoridade.</li>
+        <li><strong>§ 13</strong> (Lei 13.793/2019): os incisos XIII e XIV se aplicam integralmente aos processos eletrônicos, ressalvados os §§ 10 e 11.</li>
+        <li><span class="vb vb-of" style="margin-left:0">Oficial</span> (lido por agente, em paráfrase; o § 1º aparece como revogado pela Lei 14.365/2022 — conferir a versão vigente).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-2 mt1">
+    <div class="card">
+      <h3>Vítima e familiares</h3>
+      <ul>
+        <li>Segundo notícia do STJ, a Sexta Turma (Rel. Min. Rogerio Schietti Cruz) considerou que, mesmo com sigilo no inquérito, a <strong>vítima ou seus familiares podem ter acesso aos elementos de prova já documentados</strong>: “o sigilo do inquérito não pode ser evocado para obstaculizar direitos e garantias fundamentais”. A notícia não traz o número do processo. <span class="vb vb-of" style="margin-left:0">Oficial</span> (acórdão não lido)</li>
+        <li>Na audiência, a vítima tem espaço separado (CPP, art. 201, § 4º) e as comunicações podem ser feitas por meio eletrônico, por opção sua (§ 3º). <span class="vb vb-of" style="margin-left:0">Oficial</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Ciência dos atos na audiência e intimação da Defensoria</h3>
+      <ul>
+        <li>Dos atos praticados em audiência, as partes, os interessados e os defensores consideram-se desde logo cientes (art. 67, parágrafo único). <span class="vb vb-of" style="margin-left:0">Oficial</span></li>
+        <li><strong>JT 93, tese 3 (STJ):</strong> no Juizado Criminal, não se exige a intimação pessoal do defensor público, admitindo-se a intimação na sessão de julgamento ou pela imprensa oficial. <span class="vb vb-of" style="margin-left:0">Oficial</span></li>
+        <li><strong>JT 69, tese 4 (STJ):</strong> a ausência de intimação pessoal da Defensoria Pública ou do defensor dativo sobre os atos do processo gera, via de regra, a nulidade. É tese geral de 2016, anterior à revisão de 2023 da JT 93; para o Juizado, a tese 3 da JT 93 é a específica. <span class="vb vb-of" style="margin-left:0">Oficial</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="source-note">Fontes: STF — página da Súmula Vinculante 14; Planalto — Lei 8.906/1994 (lida por agente), Lei 9.099/1995 e CPP; STJ — Jurisprudência em Teses nº 69 (2016) e nº 93 (revisada em 2023); notícia do STJ sobre segredo de justiça em ações penais.</div>
+</section>
+
+<!-- ============ 08 ============ -->
+<section class="section" id="nulidades">
+  <div class="section-header"><div class="section-num">08</div><div class="section-title"><span>Consequências</span>Validade dos Atos e Nulidades Ligadas ao Art. 64</div></div>
+
+  <div class="alert alert-navy"><span class="alert-tag">Regra-mãe</span><div>No Juizado, os atos são válidos quando cumprem a finalidade para a qual foram praticados, observados os critérios do art. 62, e <strong>nenhuma nulidade é pronunciada sem prejuízo</strong> (art. 65, caput e § 1º). O CPP repete a ideia: “Nenhum ato será declarado nulo, se da nulidade não resultar prejuízo para a acusação ou para a defesa” (art. 563). O STJ exige <strong>prova inequívoca do prejuízo</strong> (JT 69, tese 1). <span class="vb vb-of" style="margin-left:0">Oficial</span></div></div>
+
+  <div class="tbl-scroll mt1">
+  <table class="comp-table">
+    <thead><tr><th>Situação</th><th>Consequência provável</th><th>Base</th></tr></thead>
+    <tbody>
+      <tr class="hl2"><td>Audiência designada à noite ou em fim de semana sem norma local que a preveja</td><td>Irregularidade de forma. Para anular, é preciso mostrar prejuízo concreto (por exemplo, impossibilidade de comparecer ou de contratar advogado). Não localizei precedente específico. <span class="vb vb-pr" style="margin-left:0">Prática</span></td><td>Art. 64 (“conforme dispuserem as normas”); art. 65, § 1º; CPP, art. 563.</td></tr>
+      <tr class="hl3"><td>Processo tramitou em segredo sem decisão fundamentada, e a defesa não impugnou</td><td>Sem nulidade quando não impugnado a tempo e sem prejuízo; preclusão.</td><td>STJ, HC 148.723 (Sexta Turma, 2010), conforme notícia do STJ.</td></tr>
+      <tr class="hl4"><td>Segredo ou sigilo determinado por lei não foi observado</td><td>A notícia reproduzida por fonte secundária registra que se poderia cogitar vício “em situação oposta”, isto é, se não observado o sigilo determinado por lei. Não é decisão sobre o ponto. <span class="vb vb-sec" style="margin-left:0">Secundária</span></td><td>STJ, HC 148.723, conforme reprodução da notícia (CNBSP, 12/08/2024).</td></tr>
+      <tr class="hl5"><td>Audiência telepresencial realizada sem pedido da parte, ou com oposição</td><td>A oposição deve ser fundamentada e se submete a controle judicial. A nulidade depende de prejuízo. Notícias secundárias de 2025 e 2026 relatam julgados do STJ que afastaram nulidade em atos por videoconferência por falta de prejuízo; não li os acórdãos nem confirmei os números. <span class="vb vb-sec" style="margin-left:0">Secundária</span></td><td>Res. CNJ 354, art. 3º, § 2º; art. 65, § 1º; JT 69, tese 1.</td></tr>
+      <tr class="hl2"><td>Ausência de intimação pessoal do defensor público ou dativo</td><td>Via de regra gera nulidade no processo penal em geral; no Juizado Criminal, o STJ admite a intimação na sessão ou pela imprensa oficial.</td><td>JT 69, tese 4; JT 93, tese 3; Lei 9.099, art. 67, parágrafo único.</td></tr>
+      <tr class="hl3"><td>Nulidade que a parte não alegou no tempo devido</td><td>Algumas nulidades se consideram sanadas se não arguidas em tempo oportuno, se o ato atingiu o fim ou se a parte aceitou os efeitos, ainda que tacitamente.</td><td>CPP, art. 572, I a III (aplica-se às hipóteses ali indicadas); CPP, art. 573 (renovação ou retificação dos atos).</td></tr>
+      <tr class="hl4"><td>Recurso interposto fora do prazo por contagem em dias úteis</td><td>Risco de intempestividade. Contar em dias corridos.</td><td>CPP, art. 798; Lei 9.099, art. 82, § 1º; STJ, AgRg no AREsp 1936753/SP (secundária).</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="source-note">Fontes: Planalto — Lei 9.099/1995 e CPP; STJ — Jurisprudência em Teses nº 69 e nº 93; notícia do STJ sobre segredo de justiça (e sua reprodução pela CNBSP, fonte secundária); Res. CNJ 354/2020 compilada.</div>
+  <div class="alert alert-red mt2"><span class="alert-tag">Ponto de atenção</span><div>O prejuízo é demonstrado no caso concreto e depende de a irregularidade ter sido <strong>arguida na primeira oportunidade</strong>. Registre a impugnação no termo de audiência (art. 81, § 2º). A tese 1 da JT 69 vem de julgados de 2016; conferir a evolução recente no tribunal competente.</div></div>
+</section>
+
+<!-- ============ 09 ============ -->
+<section class="section" id="fluxograma">
+  <div class="section-header"><div class="section-num">09</div><div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma Completo do Art. 64</div></div>
+  <div class="flow-wrap"><div class="flow-center">
+
+    <div class="flow-node flow-start">Ato processual do Juizado Criminal a praticar, designar ou impugnar (audiência preliminar, instrução e julgamento, citação, intimação, sessão da Turma)</div>
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+
+    <div class="flow-node flow-box-navy"><b>PASSO 1 — Em que dia e horário o ato está marcado?</b><small>Art. 64: noite e qualquer dia da semana, “conforme dispuserem as normas de organização judiciária”. Conferir a lei estadual, o regimento e as portarias do tribunal (art. 93; CF, art. 125, § 1º).</small></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">Expediente normal</div><div class="flow-node flow-end-green">Sem questão de horário<small>Seguir para o passo 2.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Noite ou fim de semana, com previsão local</div><div class="flow-node flow-box-blue">Ato regular<small>Art. 64; CPP, art. 797. Avaliar a possibilidade real de comparecimento do cliente.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Noite ou fim de semana, sem previsão local</div><div class="flow-node flow-box-gold">Pedir esclarecimento e registrar<small>Impugnar no ato e demonstrar prejuízo (art. 65, § 1º; CPP, art. 563).</small></div></div>
+      <div class="flow-branch"><div class="flow-label">De 20/12 a 20/1</div><div class="flow-node flow-box-gold">Verificar a vedação<small>CPP, art. 798-A, parágrafo único; aplicação ao Juizado a conferir no tribunal.</small></div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 2 — O ato é público?</b><small>Regra: sim (CF, art. 5º, LX, e art. 93, IX; CPP, art. 792). Verificar se a hipótese tem segredo legal ou se cabe pedido de restrição.</small></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">Publicidade geral</div><div class="flow-node flow-end-green">Ato aberto ao público<small>Espectadores sem manifestação (CPP, art. 795).</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Segredo legal</div><div class="flow-node flow-box-purple">Partes e advogados<small>CP, art. 234-B (Título VI); Lei 13.431, art. 12, § 6º; sigilo do nome da ofendida (Lei 11.340, art. 17-A).</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Risco de escândalo, perturbação ou exposição da vítima</div><div class="flow-node flow-box-gold">Requerer restrição<small>CPP, art. 792, § 1º, e art. 201, § 6º. Fundamentar com fato concreto.</small></div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 3 — Qual é o formato do ato?</b><small>Presencial na sede; telepresencial a pedido da parte ou de ofício nas hipóteses do art. 3º, § 1º; videoconferência para parte, ofendido ou testemunha fora da sede (Res. CNJ 354, arts. 3º a 5º); ato em outra comarca por qualquer meio hábil (art. 65, § 2º); audiência fora da sede (art. 94).</small></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">Cliente quer participar à distância</div><div class="flow-node flow-box-blue">Requerer por escrito<small>Res. 354, art. 3º (parte) e art. 5º (advogado). Se indeferido ou sem análise, comparecer (art. 5º, § 3º).</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Há oposição do juízo ou da outra parte</div><div class="flow-node flow-box-gold">Exigir fundamentação<small>Art. 3º, § 2º: oposição fundamentada e sujeita a controle.</small></div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 4 — Vítima ou testemunha em situação sensível?</b><small>Espaço separado e atendimento multidisciplinar (CPP, art. 201, §§ 4º e 5º); inquirição por videoconferência em vez da presença do réu (art. 217); dignidade da vítima (art. 81, § 1º-A; CPP, art. 400-A); imagem desfocada (Res. 354, art. 7º, III).</small></div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 5 — Como o ato será registrado?</b><small>Termo com resumo dos fatos relevantes e a sentença (art. 81, § 2º); gravação dos atos da instrução (art. 65, § 3º; CPP, art. 405, § 1º); mídia nas oitivas telepresenciais (Res. 354, art. 7º, IV). Pedir cópia da mídia e, se recorrer, a transcrição (art. 82, § 3º).</small></div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 6 — Houve irregularidade de forma, horário, publicidade ou segredo?</b><small>Arguir na primeira oportunidade, requerer que conste do termo e demonstrar prejuízo concreto (art. 65, § 1º; CPP, art. 563; JT 69, tese 1). O silêncio pode gerar preclusão (STJ, HC 148.723).</small></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch"><div class="flow-label">Sem prejuízo demonstrável</div><div class="flow-node flow-box-gold">Ato se mantém<small>Registrar a ressalva para eventual recurso.</small></div></div>
+      <div class="flow-branch"><div class="flow-label">Prejuízo demonstrável</div><div class="flow-node flow-box-green">Pedir renovação ou retificação<small>CPP, art. 573; recurso próprio.</small></div></div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-navy"><b>PASSO 7 — Prazos e recurso</b><small>Contar em dias corridos (CPP, art. 798). Apelação em 10 dias da ciência da sentença (art. 82, § 1º); embargos de declaração em 5 dias (art. 83, § 1º). Habeas corpus contra acórdão da Turma Recursal: TJ ou TRF (JT 93, tese 1).</small></div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+    <div class="flow-node flow-box-purple" style="max-width:980px;"><strong>CONTROLE FINAL DO ADVOGADO:</strong> conferir a norma local sobre dia e horário; confirmar o formato do ato e pedir videoconferência quando necessário; verificar se há segredo legal ou motivo para pedir restrição de publicidade; requerer espaço separado e medidas de proteção quando o cliente for a vítima; orientar o cliente a não gravar nem divulgar o ato sem autorização; registrar no termo as impugnações; pedir a mídia da audiência; contar prazos em dias corridos.</div>
+  </div></div>
+</section>
+
+<!-- ============ 10 ============ -->
+<section class="section" id="atendimento">
+  <div class="section-header"><div class="section-num">10</div><div class="section-title"><span>Roteiro de Atuação — Orientação Prática</span>Atendimento, Conciliação e Negociação com o Cliente</div></div>
+  <div class="alert alert-navy"><span class="alert-tag">Natureza</span><div>Esta seção organiza uma abordagem de atuação a partir do art. 64. Cada orientação traz, entre parênteses, a norma ou o precedente que a sustenta. O que não tem apoio normativo vem identificado como estratégia, a ser ajustada pelo advogado ao caso.</div></div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card type-card tc-blue">
+      <h3>Cliente é o autor do fato</h3>
+      <h4>Explicar o ato e o ambiente</h4>
+      <ul>
+        <li>A audiência pode ser marcada fora do expediente comum se a organização judiciária local assim prevê (art. 64); conferir a data, a hora e o endereço na intimação e avisar o cliente com antecedência.</li>
+        <li>A intimação deve trazer a advertência de que o autor do fato precisa comparecer com advogado e, na falta, será nomeado defensor público (art. 68; FONAJE, 9). A ausência injustificada do autor do fato à audiência preliminar leva à vista dos autos ao MP (FONAJE, 1).</li>
+        <li>O processo é, em regra, público; o cliente deve saber que terceiros podem assistir à audiência, mas não podem se manifestar (CPP, art. 795). Em caso de risco real à intimidade, avaliar pedido de restrição (CPP, art. 792, § 1º).</li>
+      </ul>
+      <h4>Alavancas de negociação</h4>
+      <ul>
+        <li><strong>Publicidade e certidão:</strong> a transação penal aceita e cumprida não gera reincidência nem maus antecedentes (JT 93, tese 7) e a sanção não consta de certidão de antecedentes criminais, salvo para impedir novo benefício em cinco anos (art. 76, §§ 4º e 6º). Explicar a diferença entre a publicidade do processo e a certidão de antecedentes.</li>
+        <li><strong>Reparação antes da audiência:</strong> a composição civil e a proposta de transação são tratadas nos arts. 72 a 76; o ambiente da audiência preliminar (art. 72) é o momento próprio. Preparar a planilha do dano e a proposta.</li>
+        <li><strong>Participação à distância:</strong> se o cliente mora longe ou tem impedimento, pedir videoconferência ou participação telepresencial (Res. CNJ 354, arts. 3º a 5º). Apresentar justificativa concreta.</li>
+      </ul>
+      <h4>Cuidados com o cliente</h4>
+      <ul>
+        <li>Orientar a não gravar, não postar e não divulgar o ato, principalmente se houver vítima vulnerável, segredo ou criança envolvida (Lei 13.431, art. 24; CPP, art. 792, § 1º). <span class="vb vb-pr" style="margin-left:0">Prática</span></li>
+        <li>Em ato telepresencial: local reservado, sem terceiros, conexão testada, mesma liturgia e vestimenta da audiência presencial (Res. 354, art. 7º, VI).</li>
+        <li>Orientar o cliente a não procurar a vítima nem comentar o fato fora do processo. <span class="vb vb-pr" style="margin-left:0">Prática</span></li>
+      </ul>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>Cliente é a vítima</h3>
+      <h4>Proteção e exposição</h4>
+      <ul>
+        <li>A vítima tem direito a <strong>espaço separado</strong> antes e durante a audiência (CPP, art. 201, § 4º) e a ser comunicada no endereço que indicar, inclusive por meio eletrônico, se preferir (§ 3º).</li>
+        <li>Pode-se requerer que o juiz preserve a intimidade, a vida privada, a honra e a imagem da vítima, inclusive com segredo de justiça sobre dados e depoimentos (CPP, art. 201, § 6º).</li>
+        <li>Se a presença do autor do fato causar humilhação, temor ou sério constrangimento, pedir a inquirição por videoconferência (CPP, art. 217) e, se couber, a imagem desfocada (Res. 354, art. 7º, III).</li>
+        <li>Todos os presentes devem respeitar a dignidade da vítima; perguntas e linguagem que a ofendam são vedadas e o juiz deve impedi-las (art. 81, § 1º-A).</li>
+      </ul>
+      <h4>Se houver violência doméstica</h4>
+      <ul>
+        <li>O caso não pertence ao Juizado Criminal (Lei 11.340, art. 41). Informar a vítima dos direitos da Lei Maria da Penha, entre eles a oitiva presencial como regra (Res. CNJ 354, art. 3º-A), o sigilo do nome da ofendida (Lei 11.340, art. 17-A) e a audiência de retratação só se ela pedir (art. 16, parágrafo único). O prazo de decadência é de 12 meses (art. 16-A).</li>
+      </ul>
+      <h4>Composição civil e acordo</h4>
+      <ul>
+        <li>A vítima pode compor o dano civil e, havendo representação ou queixa, isso pode importar renúncia (art. 74, parágrafo único). Registrar no termo o que foi acordado, em linguagem clara (art. 81, § 2º). Orientar a vítima sobre o efeito da renúncia antes de assinar. <span class="vb vb-pr" style="margin-left:0">Prática</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card-grid card-grid-2 mt2">
+    <div class="card">
+      <h4>“Meu nome vai aparecer?”</h4>
+      <p>O processo é, em regra, público (CF, art. 5º, LX). O STJ entendeu que identificar por nome completo o réu maior de idade em ação penal não viola a intimidade (RMS 49.920). Há exceções legais: sigilo do nome da ofendida na violência doméstica (Lei 11.340, art. 17-A), segredo de justiça nos crimes do Título VI do CP (art. 234-B) e no depoimento especial de criança (Lei 13.431, art. 12, § 6º).</p>
+    </div>
+    <div class="card">
+      <h4>“Posso levar alguém comigo?”</h4>
+      <p>Em regra a audiência é pública e pode ser acompanhada por terceiros, que não podem se manifestar (CPP, art. 795). Havendo portas fechadas ou segredo, só as pessoas indicadas pelo juiz. Para a vítima, o acompanhamento de pessoa de confiança deve ser consultado ao juízo; não localizei regra geral expressa sobre o tema no Juizado. <span class="vb vb-pr" style="margin-left:0">Prática</span></p>
+    </div>
+    <div class="card">
+      <h4>“A audiência pode ser à noite ou no sábado?”</h4>
+      <p>Pode, se a organização judiciária local previr (art. 64). Não é direito da parte nem obrigação do juízo. Conferir a norma do tribunal e, havendo impedimento do cliente, pedir remarcação com justificativa.</p>
+    </div>
+    <div class="card">
+      <h4>“Posso gravar a audiência?”</h4>
+      <p>No processo civil, o CPC permite a gravação pela parte (art. 367, § 6º). No penal não localizei regra expressa; o caminho prudente é comunicar o juiz antes e pedir a cópia da mídia oficial (CPP, art. 405, § 2º; Res. 354, art. 7º, IV).</p>
+    </div>
+  </div>
+
+  <div class="card mt2">
+    <h3>Checklist de preparação (24 horas antes)</h3>
+    <div class="card-grid card-grid-3">
+      <ul>
+        <li>Data, hora e local conferidos na intimação e na norma local.</li>
+        <li>Formato do ato definido (presencial, telepresencial, outra comarca).</li>
+        <li>Pedido de videoconferência protocolado, quando necessário.</li>
+        <li>Cópia integral do termo circunstanciado obtida.</li>
+      </ul>
+      <ul>
+        <li>Procuração com poderes para transigir e aceitar proposta.</li>
+        <li>Planilha do dano e proposta de acordo prontas.</li>
+        <li>Pedido de restrição de publicidade preparado, se houver motivo concreto.</li>
+        <li>Cliente orientado sobre não gravar, não divulgar e como se portar.</li>
+      </ul>
+      <ul>
+        <li>Medidas de proteção da vítima requeridas, se for o caso.</li>
+        <li>Impugnações de forma, horário ou formato prontas para constar do termo.</li>
+        <li>Prazos recursais contados em dias corridos.</li>
+        <li>Mídia da audiência e transcrição solicitadas ao final.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11 ============ -->
+<section class="section" id="jurisprudencia">
+  <div class="section-header"><div class="section-num">11</div><div class="section-title"><span>STF e STJ</span>Jurisprudência, Teses e Enunciados</div></div>
+  <div class="alert alert-navy"><span class="alert-tag">Aviso do STJ</span><div>As edições da Jurisprudência em Teses do STJ trazem a ressalva de que as teses foram elaboradas pela Secretaria de Jurisprudência mediante pesquisa na base do Tribunal e “não consistindo em repositórios oficiais da jurisprudência deste Tribunal”. A JT 69 tem julgados até 19/08/2016; a JT 93 foi revisada em 24/04/2023. Conferir sempre o acórdão antes de citar em peça.</div></div>
+
+  <h3 class="sub-title">Supremo Tribunal Federal</h3>
+  <div class="juris-grid">
+    <div class="juris-card stf"><div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge sumula">Súmula Vinculante 14</span><span class="juris-title">Acesso do defensor aos elementos de prova documentados</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><span class="quote">“É direito do defensor, no interesse do representado, ter acesso amplo aos elementos de prova que, já documentados em procedimento investigatório realizado por órgão com competência de polícia judiciária, digam respeito ao exercício do direito de defesa.”</span>A página do STF indica como precedente representativo o HC 88.190 (voto do Min. Cezar Peluso, 2ª Turma, 29/8/2006), segundo o qual, se o sigilo é necessário à apuração, a formalização documental do resultado não pode ser subtraída ao indiciado nem ao defensor. A mesma página traz, em tese de controle concentrado, a menção à Súmula Vinculante 14 ao tratar das investigações do MP (Tema 184). Data de publicação da súmula: não consta da página lida.</div></div>
+  </div>
+  <div class="alert alert-gold mt1"><span class="alert-tag">Natureza</span><div>Não localizei decisão do STF que trate expressamente do art. 64 da Lei 9.099 (horário noturno ou dia da semana). O Planalto anota “Vide ADPF 1107” no art. 400-A do CPP (dignidade da vítima na audiência) e “Vide ADI 7267” no art. 16 da Lei 11.340; <strong>não verifiquei o conteúdo dessas ações</strong>. Conferir no portal do STF.</div></div>
+
+  <h3 class="sub-title">Superior Tribunal de Justiça</h3>
+  <div class="juris-grid">
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">APn 1.057 · RMS 49.920 · RMS 55.790 · HC 148.723</span><span class="juris-title">Publicidade e segredo de justiça em ações penais</span><span class="vb vb-of">Oficial</span></div><div class="juris-body">Notícia do STJ de agosto de 2024. O sigilo é excepcional e exige ponderação concreta (APn 1.057); o nome completo do réu maior de idade pode constar do sistema (RMS 49.920); sigilo, mesmo no inquérito, exige razões fundamentadas (RMS 55.790); o trâmite em sigilo não impugnado a tempo não gera nulidade (HC 148.723). Detalhes na seção 03. Acórdãos não lidos.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">JT 69, teses 1 e 4</span><span class="juris-title">Nulidades: prejuízo e intimação pessoal da Defensoria</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><strong>Tese 1:</strong> “A decretação da nulidade de ato processual requer prova inequívoca do prejuízo suportado pela parte, em face do princípio pas de nullité sans grief, previsto no art. 563 do Código de Processo Penal.” Julgados: HC 339971/PR; HC 359592/CE; RHC 44871/PA; HC 354841/SC; RHC 62410/MG; RHC 62397/SC. <strong>Tese 4:</strong> “A ausência de intimação pessoal da Defensoria Pública ou do defensor dativo sobre os atos do processo gera, via de regra, a sua nulidade.” Julgados: HC 310908/SP; HC 355769/PR; HC 212710/SP; HC 334626/SP; AgInt no REsp 1270317/ES; HC 340076/SP.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">JT 93, teses 1, 3, 6 e 7</span><span class="juris-title">Juizados Especiais Criminais</span><span class="vb vb-of">Oficial</span></div><div class="juris-body"><strong>Tese 1:</strong> compete ao TJ ou ao TRF processar e julgar habeas corpus contra acórdãos de Turma Recursal. <strong>Tese 3:</strong> “No âmbito dos Juizados Especiais Criminais, não se exige a intimação pessoal do defensor público, admitindo-se a intimação na sessão de julgamento ou pela imprensa oficial.” <strong>Tese 6:</strong> a suspensão condicional do processo e a transação penal não se aplicam aos delitos sujeitos ao rito da Lei Maria da Penha (Súmula 536/STJ). <strong>Tese 7:</strong> a transação penal não tem natureza de condenação criminal, não gera reincidência nem maus antecedentes e não significa reconhecimento da culpabilidade nem da responsabilidade civil.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">Sexta Turma</span><span class="juris-title">Vítima e familiares e acesso a provas documentadas</span><span class="vb vb-of">Oficial</span></div><div class="juris-body">Segundo a notícia do STJ de agosto de 2024, a Sexta Turma (Rel. Min. Rogerio Schietti Cruz) considerou que a vítima ou seus familiares podem acessar os elementos de prova já documentados no inquérito, ainda que sob sigilo, com referência à Súmula Vinculante 14. A notícia não traz o número do processo.</div></div>
+    <div class="juris-card stj"><div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">AgRg no AREsp 1936753/SP (Sexta Turma)</span><span class="juris-title">Prazos penais: dias corridos, sem dias úteis do CPC</span><span class="vb vb-sec">Secundária</span></div><div class="juris-body">Conforme Evinis Talon (19/10/2021): em matéria penal ou processual penal não incidem as regras do CPC sobre contagem de prazos em dias úteis (art. 219), por haver norma específica no art. 798 do CPP; recurso especial interposto fora do prazo de 15 dias corridos é intempestivo. Acórdão não lido. Não trata do art. 12-A da Lei 9.099.</div></div>
+  </div>
+
+  <h3 class="sub-title">FONAJE — Enunciados criminais relacionados ao art. 64 <span class="vb vb-sec" style="margin-left:0.4rem">Secundária</span></h3>
+  <div class="alert alert-gold"><span class="alert-tag">Natureza</span><div>Os enunciados do Fórum Nacional dos Juizados Especiais são orientações interpretativas não vinculantes. A compilação consultada (Evinis Talon, atualizada em 06/02/2024) vai até o Enunciado 130. Podem existir encontros posteriores; conferir a versão vigente. Não localizei enunciado criminal que trate do horário noturno ou do dia da semana (art. 64).</div></div>
+  <div class="juris-grid mt1">
+    <div class="juris-card fonaje"><div class="juris-header"><span class="juris-badge purple">FONAJE</span><span class="juris-title">Audiência, intimação, registro e formato</span></div><div class="juris-body"><strong>1:</strong> a ausência injustificada do autor do fato à audiência preliminar implica vista dos autos ao MP. <strong>9:</strong> a intimação do autor do fato para a audiência preliminar deve conter a advertência da necessidade de advogado e de que, na falta, será nomeado defensor público. <strong>125:</strong> é cabível, no Juizado Criminal, a intimação por edital da sentença condenatória, quando não localizado o réu. <strong>127:</strong> fundamentação oral da sentença ou do acórdão criminal, com gravação, e registro escrito apenas da dosimetria e do dispositivo. <strong>129:</strong> intimações por telefone, e-mail, WhatsApp ou outro aplicativo são válidas com adesão expressa. <strong>130:</strong> comparecimentos periódicos por meios digitais, como o Balcão Virtual.</div></div>
+  </div>
+
+  <h3 class="sub-title">Atos normativos <span class="vb vb-of" style="margin-left:0.4rem">Oficial</span></h3>
+  <div class="juris-grid">
+    <div class="juris-card doutrina"><div class="juris-header"><span class="juris-badge doutrina">CNJ</span><span class="juris-title">Resolução 354/2020 (compilada) e Resolução 679/2026</span></div><div class="juris-body">Audiências e sessões por videoconferência e telepresenciais, comunicação eletrônica de atos, gravação e publicidade por transmissão em tempo real (art. 7º). Texto compilado conforme as Resoluções 481/2022, 508/2023 e 679/2026. A Res. 679/2026 (4/5/2026) incluiu o art. 3º-A, sobre a oitiva presencial da vítima em violência doméstica, e o art. 13-A, sobre capacitação.</div></div>
+    <div class="juris-card doutrina"><div class="juris-header"><span class="juris-badge doutrina">Leis</span><span class="juris-title">Marcos legislativos recentes ligados ao art. 64</span></div><div class="juris-body"><strong>Lei 14.245/2021:</strong> dignidade da vítima na audiência (Lei 9.099, art. 81, § 1º-A; CPP, art. 400-A). <strong>Lei 14.365/2022:</strong> CPP, art. 798-A (suspensão de prazos e vedação de audiências de 20/12 a 20/1). <strong>Lei 14.857/2024:</strong> sigilo do nome da ofendida (Lei 11.340, art. 17-A). <strong>Lei 15.035/2024:</strong> CP, art. 234-B, §§ 1º a 3º. <strong>Lei 15.380/2026:</strong> audiência de retratação só mediante pedido da vítima (Lei 11.340, art. 16, parágrafo único). <strong>Lei 15.438/2026:</strong> decadência de 12 meses em violência doméstica (art. 16-A).</div></div>
+  </div>
+</section>
+
+<!-- ============ 12 ============ -->
+<section class="section" id="doutrina">
+  <div class="section-header"><div class="section-num">12</div><div class="section-title"><span>Doutrina Sistematizada</span>Linhas Dogmáticas e Controvérsias</div></div>
+  <div class="alert alert-red"><span class="alert-tag">Limite desta seção</span><div>Não localizei, em fonte verificável, comentário doutrinário específico sobre o art. 64 da Lei 9.099 (horário noturno e qualquer dia da semana). Por isso, esta seção <strong>não atribui passagens a autores</strong>: sistematiza as linhas que decorrem das normas e da jurisprudência lidas e lista os pontos em aberto. Antes de citar doutrina em peça, localizar o comentário ao art. 64 nas obras indicadas.</div></div>
+  <div class="card-grid card-grid-2 mt1">
+    <div class="card"><h3>Publicidade como garantia e como regra</h3><ul><li>A Constituição trata a publicidade dos atos processuais como regra e a restrição como exceção condicionada à defesa da intimidade ou ao interesse social (CF, art. 5º, LX; art. 93, IX).</li><li>No processo penal, o CPP reafirma a regra (art. 792) e prevê a restrição por decisão, de ofício ou a requerimento (art. 792, § 1º).</li><li>No Juizado, a oralidade e a informalidade (art. 62) não suspendem a regra: o ato informal continua público.</li></ul></div>
+    <div class="card"><h3>Segredo como exceção ponderada</h3><ul><li>O STJ exige fundamentação concreta e ponderação entre a intimidade e o interesse público à informação (APn 1.057).</li><li>Distingue-se o segredo imposto por lei (CP, art. 234-B; Lei 13.431, art. 12, § 6º), em que a decisão é de cumprimento da lei, do segredo pedido pela parte, em que cabe demonstrar o fato concreto.</li><li>O segredo não elimina o acesso das partes e dos advogados; a vítima e familiares podem ter acesso a provas já documentadas (notícia do STJ).</li></ul></div>
+    <div class="card"><h3>Organização judiciária e reserva local</h3><ul><li>O art. 64 é norma de remissão: a possibilidade de horário noturno e de qualquer dia da semana depende da lei estadual e dos atos do tribunal (Lei 9.099, art. 93; CF, art. 125, § 1º).</li><li>O caráter de faculdade indica que a norma não gera direito subjetivo a audiência noturna. Esta é leitura do texto, sem apoio em precedente localizado. <span class="vb vb-pr" style="margin-left:0">Prática</span></li></ul></div>
+    <div class="card"><h3>Atos eletrônicos e publicidade</h3><ul><li>A Res. CNJ 354 equipara a oitiva telepresencial à presencial, exige gravação e impõe transmissão em tempo real ou meio equivalente para a publicidade, ressalvado o segredo de justiça (art. 7º, I, IV e V).</li><li>O ato telepresencial reabre a discussão sobre exposição de imagem, presença de terceiros no ambiente da testemunha e integridade da prova; a Res. 679/2026 trata disso para a vítima de violência doméstica.</li></ul></div>
+  </div>
+  <div class="card mt2">
+    <h3>Pontos em aberto (sem tese oficial localizada)</h3>
+    <ul>
+      <li><strong>Audiência noturna ou de fim de semana sem norma local:</strong> não localizei precedente que trate do tema à luz do art. 64; aplica-se a regra do prejuízo.</li>
+      <li><strong>Art. 12-A da Lei 9.099 no processo criminal:</strong> o dispositivo está na parte cível; fontes de divulgação afirmam que não se aplica ao Juizado Criminal, sem acórdão identificado. Conduta segura: dias corridos.</li>
+      <li><strong>CPP, art. 798-A no Juizado:</strong> não localizei orientação oficial sobre a vedação de audiências de 20/12 a 20/1 para o Juizado Criminal.</li>
+      <li><strong>Gravação da audiência pela parte no processo penal:</strong> sem regra expressa localizada; há posições divergentes em fontes de divulgação.</li>
+      <li><strong>Acompanhante da vítima ou do autor do fato:</strong> sem regra geral expressa localizada para o Juizado.</li>
+    </ul>
+  </div>
+  <div class="card mt2">
+    <h3>Obras de referência para consulta (não consultadas nesta conferência)</h3>
+    <ul class="source-list">
+      <li>GRINOVER, Ada Pellegrini; GOMES FILHO, Antonio Magalhães; FERNANDES, Antonio Scarance; GOMES, Luiz Flávio. <em>Juizados Especiais Criminais: comentários à Lei 9.099, de 26.09.1995</em>. São Paulo: Revista dos Tribunais.</li>
+      <li>TOURINHO FILHO, Fernando da Costa. <em>Comentários à Lei dos Juizados Especiais Criminais</em>. São Paulo: Saraiva.</li>
+      <li>MIRABETE, Julio Fabbrini. <em>Juizados Especiais Criminais: comentários, jurisprudência, legislação</em>. São Paulo: Atlas.</li>
+      <li>PAZZAGLINI FILHO, Marino; MORAES, Alexandre de; SMANIO, Gianpaolo Poggio; VAGGIONE, Luiz Fernando. <em>Juizado Especial Criminal: aspectos práticos da Lei nº 9.099/95</em>. São Paulo: Atlas.</li>
+      <li>JESUS, Damásio E. de. <em>Lei dos Juizados Especiais Criminais Anotada</em>. São Paulo: Saraiva.</li>
+    </ul>
+    <div class="source-note">Lista de obras de referência sobre a Lei 9.099; a existência de comentário ao art. 64 em cada uma delas e as edições vigentes devem ser conferidas antes de citar.</div>
+  </div>
+</section>
+
+<!-- ============ 13 ============ -->
+<section class="prova-section" id="recorrentes">
+  <h2>Pontos que Sempre Aparecem nas Audiências</h2>
+  <p class="intro">Respostas objetivas, com a base legal ou jurisprudencial indicada em cada item, para consulta rápida durante a audiência e no atendimento ao cliente.</p>
+  <div class="prova-items">
+
+    <div class="prova-group">Dia, horário e local</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">01</span>A audiência do Juizado pode ser marcada à noite?</div><div class="prova-item-a">Pode, se a organização judiciária local previr. É faculdade, não obrigação. <span class="ref">Art. 64; art. 93</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">02</span>Pode ser marcada em sábado ou domingo?</div><div class="prova-item-a">O art. 64 admite “qualquer dia da semana”, conforme a norma local. O CPP admite atos fora de sessão de julgamento em domingos e feriados. <span class="ref">Art. 64; CPP, art. 797</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">03</span>Quem define os dias e horários?</div><div class="prova-item-a">A lei estadual de organização judiciária, de iniciativa do TJ, e os atos do tribunal. <span class="ref">Lei 9.099, art. 93; CF, art. 125, § 1º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">04</span>A regra do CPC de atos das 6 às 20 horas vale no Juizado Criminal?</div><div class="prova-item-a">O art. 64 é norma específica; o CPC só se aplica supletivamente. <span class="ref">CPC, art. 212 (resumo); art. 64 (orientação prática)</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">05</span>Há vedação de audiência de 20/12 a 20/1?</div><div class="prova-item-a">O CPP veda audiências e sessões no período, salvo réus presos, Lei Maria da Penha e medidas urgentes. Aplicação ao Juizado sem tese oficial localizada: conferir o tribunal. <span class="ref">CPP, art. 798-A</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">06</span>Onde se realiza a audiência?</div><div class="prova-item-a">Na sede do juízo; pode ser fora da sede da comarca, em prédio público, em audiência previamente anunciada. <span class="ref">CPP, art. 792; Lei 9.099, art. 94</span></div></div>
+
+    <div class="prova-group">Publicidade e segredo</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">07</span>O ato é público?</div><div class="prova-item-a">Em regra, sim. A lei só restringe a publicidade para defesa da intimidade ou interesse social. <span class="ref">CF, arts. 5º, LX, e 93, IX; art. 64</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">08</span>Como pedir portas fechadas?</div><div class="prova-item-a">Requerimento da parte ou do MP, ou de ofício, quando a publicidade puder causar escândalo, inconveniente grave ou perigo de perturbação da ordem. <span class="ref">CPP, art. 792, § 1º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">09</span>Posso pedir segredo de justiça para proteger a vítima?</div><div class="prova-item-a">O juiz pode determinar segredo sobre dados, depoimentos e informações do ofendido, para evitar exposição aos meios de comunicação. <span class="ref">CPP, art. 201, § 6º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">10</span>Basta alegar “risco à minha segurança” para obter sigilo?</div><div class="prova-item-a">Não. O STJ rejeitou alegação genérica; o sigilo exige ponderação concreta. <span class="ref">STJ, APn 1.057</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">11</span>Há segredo automático em algum crime do Juizado?</div><div class="prova-item-a">Os crimes do Título VI do CP correm em segredo de justiça, o que alcança, em leitura do texto, o ato obsceno (art. 233) e o escrito ou objeto obsceno (art. 234). <span class="ref">CP, art. 234-B (leitura do texto)</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">12</span>O nome do réu pode constar do sistema?</div><div class="prova-item-a">O STJ entendeu que identificar por nome completo o réu maior de idade não viola a intimidade. <span class="ref">STJ, RMS 49.920</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">13</span>O público pode se manifestar na audiência?</div><div class="prova-item-a">Não. Os espectadores não podem se manifestar e podem ser retirados da sala. <span class="ref">CPP, art. 795 e parágrafo único</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">14</span>E se o processo tramitou em segredo e a defesa não reclamou?</div><div class="prova-item-a">O STJ não reconheceu nulidade: preclusão e ausência de prejuízo. <span class="ref">STJ, HC 148.723</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">15</span>Depoimento de criança vítima de violência: é público?</div><div class="prova-item-a">O depoimento especial tramita em segredo de justiça; permitir que estranho assista, sem autorização, é crime. <span class="ref">Lei 13.431, art. 12, § 6º, e art. 24</span></div></div>
+
+    <div class="prova-group">Vítima e testemunha no ato</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">16</span>A vítima fica na mesma sala que o autor do fato?</div><div class="prova-item-a">Antes e durante a audiência, deve-se reservar espaço separado para o ofendido. <span class="ref">CPP, art. 201, § 4º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">17</span>A vítima pode depor sem a presença do autor do fato?</div><div class="prova-item-a">Se a presença causar humilhação, temor ou sério constrangimento, a inquirição é por videoconferência; só na impossibilidade se retira o réu. <span class="ref">CPP, art. 217; Res. CNJ 354, art. 7º, III</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">18</span>Pode-se fazer qualquer pergunta à vítima?</div><div class="prova-item-a">Não. São vedadas a manifestação sobre elementos alheios aos fatos e a linguagem ou material que ofendam a dignidade da vítima ou de testemunhas. <span class="ref">Lei 9.099, art. 81, § 1º-A; CPP, art. 400-A</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">19</span>O caso é de violência doméstica: a audiência é no Juizado?</div><div class="prova-item-a">Não. A Lei 9.099 não se aplica aos crimes de violência doméstica e familiar contra a mulher. <span class="ref">Lei 11.340, art. 41; Súmula 536/STJ</span></div></div>
+
+    <div class="prova-group">Formato e registro</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">20</span>A audiência pode ser por videoconferência?</div><div class="prova-item-a">Telepresencial a pedido da parte; de ofício só nas hipóteses do § 1º. A oposição deve ser fundamentada. <span class="ref">Res. CNJ 354, art. 3º, caput, § 1º e § 2º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">21</span>Testemunha de outra cidade precisa viajar?</div><div class="prova-item-a">Em regra é ouvida por videoconferência no foro de seu domicílio, salvo apresentação espontânea. <span class="ref">Res. CNJ 354, art. 4º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">22</span>O advogado pode participar à distância?</div><div class="prova-item-a">Pode requerer; o deferimento depende de viabilidade técnica e conveniência. Se indeferido ou sem análise, deve comparecer. <span class="ref">Res. CNJ 354, art. 5º, §§ 2º e 3º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">23</span>A audiência telepresencial é gravada e pública?</div><div class="prova-item-a">É gravada, e a publicidade se assegura por transmissão em tempo real ou meio equivalente, ressalvado o segredo de justiça. <span class="ref">Res. CNJ 354, art. 7º, IV e V</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">24</span>O que consta do termo de audiência?</div><div class="prova-item-a">Breve resumo dos fatos relevantes e a sentença; apenas os atos essenciais têm registro escrito. <span class="ref">Lei 9.099, art. 81, § 2º; art. 65, § 3º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">25</span>A parte recebe cópia da gravação?</div><div class="prova-item-a">No registro audiovisual, cópia às partes, sem transcrição; na apelação, pode-se requerer a transcrição da gravação. <span class="ref">CPP, art. 405, § 2º; Lei 9.099, art. 82, § 3º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">26</span>Posso gravar a audiência com meu celular?</div><div class="prova-item-a">Sem regra expressa no penal; o CPC admite a gravação pela parte no processo civil. Comunicar o juiz antes. <span class="ref">CPC, art. 367, § 6º; orientação prática</span></div></div>
+
+    <div class="prova-group">Acesso, prazos e nulidades</div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">27</span>A defesa tem acesso ao termo circunstanciado?</div><div class="prova-item-a">O defensor tem acesso amplo aos elementos de prova já documentados no procedimento investigatório. <span class="ref">STF, Súmula Vinculante 14</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">28</span>Os prazos do Juizado Criminal contam em dias úteis?</div><div class="prova-item-a">O art. 12-A (dias úteis) está na parte cível. Sem tese oficial localizada para o Juizado Criminal: contar em dias corridos. <span class="ref">Lei 9.099, art. 12-A; CPP, art. 798</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">29</span>Qual o prazo da apelação e dos embargos?</div><div class="prova-item-a">Apelação em 10 dias da ciência da sentença; embargos de declaração em 5 dias, por escrito ou oralmente. <span class="ref">Lei 9.099, arts. 82, § 1º, e 83, § 1º</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">30</span>Irregularidade de forma anula o ato?</div><div class="prova-item-a">Só havendo prejuízo, que o STJ exige comprovado de forma inequívoca. <span class="ref">Lei 9.099, art. 65, § 1º; CPP, art. 563; STJ, JT 69, tese 1</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">31</span>A Defensoria precisa ser intimada pessoalmente no Juizado?</div><div class="prova-item-a">Segundo o STJ, não: admite-se a intimação na sessão de julgamento ou pela imprensa oficial. <span class="ref">STJ, JT 93, tese 3; Lei 9.099, art. 67, parágrafo único</span></div></div>
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">32</span>A transação penal aparece na certidão de antecedentes?</div><div class="prova-item-a">Não consta da certidão, salvo para impedir novo benefício em cinco anos, e não gera reincidência nem maus antecedentes. <span class="ref">Lei 9.099, art. 76, §§ 4º e 6º; STJ, JT 93, tese 7</span></div></div>
+  </div>
+</section>
+
+<!-- ============ 14 ============ -->
+<section class="section" id="fontes">
+  <div class="section-header"><div class="section-num">13</div><div class="section-title"><span>Controle de Fidedignidade</span>Fontes, Verificação e Ressalvas</div></div>
+  <div class="card">
+    <h3>Fontes consultadas e grau de verificação (conferência de 12/11/2026)</h3>
+    <div class="tbl-scroll">
+    <table class="comp-table">
+      <thead><tr><th>Fonte</th><th>Uso nesta página</th><th>Situação</th></tr></thead>
+      <tbody>
+        <tr class="hl2"><td>Planalto — Lei 9.099/1995 (texto compilado), CP, CPP, CF, Lei 11.340/2006 (compilada, com a Lei 15.380/2026)</td><td>Art. 64 e dispositivos correlatos; CF arts. 5º, 93, 98, 125; CPP arts. 3º, 201, 217, 400-A, 405, 563, 564, 572, 573, 792 a 798-A; CP arts. 233, 234 e 234-B; Lei 11.340 arts. 16, 16-A, 17-A e 41.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido</span></td></tr>
+        <tr class="hl2"><td>CNJ — Resolução 354/2020 (texto compilado até a Res. 679/2026)</td><td>Arts. 3º, 3º-A, 4º, 5º e 7º.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido</span></td></tr>
+        <tr class="hl2"><td>STF — página da Súmula Vinculante 14</td><td>Texto da súmula e precedente representativo.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido</span></td></tr>
+        <tr class="hl2"><td>STJ — Jurisprudência em Teses nº 69 e nº 93 (PDF do próprio STJ)</td><td>Teses sobre nulidades e Juizados Criminais.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido</span></td></tr>
+        <tr class="hl2"><td>STJ — notícia sobre segredo de justiça nas ações penais (agosto de 2024)</td><td>APn 1.057, RMS 49.920, RMS 55.790, HC 148.723, caso do júri, acesso da vítima ao inquérito.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido por agente de leitura</span></td></tr>
+        <tr class="hl3"><td>Planalto — Lei 8.906/1994 (art. 7º), Lei 13.431/2017 (arts. 11, 12 e 24), Lei 15.380/2026, CPC (arts. 189, 212, 236 e 367)</td><td>Prerrogativas do advogado, depoimento especial, retratação na Lei Maria da Penha, regras do processo civil.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido por agente (resumo e paráfrase)</span></td></tr>
+        <tr class="hl3"><td>TJMG — aviso do plantão dos Juizados Especiais de Belo Horizonte (03/07/2026)</td><td>Exemplo de funcionamento em sábado.</td><td><span class="vb vb-of" style="margin-left:0">Oficial, lido por agente de leitura</span></td></tr>
+        <tr class="hl"><td>CNBSP (reprodução da notícia do STJ de 2024); Evinis Talon (AgRg no AREsp 1936753/SP; FONAJE)</td><td>Passagem do HC 148.723 sobre vício “em situação oposta”; ementa do AgRg; enunciados criminais do FONAJE.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária</span></td></tr>
+        <tr class="hl"><td>Conjur, Migalhas, Dizer o Direito, outros sites jurídicos (resultados de busca)</td><td>Posições divergentes sobre gravação pela parte; menção a julgados do STJ de 2025 e 2026 sobre videoconferência, sem número de acórdão confirmado.</td><td><span class="vb vb-sec" style="margin-left:0">Secundária, não verificada</span></td></tr>
+        <tr class="hl3"><td>Seções 03 a 08, itens marcados “Prática”</td><td>Orientações de atuação, inferências de leitura do texto e cuidados sugeridos.</td><td><span class="vb vb-pr" style="margin-left:0">Prática</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3 class="mt2">Limites desta conferência</h3>
+    <ul class="source-list">
+      <li><strong>Doutrina:</strong> não localizei comentário doutrinário específico sobre o art. 64; a seção 12 não atribui passagens a autores.</li>
+      <li><strong>Normas de organização judiciária:</strong> não consultei leis estaduais nem regimentos dos tribunais. Não localizei lei ou ato que preveja funcionamento noturno regular de Juizado Criminal. O único exemplo lido (TJMG, plantão de sábado) é pontual e de 2026.</li>
+      <li><strong>Acórdãos do STJ</strong> (APn 1.057, RMS 49.920, RMS 55.790, HC 148.723 e o caso do acesso da vítima) foram lidos apenas na notícia do próprio STJ, e não no inteiro teor. A consulta ao portal de jurisprudência do STJ é bloqueada para acesso automatizado. A notícia não informa o número do processo do caso do júri nem do acesso da vítima ao inquérito.</li>
+      <li><strong>Decisões de 2025 e 2026 sobre videoconferência</strong> (por exemplo, advogado em videoconferência, reconhecimento em audiência virtual): vêm de resultados de busca em sites secundários; não li os acórdãos nem confirmei os números. Não foram usadas como precedente nesta página.</li>
+      <li><strong>AgRg no AREsp 1936753/SP:</strong> ementa lida em reprodução de Evinis Talon; trata do CPC e do recurso especial, não do art. 12-A da Lei 9.099.</li>
+      <li><strong>Art. 12-A no processo criminal e art. 798-A no Juizado:</strong> sem tese oficial localizada.</li>
+      <li><strong>CPC, Lei 8.906, Lei 13.431 e Lei 15.380:</strong> lidos por agente de leitura, que resumiu ou parafraseou os dispositivos (limite de citação). Os trechos entre aspas foram conferidos pelo agente; para citar em peça, copiar do Planalto. O § 1º do art. 7º do Estatuto da Advocacia aparece como revogado; conferir a versão vigente.</li>
+      <li><strong>Súmula Vinculante 14:</strong> a data de publicação não consta da página lida.</li>
+      <li><strong>ADPF 1107 e ADI 7267:</strong> citadas apenas como anotações “Vide” do Planalto; conteúdo não verificado.</li>
+      <li><strong>Resolução CNJ 121/2010</strong> (consulta pública a dados processuais): citada apenas como referida na notícia do STJ; texto não lido.</li>
+      <li><strong>JT 69</strong> tem julgados até 19/08/2016; a <strong>JT 93</strong> foi revisada em 24/04/2023. As teses podem ter evoluído.</li>
+      <li><strong>Enunciados do FONAJE:</strong> compilação de terceiros; não vinculam tribunais. Podem ter sido editados novos encontros após fevereiro de 2024.</li>
+      <li><strong>Jurisprudência em Teses nº 280 (STJ, maio de 2026):</strong> a existência da edição foi registrada em conferência anterior por notícia secundária; o texto não foi lido para esta página.</li>
+      <li><strong>Jurisprudência de 2024 a 2026:</strong> não foi localizado acórdão recente específico sobre o art. 64. Recomenda-se busca complementar nos portais dos tribunais.</li>
+    </ul>
+    <h3 class="mt2">Endereços das fontes oficiais</h3>
+    <ul class="source-list">
+      <li><a href="https://www.planalto.gov.br/ccivil_03/leis/l9099.htm" target="_blank" rel="noopener">Lei 9.099/1995 — Planalto</a></li>
+      <li><a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm" target="_blank" rel="noopener">Código de Processo Penal — Planalto</a></li>
+      <li><a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm" target="_blank" rel="noopener">Código Penal — Planalto</a></li>
+      <li><a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank" rel="noopener">Constituição Federal — Planalto</a></li>
+      <li><a href="https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm" target="_blank" rel="noopener">Lei 11.340/2006 (Maria da Penha) — Planalto</a></li>
+      <li><a href="https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2026/Lei/L15380.htm" target="_blank" rel="noopener">Lei 15.380/2026 — Planalto</a></li>
+      <li><a href="https://www.planalto.gov.br/ccivil_03/leis/l8906.htm" target="_blank" rel="noopener">Lei 8.906/1994 (Estatuto da Advocacia) — Planalto</a></li>
+      <li><a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13431.htm" target="_blank" rel="noopener">Lei 13.431/2017 — Planalto</a></li>
+      <li><a href="https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Lei/L13105.htm" target="_blank" rel="noopener">Código de Processo Civil — Planalto</a></li>
+      <li><a href="https://atos.cnj.jus.br/atos/detalhar/3579" target="_blank" rel="noopener">CNJ — Resolução 354/2020 (texto compilado)</a></li>
+      <li><a href="https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=26&amp;sumula=1230" target="_blank" rel="noopener">STF — Súmula Vinculante 14</a></li>
+      <li><a href="https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2024/11082024-Segredo-de-justica-nas-acoes-penais-o-STJ-entre-o-direito-a-intimidade-e-o-interesse-publico-na-informacao.aspx" target="_blank" rel="noopener">STJ — notícia sobre segredo de justiça nas ações penais</a></li>
+      <li><a href="https://www.stj.jus.br/internet_docs/jurisprudencia/jurisprudenciaemteses/Jurisprud%C3%AAncia%20em%20teses%2069%20-%20Nulidades%20no%20Processo%20Penal.pdf" target="_blank" rel="noopener">STJ — Jurisprudência em Teses 69 (Nulidades no Processo Penal)</a></li>
+      <li><a href="https://www.stj.jus.br/docs_internet/jurisprudencia/jurisprudenciaemteses/Jurisprudencia%20em%20Teses%2093%20-%20Juizados%20Especiais%20Criminais%20-%20I.pdf" target="_blank" rel="noopener">STJ — Jurisprudência em Teses 93 (JECrim I)</a></li>
+      <li><a href="https://tjmg.jus.br/portal-tjmg/informes/belo-horizonte-plantao-dos-juizados-especiais-4-7.htm" target="_blank" rel="noopener">TJMG — plantão dos Juizados Especiais de Belo Horizonte (4/7/2026)</a></li>
+      <li><a href="https://evinistalon.com/stj-nao-incide-a-contagem-do-prazo-em-dias-uteis-em-acoes-penais/" target="_blank" rel="noopener">Evinis Talon — STJ: não incide a contagem do prazo em dias úteis em ações penais (fonte secundária)</a></li>
+    </ul>
+    <div class="alert alert-red mt2"><span class="alert-tag">Nota de integridade</span><div>Não foram criadas súmulas, teses ou precedentes. Onde não foi possível confirmar a fonte primária, a página identifica a informação como secundária ou como orientação prática. Antes de transcrever qualquer trecho em peça, conferir o texto na fonte oficial.</div></div>
+  </div>
+</section>
+
+</div>
+
+<footer><strong>Art. 64 da Lei 9.099/1995 — Publicidade, Horário e Dia dos Atos Processuais</strong> · Página única com atalhos internos · Conferência normativa em 12/11/2026 · Material de apoio à atuação; não substitui a consulta às fontes oficiais.</footer>
+
+<a id="to-top" href="#top-nav">Topo</a>
+
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('#top-nav a[href^="#"]'));
+  var map={};
+  links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  var ids=Object.keys(map);
+  var toTop=document.getElementById('to-top');
+  function onScroll(){
+    var y=window.scrollY||document.documentElement.scrollTop;
+    var current=null;
+    ids.forEach(function(id){
+      var el=document.getElementById(id);
+      if(el && el.getBoundingClientRect().top<=160){current=id;}
+    });
+    links.forEach(function(a){a.classList.remove('active');});
+    if(current && map[current]){
+      var a=map[current], nav=document.getElementById('top-nav');
+      a.classList.add('active');
+      if(nav){
+        var left=a.offsetLeft-(nav.clientWidth/2)+(a.offsetWidth/2);
+        nav.scrollLeft=left;
+      }
+    }
+    if(toTop){toTop.classList.toggle('show',y>600);}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+</body>
+</html>
