@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vade Mecum Digital — Magistratura ENAM</title>
 <script src="vendor/chart.umd.min.js?v=49aef4c2"></script>
-<script src="study-tracker.js?v=46265654"></script>
+<script src="study-tracker.js?v=6f753c29"></script>
 <style>
   :root{
     --navy:#0d1b2a;--navy-mid:#1a2f45;--navy-light:#243b55;
@@ -349,6 +349,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" type="image/png" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
+<script>(function(){try{var u=JSON.parse(localStorage.getItem("vadeMecum_ui")||"{}"),h=document.documentElement;if(u.dark)h.classList.add("vm-dark");if(u.fs&&u.fs!==100){h.classList.add("vm-zoom");h.style.setProperty("--vm-zoom",u.fs/100);}}catch(e){}})();</script>
 <link rel="stylesheet" href="fonts.css?v=042dc32b">
 <!-- /VM-HEAD -->
 </head>
@@ -364,6 +365,9 @@
     <a href="#materias" class="active">Matérias</a>
     <a href="#como-usar">Como Usar</a>
     <a href="#enam">Edital ENAM</a>
+    <a href="treino.html">Treino</a>
+    <a href="sumulas.html">Súmulas</a>
+    <a href="calculadoras.html">Calculadoras</a>
     <a href="#sobre">Sobre</a>
   </div>
 </nav>
@@ -1069,11 +1073,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <!-- VM-RUNTIME -->
-<script src="vm-data.js?v=e21a270c"></script>
-<script src="search.js?v=90f3f251"></script>
-<script src="dashboard.js?v=13cbd53f"></script>
+<script src="vm-data.js?v=59406e91"></script>
+<script src="search.js?v=fc82f803"></script>
+<script src="dashboard.js?v=29acc176"></script>
 <script src="session-banner.js?v=d87419ae"></script>
 <script src="em-breve.js?v=6487e366"></script>
+<script src="autobackup.js?v=b5fb3d04"></script>
 <script src="pwa.js?v=64776eec"></script>
 <!-- /VM-RUNTIME -->
 </body>

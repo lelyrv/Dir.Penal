@@ -1,0 +1,96 @@
+{
+ "entries": {
+  "STF-S-145": {
+   "status": "vigente",
+   "enunciado": "Não há crime, quando a preparação do flagrante pela polícia torna impossível a sua consumação.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2119",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-S-155": {
+   "status": "vigente",
+   "enunciado": "É relativa a nulidade do processo criminal por falta de intimação da expedição de precatória para inquirição de testemunha.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2743",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-S-497": {
+   "status": "vigente",
+   "enunciado": "Quando se tratar de crime continuado, a prescrição regula-se pela pena imposta na sentença, não se computando o acréscimo decorrente da continuação.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2108",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-S-523": {
+   "status": "vigente",
+   "enunciado": "No processo penal, a falta da defesa constitui nulidade absoluta, mas a sua deficiência só o anulará se houver prova de prejuízo para o réu.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2729",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-S-603": {
+   "status": "vigente",
+   "enunciado": "A competência para o processo e julgamento de latrocínio é do juiz singular e não do tribunal do júri.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2683",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-S-610": {
+   "status": "vigente",
+   "enunciado": "Há crime de latrocínio, quando o homicídio se consuma, ainda que não realize o agente a subtração de bens da vítima.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2562",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-S-611": {
+   "status": "vigente",
+   "enunciado": "Transitada em julgado a sentença condenatória, compete ao juízo das execuções a aplicação de lei mais benigna.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2560",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-S-654": {
+   "status": "vigente",
+   "enunciado": "A garantia da irretroatividade da lei, prevista no art. 5º, XXXVI, da Constituição da República, não é invocável pela entidade estatal que a tenha editado.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2246",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-S-690": {
+   "status": "vigente",
+   "enunciado": "Compete originariamente ao Supremo Tribunal Federal o julgamento de \"habeas corpus\" contra decisão de Turma Recursal de Juizados Especiais Criminais.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=1502",
+   "verificadoEm": "2026-11-14",
+   "observacao": "A própria página oficial do STF traz jurisprudência selecionada sobre superação desta súmula (ex.: \"não mais prevalece\"). Confira antes de citar."
+  },
+  "STF-S-696": {
+   "status": "vigente",
+   "enunciado": "Reunidos os pressupostos legais permissivos da suspensão condicional do processo, mas se recusando o promotor de justiça a propô-la, o juiz, dissentindo, remeterá a questão ao Procurador-Geral, aplicando-se por analogia o art. 28 do Código de Processo Penal.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2666",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-S-706": {
+   "status": "vigente",
+   "enunciado": "É relativa a nulidade decorrente da inobservância da competência penal por prevenção.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2433",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-S-711": {
+   "status": "vigente",
+   "enunciado": "A lei penal mais grave aplica-se ao crime continuado ou ao crime permanente, se a sua vigência é anterior à cessação da continuidade ou da permanência.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2551",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-S-723": {
+   "status": "vigente",
+   "enunciado": "Não se admite a suspensão condicional do processo por crime continuado, se a soma da pena mínima da infração mais grave com o aumento mínimo de um sexto for superior a um ano.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2651",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-SV-14": {
+   "status": "vigente",
+   "enunciado": "É direito do defensor, no interesse do representado, ter acesso amplo aos elementos de prova que, já documentados em procedimento investigatório realizado por órgão com competência de polícia judiciária, digam respeito ao exercício do direito de defesa.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=26&sumula=1230",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-SV-35": {
+   "status": "vigente",
+   "enunciado": "A homologação da transação penal prevista no artigo 76 da Lei 9.099/1995 não faz coisa julgada material e, descumpridas suas cláusulas, retoma-se a situação anterior, possibilitando-se ao Ministério Público a continuidade da persecução penal mediante oferecimento de denúncia ou requisição de inquérito policial.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=26&sumula=1953",
+   "verificadoEm": "2026-11-14"
+  }
+ },
+ "_aviso": "Registro único de precedentes. Cada entrada verificada precisa de enunciado, fonte (https) e verificadoEm. Entradas do STF são gravadas por tools/registry_sync.py a partir da página oficial; as demais podem ser cadastradas à mão. status: vigente | cancelada | superada | alterada | nao-verificado."
+}

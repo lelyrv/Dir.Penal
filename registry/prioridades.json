@@ -1,0 +1,4 @@
+{
+  "_aviso": "Prioridade de redação dos artigos que ainda não têm fluxograma (aparece em 'Próximos artigos a escrever' na home). Preencha só o que você quiser priorizar. peso: inteiro de 1 (baixa) a 5 (alta). Exemplo: \"L9099-ART-66.html\": { \"peso\": 5, \"nota\": \"cai em toda audiência\" }. Sem peso, a ordem vem de quantas vezes as páginas já escritas da mesma matéria citam o artigo (só um indício).",
+  "itens": {}
+}

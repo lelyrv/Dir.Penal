@@ -382,13 +382,22 @@ html, body{
 .vm-pn-next{margin-left:auto;text-align:right;}
 @media(max-width:560px){.vm-pn a{max-width:100%;}}
 
-/* Barra de ferramentas */
-.vm-dock{position:fixed;left:1rem;bottom:1rem;z-index:2147483000;display:flex;flex-direction:column;align-items:flex-start;gap:.35rem;}
-@media(max-width:560px){.vm-dock{left:.5rem;bottom:.5rem;}.vm-dock button{padding:.4rem .55rem;font-size:.66rem;}}
-.vm-dock button{font:700 .72rem/1 "Source Serif 4",Georgia,serif;letter-spacing:.4px;cursor:pointer;color:#e8b84b;background:rgba(13,27,42,.94);
-  border:1px solid #c8960c;border-radius:3px;padding:.5rem .75rem;box-shadow:0 3px 12px rgba(0,0,0,.3);}
+/* Ferramentas do artigo: um botão discreto na barra superior abre um menu (nada flutua sobre o texto) */
+#vm-study-bar .vm-tools-btn{cursor:pointer;flex-shrink:0;height:30px;margin:0 .35rem;padding:0 .7rem;font:700 .72rem/1 "Source Serif 4",Georgia,serif;
+  letter-spacing:.4px;color:#e8b84b;background:transparent;border:1px solid rgba(232,184,75,.55);border-radius:4px;white-space:nowrap;}
+#vm-study-bar .vm-tools-btn:hover,#vm-study-bar .vm-tools-btn[aria-expanded=true]{background:#c8960c;color:#0d1b2a;}
+#vm-study-bar .vm-tools-btn .vt-short{display:none;}
+@media(max-width:699px){#vm-study-bar .vm-tools-btn .vt-long{display:none;}#vm-study-bar .vm-tools-btn .vt-short{display:inline;}#vm-study-bar .vm-tools-btn{padding:0 .5rem;margin:0 .2rem;}}
+.vm-dock{position:fixed;top:calc(var(--vm-study-bar-h,46px) + 6px);right:8px;z-index:2147483640;display:none;flex-direction:column;gap:2px;min-width:200px;
+  padding:.35rem;background:#0d1b2a;border:1px solid #c8960c;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,.5);}
+.vm-dock.open{display:flex;}
+@media(max-width:699px){.vm-dock{top:calc(var(--vm-study-bar-h,88px) + 6px);left:8px;right:8px;}}
+.vm-dock button{font:600 .82rem/1.2 "Source Serif 4",Georgia,serif;cursor:pointer;text-align:left;color:#f3e7c6;background:transparent;border:0;border-radius:4px;padding:.65rem .8rem;}
 .vm-dock button:hover,.vm-dock button[aria-pressed=true]{background:#c8960c;color:#0d1b2a;}
-.vm-dock button:focus-visible{outline:2px solid #e8b84b;outline-offset:2px;}
+.vm-dock button:focus-visible{outline:2px solid #e8b84b;outline-offset:-2px;}
+.vm-dock button kbd{float:right;font:600 .64rem "JetBrains Mono",monospace;border:1px solid rgba(232,184,75,.55);border-radius:3px;padding:0 .3rem;opacity:.85;}
+/* O botão "Topo" de cada página some: "Voltar ao topo" está no menu de ferramentas */
+#to-top,.back-top{display:none!important;}
 
 /* Copiar trecho / PDF da seção */
 .vm-copyable{position:relative;}
@@ -413,13 +422,15 @@ html.vm-hearing [data-vm-hide-h]{display:none!important;}
 html.vm-hearing .vm-hearing-title{display:block;margin:calc(var(--vm-study-bar-h,46px) + 10px) clamp(1rem,3vw,4rem) 0;padding:.55rem .9rem;
   background:#0d1b2a;color:#f3e7c6;border-left:4px solid #e8b84b;border-radius:3px;font:600 .8rem/1.4 "Source Serif 4",Georgia,serif;}
 html.vm-hearing .vm-hearing-title strong{color:#e8b84b;}
+.vm-hearing-title button{float:right;cursor:pointer;font:700 .7rem "Source Serif 4",Georgia,serif;color:#e8b84b;background:transparent;border:1px solid rgba(232,184,75,.6);border-radius:3px;padding:.2rem .6rem;}
+.vm-hearing-title button:hover{background:#c8960c;color:#0d1b2a;}
 @media(max-width:699px){html.vm-hearing .vm-hearing-title{margin-top:calc(var(--vm-study-bar-h,88px) + 10px);}}
 html.vm-hearing .prova-section{margin-top:1rem!important;}
 
 /* Impressão / PDF */
 .vm-print-head{display:none;}
 @media print{
-  #vm-study-bar,.vm-skip,.vm-dock,.vm-copy,.vm-sec-pdf,.vm-toast-tools,.vm-pn,.vm-hearing-title,#vm-toast,#vm-note,#vm-search,#vm-offline-chip{display:none!important;}
+  #vm-study-bar,.vm-skip,.vm-dock,.vm-tools-btn,.vm-copy,.vm-sec-pdf,.vm-toast-tools,.vm-pn,.vm-hearing-title,#vm-toast,#vm-note,#vm-search,#vm-offline-chip{display:none!important;}
   [data-vm-hide-p]{display:none!important;}
   html,body{padding-top:0!important;margin-top:0!important;overflow:visible!important;height:auto!important;}
   .vm-print-head{display:block;border-bottom:2px solid #000;margin:0 0 10px;padding:0 0 6px;color:#000;font-family:Georgia,serif;}
@@ -431,3 +442,69 @@ html.vm-hearing .prova-section{margin-top:1rem!important;}
   html.vm-printing .prova-item{background:#fff!important;border:1px solid #999!important;break-inside:avoid;}
   html.vm-printing #top-nav{display:none!important;}
 }
+
+/* ===== 5. Citações, marcadores/notas, tamanho de letra e tema escuro ===== */
+
+/* Citações de súmulas e teses (registro único) */
+.vm-cite{border-bottom:1px dotted currentColor;cursor:help;}
+.vm-cite:focus-visible{outline:2px solid #c8960c;outline-offset:2px;}
+.vm-cite-cancelada,.vm-cite-superada{color:#b32020;}
+.vm-cite-flag{font:700 .58rem/1 "Source Serif 4",Georgia,serif;letter-spacing:.4px;text-transform:uppercase;color:#fff;background:#b32020;
+  border-radius:2px;padding:.1rem .3rem;margin-left:.25rem;vertical-align:super;}
+#vm-cite-pop{position:fixed;z-index:2147483640;width:max-content;background:#0d1b2a;color:#f3e7c6;border:1px solid #c8960c;border-left:4px solid #e8b84b;
+  border-radius:4px;padding:.6rem .8rem;font:400 .8rem/1.5 "Source Serif 4",Georgia,serif;box-shadow:0 8px 26px rgba(0,0,0,.5);}
+#vm-cite-pop[hidden]{display:none;}
+#vm-cite-pop .vcp-t{font:700 .88rem "Playfair Display",Georgia,serif;color:#e8b84b;}
+#vm-cite-pop .vcp-s{font-weight:700;font-size:.72rem;letter-spacing:.5px;text-transform:uppercase;margin:.15rem 0 .35rem;color:#9ad8b0;}
+#vm-cite-pop .vcp-cancelada,#vm-cite-pop .vcp-superada,#vm-cite-pop .vcp-alterada{color:#fcc5c5;}
+#vm-cite-pop .vcp-nao-verificado{color:#f6dc9a;text-transform:none;font-weight:600;}
+#vm-cite-pop .vcp-e{font-style:italic;margin-bottom:.4rem;}
+#vm-cite-pop .vcp-o{font-size:.74rem;opacity:.85;margin-bottom:.4rem;}
+#vm-cite-pop .vcp-l{display:flex;gap:.9rem;flex-wrap:wrap;font-size:.74rem;}
+#vm-cite-pop a{color:#e8b84b;}
+
+/* Marcar / Nota / PDF no cabeçalho de cada seção */
+.vm-sec-tools{margin-left:auto;display:flex;gap:.35rem;align-items:center;flex-wrap:wrap;}
+.vm-sec-tools .vm-sec-pdf{margin-left:0;float:none;}
+.prova-section .vm-sec-tools{float:right;}
+.vm-mark,.vm-note-btn{cursor:pointer;font:700 .66rem/1 "Source Serif 4",Georgia,serif;letter-spacing:.6px;padding:.35rem .6rem;border-radius:3px;
+  border:1px solid #c8960c;background:transparent;color:#7a5a00;}
+.prova-section .vm-mark,.prova-section .vm-note-btn{color:#e8b84b;}
+.vm-mark:hover,.vm-note-btn:hover,.vm-mark:focus-visible,.vm-note-btn:focus-visible{background:#c8960c;color:#0d1b2a;}
+.vm-mark[aria-pressed=true]{background:#c8960c;color:#0d1b2a;}
+.vm-note-box{margin:.6rem 0 1rem;padding:.7rem .9rem;background:#fdf3d8;border:1px solid #d4aa3a;border-left:4px solid #c8960c;border-radius:4px;
+  color:#3d3020;font:400 .84rem/1.55 "Source Serif 4",Georgia,serif;}
+.vm-note-box[hidden]{display:none;}
+.vm-note-box strong{display:block;font-size:.7rem;letter-spacing:1px;text-transform:uppercase;color:#7a5a00;margin-bottom:.2rem;}
+.vm-note-box p{margin:0 0 .4rem;white-space:pre-wrap;}
+.vm-note-box textarea{width:100%;box-sizing:border-box;font:400 .84rem/1.5 "Source Serif 4",Georgia,serif;padding:.45rem;border:1px solid #c8960c;border-radius:3px;background:#fff;color:#1a1208;resize:vertical;}
+.vm-note-box button{cursor:pointer;font:700 .68rem "Source Serif 4",Georgia,serif;padding:.3rem .65rem;border-radius:3px;border:1px solid #c8960c;background:transparent;color:#7a5a00;}
+.vm-note-box button:hover{background:#c8960c;color:#0d1b2a;}
+.vm-note-act{display:flex;gap:.4rem;margin-top:.4rem;}
+
+/* Tamanho da letra (zoom) e tema escuro (inversão controlada; as áreas já escuras são re-invertidas) */
+html.vm-zoom .page-wrap,html.vm-zoom #hero,html.vm-zoom footer,html.vm-zoom .vm-pn{zoom:var(--vm-zoom,1);}
+html.vm-dark body{background:#15120d!important;}
+html.vm-dark .page-wrap,html.vm-dark .vm-pn{filter:invert(.9) hue-rotate(180deg);}
+html.vm-dark .page-wrap .prova-section,html.vm-dark .page-wrap img,html.vm-dark .page-wrap svg,html.vm-dark .page-wrap .vm-cite-flag{filter:invert(1) hue-rotate(180deg);}
+
+@media print{
+  .vm-note-box,.vm-sec-tools,#vm-cite-pop{display:none!important;}
+  .vm-cite{border-bottom:0!important;}
+  html.vm-dark body{background:#fff!important;}
+  html.vm-dark .page-wrap,html.vm-dark .vm-pn,html.vm-dark .page-wrap .prova-section,html.vm-dark .page-wrap img{filter:none!important;}
+  html.vm-zoom .page-wrap,html.vm-zoom #hero,html.vm-zoom footer{zoom:1!important;}
+}
+
+/* ===== 6. Contraste (auditoria WCAG: tests/contrast.test.mjs) ===== */
+/* Texto dentro de quadros azul-marinho em linha herda a cor clara em vez de cair no marrom-escuro de ".card p". */
+div[style*="background:var(--navy)"] p,div[style*="background:var(--navy)"] li,
+div[style*="background: var(--navy)"] p,div[style*="background: var(--navy)"] li,
+div[style*="background:var(--navy-mid)"] p,div[style*="background:var(--navy-mid)"] li,
+div[style*="background:var(--navy-light)"] p,div[style*="background:var(--navy-light)"] li,
+div[style*="background:#0d1b2a"] p,div[style*="background:#0d1b2a"] li{color:inherit;}
+/* Dourado claro sobre o creme não alcança 3:1: tons mais escuros do mesmo dourado. */
+.section-num{color:#9a7d38;}
+.section-title span{color:#7a5a00;}
+.flow-arrow{color:#8a6e2e;}
+footer{color:rgba(255,255,255,.72);}

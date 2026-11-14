@@ -14,7 +14,7 @@ await run(async ({ base, server, browser }) => {
   // espera o service worker instalar e guardar os artigos
   let ready = false;
   for (let i = 0; i < 100 && !ready; i++) {
-    ready = await A.ev(`(async()=>{const ks=await caches.keys();if(!ks.length)return false;const c=await caches.open(ks[0]);const k=await c.keys();return k.some(r=>r.url.endsWith('DP-ART-13.html'))&&k.some(r=>r.url.endsWith('search-index.json'))&&k.some(r=>r.url.includes('fonts/'))})()`);
+    ready = await A.ev(`(async()=>{const ks=await caches.keys();if(!ks.length)return false;const c=await caches.open(ks[0]);const k=await c.keys();return k.some(r=>r.url.endsWith('DP-ART-13.html'))&&k.some(r=>r.url.endsWith('search-index-CP.json'))&&k.some(r=>r.url.endsWith('treino.html'))&&k.some(r=>r.url.endsWith('data/laws/CP.json'))&&k.some(r=>r.url.includes('fonts/'))})()`);
     if (!ready) await sleep(300);
   }
   T.check('Service worker instalou e guardou artigos (inclusive os nunca visitados), fontes e índice de busca', ready === true);
@@ -24,7 +24,7 @@ await run(async ({ base, server, browser }) => {
   T.check('A página passa a ser controlada pelo service worker', await A.ev(`!!navigator.serviceWorker.controller`) === true);
   const cached = JSON.parse(await A.ev(`(async()=>{const c=await caches.open(${JSON.stringify(keys[0])});const k=await c.keys();return JSON.stringify({n:k.length,pages:k.filter(r=>/-ART-\\d+\\.html$/.test(r.url)).length,woff:k.filter(r=>r.url.endsWith('.woff2')).length,chart:k.some(r=>r.url.includes('chart.umd')),icons:k.filter(r=>r.url.includes('icons/')).length})})()`));
   const man = JSON.parse(fs.readFileSync(ROOT + '/articles.json', 'utf8'));
-  const nAv = Object.values(man.articles).filter((a) => a.available).length;
+  const nAv = Object.values(man.articles).filter((a) => a.available && a.kind === 'artigo').length;
   T.check('O cache tem todos os artigos publicados, as fontes, o gráfico e os ícones', cached.pages === nAv && cached.woff >= 20 && cached.chart && cached.icons >= 3, JSON.stringify(cached) + ' esperado ' + nAv);
 
   // ===== desliga o servidor =====

@@ -1,0 +1,106 @@
+name: Verificação mensal (fontes e leis)
+
+# Todo dia 1º do mês, às 11h UTC (8h no horário de Brasília), e quando você pedir (Actions > Verificação mensal > Run workflow).
+#  1. links das fontes oficiais citadas no site (Planalto, STJ, STF, CNJ...): quais pararam de funcionar;
+#  2. texto das leis no Planalto: artigos alterados, acrescentados ou revogados desde o último retrato, e se há página no site;
+#  3. transcrições: o texto legal que cada página reproduz ainda confere com o oficial.
+# Abre (ou atualiza) UMA issue por mês, só se houver link quebrado ou lei alterada.
+# Planalto ou tribunal fora do ar NÃO abre issue: aparece como aviso no resumo da execução.
+on:
+  schedule:
+    - cron: '0 11 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Links das fontes
+        id: links
+        run: |
+          set +e
+          python tools/check_sources.py --report "$RUNNER_TEMP/links.md"
+          echo "rc=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Texto das leis no Planalto
+        id: leis
+        run: |
+          set +e
+          python tools/law_watch.py --check --report "$RUNNER_TEMP/leis.md"
+          echo "rc=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Transcrições nas páginas
+        run: |
+          set +e
+          python tools/law_watch.py --transcriptions --report "$RUNNER_TEMP/transcricoes.md"
+          exit 0
+
+      - name: Resumo da execução
+        run: |
+          {
+            echo "## Resumo"
+            echo "- Links: código ${{ steps.links.outputs.rc }} (0 = tudo certo; 2 = há link quebrado ou suspeito)"
+            echo "- Leis: código ${{ steps.leis.outputs.rc }} (0 = sem mudança; 2 = lei alterada; 3 = Planalto indisponível, nada foi comparado)"
+            echo
+            cat "$RUNNER_TEMP/links.md" 2>/dev/null
+            echo
+            cat "$RUNNER_TEMP/leis.md" 2>/dev/null
+            echo
+            cat "$RUNNER_TEMP/transcricoes.md" 2>/dev/null
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Abrir ou atualizar a issue do mês
+        if: steps.links.outputs.rc == '2' || steps.leis.outputs.rc == '2'
+        uses: actions/github-script@v7
+        env:
+          LINKS_RC: ${{ steps.links.outputs.rc }}
+          LEIS_RC: ${{ steps.leis.outputs.rc }}
+        with:
+          script: |
+            const fs = require('fs');
+            const tmp = process.env.RUNNER_TEMP;
+            const read = (f) => { try { return fs.readFileSync(`${tmp}/${f}`, 'utf8'); } catch (e) { return ''; } };
+            const mes = new Date().toISOString().slice(0, 7);
+            const partes = [];
+            if (process.env.LINKS_RC === '2') partes.push('links com problema');
+            if (process.env.LEIS_RC === '2') partes.push('lei alterada');
+            const title = `Verificação mensal ${mes}: ${partes.join(' e ')}`;
+            const body = [
+              'Gerado automaticamente por `.github/workflows/monthly.yml`.',
+              '',
+              'O que fazer: abra cada item, confira na fonte oficial e corrija a página. Para registrar que a lei mudou e já foi conferida, rode `python tools/law_watch.py --update` e faça commit do retrato novo em `data/laws/`.',
+              '',
+              read('links.md'), '', read('leis.md'), '', read('transcricoes.md'),
+              '', `Execução: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+            ].join('\n');
+            const { data: abertas } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo, state: 'open', labels: 'verificacao-mensal', per_page: 50,
+            });
+            const existente = abertas.find((i) => i.title.startsWith(`Verificação mensal ${mes}`));
+            if (existente) {
+              await github.rest.issues.update({ owner: context.repo.owner, repo: context.repo.repo, issue_number: existente.number, title, body });
+            } else {
+              await github.rest.issues.create({ owner: context.repo.owner, repo: context.repo.repo, title, body, labels: ['verificacao-mensal'] });
+            }
+
+      - name: Guardar os relatórios
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorios-${{ github.run_id }}
+          path: |
+            ${{ runner.temp }}/links.md
+            ${{ runner.temp }}/leis.md
+            ${{ runner.temp }}/transcricoes.md
+          if-no-files-found: ignore

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Treino com cartões | Vade Mecum</title>
+<link rel="stylesheet" href="tool-pages.css?v=c45da391">
+<style>
+  .tr-stats{display:flex;flex-wrap:wrap;gap:.6rem;margin:0 0 1rem;}
+  .tr-stat{flex:1 1 130px;background:#fff;border:1px solid var(--border-light);border-left:4px solid var(--gold);border-radius:5px;padding:.55rem .8rem;}
+  .tr-stat b{display:block;font:900 1.4rem "Playfair Display",Georgia,serif;color:var(--navy);line-height:1.1;}
+  .tr-stat span{font-size:.7rem;letter-spacing:.8px;text-transform:uppercase;color:var(--text-soft);font-weight:700;}
+  .tr-card{background:var(--navy);color:#f3e7c6;border:1px solid var(--gold);border-left:6px solid var(--gold-light);border-radius:8px;padding:1.6rem 1.8rem;min-height:260px;box-shadow:0 10px 36px rgba(13,27,42,.25);display:flex;flex-direction:column;}
+  .tr-group{font:700 .7rem "Source Serif 4",Georgia,serif;letter-spacing:1.3px;text-transform:uppercase;color:var(--gold-light);margin-bottom:.7rem;}
+  .tr-q{font:700 1.3rem/1.4 "Playfair Display",Georgia,serif;margin:0 0 1rem;}
+  .tr-a{margin-top:.3rem;padding-top:1rem;border-top:1px dashed rgba(232,184,75,.5);font-size:1.02rem;line-height:1.65;}
+  .tr-ref{margin-top:.6rem;font:600 .8rem "JetBrains Mono",monospace;color:var(--gold-light);}
+  .tr-src{margin-top:auto;padding-top:1rem;font-size:.76rem;}
+  .tr-src a{color:var(--gold-light);}
+  .tr-act{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin:1rem 0;}
+  .tr-bar{height:8px;border-radius:99px;background:var(--border-light);overflow:hidden;margin:.4rem 0 1rem;}
+  .tr-bar i{display:block;height:100%;width:0;background:var(--green);transition:width .25s;}
+  .tr-state{display:inline-block;margin-left:.5rem;font-size:.62rem;padding:.1rem .45rem;border-radius:2px;border:1px solid var(--gold-light);color:var(--gold-light);}
+  kbd{font:600 .7rem "JetBrains Mono",monospace;border:1px solid var(--border);border-radius:3px;padding:0 .3rem;background:#fff;color:var(--text);}
+</style>
+<!-- VM-HEAD -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0d1b2a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<script>(function(){try{var u=JSON.parse(localStorage.getItem("vadeMecum_ui")||"{}"),h=document.documentElement;if(u.dark)h.classList.add("vm-dark");if(u.fs&&u.fs!==100){h.classList.add("vm-zoom");h.style.setProperty("--vm-zoom",u.fs/100);}}catch(e){}})();</script>
+<link rel="stylesheet" href="fonts.css?v=042dc32b">
+<!-- /VM-HEAD -->
+</head>
+<body>
+<a class="tp-skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="tp-top">
+  <a class="tp-back" href="index.html">← Início</a>
+  <span class="tp-title">Treino com cartões</span>
+  <nav class="tp-nav" aria-label="Ferramentas">
+    <a href="treino.html" aria-current="page">Treino</a>
+    <a href="sumulas.html">Súmulas e teses</a>
+    <a href="calculadoras.html">Calculadoras</a>
+    <a href="L9099-ROTEIRO.html">Roteiro Lei 9.099</a>
+  </nav>
+</header>
+<main id="conteudo" class="tp-main">
+  <h1>Treino com <span>cartões</span></h1>
+  <p class="tp-lead">Os pontos recorrentes de cada artigo viram perguntas. Tente responder de cabeça, revele a resposta e diga como foi: o cartão volta mais cedo se você errar e mais tarde se acertar.</p>
+
+  <div class="tp-card">
+    <div class="tp-row">
+      <label class="tp-field">Matéria
+        <select id="f-subj"><option value="">Todas</option></select>
+      </label>
+      <label class="tp-field">Artigo
+        <select id="f-art"><option value="">Todos</option></select>
+      </label>
+      <label class="tp-field">Mostrar
+        <select id="f-mode">
+          <option value="due">Revisar hoje (vencidos e novos)</option>
+          <option value="new">Só cartões novos</option>
+          <option value="all">Todos, em ordem</option>
+          <option value="random">Todos, embaralhados</option>
+        </select>
+      </label>
+      <label class="tp-field">Novos por sessão
+        <select id="f-new"><option value="10">10</option><option value="20" selected>20</option><option value="50">50</option><option value="9999">Sem limite</option></select>
+      </label>
+      <button class="tp-btn" id="b-start" type="button">Começar</button>
+    </div>
+    <div class="tr-stats" id="stats" aria-live="polite"></div>
+  </div>
+
+  <section id="area" aria-live="polite" hidden>
+    <div class="tr-bar" aria-hidden="true"><i id="bar"></i></div>
+    <div class="tr-card" id="card">
+      <div class="tr-group" id="c-group"></div>
+      <p class="tr-q" id="c-q"></p>
+      <div class="tr-a" id="c-a" hidden><div id="c-a-t"></div><div class="tr-ref" id="c-ref"></div></div>
+      <div class="tr-src" id="c-src"></div>
+    </div>
+    <div class="tr-act" id="act-reveal"><button class="tp-btn" id="b-reveal" type="button">Mostrar resposta <kbd>Espaço</kbd></button></div>
+    <div class="tr-act" id="act-rate" hidden>
+      <button class="tp-btn red" data-r="errei" type="button">Errei <kbd>1</kbd></button>
+      <button class="tp-btn ghost" data-r="dificil" type="button">Difícil <kbd>2</kbd></button>
+      <button class="tp-btn green" data-r="acertei" type="button">Acertei <kbd>3</kbd></button>
+    </div>
+  </section>
+
+  <section id="end" class="tp-card" hidden></section>
+
+  <p class="tp-note">As respostas são o resumo dos "pontos recorrentes" de cada página, com a base indicada em cada item. Antes de usar em peça ou audiência, confira o texto na fonte oficial. Seu progresso fica só neste navegador e entra no backup (Backup JSON, na home).</p>
+</main>
+<!-- VM-RUNTIME -->
+<script src="study-tracker.js?v=6f753c29"></script>
+<script src="vm-data.js?v=59406e91"></script>
+<script src="search.js?v=fc82f803"></script>
+<script src="pwa.js?v=64776eec"></script>
+<script src="treino.js?v=65cff042"></script>
+<!-- /VM-RUNTIME -->
+</body>
+</html>

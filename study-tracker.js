@@ -195,6 +195,7 @@
     s.pauseDuration = _msToHHMM(s.pauseTotalMs);
     s.state = 'done';
     saveSession(s);
+    try { window.dispatchEvent(new CustomEvent('vm:session-saved')); } catch (e) { /* ignora */ }   // gatilho do backup automático
     return s;
   }
 
@@ -336,6 +337,66 @@
     return ms;
   }
 
+  // ─── Cartões de treino (revisão espaçada, método Leitner) ─────────────────────
+  // Cada cartão tem uma "caixa" 0..5. Acertar sobe a caixa e agenda a próxima revisão mais longe;
+  // errar volta à caixa 0 (revisar hoje); "difícil" mantém a caixa e repete amanhã.
+
+  const CARDS_KEY = 'vadeMecum_cards';
+  const NOTES_KEY = 'vadeMecum_notes';
+  const MARKS_KEY = 'vadeMecum_marks';
+  const BOX_DAYS = [1, 3, 7, 21, 60];                 // dias até a próxima revisão ao ACERTAR, por caixa de origem
+
+  function getCards() { return _load(CARDS_KEY) || {}; }
+
+  function _addDays(ts, d) { const x = new Date(ts); x.setDate(x.getDate() + d); return _dateStr(x.getTime()); }
+
+  /** rating: 'errei' | 'dificil' | 'acertei'. Retorna o estado novo do cartão. */
+  function rateCard(id, rating, now) {
+    now = now || _now();
+    const cards = getCards();
+    const c = cards[id] || { box: 0, seen: 0, ok: 0 };
+    c.seen++; c.last = now;
+    if (rating === 'acertei') { c.ok++; c.due = _addDays(now, BOX_DAYS[Math.min(c.box, BOX_DAYS.length - 1)]); c.box = Math.min(c.box + 1, 5); }
+    else if (rating === 'dificil') { c.due = _addDays(now, 1); }
+    else { c.box = 0; c.due = _dateStr(now); }
+    cards[id] = c;
+    _save(CARDS_KEY, cards);
+    return c;
+  }
+
+  /** Estado de um cartão hoje: 'novo' (nunca visto), 'vencido' (revisar) ou 'em dia'. */
+  function cardState(c, now) {
+    if (!c) return 'novo';
+    return c.due <= _dateStr(now || _now()) ? 'vencido' : 'em dia';
+  }
+
+  function dueCount(ids, now) {
+    const cards = getCards();
+    let novos = 0, vencidos = 0;
+    ids.forEach(id => { const s = cardState(cards[id], now); if (s === 'novo') novos++; else if (s === 'vencido') vencidos++; });
+    return { novos, vencidos };
+  }
+
+  // ─── Notas e marcadores por seção ─────────────────────────────────────────────
+  // Chave: "ARQUIVO.html#id-da-secao".
+
+  function getNotes() { return _load(NOTES_KEY) || {}; }
+  function setNote(key, text) {
+    const notes = getNotes();
+    const t = String(text || '').trim().slice(0, 2000);
+    if (t) notes[key] = { text: t, ts: _now() }; else delete notes[key];
+    _save(NOTES_KEY, notes);
+    return !!t;
+  }
+  function getMarks() { return _load(MARKS_KEY) || {}; }
+  function toggleMark(key) {
+    const marks = getMarks();
+    let on;
+    if (marks[key]) { delete marks[key]; on = false; } else { marks[key] = _now(); on = true; }
+    _save(MARKS_KEY, marks);
+    return on;
+  }
+
   // ─── Backup e restauração (arquivo JSON) ──────────────────────────────────────
   // Os dados ficam só neste navegador; o backup permite trocar de aparelho ou recuperar após limpar o cache.
 
@@ -345,7 +406,8 @@
       sessions: getSessions().filter(s => s.state === 'done'),
       completed: getCompletedArticles(),
       settings: getSettings(),
-      lastRead: getLastRead()
+      lastRead: getLastRead(),
+      cards: getCards(), notes: getNotes(), marks: getMarks()      // opcionais: backups antigos não têm
     };
   }
 
@@ -360,6 +422,7 @@
   }
 
   function getLastBackupTs() { const v = +_get(BACKUP_KEY); return v > 0 ? v : null; }
+  function markBackup() { _set(BACKUP_KEY, String(_now())); }          // usado pelo backup automático em pasta
 
   const _isNum = v => typeof v === 'number' && isFinite(v);
   const _str = (v, max) => (typeof v === 'string' ? v.slice(0, max) : '');
@@ -436,7 +499,39 @@
       const cur = getLastRead();
       if (mode === 'replace' || !cur || (+o.lastRead.ts || 0) > (+cur.ts || 0)) setLastRead(o.lastRead);
     }
-    return { ok: true, mode, sessions: { added: addedS, ignored }, completed: { added: addedC } };
+    // cartões, notas e marcadores (campos opcionais; só entra o que passa na validação)
+    const KEY_RE = /^[A-Z0-9]+-ART-\d+\.html#[\w-]{0,60}$/;
+    const _int = (v, lo, hi) => (Number.isInteger(v) && v >= lo && v <= hi);
+    let addedCards = 0, addedNotes = 0, addedMarks = 0;
+    if (o.cards && typeof o.cards === 'object' && !Array.isArray(o.cards)) {
+      const cur = mode === 'replace' ? {} : getCards();
+      Object.keys(o.cards).slice(0, 20000).forEach(k => {
+        const c = o.cards[k];
+        if (!KEY_RE.test(k) || !c || typeof c !== 'object' || !_int(c.box, 0, 5) || !/^\d{4}-\d{2}-\d{2}$/.test(c.due || '')) return;
+        const clean = { box: c.box, due: c.due, seen: _int(c.seen, 0, 1e6) ? c.seen : 0, ok: _int(c.ok, 0, 1e6) ? c.ok : 0, last: _isNum(c.last) ? c.last : 0 };
+        if (!cur[k] || (clean.last > (cur[k].last || 0))) { if (!cur[k]) addedCards++; cur[k] = clean; }
+      });
+      _save(CARDS_KEY, cur);
+    }
+    if (o.notes && typeof o.notes === 'object' && !Array.isArray(o.notes)) {
+      const cur = mode === 'replace' ? {} : getNotes();
+      Object.keys(o.notes).slice(0, 20000).forEach(k => {
+        const n = o.notes[k];
+        if (!KEY_RE.test(k) || !n || typeof n.text !== 'string' || !n.text.trim()) return;
+        const clean = { text: n.text.trim().slice(0, 2000), ts: _isNum(n.ts) ? n.ts : 0 };
+        if (!cur[k] || clean.ts > (cur[k].ts || 0)) { if (!cur[k]) addedNotes++; cur[k] = clean; }
+      });
+      _save(NOTES_KEY, cur);
+    }
+    if (o.marks && typeof o.marks === 'object' && !Array.isArray(o.marks)) {
+      const cur = mode === 'replace' ? {} : getMarks();
+      Object.keys(o.marks).slice(0, 20000).forEach(k => {
+        if (KEY_RE.test(k) && _isNum(o.marks[k]) && !cur[k]) { cur[k] = o.marks[k]; addedMarks++; }
+      });
+      _save(MARKS_KEY, cur);
+    }
+    return { ok: true, mode, sessions: { added: addedS, ignored }, completed: { added: addedC },
+             cards: { added: addedCards }, notes: { added: addedNotes }, marks: { added: addedMarks } };
   }
 
   // ─── Aggregation (for Dashboard) ──────────────────────────────────────────────
@@ -897,7 +992,8 @@
     getSummaryBySubject, getGlobalStats,
     formatTimer, msToHHMM, sessionDurations, exportCSV,
     getSettings, saveSettings, getLastRead, setLastRead, setSessionNote, activeStudyMs, studyMsToday,
-    buildBackup, downloadBackup, validateBackup, importBackup, getLastBackupTs,
+    getCards, rateCard, cardState, dueCount, getNotes, setNote, getMarks, toggleMark,
+    buildBackup, downloadBackup, validateBackup, importBackup, getLastBackupTs, markBackup,
     mountBar
   };
 

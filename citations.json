@@ -1,0 +1,2060 @@
+{
+ "entries": {
+  "STF-S-145": {
+   "label": "Súmula 145/STF",
+   "tribunal": "STF",
+   "tipo": "S",
+   "numero": 145,
+   "status": "vigente",
+   "mentions": [
+    {
+     "file": "DP-ART-17.html",
+     "sec": "flagrante",
+     "secTitle": "Flagrante Preparado × Flagrante Esperado",
+     "n": 1
+    },
+    {
+     "file": "DP-ART-17.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência e Posições dos Tribunais Superiores",
+     "n": 4
+    },
+    {
+     "file": "DP-ART-17.html",
+     "sec": "doutrina",
+     "secTitle": "Principais Posições Doutrinárias",
+     "n": 4
+    }
+   ],
+   "enunciado": "Não há crime, quando a preparação do flagrante pela polícia torna impossível a sua consumação.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2119",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-S-155": {
+   "label": "Súmula 155/STF",
+   "tribunal": "STF",
+   "tipo": "S",
+   "numero": 155,
+   "status": "vigente",
+   "mentions": [
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 1
+    }
+   ],
+   "enunciado": "É relativa a nulidade do processo criminal por falta de intimação da expedição de precatória para inquirição de testemunha.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2743",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-S-497": {
+   "label": "Súmula 497/STF",
+   "tribunal": "STF",
+   "tipo": "S",
+   "numero": 497,
+   "status": "vigente",
+   "mentions": [
+    {
+     "file": "DP-ART-4.html",
+     "sec": "",
+     "secTitle": "Art. 4° do CP — Tempo do Crime",
+     "n": 2
+    }
+   ],
+   "enunciado": "Quando se tratar de crime continuado, a prescrição regula-se pela pena imposta na sentença, não se computando o acréscimo decorrente da continuação.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2108",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-S-523": {
+   "label": "Súmula 523/STF",
+   "tribunal": "STF",
+   "tipo": "S",
+   "numero": 523,
+   "status": "vigente",
+   "mentions": [
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma de Aplicação do Art. 62 ao Caso Concreto",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "nulidades-cpp",
+     "secTitle": "Prejuízo e o Regime de Nulidades do CPP",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "casos",
+     "secTitle": "Casos Típicos e Como o Vício Costuma Ser Tratado",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 65",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "doutrina",
+     "secTitle": "Linhas Dogmáticas e Controvérsias",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 1
+    }
+   ],
+   "enunciado": "No processo penal, a falta da defesa constitui nulidade absoluta, mas a sua deficiência só o anulará se houver prova de prejuízo para o réu.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2729",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-S-603": {
+   "label": "Súmula 603/STF",
+   "tribunal": "STF",
+   "tipo": "S",
+   "numero": 603,
+   "status": "vigente",
+   "mentions": [
+    {
+     "file": "DP-ART-19.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência sobre o Art. 19 CP",
+     "n": 2
+    },
+    {
+     "file": "DP-ART-19.html",
+     "sec": "doutrina",
+     "secTitle": "Principais Posições sobre o Art. 19 CP",
+     "n": 4
+    },
+    {
+     "file": "DP-ART-19.html",
+     "sec": "prova",
+     "secTitle": "⚖️ Pontos Cobrados em Magistratura e ENAM",
+     "n": 1
+    }
+   ],
+   "enunciado": "A competência para o processo e julgamento de latrocínio é do juiz singular e não do tribunal do júri.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2683",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-S-610": {
+   "label": "Súmula 610/STF",
+   "tribunal": "STF",
+   "tipo": "S",
+   "numero": 610,
+   "status": "vigente",
+   "mentions": [
+    {
+     "file": "DP-ART-14.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência e Posições dos Tribunais Superiores",
+     "n": 2
+    },
+    {
+     "file": "DP-ART-14.html",
+     "sec": "doutrina",
+     "secTitle": "Principais Posições Doutrinárias",
+     "n": 1
+    },
+    {
+     "file": "DP-ART-14.html",
+     "sec": "prova",
+     "secTitle": "⚖️ Pontos Cobrados em Magistratura e ENAM",
+     "n": 2
+    }
+   ],
+   "enunciado": "Há crime de latrocínio, quando o homicídio se consuma, ainda que não realize o agente a subtração de bens da vítima.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2562",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-S-611": {
+   "label": "Súmula 611/STF",
+   "tribunal": "STF",
+   "tipo": "S",
+   "numero": 611,
+   "status": "vigente",
+   "mentions": [
+    {
+     "file": "DP-ART-2.html",
+     "sec": "",
+     "secTitle": "Art. 2° do CP — Lei Penal no Tempo",
+     "n": 3
+    }
+   ],
+   "enunciado": "Transitada em julgado a sentença condenatória, compete ao juízo das execuções a aplicação de lei mais benigna.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2560",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-S-654": {
+   "label": "Súmula 654/STF",
+   "tribunal": "STF",
+   "tipo": "S",
+   "numero": 654,
+   "status": "vigente",
+   "mentions": [
+    {
+     "file": "DP-ART-2.html",
+     "sec": "",
+     "secTitle": "Art. 2° do CP — Lei Penal no Tempo",
+     "n": 2
+    }
+   ],
+   "enunciado": "A garantia da irretroatividade da lei, prevista no art. 5º, XXXVI, da Constituição da República, não é invocável pela entidade estatal que a tenha editado.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2246",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-S-690": {
+   "label": "Súmula 690/STF",
+   "tribunal": "STF",
+   "tipo": "S",
+   "numero": 690,
+   "status": "vigente",
+   "mentions": [
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "recursos",
+     "secTitle": "Turma Recursal, Habeas Corpus e Conflitos",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 1
+    }
+   ],
+   "enunciado": "Compete originariamente ao Supremo Tribunal Federal o julgamento de \"habeas corpus\" contra decisão de Turma Recursal de Juizados Especiais Criminais.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=1502",
+   "verificadoEm": "2026-11-14",
+   "observacao": "A própria página oficial do STF traz jurisprudência selecionada sobre superação desta súmula (ex.: \"não mais prevalece\"). Confira antes de citar."
+  },
+  "STF-S-696": {
+   "label": "Súmula 696/STF",
+   "tribunal": "STF",
+   "tipo": "S",
+   "numero": 696,
+   "status": "vigente",
+   "mentions": [
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "sursis",
+     "secTitle": "Suspensão Condicional do Processo e Comparativo dos Institutos",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "doutrina",
+     "secTitle": "Linhas Dogmáticas e Controvérsias",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 2
+    }
+   ],
+   "enunciado": "Reunidos os pressupostos legais permissivos da suspensão condicional do processo, mas se recusando o promotor de justiça a propô-la, o juiz, dissentindo, remeterá a questão ao Procurador-Geral, aplicando-se por analogia o art. 28 do Código de Processo Penal.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2666",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-S-706": {
+   "label": "Súmula 706/STF",
+   "tribunal": "STF",
+   "tipo": "S",
+   "numero": 706,
+   "status": "vigente",
+   "mentions": [
+    {
+     "file": "L9099-ART-63.html",
+     "sec": "incompetencia",
+     "secTitle": "Exceção de Incompetência, Declinatória e Nulidade",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-63.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "nulidades-cpp",
+     "secTitle": "Prejuízo e o Regime de Nulidades do CPP",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "casos",
+     "secTitle": "Casos Típicos e Como o Vício Costuma Ser Tratado",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 1
+    }
+   ],
+   "enunciado": "É relativa a nulidade decorrente da inobservância da competência penal por prevenção.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2433",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-S-711": {
+   "label": "Súmula 711/STF",
+   "tribunal": "STF",
+   "tipo": "S",
+   "numero": 711,
+   "status": "vigente",
+   "mentions": [
+    {
+     "file": "DP-ART-1.html",
+     "sec": "tab-fluxo",
+     "secTitle": "tab-fluxo",
+     "n": 1
+    },
+    {
+     "file": "DP-ART-1.html",
+     "sec": "tab-stf",
+     "secTitle": "tab-stf",
+     "n": 1
+    },
+    {
+     "file": "DP-ART-1.html",
+     "sec": "tab-prova",
+     "secTitle": "📌 Questões de Alta Incidência — Art. 1° do CP",
+     "n": 3
+    },
+    {
+     "file": "DP-ART-2.html",
+     "sec": "",
+     "secTitle": "Art. 2° do CP — Lei Penal no Tempo",
+     "n": 1
+    },
+    {
+     "file": "DP-ART-4.html",
+     "sec": "",
+     "secTitle": "Art. 4° do CP — Tempo do Crime",
+     "n": 9
+    }
+   ],
+   "enunciado": "A lei penal mais grave aplica-se ao crime continuado ou ao crime permanente, se a sua vigência é anterior à cessação da continuidade ou da permanência.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2551",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-S-723": {
+   "label": "Súmula 723/STF",
+   "tribunal": "STF",
+   "tipo": "S",
+   "numero": 723,
+   "status": "vigente",
+   "mentions": [
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "sursis",
+     "secTitle": "Suspensão Condicional do Processo e Comparativo dos Institutos",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 61 até a Sentença",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 2
+    }
+   ],
+   "enunciado": "Não se admite a suspensão condicional do processo por crime continuado, se a soma da pena mínima da infração mais grave com o aumento mínimo de um sexto for superior a um ano.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2651",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-SV-14": {
+   "label": "Súmula Vinculante 14",
+   "tribunal": "STF",
+   "tipo": "SV",
+   "numero": 14,
+   "status": "vigente",
+   "mentions": [
+    {
+     "file": "L9099-ART-64.html",
+     "sec": "acesso",
+     "secTitle": "Acesso aos Autos, Prerrogativas e Ciência dos Atos",
+     "n": 3
+    },
+    {
+     "file": "L9099-ART-64.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 3
+    },
+    {
+     "file": "L9099-ART-64.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-64.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 3
+    }
+   ],
+   "enunciado": "É direito do defensor, no interesse do representado, ter acesso amplo aos elementos de prova que, já documentados em procedimento investigatório realizado por órgão com competência de polícia judiciária, digam respeito ao exercício do direito de defesa.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=26&sumula=1230",
+   "verificadoEm": "2026-11-14"
+  },
+  "STF-SV-35": {
+   "label": "Súmula Vinculante 35",
+   "tribunal": "STF",
+   "tipo": "SV",
+   "numero": 35,
+   "status": "vigente",
+   "mentions": [
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "audiencia-preliminar",
+     "secTitle": "Termo Circunstanciado, Composição Civil e Transação Penal",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 61 até a Sentença",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "atendimento",
+     "secTitle": "Atendimento, Conciliação e Negociação com o Cliente",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Súmulas, Teses e Enunciados",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "atendimento",
+     "secTitle": "Atendimento, Conciliação e Negociação com o Cliente",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Súmulas, Teses e Atos Normativos",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "atendimento",
+     "secTitle": "Atendimento, Conciliação e Negociação com o Cliente",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 2
+    }
+   ],
+   "enunciado": "A homologação da transação penal prevista no artigo 76 da Lei 9.099/1995 não faz coisa julgada material e, descumpridas suas cláusulas, retoma-se a situação anterior, possibilitando-se ao Ministério Público a continuidade da persecução penal mediante oferecimento de denúncia ou requisição de inquérito policial.",
+   "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=26&sumula=1953",
+   "verificadoEm": "2026-11-14"
+  },
+  "STJ-JT-69": {
+   "label": "Jurisprudência em Teses 69 (STJ)",
+   "tribunal": "STJ",
+   "tipo": "JT",
+   "numero": 69,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "natureza",
+     "secTitle": "Natureza Jurídica e Alcance do Art. 62",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "informalidade",
+     "secTitle": "Simplicidade e Informalidade",
+     "n": 4
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Súmulas, Teses e Atos Normativos",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "doutrina",
+     "secTitle": "Linhas Dogmáticas e Controvérsias",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-64.html",
+     "sec": "acesso",
+     "secTitle": "Acesso aos Autos, Prerrogativas e Ciência dos Atos",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-64.html",
+     "sec": "nulidades",
+     "secTitle": "Validade dos Atos e Nulidades Ligadas ao Art. 64",
+     "n": 5
+    },
+    {
+     "file": "L9099-ART-64.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 64",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-64.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-64.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-64.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 3
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "nulidades-cpp",
+     "secTitle": "Prejuízo e o Regime de Nulidades do CPP",
+     "n": 4
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "casos",
+     "secTitle": "Casos Típicos e Como o Vício Costuma Ser Tratado",
+     "n": 9
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "comarcas",
+     "secTitle": "Atos em Outras Comarcas: Precatória, Videoconferência e Meio Eletrônico",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 65",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "atendimento",
+     "secTitle": "Atendimento, Conciliação e Negociação com o Cliente",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 3
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "doutrina",
+     "secTitle": "Linhas Dogmáticas e Controvérsias",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 3
+    }
+   ]
+  },
+  "STJ-JT-72": {
+   "label": "Jurisprudência em Teses 72 (STJ)",
+   "tribunal": "STJ",
+   "tipo": "JT",
+   "numero": 72,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "territorio",
+     "secTitle": "Foro, Organização Judiciária e Atos Fora da Sede",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "conexao",
+     "secTitle": "Conexão e Continência",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "remessa",
+     "secTitle": "Remessa ao Juízo Comum, Desclassificação e Incompetência",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "concurso",
+     "secTitle": "Concurso de Infrações e o Limite de 2 Anos",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "exclusoes",
+     "secTitle": "Exclusões, Justiça Federal, Militar e Leis Especiais",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "recursos",
+     "secTitle": "Turma Recursal, Habeas Corpus e Conflitos",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "atendimento",
+     "secTitle": "Atendimento, Conciliação e Negociação com o Cliente",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Súmulas, Teses e Enunciados",
+     "n": 5
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "doutrina",
+     "secTitle": "Linhas Dogmáticas e Controvérsias",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 3
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-63.html",
+     "sec": "criterio",
+     "secTitle": "Como Definir o Lugar da Infração",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-63.html",
+     "sec": "plurilocais",
+     "secTitle": "Infrações Plurilocais, Internet e Mensagens",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-63.html",
+     "sec": "fora-sede",
+     "secTitle": "Atos Fora da Sede, Precatória e Videoconferência",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-63.html",
+     "sec": "incompetencia",
+     "secTitle": "Exceção de Incompetência, Declinatória e Nulidade",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-63.html",
+     "sec": "conflitos",
+     "secTitle": "Conflitos de Competência Territorial",
+     "n": 3
+    },
+    {
+     "file": "L9099-ART-63.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 63",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-63.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 3
+    },
+    {
+     "file": "L9099-ART-63.html",
+     "sec": "doutrina",
+     "secTitle": "Linhas Dogmáticas e Controvérsias",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-63.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 4
+    },
+    {
+     "file": "L9099-ART-63.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 4
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "casos",
+     "secTitle": "Casos Típicos e Como o Vício Costuma Ser Tratado",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 2
+    }
+   ]
+  },
+  "STJ-JT-93": {
+   "label": "Jurisprudência em Teses 93 (STJ)",
+   "tribunal": "STJ",
+   "tipo": "JT",
+   "numero": 93,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "remessa",
+     "secTitle": "Remessa ao Juízo Comum, Desclassificação e Incompetência",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "recursos",
+     "secTitle": "Turma Recursal, Habeas Corpus e Conflitos",
+     "n": 3
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo de Competência (Art. 60)",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "atendimento",
+     "secTitle": "Atendimento, Conciliação e Negociação com o Cliente",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Súmulas, Teses e Enunciados",
+     "n": 4
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 3
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "competencia",
+     "secTitle": "Competência e Deslocamentos",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "audiencia-preliminar",
+     "secTitle": "Termo Circunstanciado, Composição Civil e Transação Penal",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "instrucao",
+     "secTitle": "Denúncia Oral, Audiência de Instrução e Julgamento e Recursos",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "sursis",
+     "secTitle": "Suspensão Condicional do Processo e Comparativo dos Institutos",
+     "n": 3
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "prazos",
+     "secTitle": "Prazos, Decadência e Prescrição",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "atendimento",
+     "secTitle": "Atendimento, Conciliação e Negociação com o Cliente",
+     "n": 3
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Súmulas, Teses e Enunciados",
+     "n": 4
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "doutrina",
+     "secTitle": "Linhas Dogmáticas e Controvérsias",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "informalidade",
+     "secTitle": "Simplicidade e Informalidade",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "celeridade",
+     "secTitle": "Celeridade e Prazos",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "reparacao",
+     "secTitle": "Reparação dos Danos Sofridos pela Vítima",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "atendimento",
+     "secTitle": "Atendimento, Conciliação e Negociação com o Cliente",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Súmulas, Teses e Atos Normativos",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-63.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-63.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-64.html",
+     "sec": "publicidade",
+     "secTitle": "Publicidade dos Atos e Hipóteses de Restrição",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-64.html",
+     "sec": "acesso",
+     "secTitle": "Acesso aos Autos, Prerrogativas e Ciência dos Atos",
+     "n": 3
+    },
+    {
+     "file": "L9099-ART-64.html",
+     "sec": "nulidades",
+     "secTitle": "Validade dos Atos e Nulidades Ligadas ao Art. 64",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-64.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 64",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-64.html",
+     "sec": "atendimento",
+     "secTitle": "Atendimento, Conciliação e Negociação com o Cliente",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-64.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-64.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-64.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "casos",
+     "secTitle": "Casos Típicos e Como o Vício Costuma Ser Tratado",
+     "n": 3
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 65",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "atendimento",
+     "secTitle": "Atendimento, Conciliação e Negociação com o Cliente",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 4
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 2
+    }
+   ]
+  },
+  "STJ-JT-96": {
+   "label": "Jurisprudência em Teses 96 (STJ)",
+   "tribunal": "STJ",
+   "tipo": "JT",
+   "numero": 96,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "concurso",
+     "secTitle": "Concurso de Infrações e o Limite de 2 Anos",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "exclusoes",
+     "secTitle": "Exclusões, Justiça Federal, Militar e Leis Especiais",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo de Competência (Art. 60)",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Súmulas, Teses e Enunciados",
+     "n": 3
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "doutrina",
+     "secTitle": "Linhas Dogmáticas e Controvérsias",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 3
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "texto-legal",
+     "secTitle": "Texto Legal Decomposto",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "criterio",
+     "secTitle": "Como Aplicar o Limite de 2 Anos",
+     "n": 3
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "tipos",
+     "secTitle": "Quadro de Infrações Frequentes e o Art. 61",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "exclusoes",
+     "secTitle": "Quando a Lei 9.099 Não se Aplica Mesmo com Pena até 2 Anos",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "competencia",
+     "secTitle": "Competência e Deslocamentos",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "audiencia-preliminar",
+     "secTitle": "Termo Circunstanciado, Composição Civil e Transação Penal",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "sursis",
+     "secTitle": "Suspensão Condicional do Processo e Comparativo dos Institutos",
+     "n": 6
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 61 até a Sentença",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "atendimento",
+     "secTitle": "Atendimento, Conciliação e Negociação com o Cliente",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Súmulas, Teses e Enunciados",
+     "n": 9
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "doutrina",
+     "secTitle": "Linhas Dogmáticas e Controvérsias",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 4
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "celeridade",
+     "secTitle": "Celeridade e Prazos",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "pena-alternativa",
+     "secTitle": "Aplicação de Pena Não Privativa de Liberdade",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Súmulas, Teses e Atos Normativos",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "doutrina",
+     "secTitle": "Linhas Dogmáticas e Controvérsias",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-JT-209": {
+   "label": "Jurisprudência em Teses 209 (STJ)",
+   "tribunal": "STJ",
+   "tipo": "JT",
+   "numero": 209,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "exclusoes",
+     "secTitle": "Quando a Lei 9.099 Não se Aplica Mesmo com Pena até 2 Anos",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Súmulas, Teses e Enunciados",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "pena-alternativa",
+     "secTitle": "Aplicação de Pena Não Privativa de Liberdade",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-JT-280": {
+   "label": "Jurisprudência em Teses 280 (STJ)",
+   "tribunal": "STJ",
+   "tipo": "JT",
+   "numero": 280,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "L9099-ART-63.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-64.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-S-7": {
+   "label": "Súmula 7/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 7,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "DP-ART-25.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência Essencial para Magistratura",
+     "n": 1
+    },
+    {
+     "file": "DP-ART-28.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência Essencial para Magistratura",
+     "n": 2
+    }
+   ]
+  },
+  "STJ-S-17": {
+   "label": "Súmula 17/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 17,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "DP-ART-1.html",
+     "sec": "tab-stj",
+     "secTitle": "tab-stj",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-S-38": {
+   "label": "Súmula 38/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 38,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "conexao",
+     "secTitle": "Conexão e Continência",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo de Competência (Art. 60)",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "atendimento",
+     "secTitle": "Atendimento, Conciliação e Negociação com o Cliente",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-S-74": {
+   "label": "Súmula 74/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 74,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "DP-ART-27.html",
+     "sec": "idade-fato",
+     "secTitle": "Idade na Data do Fato e Prova Documental",
+     "n": 1
+    },
+    {
+     "file": "DP-ART-27.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 27 CP",
+     "n": 1
+    },
+    {
+     "file": "DP-ART-27.html",
+     "sec": "prova",
+     "secTitle": "🎓 Pontos que Sempre Caem em Magistratura / ENAM",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-S-122": {
+   "label": "Súmula 122/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 122,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "exclusoes",
+     "secTitle": "Exclusões, Justiça Federal, Militar e Leis Especiais",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo de Competência (Art. 60)",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Súmulas, Teses e Enunciados",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-S-151": {
+   "label": "Súmula 151/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 151,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "DP-ART-6.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência e Teses dos Tribunais Superiores",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-S-235": {
+   "label": "Súmula 235/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 235,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "conexao",
+     "secTitle": "Conexão e Continência",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-S-243": {
+   "label": "Súmula 243/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 243,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "DP-ART-12.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência e Posições dos Tribunais Superiores",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "tipos",
+     "secTitle": "Quadro de Infrações Frequentes e o Art. 61",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "sursis",
+     "secTitle": "Suspensão Condicional do Processo e Comparativo dos Institutos",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 61 até a Sentença",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 2
+    }
+   ]
+  },
+  "STJ-S-273": {
+   "label": "Súmula 273/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 273,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "L9099-ART-65.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-S-337": {
+   "label": "Súmula 337/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 337,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "concurso",
+     "secTitle": "Concurso de Infrações e o Limite de 2 Anos",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "sursis",
+     "secTitle": "Suspensão Condicional do Processo e Comparativo dos Institutos",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 61 até a Sentença",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 2
+    }
+   ]
+  },
+  "STJ-S-338": {
+   "label": "Súmula 338/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 338,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "DP-ART-27.html",
+     "sec": "sinase",
+     "secTitle": "SINASE, Maioridade Superveniente e Limite de 21 anos",
+     "n": 1
+    },
+    {
+     "file": "DP-ART-27.html",
+     "sec": "prova",
+     "secTitle": "🎓 Pontos que Sempre Caem em Magistratura / ENAM",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-S-438": {
+   "label": "Súmula 438/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 438,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "prazos",
+     "secTitle": "Prazos, Decadência e Prescrição",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Súmulas, Teses e Enunciados",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "celeridade",
+     "secTitle": "Celeridade e Prazos",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "doutrina",
+     "secTitle": "Linhas Dogmáticas e Controvérsias",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-S-492": {
+   "label": "Súmula 492/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 492,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "DP-ART-27.html",
+     "sec": "medidas",
+     "secTitle": "Medidas Protetivas e Socioeducativas",
+     "n": 1
+    },
+    {
+     "file": "DP-ART-27.html",
+     "sec": "prova",
+     "secTitle": "🎓 Pontos que Sempre Caem em Magistratura / ENAM",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-S-501": {
+   "label": "Súmula 501/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 501,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "DP-ART-2.html",
+     "sec": "",
+     "secTitle": "Art. 2° do CP — Lei Penal no Tempo",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-S-502": {
+   "label": "Súmula 502/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 502,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "DP-ART-1.html",
+     "sec": "tab-stj",
+     "secTitle": "tab-stj",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-S-527": {
+   "label": "Súmula 527/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 527,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "DP-ART-26.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 26 CP",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-S-528": {
+   "label": "Súmula 528/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 528,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "DP-ART-6.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência e Teses dos Tribunais Superiores",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-S-536": {
+   "label": "Súmula 536/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 536,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "DP-ART-12.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência e Posições dos Tribunais Superiores",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-60.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "exclusoes",
+     "secTitle": "Quando a Lei 9.099 Não se Aplica Mesmo com Pena até 2 Anos",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "sursis",
+     "secTitle": "Suspensão Condicional do Processo e Comparativo dos Institutos",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 61 até a Sentença",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Súmulas, Teses e Enunciados",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-64.html",
+     "sec": "publicidade",
+     "secTitle": "Publicidade dos Atos e Hipóteses de Restrição",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-64.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-64.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-S-542": {
+   "label": "Súmula 542/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 542,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "exclusoes",
+     "secTitle": "Quando a Lei 9.099 Não se Aplica Mesmo com Pena até 2 Anos",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-S-567": {
+   "label": "Súmula 567/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 567,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "DP-ART-14.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência e Posições dos Tribunais Superiores",
+     "n": 2
+    },
+    {
+     "file": "DP-ART-17.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência e Posições dos Tribunais Superiores",
+     "n": 2
+    },
+    {
+     "file": "DP-ART-17.html",
+     "sec": "doutrina",
+     "secTitle": "Principais Posições Doutrinárias",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-S-582": {
+   "label": "Súmula 582/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 582,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "DP-ART-14.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência e Posições dos Tribunais Superiores",
+     "n": 2
+    },
+    {
+     "file": "DP-ART-14.html",
+     "sec": "doutrina",
+     "secTitle": "Principais Posições Doutrinárias",
+     "n": 1
+    },
+    {
+     "file": "DP-ART-14.html",
+     "sec": "prova",
+     "secTitle": "⚖️ Pontos Cobrados em Magistratura e ENAM",
+     "n": 2
+    }
+   ]
+  },
+  "STJ-S-588": {
+   "label": "Súmula 588/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 588,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "exclusoes",
+     "secTitle": "Quando a Lei 9.099 Não se Aplica Mesmo com Pena até 2 Anos",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-62.html",
+     "sec": "pena-alternativa",
+     "secTitle": "Aplicação de Pena Não Privativa de Liberdade",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-S-589": {
+   "label": "Súmula 589/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 589,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "exclusoes",
+     "secTitle": "Quando a Lei 9.099 Não se Aplica Mesmo com Pena até 2 Anos",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-S-600": {
+   "label": "Súmula 600/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 600,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "L9099-ART-61.html",
+     "sec": "exclusoes",
+     "secTitle": "Quando a Lei 9.099 Não se Aplica Mesmo com Pena até 2 Anos",
+     "n": 1
+    }
+   ]
+  },
+  "STJ-S-605": {
+   "label": "Súmula 605/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 605,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "DP-ART-27.html",
+     "sec": "crianca-adolescente",
+     "secTitle": "Criança × Adolescente no ECA",
+     "n": 1
+    },
+    {
+     "file": "DP-ART-27.html",
+     "sec": "sinase",
+     "secTitle": "SINASE, Maioridade Superveniente e Limite de 21 anos",
+     "n": 2
+    },
+    {
+     "file": "DP-ART-27.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 27 CP",
+     "n": 1
+    },
+    {
+     "file": "DP-ART-27.html",
+     "sec": "doutrina",
+     "secTitle": "Linhas Dogmáticas Seguras",
+     "n": 1
+    },
+    {
+     "file": "DP-ART-27.html",
+     "sec": "prova",
+     "secTitle": "🎓 Pontos que Sempre Caem em Magistratura / ENAM",
+     "n": 1
+    }
+   ]
+  },
+  "TST-S-51": {
+   "label": "Súmula 51/TST",
+   "tribunal": "TST",
+   "tipo": "S",
+   "numero": 51,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "CLT-ART-2.html",
+     "sec": "poder-diretivo",
+     "secTitle": "Poder Diretivo (de Comando) — Manifestações e Limites",
+     "n": 3
+    },
+    {
+     "file": "CLT-ART-2.html",
+     "sec": "prova",
+     "secTitle": "🎓 Pontos que Sempre Caem em Magistratura / ENAM",
+     "n": 4
+    }
+   ]
+  },
+  "TST-S-77": {
+   "label": "Súmula 77/TST",
+   "tribunal": "TST",
+   "tipo": "S",
+   "numero": 77,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "CLT-ART-2.html",
+     "sec": "poder-diretivo",
+     "secTitle": "Poder Diretivo (de Comando) — Manifestações e Limites",
+     "n": 1
+    }
+   ]
+  },
+  "TST-S-129": {
+   "label": "Súmula 129/TST",
+   "tribunal": "TST",
+   "tipo": "S",
+   "numero": 129,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "CLT-ART-2.html",
+     "sec": "grupo-economico",
+     "secTitle": "Grupo Econômico Trabalhista — Conceito e Responsabilidade Solidária",
+     "n": 1
+    },
+    {
+     "file": "CLT-ART-2.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 2º CLT",
+     "n": 1
+    },
+    {
+     "file": "CLT-ART-2.html",
+     "sec": "prova",
+     "secTitle": "🎓 Pontos que Sempre Caem em Magistratura / ENAM",
+     "n": 2
+    }
+   ]
+  },
+  "TST-S-207": {
+   "label": "Súmula 207/TST",
+   "tribunal": "TST",
+   "tipo": "S",
+   "numero": 207,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "CLT-ART-1.html",
+     "sec": "juris",
+     "secTitle": "Jurisprudência, Teses e OJs",
+     "n": 1
+    }
+   ]
+  },
+  "TST-S-212": {
+   "label": "Súmula 212/TST",
+   "tribunal": "TST",
+   "tipo": "S",
+   "numero": 212,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "CLT-ART-3.html",
+     "sec": "onus-prova",
+     "secTitle": "Ônus da Prova no Reconhecimento do Vínculo Empregatício",
+     "n": 4
+    },
+    {
+     "file": "CLT-ART-3.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 3º CLT",
+     "n": 1
+    },
+    {
+     "file": "CLT-ART-3.html",
+     "sec": "doutrina",
+     "secTitle": "Linhas Dogmáticas Seguras para Magistratura",
+     "n": 1
+    }
+   ]
+  },
+  "TST-S-265": {
+   "label": "Súmula 265/TST",
+   "tribunal": "TST",
+   "tipo": "S",
+   "numero": 265,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "CLT-ART-2.html",
+     "sec": "poder-diretivo",
+     "secTitle": "Poder Diretivo (de Comando) — Manifestações e Limites",
+     "n": 1
+    }
+   ]
+  },
+  "TST-S-331": {
+   "label": "Súmula 331/TST",
+   "tribunal": "TST",
+   "tipo": "S",
+   "numero": 331,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "CLT-ART-2.html",
+     "sec": "prova",
+     "secTitle": "🎓 Pontos que Sempre Caem em Magistratura / ENAM",
+     "n": 1
+    },
+    {
+     "file": "CLT-ART-3.html",
+     "sec": "figura-intermediaria",
+     "secTitle": "Trabalhadores em Zona Cinzenta — Distinções Essenciais",
+     "n": 1
+    },
+    {
+     "file": "CLT-ART-3.html",
+     "sec": "doutrina",
+     "secTitle": "Linhas Dogmáticas Seguras para Magistratura",
+     "n": 1
+    }
+   ]
+  },
+  "TST-S-363": {
+   "label": "Súmula 363/TST",
+   "tribunal": "TST",
+   "tipo": "S",
+   "numero": 363,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "CLT-ART-3.html",
+     "sec": "onerosidade",
+     "secTitle": "Onerosidade — Salário e Remuneração",
+     "n": 1
+    },
+    {
+     "file": "CLT-ART-3.html",
+     "sec": "figura-intermediaria",
+     "secTitle": "Trabalhadores em Zona Cinzenta — Distinções Essenciais",
+     "n": 2
+    },
+    {
+     "file": "CLT-ART-3.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência Essencial para Magistratura",
+     "n": 2
+    },
+    {
+     "file": "CLT-ART-3.html",
+     "sec": "doutrina",
+     "secTitle": "Linhas Dogmáticas Seguras para Magistratura",
+     "n": 1
+    },
+    {
+     "file": "CLT-ART-3.html",
+     "sec": "prova",
+     "secTitle": "🎓 Pontos que Sempre Caem em Magistratura / ENAM",
+     "n": 1
+    },
+    {
+     "file": "CLT-ART-3.html",
+     "sec": "fontes",
+     "secTitle": "Fontes Normativas e Jurisprudenciais Utilizadas",
+     "n": 1
+    }
+   ]
+  }
+ }
+}

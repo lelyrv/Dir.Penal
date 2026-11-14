@@ -915,6 +915,16 @@
    "sidebarSubtitle": "JUIZADOS ESPECIAIS CRIMINAIS",
    "groups": [
     {
+     "title": "Roteiro do procedimento",
+     "items": [
+      {
+       "file": "L9099-ROTEIRO.html",
+       "label": "Roteiro do procedimento (arts. 66 a 92)",
+       "kind": "ferramenta"
+      }
+     ]
+    },
+    {
      "title": "Disposições Gerais — Juizados Criminais (Arts. 60–65)",
      "items": [
       {

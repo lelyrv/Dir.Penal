@@ -1,0 +1,16 @@
+{
+  "_aviso": "Padrões que reconhecem citações de súmulas e teses no texto. Lidos por tools/extras.py (Python) e por article-tools.js (navegador): mantenha só expressões simples, compatíveis com os dois. Cada padrão tem DOIS grupos de captura quando o tribunal vem do texto (número e tribunal) ou UM quando o tribunal é fixo.",
+  "patterns": [
+    { "id": "sv", "regex": "S[úu]mula\\s+Vinculante\\s+(\\d{1,3})", "tribunal": "STF", "tipo": "SV" },
+    { "id": "sv-abrev", "regex": "\\bSV\\s+(\\d{1,3})\\b", "tribunal": "STF", "tipo": "SV" },
+    { "id": "sumula-barra", "regex": "S[úu]mula\\s+(\\d{1,4})\\s*/\\s*(STF|STJ|TST|TSE)", "tipo": "S", "tribunalGroup": 2 },
+    { "id": "sumula-de", "regex": "S[úu]mula\\s+(\\d{1,4})\\s+(?:do|da)\\s+(STF|STJ|TST|TSE)", "tipo": "S", "tribunalGroup": 2 },
+    { "id": "jt", "regex": "\\bJT\\s+(\\d{1,3})\\b", "tribunal": "STJ", "tipo": "JT" },
+    { "id": "jt-extenso", "regex": "Jurisprud[êe]ncia\\s+em\\s+Teses\\s+(?:n[º°.]?\\s*)?(\\d{1,3})", "tribunal": "STJ", "tipo": "JT" }
+  ],
+  "tipos": {
+    "S": "Súmula",
+    "SV": "Súmula Vinculante",
+    "JT": "Jurisprudência em Teses (edição)"
+  }
+}

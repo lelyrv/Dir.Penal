@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Súmulas e teses citadas | Vade Mecum</title>
+<link rel="stylesheet" href="tool-pages.css?v=c45da391">
+<style>
+  .sm-item{background:#fff;border:1px solid var(--border-light);border-left:5px solid var(--navy);border-radius:6px;padding:.9rem 1.1rem;margin:0 0 .8rem;box-shadow:0 3px 16px rgba(13,27,42,.07);scroll-margin-top:70px;}
+  .sm-item.cancelada,.sm-item.superada,.sm-item.alterada{border-left-color:var(--red);}
+  .sm-item.nao-verificado{border-left-color:var(--gold);}
+  .sm-item.hit{outline:3px solid var(--gold-light);}
+  .sm-head{display:flex;flex-wrap:wrap;gap:.5rem .8rem;align-items:center;}
+  .sm-head h3{margin:0;font:700 1.02rem "Playfair Display",Georgia,serif;color:var(--navy);}
+  .sm-enun{margin:.5rem 0;font-style:italic;}
+  .sm-obs{margin:.4rem 0;font-size:.82rem;color:#5a0000;background:#fdf0f0;border-left:3px solid var(--red);padding:.3rem .6rem;border-radius:3px;}
+  .sm-men{margin:.4rem 0 0;padding-left:1.1rem;font-size:.82rem;}
+  .sm-men a{color:var(--blue);}
+  .sm-count{font-size:.8rem;color:var(--text-soft);margin:.5rem 0 1rem;}
+</style>
+<!-- VM-HEAD -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0d1b2a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<script>(function(){try{var u=JSON.parse(localStorage.getItem("vadeMecum_ui")||"{}"),h=document.documentElement;if(u.dark)h.classList.add("vm-dark");if(u.fs&&u.fs!==100){h.classList.add("vm-zoom");h.style.setProperty("--vm-zoom",u.fs/100);}}catch(e){}})();</script>
+<link rel="stylesheet" href="fonts.css?v=042dc32b">
+<!-- /VM-HEAD -->
+</head>
+<body>
+<a class="tp-skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="tp-top">
+  <a class="tp-back" href="index.html">← Início</a>
+  <span class="tp-title">Súmulas e teses</span>
+  <nav class="tp-nav" aria-label="Ferramentas">
+    <a href="treino.html">Treino</a>
+    <a href="sumulas.html" aria-current="page">Súmulas e teses</a>
+    <a href="calculadoras.html">Calculadoras</a>
+    <a href="L9099-ROTEIRO.html">Roteiro Lei 9.099</a>
+  </nav>
+</header>
+<main id="conteudo" class="tp-main">
+  <h1>Súmulas e teses <span>citadas</span></h1>
+  <p class="tp-lead">Todos os precedentes citados nas páginas do site, com o status e o enunciado do registro central e a lista de onde cada um aparece. Quando um precedente muda, o ajuste é feito uma vez no registro e vale em todos os artigos.</p>
+
+  <div class="tp-card">
+    <div class="tp-row">
+      <label class="tp-field">Buscar
+        <input type="search" id="f-q" placeholder="número ou palavra do enunciado" autocomplete="off">
+      </label>
+      <label class="tp-field">Tribunal
+        <select id="f-trib"><option value="">Todos</option></select>
+      </label>
+      <label class="tp-field">Situação
+        <select id="f-status">
+          <option value="">Todas</option>
+          <option value="vigente">Vigente (verificada)</option>
+          <option value="problema">Cancelada, superada ou alterada</option>
+          <option value="nao-verificado">Enunciado não cadastrado</option>
+        </select>
+      </label>
+    </div>
+    <div class="sm-count" id="count" aria-live="polite"></div>
+  </div>
+
+  <div id="lista"></div>
+
+  <p class="tp-note">"Enunciado não cadastrado" significa que o site ainda não tem o texto desse precedente lido na fonte oficial: confira no tribunal antes de citar. Os do STF são lidos da página oficial do Supremo; os demais podem ser cadastrados à mão em <code>registry/precedentes.json</code> (veja o README).</p>
+</main>
+<!-- VM-RUNTIME -->
+<script src="study-tracker.js?v=6f753c29"></script>
+<script src="vm-data.js?v=59406e91"></script>
+<script src="search.js?v=fc82f803"></script>
+<script src="pwa.js?v=64776eec"></script>
+<script src="sumulas.js?v=f2efb342"></script>
+<!-- /VM-RUNTIME -->
+</body>
+</html>

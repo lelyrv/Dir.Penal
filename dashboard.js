@@ -53,6 +53,9 @@
     '.vde-card li a{color:#f3e7c6;text-decoration:none;}.vde-card li a:hover{text-decoration:underline;}' +
     '.vde-card li span{color:#fc8181;margin-left:.4rem;white-space:nowrap;}' +
     '.vde-row{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;margin-top:.45rem;}' +
+    '.vde-link{display:inline-block;text-decoration:none;font:700 .72rem "Source Serif 4",Georgia,serif;padding:.32rem .65rem;border-radius:3px;border:1px solid rgba(232,184,75,.7);color:#e8b84b;}' +
+    '.vde-link:hover{background:#c8960c;color:#0d1b2a;}' +
+    '.vde-auto{margin-top:.6rem;padding-top:.5rem;border-top:1px dashed rgba(255,255,255,.18);}' +
     '.td-note{max-width:230px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;cursor:pointer;color:rgba(255,255,255,.8);}' +
     '.td-note:hover{text-decoration:underline;}' +
     '.vm-modal{position:fixed;inset:0;z-index:2147483646;display:flex;align-items:center;justify-content:center;background:rgba(7,14,22,.65);padding:12px;}' +
@@ -140,7 +143,8 @@
         if (!mode) return;
         var r = T.importBackup(obj, mode);
         if (!r.ok) { toast(r.error); return; }
-        toast('Backup restaurado: ' + r.sessions.added + ' sessões e ' + r.completed.added + ' artigos adicionados' +
+        toast('Backup restaurado: ' + r.sessions.added + ' sessões, ' + r.completed.added + ' artigos, ' + (r.cards ? r.cards.added : 0) + ' cartões, ' +
+          (r.notes ? r.notes.added : 0) + ' notas e ' + (r.marks ? r.marks.added : 0) + ' marcadores adicionados' +
           (r.sessions.ignored ? ' (' + r.sessions.ignored + ' sessões inválidas ignoradas)' : '') + '.');
         refreshAll();
       });
@@ -252,18 +256,118 @@
     });
   }
 
+  // ── Treino, marcadores/notas, fila de redação e backup automático em pasta ──
+  var trainData = null, queueData = null;
+
+  function mountMore() {
+    if (ui.more || !ui.extra) return;
+    var d = ui.more = document.createElement('div');
+    d.className = 'vm-db-extra';
+    d.innerHTML =
+      '<div class="vde-card" id="vde-train"><h4>Treino com cartões</h4><div class="vde-txt"></div><div class="vde-row"><a class="vde-link" href="treino.html">Abrir treino</a></div></div>' +
+      '<div class="vde-card" id="vde-marks"><h4>Marcadores e notas</h4><div class="vde-txt"></div><ul></ul></div>' +
+      '<div class="vde-card" id="vde-queue"><h4>Próximos artigos a escrever</h4><div class="vde-txt"></div><ul></ul></div>';
+    ui.extra.parentNode.insertBefore(d, ui.extra.nextSibling);
+    var bk = ui.extra.querySelector('#vde-bk');
+    ui.auto = document.createElement('div');
+    ui.auto.className = 'vde-auto';
+    bk.appendChild(ui.auto);
+  }
+
+  function renderAuto() {
+    if (!ui.auto) return;
+    var box = ui.auto;
+    if (!window.VMAutoBackup) { box.textContent = ''; return; }
+    VMAutoBackup.status().then(function(s) {
+      box.innerHTML = '';
+      function line(t) { var p = document.createElement('div'); p.className = 'vde-txt'; p.style.marginTop = '.5rem'; p.textContent = t; box.appendChild(p); return p; }
+      function btn(label, fn) { var b = document.createElement('button'); b.type = 'button'; b.textContent = label; b.addEventListener('click', fn); var r = box.querySelector('.vde-row') || (function() { var x = document.createElement('div'); x.className = 'vde-row'; box.appendChild(x); return x; })(); r.appendChild(b); }
+      if (!s.supported) { line('Backup automático em pasta: seu navegador não oferece (use o Chrome ou o Edge no computador). Vale o botão Backup (JSON) e o lembrete semanal.'); return; }
+      if (!s.enabled) {
+        line('Backup automático: escolha uma pasta e o arquivo é regravado depois de cada sessão de estudo. Nada é apagado.');
+        btn('Escolher pasta de backup', function() {
+          VMAutoBackup.choose().then(function(r) { toast(r.ok ? 'Backup automático ativado. Primeiro arquivo gravado na pasta.' : (r.why === 'cancelado' ? 'Nenhuma pasta escolhida.' : 'Não foi possível ativar o backup automático.')); renderMore(); renderExtras(); });
+        });
+        return;
+      }
+      line('Backup automático em "' + (s.folder || 'pasta escolhida') + '"' + (s.lastTs ? ' · último ' + when(s.lastTs) : ' · ainda sem arquivo') + '.');
+      if (s.permission !== 'granted') {
+        line('O navegador pediu nova autorização para a pasta.');
+        btn('Autorizar de novo', function() { VMAutoBackup.run('manual', { ask: true }).then(function(r) { toast(r.ok ? 'Backup gravado.' : 'Não foi possível gravar na pasta.'); renderMore(); }); });
+      } else {
+        btn('Gravar agora', function() { VMAutoBackup.run('manual').then(function(r) { toast(r.ok ? 'Backup gravado na pasta.' : 'Não foi possível gravar na pasta.'); renderMore(); }); });
+      }
+      btn('Desativar', function() { VMAutoBackup.disable().then(function() { toast('Backup automático desativado.'); renderMore(); }); });
+    });
+  }
+
+  function renderMore() {
+    if (!ui.more) return;
+    renderAuto();
+    var d = ui.more;
+    // treino
+    var tr = d.querySelector('#vde-train .vde-txt');
+    if (!trainData) tr.textContent = 'Carregando os cartões…';
+    else {
+      var ids = trainData.cards.map(function(c) { return c.id; }), c = T.dueCount(ids);
+      tr.textContent = ids.length + ' cartões: ' + c.novos + ' novos e ' + c.vencidos + ' para revisar hoje. Os pontos recorrentes dos artigos viram perguntas; quem erra revê mais cedo.';
+      d.querySelector('#vde-train .vde-link').textContent = c.vencidos ? 'Revisar agora (' + c.vencidos + ')' : 'Abrir treino';
+    }
+    // marcadores e notas
+    var marks = T.getMarks(), notes = T.getNotes(), keys = {};
+    Object.keys(marks).forEach(function(k) { keys[k] = Math.max(keys[k] || 0, marks[k]); });
+    Object.keys(notes).forEach(function(k) { keys[k] = Math.max(keys[k] || 0, notes[k].ts || 0); });
+    var list = Object.keys(keys).sort(function(a, b) { return keys[b] - keys[a]; });
+    var mk = d.querySelector('#vde-marks');
+    mk.querySelector('.vde-txt').textContent = list.length
+      ? list.length + (list.length === 1 ? ' seção marcada ou anotada.' : ' seções marcadas ou anotadas.')
+      : 'Nenhum marcador ainda. Use os botões Marcar e Nota no cabeçalho de cada seção dos artigos.';
+    var ul = mk.querySelector('ul'); ul.innerHTML = '';
+    list.slice(0, 12).forEach(function(k) {
+      var f = k.split('#')[0], sec = k.split('#')[1] || '';
+      var a = manifest && manifest.articles[f];
+      var secT = a && a.sections.filter(function(s) { return s.id === sec; })[0];
+      var li = document.createElement('li');
+      var link = document.createElement('a'); link.href = openUrl(f, sec ? '&sec=' + encodeURIComponent(sec) : '');
+      link.textContent = (a ? a.label : f) + (secT ? ' · ' + secT.title : '');
+      li.appendChild(link);
+      if (marks[k]) { var m = document.createElement('span'); m.style.color = '#e8b84b'; m.textContent = 'marcado'; li.appendChild(m); }
+      if (notes[k]) { var n = document.createElement('div'); n.style.cssText = 'font-style:italic;font-size:.72rem;opacity:.85'; n.textContent = notes[k].text.slice(0, 140) + (notes[k].text.length > 140 ? '…' : ''); li.appendChild(n); }
+      ul.appendChild(li);
+    });
+    // fila de redação
+    var q = d.querySelector('#vde-queue');
+    if (!queueData) { q.querySelector('.vde-txt').textContent = 'Carregando…'; }
+    else {
+      var items = queueData.items.slice(0, 8);
+      q.querySelector('.vde-txt').textContent = queueData.items.length + ' artigos no catálogo ainda sem fluxograma. Ordem: prioridade definida em registry/prioridades.json e, depois, quantas vezes a página já escrita da mesma matéria os cita (indício: o número pode se referir a outra lei).';
+      var ul2 = q.querySelector('ul'); ul2.innerHTML = '';
+      items.forEach(function(x) {
+        var li = document.createElement('li');
+        li.appendChild(document.createTextNode(x.label));
+        var s = document.createElement('span');
+        s.textContent = (x.peso ? 'prioridade ' + x.peso + ' · ' : '') + (x.mentions ? 'citado ' + x.mentions + 'x' : 'sem citações');
+        s.style.color = '#e8b84b';
+        li.appendChild(s); ul2.appendChild(li);
+      });
+    }
+  }
+
   function refreshAll() {
     if (window.dbRefresh) window.dbRefresh();
     if (window.updateProgressBars) window.updateProgressBars();
-    renderContinue(); renderExtras();
+    renderContinue(); renderExtras(); renderMore();
   }
 
   function start() {
-    mountContinue(); mountBackup(); mountExtras(); mountNotes();
-    renderExtras();
-    VMData.manifest().then(function(m) { manifest = m; renderContinue(); renderExtras(); });
-    window.addEventListener('storage', function() { renderContinue(); renderExtras(); });
-    setInterval(renderExtras, 30000);
+    mountContinue(); mountBackup(); mountExtras(); mountNotes(); mountMore();
+    renderExtras(); renderMore();
+    VMData.manifest().then(function(m) { manifest = m; renderContinue(); renderExtras(); renderMore(); });
+    VMData.training().then(function(t) { trainData = t; renderMore(); });
+    VMData.queue().then(function(q) { queueData = q; renderMore(); });
+    window.addEventListener('storage', function() { renderContinue(); renderExtras(); renderMore(); });
+    window.addEventListener('vm:autobackup', renderMore);
+    setInterval(function() { renderExtras(); renderMore(); }, 30000);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();

@@ -27,6 +27,10 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import extras  # noqa: E402  (cartões de treino, citações/registro, fila de redação; ver tools/extras.py)
+import lint  # noqa: E402  (verificação de padrão; ver tools/lint.py)
+
 ROOT = Path(__file__).resolve().parent.parent
 sys.stdout.reconfigure(encoding='utf-8')
 
@@ -34,12 +38,16 @@ sys.stdout.reconfigure(encoding='utf-8')
 ASSETS = [
     'study-tracker.js', 'study-bar.css', 'article-nav.js', 'article-tools.js', 'search.js', 'vm-data.js',
     'em-breve.js', 'session-banner.js', 'dashboard.js', 'pwa.js', 'fonts.css', 'style.css', 'script.js',
-    'vendor/chart.umd.min.js',
+    'vendor/chart.umd.min.js', 'autobackup.js', 'treino.js', 'sumulas.js', 'calc-core.js', 'calculadoras.js',
+    'tool-pages.css',
 ]
-ARTICLE_RUNTIME = ['vm-data.js', 'article-nav.js', 'article-tools.js', 'search.js', 'pwa.js']
+ARTICLE_RUNTIME = ['vm-data.js', 'article-nav.js', 'article-tools.js', 'search.js', 'autobackup.js', 'pwa.js']
 INDEX_RUNTIME = ['study-tracker.js', 'vm-data.js', 'em-breve.js', 'search.js', 'session-banner.js', 'pwa.js']
-HOME_RUNTIME = ['vm-data.js', 'search.js', 'dashboard.js', 'session-banner.js', 'em-breve.js', 'pwa.js']
+HOME_RUNTIME = ['vm-data.js', 'search.js', 'dashboard.js', 'session-banner.js', 'em-breve.js', 'autobackup.js', 'pwa.js']
+TOOL_RUNTIME = ['study-tracker.js', 'vm-data.js', 'search.js', 'pwa.js']   # + o script próprio de cada página
 INDEX_PAGES = ['index-penal.html', 'index-civil.html', 'index-clt.html', 'index-jecrim.html']
+TOOL_PAGES = ['treino.html', 'sumulas.html', 'calculadoras.html']        # páginas de ferramenta (não são artigos)
+GENERATED_JSON = ['articles.json', 'citations.json', 'queue.json', 'training.json']
 SOON_TITLE = 'Em breve: esta página ainda não foi publicada.'
 TOKEN_RE = r'(?:^|\s)%s(?:\s|$)'
 
@@ -211,6 +219,8 @@ def head_block(extra=''):
             '<link rel="manifest" href="manifest.webmanifest">\n'
             '<link rel="icon" type="image/png" href="icons/icon-192.png">\n'
             '<link rel="apple-touch-icon" href="icons/icon-192.png">\n'
+            '<script>(function(){try{var u=JSON.parse(localStorage.getItem("vadeMecum_ui")||"{}"),h=document.documentElement;'
+            'if(u.dark)h.classList.add("vm-dark");if(u.fs&&u.fs!==100){h.classList.add("vm-zoom");h.style.setProperty("--vm-zoom",u.fs/100);}}catch(e){}})();</script>\n'
             '<link rel="stylesheet" href="fonts.css">\n'
             '<!-- /VM-HEAD -->\n')
 
@@ -226,7 +236,7 @@ def normalize(t, scripts, is_home=False):
     t = t.replace('</head>', head_block() + '</head>', 1)
     # scripts compartilhados no fim do corpo
     t = re.sub(r'<!-- VM-RUNTIME -->.*?<!-- /VM-RUNTIME -->\n?', '', t, flags=re.S)
-    for name in ('article-nav.js', 'em-breve.js'):
+    for name in sorted(set(scripts) | {'article-nav.js', 'em-breve.js'}):
         t = re.sub(r'<script src="%s(?:\?v=[0-9a-f]+)?"></script>\s*' % re.escape(name), '', t)
     if is_home and (ROOT / 'vendor/chart.umd.min.js').exists():
         t = re.sub(r'<script src="https://cdnjs\.cloudflare\.com/ajax/libs/Chart\.js/[^"]+"></script>',
@@ -239,6 +249,8 @@ def normalize(t, scripts, is_home=False):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--check', action='store_true')
+    ap.add_argument('--update-baseline', action='store_true',
+                    help='reconhece as violações atuais do padrão como "legado" (tools/lint-baseline.json)')
     args = ap.parse_args()
     out = Out(args.check)
     problems, warnings = [], []
@@ -256,6 +268,7 @@ def main():
                     continue
                 p = ROOT / f
                 info = {'subject': s['id'], 'label': it['label'], 'group': g['title'],
+                        'kind': it.get('kind', 'artigo'),     # "ferramenta": página de apoio (roteiro), fora das regras de artigo
                         'num': (re.search(r'-ART-(\d+)', f) or [None, None])[1]}
                 if p.exists():
                     sc = scan_article(p)
@@ -268,14 +281,23 @@ def main():
                     info.update({'title': it['label'], 'checked': None, 'checkedPrecision': None, 'checkedLabel': None,
                                  'hearingId': None, 'placeholder': False, 'sections': [], 'available': False})
                 info['status'] = 'disponivel' if info['available'] else ('em-elaboracao' if info.get('placeholder') else 'em-breve')
-                if info['available'] and not info['checked']:
-                    warnings.append('%s: sem data de última conferência reconhecível' % f)
                 articles[f] = info
                 available[f] = info['available']
                 order.append(f)
     on_disk = {p.name for p in ROOT.glob('*-ART-*.html')}
     for f in sorted(on_disk - set(articles)):
         problems.append('arquivo %s existe mas não está em catalog.json' % f)
+
+    # padrão dos artigos publicados (data, pontos recorrentes, emoji, fontes...)
+    found = {f: lint.violations(ROOT / f, articles[f]) for f in order
+             if articles[f]['available'] and articles[f]['kind'] == 'artigo'}
+    if args.update_baseline:
+        print('baseline do padrão atualizada: %d páginas com pendências legadas' % lint.write_baseline(found))
+    lp, lw, lsum = lint.evaluate(found)
+    problems += lp
+    warnings += lw
+    lint_summary = 'padrão: %d páginas publicadas, %d com pendências LEGADAS conhecidas (baseline); %d violações novas' % (
+        len(found), lsum['paginas_com_violacao'], len(lp))
 
     # 1) menus dos índices
     subj_by_index = {s['index']: s for s in catalog['subjects']}
@@ -299,6 +321,13 @@ def main():
         t = read(ROOT / f)
         t = normalize(t, ARTICLE_RUNTIME)
         page_text[f] = stamp(t, hashes)
+    # páginas de ferramenta (treino, súmulas, calculadoras) e páginas de apoio do catálogo (roteiro)
+    tools_files = [f for f in TOOL_PAGES if (ROOT / f).exists()] + [f for f in order if articles[f]['kind'] == 'ferramenta' and (ROOT / f).exists()]
+    for f in tools_files:
+        t = read(ROOT / f)
+        own = [m.group(1) for m in re.finditer(r'<script src="([a-z0-9-]+\.js)(?:\?v=[0-9a-f]+)?"></script>', t) if m.group(1) not in TOOL_RUNTIME]
+        t = normalize(t, TOOL_RUNTIME + own)
+        page_text[f] = stamp(t, hashes)
     for rel, t in page_text.items():
         out.put(rel, t)
 
@@ -313,15 +342,26 @@ def main():
         manifest['articles'][f] = a
     out.put('articles.json', json.dumps(manifest, ensure_ascii=False, indent=1) + '\n')
 
-    # 3) índice de busca (somente páginas disponíveis)
-    idx = []
+    # 3) índice de busca, um arquivo por matéria (a busca carrega primeiro a matéria da página atual)
+    for s in catalog['subjects']:
+        idx = []
+        for f in order:
+            a = articles[f]
+            if not a['available'] or a['subject'] != s['id']:
+                continue
+            idx.append([f, a['title'], a['subject'], [[x['id'], x['title'], x['text']] for x in a['_sc']['sections']]])
+        out.put('search-index-%s.json' % s['id'], json.dumps(idx, ensure_ascii=False, separators=(',', ':')) + '\n')
+
+    # 3b) citações de súmulas/teses (+ registro), cartões de treino e fila de redação
+    citations = extras.build_citations(articles, order, problems)
+    out.put('citations.json', json.dumps({'entries': citations}, ensure_ascii=False, indent=1) + '\n')
+    cards = []
     for f in order:
-        a = articles[f]
-        if not a['available']:
-            continue
-        sc = a['_sc']
-        idx.append([f, a['title'], a['subject'], [[x['id'], x['title'], x['text']] for x in sc['sections']]])
-    out.put('search-index.json', json.dumps(idx, ensure_ascii=False, separators=(',', ':')) + '\n')
+        if articles[f]['available'] and articles[f]['kind'] == 'artigo':
+            cards += extras.training_cards(ROOT / f, f, articles[f]['subject'])
+    out.put('training.json', json.dumps({'cards': cards}, ensure_ascii=False, separators=(',', ':')) + '\n')
+    queue = extras.build_queue(articles, order, extras.load_priorities(problems))
+    out.put('queue.json', json.dumps({'items': queue}, ensure_ascii=False, indent=1) + '\n')
 
     # 4) service worker
     precache_pages = [f for f in order if articles[f]['available']]
@@ -333,14 +373,15 @@ def main():
                 continue
             if (ROOT / u.split('?')[0]).exists():
                 refs.add(u)
-    for extra in ['manifest.webmanifest', 'articles.json', 'search-index.json']:
+    search_files = ['search-index-%s.json' % s['id'] for s in catalog['subjects']]
+    for extra in ['manifest.webmanifest'] + GENERATED_JSON + search_files + ['registry/patterns.json', 'data/laws/CP.json', 'data/laws/L9099.json']:
         refs.add(extra)
     for p in sorted((ROOT / 'fonts').glob('*')) if (ROOT / 'fonts').exists() else []:
         refs.add('fonts/' + p.name)
     for p in sorted((ROOT / 'icons').glob('*')) if (ROOT / 'icons').exists() else []:
         refs.add('icons/' + p.name)
-    critical = ['./', 'index.html'] + INDEX_PAGES + sorted(refs)
-    pages = [p for p in precache_pages]
+    critical = ['./', 'index.html'] + INDEX_PAGES + [f for f in tools_files] + sorted(refs)
+    pages = [p for p in precache_pages if p not in critical]
     digest = hashlib.sha1()
     for rel in sorted(set(critical + pages)):
         rp = rel.split('?')[0]
@@ -348,10 +389,8 @@ def main():
             continue
         if rp in out.files:
             digest.update(rp.encode() + norm_nl(out.files[rp].encode('utf-8')))
-        elif (ROOT / rp).exists() and rp not in ('articles.json', 'search-index.json'):
+        elif (ROOT / rp).exists():
             digest.update(rp.encode() + norm_nl((ROOT / rp).read_bytes()))
-    digest.update(out.files['articles.json'].encode('utf-8'))
-    digest.update(out.files['search-index.json'].encode('utf-8'))
     tpl = read(ROOT / 'tools/sw.template.js')
     sw = (tpl.replace('__VERSION__', digest.hexdigest()[:10])
              .replace('__CRITICAL__', json.dumps(critical, ensure_ascii=False, indent=1))
@@ -377,6 +416,7 @@ def main():
     changed = out.flush()
     n_av = sum(1 for a in articles.values() if a['available'])
     print('catálogo: %d artigos (%d disponíveis, %d em breve/elaboração)' % (len(articles), n_av, len(articles) - n_av))
+    print(lint_summary)
     for w in warnings:
         print('aviso:', w)
     for p in problems:

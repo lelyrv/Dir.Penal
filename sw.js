@@ -10,7 +10,7 @@
  *  - articles.json e search-index.json: usa a cópia guardada e atualiza em segundo plano.
  *  - Nova versão: substitui a anterior inteira de uma vez (cache com o hash da versão).
  */
-const VERSION = '5a979ba2e5';
+const VERSION = '70364237a4';
 const CACHE = 'vm-' + VERSION;
 const CRITICAL = [
  "./",
@@ -19,10 +19,20 @@ const CRITICAL = [
  "index-civil.html",
  "index-clt.html",
  "index-jecrim.html",
+ "treino.html",
+ "sumulas.html",
+ "calculadoras.html",
+ "L9099-ROTEIRO.html",
  "article-nav.js?v=df4cb9f7",
- "article-tools.js?v=582bba43",
+ "article-tools.js?v=cd750459",
  "articles.json",
- "dashboard.js?v=13cbd53f",
+ "autobackup.js?v=b5fb3d04",
+ "calc-core.js?v=f297d23d",
+ "calculadoras.js?v=7c5f40d6",
+ "citations.json",
+ "dashboard.js?v=29acc176",
+ "data/laws/CP.json",
+ "data/laws/L9099.json",
  "em-breve.js?v=6487e366",
  "fonts.css?v=042dc32b",
  "fonts/cinzel-normal-400.woff2",
@@ -59,15 +69,24 @@ const CRITICAL = [
  "icons/icon-maskable-512.png",
  "manifest.webmanifest",
  "pwa.js?v=64776eec",
+ "queue.json",
+ "registry/patterns.json",
  "script.js?v=94f15684",
- "search-index.json",
- "search.js?v=90f3f251",
+ "search-index-CC.json",
+ "search-index-CLT.json",
+ "search-index-CP.json",
+ "search-index-L9099.json",
+ "search.js?v=fc82f803",
  "session-banner.js?v=d87419ae",
- "study-bar.css?v=a08ab8a7",
- "study-tracker.js?v=46265654",
- "style.css?v=52aa8f95",
+ "study-bar.css?v=a66bb7f1",
+ "study-tracker.js?v=6f753c29",
+ "style.css?v=4c877880",
+ "sumulas.js?v=f2efb342",
+ "tool-pages.css?v=c45da391",
+ "training.json",
+ "treino.js?v=65cff042",
  "vendor/chart.umd.min.js?v=49aef4c2",
- "vm-data.js?v=e21a270c"
+ "vm-data.js?v=59406e91"
 ];
 const PAGES = [
  "DP-ART-1.html",
@@ -181,7 +200,7 @@ self.addEventListener('fetch', (event) => {
   const accept = request.headers.get('accept') || '';
   if (request.mode === 'navigate' || accept.includes('text/html')) {
     event.respondWith(networkFirst(request));
-  } else if (/\/(articles|search-index)\.json$/.test(url.pathname)) {
+  } else if (/\/(articles|citations|queue|training|search-index-[A-Za-z0-9]+)\.json$/.test(url.pathname)) {
     event.respondWith(staleWhileRevalidate(request));
   } else {
     event.respondWith(cacheFirst(request));

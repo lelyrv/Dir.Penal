@@ -57,7 +57,12 @@
   window.VMData = {
     ageDays: ageDays, fmtAge: fmtAge, freshness: freshness,
     manifest: function() { return load('articles.json'); },
-    searchIndex: function() { return load('search-index.json'); },
+    /** Índice de busca de UMA matéria (search-index-CP.json etc.). */
+    searchIndex: function(subjectId) { return load('search-index-' + subjectId + '.json'); },
+    citations: function() { return load('citations.json'); },
+    queue: function() { return load('queue.json'); },
+    training: function() { return load('training.json'); },
+    patterns: function() { return load('registry/patterns.json'); },
     currentFile: currentFile,
     /** Artigos disponíveis de uma matéria, na ordem do catálogo. */
     availableOf: function(m, subjectId) {
@@ -65,7 +70,7 @@
       m.subjects.forEach(function(s) {
         if (s.id !== subjectId) return;
         s.groups.forEach(function(g) {
-          g.items.forEach(function(f) { if (m.articles[f] && m.articles[f].available) out.push(f); });
+          g.items.forEach(function(f) { var a = m.articles[f]; if (a && a.available && a.kind !== 'ferramenta') out.push(f); });
         });
       });
       return out;

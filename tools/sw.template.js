@@ -82,7 +82,7 @@ self.addEventListener('fetch', (event) => {
   const accept = request.headers.get('accept') || '';
   if (request.mode === 'navigate' || accept.includes('text/html')) {
     event.respondWith(networkFirst(request));
-  } else if (/\/(articles|search-index)\.json$/.test(url.pathname)) {
+  } else if (/\/(articles|citations|queue|training|search-index-[A-Za-z0-9]+)\.json$/.test(url.pathname)) {
     event.respondWith(staleWhileRevalidate(request));
   } else {
     event.respondWith(cacheFirst(request));

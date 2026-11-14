@@ -4,7 +4,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
-const ALL = ['static', 'timer', 'layout', 'a11y', 'pages', 'features', 'offline'];
+const ALL = ['static', 'calc', 'timer', 'layout', 'a11y', 'pages', 'features', 'tools', 'offline', 'contrast', 'visual'];
 const want = process.argv.slice(2).length ? process.argv.slice(2) : ALL;
 const results = [];
 for (const name of want) {

@@ -12,7 +12,7 @@
   'use strict';
 
   var MAX_RESULTS = 40;
-  var state = { open: false, idx: null, norm: null, sel: -1, results: [] };
+  var state = { open: false, idx: [], norm: [], loaded: {}, loading: {}, ready: false, pending: 0, total: 0, sel: -1, results: [] };
   var el = {};
   var lastFocus = null;
 
@@ -67,6 +67,7 @@
     el.q = root.querySelector('#vs-q');
     el.subj = root.querySelector('#vs-subj');
     el.list = root.querySelector('#vs-list');
+    el.foot = root.querySelector('.vs-foot');
     root.addEventListener('mousedown', function(e) { if (e.target === root) close(); });
     root.querySelector('.vs-close').addEventListener('click', close);
     el.q.addEventListener('input', run);
@@ -80,24 +81,69 @@
 
   function msg(t) { el.list.innerHTML = '<div class="vs-msg">' + esc(t) + '</div>'; }
 
+  var UNAVAILABLE = 'Busca indisponível: abra o site pelo endereço publicado (não direto do arquivo no disco).';
+
+  /** Matéria da página atual: a do artigo aberto, ou a do índice. Na home, nenhuma. */
+  function currentSubject(m) {
+    var bar = document.getElementById('vm-study-bar');
+    if (bar && bar.dataset.subjectId) return bar.dataset.subjectId;
+    var f = VMData.currentFile();
+    var s = m.subjects.filter(function(x) { return x.index === f; })[0];
+    return s ? s.id : null;
+  }
+
+  function addIndex(id, data) {
+    if (state.loaded[id]) return;
+    state.loaded[id] = true;
+    data.forEach(function(a) {
+      state.idx.push(a);
+      state.norm.push({ title: fold(a[1] + ' ' + (a[0].match(/-ART-(\d+)/) || [0, ''])[1]), secs: a[3].map(function(s) { return { h: fold(s[1]), t: fold(s[2]) }; }) });
+    });
+  }
+
+  function loadSubject(id) {
+    if (state.loaded[id]) return Promise.resolve(true);
+    if (!state.loading[id]) {
+      state.loading[id] = VMData.searchIndex(id).then(function(d) { if (d) addIndex(id, d); return !!d; });
+    }
+    return state.loading[id];
+  }
+
+  function setFoot() {
+    el.foot.textContent = state.pending > 0
+      ? 'Carregando as demais matérias… (' + (state.total - state.pending) + ' de ' + state.total + ' prontas)'
+      : '↑ ↓ navegar · Enter abrir · Esc fechar · busca no texto integral dos artigos publicados';
+  }
+
+  /** Carrega primeiro a matéria da página (rápido) e as outras em segundo plano. */
   function ensureIndex() {
-    if (state.idx) return Promise.resolve(true);
+    if (state.ready) return Promise.resolve(true);
     msg('Carregando o índice de busca…');
-    return Promise.all([VMData.searchIndex(), VMData.manifest()]).then(function(r) {
-      if (!r[0]) { msg('Busca indisponível: abra o site pelo endereço publicado (não direto do arquivo no disco).'); return false; }
-      state.idx = r[0];
-      state.manifest = r[1];
-      state.norm = state.idx.map(function(a) {
-        return { title: fold(a[1] + ' ' + (a[0].match(/-ART-(\d+)/) || [0, ''])[1]), secs: a[3].map(function(s) { return { h: fold(s[1]), t: fold(s[2]) }; }) };
-      });
-      if (r[1]) {
-        r[1].subjects.forEach(function(s) {
+    return VMData.manifest().then(function(m) {
+      if (!m) { msg(UNAVAILABLE); return false; }
+      state.manifest = m;
+      if (!el.subj.options[1]) {
+        m.subjects.forEach(function(s) {
           var o = document.createElement('option');
           o.value = s.id; o.textContent = s.name;
           el.subj.appendChild(o);
         });
       }
-      return true;
+      var order = m.subjects.map(function(s) { return s.id; });
+      var cur = currentSubject(m);
+      if (cur) order = [cur].concat(order.filter(function(x) { return x !== cur; }));
+      return loadSubject(order[0]).then(function(ok) {
+        if (!ok) { msg(UNAVAILABLE); return false; }
+        state.ready = true;
+        state.total = order.length; state.pending = order.length - 1; setFoot();
+        order.slice(1).forEach(function(id) {
+          loadSubject(id).then(function() {
+            state.pending--; setFoot();
+            if (state.open && el.q.value.trim()) run();          // refaz a busca com a matéria que acabou de chegar
+          });
+        });
+        return true;
+      });
     });
   }
 
@@ -166,7 +212,13 @@
 
   function run() {
     var q = el.q.value;
-    if (!state.idx) return;
+    if (!state.ready) return;
+    var sel = el.subj.value;
+    if (sel && !state.loaded[sel]) {                       // matéria escolhida ainda não chegou
+      msg('Carregando a matéria escolhida…');
+      loadSubject(sel).then(function() { run(); });
+      return;
+    }
     if (!q.trim()) { state.results = []; msg('Digite para buscar. Exemplos: súmula 523 · transação penal · art. 62 · defesa técnica.'); return; }
     var toks = tokens(q);
     state.results = search(q, el.subj.value);

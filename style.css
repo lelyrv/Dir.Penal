@@ -932,3 +932,28 @@ iframe#painel_artigos.auto-height {
     color: #e8b84b;
     white-space: nowrap;
 }
+
+/* ===== Botão do menu lateral: lingueta fina na borda, para não cobrir o texto do artigo ===== */
+.menu-toggle {
+    width: 18px !important;
+    height: 84px !important;
+    border-radius: 0 8px 8px 0 !important;
+    font-size: 0.8rem !important;
+    padding: 0 !important;
+    opacity: 0.92;
+    left: var(--sidebar-width) !important;
+    transform: translateY(-50%) !important;
+    transition: opacity 0.2s, width 0.2s;
+}
+
+body.sidebar-closed .menu-toggle,
+body:has(.sidebar.closed) .menu-toggle {
+    left: 0 !important;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+    opacity: 1;
+    width: 30px !important;
+    transform: translateY(-50%) !important;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadoras de prazo | Vade Mecum</title>
+<link rel="stylesheet" href="tool-pages.css?v=c45da391">
+<style>
+  .cl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.7rem 1rem;margin:0 0 .9rem;}
+  .cl-pena{display:flex;gap:.5rem;}
+  .cl-pena .tp-field{flex:1;} .cl-pena input{min-width:0;width:100%;}
+  .cl-chk{display:flex;align-items:flex-start;gap:.5rem;font-size:.88rem;margin:.25rem 0;}
+  .cl-chk input{margin-top:.3rem;}
+  .cl-ev{display:flex;flex-wrap:wrap;gap:.5rem;align-items:flex-end;margin:.3rem 0;}
+  .cl-res{margin-top:1rem;}
+  .cl-res h4{margin:.2rem 0 .4rem;font:700 1rem "Playfair Display",Georgia,serif;color:var(--navy);}
+  .cl-big{font:900 1.5rem "Playfair Display",Georgia,serif;color:var(--navy);}
+  .cl-res ul{margin:.3rem 0 .6rem;padding-left:1.2rem;font-size:.86rem;}
+  details.tp-law blockquote{font-size:.8rem;}
+  .tp-main section.tp-card h2{margin-top:0;}
+</style>
+<!-- VM-HEAD -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0d1b2a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<script>(function(){try{var u=JSON.parse(localStorage.getItem("vadeMecum_ui")||"{}"),h=document.documentElement;if(u.dark)h.classList.add("vm-dark");if(u.fs&&u.fs!==100){h.classList.add("vm-zoom");h.style.setProperty("--vm-zoom",u.fs/100);}}catch(e){}})();</script>
+<link rel="stylesheet" href="fonts.css?v=042dc32b">
+<!-- /VM-HEAD -->
+</head>
+<body>
+<a class="tp-skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="tp-top">
+  <a class="tp-back" href="index.html">← Início</a>
+  <span class="tp-title">Calculadoras</span>
+  <nav class="tp-nav" aria-label="Ferramentas">
+    <a href="treino.html">Treino</a>
+    <a href="sumulas.html">Súmulas e teses</a>
+    <a href="calculadoras.html" aria-current="page">Calculadoras</a>
+    <a href="L9099-ROTEIRO.html">Roteiro Lei 9.099</a>
+  </nav>
+</header>
+<main id="conteudo" class="tp-main">
+  <h1>Calculadoras <span>de prazo</span></h1>
+  <p class="tp-lead">Apoio de cálculo para audiência e atendimento. Cada resultado mostra a regra aplicada e o texto do dispositivo no Planalto.</p>
+  <div class="tp-warn"><strong>Leia antes de usar.</strong> São contas simples a partir do texto da lei. Elas não determinam o termo inicial (CP, art. 111), não consideram causas que impedem a prescrição (art. 116) nem interrupções por início de cumprimento de pena ou reincidência (art. 117, V e VI), e não substituem a análise do caso nem a conferência da jurisprudência atual. Para pena e prazo, 1 ano vale 360 dias e 1 mês vale 30 dias (só para comparar e fracionar).</div>
+  <div id="fonte-status" class="tp-src" aria-live="polite"></div>
+
+  <!-- 1. Prescrição -->
+  <section class="tp-card" id="prescricao" aria-labelledby="h-presc">
+    <h2 id="h-presc">1. Prescrição (CP, arts. 109, 110 e 115)</h2>
+    <form id="f-presc" autocomplete="off">
+      <div class="cl-grid">
+        <label class="tp-field">Qual prescrição
+          <select id="p-modo">
+            <option value="abstrata">Antes da sentença: pena máxima em abstrato (art. 109)</option>
+            <option value="concreta">Após o trânsito para a acusação: pena aplicada (art. 110, § 1º)</option>
+            <option value="executoria">Após o trânsito em julgado: pena aplicada (art. 110, caput)</option>
+          </select>
+        </label>
+        <div class="cl-pena" role="group" aria-label="Pena">
+          <label class="tp-field">Anos<input type="number" id="p-a" min="0" max="100" value="0"></label>
+          <label class="tp-field">Meses<input type="number" id="p-m" min="0" max="11" value="0"></label>
+          <label class="tp-field">Dias<input type="number" id="p-d" min="0" max="29" value="0"></label>
+        </div>
+        <label class="tp-field">Termo inicial<input type="date" id="p-ini"><small>veja o art. 111</small></label>
+        <label class="tp-field">Data de referência<input type="date" id="p-ref"><small>hoje, ou outra data</small></label>
+      </div>
+      <label class="cl-chk"><input type="checkbox" id="p-m21"> Menor de 21 anos ao tempo do crime (art. 115)</label>
+      <label class="cl-chk"><input type="checkbox" id="p-m70"> Maior de 70 anos na data da sentença (art. 115)</label>
+      <label class="cl-chk"><input type="checkbox" id="p-vs"> O crime envolve violência sexual contra a mulher (afasta a redução do art. 115)</label>
+      <label class="cl-chk"><input type="checkbox" id="p-rei"> Condenado reincidente (aumenta de 1/3 só na prescrição após o trânsito em julgado, art. 110, caput)</label>
+      <fieldset style="border:1px solid var(--border-light);border-radius:4px;margin:.8rem 0;padding:.6rem .8rem;">
+        <legend style="font-size:.8rem;font-weight:700;color:var(--text-mid);">Causas que interrompem a prescrição (art. 117, I a IV), com a data</legend>
+        <div id="p-evs"></div>
+        <button class="tp-btn ghost" id="p-addev" type="button">Adicionar marco</button>
+      </fieldset>
+      <button class="tp-btn" type="submit">Calcular prescrição</button>
+    </form>
+    <div class="cl-res" id="p-res" aria-live="polite"></div>
+    <div id="p-src"></div>
+  </section>
+
+  <!-- 2. Suspensão condicional do processo -->
+  <section class="tp-card" id="scpp" aria-labelledby="h-scpp">
+    <h2 id="h-scpp">2. Suspensão condicional do processo (Lei 9.099, art. 89)</h2>
+    <form id="f-scpp" autocomplete="off">
+      <div class="cl-grid">
+        <div class="cl-pena" role="group" aria-label="Pena mínima cominada">
+          <label class="tp-field">Mínima: anos<input type="number" id="s-a" min="0" max="100" value="0"></label>
+          <label class="tp-field">meses<input type="number" id="s-m" min="0" max="11" value="0"></label>
+          <label class="tp-field">dias<input type="number" id="s-d" min="0" max="29" value="0"></label>
+        </div>
+        <label class="tp-field">Período de prova
+          <select id="s-anos"><option value="2">2 anos</option><option value="3">3 anos</option><option value="4">4 anos</option></select>
+        </label>
+        <label class="tp-field">Início do período<input type="date" id="s-ini"></label>
+      </div>
+      <label class="cl-chk"><input type="checkbox" id="s-cont"> Crime continuado (Súmula 723/STF: pena mínima da infração mais grave + aumento mínimo de 1/6)</label>
+      <button class="tp-btn" type="submit">Verificar e calcular o período de prova</button>
+    </form>
+    <div class="cl-res" id="s-res" aria-live="polite"></div>
+    <div id="s-src"></div>
+  </section>
+
+  <!-- 3. Suspensão condicional da pena -->
+  <section class="tp-card" id="sursis" aria-labelledby="h-sursis">
+    <h2 id="h-sursis">3. Suspensão condicional da pena (CP, art. 77)</h2>
+    <form id="f-sursis" autocomplete="off">
+      <div class="cl-grid">
+        <div class="cl-pena" role="group" aria-label="Pena aplicada">
+          <label class="tp-field">Pena: anos<input type="number" id="u-a" min="0" max="100" value="0"></label>
+          <label class="tp-field">meses<input type="number" id="u-m" min="0" max="11" value="0"></label>
+          <label class="tp-field">dias<input type="number" id="u-d" min="0" max="29" value="0"></label>
+        </div>
+        <label class="tp-field">Início do período<input type="date" id="u-ini"></label>
+        <label class="tp-field">Duração (anos)<input type="number" id="u-anos" min="2" max="6" value="2"></label>
+      </div>
+      <label class="cl-chk"><input type="checkbox" id="u-70"> Condenado maior de 70 anos, ou razões de saúde que justifiquem a suspensão (art. 77, § 2º)</label>
+      <label class="cl-chk"><input type="checkbox" id="u-rei"> Condenado reincidente em crime doloso (art. 77, I)</label>
+      <button class="tp-btn" type="submit">Verificar</button>
+    </form>
+    <div class="cl-res" id="u-res" aria-live="polite"></div>
+    <div id="u-src"></div>
+  </section>
+
+  <!-- 4. Menor potencial ofensivo -->
+  <section class="tp-card" id="menor" aria-labelledby="h-menor">
+    <h2 id="h-menor">4. Infração de menor potencial ofensivo (Lei 9.099, art. 61)</h2>
+    <form id="f-menor" autocomplete="off">
+      <div class="cl-grid">
+        <div class="cl-pena" role="group" aria-label="Pena máxima cominada">
+          <label class="tp-field">Máxima: anos<input type="number" id="o-a" min="0" max="100" value="0"></label>
+          <label class="tp-field">meses<input type="number" id="o-m" min="0" max="11" value="0"></label>
+          <label class="tp-field">dias<input type="number" id="o-d" min="0" max="29" value="0"></label>
+        </div>
+      </div>
+      <label class="cl-chk"><input type="checkbox" id="o-c"> É contravenção penal</label>
+      <button class="tp-btn" type="submit">Verificar</button>
+    </form>
+    <div class="cl-res" id="o-res" aria-live="polite"></div>
+    <div id="o-src"></div>
+  </section>
+</main>
+<!-- VM-RUNTIME -->
+<script src="study-tracker.js?v=6f753c29"></script>
+<script src="vm-data.js?v=59406e91"></script>
+<script src="search.js?v=fc82f803"></script>
+<script src="pwa.js?v=64776eec"></script>
+<script src="calc-core.js?v=f297d23d"></script>
+<script src="calculadoras.js?v=7c5f40d6"></script>
+<!-- /VM-RUNTIME -->
+</body>
+</html>

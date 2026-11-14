@@ -1,0 +1,1534 @@
+{
+ "items": [
+  {
+   "file": "DP-ART-33.html",
+   "label": "Art. 33 - Regimes de Cumprimento",
+   "subject": "CP",
+   "mentions": 24,
+   "peso": null,
+   "nota": "",
+   "pos": 32,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-9.html",
+   "label": "Art. 9º — Nulidade de Atos Fraudulentos",
+   "subject": "CLT",
+   "mentions": 16,
+   "peso": null,
+   "nota": "",
+   "pos": 113,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-443.html",
+   "label": "Art. 443 — Modalidades Contratuais",
+   "subject": "CLT",
+   "mentions": 16,
+   "peso": null,
+   "nota": "",
+   "pos": 147,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-29.html",
+   "label": "Art. 29 - Concurso de Pessoas",
+   "subject": "CP",
+   "mentions": 10,
+   "peso": null,
+   "nota": "",
+   "pos": 28,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-30.html",
+   "label": "Art. 30 - Circunstâncias Incomunicáveis",
+   "subject": "CP",
+   "mentions": 9,
+   "peso": null,
+   "nota": "",
+   "pos": 29,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-39.html",
+   "label": "Art. 39 - Trabalho Facultativo",
+   "subject": "CP",
+   "mentions": 8,
+   "peso": null,
+   "nota": "",
+   "pos": 38,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-41.html",
+   "label": "Art. 41 - Superveniência de Doença Mental",
+   "subject": "CP",
+   "mentions": 8,
+   "peso": null,
+   "nota": "",
+   "pos": 40,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-44.html",
+   "label": "Art. 44 - Substituição",
+   "subject": "CP",
+   "mentions": 8,
+   "peso": null,
+   "nota": "",
+   "pos": 43,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-37.html",
+   "label": "Art. 37 - Abertura da Sucessão Definitiva",
+   "subject": "CC",
+   "mentions": 7,
+   "peso": null,
+   "nota": "",
+   "pos": 88,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-7.html",
+   "label": "Art. 7º — Empregado Rural / Doméstico",
+   "subject": "CLT",
+   "mentions": 7,
+   "peso": null,
+   "nota": "",
+   "pos": 111,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-10.html",
+   "label": "Art. 10 — Sucessão Trabalhista",
+   "subject": "CLT",
+   "mentions": 7,
+   "peso": null,
+   "nota": "",
+   "pos": 114,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-40.html",
+   "label": "Art. 40 - Legislação Especial",
+   "subject": "CP",
+   "mentions": 6,
+   "peso": null,
+   "nota": "",
+   "pos": 39,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-6.html",
+   "label": "Art. 6º - Fim da Existência da Pessoa Natural",
+   "subject": "CC",
+   "mentions": 6,
+   "peso": null,
+   "nota": "",
+   "pos": 57,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-49.html",
+   "label": "Art. 49 - Multa",
+   "subject": "CP",
+   "mentions": 5,
+   "peso": null,
+   "nota": "",
+   "pos": 48,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-7.html",
+   "label": "Art. 7º - Morte Presumida sem Decretação de Ausência",
+   "subject": "CC",
+   "mentions": 5,
+   "peso": null,
+   "nota": "",
+   "pos": 58,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-14.html",
+   "label": "Art. 14 - Disposição Gratuita do Corpo Pós-Morte",
+   "subject": "CC",
+   "mentions": 5,
+   "peso": null,
+   "nota": "",
+   "pos": 65,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-42.html",
+   "label": "Art. 42 - Detração Penal",
+   "subject": "CP",
+   "mentions": 4,
+   "peso": null,
+   "nota": "",
+   "pos": 41,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-12.html",
+   "label": "Art. 12 - Tutela dos Direitos da Personalidade",
+   "subject": "CC",
+   "mentions": 4,
+   "peso": null,
+   "nota": "",
+   "pos": 63,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-45.html",
+   "label": "Art. 45 - Conversão",
+   "subject": "CP",
+   "mentions": 3,
+   "peso": null,
+   "nota": "",
+   "pos": 44,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-442.html",
+   "label": "Art. 442 — Definição do Contrato",
+   "subject": "CLT",
+   "mentions": 3,
+   "peso": null,
+   "nota": "",
+   "pos": 145,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-442-B.html",
+   "label": "Art. 442-B — Autônomo Exclusivo",
+   "subject": "CLT",
+   "mentions": 3,
+   "peso": null,
+   "nota": "",
+   "pos": 146,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-36.html",
+   "label": "Art. 36 - Regime Aberto",
+   "subject": "CP",
+   "mentions": 2,
+   "peso": null,
+   "nota": "",
+   "pos": 35,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-37.html",
+   "label": "Art. 37 - Trabalho do Preso",
+   "subject": "CP",
+   "mentions": 2,
+   "peso": null,
+   "nota": "",
+   "pos": 36,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-11.html",
+   "label": "Art. 11 - Intransmissibilidade e Irrenunciabilidade",
+   "subject": "CC",
+   "mentions": 2,
+   "peso": null,
+   "nota": "",
+   "pos": 62,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-40.html",
+   "label": "Art. 40 - Pessoas Jurídicas de Direito Público e Privado",
+   "subject": "CC",
+   "mentions": 2,
+   "peso": null,
+   "nota": "",
+   "pos": 91,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-4.html",
+   "label": "Art. 4º — Tempo à Disposição",
+   "subject": "CLT",
+   "mentions": 2,
+   "peso": null,
+   "nota": "",
+   "pos": 108,
+   "status": "em-elaboracao"
+  },
+  {
+   "file": "CLT-ART-5.html",
+   "label": "Art. 5º — Igualdade de Tratamento",
+   "subject": "CLT",
+   "mentions": 2,
+   "peso": null,
+   "nota": "",
+   "pos": 109,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-462.html",
+   "label": "Art. 462 — Descontos no Salário",
+   "subject": "CLT",
+   "mentions": 2,
+   "peso": null,
+   "nota": "",
+   "pos": 136,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-482.html",
+   "label": "Art. 482 — Justa Causa",
+   "subject": "CLT",
+   "mentions": 2,
+   "peso": null,
+   "nota": "",
+   "pos": 157,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-32.html",
+   "label": "Art. 32 - Espécies de Pena",
+   "subject": "CP",
+   "mentions": 1,
+   "peso": null,
+   "nota": "",
+   "pos": 31,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-38.html",
+   "label": "Art. 38 - Direitos do Preso",
+   "subject": "CP",
+   "mentions": 1,
+   "peso": null,
+   "nota": "",
+   "pos": 37,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-46.html",
+   "label": "Art. 46 - Prestação de Serviços",
+   "subject": "CP",
+   "mentions": 1,
+   "peso": null,
+   "nota": "",
+   "pos": 45,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-48.html",
+   "label": "Art. 48 - Limitação de Fim de Semana",
+   "subject": "CP",
+   "mentions": 1,
+   "peso": null,
+   "nota": "",
+   "pos": 47,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-8.html",
+   "label": "Art. 8º - Comoriência",
+   "subject": "CC",
+   "mentions": 1,
+   "peso": null,
+   "nota": "",
+   "pos": 59,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-818.html",
+   "label": "Art. 818 — Ônus da Prova",
+   "subject": "CLT",
+   "mentions": 1,
+   "peso": null,
+   "nota": "",
+   "pos": 178,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-31.html",
+   "label": "Art. 31 - Ajuste, Determinação ou Instigação",
+   "subject": "CP",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 30,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-34.html",
+   "label": "Art. 34 - Regime Fechado",
+   "subject": "CP",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 33,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-35.html",
+   "label": "Art. 35 - Regime Semiaberto",
+   "subject": "CP",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 34,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-43.html",
+   "label": "Art. 43 - Espécies",
+   "subject": "CP",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 42,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-47.html",
+   "label": "Art. 47 - Interdições",
+   "subject": "CP",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 46,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-50.html",
+   "label": "Art. 50 - Pagamento",
+   "subject": "CP",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 49,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-51.html",
+   "label": "Art. 51 - Execução",
+   "subject": "CP",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 50,
+   "status": "em-breve"
+  },
+  {
+   "file": "DP-ART-52.html",
+   "label": "Art. 52 - Multa (disposições gerais)",
+   "subject": "CP",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 51,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-9.html",
+   "label": "Art. 9º - Registro Público",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 60,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-10.html",
+   "label": "Art. 10 - Averbações no Registro Público",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 61,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-13.html",
+   "label": "Art. 13 - Disposição do Próprio Corpo",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 64,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-15.html",
+   "label": "Art. 15 - Tratamento Médico e Risco de Vida",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 66,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-16.html",
+   "label": "Art. 16 - Direito ao Nome",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 67,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-17.html",
+   "label": "Art. 17 - Proteção do Nome",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 68,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-18.html",
+   "label": "Art. 18 - Uso do Nome em Propaganda Comercial",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 69,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-19.html",
+   "label": "Art. 19 - Proteção do Pseudônimo",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 70,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-20.html",
+   "label": "Art. 20 - Imagem, Honra e Exposição da Pessoa",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 71,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-21.html",
+   "label": "Art. 21 - Vida Privada",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 72,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-22.html",
+   "label": "Art. 22 - Declaração de Ausência e Nomeação de Curador",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 73,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-23.html",
+   "label": "Art. 23 - Ausente com Mandatário Ineficaz ou Insuficiente",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 74,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-24.html",
+   "label": "Art. 24 - Poderes e Obrigações do Curador",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 75,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-25.html",
+   "label": "Art. 25 - Ordem Legal de Curadoria",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 76,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-26.html",
+   "label": "Art. 26 - Abertura da Sucessão Provisória",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 77,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-27.html",
+   "label": "Art. 27 - Interessados na Sucessão Provisória",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 78,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-28.html",
+   "label": "Art. 28 - Eficácia da Sentença e Inventário",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 79,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-29.html",
+   "label": "Art. 29 - Conversão de Bens Móveis",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 80,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-30.html",
+   "label": "Art. 30 - Garantias para Imissão na Posse",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 81,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-31.html",
+   "label": "Art. 31 - Alienação ou Hipoteca de Imóveis do Ausente",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 82,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-32.html",
+   "label": "Art. 32 - Representação do Ausente pelos Sucessores",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 83,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-33.html",
+   "label": "Art. 33 - Frutos e Rendimentos dos Bens do Ausente",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 84,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-34.html",
+   "label": "Art. 34 - Rendimentos ao Sucessor Excluído",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 85,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-35.html",
+   "label": "Art. 35 - Prova da Morte durante a Posse Provisória",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 86,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-36.html",
+   "label": "Art. 36 - Reaparecimento do Ausente na Posse Provisória",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 87,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-38.html",
+   "label": "Art. 38 - Sucessão Definitiva por Idade Avançada",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 89,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-39.html",
+   "label": "Art. 39 - Regresso do Ausente após Sucessão Definitiva",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 90,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-41.html",
+   "label": "Art. 41 - Pessoas Jurídicas de Direito Público Interno",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 92,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-42.html",
+   "label": "Art. 42 - Pessoas Jurídicas de Direito Público Externo",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 93,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-43.html",
+   "label": "Art. 43 - Responsabilidade das Pessoas Jurídicas de Direito Público",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 94,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-44.html",
+   "label": "Art. 44 - Pessoas Jurídicas de Direito Privado",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 95,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-45.html",
+   "label": "Art. 45 - Existência Legal da Pessoa Jurídica",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 96,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-46.html",
+   "label": "Art. 46 - Registro da Pessoa Jurídica",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 97,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-47.html",
+   "label": "Art. 47 - Vinculação por Atos dos Administradores",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 98,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-48.html",
+   "label": "Art. 48 - Administração Coletiva",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 99,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-49.html",
+   "label": "Art. 49 - Administração Provisória Judicial",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 100,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-49-A.html",
+   "label": "Art. 49-A - Autonomia Patrimonial da Pessoa Jurídica",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 101,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-50.html",
+   "label": "Art. 50 - Desconsideração da Personalidade Jurídica",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 102,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-51.html",
+   "label": "Art. 51 - Dissolução da Pessoa Jurídica",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 103,
+   "status": "em-breve"
+  },
+  {
+   "file": "CC-ART-52.html",
+   "label": "Art. 52 - Direitos da Personalidade da Pessoa Jurídica",
+   "subject": "CC",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 104,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-6.html",
+   "label": "Art. 6º — Trabalho a Distância",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 110,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-8.html",
+   "label": "Art. 8º — Fontes e Analogia",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 112,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-11.html",
+   "label": "Art. 11 — Prescrição Trabalhista",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 115,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-12.html",
+   "label": "Art. 12 — Preferência de Créditos",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 116,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-13.html",
+   "label": "Art. 13 — Carteira de Trabalho (CTPS)",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 117,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-29.html",
+   "label": "Art. 29 — Anotações na CTPS",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 118,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-58.html",
+   "label": "Art. 58 — Duração do Trabalho",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 119,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-59.html",
+   "label": "Art. 59 — Horas Extras",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 120,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-60.html",
+   "label": "Art. 60 — Atividades Insalubres e Jornada",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 121,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-61.html",
+   "label": "Art. 61 — Prorrogação de Jornada",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 122,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-62.html",
+   "label": "Art. 62 — Exclusões do Controle de Jornada",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 123,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-66.html",
+   "label": "Art. 66 — Intervalo Entre Jornadas",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 124,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-67.html",
+   "label": "Art. 67 — Descanso Semanal Remunerado",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 125,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-71.html",
+   "label": "Art. 71 — Intervalo Intrajornada",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 126,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-74.html",
+   "label": "Art. 74 — Controle de Horário",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 127,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-75-A.html",
+   "label": "Arts. 75-A a 75-E — Teletrabalho",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 128,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-76.html",
+   "label": "Art. 76 — Salário Mínimo",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 129,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-78.html",
+   "label": "Art. 78 — Salário por Peça ou Tarefa",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 130,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-457.html",
+   "label": "Art. 457 — Integração Salarial",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 131,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-458.html",
+   "label": "Art. 458 — Salário In Natura",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 132,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-459.html",
+   "label": "Art. 459 — Prazo de Pagamento",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 133,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-460.html",
+   "label": "Art. 460 — Equiparação Salarial",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 134,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-461.html",
+   "label": "Art. 461 — Isonomia Salarial",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 135,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-467.html",
+   "label": "Art. 467 — Multa por Atraso de Verbas",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 137,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-129.html",
+   "label": "Art. 129 — Direito a Férias",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 138,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-130.html",
+   "label": "Art. 130 — Período Aquisitivo",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 139,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-133.html",
+   "label": "Art. 133 — Perda do Direito a Férias",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 140,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-134.html",
+   "label": "Art. 134 — Concessão de Férias",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 141,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-137.html",
+   "label": "Art. 137 — Férias em Dobro",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 142,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-143.html",
+   "label": "Art. 143 — Abono Pecuniário",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 143,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-145.html",
+   "label": "Art. 145 — Remuneração de Férias",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 144,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-444.html",
+   "label": "Art. 444 — Cláusulas Contratuais",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 148,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-445.html",
+   "label": "Art. 445 — Prazo Determinado",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 149,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-447.html",
+   "label": "Art. 447 — Contrato Verbal",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 150,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-448.html",
+   "label": "Art. 448 — Nulidade de Cláusulas",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 151,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-452-A.html",
+   "label": "Art. 452-A — Contrato Intermitente",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 152,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-477.html",
+   "label": "Art. 477 — Extinção do Contrato",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 153,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-477-A.html",
+   "label": "Art. 477-A — Dispensa Coletiva",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 154,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-477-B.html",
+   "label": "Art. 477-B — PDV e Quitação",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 155,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-480.html",
+   "label": "Art. 480 — Indenização por Ruptura",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 156,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-483.html",
+   "label": "Art. 483 — Rescisão Indireta",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 158,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-484-A.html",
+   "label": "Art. 484-A — Extinção por Acordo Mútuo",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 159,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-487.html",
+   "label": "Art. 487 — Aviso Prévio",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 160,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-492.html",
+   "label": "Art. 492 — Estabilidade Decenal",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 161,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-511.html",
+   "label": "Art. 511 — Conceito de Sindicato",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 162,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-513.html",
+   "label": "Art. 513 — Prerrogativas Sindicais",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 163,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-522.html",
+   "label": "Art. 522 — Administração do Sindicato",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 164,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-543.html",
+   "label": "Art. 543 — Garantia Sindical",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 165,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-579.html",
+   "label": "Art. 579 — Contribuição Sindical",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 166,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-611.html",
+   "label": "Art. 611 — Convenção Coletiva",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 167,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-611-A.html",
+   "label": "Art. 611-A — Prevalência do Negociado",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 168,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-611-B.html",
+   "label": "Art. 611-B — Limites à Negociação",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 169,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-612.html",
+   "label": "Art. 612 — Acordo Coletivo",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 170,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-616.html",
+   "label": "Art. 616 — Obrigatoriedade de Negociação",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 171,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-763.html",
+   "label": "Art. 763 — Jurisdição Trabalhista",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 172,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-769.html",
+   "label": "Art. 769 — Aplicação do CPC",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 173,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-791.html",
+   "label": "Art. 791 — Jus Postulandi",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 174,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-791-A.html",
+   "label": "Art. 791-A — Honorários Advocatícios",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 175,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-793-A.html",
+   "label": "Arts. 793-A a 793-D — Litigância de Má-fé",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 176,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-796.html",
+   "label": "Art. 796 — Exceções Processuais",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 177,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-840.html",
+   "label": "Art. 840 — Petição Inicial",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 179,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-843.html",
+   "label": "Art. 843 — Presença em Audiência",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 180,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-852-A.html",
+   "label": "Art. 852-A — Rito Sumaríssimo",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 181,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-876.html",
+   "label": "Art. 876 — Títulos Executivos",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 182,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-878.html",
+   "label": "Art. 878 — Execução de Ofício",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 183,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-882.html",
+   "label": "Art. 882 — Garantia do Juízo",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 184,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-899.html",
+   "label": "Art. 899 — Recursos — Depósito Recursal",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 185,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-SUMULAS.html",
+   "label": "Súmulas e OJs do TST — Seleção",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 186,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-LEI8036.html",
+   "label": "Lei 8.036/90 — FGTS",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 187,
+   "status": "em-breve"
+  },
+  {
+   "file": "CLT-ART-LEI12506.html",
+   "label": "Lei 12.506/11 — Aviso Prévio Proporcional",
+   "subject": "CLT",
+   "mentions": 0,
+   "peso": null,
+   "nota": "",
+   "pos": 188,
+   "status": "em-breve"
+  }
+ ]
+}
