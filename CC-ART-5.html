@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art. 5º CC — Maioridade Civil e Emancipação | Fluxograma Magistratura ENAM</title>
+<style>
+:root{--navy:#0d1b2a;--navy-mid:#1a2f45;--navy-light:#243b55;--gold:#c8960c;--gold-light:#e8b84b;--gold-pale:#fdf3d8;--cream:#faf7f2;--cream-mid:#f0ebe2;--text-dark:#1a1208;--text-mid:#3d3020;--text-soft:#6b5c40;--border:#d4c49a;--border-light:#e8dcbf;--red-accent:#8b1a1a;--green-accent:#1a4a2e;--blue-accent:#1a3a5c;--purple-accent:#4a1a5c;--shadow:0 4px 24px rgba(13,27,42,0.10);}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Source Serif 4',Georgia,serif;background:var(--cream);color:var(--text-dark);font-size:15px;line-height:1.75;}
+#top-nav{position:sticky;top:0;z-index:999;background:var(--navy);border-bottom:3px solid var(--gold);padding:0 1.5rem;display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;}
+#top-nav::-webkit-scrollbar{display:none;}
+#top-nav .nav-brand{font-family:'Playfair Display',serif;color:var(--gold-light);font-size:0.9rem;font-weight:700;white-space:nowrap;padding:0.85rem 1.2rem 0.85rem 0;border-right:1px solid rgba(200,150,12,0.3);margin-right:0.5rem;letter-spacing:0.5px;}
+#top-nav a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.72rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;padding:0.85rem 0.8rem;white-space:nowrap;transition:color .2s;border-bottom:3px solid transparent;margin-bottom:-3px;}
+#top-nav a:hover,#top-nav a.nav-prova:hover{color:var(--gold-light);border-bottom-color:var(--gold);}
+#top-nav a.nav-prova{color:var(--gold-light);}
+#hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 60%,#1e3d5c 100%);color:white;padding:3.5rem 2rem 3rem;text-align:center;position:relative;overflow:hidden;}
+#hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(200,150,12,0.03) 0px,rgba(200,150,12,0.03) 1px,transparent 1px,transparent 40px);}
+#hero .badge{display:inline-block;background:rgba(200,150,12,0.15);border:1px solid rgba(200,150,12,0.5);color:var(--gold-light);font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;padding:0.35rem 1rem;border-radius:2px;margin-bottom:1.2rem;font-family:'Source Serif 4',serif;font-weight:600;position:relative;}
+#hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.15;margin-bottom:0.6rem;letter-spacing:-0.5px;position:relative;}
+#hero h1 span{color:var(--gold-light);}
+#hero .subtitle{font-size:1rem;color:rgba(255,255,255,0.65);font-style:italic;margin-bottom:1.5rem;position:relative;}
+#hero .law-box{display:inline-block;background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.4);border-left:4px solid var(--gold);color:rgba(255,255,255,0.9);font-family:'Source Serif 4',serif;font-size:0.93rem;font-style:italic;padding:1rem 1.5rem;max-width:1120px;text-align:left;line-height:1.9;border-radius:0 4px 4px 0;position:relative;}
+#hero .law-box strong{color:var(--gold-light);font-style:normal;display:block;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem;}
+.page-wrap{width:100%!important;max-width:none!important;margin:0!important;padding-left:clamp(1rem,3vw,4rem)!important;padding-right:clamp(1rem,3vw,4rem)!important;padding-bottom:4rem;}
+.section,.prova-section,.card,.flow-wrap,.comp-table,.juris-grid{max-width:none!important;}
+.section{margin-top:3.5rem;scroll-margin-top:56px;}
+.section-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:0.75rem;border-bottom:2px solid var(--border);}
+.section-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--border);line-height:1;min-width:2.5rem;}
+.section-title{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--navy);line-height:1.2;}
+.section-title span{display:block;font-size:0.75rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-style:normal;}
+.card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1.4rem 1.6rem;box-shadow:var(--shadow);}
+.card-grid{display:grid;gap:1rem;}
+.card-grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
+.card-grid-2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr));}
+.card-grid-4{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));}
+.card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:0.6rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border-light);}
+.card h4{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;margin-bottom:0.35rem;}
+.card p,.card li{font-size:0.88rem;line-height:1.7;color:var(--text-mid);}
+.card ul{padding-left:1.1rem;}
+.card li{margin-bottom:0.3rem;}
+.type-card{border-top:4px solid;}
+.tc-red{border-top-color:var(--red-accent);}.tc-red h3{color:var(--red-accent);}
+.tc-green{border-top-color:var(--green-accent);}.tc-green h3{color:var(--green-accent);}
+.tc-blue{border-top-color:var(--blue-accent);}.tc-blue h3{color:var(--blue-accent);}
+.tc-gold{border-top-color:var(--gold);}.tc-gold h3{color:#7a5a00;}
+.tc-purple{border-top-color:var(--purple-accent);}.tc-purple h3{color:var(--purple-accent);}
+.flow-wrap{background:white;border:1px solid var(--border-light);border-radius:6px;padding:2rem 1.5rem;box-shadow:var(--shadow);overflow-x:auto;}
+.flow-center{display:flex;flex-direction:column;align-items:center;}
+.flow-node{border-radius:4px;padding:0.65rem 1.4rem;font-family:'Source Serif 4',serif;font-size:0.82rem;font-weight:600;text-align:center;min-width:220px;max-width:760px;}
+.flow-start{background:var(--navy);color:white;border-radius:50px;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;}
+.flow-end-green{background:var(--green-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-red{background:var(--red-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-gold{background:var(--gold);color:var(--navy);border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-blue{background:var(--blue-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-end-purple{background:var(--purple-accent);color:white;border-radius:50px;font-size:0.78rem;font-weight:700;padding:0.7rem 2rem;}
+.flow-box-navy{background:var(--navy-mid);color:white;border-left:4px solid var(--gold);font-size:0.8rem;}
+.flow-box-green{background:#edf7f0;border:1px solid #7ec89a;border-left:4px solid var(--green-accent);color:var(--text-dark);}
+.flow-box-blue{background:#edf2f8;border:1px solid #8eb4d8;border-left:4px solid var(--blue-accent);color:var(--text-dark);}
+.flow-box-red{background:#fdf0f0;border:1px solid #e09090;border-left:4px solid var(--red-accent);color:var(--text-dark);}
+.flow-box-gold{background:var(--gold-pale);border:2px solid var(--gold);color:var(--text-dark);}
+.flow-box-purple{background:#f3eef8;border:1px solid #b89dd8;border-left:4px solid var(--purple-accent);color:var(--text-dark);}
+.flow-arrow{font-size:1.3rem;color:var(--border);line-height:1;margin:0.15rem 0;}
+.flow-row{display:flex;align-items:flex-start;gap:1.5rem;width:100%;justify-content:center;flex-wrap:wrap;}
+.flow-branch{display:flex;flex-direction:column;align-items:center;flex:1;min-width:210px;}
+.flow-label{font-size:0.68rem;color:var(--text-soft);font-weight:600;letter-spacing:0.5px;text-transform:uppercase;background:var(--cream-mid);padding:0.15rem 0.5rem;border-radius:2px;margin:0.15rem 0;}
+.flow-connector-line{width:1px;height:28px;background:var(--border);}
+.comp-table{width:100%;border-collapse:collapse;font-size:0.84rem;background:white;box-shadow:var(--shadow);border-radius:6px;overflow:hidden;}
+.comp-table thead{background:var(--navy);color:white;}
+.comp-table thead th{padding:0.85rem 1rem;font-family:'Source Serif 4',serif;font-weight:600;letter-spacing:0.5px;font-size:0.8rem;text-align:left;}
+.comp-table thead th:first-child{color:var(--gold-light);}
+.comp-table tbody tr{border-bottom:1px solid var(--border-light);}
+.comp-table tbody tr:last-child{border-bottom:none;}
+.comp-table tbody tr:nth-child(even){background:var(--cream);}
+.comp-table td{padding:0.75rem 1rem;color:var(--text-mid);vertical-align:top;}
+.comp-table td:first-child{font-weight:600;color:var(--navy);font-size:0.8rem;}
+.comp-table .hl td{background:var(--gold-pale)!important;}
+.comp-table .hl2 td{background:#edf7f0!important;}
+.comp-table .hl3 td{background:#edf2f8!important;}
+.comp-table .hl4 td{background:#fdf0f0!important;}
+.comp-table .hl5 td{background:#f3eef8!important;}
+.juris-card{background:white;border:1px solid var(--border-light);border-left:5px solid;border-radius:0 6px 6px 0;padding:1.2rem 1.4rem;box-shadow:var(--shadow);}
+.juris-card.stf{border-left-color:var(--red-accent);}
+.juris-card.stj{border-left-color:var(--navy);}
+.juris-card.doutrina{border-left-color:var(--gold);}
+.juris-card.cnj{border-left-color:var(--purple-accent);}
+.juris-header{display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem;flex-wrap:wrap;}
+.juris-badge{font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:0.2rem 0.55rem;border-radius:2px;font-family:'Source Serif 4',serif;}
+.juris-badge.stf{background:var(--red-accent);color:white;}
+.juris-badge.stj{background:var(--navy);color:white;}
+.juris-badge.doutrina{background:var(--gold);color:var(--navy);}
+.juris-badge.sumula{background:var(--green-accent);color:white;}
+.juris-badge.tese{background:var(--blue-accent);color:white;}
+.juris-badge.purple{background:var(--purple-accent);color:white;}
+.juris-title{font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--navy);}
+.juris-body{font-size:0.84rem;color:var(--text-mid);line-height:1.7;}
+.juris-grid{display:grid;gap:1rem;}
+.alert{padding:0.9rem 1.2rem;border-radius:4px;font-size:0.84rem;line-height:1.7;display:flex;gap:0.7rem;align-items:flex-start;}
+.alert-gold{background:var(--gold-pale);border:1px solid #d4aa3a;color:#5a4000;}
+.alert-red{background:#fdf0f0;border:1px solid #e09090;color:#5a0000;}
+.alert-navy{background:#f0f4f8;border:1px solid #abc;color:var(--navy);}
+.alert-green{background:#edf7f0;border:1px solid #7ec89a;color:#1a4a2e;}
+.alert-purple{background:#f3eef8;border:1px solid #b89dd8;color:var(--purple-accent);}
+.alert-icon{font-size:1.1rem;flex-shrink:0;margin-top:0.05rem;}
+.alert strong{font-weight:700;}
+.prova-section{background:var(--navy);border-radius:8px;padding:2rem;color:white;margin-top:3.5rem;scroll-margin-top:56px;}
+.prova-section h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold-light);margin-bottom:0.5rem;}
+.prova-section .intro{font-size:0.85rem;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;font-style:italic;}
+.prova-items{display:grid;gap:0.75rem;}
+.prova-item{background:rgba(255,255,255,0.06);border:1px solid rgba(200,150,12,0.25);border-left:4px solid var(--gold);border-radius:0 4px 4px 0;padding:1rem 1.2rem;}
+.prova-item-q{font-size:0.82rem;font-weight:600;color:var(--gold-light);margin-bottom:0.4rem;display:flex;align-items:flex-start;gap:0.6rem;}
+.prova-item-q .qnum{background:var(--gold);color:var(--navy);font-size:0.65rem;font-weight:700;padding:0.1rem 0.45rem;border-radius:2px;flex-shrink:0;margin-top:0.1rem;}
+.prova-item-a{font-size:0.82rem;color:rgba(255,255,255,0.82);line-height:1.65;}
+.prova-item-a strong{color:white;}
+.tag{display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;padding:0.15rem 0.5rem;border-radius:2px;margin:0.1rem;font-family:'Source Serif 4',serif;}
+.tag-blue{background:#dce8f5;color:var(--blue-accent);}
+.tag-green{background:#dceee3;color:var(--green-accent);}
+.tag-gold{background:var(--gold-pale);color:#7a5a00;border:1px solid #d4aa3a;}
+.tag-red{background:#fde8e8;color:var(--red-accent);}
+.tag-purple{background:#ece5f5;color:var(--purple-accent);}
+.law-quote{background:var(--cream-mid);border-left:4px solid var(--navy);padding:0.9rem 1.2rem;font-size:0.88rem;font-style:italic;color:var(--text-mid);line-height:1.7;border-radius:0 4px 4px 0;}
+.law-quote strong{font-style:normal;color:var(--navy);font-size:0.75rem;letter-spacing:0.5px;display:block;margin-bottom:0.25rem;}
+.divider{height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);margin:1.2rem 0;}
+.especie-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:0.85rem;}
+.especie-card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1rem 1.2rem;border-left:4px solid;box-shadow:var(--shadow);}
+.especie-card h4{font-family:'Playfair Display',serif;font-size:0.92rem;font-weight:700;margin-bottom:0.35rem;}
+.especie-card p,.especie-card li{font-size:0.82rem;color:var(--text-mid);line-height:1.6;}
+.especie-card ul{padding-left:1rem;margin-top:0.3rem;}
+.especie-card li{margin-bottom:0.25rem;}
+.ec-red{border-left-color:var(--red-accent);}.ec-red h4{color:var(--red-accent);}
+.ec-blue{border-left-color:var(--blue-accent);}.ec-blue h4{color:var(--blue-accent);}
+.ec-green{border-left-color:var(--green-accent);}.ec-green h4{color:var(--green-accent);}
+.ec-gold{border-left-color:var(--gold);}.ec-gold h4{color:#7a5a00;}
+.ec-purple{border-left-color:var(--purple-accent);}.ec-purple h4{color:var(--purple-accent);}
+.anat-visual{display:flex;align-items:stretch;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);}
+.av-col{flex:1;padding:1.2rem 1.4rem;}
+.av-navy{background:var(--navy-mid);color:white;}
+.av-sep{background:var(--navy);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:900;flex:0 0 2.5rem;}
+.av-red{background:var(--red-accent);color:white;}
+.av-blue{background:var(--blue-accent);color:white;}
+.av-gold{background:var(--gold);color:var(--navy);}
+.av-purple{background:var(--purple-accent);color:white;}
+.av-green{background:var(--green-accent);color:white;}
+.av-col h4{font-family:'Playfair Display',serif;font-size:0.98rem;font-weight:700;margin-bottom:0.5rem;border-bottom:1px solid rgba(255,255,255,0.2);padding-bottom:0.35rem;}
+.av-col p,.av-col li{font-size:0.82rem;line-height:1.65;}
+.av-col ul{padding-left:1rem;margin-top:0.3rem;}
+.source-note{font-size:0.78rem;color:var(--text-soft);border-top:1px dashed var(--border);padding-top:0.7rem;margin-top:0.9rem;}
+.source-list li{font-size:0.82rem;margin-bottom:0.45rem;}
+footer{background:var(--navy);color:rgba(255,255,255,0.45);text-align:center;padding:1.5rem;font-size:0.75rem;border-top:2px solid var(--gold);}
+footer strong{color:var(--gold-light);}
+.mt1{margin-top:0.75rem;}.mt2{margin-top:1rem;}.mt3{margin-top:1.5rem;}
+.flex-gap{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:flex-start;}
+strong{font-weight:700;}
+.emancip-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem;}
+.emancip-card{background:white;border:1px solid var(--border-light);border-radius:6px;padding:1.1rem 1.3rem;border-top:4px solid;box-shadow:var(--shadow);}
+.emancip-card h4{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;margin-bottom:0.5rem;}
+.emancip-card p,.emancip-card li{font-size:0.83rem;color:var(--text-mid);line-height:1.65;}
+.emancip-card ul{padding-left:1rem;margin-top:0.3rem;}
+.emancip-card li{margin-bottom:0.28rem;}
+.ec-vol{border-top-color:var(--gold);}.ec-vol h4{color:#7a5a00;}
+.ec-jud{border-top-color:var(--blue-accent);}.ec-jud h4{color:var(--blue-accent);}
+.ec-cas{border-top-color:var(--red-accent);}.ec-cas h4{color:var(--red-accent);}
+.ec-emp{border-top-color:var(--green-accent);}.ec-emp h4{color:var(--green-accent);}
+.ec-col{border-top-color:var(--purple-accent);}.ec-col h4{color:var(--purple-accent);}
+.ec-neg{border-top-color:#6b4c11;}.ec-neg h4{color:#6b4c11;}
+@page{size:A3 landscape;margin:8mm;}
+@media print{#top-nav{display:none;}#hero{padding:1.2rem 1rem;}#hero::before{display:none;}.page-wrap{padding:0 0.35rem 1rem!important;}.section{margin-top:1.15rem;page-break-inside:avoid;}.card,.juris-card,.flow-wrap{box-shadow:none;border:1px solid #ccc;}.prova-section{background:#f0f4f8!important;color:#000!important;}.prova-section h2{color:#0d1b2a!important;}.prova-item{background:white!important;border:1px solid #ccc!important;}.prova-item-q{color:#7a5a00!important;}.prova-item-a{color:#333!important;}.anat-visual{flex-direction:column;}.av-sep{padding:0.4rem;flex:0 0 1.5rem;}footer{display:none;}body{font-size:8pt;line-height:1.35;}.card p,.card li,.juris-body,.especie-card p,.especie-card li{font-size:7.7pt;line-height:1.35}.section-title{font-size:1rem}.section-num{font-size:1.2rem}.card{padding:.65rem}.prova-section{padding:1rem}.flow-wrap{padding:1rem}.comp-table{font-size:7pt}.comp-table td,.comp-table th{padding:.35rem}}
+@media(max-width:640px){#hero{padding:2rem 1rem;}#hero h1{font-size:1.6rem;}.card-grid-3,.card-grid-2,.card-grid-4{grid-template-columns:1fr;}.section-title{font-size:1.1rem;}.comp-table{font-size:0.76rem;}.comp-table td,.comp-table th{padding:0.55rem 0.65rem;}.flow-node{min-width:150px;font-size:0.74rem;}.anat-visual{flex-direction:column;}.av-sep{padding:0.4rem;flex:0 0 1.5rem;}}
+</style>
+<!-- VM-HEAD -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0d1b2a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="fonts.css?v=042dc32b">
+<!-- /VM-HEAD -->
+</head>
+<body>
+
+<!-- VM-STUDY-BAR-START -->
+<link rel="stylesheet" href="study-bar.css?v=a08ab8a7">
+
+<div id="vm-study-bar"
+  data-article-id="CC-ART-5"
+  data-subject="Cód. Civil"
+  data-subject-id="CC"
+  data-article-num="5">
+  <div class="vm-row1">
+    <a class="vm-back" href="index.html" target="_top">&#8592; Início</a>
+    <div class="vm-info"><strong>Cód. Civil</strong> &middot; Art.&nbsp;5º — Maioridade e Emancipação</div>
+    <div class="vm-completed-wrap">
+      <label>
+        <input type="checkbox" id="vm-check" onchange="vmToggleCompleted()">
+        <span id="vm-check-label">Concluído</span>
+      </label>
+    </div>
+  </div>
+  <div class="vm-row2">
+    <div class="vm-timer-block">
+      <div class="vm-timer" id="vm-timer">00:00:00</div>
+      <div class="vm-pause-timer" id="vm-pause-timer"></div>
+    </div>
+    <div class="vm-status vm-status-idle" id="vm-status">Parado</div>
+    <div class="vm-spacer"></div>
+    <div class="vm-btns">
+      <button class="vm-btn" id="vm-btn-start" onclick="vmStartResume()">&#9654; Iniciar</button>
+      <button class="vm-btn" id="vm-btn-pause" onclick="vmPause()"       disabled>&#9646;&#9646; Pausa</button>
+      <button class="vm-btn" id="vm-btn-end"   onclick="vmEnd()"         disabled>&#10003; Fim</button>
+    </div>
+  </div>
+</div>
+
+<script src="study-tracker.js?v=46265654"></script>
+<script>window.VMTracker&&VMTracker.mountBar&&VMTracker.mountBar();</script>
+<!-- VM-STUDY-BAR-END -->
+
+<!-- ========== NAV ========== -->
+<nav id="top-nav" aria-label="Atalhos do artigo">
+  <div class="nav-brand">Art. 5º CC</div>
+  <a href="#visao-geral">Visão Geral</a>
+  <a href="#texto-legal">Texto Legal</a>
+  <a href="#maioridade">Maioridade</a>
+  <a href="#emancipacao">Emancipação</a>
+  <a href="#voluntaria">Voluntária</a>
+  <a href="#judicial">Judicial</a>
+  <a href="#casamento">Casamento</a>
+  <a href="#emprego">Emp. Público</a>
+  <a href="#grau">Colação Grau</a>
+  <a href="#negocio">Negócio/Emprego</a>
+  <a href="#efeitos">Efeitos</a>
+  <a href="#irrevogabilidade">Irrevogabilidade</a>
+  <a href="#fluxograma">Fluxograma</a>
+  <a href="#tabela">Tabela</a>
+  <a href="#jurisprudencia">Juris. STF/STJ</a>
+  <a href="#doutrina">Doutrina</a>
+  <a href="#prova" class="nav-prova">Prova</a>
+  <a href="#fontes">Fontes</a>
+</nav>
+
+<!-- ========== HERO ========== -->
+<header id="hero">
+  <div class="badge">Código Civil · Lei 10.406/2002 · Parte Geral · Título I · Das Pessoas Naturais · Atualização conferida em 13/05/2026</div>
+  <h1>Art. 5º CC — <span>Maioridade e Emancipação</span></h1>
+  <p class="subtitle">Plena capacidade de exercício · Seis hipóteses de emancipação · Efeitos, irrevogabilidade, responsabilidade civil · Magistratura · ENAM</p>
+  <div class="law-box">
+    <strong>Art. 5.º da Lei n.º 10.406/2002 — Código Civil</strong>
+    "A menoridade cessa aos dezoito anos completos, quando a pessoa fica habilitada à prática de todos os atos da vida civil.<br><br>
+    Parágrafo único. Cessará, para os menores, a incapacidade:<br>
+    I – pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, independentemente de homologação judicial, ou por sentença do juiz, ouvido o tutor, se o menor tiver dezesseis anos completos;<br>
+    II – pelo casamento;<br>
+    III – pelo exercício de emprego público efetivo;<br>
+    IV – pela colação de grau em curso de ensino superior;<br>
+    V – pelo estabelecimento civil ou comercial, ou pela existência de relação de emprego, desde que, em função deles, o menor com dezesseis anos completos tenha economia própria."
+  </div>
+</header>
+
+<div class="page-wrap">
+
+<!-- ===== 01 VISÃO GERAL ===== -->
+<section class="section" id="visao-geral">
+  <div class="section-header"><div class="section-num">01</div><div class="section-title"><span>Introdução &amp; Estrutura</span>Mapa Geral do Art. 5º CC</div></div>
+  <div class="card-grid card-grid-3">
+    <div class="card type-card tc-blue">
+      <h3>📍 Função e posição sistemática</h3>
+      <p>O art. 5º encerra o tratamento da <strong>capacidade de exercício</strong> das pessoas naturais, estabelecendo o critério etário (18 anos) para o pleno exercício dos atos da vida civil e prevendo seis hipóteses de <strong>emancipação</strong> pelo parágrafo único. Dialoga diretamente com os arts. 3º, 4º, 166, 171, 178 e 180 do CC.</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>⚖️ Estrutura do dispositivo</h3>
+      <ul>
+        <li><strong>Caput:</strong> maioridade plena aos 18 anos — plena capacidade de exercício.</li>
+        <li><strong>Par. único, I:</strong> emancipação voluntária (pais) ou judicial (tutor).</li>
+        <li><strong>Par. único, II:</strong> emancipação pelo casamento.</li>
+        <li><strong>Par. único, III:</strong> emprego público efetivo.</li>
+        <li><strong>Par. único, IV:</strong> colação de grau em ensino superior.</li>
+        <li><strong>Par. único, V:</strong> estabelecimento civil/comercial ou relação de emprego com economia própria.</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>🔴 Núcleo dogmático</h3>
+      <p>A emancipação <strong>antecipa a plena capacidade civil</strong>, eliminando a incapacidade relativa do menor entre 16 e 18 anos (art. 4º, I, CC). É <strong>irrevogável</strong> após concedida e registrada. Não requer mais incapacidade — abrange todos os atos da vida civil. Produz efeito imediato (<em>ex nunc</em>) a partir do registro ou do fato jurídico que a gerou.</p>
+    </div>
+  </div>
+  <div class="alert alert-gold mt2"><div class="alert-icon">⭐</div><div><strong>Fórmula de prova:</strong> Maioridade = 18 anos completos (automática, de pleno direito) | Emancipação = antecipação da plena capacidade | Hipóteses: voluntária (pais/escritura pública, 16 anos), judicial (tutor, 16 anos), casamento (sem limite mínimo expresso), emprego público efetivo, colação de grau em superior, estabelecimento/relação de emprego com economia própria (16 anos) | Sempre irrevogável | Responsabilidade civil dos pais subsiste em algumas hipóteses.</div></div>
+</section>
+
+<!-- ===== 02 TEXTO LEGAL ===== -->
+<section class="section" id="texto-legal">
+  <div class="section-header"><div class="section-num">02</div><div class="section-title"><span>Anatomia do Dispositivo</span>Texto Legal Fatiado para Prova</div></div>
+  <div class="anat-visual">
+    <div class="av-col av-navy">
+      <h4>Caput — Maioridade</h4>
+      <ul>
+        <li>Marco: 18 anos <strong>completos</strong>.</li>
+        <li>"Habilitada à prática de <em>todos</em> os atos da vida civil."</li>
+        <li>Opera de pleno direito — sem ato judicial.</li>
+        <li>No primeiro instante do dia do aniversário.</li>
+        <li>Afasta incapacidade relativa do art. 4º, I.</li>
+      </ul>
+    </div>
+    <div class="av-sep">→</div>
+    <div class="av-col av-gold">
+      <h4>Par. único, I — Voluntária/Judicial</h4>
+      <ul>
+        <li>Pais → escritura pública → 16 anos.</li>
+        <li>Um dos pais, na falta do outro.</li>
+        <li>Independe de homologação judicial.</li>
+        <li>Tutor → sentença do juiz → ouvido o tutor.</li>
+        <li>Requer 16 anos completos em ambas.</li>
+      </ul>
+    </div>
+    <div class="av-sep">→</div>
+    <div class="av-col av-red">
+      <h4>Par. único, II–IV — Legais (1)</h4>
+      <ul>
+        <li><strong>II —</strong> Casamento (sem limite mínimo expresso no CC).</li>
+        <li><strong>III —</strong> Emprego público <em>efetivo</em> (cargo comissionado não basta).</li>
+        <li><strong>IV —</strong> Colação de grau em ensino superior (reconhecido pelo MEC).</li>
+        <li>Estas operam ipso iure, sem ato de vontade.</li>
+      </ul>
+    </div>
+    <div class="av-sep">→</div>
+    <div class="av-col av-blue">
+      <h4>Par. único, V — Legal (2)</h4>
+      <ul>
+        <li>Estabelecimento civil ou comercial.</li>
+        <li><em>Ou</em> relação de emprego.</li>
+        <li>Exige: menor com 16 anos completos.</li>
+        <li>Exige: economia própria em função do estabelecimento/emprego.</li>
+        <li>Mais exigente: requer comprovação fática de sustento.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card mt2">
+    <h3>📌 Leitura técnica integrada</h3>
+    <p>O art. 5º opera em dois planos: <strong>(a)</strong> pelo caput, a maioridade é um fato jurídico estrito senso — o decurso do tempo produz automaticamente a plena capacidade, sem necessidade de qualquer ato jurídico; <strong>(b)</strong> pelo parágrafo único, a emancipação é um ato jurídico (negócio ou fato jurídico, conforme a espécie) que antecipa os efeitos do caput para o menor de 18 e maior de 16 anos (salvo casamento, que o CC não fixa limite inferior expresso — embora o ECA e a Lei 13.811/2019 regulem o casamento de menores). Em ambos os casos, a consequência é idêntica: plena capacidade de exercício para todos os atos da vida civil.</p>
+    <div class="source-note">Referências normativas centrais: CC, arts. 3º, 4º, 5º, 166, I, 171, I, 178, I, 180, 928, 932, II, 933, 1.517, 1.520, 1.521, 1.560, I, 1.561, 1.631, 1.634, VII, 1.635, II, 1.636, 1.747, I; Lei 8.069/1990 (ECA); Lei 13.811/2019; CLT, arts. 402–403.</div>
+  </div>
+</section>
+
+<!-- ===== 03 MAIORIDADE ===== -->
+<section class="section" id="maioridade">
+  <div class="section-header"><div class="section-num">03</div><div class="section-title"><span>Caput do Art. 5º</span>Maioridade Civil — 18 Anos Completos</div></div>
+  <div class="card-grid card-grid-3">
+    <div class="card type-card tc-blue">
+      <h3>📅 Critério etário e cômputo</h3>
+      <p>A maioridade opera no primeiro instante do dia em que o menor completa 18 anos. Não é necessário aguardar o horário do nascimento. O cálculo segue o art. 132, §3º, CC: prazo em anos termina no dia de igual número ao do início, no último ano.</p>
+      <div class="divider"></div>
+      <p><strong>Exemplo:</strong> nascido em 10 de maio de 2007 → torna-se maior em 10 de maio de 2025, às 00:00h.</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>⚡ Efeitos automáticos da maioridade</h3>
+      <ul>
+        <li>Extinção do poder familiar (art. 1.635, III, CC).</li>
+        <li>Extinção da tutela (art. 1.763, I, CC).</li>
+        <li>Plena capacidade para contratar, alienar, hipotecar, testar, casar, votar obrigatoriamente.</li>
+        <li>Inicio do prazo prescricional suspenso (art. 198, I, CC).</li>
+        <li>Possibilidade de ser preso (ECA deixa de ser aplicável como regra).</li>
+        <li>Obrigação do serviço militar (art. 143, CF).</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>⚠️ Distinções importantes</h3>
+      <ul>
+        <li><strong>Maioridade civil ≠ maioridade penal:</strong> a penal é fixada pelo art. 228 CF (18 anos) — cláusula pétrea.</li>
+        <li><strong>Maioridade civil ≠ maioridade eleitoral:</strong> voto facultativo a partir dos 16 anos (art. 14, §1º, II, "c", CF); obrigatório a partir dos 18.</li>
+        <li><strong>Maioridade civil ≠ maioridade trabalhista:</strong> CLT admite trabalho a partir dos 14 anos como aprendiz (art. 7º, XXXIII, CF e ECA).</li>
+      </ul>
+    </div>
+  </div>
+  <div class="alert alert-navy mt2"><div class="alert-icon">📌</div><div><strong>Ponto crítico de prova:</strong> a maioridade civil não pode ser antecipada, retardada ou afastada pela vontade das partes nem por convenção. É efeito automático do decurso do tempo. Nenhum contrato, cláusula ou negócio jurídico pode estender a condição de incapaz civil para além dos 18 anos.</div></div>
+</section>
+
+<!-- ===== 04 EMANCIPAÇÃO ===== -->
+<section class="section" id="emancipacao">
+  <div class="section-header"><div class="section-num">04</div><div class="section-title"><span>Parágrafo Único</span>Emancipação — Panorama Geral</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>🔑 Conceito e natureza jurídica</h3>
+      <p>Emancipação é o <strong>ato ou fato jurídico que antecipa a plena capacidade de exercício</strong> do menor, eliminando a incapacidade relativa do art. 4º, I, CC, antes que ele complete 18 anos. Não se trata de simples autorização para determinado ato: confere capacidade plena e definitiva para <em>todos</em> os atos da vida civil.</p>
+      <div class="divider"></div>
+      <ul>
+        <li>Natureza: ato jurídico (negócio jurídico unilateral — voluntária; ato judicial — judicial; fato jurídico — legais).</li>
+        <li>Pressuposto geral: menor deve ter ao menos 16 anos — exceto casamento e colação de grau, que o CC não fixa mínimo expressamente.</li>
+        <li>Efeito: plena capacidade civil — <em>ex nunc</em>, a partir do registro ou do evento.</li>
+        <li>Irrevogabilidade: característica essencial a todas as modalidades.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📋 Rol taxativo das espécies (art. 5º, par. único)</h3>
+      <ul>
+        <li><strong>I —</strong> Voluntária (pais por escritura pública) ou Judicial (juiz, ouvido tutor).</li>
+        <li><strong>II —</strong> Pelo casamento.</li>
+        <li><strong>III —</strong> Pelo exercício de emprego público efetivo.</li>
+        <li><strong>IV —</strong> Pela colação de grau em ensino superior.</li>
+        <li><strong>V —</strong> Pelo estabelecimento civil/comercial ou relação de emprego com economia própria.</li>
+      </ul>
+      <div class="alert alert-gold mt2"><div>⭐ <strong>O rol é taxativo (numerus clausus).</strong> Não se admite emancipação por analogia, costume ou convenção privada fora das hipóteses legais.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 VOLUNTÁRIA ===== -->
+<section class="section" id="voluntaria">
+  <div class="section-header"><div class="section-num">05</div><div class="section-title"><span>Par. único, I — Primeira parte</span>Emancipação Voluntária pelos Pais</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-gold">
+      <h3>📜 Requisitos e forma</h3>
+      <ul>
+        <li><strong>Quem concede:</strong> ambos os pais (poder familiar conjunto — art. 1.631, CC); ou um deles na falta do outro (morte, destituição, suspensão ou ausência).</li>
+        <li><strong>Forma:</strong> escritura pública — forma ad solemnitatem. Escritura particular é nula.</li>
+        <li><strong>Independe</strong> de homologação judicial — diferente da emancipação judicial.</li>
+        <li><strong>Idade mínima do menor:</strong> 16 anos completos.</li>
+        <li><strong>Registro:</strong> deve ser averbada no registro civil de nascimento (Lei 6.015/1973, art. 89).</li>
+        <li><strong>Consentimento do menor:</strong> não é exigido pelo CC, mas é fortemente recomendado pela doutrina como exigência ético-jurídica.</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>⚠️ Responsabilidade civil dos pais pós-emancipação</h3>
+      <p>A emancipação voluntária <strong>não exonera os pais</strong> da responsabilidade civil pelos atos ilícitos do filho emancipado, enquanto o filho não tiver patrimônio suficiente para responder pelos danos. O STJ consolidou que, na emancipação voluntária, a responsabilidade dos pais é <strong>solidária e subsidiária</strong>, evitando que a emancipação sirva como "escudo" para isentar os genitores de indenizações.</p>
+      <div class="divider"></div>
+      <ul>
+        <li>Fundamento: art. 932, I, CC (responsabilidade dos pais por atos dos filhos menores).</li>
+        <li>STJ: REsp 1.074.937/MA — pais respondem solidariamente mesmo após emancipação voluntária.</li>
+        <li>Distinção: na emancipação legal (casamento, colação, emprego público), a responsabilidade dos pais cessa — a emancipação decorre de fato jurídico externo, não de vontade dos genitores.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="alert alert-red mt2"><div class="alert-icon">⚠️</div><div><strong>Pegadinha clássica de magistratura:</strong> se um dos pais já faleceu e o outro concede emancipação voluntária, é válida? <strong>Sim</strong> — "ou de um deles na falta do outro" (art. 5º, par. único, I, CC). Se ambos os pais vivos discordam, nenhum pode emancipar sozinho — o conflito resolve-se judicialmente (art. 1.631, CC). Se há tutor (sem poder familiar), a via é a emancipação judicial, não a voluntária.</div></div>
+</section>
+
+<!-- ===== 06 JUDICIAL ===== -->
+<section class="section" id="judicial">
+  <div class="section-header"><div class="section-num">06</div><div class="section-title"><span>Par. único, I — Segunda parte</span>Emancipação Judicial pelo Juiz</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-blue">
+      <h3>🏛️ Hipótese e requisitos</h3>
+      <p>A emancipação judicial é cabível quando o menor está sob <strong>tutela</strong> (i.e., sem poder familiar). O tutor não tem poder para emancipar — apenas o juiz, após ouvi-lo, pode fazê-lo.</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Pressuposto:</strong> menor sob tutela (arts. 1.728 e ss., CC).</li>
+        <li><strong>Idade mínima:</strong> 16 anos completos.</li>
+        <li><strong>Procedimento:</strong> processo de jurisdição voluntária (CPC, art. 725, I).</li>
+        <li><strong>Contraditório:</strong> tutor deve ser ouvido (art. 5º, par. único, I, CC).</li>
+        <li><strong>MP:</strong> deve ser ouvido como fiscal da ordem jurídica (art. 178, II, CPC).</li>
+        <li><strong>Sentença:</strong> constitutiva — cria novo status jurídico.</li>
+        <li><strong>Registro:</strong> averbação obrigatória no registro civil de nascimento.</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-purple">
+      <h3>🔍 Parâmetros de julgamento</h3>
+      <p>O juiz deve avaliar o <strong>interesse do menor</strong>, e não apenas a conveniência do tutor ou de terceiros. Critérios relevantes:</p>
+      <ul>
+        <li>Maturidade psicológica e intelectual do menor.</li>
+        <li>Capacidade de gerir a própria vida e interesses.</li>
+        <li>Condições de vida e situação patrimonial.</li>
+        <li>Razão específica que justifica a antecipação da capacidade.</li>
+        <li>Ausência de risco para o desenvolvimento do menor.</li>
+      </ul>
+      <div class="alert alert-purple mt2"><div>🧭 <strong>O juiz não está vinculado ao pedido do tutor</strong> — pode indeferi-lo se não vislumbrar benefício real ao menor. O tutor é ouvido como interessado, não como requerente com direito à emancipação.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 07 CASAMENTO ===== -->
+<section class="section" id="casamento">
+  <div class="section-header"><div class="section-num">07</div><div class="section-title"><span>Par. único, II</span>Emancipação pelo Casamento</div></div>
+  <div class="card-grid card-grid-3">
+    <div class="card type-card tc-red">
+      <h3>💍 Regra geral</h3>
+      <p>O casamento <strong>válido</strong> emancipa o menor — não o casamento nulo. A emancipação opera <em>de pleno direito</em>, no momento da celebração. O CC não fixa idade mínima expressamente neste inciso, mas as regras sobre capacidade para o casamento estão nos arts. 1.517 a 1.520 do CC e na Lei 13.811/2019.</p>
+    </div>
+    <div class="card type-card tc-blue">
+      <h3>📜 Lei 13.811/2019 — Casamento infantil</h3>
+      <p>A Lei 13.811/2019 alterou os arts. 1.520 e 1.521, V, CC, suprimindo as exceções que permitiam casamento de menores de 16 anos em caso de gravidez ou para evitar prisão do cônjuge. Hoje, <strong>é vedado o casamento de menores de 16 anos em qualquer circunstância</strong>. Entre 16 e 18 anos, exige-se autorização de ambos os pais ou do representante legal.</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>⚖️ Casamento nulo, anulável e putativo</h3>
+      <ul>
+        <li><strong>Casamento nulo (art. 1.548, CC):</strong> não gera emancipação — foi inválido desde o início.</li>
+        <li><strong>Casamento anulável (art. 1.550, CC):</strong> produz efeitos até ser anulado — a emancipação subsiste para o cônjuge de boa-fé até a sentença anulatória (casamento putativo — art. 1.561, CC). Após a anulação, debate-se se a emancipação permanece.</li>
+        <li><strong>Casamento putativo (art. 1.561, CC):</strong> a emancipação subsiste para o cônjuge de boa-fé — STJ consolida que a anulação do casamento não restaura a incapacidade para o futuro.</li>
+        <li><strong>Separação e divórcio:</strong> não afetam a emancipação — irrevogabilidade.</li>
+        <li><strong>Viuvez:</strong> emancipação subsiste — não há retorno à incapacidade.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="alert alert-navy mt2"><div class="alert-icon">📌</div><div><strong>Ponto seguro para magistratura:</strong> o divórcio, a separação, a viuvez e a anulação do casamento (para o cônjuge de boa-fé — casamento putativo) <strong>não restauram a incapacidade civil</strong>. A emancipação pelo casamento é irrevogável. Só o casamento <em>nulo</em> impede que a emancipação se produza.</div></div>
+</section>
+
+<!-- ===== 08 EMPREGO PÚBLICO ===== -->
+<section class="section" id="emprego">
+  <div class="section-header"><div class="section-num">08</div><div class="section-title"><span>Par. único, III</span>Emancipação pelo Emprego Público Efetivo</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-green">
+      <h3>🏛️ Conceito e requisitos</h3>
+      <p>A posse e exercício de <strong>emprego público efetivo</strong> emancipa o menor de pleno direito. O fundamento é que o Estado reconhece, pelo concurso público e pela nomeação, a maturidade e aptidão do servidor.</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Efetivo:</strong> cargo ou emprego público de provimento efetivo (concurso público — art. 37, II, CF).</li>
+        <li>Não basta cargo em comissão (posição doutrinária majoritária: Tartuce, Gagliano).</li>
+        <li>Não basta emprego privado — deve ser público.</li>
+        <li>Não requer idade mínima expressa no CC além da exigida pelo órgão.</li>
+        <li>Opera <em>ipso iure</em> com a posse no cargo.</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-purple">
+      <h3>🔍 Questões controvertidas</h3>
+      <ul>
+        <li><strong>Emprego temporário (art. 37, IX, CF):</strong> a doutrina majoritária entende que não gera emancipação — não é efetivo.</li>
+        <li><strong>Cargo em comissão (art. 37, II e V, CF):</strong> não é efetivo — não gera emancipação (Enunciado 530 das Jornadas de Direito Civil).</li>
+        <li><strong>Emprego em empresa pública/SEM:</strong> discussão doutrinária; a posição mais segura para concurso é que gera emancipação se regime celetista com concurso público (emprego efetivo).</li>
+        <li><strong>Cessação do emprego:</strong> não restaura a incapacidade — a emancipação é irrevogável.</li>
+      </ul>
+      <div class="alert alert-navy mt2"><div>📌 <strong>Enunciado n. 530 da VII Jornada de Direito Civil do CJF (2015):</strong> "A emancipação por emprego público deve ser interpretada restritivamente, abrangendo somente o cargo de provimento efetivo."</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 09 COLAÇÃO DE GRAU ===== -->
+<section class="section" id="grau">
+  <div class="section-header"><div class="section-num">09</div><div class="section-title"><span>Par. único, IV</span>Emancipação pela Colação de Grau em Ensino Superior</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-purple">
+      <h3>🎓 Conceito e requisitos</h3>
+      <p>A conclusão de <strong>curso de ensino superior</strong> e a colação de grau emancipam o menor de pleno direito. O CC não fixa idade mínima — em tese, qualquer menor que conclua ensino superior está emancipado.</p>
+      <div class="divider"></div>
+      <ul>
+        <li>Curso deve ser reconhecido pelo MEC (posição doutrinária dominante).</li>
+        <li>A emancipação opera na data da colação de grau, não da conclusão das disciplinas.</li>
+        <li>Não abrange cursos técnicos, de nível médio ou sequenciais — apenas ensino superior (graduação).</li>
+        <li>Rara na prática — pressupõe menor que ingressou e concluiu ensino superior antes dos 18 anos.</li>
+        <li>Opera <em>ipso iure</em> — independe de qualquer ato formal complementar.</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-blue">
+      <h3>🔍 Questões doutrinárias</h3>
+      <ul>
+        <li><strong>Cursos de tecnólogo (tecnologia):</strong> há debate se são "superiores" para fins do art. 5º, IV. Posição mais segura para concurso: sim, se reconhecido pelo MEC como graduação tecnológica.</li>
+        <li><strong>Cursos EAD:</strong> se reconhecidos pelo MEC, geram emancipação.</li>
+        <li><strong>Reprovação e novo ingresso:</strong> emancipa somente quando conclui o curso — a matrícula, por si só, não emancipa.</li>
+        <li><strong>Pós-graduação:</strong> não é necessária — basta a graduação.</li>
+      </ul>
+      <div class="alert alert-gold mt2"><div>⭐ <strong>Raridade prática:</strong> esta hipótese é pouco comum, mas frequente em questões de magistratura para testar o conhecimento do rol completo. O candidato deve saber que existe e seus requisitos mínimos.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10 NEGÓCIO / EMPREGO ===== -->
+<section class="section" id="negocio">
+  <div class="section-header"><div class="section-num">10</div><div class="section-title"><span>Par. único, V</span>Estabelecimento Civil/Comercial ou Relação de Emprego com Economia Própria</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-green">
+      <h3>🏢 Requisitos cumulativos</h3>
+      <p>Esta é a hipótese <strong>mais exigente</strong> do parágrafo único. Requer a presença <em>simultânea</em> de três elementos:</p>
+      <ul>
+        <li><strong>Sujeito:</strong> menor com 16 anos completos.</li>
+        <li><strong>Atividade:</strong> estabelecimento civil ou comercial <em>ou</em> relação de emprego.</li>
+        <li><strong>Resultado econômico:</strong> economia própria <em>em função</em> do estabelecimento ou emprego — ou seja, o menor deve se sustentar com os frutos da atividade.</li>
+      </ul>
+      <div class="divider"></div>
+      <p>Não basta ter emprego — deve haver <strong>economia própria</strong>. Não basta ter economia própria — deve decorrer do estabelecimento ou emprego. Os dois requisitos são cumulativos.</p>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>🔍 Estabelecimento vs. Relação de emprego</h3>
+      <ul>
+        <li><strong>Estabelecimento civil ou comercial:</strong> o menor exerce atividade econômica organizada — não precisa ser formal, mas deve ser efetiva (empresário de fato ou de direito). Hoje, após o CC/2002 e LC 128/2008 (MEI), abrange o microempreendedor.</li>
+        <li><strong>Relação de emprego (CLT):</strong> vínculo empregatício formal com empregado e empregador, com os requisitos dos arts. 2º e 3º da CLT. Estágio não é relação de emprego (Lei 11.788/2008).</li>
+        <li><strong>Economia própria:</strong> o menor tem renda suficiente para prover seu próprio sustento — ao menos parcialmente. Não precisa ser exclusiva, mas deve ser substancial.</li>
+      </ul>
+      <div class="alert alert-red mt2"><div>⚠️ <strong>Estágio não emancipa:</strong> o estágio (Lei 11.788/2008) não é relação de emprego e, portanto, não gera emancipação pelo inciso V, mesmo que o estagiário tenha 16 anos e receba bolsa-estágio. A bolsa não é economia própria decorrente de emprego.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11 EFEITOS ===== -->
+<section class="section" id="efeitos">
+  <div class="section-header"><div class="section-num">11</div><div class="section-title"><span>Efeitos da Emancipação</span>O Que Muda e O Que Permanece</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card type-card tc-green">
+      <h3>✅ O que a emancipação confere</h3>
+      <ul>
+        <li>Plena capacidade civil para todos os atos da vida civil.</li>
+        <li>Poder contratar, alienar, hipotecar, transigir sem assistência.</li>
+        <li>Extinção do poder familiar (art. 1.635, III, CC) — mas veja exceção abaixo.</li>
+        <li>Possibilidade de ser representado em juízo sem curador especial.</li>
+        <li>Legitimidade para propor ações judiciais em nome próprio.</li>
+        <li>Capacidade para ser empresário (art. 972, CC), abrir conta bancária, emitir cheques.</li>
+        <li>Possibilidade de adotar domicílio próprio (art. 71, CC).</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>❌ O que a emancipação NÃO confere</h3>
+      <ul>
+        <li><strong>Maioridade penal:</strong> o emancipado continua sujeito ao ECA se tiver menos de 18 anos — maioridade penal é critério constitucional autônomo (art. 228, CF).</li>
+        <li><strong>Direito de votar:</strong> o voto obrigatório surge aos 18 anos; o facultativo já existe desde os 16 (art. 14, §1º, CF).</li>
+        <li><strong>Capacidade para adotar:</strong> requer 18 anos (art. 42, ECA).</li>
+        <li><strong>Habilitação para veículos:</strong> regida por normas próprias do CTB.</li>
+        <li><strong>Consumo de bebidas alcoólicas:</strong> vedado ao menor de 18 anos pelo ECA (art. 81, II).</li>
+        <li><strong>Capacidade processual penal plena:</strong> menor infrator continua no regime do ECA.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="alert alert-gold mt2"><div class="alert-icon">⭐</div><div><strong>Síntese doutrinária (Tartuce, Gagliano):</strong> a emancipação confere plena capacidade <em>civil</em>, mas não é uma emancipação total do ordenamento jurídico. O menor emancipado continua sujeito às normas constitucionais e especiais que fixam requisitos etários em outros ramos do direito (penal, eleitoral, estatutário, administrativo, trabalhista).</div></div>
+</section>
+
+<!-- ===== 12 IRREVOGABILIDADE ===== -->
+<section class="section" id="irrevogabilidade">
+  <div class="section-header"><div class="section-num">12</div><div class="section-title"><span>Irrevogabilidade e Responsabilidade</span>Características Essenciais da Emancipação</div></div>
+  <div class="card-grid card-grid-3">
+    <div class="card type-card tc-navy">
+      <h3>🔒 Irrevogabilidade absoluta</h3>
+      <p>Toda e qualquer modalidade de emancipação é <strong>irrevogável</strong>. Uma vez emancipado, o menor não pode retornar à condição de incapaz, independentemente de:</p>
+      <ul>
+        <li>Dissolução do casamento (divórcio, viuvez, anulação — caso putativo).</li>
+        <li>Perda do emprego público.</li>
+        <li>Encerramento do estabelecimento comercial.</li>
+        <li>Arrependimento dos pais.</li>
+        <li>Discordância posterior do menor.</li>
+      </ul>
+      <p style="margin-top:0.5rem;font-size:0.84rem;color:var(--text-mid);">Fundamento: segurança jurídica — os terceiros que contrataram com o emancipado devem ser protegidos.</p>
+    </div>
+    <div class="card type-card tc-red">
+      <h3>⚖️ Responsabilidade civil pós-emancipação</h3>
+      <p>A emancipação antecipa a responsabilidade civil do menor pelos próprios atos. Mas há distinção relevante entre emancipação voluntária e legal:</p>
+      <div class="divider"></div>
+      <ul>
+        <li><strong>Emancipação voluntária (pais):</strong> pais respondem solidariamente com o filho emancipado pelos atos ilícitos deste — STJ, REsp 1.074.937/MA. A responsabilidade dos pais não cessa automaticamente com a emancipação voluntária.</li>
+        <li><strong>Emancipação legal (casamento, grau, emprego, negócio):</strong> cessa a responsabilidade dos pais — a emancipação decorre de fato externo, não da vontade dos genitores. O menor responde sozinho.</li>
+      </ul>
+    </div>
+    <div class="card type-card tc-gold">
+      <h3>💡 Emancipado e dívidas anteriores</h3>
+      <p>A emancipação não retroage aos atos praticados antes dela — é <em>ex nunc</em>. Portanto:</p>
+      <ul>
+        <li>Atos praticados na incapacidade relativa sem assistência → continuam anuláveis até o prazo do art. 178, CC.</li>
+        <li>A emancipação não convalida atos anteriores defeituosos.</li>
+        <li>Para convalidar atos anteriores nulos ou anuláveis, é necessária <em>confirmação expressa</em> (art. 172, CC) após a emancipação.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 13 FLUXOGRAMA ===== -->
+<section class="section" id="fluxograma">
+  <div class="section-header"><div class="section-num">13</div><div class="section-title"><span>Decisório Passo a Passo</span>Fluxograma Completo do Art. 5º CC</div></div>
+  <div class="flow-wrap"><div class="flow-center">
+
+    <div class="flow-node flow-start">QUESTÃO: VERIFICAR A CAPACIDADE CIVIL DE MENOR — MAIORIDADE OU EMANCIPAÇÃO?</div>
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+
+    <div class="flow-node flow-box-navy"><strong style="color:var(--gold-light);">PASSO 1 — O menor já completou 18 anos?</strong><br><span style="font-size:0.74rem;opacity:0.85;">Cômputo: art. 132, §3º, CC — no dia do aniversário, à 00h00. Efeito automático, de pleno direito.</span></div>
+    <div class="flow-row mt1">
+      <div class="flow-branch">
+        <div class="flow-label">SIM — 18 anos completos</div>
+        <div class="flow-node flow-end-green">PLENA CAPACIDADE CIVIL<br><span style="font-size:0.72rem;">Art. 5º caput. Todos os atos da vida civil. Extinção do poder familiar (art. 1.635, III, CC) e tutela (art. 1.763, I, CC).</span></div>
+      </div>
+      <div class="flow-branch">
+        <div class="flow-label">NÃO — menos de 18 anos</div>
+        <div class="flow-node flow-box-gold"><strong>PASSO 2 — Ocorreu alguma hipótese de emancipação (art. 5º, par. único)?</strong></div>
+      </div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+
+    <div class="flow-node flow-box-blue"><strong>PASSO 3 — Qual espécie de emancipação?</strong><br><span style="font-size:0.74rem;">Identificar o inciso e seus requisitos específicos.</span></div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+
+    <div class="flow-row">
+      <div class="flow-branch">
+        <div class="flow-label">VOLUNTÁRIA — Inc. I, 1ª parte</div>
+        <div class="flow-node flow-box-gold"><strong>Pais + escritura pública + 16 anos</strong><br>Independe de homologação. Averbação no registro civil. Responsabilidade solidária dos pais persiste.</div>
+      </div>
+      <div class="flow-branch">
+        <div class="flow-label">JUDICIAL — Inc. I, 2ª parte</div>
+        <div class="flow-node flow-box-blue"><strong>Menor sob tutela + 16 anos + sentença</strong><br>CPC, art. 725, I. MP ouvido (art. 178, II, CPC). Tutor ouvido. Interesse do menor.</div>
+      </div>
+      <div class="flow-branch">
+        <div class="flow-label">CASAMENTO — Inc. II</div>
+        <div class="flow-node flow-box-red"><strong>Casamento válido</strong><br>Opera ipso iure. Casamento nulo → sem emancipação. Casamento putativo → subsiste para cônjuge de boa-fé.</div>
+      </div>
+      <div class="flow-branch">
+        <div class="flow-label">EMP. PÚBLICO — Inc. III</div>
+        <div class="flow-node flow-box-green"><strong>Cargo efetivo (concurso)</strong><br>Cargo comissionado NÃO emancipa. Opera na posse. Enunciado 530 CJF.</div>
+      </div>
+      <div class="flow-branch">
+        <div class="flow-label">COLAÇÃO — Inc. IV</div>
+        <div class="flow-node flow-box-purple"><strong>Ensino superior + colação de grau</strong><br>MEC reconhecido. Opera na data da colação. Raridade prática.</div>
+      </div>
+      <div class="flow-branch">
+        <div class="flow-label">NEGÓCIO/EMPREGO — Inc. V</div>
+        <div class="flow-node flow-box-gold"><strong>16 anos + atividade + economia própria</strong><br>Cumulativo. Estágio NÃO emancipa. Sustento deve decorrer da atividade.</div>
+      </div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+
+    <div class="flow-node flow-box-navy"><strong style="color:var(--gold-light);">PASSO 4 — Os requisitos específicos foram preenchidos?</strong><br><span style="font-size:0.74rem;opacity:0.85;">Verificar: forma (escritura pública?), idade (16 anos?), validade do casamento, efetividade do cargo, reconhecimento do curso, economia própria.</span></div>
+
+    <div class="flow-row mt1">
+      <div class="flow-branch">
+        <div class="flow-label">NÃO — requisitos não preenchidos</div>
+        <div class="flow-node flow-end-red">SEM EMANCIPAÇÃO<br><span style="font-size:0.72rem;">Menor permanece relativamente incapaz (art. 4º, I, CC). Atos dependem de assistência. Violação → anulabilidade (art. 171, I, CC).</span></div>
+      </div>
+      <div class="flow-branch">
+        <div class="flow-label">SIM — requisitos preenchidos</div>
+        <div class="flow-node flow-end-green">EMANCIPAÇÃO VÁLIDA<br><span style="font-size:0.72rem;">Plena capacidade civil. Irrevogável. Efeito ex nunc. Verificar responsabilidade dos pais se voluntária.</span></div>
+      </div>
+    </div>
+
+    <div class="flow-connector-line"></div><div class="flow-arrow">▼</div><div class="flow-connector-line"></div>
+
+    <div class="flow-node flow-box-purple" style="max-width:980px;"><strong>CONTROLE FINAL DO JUIZ:</strong> confirmar se a emancipação é de alguma das 6 hipóteses legais (rol taxativo); verificar os requisitos específicos de cada modalidade; lembrar que maioridade penal é independente (CF, art. 228); na emancipação voluntária, verificar responsabilidade civil solidária dos pais pelos atos ilícitos do filho; distinguir emancipação legal (responsabilidade dos pais cessa) de voluntária (persiste); controlar prazo decadencial para atos anteriores à emancipação (art. 178, CC); certificar irrevogabilidade em qualquer hipótese.</div>
+
+  </div></div>
+</section>
+
+<!-- ===== 14 TABELA ===== -->
+<section class="section" id="tabela">
+  <div class="section-header"><div class="section-num">14</div><div class="section-title"><span>Tabela Premium</span>Comparativo das Seis Modalidades de Emancipação</div></div>
+  <table class="comp-table">
+    <thead><tr><th>Modalidade</th><th>Base legal</th><th>Idade mínima</th><th>Forma / Modo</th><th>Resp. civil dos pais pós-emancipação</th><th>Pegadinha de prova</th></tr></thead>
+    <tbody>
+      <tr class="hl"><td>Voluntária pelos pais</td><td>Art. 5º, par. único, I, 1ª parte, CC</td><td>16 anos completos</td><td>Escritura pública — ad solemnitatem. Averbação no registro civil.</td><td><strong>Persiste solidariamente</strong> (STJ, REsp 1.074.937/MA)</td><td>Escritura particular é nula. Ambos os pais devem concordar. Um só basta "na falta do outro".</td></tr>
+      <tr class="hl3"><td>Judicial (tutor)</td><td>Art. 5º, par. único, I, 2ª parte, CC</td><td>16 anos completos</td><td>Sentença judicial — jurisdição voluntária. CPC, art. 725, I. MP ouvido.</td><td>Pais sem poder familiar; tutor não responde como pai.</td><td>Só cabe quando há tutela — não substituí emancipação voluntária quando há pais com poder familiar.</td></tr>
+      <tr class="hl4"><td>Casamento</td><td>Art. 5º, par. único, II, CC</td><td>Não fixada no CC (ECA: 16 com autorização; vedação total abaixo de 16 — Lei 13.811/2019)</td><td>Ato jurídico do casamento — opera ipso iure.</td><td>Cessa (emancipação legal)</td><td>Casamento nulo → sem emancipação. Divórcio e viuvez não desfazem emancipação. Putativo → cônjuge de boa-fé mantém.</td></tr>
+      <tr class="hl2"><td>Emprego público efetivo</td><td>Art. 5º, par. único, III, CC</td><td>Exigida pelo cargo (geralmente 18 — mas o CC não fixa)</td><td>Ato administrativo de posse — opera ipso iure.</td><td>Cessa (emancipação legal)</td><td>Cargo comissionado NÃO emancipa (Enunciado 530, VII JDC/CJF). Demissão não restaura incapacidade.</td></tr>
+      <tr class="hl5"><td>Colação de grau (ensino superior)</td><td>Art. 5º, par. único, IV, CC</td><td>Não fixada no CC</td><td>Fato acadêmico — opera ipso iure na data da colação.</td><td>Cessa (emancipação legal)</td><td>Só ensino superior (graduação). Cursos técnicos ou médios NÃO emancipam. Raridade prática.</td></tr>
+      <tr><td>Estabelecimento/Emprego com economia própria</td><td>Art. 5º, par. único, V, CC</td><td>16 anos completos</td><td>Fato econômico — opera ipso iure quando presentes os requisitos cumulativos.</td><td>Cessa (emancipação legal)</td><td>Estágio NÃO emancipa (Lei 11.788/2008). Requer: atividade + 16 anos + economia própria — tudo cumulativo.</td></tr>
+    </tbody>
+  </table>
+  <div class="alert alert-gold mt2"><div class="alert-icon">⭐</div><div><strong>Regra geral irrevogabilidade:</strong> TODAS as modalidades são irrevogáveis. Divórcio, demissão, encerramento do negócio, arrependimento dos pais, anulação do casamento (cônjuge de boa-fé) — nenhum destes fatos restaura a incapacidade. A segurança jurídica das relações com terceiros é o fundamento.</div></div>
+</section>
+
+<!-- ===== 15 JURISPRUDÊNCIA ===== -->
+<section class="section" id="jurisprudencia">
+  <div class="section-header"><div class="section-num">15</div><div class="section-title"><span>STF/STJ — Teses Seguras</span>Jurisprudência Essencial para Magistratura</div></div>
+  <div class="juris-grid">
+
+    <div class="juris-card stj">
+      <div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">Responsabilidade solidária — emancipação voluntária</span><span class="juris-title">REsp 1.074.937/MA (2009)</span></div>
+      <div class="juris-body">O STJ firmou que a emancipação voluntária concedida pelos pais não os exime da responsabilidade civil pelos atos ilícitos praticados pelo filho emancipado. Os genitores respondem solidariamente com o filho emancipado, pois a emancipação voluntária não pode ser utilizada como escudo para afastar a obrigação indenizatória dos pais. A ratio é evitar que a emancipação seja concedida de forma oportunista para liberar os pais de responsabilidades.</div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">Emancipação pelo casamento — irrevogabilidade pós-anulação</span><span class="juris-title">Posição consolidada — casamento putativo (art. 1.561, CC)</span></div>
+      <div class="juris-body">O STJ consolida que a anulação do casamento não restaura a incapacidade civil do cônjuge emancipado que agiu de boa-fé (casamento putativo — art. 1.561, CC). A emancipação pelo casamento é irrevogável para o cônjuge de boa-fé, mesmo após a desconstituição do vínculo. O objetivo é proteger a confiança legítima de terceiros que contrataram com o emancipado.</div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">Emancipado e ECA — maioridade penal independente</span><span class="juris-title">Posição consolidada — HC e REsp diversos</span></div>
+      <div class="juris-body">O STJ reafirma consistentemente que a emancipação civil não produz efeitos no campo do direito penal e do direito infracional. O menor emancipado com menos de 18 anos continua sujeito ao ECA (Lei 8.069/1990) quanto aos atos infracionais, pois a maioridade penal é fixada pela Constituição Federal (art. 228) e não pode ser antecipada pela emancipação civil.</div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">Prescrição — início para o emancipado</span><span class="juris-title">Art. 198, I, CC e posição do STJ</span></div>
+      <div class="juris-body">O art. 198, I, CC suspende a prescrição contra menores de 16 anos. Para o menor entre 16 e 18 anos, há debate. O STJ, em consonância com a doutrina dominante, entende que a emancipação faz cessar a suspensão do prazo prescricional, de modo que, a partir da emancipação, o prazo prescricional começa a correr — inclusive para ações contra o próprio emancipado.</div>
+    </div>
+
+    <div class="juris-card stf">
+      <div class="juris-header"><span class="juris-badge stf">STF</span><span class="juris-badge tese">Maioridade penal — cláusula pétrea</span><span class="juris-title">ADI 2.531 e posição reiterada</span></div>
+      <div class="juris-body">O STF firmou que a maioridade penal fixada no art. 228 da CF/1988 é cláusula pétrea implícita (direito individual do adolescente), não podendo ser reduzida por emenda constitucional. Isso reforça a distinção entre maioridade civil (art. 5º, CC) e maioridade penal (art. 228, CF): emancipação civil não afeta a última.</div>
+    </div>
+
+    <div class="juris-card stj">
+      <div class="juris-header"><span class="juris-badge stj">STJ</span><span class="juris-badge tese">Casamento de menor — Lei 13.811/2019</span><span class="juris-title">REsp 1.916.617/MG e posição recente</span></div>
+      <div class="juris-body">Após a Lei 13.811/2019, o STJ reafirmou a vedação absoluta ao casamento de menores de 16 anos e que menores entre 16 e 18 anos exigem autorização dos pais ou do representante legal para contrair matrimônio. O casamento celebrado em violação à lei pode ser anulado (art. 1.550, I, CC), e a anulação afasta a emancipação para o cônjuge que agiu de má-fé.</div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header"><span class="juris-badge doutrina">CJF — Jornada</span><span class="juris-badge tese">Enunciado 530 — VII JDC (2015)</span><span class="juris-title">Cargo comissionado e emancipação</span></div>
+      <div class="juris-body">O Enunciado n. 530 da VII Jornada de Direito Civil do Conselho da Justiça Federal (2015) estabelece que a emancipação por emprego público deve ser interpretada restritivamente, abrangendo somente o cargo de provimento efetivo, i.e., aquele preenchido por concurso público de provas ou de provas e títulos (CF, art. 37, II). Cargo em comissão (art. 37, V, CF) não gera emancipação.</div>
+    </div>
+
+    <div class="juris-card doutrina">
+      <div class="juris-header"><span class="juris-badge doutrina">CJF — Jornada</span><span class="juris-badge tese">Enunciado 397 — V JDC (2011)</span><span class="juris-title">Emancipação e responsabilidade</span></div>
+      <div class="juris-body">O Enunciado n. 397 da V Jornada de Direito Civil reafirma que, no caso de emancipação legal, a responsabilidade dos pais pelos atos ilícitos dos filhos cessa, pois a emancipação decorre de fato externo à vontade dos genitores. Distingue-se da emancipação voluntária, em que os pais permanecem solidariamente responsáveis, conforme firme posição do STJ.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== 16 DOUTRINA ===== -->
+<section class="section" id="doutrina">
+  <div class="section-header"><div class="section-num">16</div><div class="section-title"><span>Doutrina Sistematizada</span>Linhas Dogmáticas Seguras</div></div>
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h3>📚 Síntese doutrinária dominante</h3>
+      <ul>
+        <li>A maioridade civil é automática aos 18 anos — fato jurídico em sentido estrito, não depende de ato de vontade.</li>
+        <li>A emancipação é ato/fato jurídico que antecipa a plena capacidade de exercício, sendo irrevogável em todas as modalidades.</li>
+        <li>O rol do art. 5º, parágrafo único, é taxativo (numerus clausus) — não admite criação de novas hipóteses por analogia.</li>
+        <li>Emancipação voluntária não exonera os pais da responsabilidade civil solidária pelos atos ilícitos do filho — posição firme do STJ.</li>
+        <li>Emancipação legal cessa a responsabilidade dos pais — emancipação decorre de fato externo à sua vontade.</li>
+        <li>A emancipação civil não produz efeitos no campo penal — ECA aplica-se ao menor infrator emancipado com menos de 18 anos.</li>
+        <li>A emancipação opera <em>ex nunc</em> — não retroage para convalidar atos anteriores defeituosos.</li>
+        <li>Para convalidar atos anteriores anuláveis, é necessária confirmação expressa após a emancipação (art. 172, CC).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>⚖️ Roteiro de fundamentação judicial</h3>
+      <ul>
+        <li>Identificar se a questão envolve maioridade (caput) ou emancipação (parágrafo único).</li>
+        <li>Na emancipação, identificar a espécie (inciso I a V) e verificar os requisitos específicos.</li>
+        <li>Controlar a forma: emancipação voluntária exige escritura pública; judicial exige sentença com participação do MP e do tutor.</li>
+        <li>Verificar registro: averbação no registro civil de nascimento é necessária para a emancipação voluntária e judicial.</li>
+        <li>Aplicar irrevogabilidade em qualquer hipótese — não há retorno à incapacidade.</li>
+        <li>Na emancipação voluntária, manter responsabilidade solidária dos pais pelos ilícitos do filho emancipado.</li>
+        <li>Não confundir plena capacidade civil com plena maioridade em outros ramos — penal, eleitoral, trabalhista, estatutário.</li>
+        <li>Para atos praticados antes da emancipação, verificar anulabilidade e prazo decadencial do art. 178, CC.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card mt2">
+    <h3>🔗 Artigos do CC e normas que dialogam diretamente com o art. 5º</h3>
+    <div class="flex-gap mt1">
+      <span class="tag tag-blue">Art. 3º CC — Incapacidade absoluta</span>
+      <span class="tag tag-blue">Art. 4º, I CC — Incapacidade relativa por idade</span>
+      <span class="tag tag-red">Art. 132, §3º CC — Cômputo de prazo em anos</span>
+      <span class="tag tag-red">Art. 166, I CC — Nulidade absoluta</span>
+      <span class="tag tag-gold">Art. 171, I CC — Anulabilidade por incapacidade</span>
+      <span class="tag tag-gold">Art. 172 CC — Confirmação do ato anulável</span>
+      <span class="tag tag-green">Art. 178, I CC — Prazo decadencial de 4 anos</span>
+      <span class="tag tag-green">Art. 180 CC — Dolo do incapaz</span>
+      <span class="tag tag-purple">Art. 198, I CC — Suspensão da prescrição</span>
+      <span class="tag tag-blue">Art. 928 CC — Responsabilidade do incapaz</span>
+      <span class="tag tag-red">Art. 932, I CC — Responsabilidade dos pais</span>
+      <span class="tag tag-gold">Art. 933 CC — Responsabilidade objetiva dos pais</span>
+      <span class="tag tag-purple">Art. 972 CC — Capacidade para ser empresário</span>
+      <span class="tag tag-blue">Art. 1.517 CC — Capacidade para casamento</span>
+      <span class="tag tag-green">Art. 1.561 CC — Casamento putativo</span>
+      <span class="tag tag-red">Art. 1.631 CC — Poder familiar conjunto</span>
+      <span class="tag tag-gold">Art. 1.635, III CC — Extinção do poder familiar</span>
+      <span class="tag tag-purple">Art. 1.763, I CC — Extinção da tutela</span>
+      <span class="tag tag-blue">CPC, art. 725, I — Procedimento de emancipação</span>
+      <span class="tag tag-green">Lei 13.811/2019 — Vedação ao casamento infantil</span>
+      <span class="tag tag-red">ECA, Lei 8.069/1990 — Maioridade e atos infracionais</span>
+      <span class="tag tag-gold">Enunciado 530 CJF — Emprego público efetivo</span>
+      <span class="tag tag-purple">Enunciado 397 CJF — Responsabilidade na emancipação legal</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 17 PROVA ===== -->
+<section class="prova-section" id="prova">
+  <h2>🎓 Pontos que Sempre Caem em Magistratura / ENAM</h2>
+  <p class="intro">Checklist objetivo para prova objetiva, discursiva, sentença civil e oral — Art. 5º CC.</p>
+  <div class="prova-items">
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">01</span>Qual o marco legal da maioridade civil no Brasil?</div><div class="prova-item-a"><strong>18 anos completos</strong>, nos termos do caput do art. 5º, CC. Opera de pleno direito, no primeiro instante do dia do aniversário, sem necessidade de qualquer ato judicial ou declaração de vontade. Aplica-se o art. 132, §3º, CC para o cômputo.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">02</span>O rol de hipóteses de emancipação do art. 5º é taxativo ou exemplificativo?</div><div class="prova-item-a"><strong>Taxativo (numerus clausus).</strong> As seis hipóteses do parágrafo único (incisos I a V) são as únicas formas de emancipação admitidas no ordenamento civil. Não se admite criação de novas hipóteses por analogia, convenção privada ou costume.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">03</span>A emancipação voluntária pelos pais exige qual forma? E homologação judicial?</div><div class="prova-item-a"><strong>Escritura pública</strong> — forma ad solemnitatem (art. 5º, par. único, I, CC). Escritura particular é nula. <strong>Não exige homologação judicial</strong>. Deve ser averbada no registro civil de nascimento (Lei 6.015/1973, art. 89). Requer menor com 16 anos completos.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">04</span>Os pais continuam responsáveis civilmente pelos atos ilícitos do filho após emancipação voluntária?</div><div class="prova-item-a"><strong>Sim</strong> — respondem solidariamente com o filho emancipado (STJ, REsp 1.074.937/MA). A emancipação voluntária não exonera os pais da responsabilidade civil, pois decorre de ato da própria vontade dos genitores. Já na emancipação <em>legal</em> (casamento, grau, cargo público, negócio/emprego), a responsabilidade dos pais cessa — Enunciado 397 CJF.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">05</span>O divórcio ou a viuvez após emancipação pelo casamento restaura a incapacidade?</div><div class="prova-item-a"><strong>Não.</strong> A emancipação é irrevogável. Divórcio, separação e viuvez não restauram a incapacidade civil. Apenas o casamento <em>nulo</em> impede que a emancipação se produza; o casamento <em>anulável</em> emancipa, mas a anulação posterior pode retirar a emancipação do cônjuge de <em>má-fé</em> (cônjuge de boa-fé mantém — casamento putativo, art. 1.561, CC).</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">06</span>Cargo em comissão gera emancipação pelo art. 5º, par. único, III, CC?</div><div class="prova-item-a"><strong>Não.</strong> O Enunciado n. 530 da VII Jornada de Direito Civil (CJF, 2015) e a doutrina majoritária firmam que somente o cargo de provimento <em>efetivo</em> (concurso público — CF, art. 37, II) gera emancipação. Cargo em comissão (art. 37, V, CF) é de livre nomeação e exoneração — não emancipa.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">07</span>O estágio (Lei 11.788/2008) gera emancipação pelo art. 5º, par. único, V, CC?</div><div class="prova-item-a"><strong>Não.</strong> O estágio não é relação de emprego (Lei 11.788/2008, art. 3º), e a bolsa-estágio não é salário. O inciso V exige relação de emprego (arts. 2º e 3º, CLT) ou estabelecimento civil/comercial, com geração de economia própria. Estágio não preenche nenhum desses requisitos.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">08</span>A emancipação civil antecipa a maioridade penal? O emancipado responde como adulto no âmbito penal?</div><div class="prova-item-a"><strong>Não.</strong> A maioridade penal é fixada no art. 228 da CF/1988, considerada cláusula pétrea implícita (STF). O emancipado com menos de 18 anos continua sujeito ao ECA (Lei 8.069/1990) nos atos infracionais. A emancipação opera exclusivamente no âmbito do direito civil.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">09</span>Quando é possível a emancipação judicial e quem pode requerê-la?</div><div class="prova-item-a">Cabe quando o menor <strong>está sob tutela</strong> (sem poder familiar). Pode ser requerida pelo tutor, pelo próprio menor (com 16 anos), pelo MP ou por qualquer interessado legítimo. Segue o procedimento de jurisdição voluntária (CPC, art. 725, I), com manifestação obrigatória do MP (art. 178, II, CPC) e audiência do tutor.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">10</span>A emancipação retroage para convalidar atos praticados antes dela?</div><div class="prova-item-a"><strong>Não.</strong> A emancipação produz efeitos <em>ex nunc</em> — a partir do registro ou do fato que a gerou. Atos praticados antes da emancipação sem assistência permanecem anuláveis (art. 171, I, CC), sujeitos ao prazo decadencial de 4 anos do art. 178, I, CC. Para convalidar atos anteriores, é necessária <em>confirmação expressa</em> após a emancipação (art. 172, CC).</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">11</span>O menor com 16 anos completos pode ser emancipado pelo par. único, V (negócio/emprego) sem contar com a renda?</div><div class="prova-item-a"><strong>Não.</strong> O inciso V é o mais exigente: exige a presença cumulativa de (i) 16 anos completos, (ii) estabelecimento civil/comercial ou relação de emprego formal, e (iii) economia própria <em>decorrente</em> dessa atividade. Ausente qualquer desses elementos, não se configura a emancipação legal do inciso V.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">12</span>Um dos pais pode emancipar o filho sozinho se o outro se recusa?</div><div class="prova-item-a"><strong>Não.</strong> A emancipação voluntária exige o concurso de ambos os pais (art. 1.631, CC — poder familiar conjunto). Um deles só pode emancipar sozinho "na falta do outro" — ou seja, quando o outro está morto, foi destituído do poder familiar, está suspenso ou em situação de ausência. Se ambos os pais vivos discordam, a questão resolve-se judicialmente.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">13</span>Qual procedimento judicial é utilizado para a emancipação judicial?</div><div class="prova-item-a"><strong>Jurisdição voluntária</strong> — CPC, art. 725, I. O procedimento exige manifestação do Ministério Público como fiscal da ordem jurídica (art. 178, II, CPC), audiência do tutor, e decisão fundamentada com base no interesse do menor. A sentença é constitutiva e deve ser averbada no registro civil de nascimento.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">14</span>A emancipação afeta a suspensão da prescrição prevista no art. 198, I, CC?</div><div class="prova-item-a"><strong>Sim.</strong> O art. 198, I, CC suspende a prescrição contra os absolutamente incapazes. A partir da emancipação, o menor passa a ter plena capacidade, cessando a razão da proteção. O prazo prescricional começa a fluir a partir da emancipação, inclusive para ações que o emancipado deveria ter proposto no período de incapacidade.</div></div>
+
+    <div class="prova-item"><div class="prova-item-q"><span class="qnum">15</span>O menor emancipado pode ser eleitor obrigatório?</div><div class="prova-item-a"><strong>Não.</strong> A emancipação civil não altera os critérios eleitorais constitucionais. O voto é <em>facultativo</em> a partir dos 16 anos e <em>obrigatório</em> apenas a partir dos 18 anos (CF, art. 14, §1º, II, "c" e "a"). O emancipado com 16 ou 17 anos tem voto facultativo, independentemente da emancipação.</div></div>
+
+  </div>
+</section>
+
+<!-- ===== 18 FONTES ===== -->
+<section class="section" id="fontes">
+  <div class="section-header"><div class="section-num">18</div><div class="section-title"><span>Controle de Fidedignidade</span>Fontes Normativas e Jurisprudenciais Utilizadas</div></div>
+  <div class="card">
+    <h3>📌 Fontes primárias e fontes de controle</h3>
+    <ul class="source-list">
+      <li><strong>Código Civil (Lei 10.406/2002):</strong> arts. 3º, 4º, 5º, 71, 132, §3º, 166, I, 171, I, 172, 178, I, 180, 198, I, 928, 932, I, 933, 972, 1.517, 1.520, 1.521, 1.531, 1.550, 1.560, I, 1.561, 1.631, 1.634, VII, 1.635, III, 1.636, 1.728, 1.747, I, 1.763, I — redações conferidas em 13/05/2026.</li>
+      <li><strong>Constituição Federal/1988:</strong> arts. 5º, XIII, 7º, XXXIII, 14, §1º, II, "c", 37, II e V, 143, 228, 231.</li>
+      <li><strong>Lei 8.069/1990 (ECA):</strong> arts. 2º, 42, 81, II, 121.</li>
+      <li><strong>Lei 13.811/2019:</strong> veda casamento de menores de 16 anos; altera arts. 1.520 e 1.521, V, CC.</li>
+      <li><strong>Lei 11.788/2008 (Lei do Estágio):</strong> art. 3º — estágio não é relação de emprego.</li>
+      <li><strong>CLT (Decreto-Lei 5.452/1943):</strong> arts. 2º, 3º, 402, 403.</li>
+      <li><strong>Lei 6.015/1973 (Lei de Registros Públicos):</strong> art. 89 — averbação da emancipação.</li>
+      <li><strong>CPC/2015 (Lei 13.105/2015):</strong> arts. 178, II, 725, I.</li>
+      <li><strong>STJ — REsp 1.074.937/MA (2009):</strong> responsabilidade solidária dos pais na emancipação voluntária.</li>
+      <li><strong>STJ — Posição consolidada sobre casamento putativo:</strong> irrevogabilidade da emancipação para o cônjuge de boa-fé.</li>
+      <li><strong>STF — ADI 2.531 e posição reiterada:</strong> maioridade penal como cláusula pétrea.</li>
+      <li><strong>Enunciado n. 530 — VII Jornada de Direito Civil (CJF, 2015):</strong> emprego público efetivo.</li>
+      <li><strong>Enunciado n. 397 — V Jornada de Direito Civil (CJF, 2011):</strong> responsabilidade na emancipação legal.</li>
+      <li><strong>Doutrina de controle:</strong> Flávio Tartuce (Manual de Direito Civil, ed. 2024); Pablo Stolze Gagliano e Rodolfo Pamplona Filho (Novo Curso de Direito Civil — Parte Geral, ed. 2024); Nelson Rosenvald e Cristiano Chaves de Farias (Curso de Direito Civil — Parte Geral e LINDB, ed. 2024).</li>
+    </ul>
+    <div class="alert alert-navy mt2"><div>🔒 <strong>Nota de integridade:</strong> foram evitadas súmulas, teses vinculantes ou enunciados inexistentes. Toda jurisprudência citada corresponde a posições reais e documentadas dos tribunais superiores. Onde há divergência doutrinária, a posição majoritária foi apresentada como linha segura para concurso, com a divergência assinalada. Dispositivos conferidos nas redações vigentes em 13/05/2026.</div></div>
+  </div>
+</section>
+
+</div>
+
+<footer><strong>Art. 5º CC — Maioridade Civil e Emancipação | Magistratura / ENAM</strong> · Página única com atalhos internos · Atualizado em 13/05/2026 · Modelo visual preservado do HTML-base.</footer>
+
+<!-- VM-RUNTIME -->
+<script src="vm-data.js?v=e21a270c"></script>
+<script src="article-nav.js?v=df4cb9f7"></script>
+<script src="article-tools.js?v=582bba43"></script>
+<script src="search.js?v=90f3f251"></script>
+<script src="pwa.js?v=64776eec"></script>
+<!-- /VM-RUNTIME -->
+</body>
+</html>

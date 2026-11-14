@@ -1,0 +1,5501 @@
+{
+ "subjects": [
+  {
+   "id": "CP",
+   "name": "Código Penal",
+   "short": "CP",
+   "prefix": "DP",
+   "index": "index-penal.html",
+   "groups": [
+    {
+     "title": "Aplicação da Lei Penal",
+     "items": [
+      "DP-ART-1.html",
+      "DP-ART-2.html",
+      "DP-ART-3.html",
+      "DP-ART-4.html",
+      "DP-ART-5.html",
+      "DP-ART-6.html",
+      "DP-ART-7.html",
+      "DP-ART-8.html",
+      "DP-ART-9.html",
+      "DP-ART-10.html",
+      "DP-ART-11.html",
+      "DP-ART-12.html"
+     ]
+    },
+    {
+     "title": "Do Crime",
+     "items": [
+      "DP-ART-13.html",
+      "DP-ART-14.html",
+      "DP-ART-15.html",
+      "DP-ART-16.html",
+      "DP-ART-17.html",
+      "DP-ART-18.html",
+      "DP-ART-19.html",
+      "DP-ART-20.html",
+      "DP-ART-21.html",
+      "DP-ART-22.html",
+      "DP-ART-23.html",
+      "DP-ART-24.html",
+      "DP-ART-25.html"
+     ]
+    },
+    {
+     "title": "Imputabilidade Penal",
+     "items": [
+      "DP-ART-26.html",
+      "DP-ART-27.html",
+      "DP-ART-28.html"
+     ]
+    },
+    {
+     "title": "Concurso de Pessoas",
+     "items": [
+      "DP-ART-29.html",
+      "DP-ART-30.html",
+      "DP-ART-31.html"
+     ]
+    },
+    {
+     "title": "Das Penas",
+     "items": [
+      "DP-ART-32.html",
+      "DP-ART-33.html",
+      "DP-ART-34.html",
+      "DP-ART-35.html",
+      "DP-ART-36.html",
+      "DP-ART-37.html",
+      "DP-ART-38.html",
+      "DP-ART-39.html",
+      "DP-ART-40.html",
+      "DP-ART-41.html",
+      "DP-ART-42.html"
+     ]
+    },
+    {
+     "title": "Penas Restritivas de Direitos",
+     "items": [
+      "DP-ART-43.html",
+      "DP-ART-44.html",
+      "DP-ART-45.html",
+      "DP-ART-46.html",
+      "DP-ART-47.html",
+      "DP-ART-48.html"
+     ]
+    },
+    {
+     "title": "Pena de Multa",
+     "items": [
+      "DP-ART-49.html",
+      "DP-ART-50.html",
+      "DP-ART-51.html",
+      "DP-ART-52.html"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "CC",
+   "name": "Código Civil",
+   "short": "CC",
+   "prefix": "CC",
+   "index": "index-civil.html",
+   "groups": [
+    {
+     "title": "Parte Geral — Das Pessoas Naturais",
+     "items": [
+      "CC-ART-1.html",
+      "CC-ART-2.html",
+      "CC-ART-3.html",
+      "CC-ART-4.html",
+      "CC-ART-5.html",
+      "CC-ART-6.html",
+      "CC-ART-7.html",
+      "CC-ART-8.html",
+      "CC-ART-9.html",
+      "CC-ART-10.html"
+     ]
+    },
+    {
+     "title": "Direitos da Personalidade",
+     "items": [
+      "CC-ART-11.html",
+      "CC-ART-12.html",
+      "CC-ART-13.html",
+      "CC-ART-14.html",
+      "CC-ART-15.html",
+      "CC-ART-16.html",
+      "CC-ART-17.html",
+      "CC-ART-18.html",
+      "CC-ART-19.html",
+      "CC-ART-20.html",
+      "CC-ART-21.html"
+     ]
+    },
+    {
+     "title": "Da Ausência — Curadoria dos Bens do Ausente",
+     "items": [
+      "CC-ART-22.html",
+      "CC-ART-23.html",
+      "CC-ART-24.html",
+      "CC-ART-25.html"
+     ]
+    },
+    {
+     "title": "Da Ausência — Sucessão Provisória",
+     "items": [
+      "CC-ART-26.html",
+      "CC-ART-27.html",
+      "CC-ART-28.html",
+      "CC-ART-29.html",
+      "CC-ART-30.html",
+      "CC-ART-31.html",
+      "CC-ART-32.html",
+      "CC-ART-33.html",
+      "CC-ART-34.html",
+      "CC-ART-35.html",
+      "CC-ART-36.html"
+     ]
+    },
+    {
+     "title": "Da Ausência — Sucessão Definitiva",
+     "items": [
+      "CC-ART-37.html",
+      "CC-ART-38.html",
+      "CC-ART-39.html"
+     ]
+    },
+    {
+     "title": "Das Pessoas Jurídicas — Disposições Gerais",
+     "items": [
+      "CC-ART-40.html",
+      "CC-ART-41.html",
+      "CC-ART-42.html",
+      "CC-ART-43.html",
+      "CC-ART-44.html",
+      "CC-ART-45.html",
+      "CC-ART-46.html",
+      "CC-ART-47.html",
+      "CC-ART-48.html",
+      "CC-ART-49.html",
+      "CC-ART-49-A.html",
+      "CC-ART-50.html",
+      "CC-ART-51.html",
+      "CC-ART-52.html"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "CLT",
+   "name": "CLT",
+   "short": "CLT",
+   "prefix": "CLT",
+   "index": "index-clt.html",
+   "groups": [
+    {
+     "title": "Título I — Introdução (Arts. 1–12)",
+     "items": [
+      "CLT-ART-1.html",
+      "CLT-ART-2.html",
+      "CLT-ART-3.html",
+      "CLT-ART-4.html",
+      "CLT-ART-5.html",
+      "CLT-ART-6.html",
+      "CLT-ART-7.html",
+      "CLT-ART-8.html",
+      "CLT-ART-9.html",
+      "CLT-ART-10.html",
+      "CLT-ART-11.html",
+      "CLT-ART-12.html"
+     ]
+    },
+    {
+     "title": "Título II — Normas de Tutela do Trabalho (Arts. 13–223)",
+     "items": [
+      "CLT-ART-13.html",
+      "CLT-ART-29.html",
+      "CLT-ART-58.html",
+      "CLT-ART-59.html",
+      "CLT-ART-60.html",
+      "CLT-ART-61.html",
+      "CLT-ART-62.html",
+      "CLT-ART-66.html",
+      "CLT-ART-67.html",
+      "CLT-ART-71.html",
+      "CLT-ART-74.html",
+      "CLT-ART-75-A.html"
+     ]
+    },
+    {
+     "title": "Salário e Remuneração (Arts. 76–153)",
+     "items": [
+      "CLT-ART-76.html",
+      "CLT-ART-78.html",
+      "CLT-ART-457.html",
+      "CLT-ART-458.html",
+      "CLT-ART-459.html",
+      "CLT-ART-460.html",
+      "CLT-ART-461.html",
+      "CLT-ART-462.html",
+      "CLT-ART-467.html"
+     ]
+    },
+    {
+     "title": "Férias (Arts. 129–153)",
+     "items": [
+      "CLT-ART-129.html",
+      "CLT-ART-130.html",
+      "CLT-ART-133.html",
+      "CLT-ART-134.html",
+      "CLT-ART-137.html",
+      "CLT-ART-143.html",
+      "CLT-ART-145.html"
+     ]
+    },
+    {
+     "title": "Título IV — Contrato Individual de Trabalho (Arts. 442–510)",
+     "items": [
+      "CLT-ART-442.html",
+      "CLT-ART-442-B.html",
+      "CLT-ART-443.html",
+      "CLT-ART-444.html",
+      "CLT-ART-445.html",
+      "CLT-ART-447.html",
+      "CLT-ART-448.html",
+      "CLT-ART-452-A.html"
+     ]
+    },
+    {
+     "title": "Rescisão do Contrato (Arts. 477–507)",
+     "items": [
+      "CLT-ART-477.html",
+      "CLT-ART-477-A.html",
+      "CLT-ART-477-B.html",
+      "CLT-ART-480.html",
+      "CLT-ART-482.html",
+      "CLT-ART-483.html",
+      "CLT-ART-484-A.html",
+      "CLT-ART-487.html",
+      "CLT-ART-492.html"
+     ]
+    },
+    {
+     "title": "Título V — Organização Sindical (Arts. 511–610)",
+     "items": [
+      "CLT-ART-511.html",
+      "CLT-ART-513.html",
+      "CLT-ART-522.html",
+      "CLT-ART-543.html",
+      "CLT-ART-579.html"
+     ]
+    },
+    {
+     "title": "Título VI — Negociação Coletiva (Arts. 611–625)",
+     "items": [
+      "CLT-ART-611.html",
+      "CLT-ART-611-A.html",
+      "CLT-ART-611-B.html",
+      "CLT-ART-612.html",
+      "CLT-ART-616.html"
+     ]
+    },
+    {
+     "title": "Título X — Processo Judiciário do Trabalho (Arts. 763–910)",
+     "items": [
+      "CLT-ART-763.html",
+      "CLT-ART-769.html",
+      "CLT-ART-791.html",
+      "CLT-ART-791-A.html",
+      "CLT-ART-793-A.html",
+      "CLT-ART-796.html",
+      "CLT-ART-818.html",
+      "CLT-ART-840.html",
+      "CLT-ART-843.html",
+      "CLT-ART-852-A.html",
+      "CLT-ART-876.html",
+      "CLT-ART-878.html",
+      "CLT-ART-882.html",
+      "CLT-ART-899.html"
+     ]
+    },
+    {
+     "title": "Legislação Extravagante e Súmulas TST",
+     "items": [
+      "CLT-ART-SUMULAS.html",
+      "CLT-ART-LEI8036.html",
+      "CLT-ART-LEI12506.html"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "L9099",
+   "name": "Lei 9.099/95 (JECrim)",
+   "short": "Lei 9.099/95",
+   "prefix": "L9099",
+   "index": "index-jecrim.html",
+   "groups": [
+    {
+     "title": "Disposições Gerais — Juizados Criminais (Arts. 60–65)",
+     "items": [
+      "L9099-ART-60.html",
+      "L9099-ART-61.html",
+      "L9099-ART-62.html",
+      "L9099-ART-63.html",
+      "L9099-ART-64.html",
+      "L9099-ART-65.html"
+     ]
+    }
+   ]
+  }
+ ],
+ "articles": {
+  "DP-ART-1.html": {
+   "subject": "CP",
+   "label": "Art. 1º - Anterioridade",
+   "group": "Aplicação da Lei Penal",
+   "num": "1",
+   "title": "Art. 1° do Código Penal — Fluxograma Completo",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "tab-fluxo",
+     "title": "tab-fluxo"
+    },
+    {
+     "id": "tab-doutrina",
+     "title": "tab-doutrina"
+    },
+    {
+     "id": "tab-norma",
+     "title": "tab-norma"
+    },
+    {
+     "id": "tab-stf",
+     "title": "tab-stf"
+    },
+    {
+     "id": "tab-stj",
+     "title": "tab-stj"
+    },
+    {
+     "id": "tab-prova",
+     "title": "📌 Questões de Alta Incidência — Art. 1° do CP"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-2.html": {
+   "subject": "CP",
+   "label": "Art. 2º - Lei no Tempo",
+   "group": "Aplicação da Lei Penal",
+   "num": "2",
+   "title": "Art. 2° do CP — Lei Penal no Tempo",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "",
+     "title": "Art. 2° do CP — Lei Penal no Tempo"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-3.html": {
+   "subject": "CP",
+   "label": "Art. 3º - Lei Excepcional",
+   "group": "Aplicação da Lei Penal",
+   "num": "3",
+   "title": "Art. 3° do CP — Lei Excepcional e Temporária",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "",
+     "title": "Art. 3° do CP — Lei Excepcional e Temporária"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-4.html": {
+   "subject": "CP",
+   "label": "Art. 4º - Tempo do Crime",
+   "group": "Aplicação da Lei Penal",
+   "num": "4",
+   "title": "Art. 4° do CP — Tempo do Crime",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "",
+     "title": "Art. 4° do CP — Tempo do Crime"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-5.html": {
+   "subject": "CP",
+   "label": "Art. 5º - Territorialidade",
+   "group": "Aplicação da Lei Penal",
+   "num": "5",
+   "title": "Art. 5° do CP — Territorialidade",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "",
+     "title": "Art. 5° do CP — Territorialidade"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-6.html": {
+   "subject": "CP",
+   "label": "Art. 6º - Lugar do Crime",
+   "group": "Aplicação da Lei Penal",
+   "num": "6",
+   "title": "Art. 6º CP — Lugar do Crime",
+   "checked": "2025",
+   "checkedPrecision": "ano",
+   "checkedLabel": "Atualizado 2025",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Visão Geral do Artigo"
+    },
+    {
+     "id": "teorias",
+     "title": "As Três Teorias Clássicas"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma: Aplicação do Art. 6.º CP"
+    },
+    {
+     "id": "comparativo",
+     "title": "Art. 6.º CP vs. Art. 70 CPP vs. Art. 30 LCP"
+    },
+    {
+     "id": "aplicacoes",
+     "title": "Aplicações Práticas da Ubiquidade"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência e Teses dos Tribunais Superiores"
+    },
+    {
+     "id": "doutrina",
+     "title": "Principais Posições Doutrinárias"
+    },
+    {
+     "id": "extraterr",
+     "title": "Relação com Extraterritorialidade (Art. 7.º CP)"
+    },
+    {
+     "id": "crimes-internet",
+     "title": "Art. 6.º CP e Crimes pela Internet / Cibernéticos"
+    },
+    {
+     "id": "prova",
+     "title": "⚖️ Pontos Cobrados em Magistratura e ENAM"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-7.html": {
+   "subject": "CP",
+   "label": "Art. 7º - Extraterritorialidade",
+   "group": "Aplicação da Lei Penal",
+   "num": "7",
+   "title": "Art. 7° CP — Extraterritorialidade",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "s-visao",
+     "title": "Visão Geral — Extraterritorialidade (Art. 7° CP)"
+    },
+    {
+     "id": "s-incond",
+     "title": "Extraterritorialidade Incondicionada — Art. 7°, I + §1°"
+    },
+    {
+     "id": "s-cond",
+     "title": "Extraterritorialidade Condicionada — Art. 7°, II + §2°"
+    },
+    {
+     "id": "s-hipercond",
+     "title": "Extraterritorialidade Hipercondicionada — Art. 7°, §3°"
+    },
+    {
+     "id": "s-principios",
+     "title": "Princípios — Fundamentos da Extraterritorialidade"
+    },
+    {
+     "id": "s-comp",
+     "title": "Competência — Quem Julga no Brasil?"
+    },
+    {
+     "id": "s-juris",
+     "title": "Jurisprudência — STF e STJ"
+    },
+    {
+     "id": "s-prova",
+     "title": "Pontos Sempre Cobrados em Magistratura / ENAM"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-8.html": {
+   "subject": "CP",
+   "label": "Art. 8º - Pena Cumprida no Estrangeiro",
+   "group": "Aplicação da Lei Penal",
+   "num": "8",
+   "title": "Art. 8º CP — Pena Cumprida no Estrangeiro",
+   "checked": "2025",
+   "checkedPrecision": "ano",
+   "checkedLabel": "Atualizado 2025",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Visão Geral do Artigo"
+    },
+    {
+     "id": "hipoteses",
+     "title": "As Duas Hipóteses do Art. 8.º CP"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma de Aplicação do Art. 8.º CP"
+    },
+    {
+     "id": "comparativo",
+     "title": "Comparativo: Atenua × Computa × Detração Interna"
+    },
+    {
+     "id": "ne-bis",
+     "title": "Ne Bis In Idem: Pleno × Atenuado × Críticas"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência e Teses dos Tribunais Superiores"
+    },
+    {
+     "id": "doutrina",
+     "title": "Principais Posições Doutrinárias"
+    },
+    {
+     "id": "constitucional",
+     "title": "Dimensão Constitucional e de Direitos Humanos"
+    },
+    {
+     "id": "sistematica",
+     "title": "Sistemática dos Arts. 5.º a 9.º CP"
+    },
+    {
+     "id": "prova",
+     "title": "⚖️ Pontos Cobrados em Magistratura e ENAM"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-9.html": {
+   "subject": "CP",
+   "label": "Art. 9º - Eficácia de Sentença Estrangeira",
+   "group": "Aplicação da Lei Penal",
+   "num": "9",
+   "title": "Art. 9º CP — Eficácia da Sentença Estrangeira",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Visão Geral do Artigo"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal e Elementos Normativos"
+    },
+    {
+     "id": "efeitos",
+     "title": "Efeitos Autorizados pelo Art. 9.º CP"
+    },
+    {
+     "id": "requisitos",
+     "title": "Requisitos para a Homologação"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma: Aplicação do Art. 9.º CP e da TEP"
+    },
+    {
+     "id": "comparativo",
+     "title": "Art. 9.º CP × Art. 8.º CP × Art. 100 da Lei de Migração"
+    },
+    {
+     "id": "tep",
+     "title": "Transferência de Execução da Pena (TEP) — Art. 100 da Lei 13.445/2017"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência e Teses dos Tribunais Superiores"
+    },
+    {
+     "id": "caso-robinho",
+     "title": "O Caso Robinho — Análise Completa para Provas"
+    },
+    {
+     "id": "doutrina",
+     "title": "Principais Posições Doutrinárias sobre o Art. 9.º CP"
+    },
+    {
+     "id": "sistematica",
+     "title": "Art. 9.º CP no Sistema de Aplicação Espacial da Lei Penal"
+    },
+    {
+     "id": "prova",
+     "title": "⚖️ Pontos Cobrados em Magistratura e ENAM — Art. 9.º CP"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-10.html": {
+   "subject": "CP",
+   "label": "Art. 10 - Contagem de Prazo",
+   "group": "Aplicação da Lei Penal",
+   "num": "10",
+   "title": "Art. 10º CP — Contagem do Prazo Penal",
+   "checked": "2025",
+   "checkedPrecision": "ano",
+   "checkedLabel": "Atualizado 2025",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Visão Geral do Artigo"
+    },
+    {
+     "id": "regras",
+     "title": "As Duas Regras do Art. 10 CP"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma: Aplicação do Art. 10 CP"
+    },
+    {
+     "id": "comparativo",
+     "title": "Art. 10 CP × Art. 798 CPP × Art. 132 CC"
+    },
+    {
+     "id": "aplicacoes",
+     "title": "Aplicações Específicas do Art. 10 CP"
+    },
+    {
+     "id": "exemplos",
+     "title": "Exemplos Práticos de Aplicação do Art. 10 CP"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência e Teses dos Tribunais Superiores"
+    },
+    {
+     "id": "doutrina",
+     "title": "Principais Posições Doutrinárias"
+    },
+    {
+     "id": "sistematica",
+     "title": "Art. 10 CP na Sistemática do Código Penal"
+    },
+    {
+     "id": "prova",
+     "title": "⚖️ Pontos Cobrados em Magistratura e ENAM"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-11.html": {
+   "subject": "CP",
+   "label": "Art. 11 - Frações de Pena",
+   "group": "Aplicação da Lei Penal",
+   "num": "11",
+   "title": "Art. 11º CP — Frações de Dia e de Cruzeiro",
+   "checked": "2025",
+   "checkedPrecision": "ano",
+   "checkedLabel": "Atualizado 2025",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Visão Geral do Artigo"
+    },
+    {
+     "id": "hipoteses",
+     "title": "As Três Hipóteses do Art. 11 CP"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma: Aplicação do Art. 11 CP na Dosimetria"
+    },
+    {
+     "id": "dosimetria",
+     "title": "Art. 11 CP na Trifásica da Dosimetria"
+    },
+    {
+     "id": "comparativo",
+     "title": "Art. 11 CP × Art. 10 CP × Sistema de Dias-Multa"
+    },
+    {
+     "id": "exemplos",
+     "title": "Exemplos Práticos de Aplicação do Art. 11 CP"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência e Posições dos Tribunais Superiores"
+    },
+    {
+     "id": "doutrina",
+     "title": "Principais Posições Doutrinárias"
+    },
+    {
+     "id": "sistematica",
+     "title": "Art. 11 CP na Sistemática do Código Penal"
+    },
+    {
+     "id": "prova",
+     "title": "⚖️ Pontos Cobrados em Magistratura e ENAM"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-12.html": {
+   "subject": "CP",
+   "label": "Art. 12 - Legislação Especial",
+   "group": "Aplicação da Lei Penal",
+   "num": "12",
+   "title": "Art. 12º CP — Subsidiariedade das Regras Gerais",
+   "checked": "2025",
+   "checkedPrecision": "ano",
+   "checkedLabel": "Atualizado 2025",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Visão Geral do Artigo"
+    },
+    {
+     "id": "regras-gerais",
+     "title": "\"As Regras Gerais Deste Código\""
+    },
+    {
+     "id": "lei-especial",
+     "title": "\"Fatos Incriminados por Lei Especial\""
+    },
+    {
+     "id": "clausula-excecao",
+     "title": "\"Se Esta Não Dispuser de Modo Diverso\""
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma: Aplicação do Art. 12 CP"
+    },
+    {
+     "id": "leis-especiais",
+     "title": "Principais Leis Especiais × Regras Gerais do CP"
+    },
+    {
+     "id": "comparativo",
+     "title": "Art. 12 CP × Princípios Correlatos × Diplomas"
+    },
+    {
+     "id": "exemplos",
+     "title": "Exemplos Práticos de Aplicação do Art. 12 CP"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência e Posições dos Tribunais Superiores"
+    },
+    {
+     "id": "doutrina",
+     "title": "Principais Posições Doutrinárias"
+    },
+    {
+     "id": "sistematica",
+     "title": "Art. 12 CP na Sistemática do Ordenamento Penal Brasileiro"
+    },
+    {
+     "id": "prova",
+     "title": "⚖️ Pontos Cobrados em Magistratura e ENAM"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-13.html": {
+   "subject": "CP",
+   "label": "Art. 13 - Nexo Causal",
+   "group": "Do Crime",
+   "num": "13",
+   "title": "Art. 13º CP — Relação de Causalidade",
+   "checked": "2025",
+   "checkedPrecision": "ano",
+   "checkedLabel": "Atualizado 2025",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Visão Geral do Artigo"
+    },
+    {
+     "id": "caput",
+     "title": "Teoria da Equivalência das Condições (Conditio Sine Qua Non)"
+    },
+    {
+     "id": "teorias",
+     "title": "Teorias sobre o Nexo Causal"
+    },
+    {
+     "id": "concausas",
+     "title": "Concausas: Causas Absolutamente e Relativamente Independentes"
+    },
+    {
+     "id": "par1",
+     "title": "Superveniência de Causa Relativamente Independente"
+    },
+    {
+     "id": "par2",
+     "title": "Omissão Penalmente Relevante"
+    },
+    {
+     "id": "garantidor",
+     "title": "Posições de Garantidor (Fontes do Dever de Agir)"
+    },
+    {
+     "id": "imputacao",
+     "title": "Imputação Objetiva: Critérios de Exclusão da Imputação"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma: Análise da Relação de Causalidade — Art. 13 CP"
+    },
+    {
+     "id": "comparativo",
+     "title": "Concausas — Resumo das Consequências Jurídicas"
+    },
+    {
+     "id": "exemplos",
+     "title": "Exemplos Práticos do Art. 13 CP"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência e Posições dos Tribunais Superiores"
+    },
+    {
+     "id": "doutrina",
+     "title": "Principais Posições Doutrinárias"
+    },
+    {
+     "id": "sistematica",
+     "title": "Art. 13 CP na Sistemática do Código Penal"
+    },
+    {
+     "id": "prova",
+     "title": "⚖️ Pontos Cobrados em Magistratura e ENAM"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-14.html": {
+   "subject": "CP",
+   "label": "Art. 14 - Tentativa / Consumação",
+   "group": "Do Crime",
+   "num": "14",
+   "title": "Art. 14º CP — Crime Consumado e Tentativa",
+   "checked": "2025",
+   "checkedPrecision": "ano",
+   "checkedLabel": "Atualizado 2025",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Visão Geral do Artigo"
+    },
+    {
+     "id": "consumado",
+     "title": "Crime Consumado: \"Todos os Elementos de Sua Definição Legal\""
+    },
+    {
+     "id": "iter",
+     "title": "Iter Criminis"
+    },
+    {
+     "id": "tentativa",
+     "title": "Tentativa: Conceito, Elementos e Fundamento"
+    },
+    {
+     "id": "especies",
+     "title": "Espécies e Modalidades de Tentativa"
+    },
+    {
+     "id": "teorias",
+     "title": "Teorias sobre o Início dos Atos Executórios"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma: Iter Criminis e Aplicação do Art. 14 CP"
+    },
+    {
+     "id": "inadmite",
+     "title": "Crimes que NÃO Admitem Tentativa"
+    },
+    {
+     "id": "punicao",
+     "title": "Punição da Tentativa: Critérios e Dosimetria"
+    },
+    {
+     "id": "comparativo",
+     "title": "Art. 14 × Art. 15 × Art. 17 CP — Sistema Completo"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência e Posições dos Tribunais Superiores"
+    },
+    {
+     "id": "doutrina",
+     "title": "Principais Posições Doutrinárias"
+    },
+    {
+     "id": "sistematica",
+     "title": "Art. 14 CP na Sistemática do Código Penal"
+    },
+    {
+     "id": "prova",
+     "title": "⚖️ Pontos Cobrados em Magistratura e ENAM"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-15.html": {
+   "subject": "CP",
+   "label": "Art. 15 - Desistência e Arrependimento",
+   "group": "Do Crime",
+   "num": "15",
+   "title": "Art. 15º CP — Desistência Voluntária e Arrependimento Eficaz",
+   "checked": "2025",
+   "checkedPrecision": "ano",
+   "checkedLabel": "Atualizado 2025",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Visão Geral do Artigo"
+    },
+    {
+     "id": "desistencia",
+     "title": "Desistência Voluntária: \"Desiste de Prosseguir na Execução\""
+    },
+    {
+     "id": "arrependimento",
+     "title": "Arrependimento Eficaz: \"Impede que o Resultado se Produza\""
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo — Art. 14 × Art. 15 × Art. 17 CP"
+    },
+    {
+     "id": "frank",
+     "title": "Fórmula de Frank — Voluntariedade na Desistência"
+    },
+    {
+     "id": "comparativo",
+     "title": "Art. 14 × Art. 15 × Art. 16 × Art. 17 CP — Sistema Completo"
+    },
+    {
+     "id": "concurso",
+     "title": "Art. 15 CP no Concurso de Pessoas"
+    },
+    {
+     "id": "exemplos",
+     "title": "Exemplos Práticos do Art. 15 CP"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência dos Tribunais Superiores"
+    },
+    {
+     "id": "doutrina",
+     "title": "Principais Posições Doutrinárias"
+    },
+    {
+     "id": "sistematica",
+     "title": "Art. 15 CP na Sistemática do Código Penal"
+    },
+    {
+     "id": "prova",
+     "title": "⚖️ Pontos Cobrados em Magistratura e ENAM"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-16.html": {
+   "subject": "CP",
+   "label": "Art. 16 - Arrependimento Posterior",
+   "group": "Do Crime",
+   "num": "16",
+   "title": "Art. 16º CP — Arrependimento Posterior",
+   "checked": "2025",
+   "checkedPrecision": "ano",
+   "checkedLabel": "Atualizado 2025",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Visão Geral do Artigo"
+    },
+    {
+     "id": "conceito",
+     "title": "Conceito, Natureza e Distinções Fundamentais"
+    },
+    {
+     "id": "requisitos",
+     "title": "Os 4 Requisitos Cumulativos do Art. 16 CP"
+    },
+    {
+     "id": "sem-violencia",
+     "title": "Crimes Cometidos \"Sem Violência ou Grave Ameaça à Pessoa\""
+    },
+    {
+     "id": "reparacao",
+     "title": "Reparação do Dano ou Restituição da Coisa"
+    },
+    {
+     "id": "momento",
+     "title": "\"Até o Recebimento da Denúncia ou da Queixa\""
+    },
+    {
+     "id": "voluntariedade",
+     "title": "\"Por Ato Voluntário do Agente\""
+    },
+    {
+     "id": "quantum",
+     "title": "Quantum da Redução: 1/3 a 2/3 — Critérios"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma: Verificação e Aplicação do Art. 16 CP"
+    },
+    {
+     "id": "admite",
+     "title": "Crimes que Admitem e Não Admitem o Art. 16 CP"
+    },
+    {
+     "id": "comparativo",
+     "title": "Art. 16 × Art. 15, 2.ª Parte × Art. 65, III, \"b\" × Perdão Judicial"
+    },
+    {
+     "id": "exemplos",
+     "title": "Exemplos Práticos do Art. 16 CP"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência e Posições dos Tribunais Superiores"
+    },
+    {
+     "id": "doutrina",
+     "title": "Principais Posições Doutrinárias"
+    },
+    {
+     "id": "sistematica",
+     "title": "Art. 16 CP na Sistemática do Código Penal"
+    },
+    {
+     "id": "prova",
+     "title": "⚖️ Pontos Cobrados em Magistratura e ENAM"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-17.html": {
+   "subject": "CP",
+   "label": "Art. 17 - Crime Impossível",
+   "group": "Do Crime",
+   "num": "17",
+   "title": "Art. 17º CP — Crime Impossível",
+   "checked": "2025",
+   "checkedPrecision": "ano",
+   "checkedLabel": "Atualizado 2025",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Visão Geral do Artigo"
+    },
+    {
+     "id": "conceito",
+     "title": "Conceito, Denominações e Fundamento Teórico"
+    },
+    {
+     "id": "hipoteses",
+     "title": "Ineficácia do Meio e Impropriedade do Objeto"
+    },
+    {
+     "id": "absoluta-relativa",
+     "title": "Inidoneidade Absoluta × Inidoneidade Relativa"
+    },
+    {
+     "id": "teorias",
+     "title": "Teorias sobre o Crime Impossível"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma: Verificação do Crime Impossível × Tentativa"
+    },
+    {
+     "id": "flagrante",
+     "title": "Flagrante Preparado × Flagrante Esperado"
+    },
+    {
+     "id": "agente-provocador",
+     "title": "Agente Infiltrado × Agente Provocador"
+    },
+    {
+     "id": "comparativo",
+     "title": "Crime Impossível × Tentativa × Desistência Voluntária × Arrependimento Eficaz"
+    },
+    {
+     "id": "exemplos",
+     "title": "Exemplos Práticos do Art. 17 CP"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência e Posições dos Tribunais Superiores"
+    },
+    {
+     "id": "doutrina",
+     "title": "Principais Posições Doutrinárias"
+    },
+    {
+     "id": "sistematica",
+     "title": "Art. 17 CP na Sistemática do Código Penal e do CPP"
+    },
+    {
+     "id": "prova",
+     "title": "⚖️ Pontos Cobrados em Magistratura e ENAM"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-18.html": {
+   "subject": "CP",
+   "label": "Art. 18 - Dolo e Culpa",
+   "group": "Do Crime",
+   "num": "18",
+   "title": "Art. 18º CP — Dolo e Culpa",
+   "checked": "2025",
+   "checkedPrecision": "ano",
+   "checkedLabel": "Atualizado 2025",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Visão Geral do Artigo"
+    },
+    {
+     "id": "dolo",
+     "title": "Dolo: Conceito, Elementos e Teorias"
+    },
+    {
+     "id": "dolo-direto",
+     "title": "Dolo Direto: 1.º Grau e 2.º Grau"
+    },
+    {
+     "id": "dolo-eventual",
+     "title": "Dolo Eventual: Conceito, Teorias e Distinção da Culpa Consciente"
+    },
+    {
+     "id": "culpa",
+     "title": "Culpa: Conceito, Elementos e Fundamento"
+    },
+    {
+     "id": "culpa-consciente",
+     "title": "Culpa Consciente: Conceito e Distinção do Dolo Eventual"
+    },
+    {
+     "id": "modalidades-culpa",
+     "title": "Imprudência, Negligência e Imperícia"
+    },
+    {
+     "id": "culpa-inconsciente",
+     "title": "Culpa Inconsciente e Graus de Culpa"
+    },
+    {
+     "id": "preterintencao",
+     "title": "Dolo no Antecedente + Culpa no Consequente"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma: Identificação do Elemento Subjetivo — Dolo ou Culpa"
+    },
+    {
+     "id": "comparativo",
+     "title": "Dolo Direto × Dolo Eventual × Culpa Consciente × Culpa Inconsciente × Preterdolo"
+    },
+    {
+     "id": "exemplos",
+     "title": "Exemplos Práticos — Dolo e Culpa"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência sobre Dolo e Culpa"
+    },
+    {
+     "id": "doutrina",
+     "title": "Principais Posições Doutrinárias sobre Dolo e Culpa"
+    },
+    {
+     "id": "sistematica",
+     "title": "Art. 18 CP na Sistemática do Código Penal"
+    },
+    {
+     "id": "prova",
+     "title": "⚖️ Pontos Cobrados em Magistratura e ENAM"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-19.html": {
+   "subject": "CP",
+   "label": "Art. 19 - Responsabilidade pelo Resultado",
+   "group": "Do Crime",
+   "num": "19",
+   "title": "Art. 19º CP — Agravação pelo Resultado",
+   "checked": "2025",
+   "checkedPrecision": "ano",
+   "checkedLabel": "Atualizado 2025",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Visão Geral do Artigo"
+    },
+    {
+     "id": "conceito",
+     "title": "Conceito de Crime Qualificado pelo Resultado e Preterdolo"
+    },
+    {
+     "id": "estrutura",
+     "title": "Anatomia do Crime Preterdoloso"
+    },
+    {
+     "id": "requisitos",
+     "title": "Requisitos para Imputação do Resultado Agravador"
+    },
+    {
+     "id": "dolo-culpa",
+     "title": "Dolo ou Culpa no Resultado Agravador: Análise das Hipóteses"
+    },
+    {
+     "id": "tipos-penais",
+     "title": "Principais Crimes Qualificados pelo Resultado"
+    },
+    {
+     "id": "distincoes",
+     "title": "Distinções Cruciais: Preterdolo × Homicídio Doloso × Culposo"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma: Verificação da Imputação do Resultado Agravador (Art. 19 CP)"
+    },
+    {
+     "id": "hemofilia",
+     "title": "A Hemofilia e o Art. 19 CP: Previsibilidade do Resultado"
+    },
+    {
+     "id": "comparativo",
+     "title": "Art. 19 CP × Art. 18 CP × Art. 13 CP — Nexo Causal e Nexo Subjetivo"
+    },
+    {
+     "id": "exemplos",
+     "title": "Exemplos Práticos do Art. 19 CP"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência sobre o Art. 19 CP"
+    },
+    {
+     "id": "doutrina",
+     "title": "Principais Posições sobre o Art. 19 CP"
+    },
+    {
+     "id": "sistematica",
+     "title": "Art. 19 CP na Sistemática do Código Penal"
+    },
+    {
+     "id": "prova",
+     "title": "⚖️ Pontos Cobrados em Magistratura e ENAM"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-20.html": {
+   "subject": "CP",
+   "label": "Art. 20 - Erro de Tipo",
+   "group": "Do Crime",
+   "num": "20",
+   "title": "Art. 20º CP — Erro de Tipo",
+   "checked": "2025",
+   "checkedPrecision": "ano",
+   "checkedLabel": "Atualizado 2025",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Visão Geral do Artigo"
+    },
+    {
+     "id": "conceito",
+     "title": "Conceito, Espécies e Distinções Fundamentais"
+    },
+    {
+     "id": "evitavel-inevitavel",
+     "title": "Erro Evitável × Inevitável: Consequências Jurídicas"
+    },
+    {
+     "id": "par1",
+     "title": "Descriminantes Putativas: Erro sobre Excludentes de Ilicitude"
+    },
+    {
+     "id": "par2",
+     "title": "Erro Determinado por Terceiro — Autoria Mediata"
+    },
+    {
+     "id": "par3",
+     "title": "Erro sobre a Pessoa (Error in Persona)"
+    },
+    {
+     "id": "aberratio",
+     "title": "Aberratio Ictus: Erro na Execução"
+    },
+    {
+     "id": "teorias",
+     "title": "Teorias sobre as Descriminantes Putativas"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma: Análise do Erro e suas Consequências (Art. 20 CP)"
+    },
+    {
+     "id": "comparativo",
+     "title": "Art. 20 CP × Art. 21 CP × Art. 73 CP — Todos os Tipos de Erro"
+    },
+    {
+     "id": "exemplos",
+     "title": "Exemplos Práticos do Art. 20 CP"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência sobre o Art. 20 CP"
+    },
+    {
+     "id": "doutrina",
+     "title": "Principais Posições sobre o Art. 20 CP"
+    },
+    {
+     "id": "sistematica",
+     "title": "Art. 20 CP na Sistemática do Código Penal"
+    },
+    {
+     "id": "prova",
+     "title": "⚖️ Pontos Cobrados em Magistratura e ENAM"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-21.html": {
+   "subject": "CP",
+   "label": "Art. 21 - Erro de Proibição",
+   "group": "Do Crime",
+   "num": "21",
+   "title": "Art. 21º CP — Erro de Proibição",
+   "checked": "2025",
+   "checkedPrecision": "ano",
+   "checkedLabel": "Atualizado 2025",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Visão Geral do Artigo"
+    },
+    {
+     "id": "conceito",
+     "title": "Conceito de Erro de Proibição e Potencial Consciência da Ilicitude"
+    },
+    {
+     "id": "presuncao",
+     "title": "Desconhecimento da Lei × Erro sobre a Ilicitude — Distinção Crucial"
+    },
+    {
+     "id": "especies",
+     "title": "Espécies de Erro de Proibição"
+    },
+    {
+     "id": "evitavel-inevitavel",
+     "title": "Erro Inevitável × Evitável: Critérios e Consequências"
+    },
+    {
+     "id": "par-unico",
+     "title": "Parâmetro de Avaliação do Erro Evitável"
+    },
+    {
+     "id": "tipo-x-proibicao",
+     "title": "Erro de Tipo (Art. 20) × Erro de Proibição (Art. 21) — Quadro Definitivo"
+    },
+    {
+     "id": "culpabilidade",
+     "title": "Culpabilidade, Consciência da Ilicitude e Teorias do Dolo vs. Culpabilidade"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma: Análise do Erro de Proibição (Art. 21 CP)"
+    },
+    {
+     "id": "comparativo",
+     "title": "Art. 21 CP × Arts. 20, 22, 26, 65 — Sistema de Culpabilidade"
+    },
+    {
+     "id": "exemplos",
+     "title": "Exemplos Práticos do Art. 21 CP"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência sobre o Art. 21 CP"
+    },
+    {
+     "id": "doutrina",
+     "title": "Principais Posições sobre o Art. 21 CP"
+    },
+    {
+     "id": "sistematica",
+     "title": "Art. 21 CP na Sistemática do Código Penal"
+    },
+    {
+     "id": "prova",
+     "title": "⚖️ Pontos Cobrados em Magistratura e ENAM"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-22.html": {
+   "subject": "CP",
+   "label": "Art. 22 - Coação Irresistível e Obediência Hierárquica",
+   "group": "Do Crime",
+   "num": "22",
+   "title": "Art. 22º CP — Coação Irresistível e Obediência Hierárquica",
+   "checked": "2025",
+   "checkedPrecision": "ano",
+   "checkedLabel": "Atualizado 2025",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Visão Geral do Artigo"
+    },
+    {
+     "id": "conceito",
+     "title": "Exigibilidade de Conduta Diversa — Elemento da Culpabilidade"
+    },
+    {
+     "id": "coacao",
+     "title": "Coação Moral Irresistível: Conceito, Requisitos e Efeitos"
+    },
+    {
+     "id": "resistivel",
+     "title": "Coação Moral Resistível: Consequências e Dosimetria"
+    },
+    {
+     "id": "obediencia",
+     "title": "Obediência Hierárquica: Requisitos e Limites"
+    },
+    {
+     "id": "ordem-ilegal",
+     "title": "Ordem \"Não Manifestamente Ilegal\" — Análise Profunda"
+    },
+    {
+     "id": "autoria-mediata",
+     "title": "Autoria Mediata e Art. 22 CP: \"Só é Punível o Autor da Coação ou da Ordem\""
+    },
+    {
+     "id": "inexigibilidade",
+     "title": "Inexigibilidade de Conduta Diversa como Causa Supralegal de Exclusão da Culpabilidade"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma: Análise do Art. 22 CP — Coação e Obediência Hierárquica"
+    },
+    {
+     "id": "comparativo",
+     "title": "Art. 22 CP e Institutos Conexos — Sistema de Culpabilidade e Punibilidade"
+    },
+    {
+     "id": "exemplos",
+     "title": "Exemplos Práticos do Art. 22 CP"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência sobre o Art. 22 CP"
+    },
+    {
+     "id": "doutrina",
+     "title": "Principais Posições sobre o Art. 22 CP"
+    },
+    {
+     "id": "sistematica",
+     "title": "Art. 22 CP na Sistemática do Código Penal"
+    },
+    {
+     "id": "prova",
+     "title": "⚖️ Pontos Cobrados em Magistratura e ENAM"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-23.html": {
+   "subject": "CP",
+   "label": "Art. 23 - Excludentes de Ilicitude",
+   "group": "Do Crime",
+   "num": "23",
+   "title": "Art. 23º CP — Excludentes de Ilicitude",
+   "checked": "2025",
+   "checkedPrecision": "ano",
+   "checkedLabel": "Atualizado 2025",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Visão Geral — Excludentes de Ilicitude"
+    },
+    {
+     "id": "estado-necessidade",
+     "title": "Estado de Necessidade: Conceito, Requisitos e Teorias"
+    },
+    {
+     "id": "legitimadefesa",
+     "title": "Legítima Defesa: Conceito, Requisitos e Análise Profunda"
+    },
+    {
+     "id": "especies-ld",
+     "title": "Espécies de Legítima Defesa e Situações Especiais"
+    },
+    {
+     "id": "estrito-dever",
+     "title": "Estrito Cumprimento do Dever Legal"
+    },
+    {
+     "id": "exercicio-direito",
+     "title": "Exercício Regular de Direito e Causas Supralegais"
+    },
+    {
+     "id": "excesso",
+     "title": "Excesso Punível: Doloso e Culposo"
+    },
+    {
+     "id": "descriminantes",
+     "title": "Descriminantes Putativas e Teoria Limitada da Culpabilidade"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo — Art. 23 CP e Todas as Descriminantes"
+    },
+    {
+     "id": "comparativo",
+     "title": "Comparativo das Quatro Excludentes de Ilicitude"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência dos Tribunais Superiores"
+    },
+    {
+     "id": "doutrina",
+     "title": "Principais Posições Doutrinárias"
+    },
+    {
+     "id": "sistematica",
+     "title": "Art. 23 CP na Sistemática do Código Penal"
+    },
+    {
+     "id": "prova",
+     "title": "⚖️ Pontos Cobrados em Magistratura e ENAM"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-24.html": {
+   "subject": "CP",
+   "label": "Art. 24 - Estado de Necessidade",
+   "group": "Do Crime",
+   "num": "24",
+   "title": "Art. 24º CP — Estado de Necessidade",
+   "checked": "2025",
+   "checkedPrecision": "ano",
+   "checkedLabel": "Atualizado 2025",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Visão Geral do Artigo"
+    },
+    {
+     "id": "conceito",
+     "title": "Conceito, Natureza Jurídica e Teorias"
+    },
+    {
+     "id": "requisitos",
+     "title": "Requisitos Cumulativos do Estado de Necessidade"
+    },
+    {
+     "id": "proporcionalidade",
+     "title": "Proporcionalidade: Caput × §2.º e Critérios de Ponderação"
+    },
+    {
+     "id": "teorias",
+     "title": "Teorias Justificadoras e Consequências Práticas CP × CPM"
+    },
+    {
+     "id": "par1",
+     "title": "Dever Legal de Enfrentar o Perigo"
+    },
+    {
+     "id": "par2",
+     "title": "Estado de Necessidade Imperfeito — Causa de Diminuição de Pena"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma: Análise do Estado de Necessidade (Art. 24 CP)"
+    },
+    {
+     "id": "comparativo",
+     "title": "Estado de Necessidade × Legítima Defesa × Coação Irresistível × CPM"
+    },
+    {
+     "id": "exemplos",
+     "title": "Exemplos Práticos do Art. 24 CP"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência sobre o Art. 24 CP"
+    },
+    {
+     "id": "doutrina",
+     "title": "Principais Posições sobre o Art. 24 CP"
+    },
+    {
+     "id": "sistematica",
+     "title": "Art. 24 CP na Sistemática do Código Penal e Código Civil"
+    },
+    {
+     "id": "prova",
+     "title": "⚖️ Pontos Cobrados em Magistratura e ENAM"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-25.html": {
+   "subject": "CP",
+   "label": "Art. 25 - Legítima Defesa",
+   "group": "Do Crime",
+   "num": "25",
+   "title": "Art. 25 CP — Legítima Defesa",
+   "checked": "2026-04-28",
+   "checkedPrecision": "dia",
+   "checkedLabel": "Atualização conferida até 28/04/2026",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Mapa Geral do Art. 25 CP"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal Fatiado para Prova"
+    },
+    {
+     "id": "teoria-crime",
+     "title": "Legítima Defesa como Excludente de Ilicitude"
+    },
+    {
+     "id": "requisitos",
+     "title": "Requisitos Cumulativos da Legítima Defesa"
+    },
+    {
+     "id": "agressao",
+     "title": "Agressão Injusta: O que Entra e o que Não Entra"
+    },
+    {
+     "id": "atualidade",
+     "title": "Agressão Atual, Iminente, Passada e Futura"
+    },
+    {
+     "id": "meios",
+     "title": "Meios Necessários, Uso Moderado e Proporcionalidade Concreta"
+    },
+    {
+     "id": "especies",
+     "title": "Espécies de Legítima Defesa"
+    },
+    {
+     "id": "putativa",
+     "title": "Legítima Defesa Putativa: Como Resolver na Prova"
+    },
+    {
+     "id": "excesso",
+     "title": "Excesso Punível na Legítima Defesa"
+    },
+    {
+     "id": "seguranca",
+     "title": "Parágrafo Único: Agente de Segurança Pública e Vítima Refém"
+    },
+    {
+     "id": "processo",
+     "title": "Como a Legítima Defesa Aparece na Decisão Judicial"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo do Art. 25 CP"
+    },
+    {
+     "id": "comparativo",
+     "title": "Comparativo com Institutos Próximos"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência Essencial para Magistratura"
+    },
+    {
+     "id": "doutrina",
+     "title": "Linhas Dogmáticas Seguras para Prova Oral e Sentença"
+    },
+    {
+     "id": "prova",
+     "title": "🎓 Pontos que Sempre Caem em Magistratura / ENAM"
+    },
+    {
+     "id": "fontes",
+     "title": "Fontes Normativas e Jurisprudenciais Utilizadas"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-26.html": {
+   "subject": "CP",
+   "label": "Art. 26 - Inimputabilidade",
+   "group": "Imputabilidade Penal",
+   "num": "26",
+   "title": "Art. 26º CP — Inimputabilidade e Semi-imputabilidade",
+   "checked": "2026-04-28",
+   "checkedPrecision": "dia",
+   "checkedLabel": "Atualizado em 28/04/2026",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Mapa Geral do Art. 26 CP"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal Fatiado para Prova"
+    },
+    {
+     "id": "culpabilidade",
+     "title": "Imputabilidade como Elemento da Culpabilidade"
+    },
+    {
+     "id": "criterio",
+     "title": "Critério Biopsicológico-Normativo"
+    },
+    {
+     "id": "inimputabilidade",
+     "title": "Inimputabilidade Plena: Requisitos, Prova e Efeitos"
+    },
+    {
+     "id": "semi",
+     "title": "Semi-imputabilidade: Redução de Pena e Sistema Vicariante"
+    },
+    {
+     "id": "menoridade-embriaguez",
+     "title": "Art. 26 × Menoridade × Embriaguez × Doença Superveniente"
+    },
+    {
+     "id": "incidente",
+     "title": "Incidente de Insanidade Mental — CPP, arts. 149 a 154"
+    },
+    {
+     "id": "medidas",
+     "title": "Medidas de Segurança: CP, STJ e Política Antimanicomial"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo do Art. 26 CP"
+    },
+    {
+     "id": "comparativo",
+     "title": "Comparativo de Consequências Jurídicas"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência Essencial para Magistratura"
+    },
+    {
+     "id": "doutrina",
+     "title": "Linhas Dogmáticas Seguras"
+    },
+    {
+     "id": "prova",
+     "title": "🎓 Pontos que Sempre Caem em Magistratura / ENAM"
+    },
+    {
+     "id": "fontes",
+     "title": "Fontes Normativas e Jurisprudenciais Utilizadas"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-27.html": {
+   "subject": "CP",
+   "label": "Art. 27 - Menores de 18 anos",
+   "group": "Imputabilidade Penal",
+   "num": "27",
+   "title": "Art. 27 CP — Menoridade Penal",
+   "checked": "2026-04-29",
+   "checkedPrecision": "dia",
+   "checkedLabel": "Atualização conferida em 29/04/2026",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Mapa Geral do Art. 27 CP"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal Fatiado para Prova"
+    },
+    {
+     "id": "constitucional",
+     "title": "Art. 27 CP + CF art. 228 + ECA art. 104"
+    },
+    {
+     "id": "criterio",
+     "title": "Critério Biológico Absoluto"
+    },
+    {
+     "id": "idade-fato",
+     "title": "Idade na Data do Fato e Prova Documental"
+    },
+    {
+     "id": "crianca-adolescente",
+     "title": "Criança × Adolescente no ECA"
+    },
+    {
+     "id": "consequencias",
+     "title": "Consequências do Reconhecimento da Menoridade"
+    },
+    {
+     "id": "medidas",
+     "title": "Medidas Protetivas e Socioeducativas"
+    },
+    {
+     "id": "sinase",
+     "title": "SINASE, Maioridade Superveniente e Limite de 21 anos"
+    },
+    {
+     "id": "comparacoes",
+     "title": "Art. 27 × Institutos Próximos"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo do Art. 27 CP"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência Essencial para Magistratura"
+    },
+    {
+     "id": "doutrina",
+     "title": "Linhas Dogmáticas Seguras"
+    },
+    {
+     "id": "prova",
+     "title": "🎓 Pontos que Sempre Caem em Magistratura / ENAM"
+    },
+    {
+     "id": "fontes",
+     "title": "Fontes Normativas e Jurisprudenciais Utilizadas"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-28.html": {
+   "subject": "CP",
+   "label": "Art. 28 - Emoção, Paixão e Embriaguez",
+   "group": "Imputabilidade Penal",
+   "num": "28",
+   "title": "Art. 28 CP — Emoção, Paixão e Embriaguez",
+   "checked": "2026-04-29",
+   "checkedPrecision": "dia",
+   "checkedLabel": "Atualização conferida em 29/04/2026",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Mapa Geral do Art. 28 CP"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal Fatiado para Prova"
+    },
+    {
+     "id": "teoria-crime",
+     "title": "Art. 28 dentro da Culpabilidade"
+    },
+    {
+     "id": "emocao-paixao",
+     "title": "Emoção e Paixão: Não Excluem Imputabilidade"
+    },
+    {
+     "id": "embriaguez",
+     "title": "Embriaguez: Álcool e Substâncias de Efeitos Análogos"
+    },
+    {
+     "id": "classificacao",
+     "title": "Espécies e Graus de Embriaguez"
+    },
+    {
+     "id": "acidental",
+     "title": "Embriaguez Acidental: Caso Fortuito ou Força Maior"
+    },
+    {
+     "id": "voluntaria",
+     "title": "Embriaguez Voluntária ou Culposa"
+    },
+    {
+     "id": "preordenada",
+     "title": "Embriaguez Preordenada — CP, art. 61, II, “l”"
+    },
+    {
+     "id": "patologica",
+     "title": "Embriaguez Patológica, Alcoolismo e Lei de Drogas"
+    },
+    {
+     "id": "prova-pericia",
+     "title": "Como Provar Embriaguez e Capacidade Penal"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo do Art. 28 CP"
+    },
+    {
+     "id": "comparativo",
+     "title": "Comparativo de Consequências Jurídicas"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência Essencial para Magistratura"
+    },
+    {
+     "id": "doutrina",
+     "title": "Linhas Dogmáticas Seguras"
+    },
+    {
+     "id": "prova",
+     "title": "🎓 Pontos que Sempre Caem em Magistratura / ENAM"
+    },
+    {
+     "id": "fontes",
+     "title": "Fontes Normativas e Jurisprudenciais Utilizadas"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "DP-ART-29.html": {
+   "subject": "CP",
+   "label": "Art. 29 - Concurso de Pessoas",
+   "group": "Concurso de Pessoas",
+   "num": "29",
+   "title": "Art. 29 - Concurso de Pessoas",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-30.html": {
+   "subject": "CP",
+   "label": "Art. 30 - Circunstâncias Incomunicáveis",
+   "group": "Concurso de Pessoas",
+   "num": "30",
+   "title": "Art. 30 - Circunstâncias Incomunicáveis",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-31.html": {
+   "subject": "CP",
+   "label": "Art. 31 - Ajuste, Determinação ou Instigação",
+   "group": "Concurso de Pessoas",
+   "num": "31",
+   "title": "Art. 31 - Ajuste, Determinação ou Instigação",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-32.html": {
+   "subject": "CP",
+   "label": "Art. 32 - Espécies de Pena",
+   "group": "Das Penas",
+   "num": "32",
+   "title": "Art. 32 - Espécies de Pena",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-33.html": {
+   "subject": "CP",
+   "label": "Art. 33 - Regimes de Cumprimento",
+   "group": "Das Penas",
+   "num": "33",
+   "title": "Art. 33 - Regimes de Cumprimento",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-34.html": {
+   "subject": "CP",
+   "label": "Art. 34 - Regime Fechado",
+   "group": "Das Penas",
+   "num": "34",
+   "title": "Art. 34 - Regime Fechado",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-35.html": {
+   "subject": "CP",
+   "label": "Art. 35 - Regime Semiaberto",
+   "group": "Das Penas",
+   "num": "35",
+   "title": "Art. 35 - Regime Semiaberto",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-36.html": {
+   "subject": "CP",
+   "label": "Art. 36 - Regime Aberto",
+   "group": "Das Penas",
+   "num": "36",
+   "title": "Art. 36 - Regime Aberto",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-37.html": {
+   "subject": "CP",
+   "label": "Art. 37 - Trabalho do Preso",
+   "group": "Das Penas",
+   "num": "37",
+   "title": "Art. 37 - Trabalho do Preso",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-38.html": {
+   "subject": "CP",
+   "label": "Art. 38 - Direitos do Preso",
+   "group": "Das Penas",
+   "num": "38",
+   "title": "Art. 38 - Direitos do Preso",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-39.html": {
+   "subject": "CP",
+   "label": "Art. 39 - Trabalho Facultativo",
+   "group": "Das Penas",
+   "num": "39",
+   "title": "Art. 39 - Trabalho Facultativo",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-40.html": {
+   "subject": "CP",
+   "label": "Art. 40 - Legislação Especial",
+   "group": "Das Penas",
+   "num": "40",
+   "title": "Art. 40 - Legislação Especial",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-41.html": {
+   "subject": "CP",
+   "label": "Art. 41 - Superveniência de Doença Mental",
+   "group": "Das Penas",
+   "num": "41",
+   "title": "Art. 41 - Superveniência de Doença Mental",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-42.html": {
+   "subject": "CP",
+   "label": "Art. 42 - Detração Penal",
+   "group": "Das Penas",
+   "num": "42",
+   "title": "Art. 42 - Detração Penal",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-43.html": {
+   "subject": "CP",
+   "label": "Art. 43 - Espécies",
+   "group": "Penas Restritivas de Direitos",
+   "num": "43",
+   "title": "Art. 43 - Espécies",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-44.html": {
+   "subject": "CP",
+   "label": "Art. 44 - Substituição",
+   "group": "Penas Restritivas de Direitos",
+   "num": "44",
+   "title": "Art. 44 - Substituição",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-45.html": {
+   "subject": "CP",
+   "label": "Art. 45 - Conversão",
+   "group": "Penas Restritivas de Direitos",
+   "num": "45",
+   "title": "Art. 45 - Conversão",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-46.html": {
+   "subject": "CP",
+   "label": "Art. 46 - Prestação de Serviços",
+   "group": "Penas Restritivas de Direitos",
+   "num": "46",
+   "title": "Art. 46 - Prestação de Serviços",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-47.html": {
+   "subject": "CP",
+   "label": "Art. 47 - Interdições",
+   "group": "Penas Restritivas de Direitos",
+   "num": "47",
+   "title": "Art. 47 - Interdições",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-48.html": {
+   "subject": "CP",
+   "label": "Art. 48 - Limitação de Fim de Semana",
+   "group": "Penas Restritivas de Direitos",
+   "num": "48",
+   "title": "Art. 48 - Limitação de Fim de Semana",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-49.html": {
+   "subject": "CP",
+   "label": "Art. 49 - Multa",
+   "group": "Pena de Multa",
+   "num": "49",
+   "title": "Art. 49 - Multa",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-50.html": {
+   "subject": "CP",
+   "label": "Art. 50 - Pagamento",
+   "group": "Pena de Multa",
+   "num": "50",
+   "title": "Art. 50 - Pagamento",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-51.html": {
+   "subject": "CP",
+   "label": "Art. 51 - Execução",
+   "group": "Pena de Multa",
+   "num": "51",
+   "title": "Art. 51 - Execução",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "DP-ART-52.html": {
+   "subject": "CP",
+   "label": "Art. 52 - Multa (disposições gerais)",
+   "group": "Pena de Multa",
+   "num": "52",
+   "title": "Art. 52 - Multa (disposições gerais)",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-1.html": {
+   "subject": "CC",
+   "label": "Art. 1º - Capacidade de Direitos e Deveres",
+   "group": "Parte Geral — Das Pessoas Naturais",
+   "num": "1",
+   "title": "Art. 1º CC — Pessoa, Personalidade e Capacidade",
+   "checked": "2026-05-03",
+   "checkedPrecision": "dia",
+   "checkedLabel": "Atualização conferida em 03/05/2026",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Mapa Geral do Art. 1º CC"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal Fatiado para Prova"
+    },
+    {
+     "id": "pessoa-natural",
+     "title": "Pessoa Natural, Personalidade e Igualdade Civil"
+    },
+    {
+     "id": "capacidade",
+     "title": "Capacidade de Direito x Capacidade de Exercício"
+    },
+    {
+     "id": "incapacidade",
+     "title": "Incapacidade Civil e Estatuto da Pessoa com Deficiência"
+    },
+    {
+     "id": "nascituro",
+     "title": "Nascituro, Nascimento com Vida e Personalidade Civil"
+    },
+    {
+     "id": "deveres",
+     "title": "Capacidade Civil não é Apenas Titularidade Ativa"
+    },
+    {
+     "id": "legitimidade",
+     "title": "Capacidade, Legitimidade, Representação e Assistência"
+    },
+    {
+     "id": "personalidade",
+     "title": "Desdobramentos Existenciais do Art. 1º CC"
+    },
+    {
+     "id": "extincao",
+     "title": "Morte Real, Morte Presumida e Efeitos Pós-Morte"
+    },
+    {
+     "id": "pessoa-juridica",
+     "title": "Pessoa Natural, Pessoa Jurídica e Entes Despersonalizados"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo do Art. 1º CC"
+    },
+    {
+     "id": "comparativo",
+     "title": "Comparativo de Consequências Jurídicas"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência Essencial para Magistratura"
+    },
+    {
+     "id": "doutrina",
+     "title": "Linhas Dogmáticas Seguras"
+    },
+    {
+     "id": "prova",
+     "title": "🎓 Pontos que Sempre Caem em Magistratura / ENAM"
+    },
+    {
+     "id": "fontes",
+     "title": "Base Normativa e Jurisprudencial Usada"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "CC-ART-2.html": {
+   "subject": "CC",
+   "label": "Art. 2º - Personalidade Civil e Nascituro",
+   "group": "Parte Geral — Das Pessoas Naturais",
+   "num": "2",
+   "title": "Art. 2º CC — Personalidade Civil, Nascimento com Vida e Nascituro",
+   "checked": "2026-05-03",
+   "checkedPrecision": "dia",
+   "checkedLabel": "Atualização conferida em 03/05/2026",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Mapa Geral do Art. 2º CC"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal Fatiado para Prova"
+    },
+    {
+     "id": "personalidade",
+     "title": "Conceito, Alcance e Distinções"
+    },
+    {
+     "id": "nascimento",
+     "title": "Marco Inicial da Personalidade Civil Plena"
+    },
+    {
+     "id": "nascituro",
+     "title": "Conceito, Proteção e Natureza Jurídica"
+    },
+    {
+     "id": "teorias",
+     "title": "Teorias sobre o Início da Personalidade"
+    },
+    {
+     "id": "patrimoniais",
+     "title": "Herança, Doação, Curador e Condição do Nascimento"
+    },
+    {
+     "id": "existenciais",
+     "title": "Vida, Integridade, Dignidade, Nome, Imagem e Sepultura"
+    },
+    {
+     "id": "gravidez",
+     "title": "Alimentos Gravídicos, Pré-Natal e Filiação"
+    },
+    {
+     "id": "natimorto",
+     "title": "Proteção sem Personalidade Civil Plena"
+    },
+    {
+     "id": "bioetica",
+     "title": "Embrião, Células-Tronco, Anencefalia e Limites da Tutela"
+    },
+    {
+     "id": "registro",
+     "title": "Nascimento, Óbito, Natimorto e Efeitos Jurídicos"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo do Art. 2º CC"
+    },
+    {
+     "id": "comparativo",
+     "title": "Comparativo de Consequências Jurídicas"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência Essencial para Magistratura"
+    },
+    {
+     "id": "doutrina",
+     "title": "Linhas Dogmáticas Seguras"
+    },
+    {
+     "id": "prova",
+     "title": "🎓 Pontos que Sempre Caem em Magistratura / ENAM"
+    },
+    {
+     "id": "fontes",
+     "title": "Base Normativa e Jurisprudencial Usada"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "CC-ART-3.html": {
+   "subject": "CC",
+   "label": "Art. 3º - Incapacidade Absoluta",
+   "group": "Parte Geral — Das Pessoas Naturais",
+   "num": "3",
+   "title": "Art. 3º CC — Incapacidade Absoluta",
+   "checked": "2025",
+   "checkedPrecision": "ano",
+   "checkedLabel": "Atualizado 2025",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Mapa Geral do Art. 3º CC"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal Fatiado para Prova"
+    },
+    {
+     "id": "reforma",
+     "title": "Reforma pela Lei n.º 13.146/2015 (LBI) — Antes × Depois"
+    },
+    {
+     "id": "capacidade",
+     "title": "Mapa Completo: Capacidade Civil no CC após a LBI"
+    },
+    {
+     "id": "unica-hipotese",
+     "title": "Menor de 16 Anos: Análise Profunda"
+    },
+    {
+     "id": "representacao",
+     "title": "Representação: Conceito, Quem Representa e Limites"
+    },
+    {
+     "id": "nulidade",
+     "title": "Nulidade Absoluta — Art. 166, I, CC"
+    },
+    {
+     "id": "pcd",
+     "title": "Pessoa com Deficiência: Plena Capacidade e Curatela Excepcional"
+    },
+    {
+     "id": "tda",
+     "title": "Tomada de Decisão Apoiada (TDA) — Art. 1.783-A CC"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma: Art. 3º CC — Incapacidade Absoluta"
+    },
+    {
+     "id": "comparativo",
+     "title": "Art. 3º CC × Institutos Próximos — Quadro Completo"
+    },
+    {
+     "id": "exemplos",
+     "title": "Exemplos Práticos do Art. 3º CC"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência sobre o Art. 3º CC e a Reforma LBI"
+    },
+    {
+     "id": "doutrina",
+     "title": "Principais Posições sobre o Art. 3º CC e a LBI"
+    },
+    {
+     "id": "sistematica",
+     "title": "Art. 3º CC na Sistemática do Código Civil e da Constituição"
+    },
+    {
+     "id": "prova",
+     "title": "⚖️ Pontos Cobrados em Magistratura e ENAM"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "CC-ART-4.html": {
+   "subject": "CC",
+   "label": "Art. 4º - Incapacidade Relativa",
+   "group": "Parte Geral — Das Pessoas Naturais",
+   "num": "4",
+   "title": "Art. 4º CC — Capacidade Civil, Incapacidade Absoluta e Relativa",
+   "checked": "2026-05-12",
+   "checkedPrecision": "dia",
+   "checkedLabel": "Atualização conferida em 12/05/2026",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Mapa Geral do Art. 4º CC"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal Fatiado para Prova"
+    },
+    {
+     "id": "menor-16",
+     "title": "Maiores de 16 e Menores de 18 Anos"
+    },
+    {
+     "id": "ebrios",
+     "title": "Ébrios Habituais e Viciados em Tóxico"
+    },
+    {
+     "id": "prodigalidade",
+     "title": "Pródigo — Curatela Patrimonial Restrita"
+    },
+    {
+     "id": "silvicolas",
+     "title": "Indígenas — Legislação Especial"
+    },
+    {
+     "id": "efeitos",
+     "title": "Consequências dos Atos Praticados Sem Assistência"
+    },
+    {
+     "id": "comparativo-art3",
+     "title": "Art. 3º (Absoluta) vs Art. 4º (Relativa) — Quadro Completo Pós-EPD"
+    },
+    {
+     "id": "assistencia",
+     "title": "Quem Assiste e Como se Opera"
+    },
+    {
+     "id": "cessacao",
+     "title": "Hipóteses, Modos e Efeitos"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo do Art. 4º CC"
+    },
+    {
+     "id": "tabela",
+     "title": "Comparativo de Todos os Relativamente Incapazes"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência Essencial para Magistratura"
+    },
+    {
+     "id": "doutrina",
+     "title": "Linhas Dogmáticas Seguras"
+    },
+    {
+     "id": "prova",
+     "title": "🎓 Pontos que Sempre Caem em Magistratura / ENAM"
+    },
+    {
+     "id": "fontes",
+     "title": "Fontes Normativas e Jurisprudenciais Utilizadas"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "CC-ART-5.html": {
+   "subject": "CC",
+   "label": "Art. 5º - Cessação da Menoridade",
+   "group": "Parte Geral — Das Pessoas Naturais",
+   "num": "5",
+   "title": "Art. 5º CC — Maioridade Civil e Emancipação",
+   "checked": "2026-05-13",
+   "checkedPrecision": "dia",
+   "checkedLabel": "Atualização conferida em 13/05/2026",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Mapa Geral do Art. 5º CC"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal Fatiado para Prova"
+    },
+    {
+     "id": "maioridade",
+     "title": "Maioridade Civil — 18 Anos Completos"
+    },
+    {
+     "id": "emancipacao",
+     "title": "Emancipação — Panorama Geral"
+    },
+    {
+     "id": "voluntaria",
+     "title": "Emancipação Voluntária pelos Pais"
+    },
+    {
+     "id": "judicial",
+     "title": "Emancipação Judicial pelo Juiz"
+    },
+    {
+     "id": "casamento",
+     "title": "Emancipação pelo Casamento"
+    },
+    {
+     "id": "emprego",
+     "title": "Emancipação pelo Emprego Público Efetivo"
+    },
+    {
+     "id": "grau",
+     "title": "Emancipação pela Colação de Grau em Ensino Superior"
+    },
+    {
+     "id": "negocio",
+     "title": "Estabelecimento Civil/Comercial ou Relação de Emprego com Economia Própria"
+    },
+    {
+     "id": "efeitos",
+     "title": "O Que Muda e O Que Permanece"
+    },
+    {
+     "id": "irrevogabilidade",
+     "title": "Características Essenciais da Emancipação"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo do Art. 5º CC"
+    },
+    {
+     "id": "tabela",
+     "title": "Comparativo das Seis Modalidades de Emancipação"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência Essencial para Magistratura"
+    },
+    {
+     "id": "doutrina",
+     "title": "Linhas Dogmáticas Seguras"
+    },
+    {
+     "id": "prova",
+     "title": "🎓 Pontos que Sempre Caem em Magistratura / ENAM"
+    },
+    {
+     "id": "fontes",
+     "title": "Fontes Normativas e Jurisprudenciais Utilizadas"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "CC-ART-6.html": {
+   "subject": "CC",
+   "label": "Art. 6º - Fim da Existência da Pessoa Natural",
+   "group": "Parte Geral — Das Pessoas Naturais",
+   "num": "6",
+   "title": "Art. 6º - Fim da Existência da Pessoa Natural",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-7.html": {
+   "subject": "CC",
+   "label": "Art. 7º - Morte Presumida sem Decretação de Ausência",
+   "group": "Parte Geral — Das Pessoas Naturais",
+   "num": "7",
+   "title": "Art. 7º - Morte Presumida sem Decretação de Ausência",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-8.html": {
+   "subject": "CC",
+   "label": "Art. 8º - Comoriência",
+   "group": "Parte Geral — Das Pessoas Naturais",
+   "num": "8",
+   "title": "Art. 8º - Comoriência",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-9.html": {
+   "subject": "CC",
+   "label": "Art. 9º - Registro Público",
+   "group": "Parte Geral — Das Pessoas Naturais",
+   "num": "9",
+   "title": "Art. 9º - Registro Público",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-10.html": {
+   "subject": "CC",
+   "label": "Art. 10 - Averbações no Registro Público",
+   "group": "Parte Geral — Das Pessoas Naturais",
+   "num": "10",
+   "title": "Art. 10 - Averbações no Registro Público",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-11.html": {
+   "subject": "CC",
+   "label": "Art. 11 - Intransmissibilidade e Irrenunciabilidade",
+   "group": "Direitos da Personalidade",
+   "num": "11",
+   "title": "Art. 11 - Intransmissibilidade e Irrenunciabilidade",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-12.html": {
+   "subject": "CC",
+   "label": "Art. 12 - Tutela dos Direitos da Personalidade",
+   "group": "Direitos da Personalidade",
+   "num": "12",
+   "title": "Art. 12 - Tutela dos Direitos da Personalidade",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-13.html": {
+   "subject": "CC",
+   "label": "Art. 13 - Disposição do Próprio Corpo",
+   "group": "Direitos da Personalidade",
+   "num": "13",
+   "title": "Art. 13 - Disposição do Próprio Corpo",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-14.html": {
+   "subject": "CC",
+   "label": "Art. 14 - Disposição Gratuita do Corpo Pós-Morte",
+   "group": "Direitos da Personalidade",
+   "num": "14",
+   "title": "Art. 14 - Disposição Gratuita do Corpo Pós-Morte",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-15.html": {
+   "subject": "CC",
+   "label": "Art. 15 - Tratamento Médico e Risco de Vida",
+   "group": "Direitos da Personalidade",
+   "num": "15",
+   "title": "Art. 15 - Tratamento Médico e Risco de Vida",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-16.html": {
+   "subject": "CC",
+   "label": "Art. 16 - Direito ao Nome",
+   "group": "Direitos da Personalidade",
+   "num": "16",
+   "title": "Art. 16 - Direito ao Nome",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-17.html": {
+   "subject": "CC",
+   "label": "Art. 17 - Proteção do Nome",
+   "group": "Direitos da Personalidade",
+   "num": "17",
+   "title": "Art. 17 - Proteção do Nome",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-18.html": {
+   "subject": "CC",
+   "label": "Art. 18 - Uso do Nome em Propaganda Comercial",
+   "group": "Direitos da Personalidade",
+   "num": "18",
+   "title": "Art. 18 - Uso do Nome em Propaganda Comercial",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-19.html": {
+   "subject": "CC",
+   "label": "Art. 19 - Proteção do Pseudônimo",
+   "group": "Direitos da Personalidade",
+   "num": "19",
+   "title": "Art. 19 - Proteção do Pseudônimo",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-20.html": {
+   "subject": "CC",
+   "label": "Art. 20 - Imagem, Honra e Exposição da Pessoa",
+   "group": "Direitos da Personalidade",
+   "num": "20",
+   "title": "Art. 20 - Imagem, Honra e Exposição da Pessoa",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-21.html": {
+   "subject": "CC",
+   "label": "Art. 21 - Vida Privada",
+   "group": "Direitos da Personalidade",
+   "num": "21",
+   "title": "Art. 21 - Vida Privada",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-22.html": {
+   "subject": "CC",
+   "label": "Art. 22 - Declaração de Ausência e Nomeação de Curador",
+   "group": "Da Ausência — Curadoria dos Bens do Ausente",
+   "num": "22",
+   "title": "Art. 22 - Declaração de Ausência e Nomeação de Curador",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-23.html": {
+   "subject": "CC",
+   "label": "Art. 23 - Ausente com Mandatário Ineficaz ou Insuficiente",
+   "group": "Da Ausência — Curadoria dos Bens do Ausente",
+   "num": "23",
+   "title": "Art. 23 - Ausente com Mandatário Ineficaz ou Insuficiente",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-24.html": {
+   "subject": "CC",
+   "label": "Art. 24 - Poderes e Obrigações do Curador",
+   "group": "Da Ausência — Curadoria dos Bens do Ausente",
+   "num": "24",
+   "title": "Art. 24 - Poderes e Obrigações do Curador",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-25.html": {
+   "subject": "CC",
+   "label": "Art. 25 - Ordem Legal de Curadoria",
+   "group": "Da Ausência — Curadoria dos Bens do Ausente",
+   "num": "25",
+   "title": "Art. 25 - Ordem Legal de Curadoria",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-26.html": {
+   "subject": "CC",
+   "label": "Art. 26 - Abertura da Sucessão Provisória",
+   "group": "Da Ausência — Sucessão Provisória",
+   "num": "26",
+   "title": "Art. 26 - Abertura da Sucessão Provisória",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-27.html": {
+   "subject": "CC",
+   "label": "Art. 27 - Interessados na Sucessão Provisória",
+   "group": "Da Ausência — Sucessão Provisória",
+   "num": "27",
+   "title": "Art. 27 - Interessados na Sucessão Provisória",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-28.html": {
+   "subject": "CC",
+   "label": "Art. 28 - Eficácia da Sentença e Inventário",
+   "group": "Da Ausência — Sucessão Provisória",
+   "num": "28",
+   "title": "Art. 28 - Eficácia da Sentença e Inventário",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-29.html": {
+   "subject": "CC",
+   "label": "Art. 29 - Conversão de Bens Móveis",
+   "group": "Da Ausência — Sucessão Provisória",
+   "num": "29",
+   "title": "Art. 29 - Conversão de Bens Móveis",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-30.html": {
+   "subject": "CC",
+   "label": "Art. 30 - Garantias para Imissão na Posse",
+   "group": "Da Ausência — Sucessão Provisória",
+   "num": "30",
+   "title": "Art. 30 - Garantias para Imissão na Posse",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-31.html": {
+   "subject": "CC",
+   "label": "Art. 31 - Alienação ou Hipoteca de Imóveis do Ausente",
+   "group": "Da Ausência — Sucessão Provisória",
+   "num": "31",
+   "title": "Art. 31 - Alienação ou Hipoteca de Imóveis do Ausente",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-32.html": {
+   "subject": "CC",
+   "label": "Art. 32 - Representação do Ausente pelos Sucessores",
+   "group": "Da Ausência — Sucessão Provisória",
+   "num": "32",
+   "title": "Art. 32 - Representação do Ausente pelos Sucessores",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-33.html": {
+   "subject": "CC",
+   "label": "Art. 33 - Frutos e Rendimentos dos Bens do Ausente",
+   "group": "Da Ausência — Sucessão Provisória",
+   "num": "33",
+   "title": "Art. 33 - Frutos e Rendimentos dos Bens do Ausente",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-34.html": {
+   "subject": "CC",
+   "label": "Art. 34 - Rendimentos ao Sucessor Excluído",
+   "group": "Da Ausência — Sucessão Provisória",
+   "num": "34",
+   "title": "Art. 34 - Rendimentos ao Sucessor Excluído",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-35.html": {
+   "subject": "CC",
+   "label": "Art. 35 - Prova da Morte durante a Posse Provisória",
+   "group": "Da Ausência — Sucessão Provisória",
+   "num": "35",
+   "title": "Art. 35 - Prova da Morte durante a Posse Provisória",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-36.html": {
+   "subject": "CC",
+   "label": "Art. 36 - Reaparecimento do Ausente na Posse Provisória",
+   "group": "Da Ausência — Sucessão Provisória",
+   "num": "36",
+   "title": "Art. 36 - Reaparecimento do Ausente na Posse Provisória",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-37.html": {
+   "subject": "CC",
+   "label": "Art. 37 - Abertura da Sucessão Definitiva",
+   "group": "Da Ausência — Sucessão Definitiva",
+   "num": "37",
+   "title": "Art. 37 - Abertura da Sucessão Definitiva",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-38.html": {
+   "subject": "CC",
+   "label": "Art. 38 - Sucessão Definitiva por Idade Avançada",
+   "group": "Da Ausência — Sucessão Definitiva",
+   "num": "38",
+   "title": "Art. 38 - Sucessão Definitiva por Idade Avançada",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-39.html": {
+   "subject": "CC",
+   "label": "Art. 39 - Regresso do Ausente após Sucessão Definitiva",
+   "group": "Da Ausência — Sucessão Definitiva",
+   "num": "39",
+   "title": "Art. 39 - Regresso do Ausente após Sucessão Definitiva",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-40.html": {
+   "subject": "CC",
+   "label": "Art. 40 - Pessoas Jurídicas de Direito Público e Privado",
+   "group": "Das Pessoas Jurídicas — Disposições Gerais",
+   "num": "40",
+   "title": "Art. 40 - Pessoas Jurídicas de Direito Público e Privado",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-41.html": {
+   "subject": "CC",
+   "label": "Art. 41 - Pessoas Jurídicas de Direito Público Interno",
+   "group": "Das Pessoas Jurídicas — Disposições Gerais",
+   "num": "41",
+   "title": "Art. 41 - Pessoas Jurídicas de Direito Público Interno",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-42.html": {
+   "subject": "CC",
+   "label": "Art. 42 - Pessoas Jurídicas de Direito Público Externo",
+   "group": "Das Pessoas Jurídicas — Disposições Gerais",
+   "num": "42",
+   "title": "Art. 42 - Pessoas Jurídicas de Direito Público Externo",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-43.html": {
+   "subject": "CC",
+   "label": "Art. 43 - Responsabilidade das Pessoas Jurídicas de Direito Público",
+   "group": "Das Pessoas Jurídicas — Disposições Gerais",
+   "num": "43",
+   "title": "Art. 43 - Responsabilidade das Pessoas Jurídicas de Direito Público",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-44.html": {
+   "subject": "CC",
+   "label": "Art. 44 - Pessoas Jurídicas de Direito Privado",
+   "group": "Das Pessoas Jurídicas — Disposições Gerais",
+   "num": "44",
+   "title": "Art. 44 - Pessoas Jurídicas de Direito Privado",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-45.html": {
+   "subject": "CC",
+   "label": "Art. 45 - Existência Legal da Pessoa Jurídica",
+   "group": "Das Pessoas Jurídicas — Disposições Gerais",
+   "num": "45",
+   "title": "Art. 45 - Existência Legal da Pessoa Jurídica",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-46.html": {
+   "subject": "CC",
+   "label": "Art. 46 - Registro da Pessoa Jurídica",
+   "group": "Das Pessoas Jurídicas — Disposições Gerais",
+   "num": "46",
+   "title": "Art. 46 - Registro da Pessoa Jurídica",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-47.html": {
+   "subject": "CC",
+   "label": "Art. 47 - Vinculação por Atos dos Administradores",
+   "group": "Das Pessoas Jurídicas — Disposições Gerais",
+   "num": "47",
+   "title": "Art. 47 - Vinculação por Atos dos Administradores",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-48.html": {
+   "subject": "CC",
+   "label": "Art. 48 - Administração Coletiva",
+   "group": "Das Pessoas Jurídicas — Disposições Gerais",
+   "num": "48",
+   "title": "Art. 48 - Administração Coletiva",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-49.html": {
+   "subject": "CC",
+   "label": "Art. 49 - Administração Provisória Judicial",
+   "group": "Das Pessoas Jurídicas — Disposições Gerais",
+   "num": "49",
+   "title": "Art. 49 - Administração Provisória Judicial",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-49-A.html": {
+   "subject": "CC",
+   "label": "Art. 49-A - Autonomia Patrimonial da Pessoa Jurídica",
+   "group": "Das Pessoas Jurídicas — Disposições Gerais",
+   "num": "49",
+   "title": "Art. 49-A - Autonomia Patrimonial da Pessoa Jurídica",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-50.html": {
+   "subject": "CC",
+   "label": "Art. 50 - Desconsideração da Personalidade Jurídica",
+   "group": "Das Pessoas Jurídicas — Disposições Gerais",
+   "num": "50",
+   "title": "Art. 50 - Desconsideração da Personalidade Jurídica",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-51.html": {
+   "subject": "CC",
+   "label": "Art. 51 - Dissolução da Pessoa Jurídica",
+   "group": "Das Pessoas Jurídicas — Disposições Gerais",
+   "num": "51",
+   "title": "Art. 51 - Dissolução da Pessoa Jurídica",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CC-ART-52.html": {
+   "subject": "CC",
+   "label": "Art. 52 - Direitos da Personalidade da Pessoa Jurídica",
+   "group": "Das Pessoas Jurídicas — Disposições Gerais",
+   "num": "52",
+   "title": "Art. 52 - Direitos da Personalidade da Pessoa Jurídica",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-1.html": {
+   "subject": "CLT",
+   "label": "Art. 1º — Âmbito de Aplicação da CLT",
+   "group": "Título I — Introdução (Arts. 1–12)",
+   "num": "1",
+   "title": "Art. 1º CLT — Introdução da CLT",
+   "checked": "2026-05",
+   "checkedPrecision": "mês",
+   "checkedLabel": "Atualizado em Maio/2026",
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao",
+     "title": "Visão Geral do Art. 1º da CLT"
+    },
+    {
+     "id": "texto",
+     "title": "Texto Legal e Leitura Técnica"
+    },
+    {
+     "id": "estrutura",
+     "title": "Estrutura Sistêmica do Art. 1º"
+    },
+    {
+     "id": "relacoes",
+     "title": "Relação de Trabalho × Relação de Emprego"
+    },
+    {
+     "id": "constitucional",
+     "title": "Base Constitucional"
+    },
+    {
+     "id": "reforma",
+     "title": "Lei 13.467/2017 e Impactos Sistêmicos"
+    },
+    {
+     "id": "juris",
+     "title": "Jurisprudência, Teses e OJs"
+    },
+    {
+     "id": "doutrina",
+     "title": "Doutrina Essencial"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo — Art. 1º CLT"
+    },
+    {
+     "id": "fontes",
+     "title": "Fontes Legislativas e Jurisprudenciais"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "CLT-ART-2.html": {
+   "subject": "CLT",
+   "label": "Art. 2º — Conceito de Empregador",
+   "group": "Título I — Introdução (Arts. 1–12)",
+   "num": "2",
+   "title": "Art. 2º CLT — Empregador",
+   "checked": "2025",
+   "checkedPrecision": "ano",
+   "checkedLabel": "Atualizado em 2025",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Mapa Geral do Art. 2º CLT"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal Fatiado para Prova"
+    },
+    {
+     "id": "conceito",
+     "title": "Conceito de Empregador — Teoria da Empresa e Despersonalização"
+    },
+    {
+     "id": "poder-diretivo",
+     "title": "Poder Diretivo (de Comando) — Manifestações e Limites"
+    },
+    {
+     "id": "riscos",
+     "title": "Assunção dos Riscos da Atividade Econômica"
+    },
+    {
+     "id": "equiparacao",
+     "title": "Profissionais Liberais, Associações e Entidades Sem Fins Lucrativos"
+    },
+    {
+     "id": "sucessao",
+     "title": "Sucessão de Empregadores — Continuidade do Contrato"
+    },
+    {
+     "id": "grupo-economico",
+     "title": "Grupo Econômico Trabalhista — Conceito e Responsabilidade Solidária"
+    },
+    {
+     "id": "reforma-2017",
+     "title": "Reforma Trabalhista e o Novo Conceito de Grupo Econômico"
+    },
+    {
+     "id": "consorcio",
+     "title": "Consórcio de Empregadores Rurais"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo do Art. 2º CLT"
+    },
+    {
+     "id": "comparativo",
+     "title": "Comparativo — Responsabilidade do Empregador em Diferentes Contextos"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência Essencial para Magistratura"
+    },
+    {
+     "id": "oj-sumulas",
+     "title": "Orientações Jurisprudenciais Relevantes para o Art. 2º CLT"
+    },
+    {
+     "id": "doutrina",
+     "title": "Linhas Dogmáticas Seguras para Magistratura"
+    },
+    {
+     "id": "prova",
+     "title": "🎓 Pontos que Sempre Caem em Magistratura / ENAM"
+    },
+    {
+     "id": "fontes",
+     "title": "Fontes Normativas e Jurisprudenciais Utilizadas"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "CLT-ART-3.html": {
+   "subject": "CLT",
+   "label": "Art. 3º — Conceito de Empregado",
+   "group": "Título I — Introdução (Arts. 1–12)",
+   "num": "3",
+   "title": "Art. 3º CLT — Empregado",
+   "checked": "2025",
+   "checkedPrecision": "ano",
+   "checkedLabel": "conferida em 2025",
+   "hearingId": "prova",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "visao-geral",
+     "title": "Mapa Geral do Art. 3º CLT"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal Fatiado para Prova"
+    },
+    {
+     "id": "pessoalidade",
+     "title": "Pessoa Física e Pessoalidade ( Intuitu Personae )"
+    },
+    {
+     "id": "nao-eventualidade",
+     "title": "Não Eventualidade — Teorias e Aplicação Prática"
+    },
+    {
+     "id": "onerosidade",
+     "title": "Onerosidade — Salário e Remuneração"
+    },
+    {
+     "id": "subordinacao",
+     "title": "Subordinação Jurídica — Evolução, Teorias e Critérios"
+    },
+    {
+     "id": "figura-intermediaria",
+     "title": "Trabalhadores em Zona Cinzenta — Distinções Essenciais"
+    },
+    {
+     "id": "reforma-2017",
+     "title": "Reforma Trabalhista e Impactos sobre o Conceito de Empregado"
+    },
+    {
+     "id": "parassubordinacao",
+     "title": "Parassubordinação e Trabalho por Plataformas Digitais"
+    },
+    {
+     "id": "onus-prova",
+     "title": "Ônus da Prova no Reconhecimento do Vínculo Empregatício"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo do Art. 3º CLT"
+    },
+    {
+     "id": "comparativo",
+     "title": "Comparativo — Elementos do Art. 3º nas Diferentes Modalidades de Trabalho"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência Essencial para Magistratura"
+    },
+    {
+     "id": "oj-sumulas",
+     "title": "Orientações Jurisprudenciais Relevantes para o Art. 3º CLT"
+    },
+    {
+     "id": "doutrina",
+     "title": "Linhas Dogmáticas Seguras para Magistratura"
+    },
+    {
+     "id": "prova",
+     "title": "🎓 Pontos que Sempre Caem em Magistratura / ENAM"
+    },
+    {
+     "id": "fontes",
+     "title": "Fontes Normativas e Jurisprudenciais Utilizadas"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "CLT-ART-4.html": {
+   "subject": "CLT",
+   "label": "Art. 4º — Tempo à Disposição",
+   "group": "Título I — Introdução (Arts. 1–12)",
+   "num": "4",
+   "title": "Art. 4º CLT — Tempo à Disposição",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": true,
+   "sections": [
+    {
+     "id": "em-elaboracao",
+     "title": "em-elaboracao"
+    }
+   ],
+   "available": false,
+   "status": "em-elaboracao"
+  },
+  "CLT-ART-5.html": {
+   "subject": "CLT",
+   "label": "Art. 5º — Igualdade de Tratamento",
+   "group": "Título I — Introdução (Arts. 1–12)",
+   "num": "5",
+   "title": "Art. 5º — Igualdade de Tratamento",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-6.html": {
+   "subject": "CLT",
+   "label": "Art. 6º — Trabalho a Distância",
+   "group": "Título I — Introdução (Arts. 1–12)",
+   "num": "6",
+   "title": "Art. 6º — Trabalho a Distância",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-7.html": {
+   "subject": "CLT",
+   "label": "Art. 7º — Empregado Rural / Doméstico",
+   "group": "Título I — Introdução (Arts. 1–12)",
+   "num": "7",
+   "title": "Art. 7º — Empregado Rural / Doméstico",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-8.html": {
+   "subject": "CLT",
+   "label": "Art. 8º — Fontes e Analogia",
+   "group": "Título I — Introdução (Arts. 1–12)",
+   "num": "8",
+   "title": "Art. 8º — Fontes e Analogia",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-9.html": {
+   "subject": "CLT",
+   "label": "Art. 9º — Nulidade de Atos Fraudulentos",
+   "group": "Título I — Introdução (Arts. 1–12)",
+   "num": "9",
+   "title": "Art. 9º — Nulidade de Atos Fraudulentos",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-10.html": {
+   "subject": "CLT",
+   "label": "Art. 10 — Sucessão Trabalhista",
+   "group": "Título I — Introdução (Arts. 1–12)",
+   "num": "10",
+   "title": "Art. 10 — Sucessão Trabalhista",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-11.html": {
+   "subject": "CLT",
+   "label": "Art. 11 — Prescrição Trabalhista",
+   "group": "Título I — Introdução (Arts. 1–12)",
+   "num": "11",
+   "title": "Art. 11 — Prescrição Trabalhista",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-12.html": {
+   "subject": "CLT",
+   "label": "Art. 12 — Preferência de Créditos",
+   "group": "Título I — Introdução (Arts. 1–12)",
+   "num": "12",
+   "title": "Art. 12 — Preferência de Créditos",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-13.html": {
+   "subject": "CLT",
+   "label": "Art. 13 — Carteira de Trabalho (CTPS)",
+   "group": "Título II — Normas de Tutela do Trabalho (Arts. 13–223)",
+   "num": "13",
+   "title": "Art. 13 — Carteira de Trabalho (CTPS)",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-29.html": {
+   "subject": "CLT",
+   "label": "Art. 29 — Anotações na CTPS",
+   "group": "Título II — Normas de Tutela do Trabalho (Arts. 13–223)",
+   "num": "29",
+   "title": "Art. 29 — Anotações na CTPS",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-58.html": {
+   "subject": "CLT",
+   "label": "Art. 58 — Duração do Trabalho",
+   "group": "Título II — Normas de Tutela do Trabalho (Arts. 13–223)",
+   "num": "58",
+   "title": "Art. 58 — Duração do Trabalho",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-59.html": {
+   "subject": "CLT",
+   "label": "Art. 59 — Horas Extras",
+   "group": "Título II — Normas de Tutela do Trabalho (Arts. 13–223)",
+   "num": "59",
+   "title": "Art. 59 — Horas Extras",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-60.html": {
+   "subject": "CLT",
+   "label": "Art. 60 — Atividades Insalubres e Jornada",
+   "group": "Título II — Normas de Tutela do Trabalho (Arts. 13–223)",
+   "num": "60",
+   "title": "Art. 60 — Atividades Insalubres e Jornada",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-61.html": {
+   "subject": "CLT",
+   "label": "Art. 61 — Prorrogação de Jornada",
+   "group": "Título II — Normas de Tutela do Trabalho (Arts. 13–223)",
+   "num": "61",
+   "title": "Art. 61 — Prorrogação de Jornada",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-62.html": {
+   "subject": "CLT",
+   "label": "Art. 62 — Exclusões do Controle de Jornada",
+   "group": "Título II — Normas de Tutela do Trabalho (Arts. 13–223)",
+   "num": "62",
+   "title": "Art. 62 — Exclusões do Controle de Jornada",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-66.html": {
+   "subject": "CLT",
+   "label": "Art. 66 — Intervalo Entre Jornadas",
+   "group": "Título II — Normas de Tutela do Trabalho (Arts. 13–223)",
+   "num": "66",
+   "title": "Art. 66 — Intervalo Entre Jornadas",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-67.html": {
+   "subject": "CLT",
+   "label": "Art. 67 — Descanso Semanal Remunerado",
+   "group": "Título II — Normas de Tutela do Trabalho (Arts. 13–223)",
+   "num": "67",
+   "title": "Art. 67 — Descanso Semanal Remunerado",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-71.html": {
+   "subject": "CLT",
+   "label": "Art. 71 — Intervalo Intrajornada",
+   "group": "Título II — Normas de Tutela do Trabalho (Arts. 13–223)",
+   "num": "71",
+   "title": "Art. 71 — Intervalo Intrajornada",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-74.html": {
+   "subject": "CLT",
+   "label": "Art. 74 — Controle de Horário",
+   "group": "Título II — Normas de Tutela do Trabalho (Arts. 13–223)",
+   "num": "74",
+   "title": "Art. 74 — Controle de Horário",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-75-A.html": {
+   "subject": "CLT",
+   "label": "Arts. 75-A a 75-E — Teletrabalho",
+   "group": "Título II — Normas de Tutela do Trabalho (Arts. 13–223)",
+   "num": "75",
+   "title": "Arts. 75-A a 75-E — Teletrabalho",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-76.html": {
+   "subject": "CLT",
+   "label": "Art. 76 — Salário Mínimo",
+   "group": "Salário e Remuneração (Arts. 76–153)",
+   "num": "76",
+   "title": "Art. 76 — Salário Mínimo",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-78.html": {
+   "subject": "CLT",
+   "label": "Art. 78 — Salário por Peça ou Tarefa",
+   "group": "Salário e Remuneração (Arts. 76–153)",
+   "num": "78",
+   "title": "Art. 78 — Salário por Peça ou Tarefa",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-457.html": {
+   "subject": "CLT",
+   "label": "Art. 457 — Integração Salarial",
+   "group": "Salário e Remuneração (Arts. 76–153)",
+   "num": "457",
+   "title": "Art. 457 — Integração Salarial",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-458.html": {
+   "subject": "CLT",
+   "label": "Art. 458 — Salário In Natura",
+   "group": "Salário e Remuneração (Arts. 76–153)",
+   "num": "458",
+   "title": "Art. 458 — Salário In Natura",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-459.html": {
+   "subject": "CLT",
+   "label": "Art. 459 — Prazo de Pagamento",
+   "group": "Salário e Remuneração (Arts. 76–153)",
+   "num": "459",
+   "title": "Art. 459 — Prazo de Pagamento",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-460.html": {
+   "subject": "CLT",
+   "label": "Art. 460 — Equiparação Salarial",
+   "group": "Salário e Remuneração (Arts. 76–153)",
+   "num": "460",
+   "title": "Art. 460 — Equiparação Salarial",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-461.html": {
+   "subject": "CLT",
+   "label": "Art. 461 — Isonomia Salarial",
+   "group": "Salário e Remuneração (Arts. 76–153)",
+   "num": "461",
+   "title": "Art. 461 — Isonomia Salarial",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-462.html": {
+   "subject": "CLT",
+   "label": "Art. 462 — Descontos no Salário",
+   "group": "Salário e Remuneração (Arts. 76–153)",
+   "num": "462",
+   "title": "Art. 462 — Descontos no Salário",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-467.html": {
+   "subject": "CLT",
+   "label": "Art. 467 — Multa por Atraso de Verbas",
+   "group": "Salário e Remuneração (Arts. 76–153)",
+   "num": "467",
+   "title": "Art. 467 — Multa por Atraso de Verbas",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-129.html": {
+   "subject": "CLT",
+   "label": "Art. 129 — Direito a Férias",
+   "group": "Férias (Arts. 129–153)",
+   "num": "129",
+   "title": "Art. 129 — Direito a Férias",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-130.html": {
+   "subject": "CLT",
+   "label": "Art. 130 — Período Aquisitivo",
+   "group": "Férias (Arts. 129–153)",
+   "num": "130",
+   "title": "Art. 130 — Período Aquisitivo",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-133.html": {
+   "subject": "CLT",
+   "label": "Art. 133 — Perda do Direito a Férias",
+   "group": "Férias (Arts. 129–153)",
+   "num": "133",
+   "title": "Art. 133 — Perda do Direito a Férias",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-134.html": {
+   "subject": "CLT",
+   "label": "Art. 134 — Concessão de Férias",
+   "group": "Férias (Arts. 129–153)",
+   "num": "134",
+   "title": "Art. 134 — Concessão de Férias",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-137.html": {
+   "subject": "CLT",
+   "label": "Art. 137 — Férias em Dobro",
+   "group": "Férias (Arts. 129–153)",
+   "num": "137",
+   "title": "Art. 137 — Férias em Dobro",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-143.html": {
+   "subject": "CLT",
+   "label": "Art. 143 — Abono Pecuniário",
+   "group": "Férias (Arts. 129–153)",
+   "num": "143",
+   "title": "Art. 143 — Abono Pecuniário",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-145.html": {
+   "subject": "CLT",
+   "label": "Art. 145 — Remuneração de Férias",
+   "group": "Férias (Arts. 129–153)",
+   "num": "145",
+   "title": "Art. 145 — Remuneração de Férias",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-442.html": {
+   "subject": "CLT",
+   "label": "Art. 442 — Definição do Contrato",
+   "group": "Título IV — Contrato Individual de Trabalho (Arts. 442–510)",
+   "num": "442",
+   "title": "Art. 442 — Definição do Contrato",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-442-B.html": {
+   "subject": "CLT",
+   "label": "Art. 442-B — Autônomo Exclusivo",
+   "group": "Título IV — Contrato Individual de Trabalho (Arts. 442–510)",
+   "num": "442",
+   "title": "Art. 442-B — Autônomo Exclusivo",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-443.html": {
+   "subject": "CLT",
+   "label": "Art. 443 — Modalidades Contratuais",
+   "group": "Título IV — Contrato Individual de Trabalho (Arts. 442–510)",
+   "num": "443",
+   "title": "Art. 443 — Modalidades Contratuais",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-444.html": {
+   "subject": "CLT",
+   "label": "Art. 444 — Cláusulas Contratuais",
+   "group": "Título IV — Contrato Individual de Trabalho (Arts. 442–510)",
+   "num": "444",
+   "title": "Art. 444 — Cláusulas Contratuais",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-445.html": {
+   "subject": "CLT",
+   "label": "Art. 445 — Prazo Determinado",
+   "group": "Título IV — Contrato Individual de Trabalho (Arts. 442–510)",
+   "num": "445",
+   "title": "Art. 445 — Prazo Determinado",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-447.html": {
+   "subject": "CLT",
+   "label": "Art. 447 — Contrato Verbal",
+   "group": "Título IV — Contrato Individual de Trabalho (Arts. 442–510)",
+   "num": "447",
+   "title": "Art. 447 — Contrato Verbal",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-448.html": {
+   "subject": "CLT",
+   "label": "Art. 448 — Nulidade de Cláusulas",
+   "group": "Título IV — Contrato Individual de Trabalho (Arts. 442–510)",
+   "num": "448",
+   "title": "Art. 448 — Nulidade de Cláusulas",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-452-A.html": {
+   "subject": "CLT",
+   "label": "Art. 452-A — Contrato Intermitente",
+   "group": "Título IV — Contrato Individual de Trabalho (Arts. 442–510)",
+   "num": "452",
+   "title": "Art. 452-A — Contrato Intermitente",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-477.html": {
+   "subject": "CLT",
+   "label": "Art. 477 — Extinção do Contrato",
+   "group": "Rescisão do Contrato (Arts. 477–507)",
+   "num": "477",
+   "title": "Art. 477 — Extinção do Contrato",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-477-A.html": {
+   "subject": "CLT",
+   "label": "Art. 477-A — Dispensa Coletiva",
+   "group": "Rescisão do Contrato (Arts. 477–507)",
+   "num": "477",
+   "title": "Art. 477-A — Dispensa Coletiva",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-477-B.html": {
+   "subject": "CLT",
+   "label": "Art. 477-B — PDV e Quitação",
+   "group": "Rescisão do Contrato (Arts. 477–507)",
+   "num": "477",
+   "title": "Art. 477-B — PDV e Quitação",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-480.html": {
+   "subject": "CLT",
+   "label": "Art. 480 — Indenização por Ruptura",
+   "group": "Rescisão do Contrato (Arts. 477–507)",
+   "num": "480",
+   "title": "Art. 480 — Indenização por Ruptura",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-482.html": {
+   "subject": "CLT",
+   "label": "Art. 482 — Justa Causa",
+   "group": "Rescisão do Contrato (Arts. 477–507)",
+   "num": "482",
+   "title": "Art. 482 — Justa Causa",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-483.html": {
+   "subject": "CLT",
+   "label": "Art. 483 — Rescisão Indireta",
+   "group": "Rescisão do Contrato (Arts. 477–507)",
+   "num": "483",
+   "title": "Art. 483 — Rescisão Indireta",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-484-A.html": {
+   "subject": "CLT",
+   "label": "Art. 484-A — Extinção por Acordo Mútuo",
+   "group": "Rescisão do Contrato (Arts. 477–507)",
+   "num": "484",
+   "title": "Art. 484-A — Extinção por Acordo Mútuo",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-487.html": {
+   "subject": "CLT",
+   "label": "Art. 487 — Aviso Prévio",
+   "group": "Rescisão do Contrato (Arts. 477–507)",
+   "num": "487",
+   "title": "Art. 487 — Aviso Prévio",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-492.html": {
+   "subject": "CLT",
+   "label": "Art. 492 — Estabilidade Decenal",
+   "group": "Rescisão do Contrato (Arts. 477–507)",
+   "num": "492",
+   "title": "Art. 492 — Estabilidade Decenal",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-511.html": {
+   "subject": "CLT",
+   "label": "Art. 511 — Conceito de Sindicato",
+   "group": "Título V — Organização Sindical (Arts. 511–610)",
+   "num": "511",
+   "title": "Art. 511 — Conceito de Sindicato",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-513.html": {
+   "subject": "CLT",
+   "label": "Art. 513 — Prerrogativas Sindicais",
+   "group": "Título V — Organização Sindical (Arts. 511–610)",
+   "num": "513",
+   "title": "Art. 513 — Prerrogativas Sindicais",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-522.html": {
+   "subject": "CLT",
+   "label": "Art. 522 — Administração do Sindicato",
+   "group": "Título V — Organização Sindical (Arts. 511–610)",
+   "num": "522",
+   "title": "Art. 522 — Administração do Sindicato",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-543.html": {
+   "subject": "CLT",
+   "label": "Art. 543 — Garantia Sindical",
+   "group": "Título V — Organização Sindical (Arts. 511–610)",
+   "num": "543",
+   "title": "Art. 543 — Garantia Sindical",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-579.html": {
+   "subject": "CLT",
+   "label": "Art. 579 — Contribuição Sindical",
+   "group": "Título V — Organização Sindical (Arts. 511–610)",
+   "num": "579",
+   "title": "Art. 579 — Contribuição Sindical",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-611.html": {
+   "subject": "CLT",
+   "label": "Art. 611 — Convenção Coletiva",
+   "group": "Título VI — Negociação Coletiva (Arts. 611–625)",
+   "num": "611",
+   "title": "Art. 611 — Convenção Coletiva",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-611-A.html": {
+   "subject": "CLT",
+   "label": "Art. 611-A — Prevalência do Negociado",
+   "group": "Título VI — Negociação Coletiva (Arts. 611–625)",
+   "num": "611",
+   "title": "Art. 611-A — Prevalência do Negociado",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-611-B.html": {
+   "subject": "CLT",
+   "label": "Art. 611-B — Limites à Negociação",
+   "group": "Título VI — Negociação Coletiva (Arts. 611–625)",
+   "num": "611",
+   "title": "Art. 611-B — Limites à Negociação",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-612.html": {
+   "subject": "CLT",
+   "label": "Art. 612 — Acordo Coletivo",
+   "group": "Título VI — Negociação Coletiva (Arts. 611–625)",
+   "num": "612",
+   "title": "Art. 612 — Acordo Coletivo",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-616.html": {
+   "subject": "CLT",
+   "label": "Art. 616 — Obrigatoriedade de Negociação",
+   "group": "Título VI — Negociação Coletiva (Arts. 611–625)",
+   "num": "616",
+   "title": "Art. 616 — Obrigatoriedade de Negociação",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-763.html": {
+   "subject": "CLT",
+   "label": "Art. 763 — Jurisdição Trabalhista",
+   "group": "Título X — Processo Judiciário do Trabalho (Arts. 763–910)",
+   "num": "763",
+   "title": "Art. 763 — Jurisdição Trabalhista",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-769.html": {
+   "subject": "CLT",
+   "label": "Art. 769 — Aplicação do CPC",
+   "group": "Título X — Processo Judiciário do Trabalho (Arts. 763–910)",
+   "num": "769",
+   "title": "Art. 769 — Aplicação do CPC",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-791.html": {
+   "subject": "CLT",
+   "label": "Art. 791 — Jus Postulandi",
+   "group": "Título X — Processo Judiciário do Trabalho (Arts. 763–910)",
+   "num": "791",
+   "title": "Art. 791 — Jus Postulandi",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-791-A.html": {
+   "subject": "CLT",
+   "label": "Art. 791-A — Honorários Advocatícios",
+   "group": "Título X — Processo Judiciário do Trabalho (Arts. 763–910)",
+   "num": "791",
+   "title": "Art. 791-A — Honorários Advocatícios",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-793-A.html": {
+   "subject": "CLT",
+   "label": "Arts. 793-A a 793-D — Litigância de Má-fé",
+   "group": "Título X — Processo Judiciário do Trabalho (Arts. 763–910)",
+   "num": "793",
+   "title": "Arts. 793-A a 793-D — Litigância de Má-fé",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-796.html": {
+   "subject": "CLT",
+   "label": "Art. 796 — Exceções Processuais",
+   "group": "Título X — Processo Judiciário do Trabalho (Arts. 763–910)",
+   "num": "796",
+   "title": "Art. 796 — Exceções Processuais",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-818.html": {
+   "subject": "CLT",
+   "label": "Art. 818 — Ônus da Prova",
+   "group": "Título X — Processo Judiciário do Trabalho (Arts. 763–910)",
+   "num": "818",
+   "title": "Art. 818 — Ônus da Prova",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-840.html": {
+   "subject": "CLT",
+   "label": "Art. 840 — Petição Inicial",
+   "group": "Título X — Processo Judiciário do Trabalho (Arts. 763–910)",
+   "num": "840",
+   "title": "Art. 840 — Petição Inicial",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-843.html": {
+   "subject": "CLT",
+   "label": "Art. 843 — Presença em Audiência",
+   "group": "Título X — Processo Judiciário do Trabalho (Arts. 763–910)",
+   "num": "843",
+   "title": "Art. 843 — Presença em Audiência",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-852-A.html": {
+   "subject": "CLT",
+   "label": "Art. 852-A — Rito Sumaríssimo",
+   "group": "Título X — Processo Judiciário do Trabalho (Arts. 763–910)",
+   "num": "852",
+   "title": "Art. 852-A — Rito Sumaríssimo",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-876.html": {
+   "subject": "CLT",
+   "label": "Art. 876 — Títulos Executivos",
+   "group": "Título X — Processo Judiciário do Trabalho (Arts. 763–910)",
+   "num": "876",
+   "title": "Art. 876 — Títulos Executivos",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-878.html": {
+   "subject": "CLT",
+   "label": "Art. 878 — Execução de Ofício",
+   "group": "Título X — Processo Judiciário do Trabalho (Arts. 763–910)",
+   "num": "878",
+   "title": "Art. 878 — Execução de Ofício",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-882.html": {
+   "subject": "CLT",
+   "label": "Art. 882 — Garantia do Juízo",
+   "group": "Título X — Processo Judiciário do Trabalho (Arts. 763–910)",
+   "num": "882",
+   "title": "Art. 882 — Garantia do Juízo",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-899.html": {
+   "subject": "CLT",
+   "label": "Art. 899 — Recursos — Depósito Recursal",
+   "group": "Título X — Processo Judiciário do Trabalho (Arts. 763–910)",
+   "num": "899",
+   "title": "Art. 899 — Recursos — Depósito Recursal",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-SUMULAS.html": {
+   "subject": "CLT",
+   "label": "Súmulas e OJs do TST — Seleção",
+   "group": "Legislação Extravagante e Súmulas TST",
+   "num": null,
+   "title": "Súmulas e OJs do TST — Seleção",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-LEI8036.html": {
+   "subject": "CLT",
+   "label": "Lei 8.036/90 — FGTS",
+   "group": "Legislação Extravagante e Súmulas TST",
+   "num": null,
+   "title": "Lei 8.036/90 — FGTS",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "CLT-ART-LEI12506.html": {
+   "subject": "CLT",
+   "label": "Lei 12.506/11 — Aviso Prévio Proporcional",
+   "group": "Legislação Extravagante e Súmulas TST",
+   "num": null,
+   "title": "Lei 12.506/11 — Aviso Prévio Proporcional",
+   "checked": null,
+   "checkedPrecision": null,
+   "checkedLabel": null,
+   "hearingId": null,
+   "placeholder": false,
+   "sections": [],
+   "available": false,
+   "status": "em-breve"
+  },
+  "L9099-ART-60.html": {
+   "subject": "L9099",
+   "label": "Art. 60 - Competência do Juizado Especial Criminal",
+   "group": "Disposições Gerais — Juizados Criminais (Arts. 60–65)",
+   "num": "60",
+   "title": "Art. 60 da Lei 9.099/1995 — Competência dos Juizados Especiais Criminais",
+   "checked": "2026-11-11",
+   "checkedPrecision": "dia",
+   "checkedLabel": "Conferência normativa em 11/11/2026",
+   "hearingId": "recorrentes",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "panorama",
+     "title": "Panorama do Art. 60"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal Decomposto"
+    },
+    {
+     "id": "criterios",
+     "title": "Critérios que Definem Quem Julga"
+    },
+    {
+     "id": "funcoes",
+     "title": "Conciliação, Julgamento e Execução"
+    },
+    {
+     "id": "territorio",
+     "title": "Foro, Organização Judiciária e Atos Fora da Sede"
+    },
+    {
+     "id": "conexao",
+     "title": "Conexão e Continência"
+    },
+    {
+     "id": "paragrafo-unico",
+     "title": "Transação Penal e Composição Civil na Reunião de Processos"
+    },
+    {
+     "id": "remessa",
+     "title": "Remessa ao Juízo Comum, Desclassificação e Incompetência"
+    },
+    {
+     "id": "concurso",
+     "title": "Concurso de Infrações e o Limite de 2 Anos"
+    },
+    {
+     "id": "exclusoes",
+     "title": "Exclusões, Justiça Federal, Militar e Leis Especiais"
+    },
+    {
+     "id": "recursos",
+     "title": "Turma Recursal, Habeas Corpus e Conflitos"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo de Competência (Art. 60)"
+    },
+    {
+     "id": "atendimento",
+     "title": "Atendimento, Conciliação e Negociação com o Cliente"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência, Súmulas, Teses e Enunciados"
+    },
+    {
+     "id": "doutrina",
+     "title": "Linhas Dogmáticas e Controvérsias"
+    },
+    {
+     "id": "recorrentes",
+     "title": "Pontos que Sempre Aparecem nas Audiências"
+    },
+    {
+     "id": "fontes",
+     "title": "Fontes, Verificação e Ressalvas"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "L9099-ART-61.html": {
+   "subject": "L9099",
+   "label": "Art. 61 - Infrações de Menor Potencial Ofensivo",
+   "group": "Disposições Gerais — Juizados Criminais (Arts. 60–65)",
+   "num": "61",
+   "title": "Art. 61 da Lei 9.099/1995 — Infrações de Menor Potencial Ofensivo",
+   "checked": "2026-11-11",
+   "checkedPrecision": "dia",
+   "checkedLabel": "Conferência normativa em 11/11/2026",
+   "hearingId": "recorrentes",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "panorama",
+     "title": "Panorama do Art. 61"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal Decomposto"
+    },
+    {
+     "id": "criterio",
+     "title": "Como Aplicar o Limite de 2 Anos"
+    },
+    {
+     "id": "contravencoes",
+     "title": "Contravenções Penais"
+    },
+    {
+     "id": "tipos",
+     "title": "Quadro de Infrações Frequentes e o Art. 61"
+    },
+    {
+     "id": "exclusoes",
+     "title": "Quando a Lei 9.099 Não se Aplica Mesmo com Pena até 2 Anos"
+    },
+    {
+     "id": "competencia",
+     "title": "Competência e Deslocamentos"
+    },
+    {
+     "id": "audiencia-preliminar",
+     "title": "Termo Circunstanciado, Composição Civil e Transação Penal"
+    },
+    {
+     "id": "instrucao",
+     "title": "Denúncia Oral, Audiência de Instrução e Julgamento e Recursos"
+    },
+    {
+     "id": "sursis",
+     "title": "Suspensão Condicional do Processo e Comparativo dos Institutos"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo do Art. 61 até a Sentença"
+    },
+    {
+     "id": "prazos",
+     "title": "Prazos, Decadência e Prescrição"
+    },
+    {
+     "id": "atendimento",
+     "title": "Atendimento, Conciliação e Negociação com o Cliente"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência, Súmulas, Teses e Enunciados"
+    },
+    {
+     "id": "doutrina",
+     "title": "Linhas Dogmáticas e Controvérsias"
+    },
+    {
+     "id": "recorrentes",
+     "title": "Pontos que Sempre Aparecem nas Audiências"
+    },
+    {
+     "id": "fontes",
+     "title": "Fontes, Verificação e Ressalvas"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "L9099-ART-62.html": {
+   "subject": "L9099",
+   "label": "Art. 62 - Critérios do Processo Criminal Especial",
+   "group": "Disposições Gerais — Juizados Criminais (Arts. 60–65)",
+   "num": "62",
+   "title": "Art. 62 da Lei 9.099/1995 — Critérios Orientadores do Processo",
+   "checked": "2026-11-11",
+   "checkedPrecision": "dia",
+   "checkedLabel": "Conferência normativa em 11/11/2026",
+   "hearingId": "recorrentes",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "panorama",
+     "title": "Panorama do Art. 62"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal Decomposto"
+    },
+    {
+     "id": "natureza",
+     "title": "Natureza Jurídica e Alcance do Art. 62"
+    },
+    {
+     "id": "oralidade",
+     "title": "Oralidade"
+    },
+    {
+     "id": "informalidade",
+     "title": "Simplicidade e Informalidade"
+    },
+    {
+     "id": "economia",
+     "title": "Economia Processual"
+    },
+    {
+     "id": "celeridade",
+     "title": "Celeridade e Prazos"
+    },
+    {
+     "id": "reparacao",
+     "title": "Reparação dos Danos Sofridos pela Vítima"
+    },
+    {
+     "id": "pena-alternativa",
+     "title": "Aplicação de Pena Não Privativa de Liberdade"
+    },
+    {
+     "id": "digital",
+     "title": "Audiência Telepresencial, Gravação e Comunicação Eletrônica"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma de Aplicação do Art. 62 ao Caso Concreto"
+    },
+    {
+     "id": "atendimento",
+     "title": "Atendimento, Conciliação e Negociação com o Cliente"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência, Súmulas, Teses e Atos Normativos"
+    },
+    {
+     "id": "doutrina",
+     "title": "Linhas Dogmáticas e Controvérsias"
+    },
+    {
+     "id": "recorrentes",
+     "title": "Pontos que Sempre Aparecem nas Audiências"
+    },
+    {
+     "id": "fontes",
+     "title": "Fontes, Verificação e Ressalvas"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "L9099-ART-63.html": {
+   "subject": "L9099",
+   "label": "Art. 63 - Competência Territorial do Juizado",
+   "group": "Disposições Gerais — Juizados Criminais (Arts. 60–65)",
+   "num": "63",
+   "title": "Art. 63 da Lei 9.099/1995 — Competência Territorial do Juizado Especial Criminal",
+   "checked": "2026-11-11",
+   "checkedPrecision": "dia",
+   "checkedLabel": "Conferência normativa em 11/11/2026",
+   "hearingId": "recorrentes",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "panorama",
+     "title": "Panorama do Art. 63"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal Decomposto"
+    },
+    {
+     "id": "criterio",
+     "title": "Como Definir o Lugar da Infração"
+    },
+    {
+     "id": "teorias",
+     "title": "Teorias do Lugar da Infração e Posições Doutrinárias"
+    },
+    {
+     "id": "plurilocais",
+     "title": "Infrações Plurilocais, Internet e Mensagens"
+    },
+    {
+     "id": "cpp",
+     "title": "Regras do CPP sobre o Foro"
+    },
+    {
+     "id": "fora-sede",
+     "title": "Atos Fora da Sede, Precatória e Videoconferência"
+    },
+    {
+     "id": "incompetencia",
+     "title": "Exceção de Incompetência, Declinatória e Nulidade"
+    },
+    {
+     "id": "conflitos",
+     "title": "Conflitos de Competência Territorial"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo do Art. 63"
+    },
+    {
+     "id": "atendimento",
+     "title": "Atendimento, Conciliação e Negociação com o Cliente"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência, Teses e Enunciados"
+    },
+    {
+     "id": "doutrina",
+     "title": "Linhas Dogmáticas e Controvérsias"
+    },
+    {
+     "id": "recorrentes",
+     "title": "Pontos que Sempre Aparecem nas Audiências"
+    },
+    {
+     "id": "fontes",
+     "title": "Fontes, Verificação e Ressalvas"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "L9099-ART-64.html": {
+   "subject": "L9099",
+   "label": "Art. 64 - Publicidade, Horário e Dia dos Atos",
+   "group": "Disposições Gerais — Juizados Criminais (Arts. 60–65)",
+   "num": "64",
+   "title": "Art. 64 da Lei 9.099/1995 — Publicidade, Horário e Dia dos Atos Processuais",
+   "checked": "2026-11-12",
+   "checkedPrecision": "dia",
+   "checkedLabel": "Conferência normativa em 12/11/2026",
+   "hearingId": "recorrentes",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "panorama",
+     "title": "Panorama do Art. 64"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal Decomposto"
+    },
+    {
+     "id": "publicidade",
+     "title": "Publicidade dos Atos e Hipóteses de Restrição"
+    },
+    {
+     "id": "protecao",
+     "title": "Segredo, Proteção da Vítima e da Testemunha na Audiência"
+    },
+    {
+     "id": "horario",
+     "title": "Horário Noturno, Qualquer Dia da Semana e Prazos"
+    },
+    {
+     "id": "audiencias",
+     "title": "Audiência Presencial, Telepresencial, Registro e Gravação"
+    },
+    {
+     "id": "acesso",
+     "title": "Acesso aos Autos, Prerrogativas e Ciência dos Atos"
+    },
+    {
+     "id": "nulidades",
+     "title": "Validade dos Atos e Nulidades Ligadas ao Art. 64"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo do Art. 64"
+    },
+    {
+     "id": "atendimento",
+     "title": "Atendimento, Conciliação e Negociação com o Cliente"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência, Teses e Enunciados"
+    },
+    {
+     "id": "doutrina",
+     "title": "Linhas Dogmáticas e Controvérsias"
+    },
+    {
+     "id": "recorrentes",
+     "title": "Pontos que Sempre Aparecem nas Audiências"
+    },
+    {
+     "id": "fontes",
+     "title": "Fontes, Verificação e Ressalvas"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "L9099-ART-65.html": {
+   "subject": "L9099",
+   "label": "Art. 65 - Validade dos Atos e Registro",
+   "group": "Disposições Gerais — Juizados Criminais (Arts. 60–65)",
+   "num": "65",
+   "title": "Art. 65 da Lei 9.099/1995 — Validade dos Atos, Prejuízo e Registro",
+   "checked": "2026-11-12",
+   "checkedPrecision": "dia",
+   "checkedLabel": "Conferência normativa em 12/11/2026",
+   "hearingId": "recorrentes",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "panorama",
+     "title": "Panorama do Art. 65"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal Decomposto"
+    },
+    {
+     "id": "finalidade",
+     "title": "Finalidade do Ato, Art. 62 e Limites Constitucionais"
+    },
+    {
+     "id": "nulidades-cpp",
+     "title": "Prejuízo e o Regime de Nulidades do CPP"
+    },
+    {
+     "id": "casos",
+     "title": "Casos Típicos e Como o Vício Costuma Ser Tratado"
+    },
+    {
+     "id": "comarcas",
+     "title": "Atos em Outras Comarcas: Precatória, Videoconferência e Meio Eletrônico"
+    },
+    {
+     "id": "registro",
+     "title": "Registro dos Atos, Gravação e Degravação"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo do Art. 65"
+    },
+    {
+     "id": "atendimento",
+     "title": "Atendimento, Conciliação e Negociação com o Cliente"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência, Teses e Enunciados"
+    },
+    {
+     "id": "doutrina",
+     "title": "Linhas Dogmáticas e Controvérsias"
+    },
+    {
+     "id": "recorrentes",
+     "title": "Pontos que Sempre Aparecem nas Audiências"
+    },
+    {
+     "id": "fontes",
+     "title": "Fontes, Verificação e Ressalvas"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  }
+ }
+}

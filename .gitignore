@@ -1,0 +1,15 @@
+# Arquivos de trabalho (não fazem parte do site)
+modelo.zip
+*.bak
+*.bak.html
+*.original.bak.html
+
+# Ferramentas
+node_modules/
+__pycache__/
+*.pyc
+tests/.tmp/
+
+# Sistema
+.DS_Store
+Thumbs.db

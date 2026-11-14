@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vade Mecum Magistratura | 2026</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=52aa8f95">
 
     <style>
         /* ============================================================
@@ -80,11 +79,19 @@
             }
         }
     </style>
+<!-- VM-HEAD -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0d1b2a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="fonts.css?v=042dc32b">
+<!-- /VM-HEAD -->
 </head>
 
 <body>
 
-    <button class="menu-toggle" onclick="toggleMenu()" title="Ocultar/Mostrar Menu">☰</button>
+    <button class="menu-toggle" onclick="toggleMenu()" title="Ocultar/Mostrar Menu" aria-label="Ocultar ou mostrar o menu de artigos" aria-controls="sidebar" aria-expanded="true">☰</button>
 
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
@@ -105,6 +112,7 @@
     </aside>
 
     <main class="content-area">
+        <h1 class="sr-only">Lei 9.099/95, Juizados Especiais Criminais: fluxogramas por artigo</h1>
         <iframe
             id="painel_artigos"
             src="L9099-ART-60.html"
@@ -113,8 +121,7 @@
         </iframe>
     </main>
 
-    <script src="script.js"></script>
-
+    <script src="script.js?v=94f15684"></script>
     <script>
         /* ============================================================
            ROLAGEM INTERNA DO ARTIGO
@@ -156,5 +163,13 @@
         })();
     </script>
 
+<!-- VM-RUNTIME -->
+<script src="study-tracker.js?v=46265654"></script>
+<script src="vm-data.js?v=e21a270c"></script>
+<script src="em-breve.js?v=6487e366"></script>
+<script src="search.js?v=90f3f251"></script>
+<script src="session-banner.js?v=d87419ae"></script>
+<script src="pwa.js?v=64776eec"></script>
+<!-- /VM-RUNTIME -->
 </body>
 </html>

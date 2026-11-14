@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vade Mecum Magistratura | 2026</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=52aa8f95">
 
     <style>
         /* ============================================================
@@ -80,11 +79,19 @@
             }
         }
     </style>
+<!-- VM-HEAD -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0d1b2a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="fonts.css?v=042dc32b">
+<!-- /VM-HEAD -->
 </head>
 
 <body>
 
-    <button class="menu-toggle" onclick="toggleMenu()" title="Ocultar/Mostrar Menu">☰</button>
+    <button class="menu-toggle" onclick="toggleMenu()" title="Ocultar/Mostrar Menu" aria-label="Ocultar ou mostrar o menu de artigos" aria-controls="sidebar" aria-expanded="true">☰</button>
 
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
@@ -107,7 +114,6 @@
             <a href="DP-ART-10.html" target="painel_artigos">Art. 10 - Contagem de Prazo</a>
             <a href="DP-ART-11.html" target="painel_artigos">Art. 11 - Frações de Pena</a>
             <a href="DP-ART-12.html" target="painel_artigos">Art. 12 - Legislação Especial</a>
-
             <div class="menu-group-title">Do Crime</div>
             <a href="DP-ART-13.html" target="painel_artigos">Art. 13 - Nexo Causal</a>
             <a href="DP-ART-14.html" target="painel_artigos">Art. 14 - Tentativa / Consumação</a>
@@ -122,47 +128,43 @@
             <a href="DP-ART-23.html" target="painel_artigos">Art. 23 - Excludentes de Ilicitude</a>
             <a href="DP-ART-24.html" target="painel_artigos">Art. 24 - Estado de Necessidade</a>
             <a href="DP-ART-25.html" target="painel_artigos">Art. 25 - Legítima Defesa</a>
-
             <div class="menu-group-title">Imputabilidade Penal</div>
             <a href="DP-ART-26.html" target="painel_artigos">Art. 26 - Inimputabilidade</a>
             <a href="DP-ART-27.html" target="painel_artigos">Art. 27 - Menores de 18 anos</a>
             <a href="DP-ART-28.html" target="painel_artigos">Art. 28 - Emoção, Paixão e Embriaguez</a>
-
             <div class="menu-group-title">Concurso de Pessoas</div>
-            <a href="DP-ART-29.html" target="painel_artigos">Art. 29 - Concurso de Pessoas</a>
-            <a href="DP-ART-30.html" target="painel_artigos">Art. 30 - Circunstâncias Incomunicáveis</a>
-            <a href="DP-ART-31.html" target="painel_artigos">Art. 31 - Ajuste, Determinação ou Instigação</a>
-
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-29.html" title="Em breve: esta página ainda não foi publicada.">Art. 29 - Concurso de Pessoas</a>
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-30.html" title="Em breve: esta página ainda não foi publicada.">Art. 30 - Circunstâncias Incomunicáveis</a>
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-31.html" title="Em breve: esta página ainda não foi publicada.">Art. 31 - Ajuste, Determinação ou Instigação</a>
             <div class="menu-group-title">Das Penas</div>
-            <a href="DP-ART-32.html" target="painel_artigos">Art. 32 - Espécies de Pena</a>
-            <a href="DP-ART-33.html" target="painel_artigos">Art. 33 - Regimes de Cumprimento</a>
-            <a href="DP-ART-34.html" target="painel_artigos">Art. 34 - Regime Fechado</a>
-            <a href="DP-ART-35.html" target="painel_artigos">Art. 35 - Regime Semiaberto</a>
-            <a href="DP-ART-36.html" target="painel_artigos">Art. 36 - Regime Aberto</a>
-            <a href="DP-ART-37.html" target="painel_artigos">Art. 37 - Trabalho do Preso</a>
-            <a href="DP-ART-38.html" target="painel_artigos">Art. 38 - Direitos do Preso</a>
-            <a href="DP-ART-39.html" target="painel_artigos">Art. 39 - Trabalho Facultativo</a>
-            <a href="DP-ART-40.html" target="painel_artigos">Art. 40 - Legislação Especial</a>
-            <a href="DP-ART-41.html" target="painel_artigos">Art. 41 - Superveniência de Doença Mental</a>
-            <a href="DP-ART-42.html" target="painel_artigos">Art. 42 - Detração Penal</a>
-
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-32.html" title="Em breve: esta página ainda não foi publicada.">Art. 32 - Espécies de Pena</a>
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-33.html" title="Em breve: esta página ainda não foi publicada.">Art. 33 - Regimes de Cumprimento</a>
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-34.html" title="Em breve: esta página ainda não foi publicada.">Art. 34 - Regime Fechado</a>
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-35.html" title="Em breve: esta página ainda não foi publicada.">Art. 35 - Regime Semiaberto</a>
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-36.html" title="Em breve: esta página ainda não foi publicada.">Art. 36 - Regime Aberto</a>
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-37.html" title="Em breve: esta página ainda não foi publicada.">Art. 37 - Trabalho do Preso</a>
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-38.html" title="Em breve: esta página ainda não foi publicada.">Art. 38 - Direitos do Preso</a>
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-39.html" title="Em breve: esta página ainda não foi publicada.">Art. 39 - Trabalho Facultativo</a>
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-40.html" title="Em breve: esta página ainda não foi publicada.">Art. 40 - Legislação Especial</a>
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-41.html" title="Em breve: esta página ainda não foi publicada.">Art. 41 - Superveniência de Doença Mental</a>
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-42.html" title="Em breve: esta página ainda não foi publicada.">Art. 42 - Detração Penal</a>
             <div class="menu-group-title">Penas Restritivas de Direitos</div>
-            <a href="DP-ART-43.html" target="painel_artigos">Art. 43 - Espécies</a>
-            <a href="DP-ART-44.html" target="painel_artigos">Art. 44 - Substituição</a>
-            <a href="DP-ART-45.html" target="painel_artigos">Art. 45 - Conversão</a>
-            <a href="DP-ART-46.html" target="painel_artigos">Art. 46 - Prestação de Serviços</a>
-            <a href="DP-ART-47.html" target="painel_artigos">Art. 47 - Interdições</a>
-            <a href="DP-ART-48.html" target="painel_artigos">Art. 48 - Limitação de Fim de Semana</a>
-
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-43.html" title="Em breve: esta página ainda não foi publicada.">Art. 43 - Espécies</a>
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-44.html" title="Em breve: esta página ainda não foi publicada.">Art. 44 - Substituição</a>
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-45.html" title="Em breve: esta página ainda não foi publicada.">Art. 45 - Conversão</a>
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-46.html" title="Em breve: esta página ainda não foi publicada.">Art. 46 - Prestação de Serviços</a>
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-47.html" title="Em breve: esta página ainda não foi publicada.">Art. 47 - Interdições</a>
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-48.html" title="Em breve: esta página ainda não foi publicada.">Art. 48 - Limitação de Fim de Semana</a>
             <div class="menu-group-title">Pena de Multa</div>
-            <a href="DP-ART-49.html" target="painel_artigos">Art. 49 - Multa</a>
-            <a href="DP-ART-50.html" target="painel_artigos">Art. 50 - Pagamento</a>
-            <a href="DP-ART-51.html" target="painel_artigos">Art. 51 - Execução</a>
-            <a href="DP-ART-52.html" target="painel_artigos">Art. 52 - Multa (disposições gerais)</a>
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-49.html" title="Em breve: esta página ainda não foi publicada.">Art. 49 - Multa</a>
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-50.html" title="Em breve: esta página ainda não foi publicada.">Art. 50 - Pagamento</a>
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-51.html" title="Em breve: esta página ainda não foi publicada.">Art. 51 - Execução</a>
+            <a class="em-breve" aria-disabled="true" data-href="DP-ART-52.html" title="Em breve: esta página ainda não foi publicada.">Art. 52 - Multa (disposições gerais)</a>
         </nav>
     </aside>
 
     <main class="content-area">
+        <h1 class="sr-only">Código Penal: fluxogramas por artigo</h1>
         <iframe
             id="painel_artigos"
             src="DP-ART-1.html"
@@ -171,8 +173,7 @@
         </iframe>
     </main>
 
-    <script src="script.js"></script>
-
+    <script src="script.js?v=94f15684"></script>
     <script>
         /* ============================================================
            ALTURA AUTOMÁTICA DO IFRAME
@@ -281,5 +282,13 @@
         })();
     </script>
 
+<!-- VM-RUNTIME -->
+<script src="study-tracker.js?v=46265654"></script>
+<script src="vm-data.js?v=e21a270c"></script>
+<script src="em-breve.js?v=6487e366"></script>
+<script src="search.js?v=90f3f251"></script>
+<script src="session-banner.js?v=d87419ae"></script>
+<script src="pwa.js?v=64776eec"></script>
+<!-- /VM-RUNTIME -->
 </body>
 </html>

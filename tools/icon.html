@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Ícone do Vade Mecum (fonte dos PNG em icons/)</title>
+<link rel="stylesheet" href="../fonts.css">
+<style>
+  /* Render: 512x512. Para o ícone "maskable" use ?maskable=1 (conteúdo dentro de 60% central). */
+  html,body{margin:0;width:512px;height:512px;background:#0d1b2a;overflow:hidden}
+  .wrap{width:512px;height:512px;display:flex;align-items:center;justify-content:center;
+    background:radial-gradient(circle at 30% 20%,#1e3d5c 0%,#0d1b2a 70%)}
+  .ring{width:360px;height:360px;border-radius:50%;border:10px solid #c8960c;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;box-shadow:inset 0 0 0 6px rgba(232,184,75,.25)}
+  .mk .ring{width:300px;height:300px;border-width:9px}
+  .sec{font-family:'Playfair Display',serif;font-weight:900;font-size:210px;line-height:1;color:#e8b84b;margin-top:-34px}
+  .mk .sec{font-size:170px;margin-top:-28px}
+  .name{font-family:'Source Serif 4',serif;font-weight:600;font-size:34px;letter-spacing:7px;color:#f3e7c6;margin-top:14px}
+  .mk .name{font-size:26px;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="wrap" id="w"><div class="ring"><div class="sec">§</div><div class="name">VADE MECUM</div></div></div>
+<script>if(/maskable=1/.test(location.search))document.getElementById('w').classList.add('mk');</script>
+</body>
+</html>

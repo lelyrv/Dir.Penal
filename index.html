@@ -4,9 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vade Mecum Digital — Magistratura ENAM</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="study-tracker.js"></script>
+<script src="vendor/chart.umd.min.js?v=49aef4c2"></script>
+<script src="study-tracker.js?v=46265654"></script>
 <style>
   :root{
     --navy:#0d1b2a;--navy-mid:#1a2f45;--navy-light:#243b55;
@@ -309,6 +308,20 @@
 
   @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
   .materia-card{animation:fadeUp .4s ease both;}
+
+  /* ── CARDS "EM BREVE" (marcados por tools/build.py) ── */
+  .materia-card.em-breve{opacity:.62;cursor:not-allowed;}
+  .materia-card.em-breve:hover{transform:none;box-shadow:var(--shadow);}
+  .materia-card.em-breve:hover::before{opacity:.05;}
+  .materia-card.em-breve .materia-arrow{font-size:.62rem;letter-spacing:.8px;text-transform:uppercase;color:#7a5a00;background:#fdf3d8;border:1px solid #d4aa3a;border-radius:2px;padding:.15rem .45rem;}
+  .materia-card.em-breve:hover .materia-arrow{transform:none;color:#7a5a00;}
+
+  /* ── ACESSIBILIDADE ── */
+  .materia-card:focus-visible,#top-nav a:focus-visible,.db-tab:focus-visible,button:focus-visible{outline:2px solid var(--gold,#c8960c);outline-offset:3px;}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto!important;}
+    *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
+  }
   .materia-card:nth-child(1){animation-delay:.05s;}
   .materia-card:nth-child(2){animation-delay:.1s;}
   .materia-card:nth-child(3){animation-delay:.15s;}
@@ -330,6 +343,14 @@
     .materia-card{break-inside:avoid;box-shadow:none;}
   }
 </style>
+<!-- VM-HEAD -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0d1b2a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="fonts.css?v=042dc32b">
+<!-- /VM-HEAD -->
 </head>
 <body>
 
@@ -391,7 +412,7 @@
     <div class="db-stat-card green">
       <div class="db-stat-label">Artigos Concluídos</div>
       <div class="db-stat-value green" id="db-completed">0</div>
-      <div class="db-stat-sub" id="db-completed-pct">de 5.308 artigos totais</div>
+      <div class="db-stat-sub" id="db-completed-pct">de … artigos totais</div>
     </div>
     <div class="db-stat-card blue">
       <div class="db-stat-label">Dias Estudados</div>
@@ -447,7 +468,7 @@
         <thead>
           <tr>
             <th>Data</th><th>Dia</th><th>Matéria</th><th>Artigo</th>
-            <th>Hora Início</th><th>Hora Final</th><th>Estudo</th><th>Pausas</th><th>Total</th><th>Status</th>
+            <th>Hora Início</th><th>Hora Final</th><th>Estudo</th><th>Pausas</th><th>Total</th><th>Nota</th><th>Status</th>
           </tr>
         </thead>
         <tbody id="dbSessionsBody">
@@ -496,7 +517,7 @@
 </header>
 
 <!-- ═══════════════════════════════ PAGE WRAP ═══════════════════════════ -->
-<div class="page-wrap">
+<main class="page-wrap">
 
   <!-- ── MATÉRIAS ── -->
   <section class="section" id="materias">
@@ -525,12 +546,12 @@
         </div>
         <div class="materia-progress">
           <div class="mp-bar-bg"><div class="mp-bar-fill" id="prog-CP" style="width:0%;background:#8b1a1a;"></div></div>
-          <div class="mp-label"><span id="prog-CP-label">0 / 361 artigos</span><span id="prog-CP-pct">0%</span></div>
+          <div class="mp-label"><span id="prog-CP-label">0 / … artigos</span><span id="prog-CP-pct">0%</span></div>
         </div>
       </a>
 
       <!-- 2. DIREITO PROCESSUAL PENAL -->
-      <a class="materia-card mc-proc-penal" href="direito-processual-penal/index.html">
+      <a class="materia-card mc-proc-penal em-breve" aria-disabled="true" data-href="direito-processual-penal/index.html" title="Em breve: esta página ainda não foi publicada.">
         <div class="materia-icon">🏛️</div>
         <div class="materia-nome">Direito Processual Penal</div>
         <div class="materia-desc">Inquérito policial, ação penal, competência, provas, prisões e medidas cautelares, recursos, execução penal e sistemas de garantias processuais.</div>
@@ -540,11 +561,11 @@
             <span class="tag tag-red">LEP</span>
             <span class="tag tag-red">STJ/STF</span>
           </div>
-          <span class="materia-arrow">→</span>
+          <span class="materia-arrow">Em breve</span>
         </div>
         <div class="materia-progress">
           <div class="mp-bar-bg"><div class="mp-bar-fill" id="prog-CPP" style="width:0%;background:#c0392b;"></div></div>
-          <div class="mp-label"><span id="prog-CPP-label">0 / 811 artigos</span><span id="prog-CPP-pct">0%</span></div>
+          <div class="mp-label"><span id="prog-CPP-label">0 / … artigos</span><span id="prog-CPP-pct">0%</span></div>
         </div>
       </a>
 
@@ -563,12 +584,12 @@
         </div>
         <div class="materia-progress">
           <div class="mp-bar-bg"><div class="mp-bar-fill" id="prog-L9099" style="width:0%;background:#0f6e6e;"></div></div>
-          <div class="mp-label"><span id="prog-L9099-label">0 / 97 artigos</span><span id="prog-L9099-pct">0%</span></div>
+          <div class="mp-label"><span id="prog-L9099-label">0 / … artigos</span><span id="prog-L9099-pct">0%</span></div>
         </div>
       </a>
 
       <!-- 3. DIREITO CONSTITUCIONAL -->
-      <a class="materia-card mc-const" href="direito-constitucional/index.html">
+      <a class="materia-card mc-const em-breve" aria-disabled="true" data-href="direito-constitucional/index.html" title="Em breve: esta página ainda não foi publicada.">
         <div class="materia-icon">📜</div>
         <div class="materia-nome">Direito Constitucional</div>
         <div class="materia-desc">Princípios fundamentais, direitos e garantias fundamentais, organização do Estado, poder constituinte, controle de constitucionalidade e jurisprudência do STF.</div>
@@ -578,7 +599,7 @@
             <span class="tag tag-navy">STF</span>
             <span class="tag tag-navy">ADI/ADC</span>
           </div>
-          <span class="materia-arrow">→</span>
+          <span class="materia-arrow">Em breve</span>
         </div>
         <div class="materia-progress">
           <div class="mp-bar-bg"><div class="mp-bar-fill" id="prog-CF" style="width:0%;background:#0d1b2a;"></div></div>
@@ -587,7 +608,7 @@
       </a>
 
       <!-- 4. DIREITO ADMINISTRATIVO -->
-      <a class="materia-card mc-admin" href="direito-administrativo/index.html">
+      <a class="materia-card mc-admin em-breve" aria-disabled="true" data-href="direito-administrativo/index.html" title="Em breve: esta página ainda não foi publicada.">
         <div class="materia-icon">🏢</div>
         <div class="materia-nome">Direito Administrativo</div>
         <div class="materia-desc">Princípios da Administração Pública, atos e contratos administrativos, licitação (Lei 14.133/2021), responsabilidade civil do Estado, agentes e servidores públicos.</div>
@@ -597,12 +618,12 @@
             <span class="tag tag-blue">Lei 8.112</span>
             <span class="tag tag-blue">DL 200</span>
           </div>
-          <span class="materia-arrow">→</span>
+          <span class="materia-arrow">Em breve</span>
         </div>
       </a>
 
       <!-- 5. DIREITO PROCESSUAL CIVIL -->
-      <a class="materia-card mc-proc-civil" href="direito-processual-civil/index.html">
+      <a class="materia-card mc-proc-civil em-breve" aria-disabled="true" data-href="direito-processual-civil/index.html" title="Em breve: esta página ainda não foi publicada.">
         <div class="materia-icon">⚙️</div>
         <div class="materia-nome">Direito Processual Civil</div>
         <div class="materia-desc">CPC/2015, competência, partes e procuradores, litisconsórcio, petição inicial, resposta do réu, provas, sentença, coisa julgada, recursos e cumprimento de sentença.</div>
@@ -612,11 +633,11 @@
             <span class="tag tag-blue">STJ</span>
             <span class="tag tag-blue">Recursos</span>
           </div>
-          <span class="materia-arrow">→</span>
+          <span class="materia-arrow">Em breve</span>
         </div>
         <div class="materia-progress">
           <div class="mp-bar-bg"><div class="mp-bar-fill" id="prog-CPC" style="width:0%;background:#2471a3;"></div></div>
-          <div class="mp-label"><span id="prog-CPC-label">0 / 1071 artigos</span><span id="prog-CPC-pct">0%</span></div>
+          <div class="mp-label"><span id="prog-CPC-label">0 / … artigos</span><span id="prog-CPC-pct">0%</span></div>
         </div>
       </a>
 
@@ -635,12 +656,12 @@
         </div>
         <div class="materia-progress">
           <div class="mp-bar-bg"><div class="mp-bar-fill" id="prog-CC" style="width:0%;background:#c8960c;"></div></div>
-          <div class="mp-label"><span id="prog-CC-label">0 / 2046 artigos</span><span id="prog-CC-pct">0%</span></div>
+          <div class="mp-label"><span id="prog-CC-label">0 / … artigos</span><span id="prog-CC-pct">0%</span></div>
         </div>
       </a>
 
       <!-- 7. DIREITO EMPRESARIAL -->
-      <a class="materia-card mc-empresarial" href="direito-empresarial/index.html">
+      <a class="materia-card mc-empresarial em-breve" aria-disabled="true" data-href="direito-empresarial/index.html" title="Em breve: esta página ainda não foi publicada.">
         <div class="materia-icon">🏦</div>
         <div class="materia-nome">Direito Empresarial</div>
         <div class="materia-desc">Teoria geral da empresa, sociedades empresárias, títulos de crédito, contratos mercantis, recuperação judicial e extrajudicial, falência e microempresas.</div>
@@ -650,12 +671,12 @@
             <span class="tag tag-green">Lei 11.101</span>
             <span class="tag tag-green">LC 123</span>
           </div>
-          <span class="materia-arrow">→</span>
+          <span class="materia-arrow">Em breve</span>
         </div>
       </a>
 
       <!-- 8. DIREITOS HUMANOS -->
-      <a class="materia-card mc-dh" href="direitos-humanos/index.html">
+      <a class="materia-card mc-dh em-breve" aria-disabled="true" data-href="direitos-humanos/index.html" title="Em breve: esta página ainda não foi publicada.">
         <div class="materia-icon">🌐</div>
         <div class="materia-nome">Direitos Humanos</div>
         <div class="materia-desc">Sistema Internacional e Interamericano de proteção, Convenção Americana, Pacto de São José, direitos civis e políticos e jurisprudência da Corte IDH.</div>
@@ -665,12 +686,12 @@
             <span class="tag tag-purple">Corte IDH</span>
             <span class="tag tag-purple">ONU</span>
           </div>
-          <span class="materia-arrow">→</span>
+          <span class="materia-arrow">Em breve</span>
         </div>
       </a>
 
       <!-- 9. FORMAÇÃO HUMANÍSTICA -->
-      <a class="materia-card mc-human" href="formacao-humanistica/index.html">
+      <a class="materia-card mc-human em-breve" aria-disabled="true" data-href="formacao-humanistica/index.html" title="Em breve: esta página ainda não foi publicada.">
         <div class="materia-icon">📚</div>
         <div class="materia-nome">Formação Humanística</div>
         <div class="materia-desc">Filosofia do Direito, sociologia jurídica, ética judicial, teoria da decisão, hermenêutica jurídica, Estado Democrático de Direito e Estatuto da Magistratura.</div>
@@ -680,7 +701,7 @@
             <span class="tag tag-gold">LOMAN</span>
             <span class="tag tag-gold">CNJ</span>
           </div>
-          <span class="materia-arrow">→</span>
+          <span class="materia-arrow">Em breve</span>
         </div>
       </a>
 
@@ -699,12 +720,12 @@
         </div>
         <div class="materia-progress">
           <div class="mp-bar-bg"><div class="mp-bar-fill" id="prog-CLT" style="width:0%;background:#145a32;"></div></div>
-          <div class="mp-label"><span id="prog-CLT-label">0 / 922 artigos</span><span id="prog-CLT-pct">0%</span></div>
+          <div class="mp-label"><span id="prog-CLT-label">0 / … artigos</span><span id="prog-CLT-pct">0%</span></div>
         </div>
       </a>
 
       <!-- 11. DIREITO PROCESSUAL DO TRABALHO -->
-      <a class="materia-card mc-proc-trab" href="direito-processual-trabalho/index.html">
+      <a class="materia-card mc-proc-trab em-breve" aria-disabled="true" data-href="direito-processual-trabalho/index.html" title="Em breve: esta página ainda não foi publicada.">
         <div class="materia-icon">🔨</div>
         <div class="materia-nome">Direito Processual do Trabalho</div>
         <div class="materia-desc">Organização da Justiça do Trabalho, reclamação trabalhista, rito sumaríssimo, provas, recursos trabalhistas, liquidação e execução.</div>
@@ -714,7 +735,7 @@
             <span class="tag tag-green">TST</span>
             <span class="tag tag-green">OJs</span>
           </div>
-          <span class="materia-arrow">→</span>
+          <span class="materia-arrow">Em breve</span>
         </div>
       </a>
 
@@ -801,7 +822,7 @@
     </div>
   </section>
 
-</div><!-- /page-wrap -->
+</main><!-- /page-wrap -->
 
 <footer>
   <strong>Vade Mecum Digital — Magistratura / ENAM</strong> · 11 matérias estruturadas para concurso · Fluxogramas, jurisprudência e pontos de prova · Atualização conferida em 03/05/2026
@@ -855,12 +876,12 @@ function dbRefresh() {
   document.getElementById('db-total-hours').textContent   = VMTracker.msToHHMM(totalStudyMs);
   document.getElementById('db-total-sessions').textContent = sessions.length + ' sessão(ões) no período';
   document.getElementById('db-completed').textContent     = totalCompleted;
-  document.getElementById('db-completed-pct').textContent = 'de 5.308 artigos totais';
+  document.getElementById('db-completed-pct').textContent = 'de ' + VMTracker.getTotalArticles().toLocaleString('pt-BR') + ' artigos totais';
   document.getElementById('db-days').textContent          = uniqueDays;
   document.getElementById('db-avg').textContent           = 'média ' + VMTracker.msToHHMM(avgMs) + ' por dia';
   document.getElementById('db-pause-hours').textContent   = VMTracker.msToHHMM(totalPauseMs);
 
-  const totalPct = ((totalCompleted / 5308) * 100).toFixed(1).replace('.',',');
+  const totalPct = ((totalCompleted / VMTracker.getTotalArticles()) * 100).toFixed(1).replace('.',',');
   document.getElementById('db-progress-pct').textContent  = totalPct + '%';
 
   // Charts
@@ -955,12 +976,12 @@ function buildCharts(sessions) {
 function buildSessionsTable(sessions) {
   const tbody = document.getElementById('dbSessionsBody');
   if (sessions.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="10" class="db-empty">Nenhuma sessão no período selecionado.<br>Abra um artigo e clique em "▶ Iniciar Leitura" para começar.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="11" class="db-empty">Nenhuma sessão no período selecionado.<br>Abra um artigo e clique em "▶ Iniciar Leitura" para começar.</td></tr>';
     return;
   }
   const sorted = [...sessions].sort((a, b) => b.startTs - a.startTs);
   tbody.innerHTML = sorted.map(s => {
-    const pause1 = s.pauses && s.pauses[0];
+    const dur = VMTracker.sessionDurations(s);
     return `<tr>
       <td>${s.date || ''}</td>
       <td style="text-transform:capitalize">${(s.dayOfWeek||'').slice(0,3)}.</td>
@@ -968,9 +989,10 @@ function buildSessionsTable(sessions) {
       <td style="font-family:monospace;font-size:0.68rem;">${s.articleFile || ''}</td>
       <td>${s.startTime || ''}</td>
       <td>${s.endTime || ''}</td>
-      <td style="color:#74b9ff;font-weight:600;">${s.studyDuration || '—'}</td>
-      <td style="color:#fc8181;">${s.pauseDuration || '0:00'}</td>
-      <td style="color:#e8b84b;font-weight:700;">${s.studyDuration || '—'}</td>
+      <td style="color:#74b9ff;font-weight:600;">${dur.study || '—'}</td>
+      <td style="color:#fc8181;">${dur.pause || '00:00:00'}</td>
+      <td style="color:#e8b84b;font-weight:700;">${dur.total || '—'}</td>
+      <td class="td-note" data-id="${String(s.id).replace(/"/g,'&quot;')}" title="${(s.note ? String(s.note) : 'Clique para adicionar uma nota').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')}">${(s.note ? String(s.note) : '+ nota').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}</td>
       <td class="${(s.totalStudyMs||0) > 0 ? 'td-sim' : 'td-nao'}">${(s.totalStudyMs||0) > 0 ? 'Sim' : 'Não'}</td>
     </tr>`;
   }).join('');
@@ -992,9 +1014,9 @@ function buildSummaryTable(summary) {
     </tr>`).join('') +
     `<tr style="border-top:2px solid rgba(200,150,12,0.3);font-weight:700;">
       <td style="color:var(--gold-light)">TOTAL GERAL</td>
-      <td>5.308</td>
+      <td>${VMTracker.getTotalArticles().toLocaleString('pt-BR')}</td>
       <td style="color:#2ecc71;">${totalConc}</td>
-      <td>${((totalConc/5308)*100).toFixed(1)}%</td>
+      <td>${((totalConc/VMTracker.getTotalArticles())*100).toFixed(1)}%</td>
       <td style="color:#74b9ff;">${VMTracker.msToHHMM(totalStudy*60000)}</td>
       <td>${new Set(VMTracker.getSessions().filter(s=>s.state==='done').map(s=>s.date)).size}</td>
     </tr>`;
@@ -1003,36 +1025,15 @@ function buildSummaryTable(summary) {
 function updateProgressBars() {
   const summary = VMTracker.getSummaryBySubject();
 
-  // CP
-  const cp = summary['CP'] || {};
-  const cpW = Math.min(100, (cp.completedCount||0) / (cp.totalArticles||361) * 100);
-  const cpEl = document.getElementById('prog-CP');
-  if (cpEl) { cpEl.style.width = cpW + '%'; document.getElementById('prog-CP-label').textContent = (cp.completedCount||0) + ' / 361 artigos'; document.getElementById('prog-CP-pct').textContent = (cpW).toFixed(1) + '%'; }
-
-  const cc = summary['CC'] || {};
-  const ccW = Math.min(100, (cc.completedCount||0) / (cc.totalArticles||2046) * 100);
-  const ccEl = document.getElementById('prog-CC');
-  if (ccEl) { ccEl.style.width = ccW + '%'; document.getElementById('prog-CC-label').textContent = (cc.completedCount||0) + ' / 2046 artigos'; document.getElementById('prog-CC-pct').textContent = (ccW).toFixed(1) + '%'; }
-
-  const cpc = summary['CPC'] || {};
-  const cpcW = Math.min(100, (cpc.completedCount||0) / (cpc.totalArticles||1071) * 100);
-  const cpcEl = document.getElementById('prog-CPC');
-  if (cpcEl) { cpcEl.style.width = cpcW + '%'; document.getElementById('prog-CPC-label').textContent = (cpc.completedCount||0) + ' / 1071 artigos'; document.getElementById('prog-CPC-pct').textContent = (cpcW).toFixed(1) + '%'; }
-
-  const clt = summary['CLT'] || {};
-  const cltW = Math.min(100, (clt.completedCount||0) / (clt.totalArticles||922) * 100);
-  const cltEl = document.getElementById('prog-CLT');
-  if (cltEl) { cltEl.style.width = cltW + '%'; document.getElementById('prog-CLT-label').textContent = (clt.completedCount||0) + ' / 922 artigos'; document.getElementById('prog-CLT-pct').textContent = (cltW).toFixed(1) + '%'; }
-
-  const cpp = summary['CPP'] || {};
-  const cppW = Math.min(100, (cpp.completedCount||0) / (cpp.totalArticles||811) * 100);
-  const cppEl = document.getElementById('prog-CPP');
-  if (cppEl) { cppEl.style.width = cppW + '%'; document.getElementById('prog-CPP-label').textContent = (cpp.completedCount||0) + ' / 811 artigos'; document.getElementById('prog-CPP-pct').textContent = (cppW).toFixed(1) + '%'; }
-
-  const jec = summary['L9099'] || {};
-  const jecW = Math.min(100, (jec.completedCount||0) / (jec.totalArticles||97) * 100);
-  const jecEl = document.getElementById('prog-L9099');
-  if (jecEl) { jecEl.style.width = jecW + '%'; document.getElementById('prog-L9099-label').textContent = (jec.completedCount||0) + ' / 97 artigos'; document.getElementById('prog-L9099-pct').textContent = (jecW).toFixed(1) + '%'; }
+  // Uma barra por matéria monitorada; totais vêm de SUBJECTS_CONFIG (study-tracker.js).
+  Object.values(summary).forEach(r => {
+    const bar = document.getElementById('prog-' + r.subjectId);
+    if (!bar) return;
+    const w = r.totalArticles > 0 ? Math.min(100, r.completedCount / r.totalArticles * 100) : 0;
+    bar.style.width = w + '%';
+    document.getElementById('prog-' + r.subjectId + '-label').textContent = r.completedCount + ' / ' + r.totalArticles + ' artigos';
+    document.getElementById('prog-' + r.subjectId + '-pct').textContent = w.toFixed(1) + '%';
+  });
 
   // Progress grid
   buildProgressGrid(summary);
@@ -1067,5 +1068,13 @@ document.addEventListener('DOMContentLoaded', function() {
   setInterval(dbRefresh, 30000);
 });
 </script>
+<!-- VM-RUNTIME -->
+<script src="vm-data.js?v=e21a270c"></script>
+<script src="search.js?v=90f3f251"></script>
+<script src="dashboard.js?v=13cbd53f"></script>
+<script src="session-banner.js?v=d87419ae"></script>
+<script src="em-breve.js?v=6487e366"></script>
+<script src="pwa.js?v=64776eec"></script>
+<!-- /VM-RUNTIME -->
 </body>
 </html>

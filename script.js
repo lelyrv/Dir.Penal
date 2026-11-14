@@ -14,6 +14,15 @@ function toggleMenu() {
         'sidebar-closed',
         sidebar.classList.contains('closed')
     );
+    sincronizarAriaMenu();
+}
+
+/* Mantém aria-expanded do botão ☰ coerente com o estado real do menu. */
+function sincronizarAriaMenu() {
+    const sidebar = document.getElementById('sidebar');
+    const botao = document.querySelector('.menu-toggle');
+    if (!sidebar || !botao) return;
+    botao.setAttribute('aria-expanded', sidebar.classList.contains('closed') ? 'false' : 'true');
 }
 
 /* ── FECHAR MENU LATERAL ── */
@@ -24,6 +33,7 @@ function fecharMenuLateral() {
 
     sidebar.classList.add('closed');
     document.body.classList.add('sidebar-closed');
+    sincronizarAriaMenu();
 }
 
 /* ── ABRIR MENU LATERAL ── */
@@ -34,6 +44,7 @@ function abrirMenuLateral() {
 
     sidebar.classList.remove('closed');
     document.body.classList.remove('sidebar-closed');
+    sincronizarAriaMenu();
 }
 
 /* ── ALTURA AUTOMÁTICA DO IFRAME ── */
@@ -169,6 +180,27 @@ document.addEventListener('DOMContentLoaded', () => {
         linksMenu[0].classList.add('active');
     }
 
+    /*
+       Abertura direta de um artigo pela URL (busca, "continuar de onde parou", aviso de sessão):
+         index-xxx.html?art=DP-ART-28.html[&sec=ID][&resume=1]
+       Só abre artigos que existem no menu (itens "em breve" não têm href).
+    */
+    const params = new URLSearchParams(location.search);
+    const art = params.get('art');
+    if (art && iframe) {
+        const alvo = Array.from(linksMenu).find(a => a.getAttribute('href') === art);
+        if (alvo) {
+            let src = art;
+            if (params.get('resume') === '1') src += '?resume=1';
+            else if (/^[A-Za-z0-9_-]+$/.test(params.get('sec') || '')) src += '#' + params.get('sec');
+            iframe.src = src;
+            linksMenu.forEach(item => item.classList.remove('active'));
+            alvo.classList.add('active');
+            alvo.scrollIntoView({ block: 'center' });
+            fecharMenuLateral();
+        }
+    }
+
     /* Ajusta iframe ao carregar novo artigo */
     if (iframe) {
         iframe.addEventListener('load', () => {
@@ -184,6 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    sincronizarAriaMenu();
     ajustarAlturaIframe();
 });
 

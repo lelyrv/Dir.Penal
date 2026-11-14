@@ -1,0 +1,6 @@
+# Material de estudo pessoal: não indexar.
+# Atenção: buscadores só leem o robots.txt da RAIZ do domínio. Num site de projeto do GitHub Pages
+# (usuario.github.io/repositorio/) este arquivo não é consultado; quem impede a indexação de fato é a
+# tag <meta name="robots" content="noindex, nofollow"> presente em todas as páginas.
+User-agent: *
+Disallow: /

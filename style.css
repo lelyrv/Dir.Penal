@@ -887,3 +887,48 @@ iframe#painel_artigos.auto-height {
         padding: 0 0.5rem 2rem !important;
     }
 }
+
+/* ===== Acessibilidade ===== */
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+    clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+
+.menu-artigos a:focus-visible,
+.menu-toggle:focus-visible,
+.sidebar a:focus-visible{
+    outline: 2px solid var(--gold-light, #e8b84b);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto !important; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ===== Itens "em breve" do menu (marcados por tools/build.py) ===== */
+.menu-artigos a.em-breve {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.menu-artigos a.em-breve:hover {
+    background: transparent;
+    color: #fff;
+    padding-left: 12px;
+}
+
+.menu-artigos a.em-breve::after {
+    content: "em breve";
+    margin-left: 0.55rem;
+    padding: 1px 6px;
+    border: 1px solid rgba(184, 146, 42, 0.55);
+    border-radius: 999px;
+    font-size: 0.62rem;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #e8b84b;
+    white-space: nowrap;
+}

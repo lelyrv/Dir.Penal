@@ -1,0 +1,32 @@
+name: Testes
+
+# Roda a cada envio para a branch main e em pull requests.
+# Falha se: o gerador (tools/build.py) estiver desatualizado, houver link/arquivo quebrado,
+# ou qualquer teste de navegador falhar (cronômetro, busca, offline, acessibilidade, páginas).
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Gerador em dia (menus, manifesto, busca, service worker, versões)
+        run: python tools/build.py --check
+
+      - name: Testes (estáticos e de navegador)
+        run: node tests/run.mjs
+        env:
+          BROWSER: /usr/bin/google-chrome
