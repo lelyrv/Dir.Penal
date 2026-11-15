@@ -354,6 +354,16 @@
       "L9099-ART-64.html",
       "L9099-ART-65.html"
      ]
+    },
+    {
+     "title": "Citação, Intimação e Fase Preliminar (Arts. 66–70)",
+     "items": [
+      "L9099-ART-66.html",
+      "L9099-ART-67.html",
+      "L9099-ART-68.html",
+      "L9099-ART-69.html",
+      "L9099-ART-70.html"
+     ]
     }
    ]
   }
@@ -5734,6 +5744,323 @@
     {
      "id": "recorrentes",
      "title": "Pontos que Sempre Aparecem nas Audiências"
+    },
+    {
+     "id": "fontes",
+     "title": "Fontes, Verificação e Ressalvas"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "L9099-ART-66.html": {
+   "subject": "L9099",
+   "label": "Art. 66 - Citação do Acusado",
+   "group": "Citação, Intimação e Fase Preliminar (Arts. 66–70)",
+   "kind": "artigo",
+   "num": "66",
+   "title": "Art. 66 — Citação do Acusado",
+   "checked": "2026-11-15",
+   "checkedPrecision": "dia",
+   "checkedLabel": "Conferência normativa em 15/11/2026",
+   "hearingId": "recorrentes",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "panorama",
+     "title": "Panorama do Art. 66"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal Decomposto"
+    },
+    {
+     "id": "formas",
+     "title": "Formas de Citação e seus Requisitos"
+    },
+    {
+     "id": "edital",
+     "title": "Acusado Não Encontrado: Edital, Remessa e Juízo Comum"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo do Art. 66"
+    },
+    {
+     "id": "prazos",
+     "title": "Prazos e Formalidades"
+    },
+    {
+     "id": "atendimento",
+     "title": "Atendimento e Negociação"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência, Teses e Enunciados"
+    },
+    {
+     "id": "doutrina",
+     "title": "Linhas Dogmáticas e Controvérsias"
+    },
+    {
+     "id": "recorrentes",
+     "title": "Pontos que Sempre Aparecem nas Audiências e nas Provas"
+    },
+    {
+     "id": "fontes",
+     "title": "Fontes, Verificação e Ressalvas"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "L9099-ART-67.html": {
+   "subject": "L9099",
+   "label": "Art. 67 - Intimações e Ciência dos Atos",
+   "group": "Citação, Intimação e Fase Preliminar (Arts. 66–70)",
+   "kind": "artigo",
+   "num": "67",
+   "title": "Art. 67 — Intimações e Ciência dos Atos",
+   "checked": "2026-11-15",
+   "checkedPrecision": "dia",
+   "checkedLabel": "Conferência normativa em 15/11/2026",
+   "hearingId": "recorrentes",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "panorama",
+     "title": "Panorama do Art. 67"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal Decomposto"
+    },
+    {
+     "id": "formas",
+     "title": "Formas de Intimação, por Destinatário"
+    },
+    {
+     "id": "pessoal",
+     "title": "Intimação Pessoal do MP e da Defensoria no Juizado Criminal"
+    },
+    {
+     "id": "eletronico",
+     "title": "Telefone, E-mail, Aplicativos e Comprovação"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo do Art. 67"
+    },
+    {
+     "id": "prazos",
+     "title": "Prazos e Formalidades"
+    },
+    {
+     "id": "atendimento",
+     "title": "Atendimento e Negociação"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência, Teses e Enunciados"
+    },
+    {
+     "id": "doutrina",
+     "title": "Linhas Dogmáticas e Controvérsias"
+    },
+    {
+     "id": "recorrentes",
+     "title": "Pontos que Sempre Aparecem nas Audiências e nas Provas"
+    },
+    {
+     "id": "fontes",
+     "title": "Fontes, Verificação e Ressalvas"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "L9099-ART-68.html": {
+   "subject": "L9099",
+   "label": "Art. 68 - Advertência de Advogado e Defesa Técnica",
+   "group": "Citação, Intimação e Fase Preliminar (Arts. 66–70)",
+   "kind": "artigo",
+   "num": "68",
+   "title": "Art. 68 — Advertência de Advogado e Defesa Técnica",
+   "checked": "2026-11-15",
+   "checkedPrecision": "dia",
+   "checkedLabel": "Conferência normativa em 15/11/2026",
+   "hearingId": "recorrentes",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "panorama",
+     "title": "Panorama do Art. 68"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal Decomposto"
+    },
+    {
+     "id": "advertencia",
+     "title": "A Advertência e a Defesa Técnica no Rito do Juizado"
+    },
+    {
+     "id": "transacao",
+     "title": "Transação Penal, Aceitação Pessoal e Defesa Técnica"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo do Art. 68"
+    },
+    {
+     "id": "prazos",
+     "title": "Prazos e Formalidades"
+    },
+    {
+     "id": "atendimento",
+     "title": "Atendimento e Negociação"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência, Teses e Enunciados"
+    },
+    {
+     "id": "doutrina",
+     "title": "Linhas Dogmáticas e Controvérsias"
+    },
+    {
+     "id": "recorrentes",
+     "title": "Pontos que Sempre Aparecem nas Audiências e nas Provas"
+    },
+    {
+     "id": "fontes",
+     "title": "Fontes, Verificação e Ressalvas"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "L9099-ART-69.html": {
+   "subject": "L9099",
+   "label": "Art. 69 - Termo Circunstanciado e Fase Policial",
+   "group": "Citação, Intimação e Fase Preliminar (Arts. 66–70)",
+   "kind": "artigo",
+   "num": "69",
+   "title": "Art. 69 — Termo Circunstanciado e Fase Policial",
+   "checked": "2026-11-15",
+   "checkedPrecision": "dia",
+   "checkedLabel": "Conferência normativa em 15/11/2026",
+   "hearingId": "recorrentes",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "panorama",
+     "title": "Panorama do Art. 69"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal Decomposto"
+    },
+    {
+     "id": "tco",
+     "title": "O Termo Circunstanciado: Natureza, Autoridade e Conteúdo"
+    },
+    {
+     "id": "flagrante",
+     "title": "Compromisso de Comparecer, Flagrante e Fiança"
+    },
+    {
+     "id": "violencia",
+     "title": "Violência Doméstica, Afastamento do Lar e Lei Maria da Penha"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo do Art. 69"
+    },
+    {
+     "id": "prazos",
+     "title": "Prazos e Formalidades"
+    },
+    {
+     "id": "atendimento",
+     "title": "Atendimento e Negociação"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência, Teses e Enunciados"
+    },
+    {
+     "id": "doutrina",
+     "title": "Linhas Dogmáticas e Controvérsias"
+    },
+    {
+     "id": "recorrentes",
+     "title": "Pontos que Sempre Aparecem nas Audiências e nas Provas"
+    },
+    {
+     "id": "fontes",
+     "title": "Fontes, Verificação e Ressalvas"
+    }
+   ],
+   "available": true,
+   "status": "disponivel"
+  },
+  "L9099-ART-70.html": {
+   "subject": "L9099",
+   "label": "Art. 70 - Comparecimento e Audiência Preliminar",
+   "group": "Citação, Intimação e Fase Preliminar (Arts. 66–70)",
+   "kind": "artigo",
+   "num": "70",
+   "title": "Art. 70 — Comparecimento e Audiência Preliminar",
+   "checked": "2026-11-15",
+   "checkedPrecision": "dia",
+   "checkedLabel": "Conferência normativa em 15/11/2026",
+   "hearingId": "recorrentes",
+   "placeholder": false,
+   "sections": [
+    {
+     "id": "panorama",
+     "title": "Panorama do Art. 70"
+    },
+    {
+     "id": "texto-legal",
+     "title": "Texto Legal Decomposto"
+    },
+    {
+     "id": "designacao",
+     "title": "Data Próxima, Ciência e Presença de Advogados"
+    },
+    {
+     "id": "audiencia",
+     "title": "A Audiência Preliminar: Composição, Representação e Transação"
+    },
+    {
+     "id": "ausencias",
+     "title": "Ausência do Autor do Fato, da Vítima e do Responsável Civil"
+    },
+    {
+     "id": "fluxograma",
+     "title": "Fluxograma Completo do Art. 70"
+    },
+    {
+     "id": "prazos",
+     "title": "Prazos e Formalidades"
+    },
+    {
+     "id": "atendimento",
+     "title": "Atendimento e Negociação"
+    },
+    {
+     "id": "jurisprudencia",
+     "title": "Jurisprudência, Teses e Enunciados"
+    },
+    {
+     "id": "doutrina",
+     "title": "Linhas Dogmáticas e Controvérsias"
+    },
+    {
+     "id": "recorrentes",
+     "title": "Pontos que Sempre Aparecem nas Audiências e nas Provas"
     },
     {
      "id": "fontes",

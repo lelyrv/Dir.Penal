@@ -42,6 +42,18 @@
      "sec": "jurisprudencia",
      "secTitle": "Jurisprudência, Teses e Enunciados",
      "n": 1
+    },
+    {
+     "file": "L9099-ART-67.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-67.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências e nas Provas",
+     "n": 1
     }
    ],
    "enunciado": "É relativa a nulidade do processo criminal por falta de intimação da expedição de precatória para inquirição de testemunha.",
@@ -108,6 +120,30 @@
      "sec": "fontes",
      "secTitle": "Fontes, Verificação e Ressalvas",
      "n": 1
+    },
+    {
+     "file": "L9099-ART-68.html",
+     "sec": "panorama",
+     "secTitle": "Panorama do Art. 68",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-68.html",
+     "sec": "advertencia",
+     "secTitle": "A Advertência e a Defesa Técnica no Rito do Juizado",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-68.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 68",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-68.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências e nas Provas",
+     "n": 3
     }
    ],
    "enunciado": "No processo penal, a falta da defesa constitui nulidade absoluta, mas a sua deficiência só o anulará se houver prova de prejuízo para o réu.",
@@ -307,6 +343,45 @@
    "fonte": "https://portal.stf.jus.br/jurisprudencia/sumariosumulas.asp?base=30&sumula=2433",
    "verificadoEm": "2026-11-14"
   },
+  "STF-S-710": {
+   "label": "Súmula 710/STF",
+   "tribunal": "STF",
+   "tipo": "S",
+   "numero": 710,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "L9099-ART-66.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências e nas Provas",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-67.html",
+     "sec": "panorama",
+     "secTitle": "Panorama do Art. 67",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-67.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 67",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-67.html",
+     "sec": "prazos",
+     "secTitle": "Prazos e Formalidades",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-67.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências e nas Provas",
+     "n": 2
+    }
+   ]
+  },
   "STF-S-711": {
    "label": "Súmula 711/STF",
    "tribunal": "STF",
@@ -499,6 +574,84 @@
      "sec": "fontes",
      "secTitle": "Fontes, Verificação e Ressalvas",
      "n": 2
+    },
+    {
+     "file": "L9099-ART-68.html",
+     "sec": "transacao",
+     "secTitle": "Transação Penal, Aceitação Pessoal e Defesa Técnica",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-68.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 68",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-68.html",
+     "sec": "prazos",
+     "secTitle": "Prazos e Formalidades",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-68.html",
+     "sec": "atendimento",
+     "secTitle": "Atendimento e Negociação",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-68.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-68.html",
+     "sec": "doutrina",
+     "secTitle": "Linhas Dogmáticas e Controvérsias",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-68.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências e nas Provas",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-68.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-70.html",
+     "sec": "panorama",
+     "secTitle": "Panorama do Art. 70",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-70.html",
+     "sec": "audiencia",
+     "secTitle": "A Audiência Preliminar: Composição, Representação e Transação",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-70.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-70.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências e nas Provas",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-70.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 1
     }
    ],
    "enunciado": "A homologação da transação penal prevista no artigo 76 da Lei 9.099/1995 não faz coisa julgada material e, descumpridas suas cláusulas, retoma-se a situação anterior, possibilitando-se ao Ministério Público a continuidade da persecução penal mediante oferecimento de denúncia ou requisição de inquérito policial.",
@@ -637,6 +790,18 @@
      "sec": "fontes",
      "secTitle": "Fontes, Verificação e Ressalvas",
      "n": 3
+    },
+    {
+     "file": "L9099-ART-67.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-67.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 1
     }
    ]
   },
@@ -1039,6 +1204,144 @@
      "sec": "fontes",
      "secTitle": "Fontes, Verificação e Ressalvas",
      "n": 2
+    },
+    {
+     "file": "L9099-ART-67.html",
+     "sec": "panorama",
+     "secTitle": "Panorama do Art. 67",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-67.html",
+     "sec": "formas",
+     "secTitle": "Formas de Intimação, por Destinatário",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-67.html",
+     "sec": "pessoal",
+     "secTitle": "Intimação Pessoal do MP e da Defensoria no Juizado Criminal",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-67.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 67",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-67.html",
+     "sec": "atendimento",
+     "secTitle": "Atendimento e Negociação",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-67.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 3
+    },
+    {
+     "file": "L9099-ART-67.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências e nas Provas",
+     "n": 3
+    },
+    {
+     "file": "L9099-ART-67.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 3
+    },
+    {
+     "file": "L9099-ART-68.html",
+     "sec": "transacao",
+     "secTitle": "Transação Penal, Aceitação Pessoal e Defesa Técnica",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-68.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 68",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-68.html",
+     "sec": "prazos",
+     "secTitle": "Prazos e Formalidades",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-68.html",
+     "sec": "atendimento",
+     "secTitle": "Atendimento e Negociação",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-68.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 3
+    },
+    {
+     "file": "L9099-ART-68.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências e nas Provas",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-68.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-69.html",
+     "sec": "violencia",
+     "secTitle": "Violência Doméstica, Afastamento do Lar e Lei Maria da Penha",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-69.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-69.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-70.html",
+     "sec": "audiencia",
+     "secTitle": "A Audiência Preliminar: Composição, Representação e Transação",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-70.html",
+     "sec": "atendimento",
+     "secTitle": "Atendimento e Negociação",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-70.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 3
+    },
+    {
+     "file": "L9099-ART-70.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências e nas Provas",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-70.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 2
     }
    ]
   },
@@ -1201,6 +1504,48 @@
     },
     {
      "file": "L9099-ART-62.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-66.html",
+     "sec": "edital",
+     "secTitle": "Acusado Não Encontrado: Edital, Remessa e Juízo Comum",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-66.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-66.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências e nas Provas",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-66.html",
+     "sec": "fontes",
+     "secTitle": "Fontes, Verificação e Ressalvas",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-69.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-70.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-70.html",
      "sec": "fontes",
      "secTitle": "Fontes, Verificação e Ressalvas",
      "n": 1
@@ -1459,6 +1804,18 @@
      "sec": "jurisprudencia",
      "secTitle": "Jurisprudência, Teses e Enunciados",
      "n": 1
+    },
+    {
+     "file": "L9099-ART-67.html",
+     "sec": "jurisprudencia",
+     "secTitle": "Jurisprudência, Teses e Enunciados",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-67.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências e nas Provas",
+     "n": 1
     }
    ]
   },
@@ -1519,6 +1876,45 @@
      "sec": "prova",
      "secTitle": "🎓 Pontos que Sempre Caem em Magistratura / ENAM",
      "n": 1
+    }
+   ]
+  },
+  "STJ-S-415": {
+   "label": "Súmula 415/STJ",
+   "tribunal": "STJ",
+   "tipo": "S",
+   "numero": 415,
+   "status": "nao-verificado",
+   "mentions": [
+    {
+     "file": "L9099-ART-66.html",
+     "sec": "edital",
+     "secTitle": "Acusado Não Encontrado: Edital, Remessa e Juízo Comum",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-66.html",
+     "sec": "fluxograma",
+     "secTitle": "Fluxograma Completo do Art. 66",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-66.html",
+     "sec": "prazos",
+     "secTitle": "Prazos e Formalidades",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-66.html",
+     "sec": "atendimento",
+     "secTitle": "Atendimento e Negociação",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-66.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências e nas Provas",
+     "n": 2
     }
    ]
   },
@@ -1702,6 +2098,36 @@
      "sec": "recorrentes",
      "secTitle": "Pontos que Sempre Aparecem nas Audiências",
      "n": 1
+    },
+    {
+     "file": "L9099-ART-68.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências e nas Provas",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-69.html",
+     "sec": "violencia",
+     "secTitle": "Violência Doméstica, Afastamento do Lar e Lei Maria da Penha",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-69.html",
+     "sec": "atendimento",
+     "secTitle": "Atendimento e Negociação",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-69.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências e nas Provas",
+     "n": 2
+    },
+    {
+     "file": "L9099-ART-70.html",
+     "sec": "audiencia",
+     "secTitle": "A Audiência Preliminar: Composição, Representação e Transação",
+     "n": 1
     }
    ]
   },
@@ -1716,6 +2142,18 @@
      "file": "L9099-ART-61.html",
      "sec": "exclusoes",
      "secTitle": "Quando a Lei 9.099 Não se Aplica Mesmo com Pena até 2 Anos",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-69.html",
+     "sec": "violencia",
+     "secTitle": "Violência Doméstica, Afastamento do Lar e Lei Maria da Penha",
+     "n": 1
+    },
+    {
+     "file": "L9099-ART-69.html",
+     "sec": "recorrentes",
+     "secTitle": "Pontos que Sempre Aparecem nas Audiências e nas Provas",
      "n": 1
     }
    ]

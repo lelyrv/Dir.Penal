@@ -3,7 +3,7 @@
 Gera L9099-ROTEIRO.html: roteiro do procedimento dos Juizados Especiais Criminais (Lei 9.099/1995, arts. 66 a 92),
 com o TEXTO LITERAL de cada artigo (do retrato data/laws/L9099.json, lido no Planalto) na ordem em que a lei dispõe os atos.
 
-Não traz doutrina nem jurisprudência: isso vem nos fluxogramas de cada artigo (arts. 60 a 65 já publicados).
+Não traz doutrina nem jurisprudência: isso vem nos fluxogramas de cada artigo (arts. 60 a 70 já publicados).
 Os rótulos de cada passo apenas identificam o assunto do artigo.
 
 Uso:  python tools/gen_roteiro.py     (depois: python tools/build.py)
@@ -102,7 +102,7 @@ def main():
     w('<h1>Roteiro do procedimento <span>dos Juizados Criminais</span></h1>')
     w('<p class="tp-lead">Lei nº 9.099/1995, arts. 66 a 92: a ordem dos atos, com o texto literal de cada artigo. Conferência normativa em %s.</p>' % '/'.join(lido))
     w('</header>')
-    w('<div class="tp-note"><strong>O que é esta página.</strong> Um roteiro textual: a sequência dos atos como a própria lei a dispõe, com o texto do Planalto copiado sem alteração. Ela não traz doutrina nem jurisprudência. Os fluxogramas completos de cada artigo (arts. 60 a 65 já publicados) trazem doutrina, súmulas e teses, com a fonte de cada informação; os artigos ainda sem fluxograma aparecem como "em breve". O texto foi lido do compilado do Planalto em %s e é conferido todo mês; antes de citar, confira no endereço oficial.</div>' % '/'.join(lido))
+    w('<div class="tp-note"><strong>O que é esta página.</strong> Um roteiro textual: a sequência dos atos como a própria lei a dispõe, com o texto do Planalto copiado sem alteração. Ela não traz doutrina nem jurisprudência. Os fluxogramas completos de cada artigo (arts. 60 a 70 já publicados) trazem doutrina, súmulas e teses, com a fonte de cada informação; os artigos ainda sem fluxograma aparecem como "em breve". O texto foi lido do compilado do Planalto em %s e é conferido todo mês; antes de citar, confira no endereço oficial.</div>' % '/'.join(lido))
 
     # disposições gerais (artigos já publicados)
     w('<section class="section" id="gerais">')

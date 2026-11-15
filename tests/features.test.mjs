@@ -24,7 +24,7 @@ await run(async ({ base, server, browser }) => {
   await A.go(url('index.html'), { wait: 500 });
   const m = await A.ev(`VMData.manifest().then(m=>JSON.stringify({n:Object.keys(m.articles).length,av:Object.values(m.articles).filter(a=>a.available).length,c:m.articles['L9099-ART-65.html'].checked,p:m.articles['L9099-ART-65.html'].checkedPrecision}))`);
   const mm = JSON.parse(m);
-  s.check('Manifesto carrega no navegador (196 itens no catálogo; disponíveis conferem com o disco; data do art. 65)', mm.n === 196 && mm.av === nAv && mm.c === '2026-11-12' && mm.p === 'dia', m);
+  s.check('Manifesto carrega no navegador (201 itens no catálogo; disponíveis conferem com o disco; data do art. 65)', mm.n === 201 && mm.av === nAv && mm.c === '2026-11-12' && mm.p === 'dia', m);
 
   // ===== menus estáticos coerentes com o manifesto =====
   for (const f of ['index-penal.html', 'index-civil.html', 'index-clt.html', 'index-jecrim.html']) {
@@ -87,7 +87,9 @@ await run(async ({ base, server, browser }) => {
   r = await pn('L9099-ART-60.html');
   s.check('Art. 60 (primeiro): só "próximo"', !r.prev && r.next === 'L9099-ART-61.html', JSON.stringify(r));
   r = await pn('L9099-ART-65.html');
-  s.check('Art. 65 (último publicado): só "anterior"', r.prev === 'L9099-ART-64.html' && !r.next, JSON.stringify(r));
+  s.check('Art. 65: ← art. 64, art. 66 →', r.prev === 'L9099-ART-64.html' && r.next === 'L9099-ART-66.html', JSON.stringify(r));
+  r = await pn('L9099-ART-70.html');
+  s.check('Art. 70 (último publicado): só "anterior"', r.prev === 'L9099-ART-69.html' && !r.next, JSON.stringify(r));
   r = await pn('DP-ART-28.html');
   s.check('DP-ART-28: anterior é o 27; sem "próximo" porque o 29 ainda não foi publicado', r.prev === 'DP-ART-27.html' && !r.next, JSON.stringify(r));
   await A.go(url('index-jecrim.html?art=L9099-ART-62.html'), { wait: 1200 });

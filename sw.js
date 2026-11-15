@@ -10,7 +10,7 @@
  *  - articles.json e search-index.json: usa a cópia guardada e atualiza em segundo plano.
  *  - Nova versão: substitui a anterior inteira de uma vez (cache com o hash da versão).
  */
-const VERSION = 'cf8461cdec';
+const VERSION = 'd88b2f01d5';
 const CACHE = 'vm-' + VERSION;
 const CRITICAL = [
  "./",
@@ -132,7 +132,12 @@ const PAGES = [
  "L9099-ART-62.html",
  "L9099-ART-63.html",
  "L9099-ART-64.html",
- "L9099-ART-65.html"
+ "L9099-ART-65.html",
+ "L9099-ART-66.html",
+ "L9099-ART-67.html",
+ "L9099-ART-68.html",
+ "L9099-ART-69.html",
+ "L9099-ART-70.html"
 ];
 
 self.addEventListener('install', (event) => {

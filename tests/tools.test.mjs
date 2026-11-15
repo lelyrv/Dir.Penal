@@ -309,7 +309,7 @@ await run(async ({ base, server, browser }) => {
   T.check('Busca: carrega primeiro o índice da matéria da página (Lei 9.099) e só depois as outras', order[0] === 'search-index-L9099.json' && order.length === 4, JSON.stringify(order));
   T.check('Busca: já mostra resultados depois do primeiro índice, e o aviso some quando todas as matérias chegam', (await A.ev(`document.querySelectorAll('#vs-list .vs-item').length`)) > 0 && (await A.ev(`document.querySelector('#vm-search .vs-foot').textContent.includes('navegar')`)) === true);
   const big = await A.ev(`fetch('search-index-CP.json').then(r=>r.text()).then(t=>t.length)`);
-  T.check('O índice por matéria é menor que o antigo arquivo único (CP é o maior, ~1,2 MB; Lei 9.099 ~0,4 MB)', big < 1500000 && (await A.ev(`fetch('search-index-L9099.json').then(r=>r.text()).then(t=>t.length)`)) < 600000, String(big));
+  T.check('O índice por matéria é menor que o antigo arquivo único (CP é o maior, ~1,2 MB; Lei 9.099 ~0,7 MB)', big < 1500000 && (await A.ev(`fetch('search-index-L9099.json').then(r=>r.text()).then(t=>t.length)`)) < 1000000, String(big));
 
   // ================= ficha de audiência (A4) =================
   await A.go(url('L9099-ART-65.html'), { wait: 1200 });
@@ -326,7 +326,7 @@ await run(async ({ base, server, browser }) => {
     return (Buffer.from(pdf, 'base64').toString('latin1').match(/\/Type\s*\/Page[^s]/g) || []).length;
   };
   const pg = {};
-  for (const n of [60, 61, 62, 63, 64, 65]) pg['c' + n] = await pagesOf(`L9099-ART-${n}.html`, true);
+  for (const n of [60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70]) pg['c' + n] = await pagesOf(`L9099-ART-${n}.html`, true);
   T.check('Ficha compacta (A4): cada artigo da Lei 9.099 sai em no máximo 2 páginas (os arts. 60 e 62 a 65 em 1)', Object.values(pg).every((n) => n >= 1 && n <= 2) && [60, 62, 63, 64, 65].every((n) => pg['c' + n] === 1), JSON.stringify(pg));
   const pf = await pagesOf('L9099-ART-65.html', false);
   T.check('Ficha completa (A4): o art. 65 sai em até 3 páginas', pf >= 1 && pf <= 3, String(pf));

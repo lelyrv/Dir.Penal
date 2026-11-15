@@ -122,6 +122,6 @@ await run(async ({ base, browser }) => {
   T.check('Páginas de ferramenta novas (treino, súmulas, calculadoras, roteiro): zero falhas de contraste', strictBad.length === 0,
     strictBad.map((f) => `${f}: ${result[f].bad} (${JSON.stringify(result[f].ex.slice(0, 2))})`).join(' | '));
   const l9099 = Object.keys(result).filter((f) => /^L9099-ART/.test(f) && !f.includes('['));
-  T.check('Artigos da Lei 9.099: contraste medido', l9099.length === 6 && l9099.every((f) => result[f].ok > 200));
+  T.check('Artigos da Lei 9.099: contraste medido', l9099.length === 11 && l9099.every((f) => result[f].ok > 200));
   T.done();
 });

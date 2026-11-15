@@ -30,7 +30,7 @@ Publicado pelo GitHub Pages. Funciona offline depois da primeira visita (veja "M
 
 ## Como publicar um artigo novo
 
-1. Rode `python tools/new_article.py --subject L9099 --num 66 --title "Citação"`. Ele cria a página a partir do último artigo
+1. Rode `python tools/new_article.py --subject L9099 --num 71 --title "Falta de comparecimento"`. Ele cria a página a partir do último artigo
    da matéria, já com o texto legal literal (retrato do Planalto), o esqueleto padrão e marcadores `[[...]]` nas partes que
    exigem pesquisa, e inclui o item no `catalog.json`. A página nasce como "em breve" (`id="em-elaboracao"`).
 2. Preencha o conteúdo (fontes oficiais; nada sem conferir), apague a linha `em-elaboracao` e ponha a data de conferência.
@@ -88,7 +88,7 @@ request mensal quando sai versão nova: o CI não muda sozinho por mudança exte
 - **Ferramentas** (menu na barra de estudo, nada flutua sobre o texto): buscar, modo audiência, tamanho da letra,
   tema claro/escuro, imprimir/PDF, **ficha de audiência (A4)**, voltar ao topo.
 - **Ficha de audiência (A4)**: monta, só com trechos copiados da própria página, o texto legal literal e as perguntas-chave
-  (**compacta**: 1 página nos arts. 60 e 62 a 65 da Lei 9.099, 2 páginas no art. 61) ou também os requisitos e os prazos
+  (**compacta**: 1 página nos arts. 60 e 62 a 70 da Lei 9.099, 2 páginas no art. 61) ou também os requisitos e os prazos
   (**completa**: 2 a 3 páginas). As seções entram pela marca `data-ficha="requisitos"` ou `data-ficha="prazos"` no `<section>`
   (o `tools/new_article.py` já as põe nos artigos novos).
 - **Busca**: `Ctrl+K` (ou `/`) em qualquer página; texto integral, ignora acentos e maiúsculas; carrega só a matéria aberta.
