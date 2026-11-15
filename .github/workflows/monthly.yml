@@ -80,7 +80,7 @@ jobs:
 
       - name: Abrir ou atualizar a issue do mês
         if: steps.links.outputs.rc == '2' || steps.leis.outputs.rc == '2'
-        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           LINKS_RC: ${{ steps.links.outputs.rc }}
           LEIS_RC: ${{ steps.leis.outputs.rc }}
