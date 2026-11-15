@@ -46,6 +46,13 @@ await run(async ({ base, browser }) => {
     await A.viewport(w, 800, w < 500);
     await A.go(base + file, { wait });
     await A.ev('document.fonts.ready.then(() => 1)');
+    // espera o conteúdo carregado por fetch (cartões, selo, listas) terminar: o HTML do corpo fica igual por 3 leituras seguidas
+    let last = -1, same = 0;
+    for (let i = 0; i < 40 && same < 3; i++) {
+      const n = await A.ev(`document.body.innerHTML.length + document.querySelectorAll('*').length`);
+      same = n === last ? same + 1 : 0; last = n;
+      await sleep(250);
+    }
     await A.ev(`document.activeElement&&document.activeElement.blur&&document.activeElement.blur();window.scrollTo(0,0);1`);
     await sleep(200);
     const shot = (await A.send('Page.captureScreenshot', { format: 'png' })).result.data;

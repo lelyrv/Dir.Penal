@@ -3,7 +3,8 @@
   'use strict';
   var C = window.VMCalc;
   var $ = function(id) { return document.getElementById(id); };
-  var laws = { CP: null, L9099: null }, citations = null;
+  var laws = { CP: null, L9099: null, CPP: null }, citations = null;
+  var LAW_NAMES = { CP: 'Código Penal', L9099: 'Lei 9.099/1995', CPP: 'Código de Processo Penal' };
 
   function pena(prefix) { return { anos: +$(prefix + '-a').value || 0, meses: +$(prefix + '-m').value || 0, dias: +$(prefix + '-d').value || 0 }; }
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
@@ -24,13 +25,13 @@
 
   /** Texto oficial de artigos do retrato (data/laws/*.json), em <details>. */
   function sources(boxId, lawId, nums, extra) {
-    var box = $(boxId); box.innerHTML = '';
+    var box = $(boxId); if (!box) return; box.innerHTML = '';
     var snap = laws[lawId];
     if (!snap) { box.appendChild(el('p', 'tp-src', 'O texto oficial dos dispositivos só carrega quando o site é aberto pelo endereço publicado.')); return; }
     nums.forEach(function(n) {
       var a = snap.articles[n];
       if (!a) return;
-      var d = el('details', 'tp-law'); d.appendChild(el('summary', '', (lawId === 'CP' ? 'Código Penal' : 'Lei 9.099/1995') + ', art. ' + n));
+      var d = el('details', 'tp-law'); d.appendChild(el('summary', '', LAW_NAMES[lawId] + ', art. ' + n));
       d.appendChild(el('blockquote', '', a.text));
       d.appendChild(el('div', 'tp-src', 'Planalto (texto compilado), lido em ' + snap.lidoEm.split('-').reverse().join('/') + '. '));
       d.lastChild.appendChild(Object.assign(el('a', '', 'Abrir no Planalto'), { href: snap.url, target: '_blank', rel: 'noopener' }));
@@ -144,18 +145,76 @@
   function loadSources() {
     var st = $('fonte-status');
     var get = function(f) { return fetch(f).then(function(r) { return r.ok ? r.json() : null; }).catch(function() { return null; }); };
-    Promise.all([get('data/laws/CP.json'), get('data/laws/L9099.json'), window.VMData ? VMData.citations() : null]).then(function(r) {
-      laws.CP = r[0]; laws.L9099 = r[1]; citations = r[2];
-      if (!laws.CP || !laws.L9099) st.textContent = 'Não foi possível carregar o texto oficial dos dispositivos (abra pelo endereço publicado do site).';
+    Promise.all([get('data/laws/CP.json'), get('data/laws/L9099.json'), window.VMData ? VMData.citations() : null, get('data/laws/CPP.json')]).then(function(r) {
+      laws.CP = r[0]; laws.L9099 = r[1]; citations = r[2]; laws.CPP = r[3];
+      if (!laws.CP || !laws.L9099 || !laws.CPP) st.textContent = 'Não foi possível carregar o texto oficial dos dispositivos (abra pelo endereço publicado do site).';
       else st.textContent = 'Texto oficial dos dispositivos: Planalto, lido em ' + laws.CP.lidoEm.split('-').reverse().join('/') + '.';
       sources('p-src', 'CP', ['10', '109', '110', '111', '115', '116', '117', '119']);
       sources('s-src', 'L9099', ['89'], sumulaBlock('STF-S-723'));
       sources('u-src', 'CP', ['77']);
       sources('o-src', 'L9099', ['61']);
+      sources('t-src', 'L9099', ['76'], sumulaBlock('STF-SV-35'));
+      sources('z-src', 'L9099', ['78', '82', '83', '92', '12-A']);
+      if (laws.CPP) { var z2 = el('div'); z2.id = 'z-src2'; $('z-src').appendChild(z2); sources('z-src2', 'CPP', ['798']); }
+      sources('d-src', 'CP', ['10', '103']);
+      if (laws.CPP) { var d2 = el('div'); d2.id = 'd-src2'; $('d-src').appendChild(d2); sources('d-src2', 'CPP', ['38']); }
     });
   }
 
+  // ── 5. transação penal (art. 76) ──
+  var MARCA = { ok: 'Atende', impede: 'Impede', verificar: 'A verificar' };
+  function calcTrans(ev) {
+    ev.preventDefault();
+    var box = $('t-res');
+    try {
+      var ref = $('t-ref').value || today();
+      var r = C.transacao({ acao: $('t-acao').value, arquivamento: $('t-arq').checked, condenadoPpl: $('t-ppl').checked,
+        beneficioAnterior: $('t-ben').value, dataBeneficio: $('t-bdata').value, ref: ref, circunstancias: $('t-circ').value, menorPotencial: $('t-menor').checked });
+      var lines = r.itens.map(function(i) { return MARCA[i.ok] + ' · ' + i.ref + ': ' + i.texto; });
+      var tit = r.conclusao === 'impede' ? 'Há impedimento legal para a proposta' : r.conclusao === 'verificar' ? 'Nenhum impedimento nos itens informados, mas há pontos a verificar' : 'Nenhum impedimento nos itens enumerados no art. 76';
+      show(box, tit, null, r.conclusao === 'impede' ? 'no' : r.conclusao === 'ok' ? 'ok' : 'info', lines.concat(r.notas),
+        ['Ferramenta de apoio: o juízo sobre a proposta cabe ao Ministério Público e ao juiz. Esta lista segue o texto do art. 76 e não substitui a análise da jurisprudência atual.']);
+    } catch (e) { error(box, e); }
+  }
+
+  // ── 6. prazos do procedimento ──
+  function calcPrazo(ev) {
+    ev.preventDefault();
+    var box = $('z-res');
+    try {
+      var tipo = $('z-tipo').value.split('|');
+      var fer = $('z-fer').value.split(/[\s,;]+/).filter(Boolean);
+      var r = C.prazoProcessual({ inicio: $('z-ini').value, dias: +tipo[0], modo: $('z-modo').value, feriados: fer });
+      show(box, tipo[1], 'Último dia: ' + C.br(r.fim) + ' (' + r.diaSemana + ')', 'ok', r.passos, r.avisos);
+    } catch (e) { error(box, e); }
+  }
+  function calcTest(ev) {
+    ev.preventDefault();
+    var box = $('w-res');
+    try {
+      var r = C.antesDe($('w-aud').value, 5);
+      show(box, 'Testemunhas e requerimento de intimação (art. 78, § 1º)', 'Até ' + C.br(r.limite) + ' (' + r.diaSemana + ')', 'ok',
+        ['A lei diz "no mínimo cinco dias antes" da audiência: subtraídos cinco dias da data informada (' + C.br($('w-aud').value) + ').'],
+        ['Confira como o juízo conta o dia da audiência e o do ato, e se o último dia cai em dia sem expediente.']);
+    } catch (e) { error(box, e); }
+  }
+
+  // ── 7. decadência ──
+  function calcDec(ev) {
+    ev.preventDefault();
+    var box = $('d-res');
+    try {
+      var r = C.decadencia({ ciencia: $('d-ini').value, violenciaDomestica: $('d-vd').checked });
+      show(box, 'Prazo de ' + r.meses + ' meses', 'Último dia: ' + C.br(r.fim), 'ok', r.passos, r.avisos);
+    } catch (e) { error(box, e); }
+  }
+
   $('p-ref').value = today();
+  $('t-ref').value = today();
+  $('f-trans').addEventListener('submit', calcTrans);
+  $('f-prazos').addEventListener('submit', calcPrazo);
+  $('f-test').addEventListener('submit', calcTest);
+  $('f-dec').addEventListener('submit', calcDec);
   addEvent(0, '');
   $('p-addev').addEventListener('click', function() { addEvent(0, ''); });
   $('f-presc').addEventListener('submit', calcPresc);

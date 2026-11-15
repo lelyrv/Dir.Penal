@@ -15,13 +15,37 @@ const MEASURE = `(() => {
   const lin = (v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); };
   const L = (c) => 0.2126 * lin(c.r) + 0.7152 * lin(c.g) + 0.0722 * lin(c.b);
   const over = (top, bottom) => ({ r: top.r * top.a + bottom.r * (1 - top.a), g: top.g * top.a + bottom.g * (1 - top.a), b: top.b * top.a + bottom.b * (1 - top.a), a: 1 });
+  // O tema escuro é um filtro CSS (invert + hue-rotate) sobre o conteúdo: a cor que o usuário VÊ é a cor calculada depois
+  // da cadeia de filtros do elemento e de todos os ancestrais (do mais interno ao mais externo). Aqui a cadeia é aplicada.
+  const clamp = (v) => Math.max(0, Math.min(255, v));
+  function filterStep(c, name, arg) {
+    const v = parseFloat(arg);
+    if (name === 'invert') { const k = isNaN(v) ? 1 : (arg.includes('%') ? v / 100 : v); return { r: k * (255 - c.r) + (1 - k) * c.r, g: k * (255 - c.g) + (1 - k) * c.g, b: k * (255 - c.b) + (1 - k) * c.b, a: c.a }; }
+    if (name === 'hue-rotate') {
+      const deg = arg.includes('turn') ? v * 360 : arg.includes('rad') ? v * 180 / Math.PI : v, t = deg * Math.PI / 180, cs = Math.cos(t), sn = Math.sin(t);
+      const m = [[0.213 + cs * 0.787 - sn * 0.213, 0.715 - cs * 0.715 - sn * 0.715, 0.072 - cs * 0.072 + sn * 0.928],
+        [0.213 - cs * 0.213 + sn * 0.143, 0.715 + cs * 0.285 + sn * 0.140, 0.072 - cs * 0.072 - sn * 0.283],
+        [0.213 - cs * 0.213 - sn * 0.787, 0.715 - cs * 0.715 + sn * 0.715, 0.072 + cs * 0.928 + sn * 0.072]];
+      return { r: clamp(m[0][0] * c.r + m[0][1] * c.g + m[0][2] * c.b), g: clamp(m[1][0] * c.r + m[1][1] * c.g + m[1][2] * c.b), b: clamp(m[2][0] * c.r + m[2][1] * c.g + m[2][2] * c.b), a: c.a };
+    }
+    return c;                                                                          // outros filtros não alteram a cor aqui
+  }
+  function through(c, from) {
+    let out = c;
+    for (let e = from; e; e = e.parentElement) {
+      const f = getComputedStyle(e).filter;
+      if (!f || f === 'none') continue;
+      for (const m of f.matchAll(/([a-z-]+)\\(([^)]*)\\)/g)) out = filterStep(out, m[1], m[2]);
+    }
+    return out;
+  }
   function bgOf(el) {
     const layers = [];
     for (let e = el; e; e = e.parentElement) {
       const cs = getComputedStyle(e);
       if (cs.backgroundImage && cs.backgroundImage !== 'none') return null;          // degradê/imagem: não medido
       const c = parse(cs.backgroundColor);
-      if (c && c.a > 0) { layers.push(c); if (c.a >= 1) break; }
+      if (c && c.a > 0) { layers.push(through(c, e)); if (c.a >= 1) break; }
     }
     let base = { r: 255, g: 255, b: 255, a: 1 };
     for (let i = layers.length - 1; i >= 0; i--) base = over(layers[i], base);
@@ -45,6 +69,7 @@ const MEASURE = `(() => {
     const bg = bgOf(el);
     if (!bg) { unk++; continue; }
     let fg = parse(cs.color); if (!fg) continue;
+    fg = through(fg, el);
     fg = fg.a < 1 ? over(fg, bg) : fg;
     if (eo < 1) fg = over({ r: fg.r, g: fg.g, b: fg.b, a: eo }, bg);
     const a = L(fg) + 0.05, b = L(bg) + 0.05, ratio = Math.max(a, b) / Math.min(a, b);
@@ -67,9 +92,10 @@ await run(async ({ base, browser }) => {
     await A.go(url(f), { wait: 450 });
     result[f] = JSON.parse(await A.ev(MEASURE));
   }
-  // tema escuro (experimental) numa amostra
+  // tema escuro numa amostra (a medição aplica a cadeia de filtros: ver `through` acima)
   await A.ev(`localStorage.setItem('vadeMecum_ui', JSON.stringify({dark:true}))`);
-  for (const f of ['L9099-ART-65.html', 'DP-ART-28.html']) {
+  const DARK = ['L9099-ART-65.html', 'DP-ART-28.html', 'DP-ART-1.html', 'DP-ART-7.html', 'CLT-ART-1.html', 'CC-ART-3.html'];
+  for (const f of DARK) {
     await A.go(url(f), { wait: 500 });
     result[f + ' [escuro]'] = JSON.parse(await A.ev(MEASURE));
   }
@@ -88,6 +114,9 @@ await run(async ({ base, browser }) => {
   const worse = Object.entries(cur).filter(([f, n]) => n > (base0[f] ?? 0));
   T.check(`Nenhuma página piorou em contraste em relação à linha de base (${Object.keys(cur).length} páginas)`, worse.length === 0,
     worse.map(([f, n]) => `${f}: ${n} (era ${base0[f] ?? 0}; ex.: ${JSON.stringify(result[f].ex[0] || '')})`).slice(0, 4).join(' | '));
+  const darkBad = DARK.filter((f) => result[f + ' [escuro]'].bad > 0);
+  T.check('Tema escuro: zero falhas de contraste nas amostras (artigos com e sem .page-wrap)', darkBad.length === 0,
+    darkBad.map((f) => `${f}: ${result[f + ' [escuro]'].bad} (${JSON.stringify(result[f + ' [escuro]'].ex.slice(0, 2))})`).join(' | '));
   const strict = ['treino.html', 'sumulas.html', 'calculadoras.html', 'L9099-ROTEIRO.html'];
   const strictBad = strict.filter((f) => result[f].bad > 0);
   T.check('Páginas de ferramenta novas (treino, súmulas, calculadoras, roteiro): zero falhas de contraste', strictBad.length === 0,

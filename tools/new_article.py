@@ -101,7 +101,7 @@ def build_middle(n, title, short, law, text, total_secoes):
     for sid, kicker, t, guia in SECOES:
         num += 1
         w('')
-        w('<section class="section" id="%s">' % sid)
+        w('<section class="section" id="%s"%s>' % (sid, ' data-ficha="%s"' % sid if sid in ('requisitos', 'prazos') else ''))
         w('  <div class="section-header"><div class="section-num">%02d</div><div class="section-title"><span>%s</span>%s</div></div>' % (num, esc(kicker), esc(t.format(n=n))))
         w('  <!-- GUIA: %s -->' % guia)
         if sid == 'texto-legal' and text:

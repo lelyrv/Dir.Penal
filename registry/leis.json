@@ -4,6 +4,7 @@
     { "id": "L9099", "nome": "Lei nº 9.099/1995 (Juizados Especiais)", "url": "https://www.planalto.gov.br/ccivil_03/leis/l9099.htm", "subject": "L9099" },
     { "id": "CP", "nome": "Código Penal (Decreto-Lei nº 2.848/1940)", "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm", "subject": "CP" },
     { "id": "CC", "nome": "Código Civil (Lei nº 10.406/2002)", "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm", "subject": "CC" },
-    { "id": "CLT", "nome": "CLT (Decreto-Lei nº 5.452/1943)", "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm", "subject": "CLT" }
+    { "id": "CLT", "nome": "CLT (Decreto-Lei nº 5.452/1943)", "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm", "subject": "CLT" },
+    { "id": "CPP", "nome": "Código de Processo Penal (Decreto-Lei nº 3.689/1941)", "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm", "subject": "CPP" }
   ]
 }

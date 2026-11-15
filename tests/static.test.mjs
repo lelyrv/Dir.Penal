@@ -29,7 +29,7 @@ const badJson = [];
 const JSONS = ['catalog.json', 'articles.json', 'citations.json', 'queue.json', 'training.json', 'manifest.webmanifest',
   'search-index-CP.json', 'search-index-CC.json', 'search-index-CLT.json', 'search-index-L9099.json',
   'registry/patterns.json', 'registry/precedentes.json', 'registry/leis.json', 'registry/prioridades.json',
-  'data/laws/CP.json', 'data/laws/CC.json', 'data/laws/CLT.json', 'data/laws/L9099.json', 'tools/lint-baseline.json'];
+  'data/laws/CP.json', 'data/laws/CC.json', 'data/laws/CLT.json', 'data/laws/L9099.json', 'data/laws/CPP.json', 'data/alteracoes.json', 'tools/lint-baseline.json'];
 for (const f of JSONS) { try { JSON.parse(read(f)); } catch (e) { badJson.push(f); } }
 T.check(`JSON válido: ${JSONS.length} arquivos (catálogo, manifesto, buscas por matéria, citações, treino, fila, registros, leis)`, badJson.length === 0, badJson.join(', '));
 

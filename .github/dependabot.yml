@@ -1,0 +1,9 @@
+# Mantém as Actions fixadas por SHA atualizadas: o Dependabot abre um pull request quando sai versão nova.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    commit-message:
+      prefix: "ci"

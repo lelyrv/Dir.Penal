@@ -66,6 +66,12 @@ await run(async ({ base, server, browser }) => {
   await A.ctrlK(); await A.type('defesa técnica'); await sleep(500);
   await A.key('Enter', 'Enter', 13); await sleep(1500);
   s.check('Busca no índice: abre o resultado no quadro (a página de fora não muda)', (await A.ev(`location.pathname`)).endsWith('index-jecrim.html') && (await A.ev(`document.getElementById('painel_artigos').contentWindow.location.pathname`)).includes('-ART-'));
+  // o termo buscado fica destacado e o resultado abre já no trecho
+  await sleep(900);
+  const fd = JSON.parse(await A.ev(`(()=>{const d=document.getElementById('painel_artigos').contentDocument;const w=d.defaultView;const m=[...d.querySelectorAll('mark.vm-find')];const first=d.querySelector('mark[data-vm-find-first]');const r=first&&first.getBoundingClientRect();return JSON.stringify({n:m.length,txt:[...new Set(m.map(x=>x.textContent.toLowerCase()))].slice(0,4),inView:!!r&&r.top>=0&&r.bottom<=w.innerHeight,y:w.pageYOffset})})()`));
+  s.check('Busca: ao abrir o resultado, o termo ("defesa técnica") fica destacado e a primeira ocorrência está visível na tela', fd.n > 0 && fd.txt.some((t) => t.includes('defesa') || t.includes('técnica')) && fd.inView, JSON.stringify(fd));
+  await A.ev(`(()=>{const d=document.getElementById('painel_artigos').contentDocument;d.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true}))})()`); await sleep(150);
+  s.check('Busca: Esc remove o destaque e devolve o texto intacto', (await A.ev(`document.getElementById('painel_artigos').contentDocument.querySelectorAll('mark.vm-find').length`)) === 0);
   s.check('Busca: a janela fecha sozinha ao abrir um resultado', await A.ev(`!document.getElementById('vm-search').classList.contains('open')`) === true);
   await A.ctrlK(); const abriu = await A.ev(`document.getElementById('vm-search').classList.contains('open')`);
   await A.ctrlK();
@@ -90,7 +96,7 @@ await run(async ({ base, server, browser }) => {
   s.check('No quadro: "próximo" abre o art. 63 e o menu lateral marca o item ativo', (await A.ev(`document.getElementById('painel_artigos').contentWindow.location.pathname`)).endsWith('L9099-ART-63.html') && act === 'L9099-ART-63.html', act);
 
   // ===== selo de conferência (relógio congelado em 14/11/2026) =====
-  const fr = async (f) => { await A.go(url(f), { wait: 700 }); return JSON.parse(await A.ev(`(()=>{const e=document.querySelector('.vm-fresh');return JSON.stringify(e?{cls:e.className,txt:e.textContent}:null)})()`)); };
+  const fr = async (f) => { await A.go(url(f), { wait: 700 }); for (let i = 0; i < 25 && !(await A.ev(`!!document.querySelector('.vm-fresh')`)); i++) await sleep(200); return JSON.parse(await A.ev(`(()=>{const e=document.querySelector('.vm-fresh');return JSON.stringify(e?{cls:e.className,txt:e.textContent}:null)})()`)); };
   r = await fr('L9099-ART-65.html');
   s.check('Selo: art. 65 conferido em 12/11/2026 → "ok", sem alerta', r && r.cls.includes('vm-fresh-ok') && r.txt.includes('12/11/2026') && r.txt.includes('há 2 dias') && !r.txt.includes('Antes de usar'), JSON.stringify(r));
   r = await fr('DP-ART-28.html');

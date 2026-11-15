@@ -177,7 +177,7 @@ class TestLaw(unittest.TestCase):
         self.assertEqual(a['12'], 'Art. 12 - Doze (cuja redação cita o Art. 5º no meio).')   # "Art. 5º" no meio da linha não abre artigo
         self.assertNotIn('5', a)
 
-    def _check(self, fake_arts, snap_arts):
+    def _check(self, fake_arts, snap_arts, flags=None):
         snap = {'id': 'X', 'total': len(snap_arts), 'lidoEm': '2026-01-01',
                 'articles': {k: {'hash': law_watch.h(v), 'text': v} for k, v in snap_arts.items()}}
         saved = (law_watch.fetch_law, law_watch.load_snapshot, law_watch.laws, law_watch.tracked_pages)
@@ -189,7 +189,7 @@ class TestLaw(unittest.TestCase):
             import io, contextlib
             buf = io.StringIO()
             with contextlib.redirect_stdout(buf):
-                rc = law_watch.cmd_check(None, None)
+                rc = law_watch.cmd_check(None, None, flags)
             return rc, buf.getvalue()
         finally:
             law_watch.fetch_law, law_watch.load_snapshot, law_watch.laws, law_watch.tracked_pages = saved
@@ -216,6 +216,26 @@ class TestLaw(unittest.TestCase):
         self.assertIn('NÃO indica mudança', out)
         rc, out = self._check({'1': 'Art. 1 - só um'}, base)        # página incompleta (1 de 10 artigos) também não é mudança
         self.assertEqual(rc, 3)
+
+    def test_marcadores_de_lei_alterada(self):
+        import tempfile
+        base = {str(i): 'Art. %d - texto %d' % (i, i) for i in range(1, 11)}
+        with tempfile.TemporaryDirectory() as d:
+            fl = str(Path(d) / 'alteracoes.json')
+            novo = dict(base); novo['5'] = 'Art. 5 - texto NOVO'; novo['11'] = 'Art. 11 - acrescentado'
+            rc, _ = self._check(novo, base, fl)
+            self.assertEqual(rc, 2)
+            dados = json.loads(Path(fl).read_text(encoding='utf-8'))
+            self.assertEqual(dados['leis']['X']['retratoDe'], '2026-01-01')
+            self.assertEqual(dados['leis']['X']['paginas'], {'ZZ-ART-5.html': {'artigo': '5', 'tipo': 'alterado'}})   # só artigo com página no site; acrescentado não marca página
+            # Planalto fora do ar: os marcadores anteriores NÃO são apagados nem inventados
+            rc, _ = self._check(None, base, fl)
+            self.assertEqual(rc, 3)
+            self.assertEqual(json.loads(Path(fl).read_text(encoding='utf-8'))['leis']['X']['paginas'], {'ZZ-ART-5.html': {'artigo': '5', 'tipo': 'alterado'}})
+            # retrato atualizado e sem diferença: marcadores da lei somem
+            rc, _ = self._check(dict(base), base, fl)
+            self.assertEqual(rc, 0)
+            self.assertEqual(json.loads(Path(fl).read_text(encoding='utf-8'))['leis']['X']['paginas'], {})
 
     def test_squash_ignora_anotacoes(self):
         a = law_watch.squash('Art. 65 - Os atos “valem”. (Redação dada pela Lei nº 1, de 2000)')

@@ -47,11 +47,22 @@ Os testes automáticos conferem rótulos, papéis e foco, mas não a leitura em 
 - [ ] "PDF" de uma seção: só a seção sai, com a fonte e a data de conferência.
 - [ ] Fluxogramas e quadros coloridos mantêm o fundo (ativar "Elementos gráficos de segundo plano").
 
-## 5. Tema escuro
+## 5. Tema escuro e ficha de audiência
 
-O tema escuro é **experimental**: o teste de contraste mede cerca de 80 pontos abaixo do mínimo WCAG em cada artigo
-testado no escuro (o tema claro da Lei 9.099 e das ferramentas está com zero). Conferir visualmente antes de usar em
-audiência.
+- [ ] Tema escuro em cada navegador/aparelho: texto legível, selos dourados com texto escuro, tabelas e fluxogramas.
+      (O teste automático mede o contraste depois dos filtros do tema, em 6 páginas de amostra, e não encontra falhas; áreas com
+      fundo em degradê ou imagem não são medidas, então olhe os cabeçalhos e os quadros coloridos.)
+- [ ] Ficha de audiência (menu Ferramentas > Ficha compacta / completa): imprimir em papel A4 de verdade e conferir se o texto
+      de 7 pontos é legível para você, se nada foi cortado e quantas folhas saíram. A janela de impressão deve mostrar só a ficha.
+
+## 5b. Backup com senha e sincronização (aparelhos reais)
+
+- [ ] "Backup com senha": baixar, abrir o arquivo no bloco de notas (não deve mostrar sessões nem notas), restaurar em outro
+      navegador com a senha certa e com uma errada.
+- [ ] Pasta de uma nuvem sincronizada (Drive/OneDrive) escolhida nos dois computadores: gravar em um, esperar a nuvem sincronizar,
+      "Importar da pasta" no outro. Conferir sessões, notas e cartões somados.
+- [ ] Fechar e reabrir o navegador: o Chrome/Edge pode pedir a autorização da pasta de novo (esperado).
+- [ ] Proteger a pasta com senha e repetir a importação no outro computador (a senha será pedida lá).
 
 ## 6. Quando algo falhar
 

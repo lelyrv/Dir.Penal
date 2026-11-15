@@ -260,15 +260,25 @@
     if (!r) return;
     var a = state.idx[r.ai], s = a[3][r.si];
     var file = a[0], hash = s[0] ? '#' + s[0] : '';
+    var term = el.q.value.trim();
+    try { if (term) sessionStorage.setItem('vadeMecum_find', JSON.stringify({ file: file, q: term, ts: Date.now() })); } catch (e) { /* sem armazenamento: só não destaca */ }
     close();
     var frame = document.getElementById('painel_artigos');
-    if (frame) { frame.src = file + hash; return; }                     // índice: abre no quadro
+    if (frame) {                                                        // índice: abre no quadro
+      var same = false;
+      try { same = frame.contentWindow.location.pathname.split('/').pop() === file; } catch (e) { same = false; }
+      frame.src = file + hash;
+      if (same) setTimeout(function() { try { frame.contentWindow.VMFind.check(); } catch (e) { /* ok */ } }, 80);   // mesma página: só muda a âncora
+      return;
+    }
     var sub = state.manifest && state.manifest.subjects.filter(function(x) { return x.id === a[2]; })[0];
     if (sub && /^index(\.html)?$/.test(VMData.currentFile().replace(/\.html$/, ''))) {  // home: abre no visualizador da matéria
       location.href = sub.index + '?art=' + encodeURIComponent(file) + (s[0] ? '&sec=' + encodeURIComponent(s[0]) : '');
       return;
     }
+    var onSame = VMData.currentFile() === file;
     location.href = file + hash;                                         // dentro de um artigo
+    if (onSame && window.VMFind) setTimeout(function() { VMFind.check(); }, 80);   // mesma página: só muda a âncora
   }
 
   function open() {

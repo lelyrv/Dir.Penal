@@ -57,6 +57,22 @@
     hero.appendChild(el);
   }
 
+  // ───────────── 1b. Aviso de lei alterada (data/alteracoes.json, gravado pela verificação mensal) ─────────────
+  function mountLawChange(al) {
+    if (isPlaceholder || !window.VMData) return;
+    var c = VMData.changeOf(al, file);
+    var hero = document.querySelector('#hero, header.hero, header');
+    if (!c || !hero || hero.querySelector('.vm-law-changed')) return;
+    var d = c.retratoDe ? c.retratoDe.split('-').reverse().join('/') : '';
+    var el = document.createElement('div');
+    el.className = 'vm-law-changed';
+    el.setAttribute('role', 'note');
+    var tipo = c.tipo === 'ausente' ? 'não consta mais' : 'foi alterado';
+    el.textContent = 'Lei alterada: a verificação mensal encontrou diferença no texto do art. ' + c.artigo + ' no Planalto (' + tipo + ' em relação ao texto conferido' + (d ? ' em ' + d : '') +
+      '). Reconfira o dispositivo, a redação vigente e a jurisprudência antes de usar esta página.';
+    hero.appendChild(el);
+  }
+
   // ───────────── 2. Anterior / próximo ─────────────
   function mountPrevNext(m) {
     if (!m || !cfg.subjectId || isPlaceholder || document.querySelector('.vm-pn')) return;
@@ -273,6 +289,83 @@
   }
   window.addEventListener('afterprint', cleanupPrint);
 
+  // ───────────── 6b. Ficha de audiência (A4, para levar impressa) ─────────────
+  // Monta, SÓ com trechos copiados da própria página (nada é escrito aqui): cabeçalho com a data de conferência, o texto legal
+  // literal do topo, as seções marcadas com data-ficha ("requisitos" e "prazos") e as perguntas-chave (pontos recorrentes).
+  var fichaEl = null, fichaPage = null;
+  var FICHA_DROP = '.vm-sec-tools,.vm-sec-pdf,.vm-copy,.vm-note-box,.vm-mark,.vm-note-btn,button,script,style,.section-num,.vm-fresh';
+  function fichaClone(src) {
+    var c = src.cloneNode(true);
+    [].slice.call(c.querySelectorAll(FICHA_DROP)).forEach(function(n) { n.remove(); });
+    [].slice.call(c.querySelectorAll('[id]')).forEach(function(n) { n.removeAttribute('id'); });
+    c.removeAttribute('id'); c.removeAttribute('style'); c.removeAttribute('hidden');
+    return c;
+  }
+  function fichaBlock(label, nodes) {
+    var b = document.createElement('section');
+    b.className = 'vf-block';
+    var h = document.createElement('h2'); h.textContent = label; b.appendChild(h);
+    nodes.forEach(function(n) { b.appendChild(n); });
+    return b;
+  }
+  function buildFicha(compact) {
+    if (fichaEl) fichaEl.remove();
+    fichaEl = document.createElement('div');
+    fichaEl.className = 'vm-ficha';
+    fichaEl.setAttribute('aria-hidden', 'true');
+    var d = new Date();
+    var when = ('0' + d.getDate()).slice(-2) + '/' + ('0' + (d.getMonth() + 1)).slice(-2) + '/' + d.getFullYear();
+    var head = document.createElement('header');
+    head.className = 'vf-head';
+    var t = document.createElement('div'); t.className = 'vf-title';
+    t.textContent = (cfg.subject || 'Vade Mecum') + (cfg.articleNum ? ', art. ' + cfg.articleNum : '') + ' — ' + pageTitle;
+    var m = document.createElement('div'); m.className = 'vf-meta';
+    m.textContent = 'Ficha de audiência' + (compact ? ' (compacta)' : '') + ' · ' + (freshInfo && freshInfo.main ? freshInfo.main + ' · ' : '') + 'impressa em ' + when +
+      '. Confira súmulas, teses e alterações legislativas antes de usar.';
+    head.appendChild(t); head.appendChild(m);
+    fichaEl.appendChild(head);
+
+    var law = document.querySelector('#hero .law-box, header .law-box');
+    if (law) fichaEl.appendChild(fichaBlock('Texto legal', [fichaClone(law)]));
+    var NAMES = { requisitos: 'Requisitos e critérios', prazos: 'Prazos' };
+    if (!compact) [].slice.call(document.querySelectorAll('[data-ficha]')).forEach(function(sec) {
+      var kind = sec.getAttribute('data-ficha');
+      var body = fichaClone(sec);
+      var ttl = body.querySelector('.section-header,.section-title');
+      if (ttl && ttl.parentNode) ttl.parentNode.removeChild(ttl);
+      var tEl = sec.querySelector('.section-title');
+      var tt = '';
+      if (tEl) { var tc = tEl.cloneNode(true); [].slice.call(tc.querySelectorAll('span')).forEach(function(x) { x.remove(); }); tt = clean(tc.textContent); }
+      var label = (NAMES[kind] || kind) + (tt ? ' — ' + tt : '');
+      fichaEl.appendChild(fichaBlock(label, [body]));
+    });
+    if (prova) {
+      var items = [].slice.call(prova.querySelectorAll('.prova-item')).map(fichaClone);
+      if (items.length) fichaEl.appendChild(fichaBlock('Perguntas-chave', items));
+    }
+    document.body.appendChild(fichaEl);
+    return fichaEl;
+  }
+  function printFicha(compact) {
+    buildFicha(compact);
+    if (!fichaPage) {
+      fichaPage = document.createElement('style');
+      fichaPage.id = 'vm-ficha-page';
+      fichaPage.textContent = '@media print{@page{size:A4 portrait;margin:8mm}}';
+    }
+    document.head.appendChild(fichaPage);
+    document.documentElement.classList.add('vm-printing-ficha');
+    setTimeout(function() { window.print(); }, 60);
+  }
+  function cleanupFicha() {
+    document.documentElement.classList.remove('vm-printing-ficha');
+    if (fichaPage && fichaPage.parentNode) fichaPage.parentNode.removeChild(fichaPage);
+    if (fichaEl && fichaEl.parentNode) fichaEl.parentNode.removeChild(fichaEl);
+    fichaEl = null;
+  }
+  window.addEventListener('afterprint', cleanupFicha);
+  window.VMFicha = { build: buildFicha, print: printFicha, cleanup: cleanupFicha };
+
   function mountSectionPdf() {
     if (isPlaceholder) return;
     sections.forEach(function(sec) {
@@ -464,7 +557,9 @@
           if (saved) b('Apagar', function() { VMTracker.setNote(key, ''); renderBox(false); toast('Nota apagada.'); });
           b('Cancelar', function() { renderBox(false); });
           ta.addEventListener('keydown', function(e) { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); VMTracker.setNote(key, ta.value); renderBox(false); toast('Nota salva.'); } });
-          box.appendChild(ta); box.appendChild(row);
+          var warn = document.createElement('small'); warn.className = 'vm-note-warn';
+          warn.textContent = 'Não registre dados que identifiquem clientes (nome, CPF, número de processo). A nota fica neste navegador e entra no backup.';
+          box.appendChild(ta); box.appendChild(warn); box.appendChild(row);
           ta.focus();
         } else {
           var s = document.createElement('strong'); s.textContent = 'Sua nota';
@@ -518,6 +613,8 @@
     html += '<button type="button" data-a="font" title="Aumentar ou diminuir a letra do texto">Letra 100%</button>';
     html += '<button type="button" data-a="theme" aria-pressed="false" title="Alternar entre tema claro e escuro (experimental)">Tema escuro</button>';
     html += '<button type="button" data-a="pdf" title="Imprimir ou salvar em PDF (a página inteira, ou só os pontos recorrentes no modo audiência)">Imprimir / PDF</button>';
+    if (prova) html += '<button type="button" data-a="ficha-c" title="Ficha A4 compacta: texto legal e perguntas-chave (cerca de uma página)">Ficha compacta (A4)</button>';
+    if (document.querySelector('[data-ficha]')) html += '<button type="button" data-a="ficha" title="Ficha A4 completa: texto legal, requisitos, prazos e perguntas-chave (2 a 3 páginas)">Ficha completa (A4)</button>';
     html += '<button type="button" data-a="top">Voltar ao topo</button>';
     d.innerHTML = html;
 
@@ -549,6 +646,8 @@
       else if (a === 'font') cycleFont();
       else if (a === 'theme') toggleDark();
       else if (a === 'pdf') hearingOn && prova ? doPrint(prova, 'Pontos recorrentes') : doPrint(null, '');
+      else if (a === 'ficha') printFicha(false);
+      else if (a === 'ficha-c') printFicha(true);
       else if (a === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
       if (a !== 'font' && a !== 'theme') setOpen(false);                      // letra e tema deixam o menu aberto para ajustar de novo
     });
@@ -558,8 +657,109 @@
     applyUi();
   }
 
+  // ───────────── Busca: abrir já no trecho, com o termo destacado ─────────────
+  // search.js grava {file, q, ts} em sessionStorage antes de abrir o resultado. Aqui: rola até a primeira ocorrência visível
+  // (de preferência a frase inteira) e marca os termos com <mark class="vm-find">. Esc ou clique no destaque remove.
+  var FIND_KEY = 'vadeMecum_find';
+  var FIND_SKIP = 'script,style,noscript,textarea,input,select,button,#vm-study-bar,.vm-dock,#vm-search,.vm-ficha,.vm-sec-tools,.vm-note-box,.vm-fresh,.vm-print-head,#vm-cite-pop';
+  function foldS(s) { return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
+  function findTokens(q) {
+    var f = foldS(q).replace(/\bart(?:igo)?s?\.?\s*/g, ' ').trim();
+    return f.split(/\s+/).filter(function(t) { return t.length > 1 || /\d/.test(t); });
+  }
+  function clearFind() {
+    [].slice.call(document.querySelectorAll('mark.vm-find')).forEach(function(m) {
+      var p = m.parentNode; if (!p) return;
+      while (m.firstChild) p.insertBefore(m.firstChild, m);
+      p.removeChild(m); p.normalize();
+    });
+  }
+  function runFind(q) {
+    clearFind();
+    var toks = findTokens(q);
+    if (!toks.length) return 0;
+    var phrase = toks.join(' ');
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+    var nodes = [], n;
+    while ((n = walker.nextNode())) {
+      if (!n.nodeValue.trim()) continue;
+      var pe = n.parentElement;
+      if (!pe || pe.closest(FIND_SKIP)) continue;
+      nodes.push(n);
+    }
+    var hits = [];                                           // { node, start, end }
+    nodes.forEach(function(node) {
+      var raw = node.nodeValue, f = foldS(raw);
+      if (f.length !== raw.length) return;                   // normalização mudou o tamanho: ignora o nó (segurança dos índices)
+      var found = [];
+      toks.forEach(function(t) {
+        var p = -1;
+        while ((p = f.indexOf(t, p + 1)) >= 0 && found.length < 400) found.push({ s: p, e: p + t.length, phrase: false });
+      });
+      if (toks.length > 1) { var pp = f.indexOf(phrase); if (pp >= 0) found.push({ s: pp, e: pp + phrase.length, phrase: true }); }
+      found.sort(function(a, b) { return a.s - b.s || b.e - a.e; });
+      var last = -1;
+      found.forEach(function(h) {                            // sem sobreposição; a frase inteira cobre os termos
+        if (h.s < last) return;
+        last = h.e;
+        hits.push({ node: node, s: h.s, e: h.e, phrase: h.phrase });
+      });
+    });
+    if (!hits.length) return 0;
+    var marks = [];
+    for (var i = hits.length - 1; i >= 0 && marks.length < 600; i--) {   // do fim para o começo: os índices de um nó não se deslocam
+      var h = hits[i];
+      try {
+        var r = document.createRange();
+        r.setStart(h.node, h.s); r.setEnd(h.node, h.e);
+        var m = document.createElement('mark'); m.className = 'vm-find';
+        r.surroundContents(m);
+        marks.unshift({ el: m, phrase: h.phrase });
+      } catch (e) { /* intervalo atravessa elementos: ignora */ }
+    }
+    var visible = marks.filter(function(m) { return m.el.getClientRects().length > 0; });
+    var secEl = null;
+    try { secEl = location.hash.length > 1 ? document.getElementById(decodeURIComponent(location.hash.slice(1))) : null; } catch (e) { secEl = null; }
+    var pool = secEl ? visible.filter(function(m) { return secEl.contains(m.el); }) : [];      // prefere a seção que o resultado abriu
+    if (!pool.length) pool = visible;
+    var target = (pool.filter(function(m) { return m.phrase; })[0] || pool[0] || marks[0] || {}).el;
+    if (target) {
+      target.setAttribute('data-vm-find-first', '1');
+      var userMoved = false;
+      var mark = function() { userMoved = true; };
+      ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function(ev) { window.addEventListener(ev, mark, { once: true, passive: true }); });
+      var align = function(force) {
+        if (!target.isConnected || (userMoved && !force)) return;
+        var r = target.getBoundingClientRect();
+        if (!force && r.top >= 0 && r.bottom <= window.innerHeight) return;            // já está à vista
+        var top = r.top + window.pageYOffset - Math.round(window.innerHeight * 0.3);
+        window.scrollTo({ top: Math.max(0, top), behavior: 'instant' });
+      };
+      align(true);
+      // elementos inseridos acima do trecho depois da rolagem (selo, navegação) deslocam o alvo: reajusta, se ainda não rolaram à mão
+      setTimeout(align, 500); setTimeout(align, 1500);
+    }
+    return marks.length;
+  }
+  function findCheck() {
+    var raw = null;
+    try { raw = sessionStorage.getItem(FIND_KEY); } catch (e) { raw = null; }
+    if (!raw) return;
+    var o = null;
+    try { o = JSON.parse(raw); } catch (e) { o = null; }
+    if (!o || o.file !== file || Date.now() - (o.ts || 0) > 20000) return;
+    try { sessionStorage.removeItem(FIND_KEY); } catch (e) { /* ok */ }
+    var go = function() { setTimeout(function() { runFind(String(o.q || '')); }, 450); };   // depois do salto do navegador para a âncora
+    if (document.readyState === 'complete') go(); else window.addEventListener('load', go, { once: true });
+  }
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && document.querySelector('mark.vm-find')) clearFind(); });
+  document.addEventListener('click', function(e) { if (e.target.closest && e.target.closest('mark.vm-find')) clearFind(); });
+  window.addEventListener('hashchange', findCheck);
+  window.VMFind = { run: runFind, clear: clearFind, check: findCheck };
+
   // ───────────── inicialização ─────────────
   function init() {
+    findCheck();
     mountCopy();
     mountSectionPdf();
     mountNotesMarks();
@@ -572,6 +772,7 @@
     window.addEventListener('load', restoreProgress);
     if (window.VMData) {
       VMData.manifest().then(function(m) { mountFreshness(m); mountPrevNext(m); });
+      VMData.alteracoes().then(mountLawChange);
     }
     mountCitations();
   }

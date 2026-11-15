@@ -80,4 +80,38 @@ T.check('Art. 77, I: reincidente em crime doloso não cabe', su({ pena: pena(1),
 T.check('Art. 61: máxima de 2 anos é de menor potencial; 2 anos e 1 dia não; contravenção sempre', C.menorPotencial({ maxima: pena(2) }).sim && !C.menorPotencial({ maxima: pena(2, 0, 1) }).sim && C.menorPotencial({ contravencao: true }).sim);
 T.check('Formatação: 400 dias = 1 ano, 1 mês e 10 dias; 54 meses = 4 anos e 6 meses', C.fmtPena(400) === '1 ano e 1 mês e 10 dias' && C.fmtMonths(54) === '4 anos e 6 meses');
 
+// ── prazos processuais: Lei 9.099 arts. 78, 82 e 83; CPP art. 798 (texto lido do Planalto em 14/11/2026) ──
+const pr = (o) => C.prazoProcessual(Object.assign({ modo: 'corridos', feriados: [] }, o));
+T.check('Apelação (art. 82, § 1º): ciência na segunda 02/11/2026 + 10 dias corridos = quinta 12/11/2026 (não conta o dia do começo)',
+  pr({ inicio: '2026-11-02', dias: 10 }).fim === '2026-11-12' && pr({ inicio: '2026-11-02', dias: 10 }).diaSemana === 'quinta-feira');
+T.check('CPP art. 798, § 3º: prazo que termina em domingo (15/11/2026) prorroga para a segunda 16/11/2026',
+  pr({ inicio: '2026-11-05', dias: 10 }).fim === '2026-11-16' && pr({ inicio: '2026-11-05', dias: 10 }).passos.some((x) => x.includes('domingo')));
+T.check('CPP art. 798, § 3º: domingo seguido de feriado informado (16/11) prorroga até a terça 17/11/2026', pr({ inicio: '2026-11-05', dias: 10, feriados: ['2026-11-16'] }).fim === '2026-11-17');
+T.check('Prazo que termina no sábado (14/11/2026) NÃO é prorrogado pelo texto do § 3º e a calculadora avisa', pr({ inicio: '2026-11-04', dias: 10 }).fim === '2026-11-14' && pr({ inicio: '2026-11-04', dias: 10 }).avisos.some((x) => x.includes('sábado')));
+T.check('Embargos de declaração (art. 83, § 1º): ciência na terça 10/11/2026 + 5 dias = domingo 15/11 → segunda 16/11/2026', pr({ inicio: '2026-11-10', dias: 5 }).fim === '2026-11-16');
+T.check('Dias úteis (art. 12-A): 10 dias úteis a partir da segunda 09/11/2026 terminam na segunda 23/11/2026; com feriado em 20/11, na terça 24/11',
+  pr({ inicio: '2026-11-09', dias: 10, modo: 'uteis' }).fim === '2026-11-23' && pr({ inicio: '2026-11-09', dias: 10, modo: 'uteis', feriados: ['2026-11-20'] }).fim === '2026-11-24');
+T.check('Dias úteis: a calculadora avisa que não decide se o art. 12-A alcança o Juizado Criminal', pr({ inicio: '2026-11-09', dias: 10, modo: 'uteis' }).avisos.some((x) => x.includes('12-A')));
+T.check('Prazo inválido e data inexistente são recusados', raises(() => pr({ inicio: '2026-11-09', dias: 0 })) && raises(() => pr({ inicio: '2026-02-30', dias: 5 })) && raises(() => pr({ inicio: '2026-11-09', dias: 5, feriados: ['xx'] })));
+T.check('Testemunhas (art. 78, § 1º): audiência em 10/12/2026 → requerimento até 05/12/2026 (no mínimo cinco dias antes)', C.antesDe('2026-12-10', 5).limite === '2026-12-05');
+
+// ── decadência: CP art. 103; CPP art. 38 e § 2º ──
+T.check('Decadência: ciência em 15/01/2026 → 6 meses terminam em 14/07/2026 (art. 10 CP: o dia do começo inclui-se)', C.decadencia({ ciencia: '2026-01-15' }).fim === '2026-07-14' && C.decadencia({ ciencia: '2026-01-15' }).meses === 6);
+T.check('Decadência em violência doméstica (CPP, art. 38, § 2º): 12 meses → 14/01/2027, com aviso de vigência', C.decadencia({ ciencia: '2026-01-15', violenciaDomestica: true }).fim === '2027-01-14' && C.decadencia({ ciencia: '2026-01-15', violenciaDomestica: true }).avisos.some((x) => x.includes('15.438')));
+T.check('Decadência: dia 31 sem correspondente no mês final é ajustado e avisado (31/08/2026 + 6 meses)', (() => { const r = C.decadencia({ ciencia: '2026-08-31' }); return r.fim === '2027-02-27' && r.ajustado && r.avisos.some((x) => x.includes('não existe')); })());
+
+// ── transação penal: checklist do art. 76 ──
+const tr = (o) => C.transacao(Object.assign({ menorPotencial: true, acao: 'incondicionada', arquivamento: false, condenadoPpl: false, beneficioAnterior: 'nao', dataBeneficio: '', ref: '2026-11-14', circunstancias: 'suficiente' }, o));
+T.check('Art. 76: todos os requisitos atendidos → sem impedimento', tr({}).conclusao === 'ok');
+T.check('Art. 76, caput: ação condicionada sem representação impede; com representação não', tr({ acao: 'sem-representacao' }).conclusao === 'impede' && tr({ acao: 'representada' }).conclusao === 'ok');
+T.check('Art. 76, caput: ação privada fica "a verificar" (o texto é omisso), não é decidida', tr({ acao: 'privada' }).conclusao === 'verificar');
+T.check('Art. 76, caput: caso de arquivamento impede', tr({ arquivamento: true }).conclusao === 'impede');
+T.check('Art. 76, § 2º, I: condenado a pena privativa de liberdade por sentença definitiva impede', tr({ condenadoPpl: true }).conclusao === 'impede');
+T.check('Art. 76, § 2º, II: benefício em 10/03/2022 (cinco anos até 09/03/2027) impede em 14/11/2026; em 10/03/2020 (até 09/03/2025) não impede',
+  tr({ beneficioAnterior: 'sim', dataBeneficio: '2022-03-10' }).conclusao === 'impede' && tr({ beneficioAnterior: 'sim', dataBeneficio: '2020-03-10' }).conclusao === 'ok');
+T.check('Art. 76, § 2º, II: sem saber se houve benefício, ou sem a data, fica "a verificar"', tr({ beneficioAnterior: 'nao-sei' }).conclusao === 'verificar' && tr({ beneficioAnterior: 'sim' }).conclusao === 'verificar');
+T.check('Art. 76, § 2º, III: circunstâncias insuficientes impedem; a avaliar fica "a verificar"', tr({ circunstancias: 'insuficiente' }).conclusao === 'impede' && tr({ circunstancias: 'avaliar' }).conclusao === 'verificar');
+T.check('Art. 76: o impedimento prevalece sobre o "a verificar"', tr({ circunstancias: 'avaliar', condenadoPpl: true }).conclusao === 'impede');
+T.check('Art. 76: as notas dos §§ 1º, 3º, 4º, 5º e 6º acompanham o resultado', ['§ 1º', '§ 3º', '§ 4º', '§ 5º', '§ 6º'].every((p) => tr({}).notas.some((n) => n.includes(p))));
+
 T.done();

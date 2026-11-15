@@ -40,6 +40,13 @@ await run(async ({ base, server, browser }) => {
   // o cartão errado volta ao fim da fila uma vez
   const total = await A.ev(`document.getElementById('bar').style.width`);
   T.check('Treino: a barra de progresso anda', parseFloat(total) > 0, total);
+  // desempenho por artigo
+  const perf = JSON.parse(await A.ev(`JSON.stringify({vis:!document.getElementById('perf').hidden,rows:[...document.querySelectorAll('#perf-t tbody tr')].map(r=>[...r.children].map(c=>c.textContent.trim()))})`));
+  T.check('Treino: "Desempenho por artigo" aparece após responder e mostra respostas e % de acerto do art. 65 (1 acerto em 3 respostas = 33%)', perf.vis && perf.rows.length === 1 && perf.rows[0][0].includes('Art. 65') && perf.rows[0][2] === '3' && perf.rows[0][3] === '33%', JSON.stringify(perf));
+  // exportação para o Anki (captura o arquivo gerado)
+  await A.ev(`(()=>{window.__anki=null;URL.createObjectURL=(b)=>{window.__anki=b;return 'blob:teste'};document.getElementById('b-anki').click()})()`); await sleep(300);
+  const ak = JSON.parse(await A.ev(`(async()=>{const t=await window.__anki.text();const L=t.split(String.fromCharCode(10)).filter(Boolean);const T=String.fromCharCode(9);return JSON.stringify({head:L.slice(0,3),n:L.length-3,tabs:L.slice(3).every(l=>l.split(T).length===3),tag:L[3].split(T)[2],has:L[3].includes('Fonte:')})})()`));
+  T.check('Treino: exportar para o Anki gera um arquivo com cabeçalho, 32 cartões do filtro (art. 65), três colunas e etiqueta', ak.head.join('|') === '#separator:tab|#html:true|#tags column:3' && ak.n === 32 && ak.tabs && ak.tag === 'vade_mecum L9099-ART-65' && ak.has, JSON.stringify(ak));
   // revisão espaçada em dias seguintes (lógica do tracker com datas passadas)
   const sp = JSON.parse(await A.ev(`(()=>{const T=VMTracker;const d0=Date.parse('2026-01-10T12:00:00-03:00');T.rateCard('Z-ART-1.html#01','acertei',d0);const a=T.getCards()['Z-ART-1.html#01'];T.rateCard('Z-ART-1.html#01','acertei',d0+86400000);const b=T.getCards()['Z-ART-1.html#01'];T.rateCard('Z-ART-1.html#01','acertei',d0+4*86400000);const c=T.getCards()['Z-ART-1.html#01'];T.rateCard('Z-ART-1.html#01','errei',d0+11*86400000);const e=T.getCards()['Z-ART-1.html#01'];return JSON.stringify([a.due,a.box,b.due,b.box,c.due,c.box,e.due,e.box])})()`));
   T.check('Revisão espaçada: acertos agendam +1, +3 e +7 dias (caixas 1, 2, 3); erro volta à caixa 0', JSON.stringify(sp) === JSON.stringify(['2026-01-11', 1, '2026-01-14', 2, '2026-01-21', 3, '2026-01-21', 0]), JSON.stringify(sp));
@@ -79,6 +86,7 @@ await run(async ({ base, server, browser }) => {
   const mk = JSON.parse(await A.ev(`JSON.stringify({pressed:document.querySelector('#finalidade .vm-mark').getAttribute('aria-pressed'),txt:document.querySelector('#finalidade .vm-mark').textContent,store:Object.keys(JSON.parse(localStorage.getItem('vadeMecum_marks')))})`));
   T.check('Marcador: "Marcar" vira "Marcado", aria-pressed e grava por arquivo#seção', mk.pressed === 'true' && mk.txt === 'Marcado' && mk.store[0] === 'L9099-ART-65.html#finalidade', JSON.stringify(mk));
   await A.ev(`document.querySelector('#finalidade .vm-note-btn').click(),true`); await sleep(200);
+  T.check('Nota: ao escrever, aparece o aviso para não registrar dados que identifiquem clientes', (await A.ev(`(document.querySelector('#finalidade .vm-note-warn')||{}).textContent||''`)).includes('identifiquem clientes'));
   await A.ev(`(()=>{const t=document.querySelector('#finalidade + .vm-note-box textarea')||document.querySelector('#finalidade .vm-note-box textarea');t.value='Conferir a Súmula 523 <b>x</b>';[...document.querySelectorAll('.vm-note-box button')].find(b=>b.textContent==='Salvar').click()})()`); await sleep(200);
   const nt = JSON.parse(await A.ev(`JSON.stringify({store:JSON.parse(localStorage.getItem('vadeMecum_notes')),view:document.querySelector('#finalidade .vm-note-box p').textContent,html:document.querySelector('#finalidade .vm-note-box p').innerHTML,btn:document.querySelector('#finalidade .vm-note-btn').textContent})`));
   T.check('Nota: salva com a data, mostra como TEXTO (HTML escapado) e o botão indica "Nota (1)"', nt.store['L9099-ART-65.html#finalidade'].text.includes('<b>x</b>') && nt.view.includes('<b>x</b>') && nt.html.includes('&lt;b&gt;') && nt.btn === 'Nota (1)', JSON.stringify(nt));
@@ -99,7 +107,11 @@ await run(async ({ base, server, browser }) => {
   T.check('Letra: o tamanho é lembrado ao recarregar (aplicado antes da página aparecer)', (await A.ev(`document.documentElement.classList.contains('vm-zoom')`)) === true && (await A.ev(`getComputedStyle(document.documentElement).getPropertyValue('--vm-zoom').trim()`)) === '1.15');
   await A.ev(`document.querySelector('.vm-dock [data-a=theme]').click(),true`); await sleep(300);
   const dk = JSON.parse(await A.ev(`JSON.stringify({cls:document.documentElement.classList.contains('vm-dark'),bg:getComputedStyle(document.body).backgroundColor,filter:getComputedStyle(document.querySelector('.page-wrap')).filter,bar:getComputedStyle(document.getElementById('vm-study-bar')).position,txt:document.querySelector('.vm-dock [data-a=theme]').textContent})`));
-  T.check('Tema escuro: fundo escuro, conteúdo invertido, a barra do cronômetro continua fixa', dk.cls && dk.bg === 'rgb(21, 18, 13)' && /invert/.test(dk.filter) && dk.bar === 'fixed' && dk.txt === 'Tema claro', JSON.stringify(dk));
+  T.check('Tema escuro: fundo escuro, conteúdo invertido, a barra do cronômetro continua fixa', dk.cls && dk.bg === 'rgb(14, 11, 7)' && /invert/.test(dk.filter) && dk.bar === 'fixed' && dk.txt === 'Tema claro', JSON.stringify(dk));
+  await A.go(url('DP-ART-1.html'), { wait: 600 });
+  const dk1 = await A.ev(`(()=>{const m=document.querySelector('main#vm-conteudo');return !!m&&/invert/.test(getComputedStyle(m).filter)&&document.documentElement.classList.contains('vm-dark')})()`);
+  T.check('Tema escuro: páginas sem .page-wrap (DP-ART-1, conteúdo em <main>) também invertem o conteúdo, e ficam legíveis', dk1 === true);
+  await A.go(url('DP-ART-28.html'), { wait: 500 });
   const dkPro = await A.ev(`getComputedStyle(document.querySelector('.prova-section')).filter`);
   T.check('Tema escuro: a seção de pontos recorrentes (já escura) é re-invertida', /invert\(1\)/.test(dkPro), dkPro);
   await A.go(url('DP-ART-28.html'), { wait: 700 });
@@ -126,6 +138,28 @@ await run(async ({ base, server, browser }) => {
   T.check('Calculadora do art. 61: 2 anos e 1 dia não é menor potencial ofensivo', (await A.ev(`document.getElementById('o-res').textContent`)).includes('Não é infração de menor potencial'));
   await A.ev(`(()=>{document.getElementById('p-a').value='-3';document.querySelector('#f-presc button[type=submit]').click()})()`); await sleep(200);
   T.check('Calculadora: valor negativo vira mensagem de erro, não resultado', (await A.ev(`document.querySelector('#p-res .tp-warn').textContent`)).length > 5);
+
+  // calculadoras novas: transação penal (art. 76), prazos do procedimento, decadência
+  T.check('Calculadoras novas: texto oficial do art. 76, do art. 798 do CPP e do art. 38 do CPP aparece com a fonte', await A.ev(`(()=>{const t=id=>document.getElementById(id).textContent;return t('t-src').includes('Art. 76')&&t('z-src').includes('Art. 798')&&t('d-src').includes('Art. 38')&&t('z-src').includes('12-A')})()`) === true);
+  await A.ev(`(()=>{const f=document.getElementById('f-trans');document.getElementById('t-circ').value='suficiente';f.querySelector('button[type=submit]').click()})()`); await sleep(250);
+  let tr = await A.ev(`document.getElementById('t-res').textContent`);
+  T.check('Transação penal (tela): todos os requisitos atendidos → "Nenhum impedimento" e as notas dos §§ 4º e 6º', tr.includes('Nenhum impedimento nos itens enumerados') && tr.includes('§ 4º') && tr.includes('§ 6º'), tr.slice(0, 220));
+  await A.ev(`(()=>{document.getElementById('t-ppl').checked=true;document.querySelector('#f-trans button[type=submit]').click()})()`); await sleep(250);
+  tr = await A.ev(`document.getElementById('t-res').textContent`);
+  T.check('Transação penal (tela): condenação definitiva a pena privativa de liberdade → "Impede" (art. 76, § 2º, I)', tr.includes('Há impedimento legal') && tr.includes('Impede · Art. 76, § 2º, I'), tr.slice(0, 220));
+  await A.ev(`(()=>{document.getElementById('z-ini').value='2026-11-05';document.querySelector('#f-prazos button[type=submit]').click()})()`); await sleep(250);
+  let pz = await A.ev(`document.getElementById('z-res').textContent`);
+  T.check('Prazos (tela): apelação com ciência em 05/11/2026 termina no domingo 15/11 e é prorrogada para segunda 16/11/2026', pz.includes('16/11/2026') && pz.includes('segunda-feira') && pz.includes('domingo'), pz.slice(0, 260));
+  await A.ev(`(()=>{document.getElementById('z-modo').value='uteis';document.querySelector('#f-prazos button[type=submit]').click()})()`); await sleep(250);
+  pz = await A.ev(`document.getElementById('z-res').textContent`);
+  T.check('Prazos (tela): dias úteis mostram o aviso sobre o art. 12-A', pz.includes('12-A') && pz.includes('não decide'), pz.slice(0, 200));
+  await A.ev(`(()=>{document.getElementById('z-fer').value='lixo';document.querySelector('#f-prazos button[type=submit]').click()})()`); await sleep(200);
+  T.check('Prazos (tela): feriado digitado errado vira erro, não resultado', (await A.ev(`document.querySelector('#z-res .tp-warn')&&document.querySelector('#z-res .tp-warn').textContent`) || '').length > 5);
+  await A.ev(`(()=>{document.getElementById('w-aud').value='2026-12-10';document.querySelector('#f-test button[type=submit]').click()})()`); await sleep(200);
+  T.check('Testemunhas (tela): audiência em 10/12/2026 → até 05/12/2026', (await A.ev(`document.getElementById('w-res').textContent`)).includes('05/12/2026'));
+  await A.ev(`(()=>{document.getElementById('d-ini').value='2026-01-15';document.querySelector('#f-dec button[type=submit]').click()})()`); await sleep(200);
+  T.check('Decadência (tela): 6 meses → 14/07/2026; com violência doméstica, 12 meses → 14/01/2027', (await A.ev(`document.getElementById('d-res').textContent`)).includes('14/07/2026') &&
+    (await A.ev(`(()=>{document.getElementById('d-vd').checked=true;document.querySelector('#f-dec button[type=submit]').click();return document.getElementById('d-res').textContent})()`)).includes('14/01/2027'));
 
   // ================= roteiro =================
   await A.go(url('index-jecrim.html'), { wait: 1000 });
@@ -167,16 +201,87 @@ await run(async ({ base, server, browser }) => {
   await A.ev(`(()=>{
     window.__files={};window.__perm='granted';
     const dir={name:'MinhaPasta',queryPermission:async()=>window.__perm,requestPermission:async()=>{window.__perm='granted';return 'granted'},
-      getFileHandle:async(n)=>({createWritable:async()=>{let buf='';return{write:async(d)=>{buf+=d},close:async()=>{window.__files[n]=buf}}}})};
+      getFileHandle:async(n)=>({createWritable:async()=>{let buf='';return{write:async(d)=>{buf+=d},close:async()=>{window.__files[n]=buf}}}}),
+      values(){const es=Object.keys(window.__files).map(n=>({kind:'file',name:n,getFile:async()=>({size:window.__files[n].length,text:async()=>window.__files[n]})}));let i=0;return{next:async()=>i<es.length?{done:false,value:es[i++]}:{done:true}}}};
     window.showDirectoryPicker=async()=>dir;return 1})()`);
   const st = JSON.parse(await A.ev(`VMAutoBackup.status().then(s=>JSON.stringify(s))`));
   T.check('Backup automático: aparece como disponível e desativado no Chrome/Edge', st.supported === true && st.enabled === false, JSON.stringify(st));
   await A.ev(`(async()=>{await VMAutoBackup.choose();return 1})()`); await sleep(500);
   const f1 = JSON.parse(await A.ev(`JSON.stringify(Object.keys(window.__files))`));
-  T.check('Backup automático: ao escolher a pasta, grava o "latest" e uma cópia datada', f1.includes('vademecum-backup-latest.json') && f1.some((n) => /^vademecum-backup-\d{4}-\d{2}-\d{2}\.json$/.test(n)), JSON.stringify(f1));
-  const j = JSON.parse(await A.ev(`window.__files['vademecum-backup-latest.json']`));
+  T.check('Backup automático: ao escolher a pasta, grava o "latest" do aparelho e uma cópia datada (nomes com a etiqueta do aparelho)', f1.some((n) => /^vademecum-backup-latest-[0-9a-f]{6}\.json$/.test(n)) && f1.some((n) => /^vademecum-backup-\d{4}-\d{2}-\d{2}-[0-9a-f]{6}\.json$/.test(n)), JSON.stringify(f1));
+  const j = JSON.parse(await A.ev(`window.__files[Object.keys(window.__files).find(n=>/latest/.test(n))]`));
   T.check('O arquivo gravado é um backup válido (app, schema, dados)', j.app === 'vade-mecum' && j.schema === 1 && Array.isArray(j.sessions), Object.keys(j).join(','));
   T.check('O painel da home mostra a pasta e o último backup', await A.ev(`(async()=>{await new Promise(r=>setTimeout(r,300));return document.querySelector('.vde-auto').textContent.includes('MinhaPasta')})()`) === true);
+  // ---- sincronização entre aparelhos pela pasta (sem servidor): cada aparelho grava só o seu arquivo; "importar" soma os dos outros ----
+  const dev = await A.ev(`VMAutoBackup.deviceId()`);
+  const outro = { app: 'vade-mecum', schema: 1, exportedAt: '2026-11-13T10:00:00Z', completed: {}, settings: {}, lastRead: null,
+    sessions: [{ id: 'sess_outro_1', date: '2026-11-13', dayOfWeek: 'sexta-feira', subject: 'Lei 9.099/95', subjectId: 'L9099', articleFile: 'L9099-ART-65', articleNum: 65, startTs: Date.parse('2026-11-13T10:00:00-03:00'), startTime: '10:00', endTs: Date.parse('2026-11-13T10:30:00-03:00'), endTime: '10:30', totalStudyMs: 1800000, pauseTotalMs: 0, studyDuration: '00:30', pauseDuration: '00:00', state: 'done', pauses: [] }],
+    notes: { 'L9099-ART-65.html#texto-legal': { text: 'nota do outro aparelho', ts: 1 } } };
+  await A.ev(`window.__files['vademecum-backup-latest-aaaaaa.json']=${JSON.stringify(JSON.stringify(outro))};window.__files['vademecum-backup-2026-11-01-aaaaaa.json']='{}';window.__files['leiame.txt']='x'`);
+  const antes = await A.ev(`VMTracker.getSessions().length`);
+  const imp = JSON.parse(await A.ev(`VMAutoBackup.importOthers({ask:true}).then(r=>JSON.stringify(r))`));
+  T.check('Sincronização: "Importar da pasta" soma o arquivo de OUTRO aparelho (sessão e nota) e ignora o próprio, as cópias datadas e arquivos alheios', imp.ok && imp.files === 1 && imp.sessions === 1 && imp.notes === 1 && (await A.ev(`VMTracker.getSessions().length`)) === antes + 1, JSON.stringify(imp));
+  const imp2 = JSON.parse(await A.ev(`VMAutoBackup.importOthers({ask:true}).then(r=>JSON.stringify(r))`));
+  T.check('Sincronização: importar de novo é idempotente (nada duplica)', imp2.ok && imp2.sessions === 0 && imp2.notes === 0 && (await A.ev(`VMTracker.getSessions().length`)) === antes + 1, JSON.stringify(imp2));
+  T.check('Sincronização: o arquivo do próprio aparelho não é lido como "outro"', (await A.ev(`VMAutoBackup.listOthers({ask:true}).then(r=>r.items.map(i=>i.name).join())`)) === 'vademecum-backup-latest-aaaaaa.json' && dev.length === 6);
+
+  // ---- criptografia do backup (AES-GCM, chave derivada da senha) ----
+  const cr = JSON.parse(await A.ev(`(async()=>{
+    const T=VMTracker; const o=T.buildBackup(); o.notes={'X-ART-1.html#a':{text:'SEGREDO-DO-CLIENTE-123',ts:1}};
+    const c=await T.encryptBackup(o,'senha-forte-123'); const txt=JSON.stringify(c);
+    const out={enc:T.isEncryptedBackup(c),vazou:txt.includes('SEGREDO-DO-CLIENTE-123')||txt.includes('"sessions"'),campos:Object.keys(c).sort().join(),iter:c.iterations};
+    const ok=await T.decryptBackup(c,'senha-forte-123'); out.volta=ok.notes['X-ART-1.html#a'].text;
+    try{await T.decryptBackup(c,'senha-errada-999');out.errada='abriu'}catch(e){out.errada=e.message}
+    const t2=JSON.parse(txt); const raw=atob(t2.data); t2.data=btoa(String.fromCharCode(raw.charCodeAt(0)^1)+raw.slice(1));
+    try{await T.decryptBackup(t2,'senha-forte-123');out.adulterado='abriu'}catch(e){out.adulterado=e.message}
+    try{await T.encryptBackup(o,'curta');out.curta='aceitou'}catch(e){out.curta=e.message}
+    const t3=JSON.parse(txt); t3.iterations=5; try{await T.decryptBackup(t3,'senha-forte-123');out.iter5='abriu'}catch(e){out.iter5=e.message}
+    out.valida=T.validateBackup(c);
+    return JSON.stringify(out)})()`));
+  T.check('Backup com senha: o arquivo não contém o texto das notas nem a lista de sessões; abre com a senha certa e devolve a nota', cr.enc && !cr.vazou && cr.volta === 'SEGREDO-DO-CLIENTE-123' && cr.iter === 600000, JSON.stringify(cr));
+  T.check('Backup com senha: senha errada ou arquivo adulterado NÃO abre; senha curta é recusada; iterações fora do limite são recusadas', cr.errada.includes('Senha incorreta') && cr.adulterado.includes('Senha incorreta') && cr.curta.includes('8 caracteres') && cr.iter5.includes('inválidos'), JSON.stringify(cr));
+  T.check('Backup com senha: validar o arquivo criptografado direto avisa que precisa da senha (não importa sem abrir)', cr.valida.includes('protegido por senha'), cr.valida);
+  // restaurar pela tela da home: arquivo protegido pede a senha (errada: recusa; certa: segue para "Somar")
+  const ui1 = JSON.parse(await A.ev(`JSON.stringify({pw:[...document.querySelectorAll('.db-actions .db-btn')].map(b=>b.textContent.trim()).filter(t=>/senha/i.test(t)),card:!!document.querySelector('#vde-bk .vde-pw')})`));
+  T.check('Home: há "Backup com senha" nas ações do painel e no cartão de backup', ui1.pw.length === 1 && ui1.card === true, JSON.stringify(ui1));
+  await A.ev(`(async()=>{const o=${JSON.stringify(outro)};o.sessions[0].id='sess_ui_enc';const c=await VMTracker.encryptBackup(o,'senha-da-tela-1');
+    const dt=new DataTransfer();dt.items.add(new File([JSON.stringify(c)],'b.json',{type:'application/json'}));const f=document.querySelector('.db-actions input[type=file]');f.files=dt.files;f.dispatchEvent(new Event('change'));return 1})()`);
+  await sleep(700);
+  T.check('Restaurar arquivo protegido: a tela pede a senha (e não mostra o conteúdo)', (await A.ev(`!!document.querySelector('.vm-modal .vm-pw1')`)) === true);
+  await A.ev(`(()=>{document.querySelector('.vm-modal .vm-pw1').value='senha-errada-777';document.querySelector('.vm-modal .vm-act button').click()})()`); await sleep(900);
+  T.check('Restaurar arquivo protegido: senha errada é recusada com aviso e nada é importado', (await A.ev(`VMTracker.getSessions().some(s=>s.id==='sess_ui_enc')`)) === false && (await A.ev(`document.body.textContent.includes('Senha incorreta')`)) === true);
+  await A.ev(`(async()=>{const o=${JSON.stringify(outro)};o.sessions[0].id='sess_ui_enc';const c=await VMTracker.encryptBackup(o,'senha-da-tela-1');
+    const dt=new DataTransfer();dt.items.add(new File([JSON.stringify(c)],'b.json',{type:'application/json'}));const f=document.querySelector('.db-actions input[type=file]');f.files=dt.files;f.dispatchEvent(new Event('change'));return 1})()`);
+  await sleep(700);
+  await A.ev(`(()=>{document.querySelector('.vm-modal .vm-pw1').value='senha-da-tela-1';document.querySelector('.vm-modal .vm-act button').click()})()`); await sleep(1500);
+  const modalTit = await A.ev(`(document.querySelector('.vm-modal h3')||{}).textContent||''`);
+  await A.ev(`(()=>{const b=[...document.querySelectorAll('.vm-modal .vm-act button')].find(x=>/Somar/.test(x.textContent));b&&b.click()})()`); await sleep(500);
+  T.check('Restaurar arquivo protegido: com a senha certa abre o diálogo "Restaurar backup" e, ao somar, a sessão entra', modalTit === 'Restaurar backup' && (await A.ev(`VMTracker.getSessions().some(s=>s.id==='sess_ui_enc')`)) === true, modalTit);
+  // proteção da pasta: grava criptografado e a mesma senha reabre; a chave guardada não é extraível; desativar apaga a chave
+  await A.ev(`window.__files={};window.__perm='granted'`);
+  const en = JSON.parse(await A.ev(`(async()=>{
+    const r=await VMAutoBackup.enableEncryption('senha-da-pasta-1'); const run=await VMAutoBackup.run('t',{ask:true});
+    const nm=Object.keys(window.__files).find(n=>/latest/.test(n)); const c=JSON.parse(window.__files[nm]);
+    const st=await VMAutoBackup.status(); const ab=await VMTracker.decryptBackup(c,'senha-da-pasta-1');
+    const db=await new Promise(res=>{const q=indexedDB.open('vm-backup-db',1);q.onsuccess=()=>res(q.result)});
+    const rec=await new Promise(res=>{const g=db.transaction('kv').objectStore('kv').get('enc');g.onsuccess=()=>res(g.result)});
+    return JSON.stringify({r:r.ok,run:run.ok,enc:VMTracker.isEncryptedBackup(c),st:st.encrypted,abre:ab.app,extractable:rec&&rec.key&&rec.key.extractable,algo:rec&&rec.key&&rec.key.algorithm.name,semSenha:JSON.stringify(rec).includes('senha-da-pasta-1')})})()`));
+  T.check('Proteção da pasta: o arquivo gravado sai criptografado, abre com a senha, e o navegador guarda só uma chave NÃO extraível (nunca a senha)', en.r && en.run && en.enc && en.st && en.abre === 'vade-mecum' && en.extractable === false && en.algo === 'AES-GCM' && !en.semSenha, JSON.stringify(en));
+  // outro aparelho com arquivo criptografado: a chave guardada abre os arquivos deste mesmo sal; os de outro sal pedem a senha
+  const salt0 = await A.ev(`VMTracker.backupSalt(JSON.parse(window.__files[Object.keys(window.__files).find(n=>/latest/.test(n))]))`);
+  await A.ev(`(async()=>{const o=${JSON.stringify(outro)};o.sessions[0].id='sess_outro_2';const c=await VMTracker.encryptBackup(o,'senha-do-outro-1');window.__files['vademecum-backup-latest-bbbbbb.json']=JSON.stringify(c)})()`);
+  const impE1 = JSON.parse(await A.ev(`VMAutoBackup.importOthers({ask:true}).then(r=>JSON.stringify(r))`));
+  T.check('Sincronização com arquivo protegido: sem a senha o arquivo é pulado e avisado (nunca importado às cegas)', impE1.ok && impE1.files === 0 && impE1.skipped.some((x) => x.includes('protegido por senha')) && !!salt0, JSON.stringify(impE1));
+  const impE2 = JSON.parse(await A.ev(`VMAutoBackup.importOthers({ask:true,askPassword:async()=>'senha-do-outro-1'}).then(r=>JSON.stringify(r))`));
+  T.check('Sincronização com arquivo protegido: com a senha certa soma; com a errada pula e avisa', impE2.files === 1 && impE2.sessions === 1, JSON.stringify(impE2));
+  await A.ev(`(async()=>{const o=${JSON.stringify(outro)};o.sessions[0].id='sess_outro_3';const c=await VMTracker.encryptBackup(o,'senha-do-outro-1');window.__files['vademecum-backup-latest-bbbbbb.json']=JSON.stringify(c)})()`);
+  const impE3 = JSON.parse(await A.ev(`VMAutoBackup.importOthers({ask:true,askPassword:async()=>'senha-errada-000'}).then(r=>JSON.stringify(r))`));
+  T.check('Sincronização com arquivo protegido: senha errada não importa nada', impE3.files === 0 && impE3.skipped.some((x) => x.includes('senha incorreta')), JSON.stringify(impE3));
+  await A.ev(`VMAutoBackup.disable()`); await sleep(300);
+  const semChave = await A.ev(`(async()=>{const db=await new Promise(res=>{const q=indexedDB.open('vm-backup-db',1);q.onsuccess=()=>res(q.result)});return await new Promise(res=>{const g=db.transaction('kv').objectStore('kv').get('enc');g.onsuccess=()=>res(g.result===undefined||g.result===null)})})()`);
+  T.check('Desativar o backup automático também apaga a chave guardada', semChave === true);
+  await A.ev(`(async()=>{await VMAutoBackup.choose();return 1})()`); await sleep(400);
+
   await A.ev(`window.__files={};window.__perm='prompt';VMAutoBackup.run('t').then(r=>window.__r=r)`); await sleep(300);
   T.check('Sem permissão (Chrome pediu de novo): não grava e diz "sem-permissao", sem erro', (await A.ev(`window.__r.why`)) === 'sem-permissao' && (await A.ev(`Object.keys(window.__files).length`)) === 0);
   await A.ev(`VMAutoBackup.run('t',{ask:true}).then(r=>window.__r=r)`); await sleep(300);
@@ -205,6 +310,46 @@ await run(async ({ base, server, browser }) => {
   T.check('Busca: já mostra resultados depois do primeiro índice, e o aviso some quando todas as matérias chegam', (await A.ev(`document.querySelectorAll('#vs-list .vs-item').length`)) > 0 && (await A.ev(`document.querySelector('#vm-search .vs-foot').textContent.includes('navegar')`)) === true);
   const big = await A.ev(`fetch('search-index-CP.json').then(r=>r.text()).then(t=>t.length)`);
   T.check('O índice por matéria é menor que o antigo arquivo único (CP é o maior, ~1,2 MB; Lei 9.099 ~0,4 MB)', big < 1500000 && (await A.ev(`fetch('search-index-L9099.json').then(r=>r.text()).then(t=>t.length)`)) < 600000, String(big));
+
+  // ================= ficha de audiência (A4) =================
+  await A.go(url('L9099-ART-65.html'), { wait: 1200 });
+  const fm = JSON.parse(await A.ev(`JSON.stringify({btns:[...document.querySelectorAll('#vm-dock [data-a^=ficha]')].map(b=>b.textContent.trim()),marked:[...document.querySelectorAll('[data-ficha]')].map(e=>e.id+':'+e.getAttribute('data-ficha'))})`));
+  T.check('Ficha: o menu Ferramentas oferece a ficha compacta e a completa, e o art. 65 marca a seção de requisitos', fm.btns.length === 2 && fm.btns[0].includes('compacta') && fm.btns[1].includes('completa') && fm.marked.join() === 'finalidade:requisitos', JSON.stringify(fm));
+  const fc = JSON.parse(await A.ev(`(()=>{const f=VMFicha.build(true);return JSON.stringify({blocks:[...f.querySelectorAll('.vf-block>h2')].map(h=>h.textContent),q:f.querySelectorAll('.prova-item').length,meta:f.querySelector('.vf-meta').textContent,ids:f.querySelectorAll('[id]').length,btn:f.querySelectorAll('button').length,law:f.textContent.includes('Os atos processuais serão válidos sempre que preenchherem')||f.textContent.includes('Os atos processuais serão válidos')})})()`));
+  T.check('Ficha compacta: texto legal literal + 32 perguntas-chave, com a data de conferência e o aviso; sem ids repetidos nem botões', fc.blocks.join('|') === 'Texto legal|Perguntas-chave' && fc.q === 32 && fc.meta.includes('12/11/2026') && fc.meta.includes('Confira') && fc.ids === 0 && fc.btn === 0 && fc.law, JSON.stringify(fc));
+  const ff = JSON.parse(await A.ev(`(()=>{const f=VMFicha.build(false);return JSON.stringify({blocks:[...f.querySelectorAll('.vf-block>h2')].map(h=>h.textContent)})})()`));
+  T.check('Ficha completa: acrescenta a seção de requisitos, com o título da seção e sem repetir o cabeçalho dela', ff.blocks.length === 3 && ff.blocks[1].startsWith('Requisitos e critérios — Finalidade do Ato'), JSON.stringify(ff));
+  const pagesOf = async (file, compact) => {
+    await A.go(url(file), { wait: 900 });
+    await A.ev(`document.documentElement.classList.add('vm-printing-ficha');VMFicha.build(${compact});const st=document.createElement('style');st.textContent='@media print{@page{size:A4 portrait;margin:8mm}}';document.head.appendChild(st);1`);
+    const pdf = (await A.send('Page.printToPDF', { preferCSSPageSize: true })).result.data;
+    return (Buffer.from(pdf, 'base64').toString('latin1').match(/\/Type\s*\/Page[^s]/g) || []).length;
+  };
+  const pg = {};
+  for (const n of [60, 61, 62, 63, 64, 65]) pg['c' + n] = await pagesOf(`L9099-ART-${n}.html`, true);
+  T.check('Ficha compacta (A4): cada artigo da Lei 9.099 sai em no máximo 2 páginas (os arts. 60 e 62 a 65 em 1)', Object.values(pg).every((n) => n >= 1 && n <= 2) && [60, 62, 63, 64, 65].every((n) => pg['c' + n] === 1), JSON.stringify(pg));
+  const pf = await pagesOf('L9099-ART-65.html', false);
+  T.check('Ficha completa (A4): o art. 65 sai em até 3 páginas', pf >= 1 && pf <= 3, String(pf));
+  await A.ev(`VMFicha.cleanup()`);
+  T.check('Ficha: após imprimir, a página volta ao normal (sem a ficha e sem a classe de impressão)', (await A.ev(`!document.querySelector('.vm-ficha')&&!document.documentElement.classList.contains('vm-printing-ficha')||(VMFicha.cleanup(),!document.querySelector('.vm-ficha'))`)) === true);
+
+  // ================= aviso de lei alterada (data/alteracoes.json) =================
+  await A.go(url('L9099-ART-64.html'), { wait: 1500 });
+  T.check('Lei alterada: sem marcador gravado, nenhum aviso aparece (arquivo real vazio)', (await A.ev(`document.querySelectorAll('.vm-law-changed').length`)) === 0);
+  server.virtual.set('data/alteracoes.json', 'tests/fixtures/alteracoes-teste.json');
+  await A.ev(`caches.keys().then(k=>Promise.all(k.map(n=>caches.delete(n))))`);
+  await A.go(url('L9099-ART-65.html'), { wait: 1500 });
+  for (let i = 0; i < 20 && !(await A.ev(`!!document.querySelector('.vm-law-changed')`)); i++) await sleep(200);
+  const lc = await A.ev(`(document.querySelector('.vm-law-changed')||{}).textContent||''`);
+  T.check('Lei alterada: o artigo marcado mostra o aviso com o número do artigo e a data do retrato', lc.includes('art. 65') && lc.includes('14/11/2026') && lc.includes('Reconfira'), lc);
+  await A.go(url('L9099-ART-64.html'), { wait: 1500 });
+  T.check('Lei alterada: outro artigo da mesma lei, sem marcador, não mostra o aviso', (await A.ev(`document.querySelectorAll('.vm-law-changed').length`)) === 0);
+  await A.go(url('index.html'), { wait: 1500 });
+  for (let i = 0; i < 20 && !(await A.ev(`/lei alterada/.test(document.getElementById('vde-rev')?document.getElementById('vde-rev').textContent:'')`)); i++) await sleep(200);
+  const home = await A.ev(`document.getElementById('vde-rev').textContent`);
+  T.check('Lei alterada: a home lista o artigo na caixa "Conferência a renovar", com o número do artigo da lei', home.includes('lei alterada (art. 65)') && home.includes('1 artigo com a lei alterada'), home.slice(0, 220));
+  server.virtual.delete('data/alteracoes.json');
+  await A.ev(`caches.keys().then(k=>Promise.all(k.map(n=>caches.delete(n))))`);
 
   T.done();
 });

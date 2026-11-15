@@ -12,7 +12,7 @@
   if (!window.VMTracker || !window.VMData) return;
 
   var T = VMTracker;
-  var manifest = null;
+  var manifest = null, alteracoes = null;
   var ui = {};
 
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function(c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
@@ -121,6 +121,46 @@
     });
   }
 
+  /** Pede uma senha (e a confirmação, ao criar). Devolve a senha ou null. A senha não é guardada. */
+  function askPassword(title, opts) {
+    opts = opts || {};
+    return new Promise(function(resolve) {
+      var m = document.createElement('div');
+      m.className = 'vm-modal';
+      m.setAttribute('role', 'dialog'); m.setAttribute('aria-modal', 'true'); m.setAttribute('aria-label', title);
+      m.innerHTML = '<div class="vm-box"><h3></h3><div class="vm-pw-txt"></div>' +
+        '<label style="display:block;margin:.6rem 0 .2rem;font-size:.8rem">Senha <input type="password" class="vm-pw1" autocomplete="off" style="display:block;width:100%;box-sizing:border-box;padding:.4rem;margin-top:.2rem"></label>' +
+        (opts.confirm ? '<label style="display:block;margin:.4rem 0 .2rem;font-size:.8rem">Repita a senha <input type="password" class="vm-pw2" autocomplete="off" style="display:block;width:100%;box-sizing:border-box;padding:.4rem;margin-top:.2rem"></label>' : '') +
+        '<div class="vm-pw-err" role="alert" style="color:#b00020;font-size:.78rem;min-height:1.1em;margin-top:.3rem"></div><div class="vm-act"></div></div>';
+      m.querySelector('h3').textContent = title;
+      m.querySelector('.vm-pw-txt').textContent = opts.text || '';
+      var act = m.querySelector('.vm-act'), p1 = m.querySelector('.vm-pw1'), p2 = m.querySelector('.vm-pw2'), err = m.querySelector('.vm-pw-err');
+      function done(v) { m.remove(); resolve(v); }
+      function ok() {
+        if (opts.confirm) {
+          if (p1.value.length < 8) { err.textContent = 'Use pelo menos 8 caracteres.'; p1.focus(); return; }
+          if (p1.value !== p2.value) { err.textContent = 'As duas senhas são diferentes.'; p2.focus(); return; }
+        } else if (!p1.value) { err.textContent = 'Informe a senha.'; p1.focus(); return; }
+        done(p1.value);
+      }
+      var b1 = document.createElement('button'); b1.type = 'button'; b1.textContent = opts.okLabel || 'Continuar'; b1.addEventListener('click', ok);
+      var b2 = document.createElement('button'); b2.type = 'button'; b2.textContent = 'Cancelar'; b2.addEventListener('click', function() { done(null); });
+      act.appendChild(b1); act.appendChild(b2);
+      m.addEventListener('keydown', function(e) { if (e.key === 'Escape') done(null); else if (e.key === 'Enter' && e.target.tagName === 'INPUT') { e.preventDefault(); ok(); } });
+      document.body.appendChild(m);
+      p1.focus();
+    });
+  }
+  var PW_WARN = 'A senha não é guardada em lugar nenhum e não pode ser recuperada: se for esquecida, o arquivo não abre. Use uma senha de pelo menos 8 caracteres.';
+  function protectedBackup() {
+    if (!T.cryptoOk()) { toast('Este navegador não oferece criptografia. Abra o site pelo endereço https publicado.'); return; }
+    askPassword('Backup protegido por senha', { confirm: true, text: PW_WARN, okLabel: 'Baixar backup protegido' }).then(function(pw) {
+      if (!pw) return;
+      T.downloadEncryptedBackup(pw).then(function() { toast('Backup protegido baixado. Guarde também a senha, em local seguro.'); renderExtras(); })
+        .catch(function(e) { toast('Não foi possível proteger o backup: ' + (e && e.message || e)); });
+    });
+  }
+
   function importFile(file) {
     if (!file) return;
     if (file.size > 5 * 1024 * 1024) { toast('Arquivo grande demais para ser um backup (máximo 5 MB).'); return; }
@@ -129,6 +169,20 @@
     fr.onload = function() {
       var obj;
       try { obj = JSON.parse(String(fr.result)); } catch (e) { toast('O arquivo não é um JSON válido.'); return; }
+      if (T.isEncryptedBackup(obj)) {
+        askPassword('Backup protegido por senha', { text: 'Informe a senha usada ao criar este backup.', okLabel: 'Abrir' }).then(function(pw) {
+          if (!pw) return;
+          T.decryptBackup(obj, pw).then(function(plain) { proceed(plain); }).catch(function(e) { toast(e && e.message ? e.message : 'Não foi possível abrir o backup.'); });
+        });
+        return;
+      }
+      proceed(obj);
+    };
+    fr.readAsText(file);
+  }
+
+  function proceed(obj) {
+    {
       var err = T.validateBackup(obj);
       if (err) { toast(err); return; }
       var body = 'Backup de <strong>' + esc((obj.exportedAt || '').slice(0, 10) || 'data desconhecida') + '</strong>: ' +
@@ -148,8 +202,7 @@
           (r.sessions.ignored ? ' (' + r.sessions.ignored + ' sessões inválidas ignoradas)' : '') + '.');
         refreshAll();
       });
-    };
-    fr.readAsText(file);
+    }
   }
 
   function mountBackup() {
@@ -159,6 +212,10 @@
     ui.bkBtn.className = 'db-btn'; ui.bkBtn.type = 'button'; ui.bkBtn.textContent = '⬇ Backup (JSON)';
     ui.bkBtn.title = 'Baixa um arquivo com todas as sessões, artigos concluídos e configurações';
     ui.bkBtn.addEventListener('click', function() { T.downloadBackup(); toast('Backup baixado. Guarde o arquivo em local seguro.'); renderExtras(); });
+    ui.pwBtn = document.createElement('button');
+    ui.pwBtn.className = 'db-btn'; ui.pwBtn.type = 'button'; ui.pwBtn.textContent = '🔒 Backup com senha';
+    ui.pwBtn.title = 'Baixa o backup criptografado (AES-GCM): sem a senha o arquivo não abre';
+    ui.pwBtn.addEventListener('click', protectedBackup);
     ui.rsBtn = document.createElement('button');
     ui.rsBtn.className = 'db-btn'; ui.rsBtn.type = 'button'; ui.rsBtn.textContent = '⬆ Restaurar backup';
     ui.file = document.createElement('input');
@@ -166,6 +223,7 @@
     ui.file.addEventListener('change', function() { importFile(ui.file.files[0]); ui.file.value = ''; });
     ui.rsBtn.addEventListener('click', function() { ui.file.click(); });
     actions.insertBefore(ui.rsBtn, actions.firstChild);
+    actions.insertBefore(ui.pwBtn, actions.firstChild);
     actions.insertBefore(ui.bkBtn, actions.firstChild);
     actions.appendChild(ui.file);
   }
@@ -180,7 +238,7 @@
       '<div class="vde-card" id="vde-goal"><h4>Meta diária</h4><div class="vde-txt"></div><div class="vde-bar"><i></i></div>' +
         '<div class="vde-row"><label>Meta (min/dia) <input type="number" min="0" max="1440" step="5" aria-label="Meta diária em minutos"></label><button type="button">Salvar meta</button></div></div>' +
       '<div class="vde-card" id="vde-bk"><h4>Backup dos estudos</h4><div class="vde-txt"></div>' +
-        '<div class="vde-row"><button type="button">Fazer backup agora</button></div></div>' +
+        '<div class="vde-row"><button type="button">Fazer backup agora</button> <button type="button" class="vde-pw">Backup com senha</button></div></div>' +
       '<div class="vde-card" id="vde-rev"><h4>Conferência a renovar</h4><div class="vde-txt"></div><ul></ul>' +
         '<div class="vde-row"><label>Prazo (dias) <input type="number" min="7" max="730" step="1" aria-label="Prazo em dias para renovar a conferência"></label><button type="button">Salvar prazo</button></div></div>';
     stats.parentNode.insertBefore(d, stats.nextSibling);
@@ -191,6 +249,7 @@
       renderExtras();
     });
     d.querySelector('#vde-bk button').addEventListener('click', function() { T.downloadBackup(); toast('Backup baixado.'); renderExtras(); });
+    d.querySelector('#vde-bk .vde-pw').addEventListener('click', protectedBackup);
     d.querySelector('#vde-rev button').addEventListener('click', function() {
       var v = Math.round(+d.querySelector('#vde-rev input').value || 0);
       if (v < 7) { toast('Use um prazo de pelo menos 7 dias.'); return; }
@@ -230,11 +289,20 @@
       if (fr.cls !== 'ok') list.push({ f: f, a: a, fr: fr });
     });
     list.sort(function(x, y) { return y.fr.days - x.fr.days; });
-    rv.classList.toggle('warn', list.length > 0);
+    var changed = [];                                                      // lei alterada no Planalto (verificação mensal)
+    Object.keys(manifest.articles).forEach(function(f) {
+      var c = VMData.changeOf(alteracoes, f);
+      if (c && manifest.articles[f].available) changed.push({ f: f, a: manifest.articles[f], c: c });
+    });
+    rv.classList.toggle('warn', list.length > 0 || changed.length > 0);
     rv.querySelector('.vde-txt').textContent = list.length
       ? list.length + (list.length === 1 ? ' artigo com conferência acima de ' : ' artigos com conferência acima de ') + st.reviewDays + ' dias ou sem data exata. Reconfira súmulas, teses e leis antes de usar em peça ou audiência.'
       : 'Todos os artigos publicados foram conferidos dentro do prazo de ' + st.reviewDays + ' dias.';
-    rv.querySelector('ul').innerHTML = list.slice(0, 40).map(function(x) {
+    if (changed.length) rv.querySelector('.vde-txt').textContent = changed.length + (changed.length === 1 ? ' artigo com a lei alterada no Planalto desde a última conferência (listado primeiro). ' : ' artigos com a lei alterada no Planalto desde a última conferência (listados primeiro). ') + rv.querySelector('.vde-txt').textContent;
+    var chHtml = changed.map(function(x) {
+      return '<li><a href="' + esc(openUrl(x.f)) + '">' + esc(x.a.label) + '</a><span>lei alterada (art. ' + esc(x.c.artigo) + ')</span></li>';
+    }).join('');
+    rv.querySelector('ul').innerHTML = chHtml + list.slice(0, 40).map(function(x) {
       var lbl = x.fr.days === Infinity ? 'sem data' : (x.a.checkedPrecision === 'dia' ? VMData.fmtAge(x.fr.days) : (x.a.checkedLabel || 'sem data exata'));
       return '<li><a href="' + esc(openUrl(x.f)) + '">' + esc(x.a.label) + '</a><span>' + esc(lbl) + '</span></li>';
     }).join('');
@@ -297,6 +365,29 @@
       } else {
         btn('Gravar agora', function() { VMAutoBackup.run('manual').then(function(r) { toast(r.ok ? 'Backup gravado na pasta.' : 'Não foi possível gravar na pasta.'); renderMore(); }); });
       }
+      if (s.encrypted) {
+        line('Arquivos da pasta protegidos por senha (AES-GCM). A senha não fica guardada: só uma chave derivada, que não pode ser extraída.');
+        btn('Remover a proteção', function() { VMAutoBackup.disableEncryption().then(function() { toast('Os próximos arquivos serão gravados sem senha.'); renderMore(); }); });
+      } else if (T.cryptoOk()) {
+        btn('Proteger com senha', function() {
+          askPassword('Proteger o backup da pasta', { confirm: true, text: PW_WARN, okLabel: 'Ativar proteção' }).then(function(pw) {
+            if (!pw) return;
+            VMAutoBackup.enableEncryption(pw).then(function(r) {
+              if (!r.ok) { toast('Não foi possível ativar a proteção.'); return; }
+              VMAutoBackup.run('protecao', { ask: true }).then(function() { toast('Proteção ativada: os próximos arquivos da pasta saem criptografados.'); renderMore(); });
+            });
+          });
+        });
+      }
+      btn('Importar da pasta (outros aparelhos)', function() {
+        VMAutoBackup.importOthers({ ask: true, askPassword: function(name) { return askPassword('Backup protegido de outro aparelho', { text: 'Arquivo ' + name + '. Informe a senha usada ao criar este backup.', okLabel: 'Abrir' }); } }).then(function(r) {
+          if (!r.ok) { toast(r.why === 'sem-permissao' ? 'O navegador não autorizou a leitura da pasta.' : 'Não foi possível ler a pasta.'); return; }
+          toast(r.files ? 'Somado de ' + r.files + (r.files === 1 ? ' arquivo' : ' arquivos') + ': ' + r.sessions + ' sessões, ' + r.completed + ' artigos, ' + r.cards + ' cartões, ' + r.notes + ' notas e ' + r.marks + ' marcadores novos.' + (r.skipped.length ? ' Não lidos: ' + r.skipped.join('; ') + '.' : '')
+            : (r.skipped.length ? 'Nenhum arquivo lido: ' + r.skipped.join('; ') + '.' : 'Nenhum arquivo de outro aparelho na pasta.'));
+          refreshAll();
+        });
+      });
+      line('Para sincronizar dois aparelhos sem servidor: escolha, nos dois, a mesma pasta de uma nuvem sincronizada (Google Drive, OneDrive...). Cada aparelho grava só o seu arquivo; "Importar da pasta" soma os dos outros. Este aparelho: ' + (s.device || '') + '.');
       btn('Desativar', function() { VMAutoBackup.disable().then(function() { toast('Backup automático desativado.'); renderMore(); }); });
     });
   }
@@ -363,6 +454,7 @@
     mountContinue(); mountBackup(); mountExtras(); mountNotes(); mountMore();
     renderExtras(); renderMore();
     VMData.manifest().then(function(m) { manifest = m; renderContinue(); renderExtras(); renderMore(); });
+    VMData.alteracoes().then(function(al) { alteracoes = al; renderExtras(); });
     VMData.training().then(function(t) { trainData = t; renderMore(); });
     VMData.queue().then(function(q) { queueData = q; renderMore(); });
     window.addEventListener('storage', function() { renderContinue(); renderExtras(); renderMore(); });

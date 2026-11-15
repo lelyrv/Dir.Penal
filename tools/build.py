@@ -374,7 +374,7 @@ def main():
             if (ROOT / u.split('?')[0]).exists():
                 refs.add(u)
     search_files = ['search-index-%s.json' % s['id'] for s in catalog['subjects']]
-    for extra in ['manifest.webmanifest'] + GENERATED_JSON + search_files + ['registry/patterns.json', 'data/laws/CP.json', 'data/laws/L9099.json']:
+    for extra in ['manifest.webmanifest'] + GENERATED_JSON + search_files + ['registry/patterns.json', 'data/laws/CP.json', 'data/laws/L9099.json', 'data/laws/CPP.json', 'data/alteracoes.json']:
         refs.add(extra)
     for p in sorted((ROOT / 'fonts').glob('*')) if (ROOT / 'fonts').exists() else []:
         refs.add('fonts/' + p.name)

@@ -21,6 +21,12 @@
   .tr-bar{height:8px;border-radius:99px;background:var(--border-light);overflow:hidden;margin:.4rem 0 1rem;}
   .tr-bar i{display:block;height:100%;width:0;background:var(--green);transition:width .25s;}
   .tr-state{display:inline-block;margin-left:.5rem;font-size:.62rem;padding:.1rem .45rem;border-radius:2px;border:1px solid var(--gold-light);color:var(--gold-light);}
+  .tr-table-wrap{overflow-x:auto;}
+  .tr-table{width:100%;border-collapse:collapse;font-size:.84rem;}
+  .tr-table th,.tr-table td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid var(--border-light);}
+  .tr-table th{font-size:.7rem;letter-spacing:.6px;text-transform:uppercase;color:var(--text-soft);}
+  .tr-table td:nth-child(n+2){white-space:nowrap;}
+  .tr-pct{display:inline-block;min-width:3.2em;font-weight:700;color:var(--navy);}
   kbd{font:600 .7rem "JetBrains Mono",monospace;border:1px solid var(--border);border-radius:3px;padding:0 .3rem;background:#fff;color:var(--text);}
 </style>
 <!-- VM-HEAD -->
@@ -69,6 +75,7 @@
         <select id="f-new"><option value="10">10</option><option value="20" selected>20</option><option value="50">50</option><option value="9999">Sem limite</option></select>
       </label>
       <button class="tp-btn" id="b-start" type="button">Começar</button>
+      <button class="tp-btn ghost" id="b-anki" type="button" title="Baixa os cartões do filtro atual em um arquivo de texto que o Anki importa">Exportar para Anki</button>
     </div>
     <div class="tr-stats" id="stats" aria-live="polite"></div>
   </div>
@@ -91,14 +98,20 @@
 
   <section id="end" class="tp-card" hidden></section>
 
+  <section id="perf" class="tp-card" aria-labelledby="h-perf" hidden>
+    <h2 id="h-perf" style="margin-top:0">Desempenho por artigo</h2>
+    <p class="tp-src">Só entram artigos em que você já respondeu algum cartão. "Acerto" é a proporção de respostas "Acertei" entre todas as respostas dadas (as marcadas "Difícil" ou "Errei" contam como não acertadas). Do menor para o maior, para mostrar o que treinar primeiro.</p>
+    <div class="tr-table-wrap"><table class="tr-table" id="perf-t"><thead><tr><th scope="col">Artigo</th><th scope="col">Cartões vistos</th><th scope="col">Respostas</th><th scope="col">Acerto</th><th scope="col">Para revisar hoje</th><th scope="col"></th></tr></thead><tbody></tbody></table></div>
+  </section>
+
   <p class="tp-note">As respostas são o resumo dos "pontos recorrentes" de cada página, com a base indicada em cada item. Antes de usar em peça ou audiência, confira o texto na fonte oficial. Seu progresso fica só neste navegador e entra no backup (Backup JSON, na home).</p>
 </main>
 <!-- VM-RUNTIME -->
-<script src="study-tracker.js?v=6f753c29"></script>
-<script src="vm-data.js?v=59406e91"></script>
-<script src="search.js?v=fc82f803"></script>
+<script src="study-tracker.js?v=f399bc97"></script>
+<script src="vm-data.js?v=0167acda"></script>
+<script src="search.js?v=850d6b8d"></script>
 <script src="pwa.js?v=64776eec"></script>
-<script src="treino.js?v=65cff042"></script>
+<script src="treino.js?v=819edcdf"></script>
 <!-- /VM-RUNTIME -->
 </body>
 </html>

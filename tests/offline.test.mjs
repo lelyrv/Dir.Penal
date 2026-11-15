@@ -21,7 +21,9 @@ await run(async ({ base, server, browser }) => {
   const keys = JSON.parse(await A.ev(`caches.keys().then(k=>JSON.stringify(k))`));
   T.check('O cache leva a versão do conteúdo (sw.js gerado pelo build)', keys.length === 1 && keys[0] === 'vm-' + version, `${keys} vs vm-${version}`);
   await A.go(url('index.html'), { wait: 600 });
-  T.check('A página passa a ser controlada pelo service worker', await A.ev(`!!navigator.serviceWorker.controller`) === true);
+  let controlled = false;
+  for (let i = 0; i < 25 && !controlled; i++) { controlled = await A.ev(`!!navigator.serviceWorker.controller`) === true; if (!controlled) await sleep(200); }
+  T.check('A página passa a ser controlada pelo service worker', controlled);
   const cached = JSON.parse(await A.ev(`(async()=>{const c=await caches.open(${JSON.stringify(keys[0])});const k=await c.keys();return JSON.stringify({n:k.length,pages:k.filter(r=>/-ART-\\d+\\.html$/.test(r.url)).length,woff:k.filter(r=>r.url.endsWith('.woff2')).length,chart:k.some(r=>r.url.includes('chart.umd')),icons:k.filter(r=>r.url.includes('icons/')).length})})()`));
   const man = JSON.parse(fs.readFileSync(ROOT + '/articles.json', 'utf8'));
   const nAv = Object.values(man.articles).filter((a) => a.available && a.kind === 'artigo').length;

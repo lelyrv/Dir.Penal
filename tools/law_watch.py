@@ -9,6 +9,8 @@ Uso:
                                                  acrescentados e revogados (e se há página do site para eles)
   python tools/law_watch.py --transcriptions    compara o texto legal que cada página transcreve com o retrato
   Opções: --law CP (uma lei só)  --report arquivo.md (grava o relatório)
+          --flags [data/alteracoes.json]  (com --check: grava os marcadores que o site mostra nos artigos cuja lei mudou;
+          se o Planalto estiver indisponível, os marcadores anteriores são mantidos; --update limpa os da lei atualizada)
 
 Códigos de saída de --check:  0 sem mudanças · 2 mudanças encontradas · 3 Planalto indisponível (NÃO é alarme de mudança).
 
@@ -116,7 +118,26 @@ def fetch_law(law):
     return arts, None
 
 
-def cmd_update(only):
+FLAGS_DEFAULT = 'data/alteracoes.json'
+
+
+def load_flags(path):
+    try:
+        d = json.loads((ROOT / path).read_text(encoding='utf-8'))
+        if isinstance(d, dict) and isinstance(d.get('leis'), dict):
+            return d
+    except (OSError, ValueError):
+        pass
+    return {'geradoEm': None, 'leis': {}}
+
+
+def save_flags(path, flags):
+    flags['geradoEm'] = datetime.date.today().isoformat()
+    (ROOT / path).parent.mkdir(parents=True, exist_ok=True)
+    (ROOT / path).write_text(json.dumps(flags, ensure_ascii=False, indent=1) + '\n', encoding='utf-8', newline='\n')
+
+
+def cmd_update(only, flags_path=None):
     LAWS_DIR.mkdir(parents=True, exist_ok=True)
     rc = 0
     for law in laws(only):
@@ -129,6 +150,10 @@ def cmd_update(only):
                 'total': len(arts), 'articles': {k: {'hash': h(v), 'text': norm_text_lines(v)} for k, v in arts.items()}}
         (LAWS_DIR / (law['id'] + '.json')).write_text(json.dumps(snap, ensure_ascii=False, indent=0) + '\n', encoding='utf-8', newline='\n')
         print('%s: retrato gravado com %d artigos' % (law['id'], len(arts)))
+        if flags_path and (ROOT / flags_path).exists():
+            fl = load_flags(flags_path)
+            fl['leis'][law['id']] = {'retratoDe': snap['lidoEm'], 'paginas': {}}
+            save_flags(flags_path, fl)
     return rc
 
 
@@ -136,8 +161,9 @@ def norm_text_lines(s):
     return '\n'.join(re.sub(r'\s+', ' ', x).strip() for x in s.split('\n') if x.strip())
 
 
-def cmd_check(only, report):
+def cmd_check(only, report, flags_path=None):
     lines, changed_any, unavailable = [], False, False
+    flags = load_flags(flags_path) if flags_path else None
     for law in laws(only):
         snap = load_snapshot(law['id'])
         if not snap:
@@ -160,6 +186,13 @@ def cmd_check(only, report):
         for num, old in snap['articles'].items():
             if num not in arts:
                 diffs.append(('ausente', num, old['text'], ''))
+        if flags is not None:
+            marks = {}
+            for kind, num, old, new in diffs:
+                page = pages.get(re.match(r'\d+', num).group())
+                if page and '-' not in num and kind != 'acrescentado':
+                    marks[page] = {'artigo': num, 'tipo': kind}
+            flags['leis'][law['id']] = {'retratoDe': snap['lidoEm'], 'paginas': marks}
         if not diffs:
             lines.append('- **%s**: sem mudanças (%d artigos conferidos; retrato de %s).' % (law['id'], len(arts), snap['lidoEm']))
             continue
@@ -178,6 +211,8 @@ def cmd_check(only, report):
                         break
     out = '\n'.join(lines)
     print(out)
+    if flags is not None:
+        save_flags(flags_path, flags)
     if report:
         head = '# Verificação das leis no Planalto (%s)\n\n' % datetime.date.today().isoformat()
         (ROOT / report).write_text(head + out + '\n', encoding='utf-8', newline='\n')
@@ -243,11 +278,12 @@ def main():
     g.add_argument('--transcriptions', action='store_true')
     ap.add_argument('--law')
     ap.add_argument('--report')
+    ap.add_argument('--flags', nargs='?', const=FLAGS_DEFAULT)
     a = ap.parse_args()
     if a.update:
-        sys.exit(cmd_update(a.law))
+        sys.exit(cmd_update(a.law, a.flags or FLAGS_DEFAULT))
     if a.check:
-        sys.exit(cmd_check(a.law, a.report))
+        sys.exit(cmd_check(a.law, a.report, a.flags))
     sys.exit(cmd_transcriptions(a.law, a.report))
 
 

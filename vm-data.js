@@ -63,6 +63,18 @@
     queue: function() { return load('queue.json'); },
     training: function() { return load('training.json'); },
     patterns: function() { return load('registry/patterns.json'); },
+    /** Marcadores de lei alterada (gravados por tools/law_watch.py --check --flags): { leis: { ID: { retratoDe, paginas: { arquivo: { artigo, tipo } } } } }. */
+    alteracoes: function() { return load('data/alteracoes.json'); },
+    /** Marcador de uma página, ou null: { artigo, tipo, retratoDe }. */
+    changeOf: function(al, file) {
+      var out = null;
+      if (!al || !al.leis) return null;
+      Object.keys(al.leis).forEach(function(id) {
+        var l = al.leis[id], p = l && l.paginas && l.paginas[file];
+        if (p) out = { artigo: p.artigo, tipo: p.tipo, retratoDe: l.retratoDe };
+      });
+      return out;
+    },
     currentFile: currentFile,
     /** Artigos disponíveis de uma matéria, na ordem do catálogo. */
     availableOf: function(m, subjectId) {

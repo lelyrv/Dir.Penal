@@ -5,6 +5,9 @@ name: Verificação mensal (fontes e leis)
 #  2. texto das leis no Planalto: artigos alterados, acrescentados ou revogados desde o último retrato, e se há página no site;
 #  3. transcrições: o texto legal que cada página reproduz ainda confere com o oficial.
 # Abre (ou atualiza) UMA issue por mês, só se houver link quebrado ou lei alterada.
+# Também grava data/alteracoes.json (único arquivo que este fluxo altera no repositório): é ele que faz o site mostrar,
+# em cada artigo cuja lei mudou, o aviso "Lei alterada". Depois de reconferir o artigo, rode `python tools/law_watch.py --update`
+# e faça commit: o retrato novo limpa o marcador. Planalto fora do ar NÃO apaga nem cria marcador.
 # Planalto ou tribunal fora do ar NÃO abre issue: aparece como aviso no resumo da execução.
 on:
   schedule:
@@ -12,7 +15,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write      # só para gravar data/alteracoes.json (marcadores de lei alterada)
   issues: write
 
 jobs:
@@ -20,9 +23,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: '3.12'
 
@@ -37,8 +40,23 @@ jobs:
         id: leis
         run: |
           set +e
-          python tools/law_watch.py --check --report "$RUNNER_TEMP/leis.md"
+          python tools/law_watch.py --check --flags data/alteracoes.json --report "$RUNNER_TEMP/leis.md"
           echo "rc=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Gravar os marcadores de lei alterada (só data/alteracoes.json)
+        if: always()
+        run: |
+          set +e
+          if ! git diff --quiet -- data/alteracoes.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/alteracoes.json
+            git commit -m "Marcadores de lei alterada (verificação mensal)"
+            git push
+          else
+            echo "Sem mudança nos marcadores."
+          fi
+          exit 0
 
       - name: Transcrições nas páginas
         run: |
@@ -62,7 +80,7 @@ jobs:
 
       - name: Abrir ou atualizar a issue do mês
         if: steps.links.outputs.rc == '2' || steps.leis.outputs.rc == '2'
-        uses: actions/github-script@v7
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
         env:
           LINKS_RC: ${{ steps.links.outputs.rc }}
           LEIS_RC: ${{ steps.leis.outputs.rc }}
@@ -96,7 +114,7 @@ jobs:
 
       - name: Guardar os relatórios
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: relatorios-${{ github.run_id }}
           path: |

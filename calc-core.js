@@ -170,7 +170,115 @@
       ' A lei não trata do concurso de crimes nem das causas de aumento: confira a jurisprudência.' };
   }
 
+  // ───────── prazos processuais (Lei 9.099 arts. 78, 82, 83; CPP art. 798) ─────────
+  var DIAS = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
+  function addDays(isoStr, n) { return iso(new Date(parseDate(isoStr).getTime() + n * 86400000)); }
+  function dow(isoStr) { return parseDate(isoStr).getUTCDay(); }              // 0 = domingo
+  function diaSemana(isoStr) { return DIAS[dow(isoStr)]; }
+  /**
+   * Fim de um prazo em dias a partir de `inicio` (data da intimação/ciência).
+   * o: { inicio, dias, modo: 'corridos' | 'uteis', feriados: [AAAA-MM-DD] }
+   *  - corridos (CPP, art. 798, caput e §§ 1º e 3º, aplicável pelo art. 92 da Lei 9.099): não conta o dia do começo, inclui o do
+   *    vencimento; termina em domingo ou feriado → prorroga ao dia útil imediato (o texto só cita domingo e feriado).
+   *  - uteis (Lei 9.099, art. 12-A): só segunda a sexta, fora dos feriados informados. A ferramenta NÃO decide se o art. 12-A
+   *    alcança o procedimento criminal: avisa.
+   * Feriados e suspensões de prazo por ato do tribunal só entram se informados.
+   */
+  function prazoProcessual(o) {
+    var dias = Math.floor(+o.dias);
+    if (!(dias >= 1 && dias <= 365)) throw new Error('Informe um prazo de 1 a 365 dias.');
+    parseDate(o.inicio);
+    var fer = (o.feriados || []).map(function(f) { parseDate(f); return f; });
+    var isFer = function(x) { return fer.indexOf(x) >= 0; };
+    var passos = [], avisos = [], fim;
+    if (o.modo === 'uteis') {
+      var cur = o.inicio, n = 0;
+      while (n < dias) { cur = addDays(cur, 1); var w = dow(cur); if (w !== 0 && w !== 6 && !isFer(cur)) n++; }
+      fim = cur;
+      passos.push('Dias úteis (Lei 9.099, art. 12-A): não se conta o dia do começo (' + br(o.inicio) + '); contam-se só segundas a sextas que não sejam feriado informado. ' +
+        dias + ' dias úteis terminam em ' + br(fim) + ' (' + diaSemana(fim) + ').');
+      avisos.push('O art. 12-A consta do texto compilado da Lei 9.099 (incluído pela Lei 13.728/2018), mas esta ferramenta não decide se ele alcança o procedimento do Juizado Criminal. Confira a jurisprudência e a norma local antes de usar a contagem em dias úteis.');
+    } else {
+      fim = addDays(o.inicio, dias);
+      passos.push('Dias corridos (CPP, art. 798, caput e § 1º; aplicável subsidiariamente pelo art. 92 da Lei 9.099): não se computa o dia do começo (' + br(o.inicio) +
+        ') e inclui-se o do vencimento. ' + dias + ' dias terminam em ' + br(fim) + ' (' + diaSemana(fim) + ').');
+      while (dow(fim) === 0 || isFer(fim)) {
+        passos.push(br(fim) + ' é ' + (dow(fim) === 0 ? 'domingo' : 'feriado informado') + ': o prazo se considera prorrogado até o dia útil imediato (CPP, art. 798, § 3º).');
+        fim = addDays(fim, 1);
+      }
+      if (dow(fim) === 6) avisos.push('O prazo termina em sábado. O art. 798, § 3º, do CPP só prorroga o prazo que termina em domingo ou feriado: confira se o expediente forense foi normal nesse dia.');
+    }
+    avisos.push('O termo inicial é o da intimação ou da ciência (CPP, art. 798, § 5º: da intimação; da audiência ou sessão em que a decisão for proferida, se a parte estiver presente; ou da ciência inequívoca nos autos). Confira qual se aplica ao caso. Feriados locais, recesso e suspensões de prazo por ato do tribunal só entram se informados.');
+    return { fim: fim, diaSemana: diaSemana(fim), passos: passos, avisos: avisos };
+  }
+  /** Data limite de um ato que deve ocorrer "no mínimo N dias antes" de `data` (Lei 9.099, art. 78, § 1º: testemunhas). */
+  function antesDe(data, dias) {
+    var d = Math.floor(+dias);
+    if (!(d >= 1 && d <= 365)) throw new Error('Informe um prazo de 1 a 365 dias.');
+    var lim = addDays(data, -d);
+    return { limite: lim, diaSemana: diaSemana(lim) };
+  }
+
+  // ───────── decadência do direito de queixa ou de representação (CP, art. 103; CPP, art. 38 e § 2º) ─────────
+  /** o: { ciencia (dia em que soube quem é o autor), violenciaDomestica } → { meses, fim, ajustado, passos[], avisos[] } */
+  function decadencia(o) {
+    var meses = o.violenciaDomestica ? 12 : 6;
+    var u = ultimoDia(o.ciencia, meses);
+    var passos = [o.violenciaDomestica
+      ? 'CPP, art. 38, § 2º (violência doméstica e familiar contra a mulher): 12 meses, contados do dia em que a ofendida soube quem é o autor do crime.'
+      : 'CP, art. 103 e CPP, art. 38, caput: 6 meses, contados do dia em que o ofendido soube quem é o autor do crime.',
+      'Contagem pelo calendário comum, incluindo o dia do começo (CP, art. 10): de ' + br(o.ciencia) + ' até ' + br(u.data) + ' (' + diaSemana(u.data) + ').'];
+    var avisos = ['O prazo da lei é de ' + meses + ' meses; as exceções ("salvo disposição em contrário") e o termo inicial em cada caso (por exemplo, o art. 29 do CPP) não são calculados aqui.'];
+    if (o.violenciaDomestica) avisos.push('O § 2º do art. 38 foi incluído pela Lei 15.438/2026 (texto compilado do Planalto): verifique a vigência e a aplicação no tempo ao fato e à data de ciência do seu caso.');
+    if (u.ajustado) avisos.push('O dia da ciência não existe no mês final: o "aniversário" recuou para o último dia do mês. Confira manualmente o último dia do prazo.');
+    return { meses: meses, fim: u.data, ajustado: u.ajustado, passos: passos, avisos: avisos };
+  }
+
+  // ───────── transação penal: checklist do art. 76 da Lei 9.099 ─────────
+  /**
+   * o: { acao: 'incondicionada' | 'representada' | 'sem-representacao' | 'privada',
+   *      arquivamento: bool (é caso de arquivamento?), condenadoPpl: bool (art. 76, § 2º, I),
+   *      beneficioAnterior: 'nao' | 'sim' | 'nao-sei', dataBeneficio: AAAA-MM-DD ('' se não souber), ref: AAAA-MM-DD,
+   *      circunstancias: 'suficiente' | 'insuficiente' | 'avaliar' (§ 2º, III), menorPotencial: bool }
+   * → { itens: [{ ref, ok: 'ok'|'impede'|'verificar', texto }], conclusao: 'impede'|'verificar'|'ok', notas[] }
+   */
+  function transacao(o) {
+    var itens = [], add = function(ref, ok, texto) { itens.push({ ref: ref, ok: ok, texto: texto }); };
+    if (o.menorPotencial) add('Art. 61', 'ok', 'Infração de menor potencial ofensivo (a proposta é prevista no procedimento do Juizado Criminal).');
+    else add('Art. 61', 'verificar', 'Infração fora do conceito do art. 61: a transação do art. 76 é instituto do Juizado Criminal; confira se a lei ou a jurisprudência a admite no caso. Veja também as exclusões do art. 61.');
+    if (o.acao === 'incondicionada') add('Art. 76, caput', 'ok', 'Crime de ação penal pública incondicionada.');
+    else if (o.acao === 'representada') add('Art. 76, caput', 'ok', 'Ação penal pública condicionada, com representação.');
+    else if (o.acao === 'sem-representacao') add('Art. 76, caput', 'impede', 'Ação penal pública condicionada sem representação: o caput exige "representação" ou crime de ação penal pública incondicionada.');
+    else add('Art. 76, caput', 'verificar', 'O caput trata de ação penal pública. Para ação penal privada o texto da lei é omisso: confira a jurisprudência.');
+    if (o.arquivamento) add('Art. 76, caput', 'impede', 'É caso de arquivamento: o caput só admite a proposta "não sendo caso de arquivamento".');
+    else add('Art. 76, caput', 'ok', 'Não é caso de arquivamento.');
+    if (o.condenadoPpl) add('Art. 76, § 2º, I', 'impede', 'Autor condenado, por crime, a pena privativa de liberdade, por sentença definitiva: não se admite a proposta.');
+    else add('Art. 76, § 2º, I', 'ok', 'Sem condenação definitiva a pena privativa de liberdade por crime.');
+    if (o.beneficioAnterior === 'sim') {
+      if (o.dataBeneficio) {
+        var f = ultimoDia(o.dataBeneficio, 60);
+        var dentro = o.ref <= f.data;
+        add('Art. 76, § 2º, II', dentro ? 'impede' : 'ok', dentro
+          ? 'Benefício anterior em ' + br(o.dataBeneficio) + ': cinco anos contados dessa data terminam em ' + br(f.data) + ', e a data de referência (' + br(o.ref) + ') está dentro do prazo. A lei não fixa o marco inicial dos cinco anos (aceitação, homologação ou sentença): confira.'
+          : 'Benefício anterior em ' + br(o.dataBeneficio) + ': cinco anos contados dessa data terminaram em ' + br(f.data) + ', antes da data de referência. A lei não fixa o marco inicial: confira.');
+      } else add('Art. 76, § 2º, II', 'verificar', 'Há benefício anterior: informe a data para conferir o prazo de cinco anos.');
+    } else if (o.beneficioAnterior === 'nao') add('Art. 76, § 2º, II', 'ok', 'Sem benefício anterior pela transação penal (confira a certidão de benefícios no Juizado, art. 76, § 4º, parte final).');
+    else add('Art. 76, § 2º, II', 'verificar', 'Não se sabe se houve benefício anterior nos últimos cinco anos: consulte o registro de transações (art. 76, § 4º).');
+    if (o.circunstancias === 'suficiente') add('Art. 76, § 2º, III', 'ok', 'Antecedentes, conduta social, personalidade, motivos e circunstâncias indicam ser necessária e suficiente a medida.');
+    else if (o.circunstancias === 'insuficiente') add('Art. 76, § 2º, III', 'impede', 'Os antecedentes, a conduta social, a personalidade, os motivos e as circunstâncias não indicam ser necessária e suficiente a medida: não se admite a proposta.');
+    else add('Art. 76, § 2º, III', 'verificar', 'Avaliação do caso concreto (antecedentes, conduta social, personalidade, motivos e circunstâncias): é do Ministério Público e do juiz, não da calculadora.');
+    var conclusao = itens.some(function(i) { return i.ok === 'impede'; }) ? 'impede' : itens.some(function(i) { return i.ok === 'verificar'; }) ? 'verificar' : 'ok';
+    var notas = [
+      'Art. 76, § 1º: se a multa for a única pena aplicável, o juiz pode reduzi-la até a metade.',
+      'Art. 76, § 3º: aceita a proposta pelo autor da infração e seu defensor, é submetida ao juiz.',
+      'Art. 76, § 4º: a sanção não importa em reincidência e é registrada apenas para impedir novo benefício no prazo de cinco anos.',
+      'Art. 76, § 5º: da sentença cabe a apelação do art. 82 (dez dias, contados da ciência; use a calculadora de prazos).',
+      'Art. 76, § 6º: a sanção não consta de certidão de antecedentes criminais (salvo para o fim do § 4º) e não tem efeitos civis.'];
+    return { itens: itens, conclusao: conclusao, notas: notas };
+  }
+
   return { toDays: toDays, fmtPena: fmtPena, fmtMonths: fmtMonths, prazo109: prazo109, prazoPrescricao: prazoPrescricao,
            parseDate: parseDate, ultimoDia: ultimoDia, conferirIntervalos: conferirIntervalos, scpp: scpp,
-           periodoProva: periodoProva, sursis: sursis, menorPotencial: menorPotencial, br: br };
+           periodoProva: periodoProva, sursis: sursis, menorPotencial: menorPotencial, br: br,
+           addDays: addDays, diaSemana: diaSemana, prazoProcessual: prazoProcessual, antesDe: antesDe, decadencia: decadencia, transacao: transacao };
 });

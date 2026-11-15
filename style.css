@@ -242,7 +242,7 @@ body.sidebar-closed .menu-toggle {
 .menu-artigos a:hover,
 .menu-artigos a.active {
     background: rgba(184, 146, 42, 0.18);
-    color: var(--gold);
+    color: #f0c860;
     padding-left: 16px;
 }
 

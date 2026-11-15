@@ -421,6 +421,77 @@
     _set(BACKUP_KEY, String(_now()));
   }
 
+  // ─── Backup protegido por senha ───────────────────────────────────────────────
+  // AES-GCM de 256 bits; a chave sai da senha por PBKDF2-SHA256 (600.000 iterações, sal aleatório de 16 bytes); IV novo de 12 bytes
+  // a cada arquivo. A senha NÃO é guardada em lugar nenhum e não há como recuperá-la: sem a senha, o arquivo não abre.
+  // O arquivo criptografado mostra só "app", "schema", "encrypted", "exportedAt" e os parâmetros da criptografia.
+  const ENC = { iter: 600000, minIter: 100000, maxIter: 2000000, maxBytes: 20 * 1024 * 1024 };
+  const _te = new TextEncoder(), _td = new TextDecoder();
+  function _b64(buf) { let s = ''; const b = new Uint8Array(buf); for (let i = 0; i < b.length; i += 0x8000) s += String.fromCharCode.apply(null, b.subarray(i, i + 0x8000)); return btoa(s); }
+  function _unb64(s) { const t = atob(String(s)); const b = new Uint8Array(t.length); for (let i = 0; i < t.length; i++) b[i] = t.charCodeAt(i); return b; }
+  function cryptoOk() { return !!(window.crypto && crypto.subtle && typeof crypto.getRandomValues === 'function'); }
+  function isEncryptedBackup(o) { return !!o && typeof o === 'object' && o.app === 'vade-mecum' && o.encrypted === true && typeof o.data === 'string'; }
+  function _aad(schema) { return _te.encode('vade-mecum:' + schema); }
+
+  /** Deriva a chave AES de uma senha. extractable=false: a chave pode ser guardada no navegador sem expor a senha. */
+  async function deriveBackupKey(password, saltBytes, iterations, extractable) {
+    if (!cryptoOk()) throw new Error('Este navegador não oferece criptografia (use o site pelo endereço https publicado).');
+    const base = await crypto.subtle.importKey('raw', _te.encode(String(password)), 'PBKDF2', false, ['deriveKey']);
+    return crypto.subtle.deriveKey({ name: 'PBKDF2', salt: saltBytes, iterations: iterations || ENC.iter, hash: 'SHA-256' }, base,
+      { name: 'AES-GCM', length: 256 }, !!extractable, ['encrypt', 'decrypt']);
+  }
+  /** Criptografa um objeto de backup com uma chave já derivada (sal e iterações vão no arquivo, para a senha reabrir depois). */
+  async function encryptBackupWithKey(obj, key, saltBytes, iterations) {
+    const iv = crypto.getRandomValues(new Uint8Array(12));
+    const ct = await crypto.subtle.encrypt({ name: 'AES-GCM', iv: iv, additionalData: _aad(BACKUP_SCHEMA) }, key, _te.encode(JSON.stringify(obj)));
+    return { app: 'vade-mecum', schema: BACKUP_SCHEMA, encrypted: true, cipher: 'AES-GCM-256', kdf: 'PBKDF2-SHA256', iterations: iterations || ENC.iter,
+      salt: _b64(saltBytes), iv: _b64(iv), data: _b64(ct), exportedAt: new Date().toISOString() };
+  }
+  async function encryptBackup(obj, password) {
+    if (typeof password !== 'string' || password.length < 8) throw new Error('Use uma senha de pelo menos 8 caracteres.');
+    const salt = crypto.getRandomValues(new Uint8Array(16));
+    const key = await deriveBackupKey(password, salt, ENC.iter, false);
+    return encryptBackupWithKey(obj, key, salt, ENC.iter);
+  }
+  function _checkContainer(c) {
+    if (!isEncryptedBackup(c)) throw new Error('O arquivo não é um backup protegido por senha.');
+    if (c.schema !== BACKUP_SCHEMA) throw new Error('Versão de backup não suportada (' + c.schema + ').');
+    if (c.cipher !== 'AES-GCM-256' || c.kdf !== 'PBKDF2-SHA256') throw new Error('Criptografia não suportada neste arquivo.');
+    if (!_isNum(c.iterations) || c.iterations < ENC.minIter || c.iterations > ENC.maxIter) throw new Error('Parâmetros de criptografia inválidos.');
+    if (typeof c.salt !== 'string' || typeof c.iv !== 'string' || c.data.length > ENC.maxBytes * 1.4) throw new Error('Arquivo criptografado inválido.');
+    const salt = _unb64(c.salt), iv = _unb64(c.iv);
+    if (salt.length !== 16 || iv.length !== 12) throw new Error('Arquivo criptografado inválido.');
+    return { salt: salt, iv: iv, data: _unb64(c.data) };
+  }
+  async function _open(c, key, parts) {
+    let plain;
+    try { plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: parts.iv, additionalData: _aad(c.schema) }, key, parts.data); }
+    catch (e) { throw new Error('Senha incorreta ou arquivo alterado.'); }
+    let o;
+    try { o = JSON.parse(_td.decode(plain)); } catch (e) { throw new Error('Conteúdo do backup ilegível.'); }
+    return o;
+  }
+  async function decryptBackup(container, password) {
+    const parts = _checkContainer(container);
+    const key = await deriveBackupKey(password, parts.salt, container.iterations, false);
+    return _open(container, key, parts);
+  }
+  async function decryptBackupWithKey(container, key) { return _open(container, key, _checkContainer(container)); }
+  /** Sal do arquivo (para saber se uma chave guardada serve para ele). */
+  function backupSalt(container) { try { return container && typeof container.salt === 'string' ? container.salt : null; } catch (e) { return null; } }
+
+  async function downloadEncryptedBackup(password) {
+    const c = await encryptBackup(buildBackup(), password);
+    const blob = new Blob([JSON.stringify(c, null, 1)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = 'vademecum-backup-' + _dateStr(_now()) + '-protegido.json';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function() { URL.revokeObjectURL(url); }, 1000);
+    _set(BACKUP_KEY, String(_now()));
+    return true;
+  }
+
   function getLastBackupTs() { const v = +_get(BACKUP_KEY); return v > 0 ? v : null; }
   function markBackup() { _set(BACKUP_KEY, String(_now())); }          // usado pelo backup automático em pasta
 
@@ -453,6 +524,7 @@
     if (!o || typeof o !== 'object' || Array.isArray(o)) return 'O arquivo não é um backup do Vade Mecum.';
     if (o.app !== 'vade-mecum') return 'O arquivo não é um backup do Vade Mecum (campo "app" ausente).';
     if (o.schema !== BACKUP_SCHEMA) return 'Versão de backup não suportada (' + o.schema + ').';
+    if (o.encrypted === true) return 'Este backup está protegido por senha: informe a senha para abri-lo.';
     if (!Array.isArray(o.sessions) || typeof o.completed !== 'object' || o.completed === null || Array.isArray(o.completed)) return 'Backup incompleto ou corrompido.';
     if (o.sessions.length > 50000) return 'Backup grande demais.';
     return null;
@@ -835,6 +907,7 @@
         noteEl.innerHTML = '<label for="vm-note-t" id="vm-note-l" style="display:block;margin-bottom:.35rem"></label>' +
           '<textarea id="vm-note-t" maxlength="500" rows="3" placeholder="Ex.: rever a tese da Súmula 523; dúvida sobre prazo" ' +
           'style="width:100%;box-sizing:border-box;font:400 .8rem/1.4 Georgia,serif;padding:.4rem;border:1px solid #c8960c;border-radius:3px;background:#fff;color:#1a1208;resize:vertical"></textarea>' +
+          '<div id="vm-note-w" style="font:400 .68rem/1.35 Georgia,serif;color:#d9c89a;margin-top:.3rem">Não registre dados que identifiquem clientes (nome, CPF, número de processo). A nota fica neste navegador e entra no backup.</div>' +
           '<div style="display:flex;gap:.4rem;justify-content:flex-end;margin-top:.45rem">' +
           '<button type="button" data-a="skip" style="font-weight:700;font-size:.72rem;font-family:inherit;background:none;color:#e8b84b;border:1px solid rgba(232,184,75,.6);border-radius:3px;padding:.3rem .65rem;cursor:pointer">Pular</button>' +
           '<button type="button" data-a="save" style="font-weight:700;font-size:.72rem;font-family:inherit;background:#c8960c;color:#0d1b2a;border:1px solid #c8960c;border-radius:3px;padding:.3rem .65rem;cursor:pointer">Salvar nota</button></div>';
@@ -994,6 +1067,8 @@
     getSettings, saveSettings, getLastRead, setLastRead, setSessionNote, activeStudyMs, studyMsToday,
     getCards, rateCard, cardState, dueCount, getNotes, setNote, getMarks, toggleMark,
     buildBackup, downloadBackup, validateBackup, importBackup, getLastBackupTs, markBackup,
+    isEncryptedBackup, encryptBackup, decryptBackup, deriveBackupKey, encryptBackupWithKey, decryptBackupWithKey, backupSalt, downloadEncryptedBackup,
+    cryptoOk: cryptoOk, BACKUP_ENC: ENC,
     mountBar
   };
 

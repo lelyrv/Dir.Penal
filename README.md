@@ -21,6 +21,7 @@ Publicado pelo GitHub Pages. Funciona offline depois da primeira visita (veja "M
 | `citations.json`, `training.json`, `queue.json` | **Gerados**: súmulas/teses citadas e onde aparecem, cartões de treino, fila de prioridades. |
 | `registry/` | Registros editáveis: `precedentes.json` (súmulas/teses; só texto lido de página oficial), `leis.json`, `prioridades.json`, `patterns.json`. |
 | `data/laws/` | Retratos do texto das leis (Planalto), base do detector de mudanças, do roteiro e das calculadoras. |
+| `data/alteracoes.json` | Marcadores de "lei alterada" gravados pela verificação mensal (`law_watch.py --check --flags`); o site os mostra nos artigos. |
 | `treino.html`, `sumulas.html`, `calculadoras.html`, `L9099-ROTEIRO.html` | Treino com revisão espaçada, registro de súmulas, calculadoras de prazo, roteiro geral do procedimento. |
 | `tools/` | `build.py` (gerador e verificações), `lint.py` (padrão dos artigos), `new_article.py`, `check_sources.py`, `law_watch.py`, `registry_sync.py`, `gen_roteiro.py`, `test_tools.py`. |
 | `tests/` | Testes automáticos (veja abaixo). |
@@ -41,10 +42,15 @@ Sem a ferramenta, o caminho manual é copiar o último artigo da matéria e acre
 
 ## Rotinas automáticas (GitHub Actions)
 
-`.github/workflows/monthly.yml` roda todo mês e abre um relatório (sem mexer no conteúdo):
+`.github/workflows/monthly.yml` roda todo mês, abre (ou atualiza) **uma Issue** com o relatório, para o aviso chegar por e-mail, e não
+mexe no conteúdo das páginas:
 - `python tools/check_sources.py` — verifica os links das seções "Fontes" (distingue erro real de bloqueio do site).
-- `python tools/law_watch.py --check` — compara o texto atual do Planalto com os retratos de `data/laws/`; se o Planalto
-  estiver indisponível, relata "indisponível" em vez de alarme falso. Para aceitar uma mudança já analisada: `--update`.
+- `python tools/law_watch.py --check --flags data/alteracoes.json` — compara o texto atual do Planalto com os retratos de
+  `data/laws/` (Código Penal, Código Civil, CLT, CPP e Lei 9.099); se o Planalto estiver indisponível, relata "indisponível"
+  em vez de alarme falso e mantém os marcadores anteriores. O arquivo `data/alteracoes.json` é o único que a rotina grava no
+  repositório (commit automático): é ele que faz o site mostrar o aviso **"Lei alterada"** no topo do artigo e na caixa
+  "Conferência a renovar" da home. Depois de reconferir, rode `python tools/law_watch.py --update` e faça commit: o retrato
+  novo limpa o marcador.
 - `python tools/registry_sync.py` — relê os enunciados do STF cadastrados em `registry/precedentes.json`. STJ e TST não são
   verificáveis automaticamente; ficam como "não verificado" e o site mostra "Enunciado não cadastrado".
 
@@ -70,18 +76,34 @@ As referências de captura de tela ficam em `tests/baseline/<sistema>/` (Windows
 diferente): na primeira execução em um sistema novo elas são criadas e o teste passa avisando. Testes que dependem de
 aparelhos reais estão em `docs/TESTES-MANUAIS.md`.
 
-O GitHub roda isso a cada push (`.github/workflows/tests.yml`).
+O GitHub roda isso a cada push (`.github/workflows/tests.yml`). **Primeira execução no GitHub (Linux):** o teste visual cria as
+referências e passa sem comparar. Baixe o arquivo `referencias-visuais-linux` (aba da execução > Artifacts), copie as imagens para
+`tests/baseline/linux/` e faça commit: a partir daí a comparação visual vale também lá.
+
+As Actions estão fixadas por SHA (com o número da versão em comentário) e o Dependabot (`.github/dependabot.yml`) abre um pull
+request mensal quando sai versão nova: o CI não muda sozinho por mudança externa.
 
 ## Recursos
 
 - **Ferramentas** (menu na barra de estudo, nada flutua sobre o texto): buscar, modo audiência, tamanho da letra,
-  tema claro/escuro (experimental), imprimir/PDF, voltar ao topo.
+  tema claro/escuro, imprimir/PDF, **ficha de audiência (A4)**, voltar ao topo.
+- **Ficha de audiência (A4)**: monta, só com trechos copiados da própria página, o texto legal literal e as perguntas-chave
+  (**compacta**: 1 página nos arts. 60 e 62 a 65 da Lei 9.099, 2 páginas no art. 61) ou também os requisitos e os prazos
+  (**completa**: 2 a 3 páginas). As seções entram pela marca `data-ficha="requisitos"` ou `data-ficha="prazos"` no `<section>`
+  (o `tools/new_article.py` já as põe nos artigos novos).
 - **Busca**: `Ctrl+K` (ou `/`) em qualquer página; texto integral, ignora acentos e maiúsculas; carrega só a matéria aberta.
-- **Treino** (`treino.html`): cartões a partir dos pontos recorrentes, com revisão espaçada (1, 3, 7, 21 e 60 dias).
-- **Notas e marcas por seção** (botões "Marcar" e "Nota" no título de cada seção); entram no backup.
+  O resultado abre já na seção e o termo buscado fica destacado (Esc ou clique no destaque remove).
+- **Treino** (`treino.html`): cartões a partir dos pontos recorrentes, com revisão espaçada (1, 3, 7, 21 e 60 dias), filtro por
+  matéria e por artigo, tabela de **desempenho por artigo** (do menor acerto para o maior) e **exportação para o Anki**
+  (arquivo de texto com tabulação; Anki > Arquivo > Importar).
+- **Notas e marcas por seção** (botões "Marcar" e "Nota" no título de cada seção); entram no backup. O campo de nota avisa:
+  não registre dados que identifiquem clientes (as notas ficam no navegador e vão para o arquivo de backup).
 - **Súmulas e teses** (`sumulas.html`): onde cada uma aparece no site; o texto só aparece quando foi lido de fonte oficial.
-- **Calculadoras** (`calculadoras.html`): prescrição e suspensão condicional do processo, com a fonte legal à vista.
-  São apoio ao cálculo: confira a contagem no caso concreto.
+- **Calculadoras** (`calculadoras.html`): prescrição, suspensão condicional do processo e da pena, infração de menor potencial
+  ofensivo, **requisitos da transação penal (art. 76)**, **prazos do procedimento** (apelação, resposta, embargos e testemunhas,
+  Lei 9.099 arts. 78, 82 e 83, contados pelo CPP art. 798 ou, se escolher, em dias úteis pelo art. 12-A) e **decadência**
+  (CP art. 103; CPP art. 38 e § 2º). Cada uma mostra o texto oficial do Planalto. São apoio ao cálculo: confira no caso concreto;
+  o que depende de avaliação aparece como "a verificar" e a ferramenta não decide se o art. 12-A alcança o Juizado Criminal.
 - **Roteiro geral** (`L9099-ROTEIRO.html`): arts. 60 a 76 e 92 da Lei 9.099 em sequência, com o texto do Planalto.
 - **Anterior / próximo** e **continuar de onde parou** (a posição de leitura fica neste aparelho).
 - **Modo audiência**: mostra só os "pontos recorrentes" do artigo. Botões **Copiar** (com a fonte) e **PDF** por seção
@@ -101,7 +123,20 @@ a busca nem o manifesto.
 
 Sessões, artigos concluídos, metas e a última leitura ficam **no navegador** (`localStorage`), por aparelho. Limpar o cache ou
 trocar de aparelho apaga tudo. No Chrome/Edge (desktop) dá para escolher uma pasta para **backup automático**; nos demais
-navegadores o painel mostra um lembrete semanal. Use **Backup (JSON)** no painel da home e **Restaurar backup** no outro aparelho
+navegadores o painel mostra um lembrete semanal.
+
+**Backup com senha.** "Backup com senha" (painel da home) baixa o arquivo criptografado (AES-GCM de 256 bits; chave derivada da
+senha por PBKDF2-SHA256 com 600.000 iterações). A senha não é guardada em lugar nenhum e **não há como recuperá-la**: sem ela o
+arquivo não abre. Na pasta do backup automático, "Proteger com senha" grava todos os arquivos criptografados; o navegador guarda
+só uma chave derivada **não extraível** (nunca a senha), apagada ao desativar o backup automático. Ao restaurar um arquivo
+protegido, a tela pede a senha.
+
+**Sincronizar dois aparelhos sem servidor.** Escolha, nos dois, a mesma pasta de uma nuvem sincronizada (Google Drive, OneDrive...).
+Cada aparelho grava só o seu arquivo (`vademecum-backup-latest-<etiqueta>.json`); "Importar da pasta (outros aparelhos)" soma ao
+navegador os arquivos dos outros (a soma não duplica nem apaga nada). É manual de propósito: não há sincronização em segundo plano.
+Funciona onde há a API de pastas (Chrome/Edge no computador).
+
+Use **Backup (JSON)** no painel da home e **Restaurar backup** no outro aparelho
 (*Somar* junta aos dados existentes; *Substituir* troca tudo). Não há sincronização automática: seria preciso um servidor.
 
 ## Privacidade

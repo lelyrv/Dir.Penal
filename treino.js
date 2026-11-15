@@ -36,6 +36,56 @@
     });
   }
 
+  /** Desempenho por artigo: só artigos com ao menos uma resposta; do menor acerto para o maior. */
+  function paintPerf() {
+    var cards = T.getCards(), by = {};
+    all.forEach(function(c) {
+      var st = cards[c.id], o = by[c.file] || (by[c.file] = { file: c.file, total: 0, vistos: 0, resp: 0, ok: 0, venc: 0 });
+      o.total++;
+      if (st) { o.vistos++; o.resp += st.seen || 0; o.ok += st.ok || 0; }
+      if (st && T.cardState(st) === 'vencido') o.venc++;
+    });
+    var rows = Object.keys(by).map(function(k) { return by[k]; }).filter(function(o) { return o.resp > 0; })
+      .sort(function(a, b) { return (a.ok / a.resp) - (b.ok / b.resp) || b.resp - a.resp; });
+    $('perf').hidden = !rows.length;
+    var tb = $('perf-t').querySelector('tbody'); tb.innerHTML = '';
+    rows.forEach(function(o) {
+      var tr = document.createElement('tr');
+      var cell = function(t) { var td = document.createElement('td'); td.textContent = t; tr.appendChild(td); return td; };
+      var th = document.createElement('th'); th.scope = 'row'; th.textContent = articleLabel(o.file); th.style.fontWeight = '600'; tr.appendChild(th);
+      cell(o.vistos + ' de ' + o.total);
+      cell(String(o.resp));
+      var pct = Math.round(o.ok / o.resp * 100);
+      var tdp = cell(''); var sp = document.createElement('span'); sp.className = 'tr-pct'; sp.textContent = pct + '%'; tdp.appendChild(sp);
+      cell(String(o.venc));
+      var tdb = cell(''); var b = document.createElement('button'); b.type = 'button'; b.className = 'tp-btn ghost'; b.textContent = 'Treinar este artigo';
+      b.addEventListener('click', function() { $('f-subj').value = (all.filter(function(c) { return c.file === o.file; })[0] || {}).subject || ''; fillArticles(); $('f-art').value = o.file; $('f-mode').value = 'all'; paintStats(); start(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+      tdb.appendChild(b);
+      tb.appendChild(tr);
+    });
+  }
+
+  /** Arquivo de texto para o Anki (Arquivo > Importar): colunas separadas por tabulação, com cabeçalho de configuração. */
+  function ankiHtml(t) { return String(t || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\t/g, ' ').replace(/\r?\n/g, '<br>'); }
+  function exportAnki() {
+    var pool = selected();
+    if (!pool.length) return;
+    var TAB = String.fromCharCode(9), NL = String.fromCharCode(10);
+    var lines = ['#separator:tab', '#html:true', '#tags column:3'];
+    pool.forEach(function(c) {
+      var back = ankiHtml(c.a) + (c.ref ? '<br><br>Base: ' + ankiHtml(c.ref) : '') + '<br><br><small>Fonte: ' + ankiHtml(articleLabel(c.file)) + ' (' + ankiHtml(c.file) + ')</small>';
+      var tag = 'vade_mecum ' + c.file.replace(/\.html$/, '').replace(/[^A-Za-z0-9_-]/g, '_');
+      lines.push([ankiHtml(c.q), back, tag].join(TAB));
+    });
+    var blob = new Blob([lines.join(NL) + NL], { type: 'text/plain;charset=utf-8' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'vade-mecum-anki-' + new Date().toISOString().slice(0, 10) + '.txt';
+    document.body.appendChild(a); a.click();
+    setTimeout(function() { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+  }
+  window.VMTreino = { exportAnki: exportAnki };
+
   function fillArticles() {
     var s = $('f-subj').value, sel = $('f-art');
     var files = [];
@@ -104,6 +154,7 @@
     var c = queue[pos];
     T.rateCard(c.id, r);
     session[r]++;
+    paintPerf();
     if (r === 'errei' && session.retry.indexOf(c.id) < 0) { session.retry.push(c.id); queue.push(c); }   // volta ao fim da fila, uma vez
     pos++;
     paintStats();
@@ -137,7 +188,8 @@
       if (!all.some(function(c) { return c.subject === s.id; })) return;
       var o = document.createElement('option'); o.value = s.id; o.textContent = s.name; $('f-subj').appendChild(o);
     });
-    fillArticles(); paintStats();
+    fillArticles(); paintStats(); paintPerf();
+    $('b-anki').addEventListener('click', exportAnki);
     $('f-subj').addEventListener('change', function() { fillArticles(); paintStats(); });
     $('f-art').addEventListener('change', paintStats);
     $('b-start').addEventListener('click', function() { start(); });

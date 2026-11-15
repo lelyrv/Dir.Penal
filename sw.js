@@ -10,7 +10,7 @@
  *  - articles.json e search-index.json: usa a cópia guardada e atualiza em segundo plano.
  *  - Nova versão: substitui a anterior inteira de uma vez (cache com o hash da versão).
  */
-const VERSION = '70364237a4';
+const VERSION = 'cf8461cdec';
 const CACHE = 'vm-' + VERSION;
 const CRITICAL = [
  "./",
@@ -24,14 +24,16 @@ const CRITICAL = [
  "calculadoras.html",
  "L9099-ROTEIRO.html",
  "article-nav.js?v=df4cb9f7",
- "article-tools.js?v=cd750459",
+ "article-tools.js?v=ccf5501a",
  "articles.json",
- "autobackup.js?v=b5fb3d04",
- "calc-core.js?v=f297d23d",
- "calculadoras.js?v=7c5f40d6",
+ "autobackup.js?v=39804a34",
+ "calc-core.js?v=2c10a247",
+ "calculadoras.js?v=b2f03ee1",
  "citations.json",
- "dashboard.js?v=29acc176",
+ "dashboard.js?v=a7650404",
+ "data/alteracoes.json",
  "data/laws/CP.json",
+ "data/laws/CPP.json",
  "data/laws/L9099.json",
  "em-breve.js?v=6487e366",
  "fonts.css?v=042dc32b",
@@ -76,17 +78,17 @@ const CRITICAL = [
  "search-index-CLT.json",
  "search-index-CP.json",
  "search-index-L9099.json",
- "search.js?v=fc82f803",
+ "search.js?v=850d6b8d",
  "session-banner.js?v=d87419ae",
- "study-bar.css?v=a66bb7f1",
- "study-tracker.js?v=6f753c29",
- "style.css?v=4c877880",
+ "study-bar.css?v=25ed22b4",
+ "study-tracker.js?v=f399bc97",
+ "style.css?v=101f5f42",
  "sumulas.js?v=f2efb342",
  "tool-pages.css?v=c45da391",
  "training.json",
- "treino.js?v=65cff042",
+ "treino.js?v=819edcdf",
  "vendor/chart.umd.min.js?v=49aef4c2",
- "vm-data.js?v=59406e91"
+ "vm-data.js?v=0167acda"
 ];
 const PAGES = [
  "DP-ART-1.html",
@@ -200,7 +202,7 @@ self.addEventListener('fetch', (event) => {
   const accept = request.headers.get('accept') || '';
   if (request.mode === 'navigate' || accept.includes('text/html')) {
     event.respondWith(networkFirst(request));
-  } else if (/\/(articles|citations|queue|training|search-index-[A-Za-z0-9]+)\.json$/.test(url.pathname)) {
+  } else if (/\/(articles|citations|queue|training|alteracoes|search-index-[A-Za-z0-9]+)\.json$/.test(url.pathname)) {
     event.respondWith(staleWhileRevalidate(request));
   } else {
     event.respondWith(cacheFirst(request));

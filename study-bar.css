@@ -482,18 +482,21 @@ html.vm-hearing .prova-section{margin-top:1rem!important;}
 .vm-note-box button:hover{background:#c8960c;color:#0d1b2a;}
 .vm-note-act{display:flex;gap:.4rem;margin-top:.4rem;}
 
-/* Tamanho da letra (zoom) e tema escuro (inversão controlada; as áreas já escuras são re-invertidas) */
-html.vm-zoom .page-wrap,html.vm-zoom #hero,html.vm-zoom footer,html.vm-zoom .vm-pn{zoom:var(--vm-zoom,1);}
-html.vm-dark body{background:#15120d!important;}
-html.vm-dark .page-wrap,html.vm-dark .vm-pn{filter:invert(.9) hue-rotate(180deg);}
-html.vm-dark .page-wrap .prova-section,html.vm-dark .page-wrap img,html.vm-dark .page-wrap svg,html.vm-dark .page-wrap .vm-cite-flag{filter:invert(1) hue-rotate(180deg);}
+/* Tamanho da letra (zoom) e tema escuro (inversão total + giro de matiz; img, svg e .prova-section são re-invertidos, o que cancela exatamente).
+   Os contêineres do conteúdo variam entre as páginas (.page-wrap, main, .wrapper, .wrap, .tab-wrap, .tw): todos filhos diretos do body. */
+html.vm-zoom :is(.page-wrap,#hero,footer,.vm-pn),html.vm-zoom body>:is(main,header,.wrapper,.wrap,.tab-wrap,.tw,#topo){zoom:var(--vm-zoom,1);}
+html.vm-dark body{background:#0e0b07!important;}
+html.vm-dark body>:is(.page-wrap,main,.wrapper,.wrap,.tab-wrap,.tw,.vm-pn){filter:invert(1) hue-rotate(180deg);}
+html.vm-dark body>:is(.page-wrap,main,.wrapper,.wrap,.tab-wrap,.tw) :is(.prova-section,img,svg,.vm-cite-flag){filter:invert(1) hue-rotate(180deg);}
+/* Selos e blocos de cor chapada (dourado com texto azul-marinho) voltam à paleta original; dentro de .prova-section já estão re-invertidos. */
+html.vm-dark body>:is(.page-wrap,main,.wrapper,.wrap,.tab-wrap,.tw) :is(.qnum,.juris-badge,.alert-tag,.adotado-badge,.flow-node,.flow-end,.flow-end-gold,.av-gold,.av-red,.av-blue,.end-gold,.example-box):not(.prova-section *){filter:invert(1) hue-rotate(180deg);}
 
 @media print{
   .vm-note-box,.vm-sec-tools,#vm-cite-pop{display:none!important;}
   .vm-cite{border-bottom:0!important;}
   html.vm-dark body{background:#fff!important;}
-  html.vm-dark .page-wrap,html.vm-dark .vm-pn,html.vm-dark .page-wrap .prova-section,html.vm-dark .page-wrap img{filter:none!important;}
-  html.vm-zoom .page-wrap,html.vm-zoom #hero,html.vm-zoom footer{zoom:1!important;}
+  html.vm-dark body>*,html.vm-dark body>* *{filter:none!important;}
+  html.vm-zoom body>*{zoom:1!important;}
 }
 
 /* ===== 6. Contraste (auditoria WCAG: tests/contrast.test.mjs) ===== */
@@ -508,3 +511,52 @@ div[style*="background:#0d1b2a"] p,div[style*="background:#0d1b2a"] li{color:inh
 .section-title span{color:#7a5a00;}
 .flow-arrow{color:#8a6e2e;}
 footer{color:rgba(255,255,255,.72);}
+
+/* Páginas antigas: links do menu superior escritos direto dentro do <nav> (sem o contêiner esperado pelo CSS da página) caíam no azul padrão sobre azul-marinho. */
+nav#top-nav>a{color:rgba(255,255,255,.86);text-decoration:none;font:600 .72rem "Source Serif 4",Georgia,serif;letter-spacing:.6px;text-transform:uppercase;padding:.85rem .8rem;white-space:nowrap;border-bottom:3px solid transparent;margin-bottom:-3px;}
+nav#top-nav>a:hover,nav#top-nav>a:focus-visible{color:#e8b84b;border-bottom-color:#c8960c;}
+nav#top-nav>a.nav-prova{color:#e8b84b;}
+/* Colunas coloridas do "anatomia visual": parágrafos herdam a cor clara do bloco, não o marrom do cartão. */
+.av-col.av-red p,.av-col.av-blue p,.av-col.av-purple p,.av-col.av-navy p{color:inherit;}
+
+/* ===== 7. Ficha de audiência (impressão A4; montada por article-tools.js a partir da própria página) ===== */
+.vm-ficha{display:none;}
+@media print{
+  html.vm-printing-ficha body>*:not(.vm-ficha){display:none!important;}
+  html.vm-printing-ficha body{background:#fff!important;margin:0!important;padding:0!important;}
+  html.vm-printing-ficha .vm-ficha{display:block;color:#000;background:#fff;column-count:2;column-gap:7mm;
+    font:400 7pt/1.25 "Source Serif 4",Georgia,serif;}
+  .vm-ficha .vf-head{column-span:all;border-bottom:1.5pt solid #000;margin-bottom:2.5mm;padding-bottom:1.5mm;}
+  .vm-ficha .vf-title{font:700 11pt/1.2 "Playfair Display",Georgia,serif!important;font-size:11pt!important;}
+  .vm-ficha .vf-meta{font-size:6.8pt!important;color:#333;margin-top:.8mm;}
+  .vm-ficha .vf-block{margin:0 0 2.2mm;}
+  .vm-ficha .vf-block>h2{font-size:7.6pt!important;font-weight:700!important;text-transform:uppercase;letter-spacing:.5pt;border-bottom:.6pt solid #000;margin:0 0 1mm;padding:0;break-after:avoid;color:#000;}
+  .vm-ficha *{background:transparent!important;color:#000!important;box-shadow:none!important;text-shadow:none!important;filter:none!important;
+    border-color:#777!important;font-size:inherit!important;line-height:inherit!important;max-width:none!important;min-width:0!important;width:auto!important;
+    float:none!important;position:static!important;transform:none!important;animation:none!important;opacity:1!important;zoom:1!important;}
+  .vm-ficha :is(div,section,article,aside,blockquote,header,p,h1,h2,h3,h4,h5,ul,ol,span.qnum){display:block!important;margin:0 0 .5mm!important;padding:0!important;}
+  .vm-ficha .vf-block>h2{margin:0 0 1mm!important;}
+  .vm-ficha :is(h3,h4,h5,strong,b,.prova-item-q){font-weight:700!important;}
+  .vm-ficha .law-box,.vm-ficha blockquote{font-style:italic;border-left:1.2pt solid #000!important;padding-left:2mm!important;}
+  .vm-ficha ul,.vm-ficha ol{padding-left:4mm!important;list-style-position:outside;}
+  .vm-ficha ul{list-style:disc;}
+  .vm-ficha li{display:list-item!important;margin:0 0 .5mm!important;}
+  .vm-ficha .prova-item{break-inside:avoid;border:0!important;border-top:.4pt solid #999!important;padding-top:.5mm!important;margin:0 0 .4mm!important;}
+  .vm-ficha .prova-item-q{display:block!important;}
+  .vm-ficha .qnum{display:inline!important;font-weight:700!important;margin-right:1.5mm!important;}
+  .vm-ficha table{width:100%!important;border-collapse:collapse;font-size:inherit;}
+  .vm-ficha :is(td,th){border:.5pt solid #777!important;padding:.4mm 1mm!important;vertical-align:top;}
+  .vm-ficha .vm-cite{border-bottom:0!important;}
+  .vm-ficha :is(svg,img,canvas){display:none!important;}
+}
+
+/* Termo da busca destacado ao abrir o resultado (Esc ou clique remove). */
+mark.vm-find{background:#ffe27a;color:#1a1208;border-radius:2px;padding:0 1px;box-shadow:0 0 0 1px rgba(122,90,0,.35);}
+mark.vm-find[data-vm-find-first]{background:#ffc83d;}
+@media print{mark.vm-find{background:none!important;box-shadow:none!important;color:inherit!important;}}
+
+/* Lei alterada no Planalto desde a última conferência (data/alteracoes.json). */
+.vm-law-changed{margin:.6rem auto 0;max-width:1080px;padding:.55rem .9rem;border:1px solid #b00020;border-left:5px solid #b00020;border-radius:4px;background:#fff4f4;color:#6b0014;
+  font:600 .8rem/1.5 "Source Serif 4",Georgia,serif;text-align:left;position:relative;}
+
+.vm-note-box .vm-note-warn{display:block;margin:.3rem 0 0;font:600 .7rem/1.4 "Source Serif 4",Georgia,serif;color:#7a5a00;}

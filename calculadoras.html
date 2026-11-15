@@ -142,14 +142,104 @@
     <div class="cl-res" id="o-res" aria-live="polite"></div>
     <div id="o-src"></div>
   </section>
+
+  <!-- 5. Transação penal -->
+  <section class="tp-card" id="transacao" aria-labelledby="h-trans">
+    <h2 id="h-trans">5. Transação penal: requisitos do art. 76 (Lei 9.099)</h2>
+    <p class="tp-src">Roteiro dos requisitos e impedimentos que o próprio texto do art. 76 enumera. O que depende de avaliação do caso aparece como "a verificar": a calculadora não decide por você.</p>
+    <form id="f-trans" autocomplete="off">
+      <div class="cl-grid">
+        <label class="tp-field">Ação penal
+          <select id="t-acao">
+            <option value="incondicionada">Pública incondicionada</option>
+            <option value="representada">Pública condicionada, com representação</option>
+            <option value="sem-representacao">Pública condicionada, sem representação</option>
+            <option value="privada">Privada</option>
+          </select>
+        </label>
+        <label class="tp-field">Benefício anterior pela transação penal (art. 76, § 2º, II)
+          <select id="t-ben">
+            <option value="nao">Não houve</option>
+            <option value="sim">Houve (informe a data)</option>
+            <option value="nao-sei">Não sei</option>
+          </select>
+        </label>
+        <label class="tp-field">Data do benefício anterior<input type="date" id="t-bdata"></label>
+        <label class="tp-field">Data de referência<input type="date" id="t-ref"><small>hoje, ou a data da audiência</small></label>
+        <label class="tp-field">Antecedentes, conduta social, personalidade, motivos e circunstâncias (§ 2º, III)
+          <select id="t-circ">
+            <option value="avaliar">Ainda não avaliei</option>
+            <option value="suficiente">Indicam ser necessária e suficiente a medida</option>
+            <option value="insuficiente">Não indicam ser necessária e suficiente</option>
+          </select>
+        </label>
+      </div>
+      <label class="cl-chk"><input type="checkbox" id="t-menor" checked> Infração de menor potencial ofensivo (art. 61)</label>
+      <label class="cl-chk"><input type="checkbox" id="t-arq"> É caso de arquivamento</label>
+      <label class="cl-chk"><input type="checkbox" id="t-ppl"> O autor foi condenado, por crime, a pena privativa de liberdade, por sentença definitiva (§ 2º, I)</label>
+      <button class="tp-btn" type="submit">Conferir requisitos</button>
+    </form>
+    <div class="cl-res" id="t-res" aria-live="polite"></div>
+    <div id="t-src"></div>
+  </section>
+
+  <!-- 6. Prazos processuais -->
+  <section class="tp-card" id="prazos" aria-labelledby="h-prazos">
+    <h2 id="h-prazos">6. Prazos do procedimento (Lei 9.099, arts. 78, 82 e 83; CPP, art. 798)</h2>
+    <p class="tp-src">Prazos que o texto da Lei 9.099 fixa em dias. A contagem segue o CPP, art. 798 (aplicável subsidiariamente, Lei 9.099, art. 92), ou, se você escolher, só dias úteis (Lei 9.099, art. 12-A).</p>
+    <form id="f-prazos" autocomplete="off">
+      <div class="cl-grid">
+        <label class="tp-field">Qual prazo
+          <select id="z-tipo">
+            <option value="10|Apelação: dez dias da ciência da sentença (art. 82, § 1º)">Apelação: 10 dias (art. 82, § 1º)</option>
+            <option value="10|Resposta do recorrido: dez dias da intimação (art. 82, § 2º)">Resposta do recorrido: 10 dias (art. 82, § 2º)</option>
+            <option value="5|Embargos de declaração: cinco dias da ciência da decisão (art. 83, § 1º)">Embargos de declaração: 5 dias (art. 83, § 1º)</option>
+          </select>
+        </label>
+        <label class="tp-field">Data da ciência ou intimação<input type="date" id="z-ini" required></label>
+        <label class="tp-field">Contagem
+          <select id="z-modo">
+            <option value="corridos">Dias corridos (CPP, art. 798)</option>
+            <option value="uteis">Dias úteis (Lei 9.099, art. 12-A)</option>
+          </select>
+        </label>
+        <label class="tp-field">Feriados e dias sem expediente<input type="text" id="z-fer" placeholder="AAAA-MM-DD, AAAA-MM-DD"><small>opcional, separados por vírgula</small></label>
+      </div>
+      <button class="tp-btn" type="submit">Calcular prazo</button>
+    </form>
+    <div class="cl-res" id="z-res" aria-live="polite"></div>
+    <hr>
+    <form id="f-test" autocomplete="off">
+      <div class="cl-grid">
+        <label class="tp-field">Testemunhas (art. 78, § 1º): data da audiência de instrução e julgamento<input type="date" id="w-aud" required><small>requerimento para intimação, no mínimo cinco dias antes</small></label>
+      </div>
+      <button class="tp-btn" type="submit">Calcular limite</button>
+    </form>
+    <div class="cl-res" id="w-res" aria-live="polite"></div>
+    <div id="z-src"></div>
+  </section>
+
+  <!-- 7. Decadência -->
+  <section class="tp-card" id="decadencia" aria-labelledby="h-dec">
+    <h2 id="h-dec">7. Decadência do direito de queixa ou de representação (CP, art. 103; CPP, art. 38)</h2>
+    <form id="f-dec" autocomplete="off">
+      <div class="cl-grid">
+        <label class="tp-field">Dia em que soube quem é o autor do crime<input type="date" id="d-ini" required></label>
+      </div>
+      <label class="cl-chk"><input type="checkbox" id="d-vd"> Crime praticado no âmbito de violência doméstica e familiar contra a mulher (CPP, art. 38, § 2º: 12 meses)</label>
+      <button class="tp-btn" type="submit">Calcular</button>
+    </form>
+    <div class="cl-res" id="d-res" aria-live="polite"></div>
+    <div id="d-src"></div>
+  </section>
 </main>
 <!-- VM-RUNTIME -->
-<script src="study-tracker.js?v=6f753c29"></script>
-<script src="vm-data.js?v=59406e91"></script>
-<script src="search.js?v=fc82f803"></script>
+<script src="study-tracker.js?v=f399bc97"></script>
+<script src="vm-data.js?v=0167acda"></script>
+<script src="search.js?v=850d6b8d"></script>
 <script src="pwa.js?v=64776eec"></script>
-<script src="calc-core.js?v=f297d23d"></script>
-<script src="calculadoras.js?v=7c5f40d6"></script>
+<script src="calc-core.js?v=2c10a247"></script>
+<script src="calculadoras.js?v=b2f03ee1"></script>
 <!-- /VM-RUNTIME -->
 </body>
 </html>

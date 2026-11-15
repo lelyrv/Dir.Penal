@@ -87,10 +87,13 @@ await run(async ({ base, browser }) => {
   await A.go(url(ART), { wait: 900 });
   T.check('F1 legada antiga: descartada, sem inflar horas', (await active()) === null && (await sessions()).length === nb2 && (await A.ui()).status === 'Parado');
   // sessao legada recente (sem lastSeenTs) continua valida
-  await A.ev(`localStorage.setItem('vadeMecum_activeSession', JSON.stringify({id:'sess_legacy2',date:'2026-11-13',dayOfWeek:'sexta-feira',subject:'Lei 9.099/95',subjectId:'L9099',articleFile:'L9099-ART-65',articleNum:65,startTs:${Date.now() - 600000},startTime:'10:00',pauses:[],pauseTotalMs:0,endTs:null,endTime:null,totalStudyMs:null,state:'reading'}))`);
+  const legacyStart = Date.now() - 600000;
+  await A.ev(`localStorage.setItem('vadeMecum_activeSession', JSON.stringify({id:'sess_legacy2',date:'2026-11-13',dayOfWeek:'sexta-feira',subject:'Lei 9.099/95',subjectId:'L9099',articleFile:'L9099-ART-65',articleNum:65,startTs:${legacyStart},startTime:'10:00',pauses:[],pauseTotalMs:0,endTs:null,endTime:null,totalStudyMs:null,state:'reading'}))`);
   await A.go(url(ART), { wait: 900 });
   u = await A.ui();
-  T.check('F1 legada recente (10 min): restaurada', u.status === 'Estudando' && secs(u.timer) >= 599 && secs(u.timer) <= 603, JSON.stringify(u));
+  // o esperado é o tempo REAL decorrido desde o início gravado (não um intervalo fixo: a carga da máquina muda o atraso)
+  const legacyExpected = (Date.now() - legacyStart) / 1000;
+  T.check('F1 legada recente (10 min): restaurada', u.status === 'Estudando' && secs(u.timer) >= 599 && Math.abs(secs(u.timer) - legacyExpected) <= 3, JSON.stringify(u) + ' esperado~' + Math.round(legacyExpected));
   await A.click('#vm-btn-end'); await sleep(200);
 
   // ============ sessao ausente (dados limpos) ============
